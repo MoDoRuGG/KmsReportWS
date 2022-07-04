@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TemplateDynamicReport xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <REPORT_NAME>13333333333333333333333333333</REPORT_NAME>
+  <REPORT_DESCRIPTION>11</REPORT_DESCRIPTION>
+  <TABLE>
+    <TemplateTableDynamic>
+      <TABLE_NAME>1 вкладка</TABLE_NAME>
+      <TABLE_DESCRIPTION>1 вкладка</TABLE_DESCRIPTION>
+      <ROWS />
+      <COLUMNS>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Пример</COLUMN_TEXT>
+          <COLUMN_INDEX>1</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION>Пример</COLUMN_DESCRIPTION>
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Пример 2</COLUMN_TEXT>
+          <COLUMN_INDEX>2</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION>Пример 2</COLUMN_DESCRIPTION>
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Пример 3</COLUMN_TEXT>
+          <COLUMN_INDEX>3</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION>Пример 3</COLUMN_DESCRIPTION>
+        </TemplateColumnDynamic>
+      </COLUMNS>
+    </TemplateTableDynamic>
+  </TABLE>
+</TemplateDynamicReport>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TemplateDynamicReport xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <REPORT_NAME>Новый отчёт</REPORT_NAME>
+  <TABLE>
+    <TemplateTableDynamic>
+      <TABLE_NAME>1 вкладка</TABLE_NAME>
+      <TABLE_DESCRIPTION>1 вкладка</TABLE_DESCRIPTION>
+      <ROWS>
+        <TemplateRowDynamic>
+          <ROW_TEXT>опа 2</ROW_TEXT>
+          <ROW_NUM>1</ROW_NUM>
+          <ROW_DESCRIPTION />
+        </TemplateRowDynamic>
+      </ROWS>
+      <COLUMNS>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>опа1</COLUMN_TEXT>
+          <COLUMN_INDEX>1</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION />
+        </TemplateColumnDynamic>
+      </COLUMNS>
+    </TemplateTableDynamic>
+    <TemplateTableDynamic>
+      <TABLE_NAME>опа 1</TABLE_NAME>
+      <TABLE_DESCRIPTION />
+      <ROWS>
+        <TemplateRowDynamic>
+          <ROW_TEXT>фыв</ROW_TEXT>
+          <ROW_NUM>1</ROW_NUM>
+          <ROW_DESCRIPTION />
+        </TemplateRowDynamic>
+      </ROWS>
+      <COLUMNS>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>фывфыв</COLUMN_TEXT>
+          <COLUMN_INDEX>1</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION />
+        </TemplateColumnDynamic>
+      </COLUMNS>
+    </TemplateTableDynamic>
+  </TABLE>
+</TemplateDynamicReport>

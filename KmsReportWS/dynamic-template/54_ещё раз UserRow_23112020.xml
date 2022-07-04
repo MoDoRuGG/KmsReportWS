@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TemplateDynamicReport xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <REPORT_NAME>ещё раз UserRow</REPORT_NAME>
+  <REPORT_DESCRIPTION>тест</REPORT_DESCRIPTION>
+  <IsUserRow>false</IsUserRow>
+  <Emails>
+    <string>esipov.00_00@mail.ru</string>
+    <string>management_of_economics@kapmed.ru</string>
+    <string>istomin.denis@kapmed.ru</string>
+    <string>direktora_filialov@kapmed.ru</string>
+    <string>tarasova.olga@kapmed.ru</string>
+    <string>khayrullin.rashid@kapmed.ru</string>
+    <string>antonchik.andrey@kapmed.ru</string>
+    <string>yanin_aleksandr@rgs-oms.ru</string>
+  </Emails>
+  <TABLE>
+    <TemplateTableDynamic>
+      <TABLE_NAME>1 вкладка</TABLE_NAME>
+      <TABLE_DESCRIPTION>1 вкладка</TABLE_DESCRIPTION>
+      <ROWS />
+      <COLUMNS>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>hjhjhujhjh</COLUMN_TEXT>
+          <COLUMN_INDEX>1</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION />
+        </TemplateColumnDynamic>
+      </COLUMNS>
+    </TemplateTableDynamic>
+  </TABLE>
+</TemplateDynamicReport>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TemplateDynamicReport xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <REPORT_NAME>Задолженность за 2020 год по оплате МП</REPORT_NAME>
+  <REPORT_DESCRIPTION />
+  <REPORT_DATE>2021-02-08T17:52:52.8285838+03:00</REPORT_DATE>
+  <IsUserRow>false</IsUserRow>
+  <Emails>
+    <string>managers.economy@kapmed.ru</string>
+  </Emails>
+  <TABLE>
+    <TemplateTableDynamic>
+      <TABLE_NAME>Задолженность по программе ОМС на 2020 год</TABLE_NAME>
+      <TABLE_DESCRIPTION />
+      <ROWS />
+      <COLUMNS>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Кредиторская задолженность</COLUMN_TEXT>
+          <COLUMN_INDEX>1</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION>Кредиторская задолженность по счетам за 2020 год</COLUMN_DESCRIPTION>
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Дебиторская задолженность</COLUMN_TEXT>
+          <COLUMN_INDEX>2</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION>Дебиторская задолженность по счетам за 2020 год</COLUMN_DESCRIPTION>
+        </TemplateColumnDynamic>
+      </COLUMNS>
+    </TemplateTableDynamic>
+  </TABLE>
+</TemplateDynamicReport>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TemplateDynamicReport xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <REPORT_NAME>Страховые Представители</REPORT_NAME>
+  <REPORT_DESCRIPTION />
+  <REPORT_DATE>2021-02-08T17:49:07.089181+03:00</REPORT_DATE>
+  <IsUserRow>false</IsUserRow>
+  <Emails>
+    <string>direktora_oms_filialov@kapmed.ru</string>
+  </Emails>
+  <TABLE>
+    <TemplateTableDynamic>
+      <TABLE_NAME>СП</TABLE_NAME>
+      <TABLE_DESCRIPTION>Количество СП</TABLE_DESCRIPTION>
+      <ROWS />
+      <COLUMNS>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>СП1</COLUMN_TEXT>
+          <COLUMN_INDEX>1</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION />
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>СП2</COLUMN_TEXT>
+          <COLUMN_INDEX>2</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION />
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>СП3</COLUMN_TEXT>
+          <COLUMN_INDEX>3</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION />
+        </TemplateColumnDynamic>
+      </COLUMNS>
+    </TemplateTableDynamic>
+  </TABLE>
+</TemplateDynamicReport>

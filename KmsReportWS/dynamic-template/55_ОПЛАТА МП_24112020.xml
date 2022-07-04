@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TemplateDynamicReport xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <REPORT_NAME>ОПЛАТА МП</REPORT_NAME>
+  <REPORT_DESCRIPTION>ТЕСТ</REPORT_DESCRIPTION>
+  <IsUserRow>false</IsUserRow>
+  <Emails>
+    <string>esipov.00_00@mail.ru</string>
+    <string>management_of_economics@kapmed.ru</string>
+    <string>istomin.denis@kapmed.ru</string>
+    <string>direktora_filialov@kapmed.ru</string>
+    <string>antonchik.andrey@kapmed.ru</string>
+    <string>yanin_aleksandr@rgs-oms.ru</string>
+  </Emails>
+  <TABLE>
+    <TemplateTableDynamic>
+      <TABLE_NAME>1 вкладка</TABLE_NAME>
+      <TABLE_DESCRIPTION>1 вкладка</TABLE_DESCRIPTION>
+      <ROWS />
+      <COLUMNS>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>АПП</COLUMN_TEXT>
+          <COLUMN_INDEX>1</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION>АПП описание</COLUMN_DESCRIPTION>
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>СМП</COLUMN_TEXT>
+          <COLUMN_INDEX>2</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION>СМП ОПИСАНИЕ</COLUMN_DESCRIPTION>
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>КС</COLUMN_TEXT>
+          <COLUMN_INDEX>3</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION>КС ОПИСАНИЕ</COLUMN_DESCRIPTION>
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>ДС</COLUMN_TEXT>
+          <COLUMN_INDEX>4</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION>ДС ОПИСАНИЕ</COLUMN_DESCRIPTION>
+        </TemplateColumnDynamic>
+      </COLUMNS>
+    </TemplateTableDynamic>
+    <TemplateTableDynamic>
+      <TABLE_NAME>2 вкладка</TABLE_NAME>
+      <TABLE_DESCRIPTION>описание второй</TABLE_DESCRIPTION>
+      <ROWS />
+      <COLUMNS>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>АПП</COLUMN_TEXT>
+          <COLUMN_INDEX>1</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION>АПП описание</COLUMN_DESCRIPTION>
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>КС</COLUMN_TEXT>
+          <COLUMN_INDEX>2</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION>КС ОПИСАНИЕ</COLUMN_DESCRIPTION>
+        </TemplateColumnDynamic>
+      </COLUMNS>
+    </TemplateTableDynamic>
+  </TABLE>
+</TemplateDynamicReport>

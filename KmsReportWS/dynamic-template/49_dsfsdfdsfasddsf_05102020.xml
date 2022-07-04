@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TemplateDynamicReport xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <REPORT_NAME>dsfsdfdsfasddsf</REPORT_NAME>
+  <REPORT_DESCRIPTION />
+  <TABLE>
+    <TemplateTableDynamic>
+      <TABLE_NAME>1 вкладка</TABLE_NAME>
+      <TABLE_DESCRIPTION>1 вкладка</TABLE_DESCRIPTION>
+      <ROWS />
+      <COLUMNS>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>asasd</COLUMN_TEXT>
+          <COLUMN_INDEX>1</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION />
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>ASDASDDS</COLUMN_TEXT>
+          <COLUMN_INDEX />
+          <COLUMN_DESCRIPTION>asdasdsad</COLUMN_DESCRIPTION>
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>New column</COLUMN_TEXT>
+            <COLUMN_INDEX>2</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION>New column</COLUMN_DESCRIPTION>
+          </COLUMN_DESCRIPTION_CHILD>
+        </TemplateColumnDynamic>
+      </COLUMNS>
+    </TemplateTableDynamic>
+  </TABLE>
+</TemplateDynamicReport>

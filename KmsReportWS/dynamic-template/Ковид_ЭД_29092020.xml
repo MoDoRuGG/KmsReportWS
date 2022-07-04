@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TemplateDynamicReport xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <REPORT_NAME>Ковид_ЭД</REPORT_NAME>
+  <REPORT_DESCRIPTION />
+  <TABLE>
+    <TemplateTableDynamic>
+      <TABLE_NAME>Вкладка</TABLE_NAME>
+      <TABLE_DESCRIPTION>1 вкладка</TABLE_DESCRIPTION>
+      <ROWS />
+      <COLUMNS>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>ВСЕГО СЛУЧАЕВ КОВИД-ИНФЕКЦИИ В ОТЧЕТНОМ ПЕРИОДЕ</COLUMN_TEXT>
+          <COLUMN_INDEX />
+          <COLUMN_DESCRIPTION />
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>летальный исход (ЛИ)</COLUMN_TEXT>
+            <COLUMN_INDEX>1</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION>летальный исход (ЛИ)</COLUMN_DESCRIPTION>
+          </COLUMN_DESCRIPTION_CHILD>
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>другие исходы (выписан/переведен/лечение прервано и т.д.)</COLUMN_TEXT>
+            <COLUMN_INDEX>2</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION>другие исходы (выписан/переведен/лечение прервано и т.д.)</COLUMN_DESCRIPTION>
+          </COLUMN_DESCRIPTION_CHILD>
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Количество случаев ЛИ отчетного периода, запрошенных на ЭКМП (ед.)</COLUMN_TEXT>
+          <COLUMN_INDEX>3</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION />
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Количество случаев ЛИ отчетного периода, предоставленных на ЭКМП (ед.)</COLUMN_TEXT>
+          <COLUMN_INDEX>4</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION />
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>КОЛИЧЕСТВО СЛУЧАЕВ НЕ ПРЕДОСТАВЛЕНИЯ ПМД (ПО ПРИЧИНАМ)</COLUMN_TEXT>
+          <COLUMN_INDEX />
+          <COLUMN_DESCRIPTION />
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>ПМД находится в ПАБ (ед.)</COLUMN_TEXT>
+            <COLUMN_INDEX>5</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION>ПМД находится в ПАБ (ед.)</COLUMN_DESCRIPTION>
+          </COLUMN_DESCRIPTION_CHILD>
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>ПМД находится в "красной зоне" (ед.)</COLUMN_TEXT>
+            <COLUMN_INDEX>6</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION>ПМД находится в "красной зоне" (ед.)</COLUMN_DESCRIPTION>
+          </COLUMN_DESCRIPTION_CHILD>
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>Отсутствует возможность сканирования ПМД (ед.)</COLUMN_TEXT>
+            <COLUMN_INDEX>7</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION>Отсутствует возможность сканирования ПМД (ед.)</COLUMN_DESCRIPTION>
+          </COLUMN_DESCRIPTION_CHILD>
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>Отсутсвует персонал для подготовки ПМД (ед. ПМД)</COLUMN_TEXT>
+            <COLUMN_INDEX>8</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION>Отсутсвует персонал для подготовки ПМД (ед. ПМД)</COLUMN_DESCRIPTION>
+          </COLUMN_DESCRIPTION_CHILD>
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>Другие причины (ед. ПМД)</COLUMN_TEXT>
+            <COLUMN_INDEX>9</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION>Другие причины (ед. ПМД)</COLUMN_DESCRIPTION>
+          </COLUMN_DESCRIPTION_CHILD>
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Проведено ЭКМП (кол-во случаев)</COLUMN_TEXT>
+          <COLUMN_INDEX>10</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION />
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Не завершено ЭКМП (кол-во случаев)</COLUMN_TEXT>
+          <COLUMN_INDEX>11</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION />
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>КОЛИЧЕСТВО ВЫЯВЛЕННЫХ ДЕФЕКТОВ (ПО ВЕДУЩЕМУ ДЕФЕКТУ)</COLUMN_TEXT>
+          <COLUMN_INDEX />
+          <COLUMN_DESCRIPTION />
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>3.2.1.</COLUMN_TEXT>
+            <COLUMN_INDEX>12</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION>3.2.1.</COLUMN_DESCRIPTION>
+          </COLUMN_DESCRIPTION_CHILD>
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>3.2.3.</COLUMN_TEXT>
+            <COLUMN_INDEX>13</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION>3.2.3.</COLUMN_DESCRIPTION>
+          </COLUMN_DESCRIPTION_CHILD>
+        </TemplateColumnDynamic>
+      </COLUMNS>
+    </TemplateTableDynamic>
+  </TABLE>
+</TemplateDynamicReport>

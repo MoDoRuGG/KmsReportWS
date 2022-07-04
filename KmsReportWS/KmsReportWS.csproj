@@ -1,0 +1,302 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.1.7.9\build\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.props" Condition="Exists('..\packages\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.1.7.9\build\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0B0BC394-F725-4672-ACF7-9C2FB41368EC}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KmsReportWS</RootNamespace>
+    <AssemblyName>KmsReportWS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+    <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
+    <DockerLaunchUrl>http://{ServiceIPAddress}</DockerLaunchUrl>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>8</LangVersion>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>8</LangVersion>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.5\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="MailKit, Version=2.5.0.0, Culture=neutral, PublicKeyToken=4e064fe7c44a8f1b, processorArchitecture=MSIL">
+      <HintPath>..\packages\MailKit.2.5.0\lib\net47\MailKit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MimeKit, Version=2.5.0.0, Culture=neutral, PublicKeyToken=bede1c8a46c66814, processorArchitecture=MSIL">
+      <HintPath>..\packages\MimeKit.2.5.0\lib\net47\MimeKit.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.6.7\lib\net40-client\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ConsolidateEndpoint.asmx" />
+    <Content Include="Endpoint.asmx">
+      <BrowseToURL>~/Endpoint.asmx</BrowseToURL>
+    </Content>
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Collector\BaseReport\BaseReportCollector.cs" />
+    <Compile Include="Collector\BaseReport\F262Collector.cs" />
+    <Compile Include="Collector\BaseReport\F294Collector.cs" />
+    <Compile Include="Collector\BaseReport\ReportCollectorFactory.cs" />
+    <Compile Include="Collector\BaseReport\IizlCollector.cs" />
+    <Compile Include="Collector\BaseReport\IReportCollector.cs" />
+    <Compile Include="Collector\BaseReport\PgCollector.cs" />
+    <Compile Include="Collector\ConsolidateReport\ConsolidateCardiCollector.cs" />
+    <Compile Include="Collector\ConsolidateReport\ConsolidateCardioCollector.cs" />
+    <Compile Include="Collector\ConsolidateReport\ConsolidateCnpnCollector.cs" />
+    <Compile Include="Collector\ConsolidateReport\ConsolidateCnpnMonthCollector.cs" />
+    <Compile Include="Collector\ConsolidateReport\ConsolidateCPNP_Q_2_Collector.cs" />
+    <Compile Include="Collector\ConsolidateReport\ConsolidateDispCollector.cs" />
+    <Compile Include="Collector\ConsolidateReport\ConsolidateLetalCollector.cs" />
+    <Compile Include="Collector\ConsolidateReport\ConsolidateOnkoCollector.cs" />
+    <Compile Include="Collector\ConsolidateReport\ConsolidateOpedCollector.cs" />
+    <Compile Include="Collector\ConsolidateReport\ConsolidateOpedFinance_1Collector.cs" />
+    <Compile Include="Collector\ConsolidateReport\ConsolidateOpedFinance_2Collector.cs" />
+    <Compile Include="Collector\ConsolidateReport\ConsolidateOpedQCollector.cs" />
+    <Compile Include="Collector\ConsolidateReport\ConsolidateProposalCollector.cs" />
+    <Compile Include="Collector\ConsolidateReport\ConsolidateVSSReportCollector.cs" />
+    <Compile Include="ConsolidateEndpoint.asmx.cs">
+      <DependentUpon>ConsolidateEndpoint.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Handler\BaseReportHandler.cs" />
+    <Compile Include="Handler\DynamicReportCommonHandler.cs" />
+    <Compile Include="Handler\DynamicReportHandler.cs" />
+    <Compile Include="Handler\F262Handler.cs" />
+    <Compile Include="Handler\F294Handler.cs" />
+    <Compile Include="Handler\FOpedHandler.cs" />
+    <Compile Include="Handler\FSSMonitoringHandler.cs" />
+    <Compile Include="Handler\IizlHandler.cs" />
+    <Compile Include="Handler\IReportHandler.cs" />
+    <Compile Include="Handler\OpedFinancePlanDictionaryHandler.cs" />
+    <Compile Include="Handler\PgHandler.cs" />
+    <Compile Include="Handler\ReportDynamicFlowHandler.cs" />
+    <Compile Include="Handler\ReportFlowHandler.cs" />
+    <Compile Include="Handler\ReportHandlerFactory.cs" />
+    <Compile Include="Handler\ReportInfrormationResponseHandler.cs" />
+    <Compile Include="Handler\ReportOpedFinanceHandler.cs" />
+    <Compile Include="Handler\ReportProposalHandler.cs" />
+    <Compile Include="Handler\ReportVaccinationHander.cs" />
+    <Compile Include="LinqToSql\LinqToSqlKmsReport.cs">
+      <DependentUpon>LinqToSqlKmsReport.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CheckFFOMS2022CommonData.cs" />
+    <Compile Include="Model\ConcolidateReport\ConsolidateCadri.cs" />
+    <Compile Include="Model\ConcolidateReport\ConsolidateCardio.cs" />
+    <Compile Include="Model\ConcolidateReport\ConsolidateCpnp.cs" />
+    <Compile Include="Model\ConcolidateReport\ConsolidateCpnpM.cs" />
+    <Compile Include="Model\ConcolidateReport\ConsolidateCPNP_Q_2.cs" />
+    <Compile Include="Model\ConcolidateReport\ConsolidateDisp.cs" />
+    <Compile Include="Model\ConcolidateReport\ConsolidateLetal.cs" />
+    <Compile Include="Model\ConcolidateReport\ConsolidateOnko.cs" />
+    <Compile Include="Model\ConcolidateReport\ConsolidateOped.cs" />
+    <Compile Include="Model\ConcolidateReport\ConsolidateOpedFinance_1.cs" />
+    <Compile Include="Model\ConcolidateReport\ConsolidateOpedFinance_2.cs" />
+    <Compile Include="Model\ConcolidateReport\ConsolidateOpedQ.cs" />
+    <Compile Include="Model\ConcolidateReport\ConsolidateProposal.cs" />
+    <Compile Include="Model\ConcolidateReport\ConsolidateVSS.cs" />
+    <Compile Include="Model\ConcolidateReport\SummaryPg.cs" />
+    <Compile Include="Model\Constructor\DynamicDataDto.cs" />
+    <Compile Include="Model\Constructor\DynamicReportDictionary.cs" />
+    <Compile Include="Model\Constructor\GetDynamicReportResponse.cs" />
+    <Compile Include="Model\Constructor\ReportDynamicDto.cs" />
+    <Compile Include="Model\Constructor\ReportDynamicFlowDto.cs" />
+    <Compile Include="Model\Dictionary\OpedFinancePlanDictionaryItem.cs" />
+    <Compile Include="Model\FSSMonitoringPgDataDto.cs" />
+    <Compile Include="Model\ReportDynamicScanModel.cs" />
+    <Compile Include="Model\ReportScanModel.cs" />
+    <Compile Include="Model\Report\ReportFSSMonitroing.cs" />
+    <Compile Include="Model\Report\ReportInfrormationResponse.cs" />
+    <Compile Include="Model\Report\ReportOped.cs" />
+    <Compile Include="Model\Report\ReportOpedFinance.cs" />
+    <Compile Include="Model\Report\ReportProposal.cs" />
+    <Compile Include="Model\Report\ReportVaccination.cs" />
+    <Compile Include="Model\Service\ClientContext.cs" />
+    <Compile Include="Model\ConcolidateReport\Consolidate294.cs" />
+    <Compile Include="Model\ConcolidateReport\CReportPg.cs" />
+    <Compile Include="Collector\ConsolidateReport\ControlZpzCollector.cs" />
+    <Compile Include="Endpoint.asmx.cs">
+      <DependentUpon>Endpoint.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LinqToSql\LinqToSqlKmsReport.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LinqToSqlKmsReport.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Report\AbstractReport.cs" />
+    <Compile Include="Model\Report\ReportStatus.cs" />
+    <Compile Include="Model\Report\Report262.cs" />
+    <Compile Include="Model\Report\Report294.cs" />
+    <Compile Include="Model\ReportFlowDto.cs" />
+    <Compile Include="Model\Report\ReportIizl.cs" />
+    <Compile Include="Model\Report\ReportPg.cs" />
+    <Compile Include="Model\Report\ReportType.cs" />
+    <Compile Include="Model\Service\Employee.cs" />
+    <Compile Include="Model\Service\HeadCompany.cs" />
+    <Compile Include="Model\Service\NotificationRequest.cs" />
+    <Compile Include="Model\Service\ReportComment.cs" />
+    <Compile Include="Model\Service\UnreadComment.cs" />
+    <Compile Include="MsConnection.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Collector\ConsolidateReport\Consolidate262Collector.cs" />
+    <Compile Include="Model\ConcolidateReport\CReport262.cs" />
+    <Compile Include="Model\KmsReportDictionary.cs" />
+    <Compile Include="Collector\ConsolidateReport\Consolidate294Collector.cs" />
+    <Compile Include="Model\ConcolidateReport\ZpzForWebSite.cs" />
+    <Compile Include="Collector\ConsolidateReport\ZpzForWebSiteCollector.cs" />
+    <Compile Include="Service\ClientService.cs" />
+    <Compile Include="Service\CommentService.cs" />
+    <Compile Include="Service\CommonDbEngine.cs" />
+    <Compile Include="Service\EmailSender.cs" />
+    <Compile Include="Service\EmailService.cs" />
+    <Compile Include="Service\FileProcessor.cs" />
+    <Compile Include="Service\AutoNotificationService.cs" />
+    <Compile Include="Service\FilialService.cs" />
+    <Compile Include="Service\ManualNotificationService.cs" />
+    <Compile Include="Support\DataRowUtils.cs" />
+    <Compile Include="Support\QueryParametrs.cs" />
+    <Compile Include="Support\YymmUtils.cs" />
+    <Compile Include="Support\StatusUtils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LinqToSql\LinqToSqlKmsReport.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>LinqToSqlKmsReport.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="LinqToSql\LinqToSqlKmsReport.dbml.layout">
+      <DependentUpon>LinqToSqlKmsReport.dbml</DependentUpon>
+    </None>
+    <None Include="NLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55778</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:8091/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
+    </PropertyGroup>
+  </Target>
+  <Import Project="..\packages\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.1.7.9\build\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.targets" Condition="Exists('..\packages\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.1.7.9\build\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

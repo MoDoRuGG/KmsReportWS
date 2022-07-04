@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TemplateDynamicReport xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <REPORT_NAME>Результаты онкоэкспертиз</REPORT_NAME>
+  <REPORT_DESCRIPTION>Результаты онкоэкспертиз за первое полугодие 2021г.</REPORT_DESCRIPTION>
+  <REPORT_DATE>2021-08-27T15:32:46.1481506+03:00</REPORT_DATE>
+  <IsUserRow>false</IsUserRow>
+  <Emails />
+  <TABLE>
+    <TemplateTableDynamic>
+      <TABLE_NAME>Онкоэкспертизы ЭКМП</TABLE_NAME>
+      <TABLE_DESCRIPTION>Результаты ЭКМП</TABLE_DESCRIPTION>
+      <ROWS />
+      <COLUMNS>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Филиал</COLUMN_TEXT>
+          <COLUMN_INDEX>1</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION />
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Количество проведенных ЭКМП по случаям января - июня 2021г.</COLUMN_TEXT>
+          <COLUMN_INDEX>2</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION />
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Количество случаев с выявленными дефектами по результатам ЭКМП по случаям января - июня 2021г.</COLUMN_TEXT>
+          <COLUMN_INDEX>3</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION />
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Количество выявленных дефектов по результатам ЭКМП по случаям января - июня 2021г.</COLUMN_TEXT>
+          <COLUMN_INDEX>4</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION />
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>В том числе</COLUMN_TEXT>
+          <COLUMN_INDEX />
+          <COLUMN_DESCRIPTION>Разбивка по дефектам</COLUMN_DESCRIPTION>
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>4.2.</COLUMN_TEXT>
+            <COLUMN_INDEX>5</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>4.3.</COLUMN_TEXT>
+            <COLUMN_INDEX>6</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>3.2.1.</COLUMN_TEXT>
+            <COLUMN_INDEX>7</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>3.2.3.</COLUMN_TEXT>
+            <COLUMN_INDEX>8</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>3.2.5.</COLUMN_TEXT>
+            <COLUMN_INDEX>9</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>3.6.</COLUMN_TEXT>
+            <COLUMN_INDEX>10</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>3.7.</COLUMN_TEXT>
+            <COLUMN_INDEX>11</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>3.8.</COLUMN_TEXT>
+            <COLUMN_INDEX>12</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>4.6.1.</COLUMN_TEXT>
+            <COLUMN_INDEX>13</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>Группа 5</COLUMN_TEXT>
+            <COLUMN_INDEX>14</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>Другие</COLUMN_TEXT>
+            <COLUMN_INDEX>15</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Сумма финансовых санкций, предъявленных к МО согласно актам ЭКМП (в руб.), включая штрафы</COLUMN_TEXT>
+          <COLUMN_INDEX>16</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION />
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Сумма финансовых и штрафных санкций, полученных Обществом по результатам всех согласований (в руб.)</COLUMN_TEXT>
+          <COLUMN_INDEX>17</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION />
+        </TemplateColumnDynamic>
+      </COLUMNS>
+    </TemplateTableDynamic>
+    <TemplateTableDynamic>
+      <TABLE_NAME>Онкоэкспертизы МЭЭ</TABLE_NAME>
+      <TABLE_DESCRIPTION>Результаты МЭЭ</TABLE_DESCRIPTION>
+      <ROWS />
+      <COLUMNS>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Филиал</COLUMN_TEXT>
+          <COLUMN_INDEX>1</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION />
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Количество проведенных МЭЭ по случаям января - июня 2021г.</COLUMN_TEXT>
+          <COLUMN_INDEX>2</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION />
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Количество случаев с выявленными дефектами по результатам МЭЭ по случаям января - июня 2021г.</COLUMN_TEXT>
+          <COLUMN_INDEX>3</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION />
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Количество выявленных дефектов по результатам МЭЭ по случаям января - июня 2021г.</COLUMN_TEXT>
+          <COLUMN_INDEX>4</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION />
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>В том числе</COLUMN_TEXT>
+          <COLUMN_INDEX />
+          <COLUMN_DESCRIPTION>Разбивка по дефектам</COLUMN_DESCRIPTION>
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>4.1.</COLUMN_TEXT>
+            <COLUMN_INDEX>5</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>4.2.</COLUMN_TEXT>
+            <COLUMN_INDEX>6</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>4.3.</COLUMN_TEXT>
+            <COLUMN_INDEX>7</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>4.4.</COLUMN_TEXT>
+            <COLUMN_INDEX>8</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>4.6.1.</COLUMN_TEXT>
+            <COLUMN_INDEX>9</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>4.6.2.</COLUMN_TEXT>
+            <COLUMN_INDEX>10</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>3.2.1.</COLUMN_TEXT>
+            <COLUMN_INDEX>11</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>1.4.</COLUMN_TEXT>
+            <COLUMN_INDEX>12</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>1.5.</COLUMN_TEXT>
+            <COLUMN_INDEX>13</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>Группа 5</COLUMN_TEXT>
+            <COLUMN_INDEX>14</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>Другие</COLUMN_TEXT>
+            <COLUMN_INDEX>15</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Сумма финансовых санкций, предъявленных к МО согласно актам МЭЭ, включая штрафы</COLUMN_TEXT>
+          <COLUMN_INDEX>16</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION />
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Сумма финансовых и штрафных санкций, полученных Обществом по результатам всех согласований (в руб.)</COLUMN_TEXT>
+          <COLUMN_INDEX>17</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION />
+        </TemplateColumnDynamic>
+      </COLUMNS>
+    </TemplateTableDynamic>
+  </TABLE>
+</TemplateDynamicReport>

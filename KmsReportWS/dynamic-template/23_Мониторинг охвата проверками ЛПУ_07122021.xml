@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-16"?>
+<TemplateDynamicReport xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <REPORT_NAME>Мониторинг охвата проверками ЛПУ</REPORT_NAME>
+  <REPORT_DESCRIPTION />
+  <REPORT_DATE>2021-12-07T11:19:26.5088494+03:00</REPORT_DATE>
+  <IsUserRow>false</IsUserRow>
+  <Emails>
+    <string>managers.zpz.ekmp@kapmed.ru</string>
+  </Emails>
+  <TABLE>
+    <TemplateTableDynamic>
+      <TABLE_NAME>итого 12 мес.</TABLE_NAME>
+      <TABLE_DESCRIPTION />
+      <ROWS />
+      <COLUMNS>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Количество ЛПУ</COLUMN_TEXT>
+          <COLUMN_INDEX>1</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION />
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>1 квартал</COLUMN_TEXT>
+          <COLUMN_INDEX />
+          <COLUMN_DESCRIPTION />
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>план</COLUMN_TEXT>
+            <COLUMN_INDEX>2</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>факт</COLUMN_TEXT>
+            <COLUMN_INDEX>3</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>2 квартал</COLUMN_TEXT>
+          <COLUMN_INDEX />
+          <COLUMN_DESCRIPTION />
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>план</COLUMN_TEXT>
+            <COLUMN_INDEX>4</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>факт</COLUMN_TEXT>
+            <COLUMN_INDEX>5</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>3 квартал</COLUMN_TEXT>
+          <COLUMN_INDEX />
+          <COLUMN_DESCRIPTION />
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>план</COLUMN_TEXT>
+            <COLUMN_INDEX>6</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>факт</COLUMN_TEXT>
+            <COLUMN_INDEX>7</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>4 квартал</COLUMN_TEXT>
+          <COLUMN_INDEX />
+          <COLUMN_DESCRIPTION />
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>план</COLUMN_TEXT>
+            <COLUMN_INDEX>8</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>факт</COLUMN_TEXT>
+            <COLUMN_INDEX>9</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>итого:12 мес.</COLUMN_TEXT>
+          <COLUMN_INDEX />
+          <COLUMN_DESCRIPTION />
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>план</COLUMN_TEXT>
+            <COLUMN_INDEX>10</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>факт</COLUMN_TEXT>
+            <COLUMN_INDEX>11</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>примечания (если какое то количество ЛПУне было проверено втечение года)</COLUMN_TEXT>
+          <COLUMN_INDEX>12</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION />
+        </TemplateColumnDynamic>
+      </COLUMNS>
+    </TemplateTableDynamic>
+  </TABLE>
+</TemplateDynamicReport>

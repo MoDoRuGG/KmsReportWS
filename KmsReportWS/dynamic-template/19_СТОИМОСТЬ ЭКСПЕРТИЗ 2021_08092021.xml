@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TemplateDynamicReport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <REPORT_NAME>СТОИМОСТЬ ЭКСПЕРТИЗ 2021</REPORT_NAME>
+  <REPORT_DESCRIPTION />
+  <REPORT_DATE>2021-09-08T13:45:55.1625714+03:00</REPORT_DATE>
+  <IsUserRow>false</IsUserRow>
+  <Emails />
+  <TABLE>
+    <TemplateTableDynamic>
+      <TABLE_NAME>1 вкладка</TABLE_NAME>
+      <TABLE_DESCRIPTION>1 вкладка</TABLE_DESCRIPTION>
+      <ROWS>
+        <TemplateRowDynamic>
+          <ROW_TEXT>ПЛАНОВЫЕ</ROW_TEXT>
+          <ROW_NUM>1</ROW_NUM>
+          <ROW_DESCRIPTION />
+        </TemplateRowDynamic>
+        <TemplateRowDynamic>
+          <ROW_TEXT>ВНЕПЛАНОВЫЕ</ROW_TEXT>
+          <ROW_NUM>1</ROW_NUM>
+          <ROW_DESCRIPTION />
+        </TemplateRowDynamic>
+        <TemplateRowDynamic>
+          <ROW_TEXT>ЛЕТАЛЬНЫЕ</ROW_TEXT>
+          <ROW_NUM>1</ROW_NUM>
+          <ROW_DESCRIPTION />
+        </TemplateRowDynamic>
+      </ROWS>
+      <COLUMNS>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>ВИДЫ ЭКСПЕРТИЗ</COLUMN_TEXT>
+          <COLUMN_INDEX>1</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION />
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>АПП</COLUMN_TEXT>
+          <COLUMN_INDEX />
+          <COLUMN_DESCRIPTION />
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>с дефектами</COLUMN_TEXT>
+            <COLUMN_INDEX>2</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>без дефектов</COLUMN_TEXT>
+            <COLUMN_INDEX>3</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Стационар</COLUMN_TEXT>
+          <COLUMN_INDEX />
+          <COLUMN_DESCRIPTION />
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>с дефектами</COLUMN_TEXT>
+            <COLUMN_INDEX>4</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>без дефектов</COLUMN_TEXT>
+            <COLUMN_INDEX>5</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Дневной стационар</COLUMN_TEXT>
+          <COLUMN_INDEX />
+          <COLUMN_DESCRIPTION />
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>с дефектами</COLUMN_TEXT>
+            <COLUMN_INDEX>6</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>без дефектов</COLUMN_TEXT>
+            <COLUMN_INDEX>7</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Скорая помощь</COLUMN_TEXT>
+          <COLUMN_INDEX />
+          <COLUMN_DESCRIPTION />
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>с дефектами</COLUMN_TEXT>
+            <COLUMN_INDEX>8</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>без дефектов</COLUMN_TEXT>
+            <COLUMN_INDEX>9</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Стоимость экспертизы по жалобе</COLUMN_TEXT>
+          <COLUMN_INDEX>10</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION />
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Примечания</COLUMN_TEXT>
+          <COLUMN_INDEX>11</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION />
+        </TemplateColumnDynamic>
+      </COLUMNS>
+    </TemplateTableDynamic>
+  </TABLE>
+</TemplateDynamicReport>

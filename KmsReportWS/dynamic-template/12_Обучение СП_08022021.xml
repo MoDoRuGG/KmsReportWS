@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TemplateDynamicReport xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <REPORT_NAME>Обучение СП</REPORT_NAME>
+  <REPORT_DESCRIPTION />
+  <REPORT_DATE>2021-02-08T17:51:18.6767577+03:00</REPORT_DATE>
+  <IsUserRow>false</IsUserRow>
+  <Emails>
+    <string>direktora_oms_filialov@kapmed.ru</string>
+  </Emails>
+  <TABLE>
+    <TemplateTableDynamic>
+      <TABLE_NAME>Обучение СП</TABLE_NAME>
+      <TABLE_DESCRIPTION />
+      <ROWS />
+      <COLUMNS>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Всего СП</COLUMN_TEXT>
+          <COLUMN_INDEX />
+          <COLUMN_DESCRIPTION />
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>Обученные</COLUMN_TEXT>
+            <COLUMN_INDEX>1</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>Необученные</COLUMN_TEXT>
+            <COLUMN_INDEX>2</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+        </TemplateColumnDynamic>
+      </COLUMNS>
+    </TemplateTableDynamic>
+  </TABLE>
+</TemplateDynamicReport>

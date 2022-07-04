@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TemplateDynamicReport xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <REPORT_NAME>Тестовый запрос</REPORT_NAME>
+  <REPORT_DESCRIPTION>Запрос созданный в конструкторе для тестирования.</REPORT_DESCRIPTION>
+  <TABLE>
+    <TemplateTableDynamic>
+      <TABLE_NAME>Проф осмотры</TABLE_NAME>
+      <TABLE_DESCRIPTION />
+      <ROWS />
+      <COLUMNS>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Регион</COLUMN_TEXT>
+          <COLUMN_INDEX>1</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION>Здесь указывается регион филиала</COLUMN_DESCRIPTION>
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Проинформировано</COLUMN_TEXT>
+          <COLUMN_INDEX />
+          <COLUMN_DESCRIPTION>Разбивка по видам информирования</COLUMN_DESCRIPTION>
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>Профилактические осмотры</COLUMN_TEXT>
+            <COLUMN_INDEX>2</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>Диспансеризация</COLUMN_TEXT>
+            <COLUMN_INDEX>3</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>Диспансерное наблюдение</COLUMN_TEXT>
+            <COLUMN_INDEX>4</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+        </TemplateColumnDynamic>
+      </COLUMNS>
+    </TemplateTableDynamic>
+    <TemplateTableDynamic>
+      <TABLE_NAME>65+</TABLE_NAME>
+      <TABLE_DESCRIPTION>Информация по лицам из группы риска</TABLE_DESCRIPTION>
+      <ROWS />
+      <COLUMNS>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Регион</COLUMN_TEXT>
+          <COLUMN_INDEX>1</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION>Здесь указывается регион филиала</COLUMN_DESCRIPTION>
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Проинформировано</COLUMN_TEXT>
+          <COLUMN_INDEX />
+          <COLUMN_DESCRIPTION>Разбивка по видам информирования</COLUMN_DESCRIPTION>
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>Профилактические осмотры</COLUMN_TEXT>
+            <COLUMN_INDEX>2</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>Диспансеризация</COLUMN_TEXT>
+            <COLUMN_INDEX>3</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>Диспансерное наблюдение</COLUMN_TEXT>
+            <COLUMN_INDEX>4</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+        </TemplateColumnDynamic>
+      </COLUMNS>
+    </TemplateTableDynamic>
+  </TABLE>
+</TemplateDynamicReport>

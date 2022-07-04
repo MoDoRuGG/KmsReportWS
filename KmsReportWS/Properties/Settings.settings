@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="KmsReportWS.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ConnStr" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Data Source=Ryaifls02;Initial Catalog=kms_report;User ID=sa; Password=mk7#Dp001</Value>    
+    </Setting>    
+  </Settings>
+</SettingsFile>

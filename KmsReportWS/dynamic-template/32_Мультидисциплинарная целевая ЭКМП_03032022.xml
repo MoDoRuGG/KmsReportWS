@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TemplateDynamicReport xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <REPORT_NAME>Мультидисциплинарная целевая ЭКМП</REPORT_NAME>
+  <REPORT_DESCRIPTION />
+  <REPORT_DATE>2022-03-03T16:00:58.9995002+03:00</REPORT_DATE>
+  <IsUserRow>false</IsUserRow>
+  <Emails />
+  <TABLE>
+    <TemplateTableDynamic>
+      <TABLE_NAME>1 вкладка</TABLE_NAME>
+      <TABLE_DESCRIPTION>1 вкладка</TABLE_DESCRIPTION>
+      <ROWS>
+        <TemplateRowDynamic>
+          <ROW_TEXT>20</ROW_TEXT>
+          <ROW_NUM>1</ROW_NUM>
+          <ROW_DESCRIPTION />
+        </TemplateRowDynamic>
+        <TemplateRowDynamic>
+          <ROW_TEXT>21</ROW_TEXT>
+          <ROW_NUM>1</ROW_NUM>
+          <ROW_DESCRIPTION />
+        </TemplateRowDynamic>
+      </ROWS>
+      <COLUMNS>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Количество страховых случаев, подвергшихся   целевой ЭКМП</COLUMN_TEXT>
+          <COLUMN_INDEX>1</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION />
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Поводы для проведения экспертиз</COLUMN_TEXT>
+          <COLUMN_INDEX />
+          <COLUMN_DESCRIPTION />
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>Случаи получания жалобы от застрахованного лица или его представителя на доступность и качество медицинской помощи, оказанной специалистами разных профилей и /или на разных уровнях оказания медицинской помощи</COLUMN_TEXT>
+            <COLUMN_INDEX>2</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>Случаи летального исхода при остром коронарном синдроме код МКБ 10 ( I 20.0;I 21- I 24)</COLUMN_TEXT>
+            <COLUMN_INDEX>3</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>Случаи летального исхода при остром нарушении мозгового кровообращения (I 60-I 63; G 45-G46)</COLUMN_TEXT>
+            <COLUMN_INDEX>4</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>Случаи летального исхода при внебольничныхи госпитальных пневмониях (J12- J8)</COLUMN_TEXT>
+            <COLUMN_INDEX>5</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>Случаи летального исхода при злокачественных новообразованиях молочной железы у женщин (С 50)</COLUMN_TEXT>
+            <COLUMN_INDEX>6</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>Случаи летального исхода при злокачественных новообразованиях предстательной железы у мужчин (С 61)</COLUMN_TEXT>
+            <COLUMN_INDEX>7</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>Случаи первичного выхода на инфвалидность лиц трудоспособного возраста и детей</COLUMN_TEXT>
+            <COLUMN_INDEX>8</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+        </TemplateColumnDynamic>
+      </COLUMNS>
+    </TemplateTableDynamic>
+  </TABLE>
+</TemplateDynamicReport>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TemplateDynamicReport xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <REPORT_NAME>Инсульты и повторы</REPORT_NAME>
+  <REPORT_DESCRIPTION>Это описание к тестовому отчёту "Инсульты и повторы".
+Заполняю пустое место текстом</REPORT_DESCRIPTION>
+  <IsUserRow>false</IsUserRow>
+  <Emails />
+  <TABLE>
+    <TemplateTableDynamic>
+      <TABLE_NAME>1 лист</TABLE_NAME>
+      <TABLE_DESCRIPTION>1 вкладка</TABLE_DESCRIPTION>
+      <ROWS>
+        <TemplateRowDynamic>
+          <ROW_TEXT>ОКС</ROW_TEXT>
+          <ROW_NUM>1</ROW_NUM>
+          <ROW_DESCRIPTION>1 вкладка</ROW_DESCRIPTION>
+        </TemplateRowDynamic>
+        <TemplateRowDynamic>
+          <ROW_TEXT>ОНМК</ROW_TEXT>
+          <ROW_NUM>1</ROW_NUM>
+          <ROW_DESCRIPTION>ОНМК: I60-I63, G45-G46</ROW_DESCRIPTION>
+        </TemplateRowDynamic>
+      </ROWS>
+      <COLUMNS>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Коичество страховых случаев</COLUMN_TEXT>
+          <COLUMN_INDEX>1</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION />
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Количество страховых случаев повторных госпитализаций</COLUMN_TEXT>
+          <COLUMN_INDEX>2</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION />
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Количество проведенных МЭЭ</COLUMN_TEXT>
+          <COLUMN_INDEX>3</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION />
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Количество проведенных ЭКМП</COLUMN_TEXT>
+          <COLUMN_INDEX>4</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION />
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Количество выявленных дефектов группы 1</COLUMN_TEXT>
+          <COLUMN_INDEX>5</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION />
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Количество выявленных дефектов группы 3</COLUMN_TEXT>
+          <COLUMN_INDEX>6</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION />
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Количество выявленных дефектов группы 4</COLUMN_TEXT>
+          <COLUMN_INDEX>7</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION />
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Количество выявленных дефектов группы 5</COLUMN_TEXT>
+          <COLUMN_INDEX>8</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION />
+        </TemplateColumnDynamic>
+      </COLUMNS>
+    </TemplateTableDynamic>
+  </TABLE>
+</TemplateDynamicReport>

@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="kms_report" Class="LinqToSqlKmsReportDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=DESKTOP-7AQ1HDK\SQLEXPRESS;Initial Catalog=kms_report;User ID=report" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="kms_reportConnectionString4" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Responsible_Employee" Member="Responsible_Employee">
+    <Type Name="Responsible_Employee">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id_Report" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Id_Employee" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Inspection_Name" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="Employee_Responsible_Employee" Member="Employee" ThisKey="Id_Employee" OtherKey="Id" Type="Employee" IsForeignKey="true" />
+      <Association Name="Report_Type_Responsible_Employee" Member="Report_Type" ThisKey="Id_Report" OtherKey="Id" Type="Report_Type" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Report_Data" Member="Report_Data">
+    <Type Name="Report_Data">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id_Report" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Id_Flow" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Theme" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="General_field_1" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="General_field_2" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Association Name="Report_Data_Report_f262" Member="Report_f262" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_f262" />
+      <Association Name="Report_Data_Report262_Table3" Member="Report262_Table3" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report262_Table3" />
+      <Association Name="Report_Data_Report_f294" Member="Report_f294" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_f294" />
+      <Association Name="Report_Data_Report_Pg" Member="Report_Pg" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_Pg" />
+      <Association Name="Report_Data_Report_InfrormationResponse" Member="Report_InfrormationResponses" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_InfrormationResponse" />
+      <Association Name="Report_Data_Report_Oped" Member="Report_Opeds" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_Oped" />
+      <Association Name="Report_Data_Report_Vaccination" Member="Report_Vaccinations" ThisKey="Id" OtherKey="Id_Report_data" Type="Report_Vaccination" />
+      <Association Name="Report_Data_FSSMonitroing" Member="FSSMonitroings" ThisKey="Id" OtherKey="Id_ReportData" Type="FSSMonitroing" />
+      <Association Name="Report_Data_Report_Proposal" Member="Report_Proposals" ThisKey="Id" OtherKey="id_ReportData" Type="Report_Proposal" />
+      <Association Name="Report_Data_Report_OpedFinance" Member="Report_OpedFinances" ThisKey="Id" OtherKey="id_ReportData" Type="Report_OpedFinance" />
+      <Association Name="Report_Data_Report_Iilz" Member="Report_Iilzs" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_Iilz" />
+      <Association Name="Report_Flow_Report_Data" Member="Report_Flow" ThisKey="Id_Flow" OtherKey="Id" Type="Report_Flow" IsForeignKey="true" />
+      <Association Name="Report_Type_Report_Data" Member="Report_Type" ThisKey="Id_Report" OtherKey="Id" Type="Report_Type" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Report_f262" Member="Report_f262">
+    <Type Name="Report_f262">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id_Report_Data" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Row_Num" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Count_Ppl" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Count_Ppl_Full" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Count_Sms" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Count_Post" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Count_Phone" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Count_Messangers" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Count_Email" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Count_Address" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Count_Another" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Report_Data_Report_f262" Member="Report_Data" ThisKey="Id_Report_Data" OtherKey="Id" Type="Report_Data" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Report262_Table3" Member="Report262_Table3">
+    <Type Name="Report262_Table3">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id_Report_Data" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="mo" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="count_unit" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_unit_child" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_unit_with_sp" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_unit_with_sp_child" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_channel_sp" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_channel_sp_child" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_channel_phone" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_channel_phone_child" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_channel_terminal" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_channel_terminal_child" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_channel_another" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_channel_another_child" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Report_Data_Report262_Table3" Member="Report_Data" ThisKey="Id_Report_Data" OtherKey="Id" Type="Report_Data" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Report_f294" Member="Report_f294">
+    <Type Name="Report_f294">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id_Report_Data" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RowNum" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="CountPpl" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CountSms" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CountPost" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CountPhone" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CountMessangers" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CountEmail" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CountAddress" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CountAnother" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CountOncologicalDisease" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CountEndocrineDisease" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CountBronchoDisease" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CountBloodDisease" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CountAnotherDisease" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Report_Data_Report_f294" Member="Report_Data" ThisKey="Id_Report_Data" OtherKey="Id" Type="Report_Data" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Region" Member="Region">
+    <Type Name="Region">
+      <Column Name="id" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="code_division" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="name_devision" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="position" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="name_head" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="phone" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="Region_Employee" Member="Employee" ThisKey="id" OtherKey="Region" Type="Employee" />
+      <Association Name="Region_NormativCpnpRegion" Member="NormativCpnpRegion" ThisKey="id" OtherKey="id_region" Type="NormativCpnpRegion" />
+      <Association Name="Region_Report_Dynamic_Flow" Member="Report_Dynamic_Flow" ThisKey="id" OtherKey="Id_Region" Type="Report_Dynamic_Flow" />
+      <Association Name="Region_OpedFinancePlan" Member="OpedFinancePlans" ThisKey="id" OtherKey="Id_Region" Type="OpedFinancePlan" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Employee" Member="Employee">
+    <Type Name="Employee">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Surname" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MiddleName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Login" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Phone" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Position" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="Region" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Employee_Responsible_Employee" Member="Responsible_Employee" ThisKey="Id" OtherKey="Id_Employee" Type="Responsible_Employee" />
+      <Association Name="Employee_Comment" Member="Comment" ThisKey="Id" OtherKey="Id_Employee" Type="Comment" />
+      <Association Name="Employee_Report_Dynamic_Flow" Member="Report_Dynamic_Flow" ThisKey="Id" OtherKey="Id_Employee" Type="Report_Dynamic_Flow" />
+      <Association Name="Employee_Report_Dynamic" Member="Report_Dynamic" ThisKey="Id" OtherKey="id" Type="Report_Dynamic" Cardinality="One" />
+      <Association Name="Employee_Report_Flow" Member="Report_Flow" ThisKey="Id" OtherKey="Id_Employee" Type="Report_Flow" />
+      <Association Name="Employee_Scans_Base" Member="Scans_Bases" ThisKey="Id" OtherKey="Usr_added" Type="Scans_Base" />
+      <Association Name="Employee_Scans_Base1" Member="Scans_Bases1" ThisKey="Id" OtherKey="Usr_update" Type="Scans_Base" />
+      <Association Name="Region_Employee" Member="Region1" ThisKey="Region" OtherKey="id" Type="Region" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Comment" Member="Comment">
+    <Type Name="Comment">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id_Flow" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Id_Employee" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Comment" Member="Comment1" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Date_ins" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Date_read" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Employee_Comment" Member="Employee" ThisKey="Id_Employee" OtherKey="Id" Type="Employee" IsForeignKey="true" />
+      <Association Name="Report_Flow_Comment" Member="Report_Flow" ThisKey="Id_Flow" OtherKey="Id" Type="Report_Flow" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Report_Pg" Member="Report_Pg">
+    <Type Name="Report_Pg">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id_Report_Data" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RowNum" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="CountSmo" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="CountSmoAnother" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="CountInsured" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="CountInsuredRepresentative" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="CountTfoms" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="CountProsecutor" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="CountOutOfSmo" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="CountAmbulatory" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="CountDs" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="CountDsVmp" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="CountStac" Type="System.Decimal" DbType="Decimal(15,3) NOT NULL" CanBeNull="false" />
+      <Column Name="CountStacVmp" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="CountOutOfSmoAnother" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="CountAmbulatoryAnother" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="CountDsAnother" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="CountDsVmpAnother" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="CountStacAnother" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="CountStacVmpAnother" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Association Name="Report_Data_Report_Pg" Member="Report_Data" ThisKey="Id_Report_Data" OtherKey="Id" Type="Report_Data" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NormativCpnpFederal" Member="NormativCpnpFederal">
+    <Type Name="NormativCpnpFederal">
+      <Column Name="year" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="value" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NormativCpnpRegion" Member="NormativCpnpRegion">
+    <Type Name="NormativCpnpRegion">
+      <Column Name="id_region" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="year" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="value" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Association Name="Region_NormativCpnpRegion" Member="Region" ThisKey="id_region" OtherKey="id" Type="Region" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Report_Dynamic_Flow" Member="Report_Dynamic_Flow">
+    <Type Name="Report_Dynamic_Flow">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id_Report_Dynamic" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Id_Region" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Id_Employee" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Created" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Association Name="Report_Dynamic_Flow_Scan_Dynamic" Member="Scan_Dynamics" ThisKey="id" OtherKey="IdFlow" Type="Scan_Dynamic" />
+      <Association Name="Report_Dynamic_Flow_Report_Dynamic_Data" Member="Report_Dynamic_Datas" ThisKey="id" OtherKey="Id_Flow" Type="Report_Dynamic_Data" />
+      <Association Name="Employee_Report_Dynamic_Flow" Member="Employee" ThisKey="Id_Employee" OtherKey="Id" Type="Employee" IsForeignKey="true" />
+      <Association Name="Region_Report_Dynamic_Flow" Member="Region" ThisKey="Id_Region" OtherKey="id" Type="Region" IsForeignKey="true" />
+      <Association Name="Report_Dynamic_Report_Dynamic_Flow" Member="Report_Dynamic" ThisKey="Id_Report_Dynamic" OtherKey="id" Type="Report_Dynamic" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Report_Dynamic" Member="Report_Dynamic">
+    <Type Name="Report_Dynamic">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="Char(400) NOT NULL" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="UserCreated" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsUserRow" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FileName" Type="System.String" DbType="VarChar(350) NOT NULL" CanBeNull="false" />
+      <Association Name="Report_Dynamic_Report_Dynamic_Flow" Member="Report_Dynamic_Flow" ThisKey="id" OtherKey="Id_Report_Dynamic" Type="Report_Dynamic_Flow" />
+      <Association Name="Employee_Report_Dynamic" Member="Employee" ThisKey="id" OtherKey="Id" Type="Employee" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Report_Flow" Member="Report_Flow">
+    <Type Name="Report_Flow">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id_Region" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Id_Employee" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Id_Report_Type" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Yymm" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="Created" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Updated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Id_Employee_Upd" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Version" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Scan" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Date_to_co" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="User_to_co" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Date_edit_co" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="User_edit_co" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Date_is_done" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="User_submit" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Scan2" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Scan3" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Association Name="Report_Flow_Report_Data" Member="Report_Data" ThisKey="Id" OtherKey="Id_Flow" Type="Report_Data" />
+      <Association Name="Report_Flow_Comment" Member="Comment" ThisKey="Id" OtherKey="Id_Flow" Type="Comment" />
+      <Association Name="Report_Flow_Scans_Base" Member="Scans_Bases" ThisKey="Id" OtherKey="Id_flow" Type="Scans_Base" />
+      <Association Name="Employee_Report_Flow" Member="Employee" ThisKey="Id_Employee" OtherKey="Id" Type="Employee" IsForeignKey="true" />
+      <Association Name="Region_Report_Flow" Member="Region" ThisKey="Id_Region" OtherKey="id" Type="Region" IsForeignKey="true" />
+      <Association Name="Report_Type_Report_Flow" Member="Report_Type" ThisKey="Id_Report_Type" OtherKey="Id" Type="Report_Type" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Email" Member="Email">
+    <Type Name="Email">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Email" Member="Email1" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Report_InfrormationResponse" Member="Report_InfrormationResponses">
+    <Type Name="Report_InfrormationResponse">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="[Plan]" Member="Plan" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Informed" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CountRegistry" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CountPast" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Id_Report_Data" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Report_Data_Report_InfrormationResponse" Member="Report_Data" ThisKey="Id_Report_Data" OtherKey="Id" Type="Report_Data" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Report_Oped" Member="Report_Opeds">
+    <Type Name="Report_Oped">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="App" Type="System.Decimal" DbType="Decimal(15,3) NOT NULL" CanBeNull="false" />
+      <Column Name="Ks" Type="System.Decimal" DbType="Decimal(15,3) NOT NULL" CanBeNull="false" />
+      <Column Name="Ds" Type="System.Decimal" DbType="Decimal(15,3) NOT NULL" CanBeNull="false" />
+      <Column Name="Notes" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="Id_Report_Data" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RowNum" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Smp" Type="System.Decimal" DbType="Decimal(15,3) NOT NULL" CanBeNull="false" />
+      <Association Name="Report_Data_Report_Oped" Member="Report_Data" ThisKey="Id_Report_Data" OtherKey="Id" Type="Report_Data" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Report_Vaccination" Member="Report_Vaccinations">
+    <Type Name="Report_Vaccination">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id_Report_data" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="m_18_39" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="m_40_59" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="m_60_65" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="m_66_74" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="m_75_more" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="w_18_39" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="w_40_54" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="w_55_65" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="w_66_74" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="w_75_more" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Report_Data_Report_Vaccination" Member="Report_Data" ThisKey="Id_Report_data" OtherKey="Id" Type="Report_Data" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Scans_Base" Member="Scans_Bases">
+    <Type Name="Scans_Base">
+      <Column Name="Id_Scan" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="File_Name" Type="System.String" DbType="VarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="Usr_added" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Dte_added" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Usr_update" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Dte_update" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Id_flow" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Employee_Scans_Base" Member="Employee" ThisKey="Usr_added" OtherKey="Id" Type="Employee" IsForeignKey="true" />
+      <Association Name="Employee_Scans_Base1" Member="Employee1" ThisKey="Usr_update" OtherKey="Id" Type="Employee" IsForeignKey="true" />
+      <Association Name="Report_Flow_Scans_Base" Member="Report_Flow" ThisKey="Id_flow" OtherKey="Id" Type="Report_Flow" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FSSMonitroing" Member="FSSMonitroings">
+    <Type Name="FSSMonitroing">
+      <Column Name="Id_FssMonitoring" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RowNum" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="ExpertWithEducation" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="ExpertWithoutEducation" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="Id_ReportData" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Report_Data_FSSMonitroing" Member="Report_Data" ThisKey="Id_ReportData" OtherKey="Id" Type="Report_Data" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Scan_Dynamic" Member="Scan_Dynamics">
+    <Type Name="Scan_Dynamic">
+      <Column Name="id_DynamicScan" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FileName" Type="System.String" DbType="VarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="IdFlow" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Report_Dynamic_Flow_Scan_Dynamic" Member="Report_Dynamic_Flow" ThisKey="IdFlow" OtherKey="id" Type="Report_Dynamic_Flow" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Report_Dynamic_Data" Member="Report_Dynamic_Datas">
+    <Type Name="Report_Dynamic_Data">
+      <Column Name="Id" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Value" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="Position" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Id_Flow" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Report_Dynamic_Flow_Report_Dynamic_Data" Member="Report_Dynamic_Flow" ThisKey="Id_Flow" OtherKey="id" Type="Report_Dynamic_Flow" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Report_Proposal" Member="Report_Proposals">
+    <Type Name="Report_Proposal">
+      <Column Name="id_ReportProposal" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_ReportData" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Count_MoCheck" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Count_MoCheckWithDefect" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Count_Proporsals" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Count_ProporsalsWithDefect" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Association Name="Report_Data_Report_Proposal" Member="Report_Data" ThisKey="id_ReportData" OtherKey="Id" Type="Report_Data" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Report_OpedFinance" Member="Report_OpedFinances">
+    <Type Name="Report_OpedFinance">
+      <Column Name="id_OpedFinance" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="row_num" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="value_fact" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="notes" Type="System.String" DbType="VarChar(1500)" CanBeNull="true" />
+      <Column Name="id_ReportData" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Report_Data_Report_OpedFinance" Member="Report_Data" ThisKey="id_ReportData" OtherKey="Id" Type="Report_Data" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OpedFinancePlan" Member="OpedFinancePlans">
+    <Type Name="OpedFinancePlan">
+      <Column Name="Id_OpedFinancePlan" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Yymm" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="Value" Type="System.Decimal" DbType="Decimal(15,2) NOT NULL" CanBeNull="false" />
+      <Column Name="Id_Region" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Association Name="Region_OpedFinancePlan" Member="Region" ThisKey="Id_Region" OtherKey="id" Type="Region" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Report_Type" Member="Report_Types">
+    <Type Name="Report_Type">
+      <Column Name="Id" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="Deadline_day" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Period" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="YymmEnd" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Association Name="Report_Type_Responsible_Employee" Member="Responsible_Employees" ThisKey="Id" OtherKey="Id_Report" Type="Responsible_Employee" />
+      <Association Name="Report_Type_Report_Data" Member="Report_Datas" ThisKey="Id" OtherKey="Id_Report" Type="Report_Data" />
+      <Association Name="Report_Type_Report_Flow" Member="Report_Flows" ThisKey="Id" OtherKey="Id_Report_Type" Type="Report_Flow" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Report_Iilz" Member="Report_Iilzs">
+    <Type Name="Report_Iilz">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id_Report_Data" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Count_Pers_First" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Count_Pers_Repeat" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Count_Messages" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Total_Cost" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="Accounting_Document" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="average_cost_per_message" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="average_cost_of_informing_1_PL" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Association Name="Report_Data_Report_Iilz" Member="Report_Data" ThisKey="Id_Report_Data" OtherKey="Id" Type="Report_Data" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
