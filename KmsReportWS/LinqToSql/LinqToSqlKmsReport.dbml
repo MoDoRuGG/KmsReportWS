@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="kms_report" Class="LinqToSqlKmsReportDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="WebSettings" ConnectionString="Data Source=DESKTOP-7AQ1HDK\SQLEXPRESS;Initial Catalog=kms_report;User ID=report" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="kms_reportConnectionString4" Provider="System.Data.SqlClient" />
+  <Connection Mode="WebSettings" ConnectionString="Data Source=192.168.45.5;Initial Catalog=kms_report;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="kms_reportConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Responsible_Employee" Member="Responsible_Employee">
     <Type Name="Responsible_Employee">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -29,6 +29,7 @@
       <Association Name="Report_Data_Report_Proposal" Member="Report_Proposals" ThisKey="Id" OtherKey="id_ReportData" Type="Report_Proposal" />
       <Association Name="Report_Data_Report_OpedFinance" Member="Report_OpedFinances" ThisKey="Id" OtherKey="id_ReportData" Type="Report_OpedFinance" />
       <Association Name="Report_Data_Report_Iilz" Member="Report_Iilzs" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_Iilz" />
+      <Association Name="Report_Data_Report_Cadre" Member="Report_Cadre" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_Cadre" />
       <Association Name="Report_Flow_Report_Data" Member="Report_Flow" ThisKey="Id_Flow" OtherKey="Id" Type="Report_Flow" IsForeignKey="true" />
       <Association Name="Report_Type_Report_Data" Member="Report_Type" ThisKey="Id_Report" OtherKey="Id" Type="Report_Type" IsForeignKey="true" />
     </Type>
@@ -383,6 +384,41 @@
       <Column Name="average_cost_per_message" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
       <Column Name="average_cost_of_informing_1_PL" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
       <Association Name="Report_Data_Report_Iilz" Member="Report_Data" ThisKey="Id_Report_Data" OtherKey="Id" Type="Report_Data" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Report_Cadre" Member="Report_Cadre">
+    <Type Name="Report_Cadre">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id_Report_Data" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RowNum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_itog_state" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_itog_fact" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_itog_vacancy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_leader_state" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_leader_fact" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_leader_vacancy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_deputy_leader_state" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_deputy_leader_fact" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_deputy_leader_vacancy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_expert_doctor_state" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_expert_doctor_fact" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_expert_doctor_vacancy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_specialist_state" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_specialist_fact" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_specialist_vacancy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_grf15" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_grf16" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_grf17" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_grf18" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_grf19" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_grf20" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_grf21" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_grf22" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_grf23" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_grf24" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_grf25" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_grf26" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Report_Data_Report_Cadre" Member="Report_Data" ThisKey="Id_Report_Data" OtherKey="Id" Type="Report_Data" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

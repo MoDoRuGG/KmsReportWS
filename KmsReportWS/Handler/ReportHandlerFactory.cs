@@ -11,6 +11,7 @@ namespace KmsReportWS.Handler
         private readonly IReportHandler _opedCollector = new FOpedHandler(ReportType.Oped);
         private readonly IReportHandler _opedCollectorQ = new FOpedHandler(ReportType.OpedQ);
         private readonly IReportHandler _infrormationResponseHandlerCollector = new ReportInfrormationResponseHandler();
+        private readonly IReportHandler _cadreHandlerCollector = new ReportCadreHandler();
         private readonly IReportHandler _pgCollector = new PgHandler(ReportType.Pg);
         private readonly IReportHandler _pgQCollector = new PgHandler(ReportType.PgQ);
         private readonly IReportHandler _vacCollector = new ReportVaccinationHander(ReportType.Vac);
@@ -33,6 +34,7 @@ namespace KmsReportWS.Handler
                 ReportType.MFSS => _fssCollector,
                 ReportType.Proposal => _proposalCollector,
                 ReportType.OpedFinance => _opedFinanceCollector,
+                ReportType.Cadre => _cadreHandlerCollector,
 
             };
     }

@@ -127,8 +127,13 @@ namespace KmsReportWS
         {
             var handler = _reportHandlerFactory.GetHandler(ReportType.IR);
             return (handler as ReportInfrormationResponseHandler).GetYearData(yymm,theme,fillial);
+        }
 
-
+        [WebMethod]
+        public ReportCadreDataDto GetCadreYearData(string yymm, string theme, string fillial)
+        {
+            var handler = _reportHandlerFactory.GetHandler(ReportType.Cadre);
+            return (handler as ReportCadreHandler).GetYearData(yymm, theme, fillial);
         }
 
         [WebMethod]
@@ -211,43 +216,48 @@ namespace KmsReportWS
         _reportDynamicFlowHandler.GetReportFlow(flowId);
 
         [WebMethod]
-        public void Test123(ReportOped report)
+        public void WebReportOped(ReportOped report)
         {
             
         }
 
         [WebMethod]
-        public void Test12asdasd34(ReportInfrormationResponse report)
+        public void WebReportInfrormationResponse(ReportInfrormationResponse report)
         {
 
         }
 
 
         [WebMethod]
-        public void Testasd12asdasd34(ReportVaccination report)
+        public void WebReportVaccination(ReportVaccination report)
         {
 
         }
 
         [WebMethod]
-        public void Testasd12asdasd34s1(ReportFSSMonitroing report)
+        public void WebReportFSSMonitroing(ReportFSSMonitroing report)
         {
 
         }
 
 
         [WebMethod]
-        public void Testasd1asd2asdasd34s1(ReportProposal report)
+        public void WebReportProposal(ReportProposal report)
         {
 
         }
 
         [WebMethod]
-        public void Testasd1asd2asdasd34s1231(ReportOpedFinance report)
+        public void WebReportOpedFinance(ReportOpedFinance report)
         {
 
         }
 
+        [WebMethod]
+        public void WebReportCadre(ReportCadre report)
+        {
+
+        }
 
 
         [WebMethod]

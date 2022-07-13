@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
 <KMS_REPORT>
-  <VERSION>1.1.6.62</VERSION>
+  <VERSION>1.1.6.63</VERSION>
  <FILE>
     <NAME>cardio.xlsx</NAME>
     <IS_NEED_DOWNLOAD>true</IS_NEED_DOWNLOAD>
@@ -88,6 +88,10 @@
   </FILE>
   <FILE>
     <NAME>TemplateTextPGQ.xml</NAME>
+    <IS_NEED_DOWNLOAD>true</IS_NEED_DOWNLOAD>
+  </FILE>
+  <FILE>
+    <NAME>TemplateTextCadre.xml</NAME>
     <IS_NEED_DOWNLOAD>true</IS_NEED_DOWNLOAD>
   </FILE>
   <FILE>

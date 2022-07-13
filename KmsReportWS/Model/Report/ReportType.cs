@@ -17,6 +17,8 @@ namespace KmsReportWS.Model.Report
         [Description("mfss")] MFSS,
         [Description("proposal")] Proposal,
         [Description("oped_fin")] OpedFinance,
+        //добавил кадры
+        [Description("cadre")] Cadre,
 
     }
 }
