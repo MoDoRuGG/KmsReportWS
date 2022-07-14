@@ -50,10 +50,10 @@
         <elementListCompartment Id="79a394f5-9d73-4a73-b1eb-8688432aa070" absoluteBounds="6.265, 16.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="91e6a1e8-c55a-448e-b452-de0ee7ae9fc4" absoluteBounds="14.125, 24.875, 2, 4.8477197265625023">
+    <classShape Id="91e6a1e8-c55a-448e-b452-de0ee7ae9fc4" absoluteBounds="14.125, 24.875, 3.75, 4.8477197265625023">
       <DataClassMoniker Name="/LinqToSqlKmsReportDataContext/Report_Pg" />
       <nestedChildShapes>
-        <elementListCompartment Id="f81c7d36-8eb8-4e65-9f42-6460986e71b3" absoluteBounds="14.14, 25.335, 1.9700000000000002, 4.2877197265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="f81c7d36-8eb8-4e65-9f42-6460986e71b3" absoluteBounds="14.14, 25.335, 3.7199999999999998, 4.2877197265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
     <classShape Id="70af4e0d-8409-4611-b6aa-ee5c21b5ac0e" absoluteBounds="5.5, 10.625, 2, 1.1939925130208335">
@@ -86,7 +86,7 @@
         <elementListCompartment Id="e9931c8d-9900-4133-85f0-dd407ea67612" absoluteBounds="9.265, 17.335, 1.9700000000000002, 3.903116861979167" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(5.5 : 20.4142976888021); (6.25 : 20.4142976888021)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(5.5 : 20.4142976888021); (5.66666666666667 : 20.4142976888021 : JumpStart); (5.83333333333333 : 20.4142976888021 : JumpEnd); (6.25 : 20.4142976888021)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/LinqToSqlKmsReportDataContext/Employee/Employee_Responsible_Employee" />
       <nodes>
         <classShapeMoniker Id="a4c1df49-b44f-4d92-8fb3-8d8b7e5708e1" />
@@ -100,7 +100,7 @@
         <classShapeMoniker Id="93fdb60b-97ba-4168-922d-6e3e0486118b" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(13.5312525 : 18.125); (13.5312525 : 12.879022594401); (13.7135454166667 : 12.879022594401 : JumpStart); (13.8802120833333 : 12.879022594401 : JumpEnd); (14.1666666666667 : 12.879022594401 : JumpStart); (14.3333333333333 : 12.879022594401 : JumpEnd); (14.4166666666667 : 12.879022594401 : JumpStart); (14.5833333333333 : 12.879022594401 : JumpEnd); (14.75 : 12.879022594401)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(13.5312525 : 18.125); (13.5312525 : 12.879022594401); (13.7135454166667 : 12.879022594401 : JumpStart); (13.8802120833333 : 12.879022594401 : JumpEnd); (14.75 : 12.879022594401)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/LinqToSqlKmsReportDataContext/Report_Data/Report_Data_Report_f262" />
       <nodes>
         <classShapeMoniker Id="93fdb60b-97ba-4168-922d-6e3e0486118b" />
@@ -128,21 +128,21 @@
         <classShapeMoniker Id="a4c1df49-b44f-4d92-8fb3-8d8b7e5708e1" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(4.80461538461539 : 19); (5.875 : 18.625); (5.875 : 18.8397073946815); (5.94107443490112 : 18.7736329597804 : JumpStart); (6.05892556509888 : 18.6557818295826 : JumpEnd); (6.25150915249399 : 18.4631982421875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(4.80461538461538 : 19); (5.875 : 18.625); (5.875 : 18.8397073946815); (5.94107443490112 : 18.7736329597804 : JumpStart); (6.05892556509888 : 18.6557818295826 : JumpEnd); (6.25150915249399 : 18.4631982421875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/LinqToSqlKmsReportDataContext/Employee/Employee_Comment" />
       <nodes>
         <classShapeMoniker Id="a4c1df49-b44f-4d92-8fb3-8d8b7e5708e1" />
         <classShapeMoniker Id="5ee9811e-ff5f-467e-8355-d93ce499e697" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(9.25 : 17.6690991210938); (9.14583333333333 : 17.6690991210938 : JumpStart); (8.97916666666667 : 17.6690991210938 : JumpEnd); (8.25 : 17.6690991210938)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(9.25 : 17.6690991210938); (9.14583333333333 : 17.6690991210938 : JumpStart); (8.97916666666667 : 17.6690991210938 : JumpEnd); (8.95833333333333 : 17.6690991210938 : JumpStart); (8.66666666666667 : 17.6690991210938 : JumpEnd); (8.25 : 17.6690991210938)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/LinqToSqlKmsReportDataContext/Report_Flow/Report_Flow_Comment" />
       <nodes>
         <classShapeMoniker Id="e51f7665-c89b-478b-adee-34af918d5a1f" />
         <classShapeMoniker Id="5ee9811e-ff5f-467e-8355-d93ce499e697" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(12.9218775 : 20.0881982421875); (12.9218775 : 27.2988598632813); (14.125 : 27.2988598632813)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(12.9218775 : 20.0881982421875); (12.9218775 : 26.15625); (14.125 : 26.15625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/LinqToSqlKmsReportDataContext/Report_Data/Report_Data_Report_Pg" />
       <nodes>
         <classShapeMoniker Id="93fdb60b-97ba-4168-922d-6e3e0486118b" />
@@ -156,14 +156,14 @@
         <classShapeMoniker Id="b520e495-f4a9-4dba-bd19-2661fa30093c" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(4.5 : 21.9247054036458); (4.5 : 23.7315991210938); (4.94791916666667 : 23.7315991210938 : JumpStart); (5.11458583333333 : 23.7315991210938 : JumpEnd); (9 : 23.7315991210938)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(4.5 : 21.9247054036458); (4.5 : 23.7315991210938); (9 : 23.7315991210938)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/LinqToSqlKmsReportDataContext/Employee/Employee_Report_Dynamic_Flow" />
       <nodes>
         <classShapeMoniker Id="a4c1df49-b44f-4d92-8fb3-8d8b7e5708e1" />
         <classShapeMoniker Id="9f5449f1-f831-4c5a-bc2f-257390635e08" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(1.75 : 20.4054996744792); (1.75 : 23.2095470605469); (4.41666666666667 : 23.2095470605469 : JumpStart); (4.58333333333333 : 23.2095470605469 : JumpEnd); (4.94791916666667 : 23.2095470605469 : JumpStart); (5.11458583333333 : 23.2095470605469 : JumpEnd); (9 : 23.2095470605469)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(1.75 : 20.4054996744792); (1.75 : 23.2095470605469); (4.41666666666667 : 23.2095470605469 : JumpStart); (4.58333333333333 : 23.2095470605469 : JumpEnd); (9 : 23.2095470605469)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/LinqToSqlKmsReportDataContext/Region/Region_Report_Dynamic_Flow" />
       <nodes>
         <classShapeMoniker Id="19b359a3-cf68-4953-a92c-7abd6738eb50" />
@@ -184,14 +184,14 @@
         <classShapeMoniker Id="3b4349e4-e617-4a4e-b219-a8909c40b4ed" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 19.46875); (7.16666666666667 : 19.46875 : JumpStart); (7.33333333333333 : 19.46875 : JumpEnd); (8.97916666666667 : 19.46875 : JumpStart); (9.14583333333333 : 19.46875 : JumpEnd); (9.25 : 19.46875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(5.5 : 19.46875); (5.66666666666667 : 19.46875 : JumpStart); (5.83333333333333 : 19.46875 : JumpEnd); (5.91666666666667 : 19.46875 : JumpStart); (6.08333333333333 : 19.46875 : JumpEnd); (7.16666666666667 : 19.46875 : JumpStart); (7.33333333333333 : 19.46875 : JumpEnd); (8.97916666666667 : 19.46875 : JumpStart); (9.14583333333333 : 19.46875 : JumpEnd); (9.25 : 19.46875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/LinqToSqlKmsReportDataContext/Employee/Employee_Report_Flow" />
       <nodes>
         <classShapeMoniker Id="a4c1df49-b44f-4d92-8fb3-8d8b7e5708e1" />
         <classShapeMoniker Id="e51f7665-c89b-478b-adee-34af918d5a1f" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 18.7003491210938); (4.41666666666667 : 18.7003491210938 : JumpStart); (4.58333333333333 : 18.7003491210938 : JumpEnd); (4.94791866666667 : 18.7003491210938 : JumpStart); (5.11458533333333 : 18.7003491210938 : JumpEnd); (5.57659322666252 : 18.7003491210938 : JumpStart); (5.74325989332918 : 18.7003491210938 : JumpEnd); (5.91666666666667 : 18.7003491210938 : JumpStart); (6.09769160692103 : 18.7003491210938 : JumpEnd); (8.97916666666667 : 18.7003491210938 : JumpStart); (9.14583333333333 : 18.7003491210938 : JumpEnd); (9.25 : 18.7003491210938)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(2.75 : 18.7003491210938); (5.57659322666252 : 18.7003491210938 : JumpStart); (5.74325989332918 : 18.7003491210938 : JumpEnd); (5.91666666666667 : 18.7003491210938 : JumpStart); (6.09769160692103 : 18.7003491210938 : JumpEnd); (8.66666666666667 : 18.7003491210938 : JumpStart); (8.95833333333333 : 18.7003491210938 : JumpEnd); (8.97916666666667 : 18.7003491210938 : JumpStart); (9.14583333333333 : 18.7003491210938 : JumpEnd); (9.25 : 18.7003491210938)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/LinqToSqlKmsReportDataContext/Region/Region_Report_Flow" />
       <nodes>
         <classShapeMoniker Id="19b359a3-cf68-4953-a92c-7abd6738eb50" />
@@ -210,7 +210,7 @@
         <elementListCompartment Id="f115df5c-1936-474d-9418-04e1b316714c" absoluteBounds="1.8900000000000001, 14.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(12.3164028125 : 18.125); (12.3164028125 : 14.46875); (9.14583333333333 : 14.46875 : JumpStart); (8.97916666666667 : 14.46875 : JumpEnd); (8.95833333333333 : 14.46875 : JumpStart); (8.66666666666667 : 14.46875 : JumpEnd); (3.875 : 14.46875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(12.3164028125 : 18.125); (12.3164028125 : 14.46875); (9.14583333333333 : 14.46875 : JumpStart); (8.97916666666667 : 14.46875 : JumpEnd); (8.95833333333333 : 14.46875 : JumpStart); (8.79166666666667 : 14.46875 : JumpEnd); (3.875 : 14.46875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/LinqToSqlKmsReportDataContext/Report_Data/Report_Data_Report_InfrormationResponse" />
       <nodes>
         <classShapeMoniker Id="93fdb60b-97ba-4168-922d-6e3e0486118b" />
@@ -223,7 +223,7 @@
         <elementListCompartment Id="d619972f-97fc-404c-8efe-04871227a7cb" absoluteBounds="24.515, 18.835, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(14 : 19.8556021842448); (24.5 : 19.8556021842448)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(14 : 19.8556021842448); (19.7604166666667 : 19.8556021842448 : JumpStart); (19.9270833333333 : 19.8556021842448 : JumpEnd); (24.5 : 19.8556021842448)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/LinqToSqlKmsReportDataContext/Report_Data/Report_Data_Report_Oped" />
       <nodes>
         <classShapeMoniker Id="93fdb60b-97ba-4168-922d-6e3e0486118b" />
@@ -249,21 +249,21 @@
         <elementListCompartment Id="b4e31c55-92ec-4b54-b50b-e8d24c30ab84" absoluteBounds="19.64, 12.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(4.5 : 19); (4.5 : 18.5112939453125); (4.94791866666667 : 18.5112939453125 : JumpStart); (5.11458533333333 : 18.5112939453125 : JumpEnd); (5.75 : 18.5112939453125); (5.75 : 16.375); (5.91666666666667 : 16.375 : JumpStart); (6.20833333333333 : 16.375 : JumpEnd); (8.75 : 16.375); (8.75 : 13.2420068359375); (8.79166666666667 : 13.2420068359375 : JumpStart); (8.95833333333333 : 13.2420068359375 : JumpEnd); (8.97916666666667 : 13.2420068359375 : JumpStart); (9.14583333333333 : 13.2420068359375 : JumpEnd); (12.6285792447917 : 13.2420068359375 : JumpStart); (12.7952459114583 : 13.2420068359375 : JumpEnd); (12.8658851041667 : 13.2420068359375 : JumpStart); (13.0325517708333 : 13.2420068359375 : JumpEnd); (13.1822929166667 : 13.2420068359375 : JumpStart); (13.3489595833333 : 13.2420068359375 : JumpEnd); (13.4479191666667 : 13.2420068359375 : JumpStart); (13.6145858333333 : 13.2420068359375 : JumpEnd); (13.7135454166667 : 13.2420068359375 : JumpStart); (13.8802120833333 : 13.2420068359375 : JumpEnd); (14.5 : 13.2420068359375); (14.5 : 11.6074039713542); (18.9166666666667 : 11.6074039713542 : JumpStart); (19.0833333333333 : 11.6074039713542 : JumpEnd); (19.25 : 11.6074039713542); (19.25 : 12.8277498372396); (19.625 : 12.8277498372396)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.5 : 20.4623527018229); (5.66666666666667 : 20.4623527018229 : JumpStart); (5.83333333333333 : 20.4623527018229 : JumpEnd); (6 : 20.4623527018229); (6 : 19.25); (7.16666666666667 : 19.25 : JumpStart); (7.33333333333333 : 19.25 : JumpEnd); (8.75 : 19.25); (8.75 : 14.625); (8.79166666666667 : 14.625 : JumpStart); (8.95833333333333 : 14.625 : JumpEnd); (8.97916666666667 : 14.625 : JumpStart); (9.14583333333333 : 14.625 : JumpEnd); (12.2330694791667 : 14.625 : JumpStart); (12.3997361458333 : 14.625 : JumpEnd); (12.6285792447917 : 14.625 : JumpStart); (12.7952459114583 : 14.625 : JumpEnd); (12.8658851041667 : 14.625 : JumpStart); (13.3489595833333 : 14.625 : JumpEnd); (13.4479191666667 : 14.625 : JumpStart); (13.6145858333333 : 14.625 : JumpEnd); (13.7135454166667 : 14.625 : JumpStart); (13.8802120833333 : 14.625 : JumpEnd); (14.1666666666667 : 14.625 : JumpStart); (14.3333333333333 : 14.625 : JumpEnd); (14.5 : 14.625); (14.5 : 15.1170068359375); (19.7604166666667 : 15.1170068359375 : JumpStart); (19.9270833333333 : 15.1170068359375 : JumpEnd); (20.0104146666667 : 15.1170068359375 : JumpStart); (20.1770813333333 : 15.1170068359375 : JumpEnd); (20.625 : 15.1170068359375); (20.625 : 13.9054996744792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/LinqToSqlKmsReportDataContext/Employee/Employee_Scans_Base" />
       <nodes>
         <classShapeMoniker Id="a4c1df49-b44f-4d92-8fb3-8d8b7e5708e1" />
         <classShapeMoniker Id="130b7c5a-c8c3-4195-9b7c-daa473b6b69c" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.031252 : 19); (5.031252 : 18.3862939453125); (5.66666666666667 : 18.3862939453125 : JumpStart); (5.83333333333333 : 18.3862939453125 : JumpEnd); (5.91666666666667 : 18.3862939453125 : JumpStart); (6.08333333333333 : 18.3862939453125 : JumpEnd); (6.125 : 18.3862939453125); (6.125 : 16.25); (8.66666666666667 : 16.25 : JumpStart); (8.83333333333333 : 16.25 : JumpEnd); (8.875 : 16.25); (8.875 : 13.1170068359375); (8.97916666666667 : 13.1170068359375 : JumpStart); (9.14583333333333 : 13.1170068359375 : JumpEnd); (12.6285792447917 : 13.1170068359375 : JumpStart); (12.7952459114583 : 13.1170068359375 : JumpEnd); (12.8658851041667 : 13.1170068359375 : JumpStart); (13.0325517708333 : 13.1170068359375 : JumpEnd); (13.1822929166667 : 13.1170068359375 : JumpStart); (13.3489595833333 : 13.1170068359375 : JumpEnd); (13.4479191666667 : 13.1170068359375 : JumpStart); (13.6145858333333 : 13.1170068359375 : JumpEnd); (13.7135454166667 : 13.1170068359375 : JumpStart); (13.8802120833333 : 13.1170068359375 : JumpEnd); (14.25 : 13.1170068359375); (14.25 : 11.4824039713542); (19 : 11.4824039713542); (19 : 13.3978767558594); (19.625 : 13.3978767558594)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.5 : 21.2247810527344); (5.75 : 21.2247810527344); (5.75 : 19.125); (7.16666666666667 : 19.125 : JumpStart); (7.33333333333333 : 19.125 : JumpEnd); (8.66666666666667 : 19.125 : JumpStart); (8.83333333333333 : 19.125 : JumpEnd); (8.875 : 19.125); (8.875 : 14.25); (8.97916666666667 : 14.25 : JumpStart); (9.14583333333333 : 14.25 : JumpEnd); (12.6285792447917 : 14.25 : JumpStart); (12.7952459114583 : 14.25 : JumpEnd); (12.8658851041667 : 14.25 : JumpStart); (13.3489595833333 : 14.25 : JumpEnd); (13.4479191666667 : 14.25 : JumpStart); (13.6145858333333 : 14.25 : JumpEnd); (13.7135454166667 : 14.25 : JumpStart); (13.8802120833333 : 14.25 : JumpEnd); (14.25 : 14.25); (14.25 : 15.3670068359375); (19.7604166666667 : 15.3670068359375 : JumpStart); (19.9270833333333 : 15.3670068359375 : JumpEnd); (20.093748 : 15.3670068359375); (20.093748 : 13.9054996744792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/LinqToSqlKmsReportDataContext/Employee/Employee_Scans_Base1" />
       <nodes>
         <classShapeMoniker Id="a4c1df49-b44f-4d92-8fb3-8d8b7e5708e1" />
         <classShapeMoniker Id="130b7c5a-c8c3-4195-9b7c-daa473b6b69c" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(11.25 : 20.4815991210938); (12.5104166666667 : 20.4815991210938 : JumpStart); (12.6770833333333 : 20.4815991210938 : JumpEnd); (12.8385441666667 : 20.4815991210938 : JumpStart); (13.0052108333333 : 20.4815991210938 : JumpEnd); (19.84375 : 20.4815991210938); (19.84375 : 13.9054996744792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(11.25 : 20.4815991210938); (12.5104166666667 : 20.4815991210938 : JumpStart); (12.6770833333333 : 20.4815991210938 : JumpEnd); (12.8385441666667 : 20.4815991210938 : JumpStart); (13.0052108333333 : 20.4815991210938 : JumpEnd); (19.84375 : 20.4815991210938); (19.84375 : 13.9054996744792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/LinqToSqlKmsReportDataContext/Report_Flow/Report_Flow_Scans_Base" />
       <nodes>
         <classShapeMoniker Id="e51f7665-c89b-478b-adee-34af918d5a1f" />
@@ -381,11 +381,24 @@
         <elementListCompartment Id="72a67164-a0be-462d-ab9c-fc03c5faffd6" absoluteBounds="15.39, 9.085, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(12.711912578125 : 18.125); (12.711912578125 : 9.94772684733075); (13.1822929166667 : 9.94772684733075 : JumpStart); (13.3489595833333 : 9.94772684733075 : JumpEnd); (13.7135454166667 : 9.94772684733075 : JumpStart); (13.8802120833333 : 9.94772684733075 : JumpEnd); (15.375 : 9.94772684733075)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(12.711912578125 : 18.125); (12.711912578125 : 9.94772684733075); (13.0240890104167 : 9.94772684733075 : JumpStart); (13.3489595833333 : 9.94772684733075 : JumpEnd); (13.7135454166667 : 9.94772684733075 : JumpStart); (13.8802120833333 : 9.94772684733075 : JumpEnd); (15.375 : 9.94772684733075)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/LinqToSqlKmsReportDataContext/Report_Data/Report_Data_Report_Iilz" />
       <nodes>
         <classShapeMoniker Id="93fdb60b-97ba-4168-922d-6e3e0486118b" />
         <classShapeMoniker Id="11110a95-f0bc-4deb-89ab-4817979f6e05" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="60922193-2c53-4605-899d-1621b62c92d3" absoluteBounds="18.875, 6.5, 2, 6.5784326171875">
+      <DataClassMoniker Name="/LinqToSqlKmsReportDataContext/Report_Cadre" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0883a905-98ab-44b2-b352-9575e957d493" absoluteBounds="18.89, 6.9600000000000009, 1.9700000000000002, 6.0184326171875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(13.10742234375 : 18.125); (13.10742234375 : 7.53125); (13.1822929166667 : 7.53125 : JumpStart); (13.3489595833333 : 7.53125 : JumpEnd); (13.7135454166667 : 7.53125 : JumpStart); (13.8802120833333 : 7.53125 : JumpEnd); (18.875 : 7.53125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LinqToSqlKmsReportDataContext/Report_Data/Report_Data_Report_Cadre" />
+      <nodes>
+        <classShapeMoniker Id="93fdb60b-97ba-4168-922d-6e3e0486118b" />
+        <classShapeMoniker Id="60922193-2c53-4605-899d-1621b62c92d3" />
       </nodes>
     </associationConnector>
   </nestedChildShapes>
