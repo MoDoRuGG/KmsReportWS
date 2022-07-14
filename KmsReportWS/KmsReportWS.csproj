@@ -125,6 +125,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Handler\BaseReportHandler.cs" />
+    <Compile Include="Handler\ReportCadreHandler.cs" />
     <Compile Include="Handler\DynamicReportCommonHandler.cs" />
     <Compile Include="Handler\DynamicReportHandler.cs" />
     <Compile Include="Handler\F262Handler.cs" />
@@ -170,6 +171,7 @@
     <Compile Include="Model\FSSMonitoringPgDataDto.cs" />
     <Compile Include="Model\ReportDynamicScanModel.cs" />
     <Compile Include="Model\ReportScanModel.cs" />
+    <Compile Include="Model\Report\ReportCadre.cs" />
     <Compile Include="Model\Report\ReportFSSMonitroing.cs" />
     <Compile Include="Model\Report\ReportInfrormationResponse.cs" />
     <Compile Include="Model\Report\ReportOped.cs" />
