@@ -25,7 +25,7 @@ namespace KmsReportWS.Service
                 : new KmsReportDictionary { Key = emp.Id.ToString(), Value = emp.Phone, ForeignKey = emp.Email };
         }
 
-      
+
         public ClientContext CollectContext()
         {
             try
@@ -57,7 +57,7 @@ namespace KmsReportWS.Service
                 {
                     Key = x.id.ToString(),
                     Value = x.Email1,
-                    ForeignKey= x.Description
+                    ForeignKey = x.Description
                 }).ToList();
                 var heads = db.Region.Select(x =>
                     new HeadCompany { Phone = x.phone, Fio = x.name_head, Position = x.position, FilialCode = x.id }
@@ -65,7 +65,7 @@ namespace KmsReportWS.Service
 
 
 
-                return new ClientContext { Regions = regions, Users = users, ReportTypes = reportTypes,Emails = emails, Heads = heads };
+                return new ClientContext { Regions = regions, Users = users, ReportTypes = reportTypes, Emails = emails, Heads = heads };
             }
             catch (Exception ex)
             {
