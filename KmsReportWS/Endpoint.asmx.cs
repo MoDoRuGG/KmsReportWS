@@ -478,13 +478,6 @@ namespace KmsReportWS
             return consolidate.Collect(yymm, isMonthly);
         }
 
-        [WebMethod]
-        public List<ConsolidateCadri> CreateConsolidateCadri(string yymm)
-        {
-            var consolidate = new ConsolidateCardiCollector();
-            return consolidate.Collect(yymm);
-        }
-
 
         [WebMethod]
         public List<ConsolidateLetal> CreateConsolidateLetal(string yymm)

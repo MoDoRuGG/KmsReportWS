@@ -106,7 +106,6 @@
     <Compile Include="Collector\BaseReport\IizlCollector.cs" />
     <Compile Include="Collector\BaseReport\IReportCollector.cs" />
     <Compile Include="Collector\BaseReport\PgCollector.cs" />
-    <Compile Include="Collector\ConsolidateReport\ConsolidateCardiCollector.cs" />
     <Compile Include="Collector\ConsolidateReport\ConsolidateCardioCollector.cs" />
     <Compile Include="Collector\ConsolidateReport\ConsolidateCnpnCollector.cs" />
     <Compile Include="Collector\ConsolidateReport\ConsolidateCnpnMonthCollector.cs" />
@@ -147,7 +146,6 @@
       <DependentUpon>LinqToSqlKmsReport.dbml</DependentUpon>
     </Compile>
     <Compile Include="Model\CheckFFOMS2022CommonData.cs" />
-    <Compile Include="Model\ConcolidateReport\ConsolidateCadri.cs" />
     <Compile Include="Model\ConcolidateReport\ConsolidateCardio.cs" />
     <Compile Include="Model\ConcolidateReport\ConsolidateCpnp.cs" />
     <Compile Include="Model\ConcolidateReport\ConsolidateCpnpM.cs" />
