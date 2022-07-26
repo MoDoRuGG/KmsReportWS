@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<REPORT xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <REPORT_NAME>foped</REPORT_NAME>
+  <TABLE>
+    <TABLE_NAME>ОПЭД</TABLE_NAME>
+    <TABLE_DESCRIPTION>Фактическое значение показателя по видам медицинской помощи</TABLE_DESCRIPTION>
+    <ROW>
+      <ROW_TEXT>Количество случаев оказания медицинской помощи</ROW_TEXT>
+      <ROW_NUM>1</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+	 <ROW>
+      <ROW_TEXT>Установленный норматив медико-экономических экспертиз (МЭЭ) (%)</ROW_TEXT>
+      <ROW_NUM>2</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+	 <ROW>
+      <ROW_TEXT>Установленный норматив экспертиз качества медицинской помощи (ЭКМП) (%)</ROW_TEXT>
+      <ROW_NUM>3</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+	<ROW>
+      <ROW_TEXT>Количество выполненных МЭЭ (по случаям медицинской помощи, в шт.)</ROW_TEXT>
+      <ROW_NUM>4</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+	<ROW>
+      <ROW_TEXT>Количество выполненных ЭКМП (по законченным случаям лечения, в шт.)</ROW_TEXT>
+      <ROW_NUM>5</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+	<ROW>
+      <ROW_TEXT>Объем фактически выполненных МЭЭ (по случаям оказания медицинской помощи, в %)</ROW_TEXT>
+      <ROW_NUM>6</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+	<ROW>
+      <ROW_TEXT>Выполнение норматива МЭЭ</ROW_TEXT>
+      <ROW_NUM>7</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+	<ROW>
+      <ROW_TEXT>Объем фактически выполненных ЭКМП (от числа законченных случаев лечения, в %)</ROW_TEXT>
+      <ROW_NUM>8</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+	<ROW>
+      <ROW_TEXT>Выполнение норматива ЭКМП</ROW_TEXT>
+      <ROW_NUM>9</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+  </TABLE>
+</REPORT>

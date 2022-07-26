@@ -1,9 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
 <KMS_REPORT>
-  <VERSION>1.1.6.63</VERSION>
+  <VERSION>1.1.6.64</VERSION>
  <FILE>
     <NAME>cardio.xlsx</NAME>
+    <IS_NEED_DOWNLOAD>true</IS_NEED_DOWNLOAD>
+  </FILE>
+   <FILE>
+    <NAME>cadre.xlsx</NAME>
     <IS_NEED_DOWNLOAD>true</IS_NEED_DOWNLOAD>
   </FILE>
  <FILE>
@@ -66,6 +70,10 @@
     <NAME>pgq.xlsx</NAME>
     <IS_NEED_DOWNLOAD>true</IS_NEED_DOWNLOAD>
   </FILE>
+<FILE>
+    <NAME>oped.xlsx</NAME>
+    <IS_NEED_DOWNLOAD>true</IS_NEED_DOWNLOAD>
+  </FILE>
   <FILE>
     <NAME>TemplateTextF262.xml</NAME>
     <IS_NEED_DOWNLOAD>true</IS_NEED_DOWNLOAD>
@@ -90,8 +98,8 @@
     <NAME>TemplateTextPGQ.xml</NAME>
     <IS_NEED_DOWNLOAD>true</IS_NEED_DOWNLOAD>
   </FILE>
-  <FILE>
-    <NAME>TemplateTextCadre.xml</NAME>
+ <FILE>
+    <NAME>TemplateTextFOped.xml</NAME>
     <IS_NEED_DOWNLOAD>true</IS_NEED_DOWNLOAD>
   </FILE>
   <FILE>
@@ -101,6 +109,100 @@
 
 <FILE>
     <NAME>Disp.xlsx</NAME>
+    <IS_NEED_DOWNLOAD>true</IS_NEED_DOWNLOAD>
+  </FILE>
+<FILE>
+    <NAME>letal.xlsx</NAME>
+    <IS_NEED_DOWNLOAD>true</IS_NEED_DOWNLOAD>
+  </FILE>
+<FILE>
+    <NAME>TemplateTextFCR.xml</NAME>
+    <IS_NEED_DOWNLOAD>true</IS_NEED_DOWNLOAD>
+  </FILE>
+<FILE>
+    <NAME>IR.xlsx</NAME>
+    <IS_NEED_DOWNLOAD>true</IS_NEED_DOWNLOAD>
+  </FILE>
+<FILE>
+    <NAME>opedQ.xlsx</NAME>
+    <IS_NEED_DOWNLOAD>true</IS_NEED_DOWNLOAD>
+  </FILE>
+<FILE>
+    <NAME>TemplateTextFOpedQ.xml</NAME>
+    <IS_NEED_DOWNLOAD>true</IS_NEED_DOWNLOAD>
+  </FILE>
+
+<FILE>
+    <NAME>fvac.xlsx</NAME>
+    <IS_NEED_DOWNLOAD>true</IS_NEED_DOWNLOAD>
+  </FILE>
+<FILE>
+    <NAME>TemplateTextVac.xml</NAME>
+    <IS_NEED_DOWNLOAD>true</IS_NEED_DOWNLOAD>
+  </FILE>
+  <FILE>
+    <NAME>TemplateTextCadre.xml</NAME>
+    <IS_NEED_DOWNLOAD>true</IS_NEED_DOWNLOAD>
+  </FILE>
+<FILE>
+    <NAME>consOped.xlsx</NAME>
+    <IS_NEED_DOWNLOAD>true</IS_NEED_DOWNLOAD>
+  </FILE>
+<FILE>
+    <NAME>mfss.xlsx</NAME>
+    <IS_NEED_DOWNLOAD>true</IS_NEED_DOWNLOAD>
+  </FILE>
+<FILE>
+    <NAME>TemplateFSSMonitoring.xml</NAME>
+    <IS_NEED_DOWNLOAD>true</IS_NEED_DOWNLOAD>
+  </FILE>
+<FILE>
+    <NAME>consVSS.xlsx</NAME>
+    <IS_NEED_DOWNLOAD>true</IS_NEED_DOWNLOAD>
+  </FILE>
+<FILE>
+    <NAME>consOpedQ.xlsx</NAME>
+    <IS_NEED_DOWNLOAD>true</IS_NEED_DOWNLOAD>
+  </FILE>
+<FILE>
+    <NAME>TemplateTextProposal.xml</NAME>
+    <IS_NEED_DOWNLOAD>true</IS_NEED_DOWNLOAD>
+  </FILE>
+
+<FILE>
+    <NAME>proposal.xlsx</NAME>
+    <IS_NEED_DOWNLOAD>true</IS_NEED_DOWNLOAD>
+  </FILE>
+<FILE>
+    <NAME>opedFinance.xlsx</NAME>
+    <IS_NEED_DOWNLOAD>true</IS_NEED_DOWNLOAD>
+  </FILE>
+<FILE>
+    <NAME>TemplateTextOpedFinance.xml</NAME>
+    <IS_NEED_DOWNLOAD>true</IS_NEED_DOWNLOAD>
+  </FILE>
+<FILE>
+    <NAME>CPNP2_Q.xlsx</NAME>
+    <IS_NEED_DOWNLOAD>true</IS_NEED_DOWNLOAD>
+  </FILE>
+<FILE>
+    <NAME>consOpedFinance1.xlsx</NAME>
+    <IS_NEED_DOWNLOAD>true</IS_NEED_DOWNLOAD>
+  </FILE>
+<FILE>
+    <NAME>iizl2022.xlsx</NAME>
+    <IS_NEED_DOWNLOAD>true</IS_NEED_DOWNLOAD>
+  </FILE>
+<FILE>
+    <NAME>TemplateTextIizl2022.xml</NAME>
+    <IS_NEED_DOWNLOAD>true</IS_NEED_DOWNLOAD>
+  </FILE>
+<FILE>
+    <NAME>consOpedFinance2.xlsx</NAME>
+    <IS_NEED_DOWNLOAD>true</IS_NEED_DOWNLOAD>
+  </FILE>
+<FILE>
+    <NAME>consProposal.xlsx</NAME>
     <IS_NEED_DOWNLOAD>true</IS_NEED_DOWNLOAD>
   </FILE>
 </KMS_REPORT>

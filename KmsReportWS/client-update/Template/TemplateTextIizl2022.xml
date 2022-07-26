@@ -1,0 +1,869 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<REPORT xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <REPORT_NAME>iizl</REPORT_NAME>
+  <TABLE>
+    <TABLE_NAME>Согласие</TABLE_NAME>
+    <TABLE_DESCRIPTION>Согласие на информационное сопровождение ЗЛ</TABLE_DESCRIPTION>
+    <ROWS_COUNT>3</ROWS_COUNT>
+    <ROW>
+      <ROW_TEXT>Количество застрахованных лиц, для которых в отчетном периоде оформлено письменное СОГЛАСИЕ на информационное сопровождение, всего</ROW_TEXT>
+      <ROW_NUM>0</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+    <ROW>
+      <ROW_TEXT>по телефону, в том числе с использованием автоматического информатора</ROW_TEXT>
+      <ROW_NUM>1</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+    <ROW>
+      <ROW_TEXT>по мобильному телефону – SMS</ROW_TEXT>
+      <ROW_NUM>2</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+    <ROW>
+      <ROW_TEXT>по мобильному телефону –  программное обеспечение для смартфона (мессенджер), в том числе</ROW_TEXT>
+      <ROW_NUM>3</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+    <ROW>
+      <ROW_TEXT>по мобильному телефону –  Viber</ROW_TEXT>
+      <ROW_NUM>3-1</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+    <ROW>
+      <ROW_TEXT>текстовое сообщение по почте</ROW_TEXT>
+      <ROW_NUM>4</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+    <ROW>
+      <ROW_TEXT>текстовое сообщение через электронные средства связи, в том числе</ROW_TEXT>
+      <ROW_NUM>5</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+    <ROW>
+      <ROW_TEXT>по электронной почте</ROW_TEXT>
+      <ROW_NUM>5-1</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+    <ROW>
+      <ROW_TEXT>через мобильное приложение</ROW_TEXT>
+      <ROW_NUM>5-2</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+    <ROW>
+      <ROW_TEXT>Количество застрахованных лиц, для которых в отчетном периоде оформлено письменное НЕСОГЛАСИЕ на информационное сопровождение, всего</ROW_TEXT>
+      <ROW_NUM>6</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+  </TABLE>
+   <TABLE>
+    <TABLE_NAME>Тема Д1-Э</TABLE_NAME>
+    <TABLE_DESCRIPTION>Диспансеризация 1/3, первый этап, Электронное сообщение</TABLE_DESCRIPTION>
+    <ROWS_COUNT>11</ROWS_COUNT>
+    <ROW>
+      <ROW_TEXT>Рассылка сообщений - SMS</ROW_TEXT>
+      <ROW_NUM>Д1-Э1</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+    <ROW>
+      <ROW_TEXT>Рассылка сообщений - Viber</ROW_TEXT>
+      <ROW_NUM>Д1-Э2</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+    <ROW>
+      <ROW_TEXT>Рассылка сообщений - Email</ROW_TEXT>
+      <ROW_NUM>Д1-Э3</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+	 <!-- <ROW> -->
+      <!-- <ROW_TEXT>Другие электронные средства связи (мобильные приложения, сайты и проч.)</ROW_TEXT> -->
+      <!-- <ROW_NUM>Д1-Э4</ROW_NUM> -->
+      <!-- <EXCLUSION>false</EXCLUSION> -->
+	   <!-- <EXCLUSION_CELL>5,6,7,8,9</EXCLUSION_CELL> -->
+    <!-- </ROW>   -->
+    <ROW>
+      <ROW_TEXT>Сумма</ROW_TEXT>
+      <ROW_NUM>С-Д1</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+      <EXCLUSION_CELL>5,6,8,9,10</EXCLUSION_CELL>
+    </ROW>
+  </TABLE>
+    <TABLE>
+    <TABLE_NAME>Тема Д2-Э</TABLE_NAME>
+    <TABLE_DESCRIPTION>Диспансеризация, этап 2, Электронное сообщение</TABLE_DESCRIPTION>
+    <ROWS_COUNT>11</ROWS_COUNT>
+    <ROW>
+      <ROW_TEXT>Рассылка сообщений - SMS</ROW_TEXT>
+      <ROW_NUM>Д2-Э1</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+    <ROW>
+      <ROW_TEXT>Рассылка сообщений - Viber</ROW_TEXT>
+      <ROW_NUM>Д2-Э2</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+    <ROW>
+      <ROW_TEXT>Рассылка сообщений - Email</ROW_TEXT>
+      <ROW_NUM>Д2-Э3</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+	 <!-- <ROW> -->
+      <!-- <ROW_TEXT>Другие электронные средства связи (мобильные приложения, сайты и проч.)</ROW_TEXT> -->
+      <!-- <ROW_NUM>Д2-Э4</ROW_NUM> -->
+      <!-- <EXCLUSION>false</EXCLUSION> -->
+	  <!-- <EXCLUSION_CELL>5,6,7,8,9</EXCLUSION_CELL> -->
+    <!-- </ROW>   -->
+    <ROW>
+      <ROW_TEXT>Сумма</ROW_TEXT>
+      <ROW_NUM>С-Д2</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+      <EXCLUSION_CELL>5,6,8,9,10</EXCLUSION_CELL>
+    </ROW>
+  </TABLE>
+   <TABLE>
+    <TABLE_NAME>Тема Д3-Э</TABLE_NAME>
+    <TABLE_DESCRIPTION>Диспансеризация ежегодная, этап 1, Электронное сообщение</TABLE_DESCRIPTION>
+    <ROWS_COUNT>11</ROWS_COUNT>
+    <ROW>
+      <ROW_TEXT>Рассылка сообщений - SMS</ROW_TEXT>
+      <ROW_NUM>Д3-Э1</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+    <ROW>
+      <ROW_TEXT>Рассылка сообщений - Viber</ROW_TEXT>
+      <ROW_NUM>Д3-Э2</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+    <ROW>
+      <ROW_TEXT>Рассылка сообщений - Email</ROW_TEXT>
+      <ROW_NUM>Д3-Э3</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+	 <!-- <ROW> -->
+      <!-- <ROW_TEXT>Другие электронные средства связи (мобильные приложения, сайты и проч.)</ROW_TEXT> -->
+      <!-- <ROW_NUM>Д3-Э4</ROW_NUM> -->
+      <!-- <EXCLUSION>false</EXCLUSION> -->
+	  <!-- <EXCLUSION_CELL>5,6,7,8,9</EXCLUSION_CELL> -->
+    <!-- </ROW>   -->
+    <ROW>
+      <ROW_TEXT>Сумма</ROW_TEXT>
+      <ROW_NUM>С-Д3</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+	  <EXCLUSION_CELL>5,6,8,9,10</EXCLUSION_CELL>
+    </ROW>
+  </TABLE>
+  <TABLE>
+    <TABLE_NAME>Тема Д4-Э</TABLE_NAME>
+    <TABLE_DESCRIPTION>Диспансерное наблюдение, Электронное сообщение</TABLE_DESCRIPTION>
+    <ROWS_COUNT>11</ROWS_COUNT>
+    <ROW>
+      <ROW_TEXT>Рассылка сообщений - SMS</ROW_TEXT>
+      <ROW_NUM>Д4-Э1</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+    <ROW>
+      <ROW_TEXT>Рассылка сообщений - Viber</ROW_TEXT>
+      <ROW_NUM>Д4-Э2</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+	 <ROW>
+      <ROW_TEXT>Рассылка сообщений - Email</ROW_TEXT>
+      <ROW_NUM>Д4-Э3</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>  
+	 <!-- <ROW> -->
+      <!-- <ROW_TEXT>Другие электронные средства связи (мобильные приложения, сайты и проч.)</ROW_TEXT> -->
+      <!-- <ROW_NUM>Д4-Э4</ROW_NUM> -->
+      <!-- <EXCLUSION>false</EXCLUSION> -->
+	   <!-- <EXCLUSION_CELL>5,6,7,8,9</EXCLUSION_CELL> -->
+    <!-- </ROW>   -->
+    <ROW>
+      <ROW_TEXT>Сумма</ROW_TEXT>
+      <ROW_NUM>С-Д4</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+      <EXCLUSION_CELL>5,6,8,9,10</EXCLUSION_CELL>
+    </ROW>
+  </TABLE>
+  <TABLE>
+    <TABLE_NAME>Тема П-Э</TABLE_NAME>
+    <TABLE_DESCRIPTION>Профилактические медицинские осмотры, Электронное сообщение</TABLE_DESCRIPTION>
+    <ROWS_COUNT>11</ROWS_COUNT>
+    <ROW>
+      <ROW_TEXT>Рассылка сообщений - SMS</ROW_TEXT>
+      <ROW_NUM>П-Э1</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+    <ROW>
+      <ROW_TEXT>Рассылка сообщений - Viber</ROW_TEXT>
+      <ROW_NUM>П-Э2</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+	 <ROW>
+      <ROW_TEXT>Рассылка сообщений - Email</ROW_TEXT>
+      <ROW_NUM>П-Э3</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>  
+	 <!-- <ROW> -->
+      <!-- <ROW_TEXT>Другие электронные средства связи (мобильные приложения, сайты и проч.)</ROW_TEXT> -->
+      <!-- <ROW_NUM>П-Э4</ROW_NUM> -->
+      <!-- <EXCLUSION>false</EXCLUSION> -->
+	  <!-- <EXCLUSION_CELL>5,6,7,8,9</EXCLUSION_CELL> -->
+    <!-- </ROW>   -->
+    <ROW>
+     <ROW_TEXT>Сумма</ROW_TEXT>
+     <ROW_NUM>С-П</ROW_NUM>
+     <EXCLUSION>false</EXCLUSION>
+     <EXCLUSION_CELL>5,6,8,9,10</EXCLUSION_CELL>
+    </ROW>
+  </TABLE>
+   <TABLE>
+    <TABLE_NAME>Тема С-Э</TABLE_NAME>
+    <TABLE_DESCRIPTION>Перечень оказанных медицинских услуг и их стоимость, Электронное сообщение</TABLE_DESCRIPTION>
+    <ROWS_COUNT>11</ROWS_COUNT>
+	 <ROW>
+      <ROW_TEXT>Рассылка сообщений - Email</ROW_TEXT>
+      <ROW_NUM>С-Э3</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+	  <EXCLUSION_CELL>5,6</EXCLUSION_CELL>
+    </ROW>  
+	 <!-- <ROW> -->
+      <!-- <ROW_TEXT>Другие электронные средства связи (мобильные приложения, сайты и проч.)</ROW_TEXT> -->
+      <!-- <ROW_NUM>С-Э4</ROW_NUM> -->
+      <!-- <EXCLUSION>false</EXCLUSION> -->
+	   <!-- <EXCLUSION_CELL>5,6,7,8</EXCLUSION_CELL> -->
+    <!-- </ROW>   -->
+    <ROW>
+      <ROW_TEXT>Сумма</ROW_TEXT>
+      <ROW_NUM>С-С</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+      <EXCLUSION_CELL>5,6,10</EXCLUSION_CELL>
+    </ROW>
+  </TABLE>
+  
+  <TABLE>
+    <TABLE_NAME>Тема К-Э</TABLE_NAME>
+    <TABLE_DESCRIPTION>Выявленные нарушения по результатам проведенного контроля, Электронное сообщение</TABLE_DESCRIPTION>
+    <ROWS_COUNT>11</ROWS_COUNT>
+	 <ROW>
+      <ROW_TEXT>Рассылка сообщений - Email</ROW_TEXT>
+      <ROW_NUM>К-Э3</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+	  <EXCLUSION_CELL>5,6</EXCLUSION_CELL>
+    </ROW>  
+	 <!-- <ROW> -->
+      <!-- <ROW_TEXT>Другие электронные средства связи (мобильные приложения, сайты и проч.)</ROW_TEXT> -->
+      <!-- <ROW_NUM>К-Э4</ROW_NUM> -->
+      <!-- <EXCLUSION>false</EXCLUSION> -->
+	   <!-- <EXCLUSION_CELL>5,6,7,8</EXCLUSION_CELL> -->
+    <!-- </ROW>   -->
+    <ROW>
+      <ROW_TEXT>Сумма</ROW_TEXT>
+      <ROW_NUM>С-К</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+      <EXCLUSION_CELL>5,6,10</EXCLUSION_CELL>
+    </ROW>
+  </TABLE>
+  <TABLE>
+    <TABLE_NAME>Тема О-Э</TABLE_NAME>
+    <TABLE_DESCRIPTION>Онкопатология, Электронное сообщение</TABLE_DESCRIPTION>
+    <ROWS_COUNT>11</ROWS_COUNT>
+    <ROW>
+      <ROW_TEXT>Рассылка сообщений - SMS</ROW_TEXT>
+      <ROW_NUM>О-Э1</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+    <ROW>
+      <ROW_TEXT>Рассылка сообщений - Viber</ROW_TEXT>
+      <ROW_NUM>О-Э2</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+	 <ROW>
+      <ROW_TEXT>Рассылка сообщений - Email</ROW_TEXT>
+      <ROW_NUM>О-Э3</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>  
+	 <!-- <ROW> -->
+      <!-- <ROW_TEXT>Другие электронные средства связи (мобильные приложения, сайты и проч.)</ROW_TEXT> -->
+      <!-- <ROW_NUM>О-Э4</ROW_NUM> -->
+      <!-- <EXCLUSION>false</EXCLUSION> -->
+	  <!-- <EXCLUSION_CELL>5,6,7,8,9</EXCLUSION_CELL> -->
+    <!-- </ROW>   -->
+    <ROW>
+      <ROW_TEXT>Сумма</ROW_TEXT>
+      <ROW_NUM>С-О</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+      <EXCLUSION_CELL>5,6,8,9,10</EXCLUSION_CELL>
+    </ROW>
+  </TABLE>
+   
+     <TABLE>
+    <TABLE_NAME>Тема УД-Э</TABLE_NAME>
+    <TABLE_DESCRIPTION>Тема УД - углубленная диспансеризация, информирование, Электронное сообщение</TABLE_DESCRIPTION>
+    <ROWS_COUNT>11</ROWS_COUNT>
+    <ROW>
+      <ROW_TEXT>Рассылка сообщений - SMS</ROW_TEXT>
+      <ROW_NUM>УД-Э1</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+    <ROW>
+      <ROW_TEXT>Рассылка сообщений - Viber</ROW_TEXT>
+      <ROW_NUM>УД-Э2</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+	 <ROW>
+      <ROW_TEXT>Рассылка сообщений - Email</ROW_TEXT>
+      <ROW_NUM>УД-Э3</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>  
+	 <ROW>
+      <ROW_TEXT>Другие электронные средства связи (мобильные приложения, сайты и проч.)</ROW_TEXT>
+      <ROW_NUM>УД-Э4</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+	   <EXCLUSION_CELL>5,6,7,8,9</EXCLUSION_CELL>
+    </ROW>  
+    <ROW>
+      <ROW_TEXT>Сумма</ROW_TEXT>
+      <ROW_NUM>С-УД</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+     <EXCLUSION_CELL>5,6,8,9,10</EXCLUSION_CELL>
+    </ROW>
+  </TABLE>
+   
+   
+   
+   <TABLE>
+    <TABLE_NAME>Тема И-Э</TABLE_NAME>
+    <TABLE_DESCRIPTION>Тема И - Иные темы, информирование, Электронное сообщение</TABLE_DESCRIPTION>
+    <ROWS_COUNT>11</ROWS_COUNT>
+    <ROW>
+      <ROW_TEXT>Рассылка сообщений - SMS</ROW_TEXT>
+      <ROW_NUM>И-Э1</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+    <ROW>
+      <ROW_TEXT>Рассылка сообщений - Viber</ROW_TEXT>
+      <ROW_NUM>И-Э2</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+	 <ROW>
+      <ROW_TEXT>Рассылка сообщений - Email</ROW_TEXT>
+      <ROW_NUM>И-Э3</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>  
+	 <!-- <ROW> -->
+      <!-- <ROW_TEXT>Другие электронные средства связи (мобильные приложения, сайты и проч.)</ROW_TEXT> -->
+      <!-- <ROW_NUM>И-Э4</ROW_NUM> -->
+      <!-- <EXCLUSION>false</EXCLUSION> -->
+	   <!-- <EXCLUSION_CELL>5,6,7,8,9</EXCLUSION_CELL> -->
+    <!-- </ROW>   -->
+    <ROW>
+      <ROW_TEXT>Сумма</ROW_TEXT>
+      <ROW_NUM>С-И</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+     <EXCLUSION_CELL>5,6,8,9,10</EXCLUSION_CELL>
+    </ROW>
+  </TABLE>
+  
+   <TABLE>
+    <TABLE_NAME>Тема Д1-П</TABLE_NAME>
+    <TABLE_DESCRIPTION>Диспансеризация 1/3, первый этап, письменное сообщение</TABLE_DESCRIPTION>
+    <ROWS_COUNT>8</ROWS_COUNT>
+    <ROW>
+      <ROW_TEXT>Почта России - Direct mail</ROW_TEXT>
+      <ROW_NUM>Д1-П1</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+    <ROW>
+      <ROW_TEXT>Почта России - Простое письмо</ROW_TEXT>
+      <ROW_NUM>Д1-П2</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+	 <ROW>
+      <ROW_TEXT>Почта России - Заказное письмо</ROW_TEXT>
+      <ROW_NUM>Д1-П3</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>  
+	 <ROW>
+      <ROW_TEXT>Адресная передача</ROW_TEXT>
+      <ROW_NUM>Д1-П4</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>  
+	 <ROW>
+      <ROW_TEXT>При личном контакте СП с ЗЛ в филиале</ROW_TEXT>
+      <ROW_NUM>Д1-П5</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+	  <EXCLUSION_CELL>5,6</EXCLUSION_CELL>
+    </ROW>  
+	 <ROW>
+      <ROW_TEXT>При личном контакте СП с ЗЛ в МО</ROW_TEXT>
+      <ROW_NUM>Д1-П6</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+	  <EXCLUSION_CELL>5,6</EXCLUSION_CELL>	  
+    </ROW> 
+	<ROW>
+      <ROW_TEXT>При проведении информирования по телеф.</ROW_TEXT>
+      <ROW_NUM>Д1-П7</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+	  <EXCLUSION_CELL>5,6</EXCLUSION_CELL>	  
+    </ROW>
+	<ROW>
+      <ROW_TEXT>С использованием автоинформатора по телеф.</ROW_TEXT>
+      <ROW_NUM>Д1-П8</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+	  <EXCLUSION_CELL>5,6</EXCLUSION_CELL>	  
+    </ROW>  	  	
+    <ROW>
+      <ROW_TEXT>Сумма</ROW_TEXT>
+      <ROW_NUM>С-Д1</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+     
+	  <EXCLUSION_CELL>6,7</EXCLUSION_CELL>
+    </ROW>
+  </TABLE>
+  <TABLE>
+    <TABLE_NAME>Тема Д2-П</TABLE_NAME>
+    <TABLE_DESCRIPTION>Диспансеризация, этап 2, письменное сообщение</TABLE_DESCRIPTION>
+    <ROWS_COUNT>8</ROWS_COUNT>
+    <ROW>
+      <ROW_TEXT>Почта России - Direct mail</ROW_TEXT>
+      <ROW_NUM>Д2-П1</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+    <ROW>
+      <ROW_TEXT>Почта России - Простое письмо</ROW_TEXT>
+      <ROW_NUM>Д2-П2</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+	 <ROW>
+      <ROW_TEXT>Почта России - Заказное письмо</ROW_TEXT>
+      <ROW_NUM>Д2-П3</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>  
+	 <ROW>
+      <ROW_TEXT>Адресная передача</ROW_TEXT>
+      <ROW_NUM>Д2-П4</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>  
+	 <ROW>
+      <ROW_TEXT>При личном контакте СП с ЗЛ в филиале</ROW_TEXT>
+      <ROW_NUM>Д2-П5</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+	    <EXCLUSION_CELL>5,6</EXCLUSION_CELL>
+    </ROW>  
+	 <ROW>
+      <ROW_TEXT>При личном контакте СП с ЗЛ в МО</ROW_TEXT>
+      <ROW_NUM>Д2-П6</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+	    <EXCLUSION_CELL>5,6</EXCLUSION_CELL>
+    </ROW>
+<ROW>
+      <ROW_TEXT>При проведении информирования по телеф.</ROW_TEXT>
+      <ROW_NUM>Д2-П7</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+	  <EXCLUSION_CELL>5,6</EXCLUSION_CELL>	  
+    </ROW>
+	<ROW>
+      <ROW_TEXT>С использованием автоинформатора по телеф.</ROW_TEXT>
+      <ROW_NUM>Д2-П8</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+	  <EXCLUSION_CELL>5,6</EXCLUSION_CELL>	  
+    </ROW>  	  	
+    <ROW>
+      <ROW_TEXT>Сумма</ROW_TEXT>
+      <ROW_NUM>С-Д2</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+       <EXCLUSION_CELL>6,7</EXCLUSION_CELL>
+    </ROW>
+  </TABLE>
+  
+  <TABLE>
+    <TABLE_NAME>Тема Д3-П</TABLE_NAME>
+    <TABLE_DESCRIPTION>Тема Д3 - Диспансеризация ежегодная, этап 1, письменное сообщение</TABLE_DESCRIPTION>
+    <ROWS_COUNT>8</ROWS_COUNT>
+    <ROW>
+      <ROW_TEXT>Почта России - Direct mail</ROW_TEXT>
+      <ROW_NUM>Д3-П1</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+    <ROW>
+      <ROW_TEXT>Почта России - Простое письмо</ROW_TEXT>
+      <ROW_NUM>Д3-П2</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+	 <ROW>
+      <ROW_TEXT>Почта России - Заказное письмо</ROW_TEXT>
+      <ROW_NUM>Д3-П3</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>  
+	 <ROW>
+      <ROW_TEXT>Адресная передача</ROW_TEXT>
+      <ROW_NUM>Д3-П4</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>  
+	 <ROW>
+      <ROW_TEXT>При личном контакте СП с ЗЛ в филиале</ROW_TEXT>
+      <ROW_NUM>Д3-П5</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+	   <EXCLUSION_CELL>5,6</EXCLUSION_CELL>
+    </ROW>  
+	 <ROW>
+      <ROW_TEXT>При личном контакте СП с ЗЛ в МО</ROW_TEXT>
+      <ROW_NUM>Д3-П6</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+	     <EXCLUSION_CELL>5,6</EXCLUSION_CELL>
+    </ROW>  
+	<ROW>
+      <ROW_TEXT>При проведении информирования по телеф.</ROW_TEXT>
+      <ROW_NUM>Д3-П7</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+	  <EXCLUSION_CELL>5,6</EXCLUSION_CELL>	  
+    </ROW>
+	<ROW>
+      <ROW_TEXT>С использованием автоинформатора по телеф.</ROW_TEXT>
+      <ROW_NUM>Д3-П8</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+	  <EXCLUSION_CELL>5,6</EXCLUSION_CELL>	  
+    </ROW>  	  	
+    <ROW>
+      <ROW_TEXT>Сумма</ROW_TEXT>
+      <ROW_NUM>С-Д3</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+       <EXCLUSION_CELL>6,7</EXCLUSION_CELL>
+    </ROW>
+  </TABLE>
+  
+   <TABLE>
+    <TABLE_NAME>Тема Д4-П</TABLE_NAME>
+    <TABLE_DESCRIPTION>Диспансерное наблюдение, письменное сообщение</TABLE_DESCRIPTION>
+    <ROWS_COUNT>8</ROWS_COUNT>
+    <ROW>
+      <ROW_TEXT>Почта России - Direct mail</ROW_TEXT>
+      <ROW_NUM>Д4-П1</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+    <ROW>
+      <ROW_TEXT>Почта России - Простое письмо</ROW_TEXT>
+      <ROW_NUM>Д4-П2</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+	 <ROW>
+      <ROW_TEXT>Почта России - Заказное письмо</ROW_TEXT>
+      <ROW_NUM>Д4-П3</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>  
+	 <ROW>
+      <ROW_TEXT>Адресная передача</ROW_TEXT>
+      <ROW_NUM>Д4-П4</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>  
+	 <ROW>
+      <ROW_TEXT>При личном контакте СП с ЗЛ в филиале</ROW_TEXT>
+      <ROW_NUM>Д4-П5</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+	    <EXCLUSION_CELL>5,6</EXCLUSION_CELL>
+    </ROW>  
+	 <ROW>
+      <ROW_TEXT>При личном контакте СП с ЗЛ в МО</ROW_TEXT>
+      <ROW_NUM>Д4-П6</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+	    <EXCLUSION_CELL>5,6</EXCLUSION_CELL>
+    </ROW> 
+<ROW>
+      <ROW_TEXT>При проведении информирования по телеф.</ROW_TEXT>
+      <ROW_NUM>Д4-П7</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+	  <EXCLUSION_CELL>5,6</EXCLUSION_CELL>	  
+    </ROW>
+	<ROW>
+      <ROW_TEXT>С использованием автоинформатора по телеф.</ROW_TEXT>
+      <ROW_NUM>Д4-П8</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+	  <EXCLUSION_CELL>5,6</EXCLUSION_CELL>	  
+    </ROW>  	  		
+    <ROW>
+      <ROW_TEXT>Сумма</ROW_TEXT>
+      <ROW_NUM>С-Д4</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+      <EXCLUSION_CELL>6,7</EXCLUSION_CELL>
+    </ROW>
+  </TABLE>
+  
+   <TABLE>
+    <TABLE_NAME>Тема П-П</TABLE_NAME>
+    <TABLE_DESCRIPTION>Профилактические медицинские осмотры, письменное сообщение</TABLE_DESCRIPTION>
+    <ROWS_COUNT>8</ROWS_COUNT>
+    <ROW>
+      <ROW_TEXT>Почта России - Direct mail</ROW_TEXT>
+      <ROW_NUM>П-П1</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+    <ROW>
+      <ROW_TEXT>Почта России - Простое письмо</ROW_TEXT>
+      <ROW_NUM>П-П2</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+	 <ROW>
+      <ROW_TEXT>Почта России - Заказное письмо</ROW_TEXT>
+      <ROW_NUM>П-П3</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>  
+	 <ROW>
+      <ROW_TEXT>Адресная передача</ROW_TEXT>
+      <ROW_NUM>П-П4</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>  
+	 <ROW>
+      <ROW_TEXT>При личном контакте СП с ЗЛ в филиале</ROW_TEXT>
+      <ROW_NUM>П-П5</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+	   <EXCLUSION_CELL>5,6</EXCLUSION_CELL>
+    </ROW>  
+	 <ROW>
+      <ROW_TEXT>При личном контакте СП с ЗЛ в МО</ROW_TEXT>
+      <ROW_NUM>П-П6</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+	   <EXCLUSION_CELL>5,6</EXCLUSION_CELL>
+    </ROW>
+<ROW>
+      <ROW_TEXT>При проведении информирования по телеф.</ROW_TEXT>
+      <ROW_NUM>П-П7</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+	  <EXCLUSION_CELL>5,6</EXCLUSION_CELL>	  
+    </ROW>
+	<ROW>
+      <ROW_TEXT>С использованием автоинформатора по телеф.</ROW_TEXT>
+      <ROW_NUM>П-П8</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+	  <EXCLUSION_CELL>5,6</EXCLUSION_CELL>	  
+    </ROW>  	  		
+    <ROW>
+      <ROW_TEXT>Сумма</ROW_TEXT>
+      <ROW_NUM>С-П</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+      <EXCLUSION_CELL>6,7</EXCLUSION_CELL>
+    </ROW>
+  </TABLE>
+  
+  
+   <TABLE>
+    <TABLE_NAME>Тема С-П</TABLE_NAME>
+    <TABLE_DESCRIPTION>Перечень оказанных медицинских услуг и их стоимость, письменное сообщение - выдача готовой справки</TABLE_DESCRIPTION>
+    <ROWS_COUNT>8</ROWS_COUNT>
+    <ROW>
+      <ROW_TEXT>Почта России - Заказное письмо</ROW_TEXT>
+      <ROW_NUM>С-П3</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+    <ROW>
+      <ROW_TEXT>При личном обращении к страховому представителю в филиале</ROW_TEXT>
+      <ROW_NUM>С-П5</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+	   <EXCLUSION_CELL>5,6</EXCLUSION_CELL>
+    </ROW>
+	 <ROW>
+      <ROW_TEXT>При личном обращении к страховому представителю в медицинской организации</ROW_TEXT>
+      <ROW_NUM>С-П6</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+	   <EXCLUSION_CELL>5,6</EXCLUSION_CELL>
+    </ROW>  
+	 <ROW>
+      <ROW_TEXT>Сумма</ROW_TEXT>
+      <ROW_NUM>С-С</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+	   <EXCLUSION_CELL>6,7</EXCLUSION_CELL>
+    </ROW>  
+  </TABLE>
+  
+  <TABLE>
+    <TABLE_NAME>Тема К-П</TABLE_NAME>
+    <TABLE_DESCRIPTION>Выявленные нарушения по результатам проведенного контроля, письменное сообщение - представление материалов</TABLE_DESCRIPTION>
+    <ROWS_COUNT>8</ROWS_COUNT>
+    <ROW>
+      <ROW_TEXT>Почта России - Заказное письмо</ROW_TEXT>
+      <ROW_NUM>К-П3</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+    <ROW>
+      <ROW_TEXT>При личном обращении к страховому представителю в филиале</ROW_TEXT>
+      <ROW_NUM>К-П5</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+	   <EXCLUSION_CELL>5,6</EXCLUSION_CELL>
+    </ROW>
+	 <ROW>
+      <ROW_TEXT>При личном обращении к страховому представителю в медицинской организации</ROW_TEXT>
+      <ROW_NUM>С-П6</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+	   <EXCLUSION_CELL>5,6</EXCLUSION_CELL>
+    </ROW>  
+	 <ROW>
+      <ROW_TEXT>Сумма</ROW_TEXT>
+      <ROW_NUM>С-К</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+	  <EXCLUSION_CELL>6,7</EXCLUSION_CELL>
+    </ROW>  
+  </TABLE>
+  
+  
+  
+    <TABLE>
+    <TABLE_NAME>Тема О-П</TABLE_NAME>
+    <TABLE_DESCRIPTION>Онкопатология, письменное сообщение</TABLE_DESCRIPTION>
+    <ROWS_COUNT>8</ROWS_COUNT>
+    <ROW>
+      <ROW_TEXT>Почта России - Direct mail</ROW_TEXT>
+      <ROW_NUM>О-П1</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+    <ROW>
+      <ROW_TEXT>Почта России - Простое письмо</ROW_TEXT>
+      <ROW_NUM>О-П2</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+	 <ROW>
+      <ROW_TEXT>Почта России - Заказное письмо</ROW_TEXT>
+      <ROW_NUM>О-П3</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>  
+	 <ROW>
+      <ROW_TEXT>Адресная передача</ROW_TEXT>
+      <ROW_NUM>О-П4</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>  
+	 <ROW>
+      <ROW_TEXT>При личном контакте СП с ЗЛ в филиале</ROW_TEXT>
+      <ROW_NUM>О-П5</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+	   <EXCLUSION_CELL>5,6</EXCLUSION_CELL>
+    </ROW>  
+	 <ROW>
+      <ROW_TEXT>При личном контакте СП с ЗЛ в МО</ROW_TEXT>
+      <ROW_NUM>О-П6</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+	   <EXCLUSION_CELL>5,6</EXCLUSION_CELL>
+    </ROW>  
+    <ROW>
+      <ROW_TEXT>Сумма</ROW_TEXT>
+      <ROW_NUM>С-О</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+     <EXCLUSION_CELL>6,7</EXCLUSION_CELL>
+    </ROW>
+  </TABLE>
+  
+     <TABLE>
+    <TABLE_NAME>Тема УД-П</TABLE_NAME>
+    <TABLE_DESCRIPTION>Тема УД - углубленная диспансеризация, информирование, Электронное сообщение</TABLE_DESCRIPTION>
+    <ROWS_COUNT>8</ROWS_COUNT>
+    <ROW>
+      <ROW_TEXT>Почта России - Direct mail</ROW_TEXT>
+      <ROW_NUM>УД-П1</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+    <ROW>
+      <ROW_TEXT>Почта России - Простое письмо</ROW_TEXT>
+      <ROW_NUM>УД-П2</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+	 <ROW>
+      <ROW_TEXT>Почта России - Заказное письмо</ROW_TEXT>
+      <ROW_NUM>УД-П3</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>  
+	 <ROW>
+      <ROW_TEXT>Адресная передача</ROW_TEXT>
+      <ROW_NUM>УД-П4</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>  
+	 <ROW>
+      <ROW_TEXT>При личном контакте СП с ЗЛ в филиале</ROW_TEXT>
+      <ROW_NUM>УД-П5</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+	    <EXCLUSION_CELL>5,6</EXCLUSION_CELL>
+    </ROW>  
+	 <ROW>
+      <ROW_TEXT>При личном контакте СП с ЗЛ в МО</ROW_TEXT>
+      <ROW_NUM>УД-П6</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+	    <EXCLUSION_CELL>5,6</EXCLUSION_CELL>
+    </ROW> 
+<ROW>
+      <ROW_TEXT>При проведении информирования по телеф.</ROW_TEXT>
+      <ROW_NUM>УД-П7</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+	  <EXCLUSION_CELL>5,6</EXCLUSION_CELL>	  
+    </ROW>
+	<ROW>
+      <ROW_TEXT>С использованием автоинформатора по телеф.</ROW_TEXT>
+      <ROW_NUM>УД-П8</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+	  <EXCLUSION_CELL>5,6</EXCLUSION_CELL>	  
+    </ROW>  	  		
+    <ROW>
+      <ROW_TEXT>Сумма</ROW_TEXT>
+      <ROW_NUM>С-УД</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+      <EXCLUSION_CELL>6,7</EXCLUSION_CELL>
+    </ROW>
+  </TABLE>
+  
+  
+      <TABLE>
+    <TABLE_NAME>Тема И-П</TABLE_NAME>
+    <TABLE_DESCRIPTION>Иные темы, информирование, письменное сообщение</TABLE_DESCRIPTION>
+    <ROWS_COUNT>8</ROWS_COUNT>
+    <ROW>
+      <ROW_TEXT>Почта России - Direct mail</ROW_TEXT>
+      <ROW_NUM>И-П1</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+    <ROW>
+      <ROW_TEXT>Почта России - Простое письмо</ROW_TEXT>
+      <ROW_NUM>И-П2</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+	 <ROW>
+      <ROW_TEXT>Почта России - Заказное письмо</ROW_TEXT>
+      <ROW_NUM>И-П3</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>  
+	 <ROW>
+      <ROW_TEXT>Адресная передача</ROW_TEXT>
+      <ROW_NUM>И-П4</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>  
+	 <ROW>
+      <ROW_TEXT>При личном контакте СП с ЗЛ в филиале</ROW_TEXT>
+      <ROW_NUM>И-П5</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+	    <EXCLUSION_CELL>5,6</EXCLUSION_CELL>
+    </ROW>  
+	 <ROW>
+      <ROW_TEXT>При личном контакте СП с ЗЛ в МО</ROW_TEXT>
+      <ROW_NUM>И-П6</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+	    <EXCLUSION_CELL>5,6</EXCLUSION_CELL>
+    </ROW>
+<ROW>
+      <ROW_TEXT>При проведении информирования по телеф.</ROW_TEXT>
+      <ROW_NUM>И-П7</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+	  <EXCLUSION_CELL>5,6</EXCLUSION_CELL>	  
+    </ROW>
+	<ROW>
+      <ROW_TEXT>С использованием автоинформатора по телеф.</ROW_TEXT>
+      <ROW_NUM>И-П8</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+	  <EXCLUSION_CELL>5,6</EXCLUSION_CELL>	  
+    </ROW>  	  		
+    <ROW>
+      <ROW_TEXT>Сумма</ROW_TEXT>
+      <ROW_NUM>С-И</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+      <EXCLUSION_CELL>6,7</EXCLUSION_CELL>
+    </ROW>
+  </TABLE>
+  
+  
+  
+  
+  
+</REPORT>

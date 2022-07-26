@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<REPORT xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <REPORT_NAME>fcr</REPORT_NAME>
+  <TABLE>
+    <TABLE_NAME>профосмотр.</TABLE_NAME>
+    <TABLE_DESCRIPTION>Информирование застрахованных лиц о праве прохождения профилактических медосмотров</TABLE_DESCRIPTION>
+	
+	
+  </TABLE>
+   <TABLE>
+    <TABLE_NAME>дисп.</TABLE_NAME>
+    <TABLE_DESCRIPTION>Информирование застрахованных лиц о праве прохождения диспансеризации</TABLE_DESCRIPTION>
+
+  </TABLE>
+     <TABLE>
+    <TABLE_NAME>дисп.наблюд.</TABLE_NAME>
+    <TABLE_DESCRIPTION>И Информирование застрахованных лиц о праве прохождения диспансерного наблюдения</TABLE_DESCRIPTION>	
+	
+  </TABLE>
+  
+</REPORT>
