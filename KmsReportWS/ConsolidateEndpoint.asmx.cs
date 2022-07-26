@@ -17,11 +17,26 @@ namespace KmsReportWS
     {
 
         [WebMethod]
+        public List<CReportCadreTable1> CreateReportCadreTable1(string yymm)
+        {
+            var consolidate = new ConsolidateCadreCollector();
+            return consolidate.CreateReportCadreTable1(yymm);
+        }
+
+        [WebMethod]
+        public List<CReportCadreTable2> CreateReportCadreTable2(string yymm)
+        {
+            var consolidate = new ConsolidateCadreCollector();
+            return consolidate.CreateReportCadreTable2(yymm);
+        }
+
+        [WebMethod]
         public List<CReport262Table1> CreateReport262T1(int year)
         {
             var consolidate = new Consolidate262Collector();
             return consolidate.CreateReport262T1(year);
         }
+
 
         [WebMethod]
         public List<CReport262Table2> CreateReport262T2(string yymmSt, string yymmEnd)
@@ -29,6 +44,8 @@ namespace KmsReportWS
             var consolidate = new Consolidate262Collector();
             return consolidate.CreateReport262T2(yymmSt, yymmEnd);
         }
+
+
 
         [WebMethod]
         public List<CReport262Table3> CreateReport262T3(string yymm)

@@ -438,8 +438,20 @@ namespace KmsReportWS
             return consolidate.Collect(yymm);
         }
 
-     
 
+        [WebMethod]
+        public List<CReportCadreTable1> CreateReportCadreTable1(string yymm)
+        {
+            var consolidate = new ConsolidateCadreCollector();
+            return consolidate.CreateReportCadreTable1(yymm);
+        }
+
+        [WebMethod]
+        public List<CReportCadreTable2> CreateReportCadreTable2(string yymm)
+        {
+            var consolidate = new ConsolidateCadreCollector();
+            return consolidate.CreateReportCadreTable2(yymm);
+        }
 
 
         //перенес в ConsolidateEndpoint позже удалить
