@@ -421,4 +421,38 @@
       <Association Name="Report_Data_Report_Cadre" Member="Report_Data" ThisKey="Id_Report_Data" OtherKey="Id" Type="Report_Data" IsForeignKey="true" />
     </Type>
   </Table>
+  <Function Name="dbo.cadre_rapport" Method="cadre_rapport" IsComposable="true">
+    <Parameter Name="Yymm" Parameter="yymm" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="Theme" Parameter="theme" Type="System.String" DbType="VarChar(30)" />
+    <ElementType Name="cadre_rapportResult">
+      <Column Name="Id_Region" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="count_itog_state" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_itog_fact" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_itog_vacancy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_leader_state" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_leader_fact" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_leader_vacancy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_deputy_leader_state" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_deputy_leader_fact" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_deputy_leader_vacancy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_expert_doctor_state" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_expert_doctor_fact" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_expert_doctor_vacancy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_specialist_state" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_specialist_fact" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_specialist_vacancy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_grf15" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_grf16" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_grf17" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_grf18" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_grf19" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_grf20" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_grf21" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_grf22" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_grf23" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_grf24" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_grf25" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count_grf26" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
 </Database>

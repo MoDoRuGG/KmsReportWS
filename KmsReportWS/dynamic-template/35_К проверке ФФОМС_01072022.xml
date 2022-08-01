@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TemplateDynamicReport xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <REPORT_NAME>К проверке ФФОМС</REPORT_NAME>
+  <REPORT_DESCRIPTION />
+  <REPORT_DATE>2022-07-01T15:45:49.5797335+03:00</REPORT_DATE>
+  <IsUserRow>false</IsUserRow>
+  <Emails />
+  <TABLE>
+    <TemplateTableDynamic>
+      <TABLE_NAME>Ц МЭЭ 2022</TABLE_NAME>
+      <TABLE_DESCRIPTION />
+      <ROWS>
+        <TemplateRowDynamic>
+          <ROW_TEXT>Случаи повторных обращений по поводу одного и того же заболевания:</ROW_TEXT>
+          <ROW_NUM>1</ROW_NUM>
+          <ROW_DESCRIPTION />
+        </TemplateRowDynamic>
+        <TemplateRowDynamic>
+          <ROW_TEXT>- в течение 30 дней (в амбулаторных, стационарных условиях);</ROW_TEXT>
+          <ROW_NUM>1</ROW_NUM>
+          <ROW_DESCRIPTION />
+        </TemplateRowDynamic>
+        <TemplateRowDynamic>
+          <ROW_TEXT>- в течение 24 часов от момента предшествующего вызова (при повторном вызове скорой медицинской помощи).</ROW_TEXT>
+          <ROW_NUM>1</ROW_NUM>
+          <ROW_DESCRIPTION />
+        </TemplateRowDynamic>
+        <TemplateRowDynamic>
+          <ROW_TEXT>Случаи поступления жалоб от застрахованного лица или его представителя на доступность медицинской помощи</ROW_TEXT>
+          <ROW_NUM>1</ROW_NUM>
+          <ROW_DESCRIPTION />
+        </TemplateRowDynamic>
+        <TemplateRowDynamic>
+          <ROW_TEXT>Случаи оказания медицинской помощи по профилю "Онкология" с применением противоопухолевой терапии</ROW_TEXT>
+          <ROW_NUM>1</ROW_NUM>
+          <ROW_DESCRIPTION />
+        </TemplateRowDynamic>
+        <TemplateRowDynamic>
+          <ROW_TEXT>Случаи несвоевременной постановки на диспансерное наблюдение застрахованных лиц, которым по результатам проведения профилактических мероприятий или оказания иной медицинской помощи впервые установлены диагнозы, при которых предусмотрено диспансерное наблюдение</ROW_TEXT>
+          <ROW_NUM>1</ROW_NUM>
+          <ROW_DESCRIPTION />
+        </TemplateRowDynamic>
+        <TemplateRowDynamic>
+          <ROW_TEXT>Случаи несоблюдения установленной периодичности осмотров граждан, включенных в группы диспансерного наблюдения, в соответствии с порядком и периодичностью проведения диспансерного наблюдения и перечнем включаемых в них исследований</ROW_TEXT>
+          <ROW_NUM>1</ROW_NUM>
+          <ROW_DESCRIPTION />
+        </TemplateRowDynamic>
+        <TemplateRowDynamic>
+          <ROW_TEXT>Случаи госпитализции застрахованного лица, медицинская помощь которому должна быть оказана в плановой форме в стационаре (структурном подразделении стационара) другого профиля в соответствии с порядками оказания медицинской помощи (далее - непрофильная госпитализация)</ROW_TEXT>
+          <ROW_NUM>1</ROW_NUM>
+          <ROW_DESCRIPTION />
+        </TemplateRowDynamic>
+      </ROWS>
+      <COLUMNS>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Количество страховых случаев, подлежащих экспертизе</COLUMN_TEXT>
+          <COLUMN_INDEX>1</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION />
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Проведены МЭЭ</COLUMN_TEXT>
+          <COLUMN_INDEX />
+          <COLUMN_DESCRIPTION />
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>Количество страховых случаев по которым проведены экспертизы</COLUMN_TEXT>
+            <COLUMN_INDEX>2</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>% случаев по которым проведены экспертизы</COLUMN_TEXT>
+            <COLUMN_INDEX>3</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+        </TemplateColumnDynamic>
+      </COLUMNS>
+    </TemplateTableDynamic>
+    <TemplateTableDynamic>
+      <TABLE_NAME>Ц ЭКМП 2022</TABLE_NAME>
+      <TABLE_DESCRIPTION>Целевая экспертиза качества медицинской помощи 2022</TABLE_DESCRIPTION>
+      <ROWS>
+        <TemplateRowDynamic>
+          <ROW_TEXT>Случаи поступления жалоб от застрахованного лица или его представителя на доступность и качество медицинской помощи в медицинской организации</ROW_TEXT>
+          <ROW_NUM>1</ROW_NUM>
+          <ROW_DESCRIPTION />
+        </TemplateRowDynamic>
+        <TemplateRowDynamic>
+          <ROW_TEXT>Случаи летальных исходов, из них при:</ROW_TEXT>
+          <ROW_NUM>1</ROW_NUM>
+          <ROW_DESCRIPTION />
+        </TemplateRowDynamic>
+        <TemplateRowDynamic>
+          <ROW_TEXT>- остром коронарном синдроме;</ROW_TEXT>
+          <ROW_NUM>1</ROW_NUM>
+          <ROW_DESCRIPTION />
+        </TemplateRowDynamic>
+        <TemplateRowDynamic>
+          <ROW_TEXT>- остром нарушении мозгового кровообращения;</ROW_TEXT>
+          <ROW_NUM>1</ROW_NUM>
+          <ROW_DESCRIPTION />
+        </TemplateRowDynamic>
+        <TemplateRowDynamic>
+          <ROW_TEXT>- злокачественных новообразованиях.</ROW_TEXT>
+          <ROW_NUM>1</ROW_NUM>
+          <ROW_DESCRIPTION />
+        </TemplateRowDynamic>
+        <TemplateRowDynamic>
+          <ROW_TEXT>Случаи внутрибольничного инфицирования и осложнения заболевания</ROW_TEXT>
+          <ROW_NUM>1</ROW_NUM>
+          <ROW_DESCRIPTION />
+        </TemplateRowDynamic>
+        <TemplateRowDynamic>
+          <ROW_TEXT>Случаи первичного выхода на инвалидность лиц трцдоспособного возраста и детей</ROW_TEXT>
+          <ROW_NUM>1</ROW_NUM>
+          <ROW_DESCRIPTION />
+        </TemplateRowDynamic>
+        <TemplateRowDynamic>
+          <ROW_TEXT>Случаи повторного обоснованного обращения по поводу одного и того же заболевания:</ROW_TEXT>
+          <ROW_NUM>1</ROW_NUM>
+          <ROW_DESCRIPTION />
+        </TemplateRowDynamic>
+        <TemplateRowDynamic>
+          <ROW_TEXT>- в течение 30-ти дней (в амбулаторных, стационарных условиях);</ROW_TEXT>
+          <ROW_NUM>1</ROW_NUM>
+          <ROW_DESCRIPTION />
+        </TemplateRowDynamic>
+        <TemplateRowDynamic>
+          <ROW_TEXT>- в течение 24 часов от момента предшествующего вызова (при повторном вызове скорой медицинской помощи).</ROW_TEXT>
+          <ROW_NUM>1</ROW_NUM>
+          <ROW_DESCRIPTION />
+        </TemplateRowDynamic>
+        <TemplateRowDynamic>
+          <ROW_TEXT>Случаи, отобранные по результатам целевой МЭЭ</ROW_TEXT>
+          <ROW_NUM>1</ROW_NUM>
+          <ROW_DESCRIPTION />
+        </TemplateRowDynamic>
+        <TemplateRowDynamic>
+          <ROW_TEXT>Случаи выявления по результатам целевой тематической МЭЭ нарушений при оказании медицнской помощи по профилю "Онкология"</ROW_TEXT>
+          <ROW_NUM>1</ROW_NUM>
+          <ROW_DESCRIPTION />
+        </TemplateRowDynamic>
+      </ROWS>
+      <COLUMNS>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Количество страховых случаев, подлежащих экспертизе</COLUMN_TEXT>
+          <COLUMN_INDEX>1</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION />
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Проведены ЭКМП</COLUMN_TEXT>
+          <COLUMN_INDEX />
+          <COLUMN_DESCRIPTION />
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>Количество страховых случаев по которым проведены экспертизы</COLUMN_TEXT>
+            <COLUMN_INDEX>2</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>% случаев по которым проведены экспертизы</COLUMN_TEXT>
+            <COLUMN_INDEX>3</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+        </TemplateColumnDynamic>
+      </COLUMNS>
+    </TemplateTableDynamic>
+    <TemplateTableDynamic>
+      <TABLE_NAME>Летальные 2022</TABLE_NAME>
+      <TABLE_DESCRIPTION>Сведения о результатах целевой ЭКМП, проведенной по случаям летальных исходов при оказании медицинской помощи за 2022 год</TABLE_DESCRIPTION>
+      <ROWS />
+      <COLUMNS>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Количество страховых случаев, закончившихся летальным исходом, подлежащих проведению ЭКМП</COLUMN_TEXT>
+          <COLUMN_INDEX>1</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION />
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Количество страховых случаев, по которым проведена целевая ЭКМП</COLUMN_TEXT>
+          <COLUMN_INDEX>2</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION />
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>% страховых случаев, по которым проведена целевая ЭКМП от подлежащих проведению</COLUMN_TEXT>
+          <COLUMN_INDEX>3</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION />
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Выявлено страховых случаев, содержащих нарушения</COLUMN_TEXT>
+          <COLUMN_INDEX>4</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION />
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>% страховых случаев, содержащих нарушения, от количества проведенных ЭКМП</COLUMN_TEXT>
+          <COLUMN_INDEX>5</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION />
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Количество страховых случаев, по которым не проведена целевая ЭКМП по объективным причинам</COLUMN_TEXT>
+          <COLUMN_INDEX>6</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION />
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Количество страховых случаев, по которым проведена целевая ЭКМП (на текущую дату отчета)</COLUMN_TEXT>
+          <COLUMN_INDEX>7</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION />
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>% страховых случаев, по которым проведена целевая ЭКМП от подлежащих проведению</COLUMN_TEXT>
+          <COLUMN_INDEX>8</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION />
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Примечания</COLUMN_TEXT>
+          <COLUMN_INDEX>9</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION />
+        </TemplateColumnDynamic>
+      </COLUMNS>
+    </TemplateTableDynamic>
+    <TemplateTableDynamic>
+      <TABLE_NAME>Мульти 2022</TABLE_NAME>
+      <TABLE_DESCRIPTION>Мультидисциплинарная целевая экспертиза качества медицинской помощи 2022</TABLE_DESCRIPTION>
+      <ROWS>
+        <TemplateRowDynamic>
+          <ROW_TEXT>Случаи получения жалобы от застрахованного лица или его представителя на доступность и качество медицинской помощи, оказанной специалистами разных профилей и/или на разных уровнях оказания медицинской помощи</ROW_TEXT>
+          <ROW_NUM>1</ROW_NUM>
+          <ROW_DESCRIPTION />
+        </TemplateRowDynamic>
+        <TemplateRowDynamic>
+          <ROW_TEXT>Случаи летального исхода при остром коронарном синдроме (код по МКБ 10 120.0; 121-124)</ROW_TEXT>
+          <ROW_NUM>1</ROW_NUM>
+          <ROW_DESCRIPTION />
+        </TemplateRowDynamic>
+        <TemplateRowDynamic>
+          <ROW_TEXT>Случаи летального исхода при остром нарушении мозгового кровообращения (160-163; G 45 - G 46)</ROW_TEXT>
+          <ROW_NUM>1</ROW_NUM>
+          <ROW_DESCRIPTION />
+        </TemplateRowDynamic>
+        <TemplateRowDynamic>
+          <ROW_TEXT>Случаи летального исхода при внебольничных и госпитальных пневмониях (J 12 - J 18)</ROW_TEXT>
+          <ROW_NUM>1</ROW_NUM>
+          <ROW_DESCRIPTION />
+        </TemplateRowDynamic>
+        <TemplateRowDynamic>
+          <ROW_TEXT>Случаи летального исхода при злокачественных новообразованиях молочной железы у женщин (C 50)</ROW_TEXT>
+          <ROW_NUM>1</ROW_NUM>
+          <ROW_DESCRIPTION />
+        </TemplateRowDynamic>
+        <TemplateRowDynamic>
+          <ROW_TEXT>Случаи летального исхода при злокачественных новообразованиях предстательной железы у мужчин (C 61)</ROW_TEXT>
+          <ROW_NUM>1</ROW_NUM>
+          <ROW_DESCRIPTION />
+        </TemplateRowDynamic>
+        <TemplateRowDynamic>
+          <ROW_TEXT>Случаи первичного выхода на инвалидность лиц трудоспособного возраста и детей</ROW_TEXT>
+          <ROW_NUM>1</ROW_NUM>
+          <ROW_DESCRIPTION />
+        </TemplateRowDynamic>
+      </ROWS>
+      <COLUMNS>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Количество страховых случаев, подлежащих экспертизе</COLUMN_TEXT>
+          <COLUMN_INDEX>1</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION />
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Проведены экспертизы</COLUMN_TEXT>
+          <COLUMN_INDEX />
+          <COLUMN_DESCRIPTION />
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>Количество страховых случаев по которым проведены экспертизы</COLUMN_TEXT>
+            <COLUMN_INDEX>2</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+          <COLUMN_DESCRIPTION_CHILD>
+            <COLUMN_TEXT>% случаев по которым проведены экспертизы</COLUMN_TEXT>
+            <COLUMN_INDEX>3</COLUMN_INDEX>
+            <COLUMN_DESCRIPTION />
+          </COLUMN_DESCRIPTION_CHILD>
+        </TemplateColumnDynamic>
+      </COLUMNS>
+    </TemplateTableDynamic>
+  </TABLE>
+</TemplateDynamicReport>

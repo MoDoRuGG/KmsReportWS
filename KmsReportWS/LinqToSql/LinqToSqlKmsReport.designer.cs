@@ -363,6 +363,12 @@ namespace KmsReportWS.LinqToSql
 				return this.GetTable<Report_Cadre>();
 			}
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.cadre_rapport", IsComposable=true)]
+		public IQueryable<cadre_rapportResult> cadre_rapport([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Yymm", DbType="VarChar(4)")] string yymm, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Theme", DbType="VarChar(30)")] string theme)
+		{
+			return this.CreateMethodCallQuery<cadre_rapportResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), yymm, theme);
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Responsible_Employee")]
@@ -9361,6 +9367,518 @@ namespace KmsReportWS.LinqToSql
 			if ((this.PropertyChanged != null))
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	public partial class cadre_rapportResult
+	{
+		
+		private string _Id_Region;
+		
+		private System.Nullable<int> _count_itog_state;
+		
+		private System.Nullable<int> _count_itog_fact;
+		
+		private System.Nullable<int> _count_itog_vacancy;
+		
+		private System.Nullable<int> _count_leader_state;
+		
+		private System.Nullable<int> _count_leader_fact;
+		
+		private System.Nullable<int> _count_leader_vacancy;
+		
+		private System.Nullable<int> _count_deputy_leader_state;
+		
+		private System.Nullable<int> _count_deputy_leader_fact;
+		
+		private System.Nullable<int> _count_deputy_leader_vacancy;
+		
+		private System.Nullable<int> _count_expert_doctor_state;
+		
+		private System.Nullable<int> _count_expert_doctor_fact;
+		
+		private System.Nullable<int> _count_expert_doctor_vacancy;
+		
+		private System.Nullable<int> _count_specialist_state;
+		
+		private System.Nullable<int> _count_specialist_fact;
+		
+		private System.Nullable<int> _count_specialist_vacancy;
+		
+		private System.Nullable<int> _count_grf15;
+		
+		private System.Nullable<int> _count_grf16;
+		
+		private System.Nullable<int> _count_grf17;
+		
+		private System.Nullable<int> _count_grf18;
+		
+		private System.Nullable<int> _count_grf19;
+		
+		private System.Nullable<int> _count_grf20;
+		
+		private System.Nullable<int> _count_grf21;
+		
+		private System.Nullable<int> _count_grf22;
+		
+		private System.Nullable<int> _count_grf23;
+		
+		private System.Nullable<int> _count_grf24;
+		
+		private System.Nullable<int> _count_grf25;
+		
+		private System.Nullable<int> _count_grf26;
+		
+		public cadre_rapportResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_Region", DbType="VarChar(10)")]
+		public string Id_Region
+		{
+			get
+			{
+				return this._Id_Region;
+			}
+			set
+			{
+				if ((this._Id_Region != value))
+				{
+					this._Id_Region = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_itog_state", DbType="Int")]
+		public System.Nullable<int> count_itog_state
+		{
+			get
+			{
+				return this._count_itog_state;
+			}
+			set
+			{
+				if ((this._count_itog_state != value))
+				{
+					this._count_itog_state = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_itog_fact", DbType="Int")]
+		public System.Nullable<int> count_itog_fact
+		{
+			get
+			{
+				return this._count_itog_fact;
+			}
+			set
+			{
+				if ((this._count_itog_fact != value))
+				{
+					this._count_itog_fact = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_itog_vacancy", DbType="Int")]
+		public System.Nullable<int> count_itog_vacancy
+		{
+			get
+			{
+				return this._count_itog_vacancy;
+			}
+			set
+			{
+				if ((this._count_itog_vacancy != value))
+				{
+					this._count_itog_vacancy = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_leader_state", DbType="Int")]
+		public System.Nullable<int> count_leader_state
+		{
+			get
+			{
+				return this._count_leader_state;
+			}
+			set
+			{
+				if ((this._count_leader_state != value))
+				{
+					this._count_leader_state = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_leader_fact", DbType="Int")]
+		public System.Nullable<int> count_leader_fact
+		{
+			get
+			{
+				return this._count_leader_fact;
+			}
+			set
+			{
+				if ((this._count_leader_fact != value))
+				{
+					this._count_leader_fact = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_leader_vacancy", DbType="Int")]
+		public System.Nullable<int> count_leader_vacancy
+		{
+			get
+			{
+				return this._count_leader_vacancy;
+			}
+			set
+			{
+				if ((this._count_leader_vacancy != value))
+				{
+					this._count_leader_vacancy = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_deputy_leader_state", DbType="Int")]
+		public System.Nullable<int> count_deputy_leader_state
+		{
+			get
+			{
+				return this._count_deputy_leader_state;
+			}
+			set
+			{
+				if ((this._count_deputy_leader_state != value))
+				{
+					this._count_deputy_leader_state = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_deputy_leader_fact", DbType="Int")]
+		public System.Nullable<int> count_deputy_leader_fact
+		{
+			get
+			{
+				return this._count_deputy_leader_fact;
+			}
+			set
+			{
+				if ((this._count_deputy_leader_fact != value))
+				{
+					this._count_deputy_leader_fact = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_deputy_leader_vacancy", DbType="Int")]
+		public System.Nullable<int> count_deputy_leader_vacancy
+		{
+			get
+			{
+				return this._count_deputy_leader_vacancy;
+			}
+			set
+			{
+				if ((this._count_deputy_leader_vacancy != value))
+				{
+					this._count_deputy_leader_vacancy = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_expert_doctor_state", DbType="Int")]
+		public System.Nullable<int> count_expert_doctor_state
+		{
+			get
+			{
+				return this._count_expert_doctor_state;
+			}
+			set
+			{
+				if ((this._count_expert_doctor_state != value))
+				{
+					this._count_expert_doctor_state = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_expert_doctor_fact", DbType="Int")]
+		public System.Nullable<int> count_expert_doctor_fact
+		{
+			get
+			{
+				return this._count_expert_doctor_fact;
+			}
+			set
+			{
+				if ((this._count_expert_doctor_fact != value))
+				{
+					this._count_expert_doctor_fact = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_expert_doctor_vacancy", DbType="Int")]
+		public System.Nullable<int> count_expert_doctor_vacancy
+		{
+			get
+			{
+				return this._count_expert_doctor_vacancy;
+			}
+			set
+			{
+				if ((this._count_expert_doctor_vacancy != value))
+				{
+					this._count_expert_doctor_vacancy = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_specialist_state", DbType="Int")]
+		public System.Nullable<int> count_specialist_state
+		{
+			get
+			{
+				return this._count_specialist_state;
+			}
+			set
+			{
+				if ((this._count_specialist_state != value))
+				{
+					this._count_specialist_state = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_specialist_fact", DbType="Int")]
+		public System.Nullable<int> count_specialist_fact
+		{
+			get
+			{
+				return this._count_specialist_fact;
+			}
+			set
+			{
+				if ((this._count_specialist_fact != value))
+				{
+					this._count_specialist_fact = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_specialist_vacancy", DbType="Int")]
+		public System.Nullable<int> count_specialist_vacancy
+		{
+			get
+			{
+				return this._count_specialist_vacancy;
+			}
+			set
+			{
+				if ((this._count_specialist_vacancy != value))
+				{
+					this._count_specialist_vacancy = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_grf15", DbType="Int")]
+		public System.Nullable<int> count_grf15
+		{
+			get
+			{
+				return this._count_grf15;
+			}
+			set
+			{
+				if ((this._count_grf15 != value))
+				{
+					this._count_grf15 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_grf16", DbType="Int")]
+		public System.Nullable<int> count_grf16
+		{
+			get
+			{
+				return this._count_grf16;
+			}
+			set
+			{
+				if ((this._count_grf16 != value))
+				{
+					this._count_grf16 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_grf17", DbType="Int")]
+		public System.Nullable<int> count_grf17
+		{
+			get
+			{
+				return this._count_grf17;
+			}
+			set
+			{
+				if ((this._count_grf17 != value))
+				{
+					this._count_grf17 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_grf18", DbType="Int")]
+		public System.Nullable<int> count_grf18
+		{
+			get
+			{
+				return this._count_grf18;
+			}
+			set
+			{
+				if ((this._count_grf18 != value))
+				{
+					this._count_grf18 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_grf19", DbType="Int")]
+		public System.Nullable<int> count_grf19
+		{
+			get
+			{
+				return this._count_grf19;
+			}
+			set
+			{
+				if ((this._count_grf19 != value))
+				{
+					this._count_grf19 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_grf20", DbType="Int")]
+		public System.Nullable<int> count_grf20
+		{
+			get
+			{
+				return this._count_grf20;
+			}
+			set
+			{
+				if ((this._count_grf20 != value))
+				{
+					this._count_grf20 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_grf21", DbType="Int")]
+		public System.Nullable<int> count_grf21
+		{
+			get
+			{
+				return this._count_grf21;
+			}
+			set
+			{
+				if ((this._count_grf21 != value))
+				{
+					this._count_grf21 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_grf22", DbType="Int")]
+		public System.Nullable<int> count_grf22
+		{
+			get
+			{
+				return this._count_grf22;
+			}
+			set
+			{
+				if ((this._count_grf22 != value))
+				{
+					this._count_grf22 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_grf23", DbType="Int")]
+		public System.Nullable<int> count_grf23
+		{
+			get
+			{
+				return this._count_grf23;
+			}
+			set
+			{
+				if ((this._count_grf23 != value))
+				{
+					this._count_grf23 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_grf24", DbType="Int")]
+		public System.Nullable<int> count_grf24
+		{
+			get
+			{
+				return this._count_grf24;
+			}
+			set
+			{
+				if ((this._count_grf24 != value))
+				{
+					this._count_grf24 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_grf25", DbType="Int")]
+		public System.Nullable<int> count_grf25
+		{
+			get
+			{
+				return this._count_grf25;
+			}
+			set
+			{
+				if ((this._count_grf25 != value))
+				{
+					this._count_grf25 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_grf26", DbType="Int")]
+		public System.Nullable<int> count_grf26
+		{
+			get
+			{
+				return this._count_grf26;
+			}
+			set
+			{
+				if ((this._count_grf26 != value))
+				{
+					this._count_grf26 = value;
+				}
 			}
 		}
 	}
