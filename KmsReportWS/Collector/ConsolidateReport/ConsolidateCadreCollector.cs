@@ -16,15 +16,8 @@ namespace KmsReportWS.Collector.ConsolidateReport
         public List<CReportCadreTable1> CreateReportCadreTable1(string yymm)
         {
             using var db = new LinqToSqlKmsReportDataContext(_connStr);
-            return (from flow in db.Report_Flow
-                    join rData in db.Report_Data on flow.Id equals rData.Id_Flow
-                    join table in db.Report_Cadre on rData.Id equals table
-                        .Id_Report_Data
-                    where flow.Yymm == yymm
-                          && flow.Status == ReportStatus.Done.GetDescription()
-                          && flow.Id_Report_Type == "cadre"
-                          && rData.Theme == "Отдел ЗПЗ и ЭКМП"
-                    group new { flow, table } by new { flow.Id_Region }
+            return (from table in db.cadre_rapport(yymm,"Отдел ЗПЗ и ЭКМП")         //  функция вывода табличного значения в SQL
+                    group new { table } by new { table.Id_Region }
                 into x
                     select new CReportCadreTable1
                     {
@@ -43,9 +36,6 @@ namespace KmsReportWS.Collector.ConsolidateReport
                             count_expert_doctor_state = x.Sum(g => g.table.count_expert_doctor_state ?? 0),
                             count_expert_doctor_fact = x.Sum(g => g.table.count_expert_doctor_fact ?? 0),
                             count_expert_doctor_vacancy = x.Sum(g => g.table.count_expert_doctor_vacancy ?? 0),
-                            count_specialist_state = x.Sum(g => g.table.count_specialist_state ?? 0),
-                            count_specialist_fact = x.Sum(g => g.table.count_specialist_fact ?? 0),
-                            count_specialist_vacancy = x.Sum(g => g.table.count_specialist_vacancy ?? 0),
                             count_grf15 = x.Sum(g => g.table.count_grf15 ?? 0),
                             count_grf16 = x.Sum(g => g.table.count_grf16 ?? 0),
                             count_grf17 = x.Sum(g => g.table.count_grf16 ?? 0),
@@ -58,23 +48,19 @@ namespace KmsReportWS.Collector.ConsolidateReport
                             count_grf24 = x.Sum(g => g.table.count_grf16 ?? 0),
                             count_grf25 = x.Sum(g => g.table.count_grf16 ?? 0),
                             count_grf26 = x.Sum(g => g.table.count_grf16 ?? 0),
-                                    }
+                            count_specialist_state = x.Sum(g => g.table.count_specialist_state ?? 0),
+                            count_specialist_fact = x.Sum(g => g.table.count_specialist_fact ?? 0),
+                            count_specialist_vacancy = x.Sum(g => g.table.count_specialist_vacancy ?? 0)
+                        }
                     }).ToList();
         }
 
         public List<CReportCadreTable2> CreateReportCadreTable2(string yymm)
         {
             using var db = new LinqToSqlKmsReportDataContext(_connStr);
-            return (from flow in db.Report_Flow
-                    join rData in db.Report_Data on flow.Id equals rData.Id_Flow
-                    join table in db.Report_Cadre on rData.Id equals table
-                        .Id_Report_Data
-                    where flow.Yymm == yymm
-                          && flow.Status == ReportStatus.Done.GetDescription()
-                          && flow.Id_Report_Type == "cadre"
-                          && rData.Theme == "ОИ и ЗПЗ"
-                    group new { flow, table } by new { flow.Id_Region }
-                into x
+            return (from table in db.cadre_rapport(yymm, "ОИ и ЗПЗ")                //  функция вывода табличного значения в SQL
+                    group new { table } by new { table.Id_Region }
+                            into x
                     select new CReportCadreTable2
                     {
                         Filial = x.Key.Id_Region,
@@ -92,9 +78,6 @@ namespace KmsReportWS.Collector.ConsolidateReport
                             count_expert_doctor_state = x.Sum(g => g.table.count_expert_doctor_state ?? 0),
                             count_expert_doctor_fact = x.Sum(g => g.table.count_expert_doctor_fact ?? 0),
                             count_expert_doctor_vacancy = x.Sum(g => g.table.count_expert_doctor_vacancy ?? 0),
-                            count_specialist_state = x.Sum(g => g.table.count_specialist_state ?? 0),
-                            count_specialist_fact = x.Sum(g => g.table.count_specialist_fact ?? 0),
-                            count_specialist_vacancy = x.Sum(g => g.table.count_specialist_vacancy ?? 0),
                             count_grf15 = x.Sum(g => g.table.count_grf15 ?? 0),
                             count_grf16 = x.Sum(g => g.table.count_grf16 ?? 0),
                             count_grf17 = x.Sum(g => g.table.count_grf16 ?? 0),
@@ -107,6 +90,9 @@ namespace KmsReportWS.Collector.ConsolidateReport
                             count_grf24 = x.Sum(g => g.table.count_grf16 ?? 0),
                             count_grf25 = x.Sum(g => g.table.count_grf16 ?? 0),
                             count_grf26 = x.Sum(g => g.table.count_grf16 ?? 0),
+                            count_specialist_state = x.Sum(g => g.table.count_specialist_state ?? 0),
+                            count_specialist_fact = x.Sum(g => g.table.count_specialist_fact ?? 0),
+                            count_specialist_vacancy = x.Sum(g => g.table.count_specialist_vacancy ?? 0)
                         }
                     }).ToList();
         }
