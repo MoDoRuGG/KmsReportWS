@@ -61,7 +61,7 @@
                <COLUMN_DESCRIPTION/>
             </TemplateColumnDynamic>
             <TemplateColumnDynamic>
-               <COLUMN_TEXT>Количество страховых случаев, подлежащих экспертизе случаев,по которым проведена экспертиза</COLUMN_TEXT>
+               <COLUMN_TEXT>Количество страховых случаев, по которым проведена экспертиза</COLUMN_TEXT>
                <COLUMN_INDEX/>
                <COLUMN_DESCRIPTION/>
                <COLUMN_INDEX>2</COLUMN_INDEX>
@@ -127,7 +127,7 @@
                <COLUMN_DESCRIPTION/>
             </TemplateColumnDynamic>
             <TemplateColumnDynamic>
-               <COLUMN_TEXT>Количество страховых случаев, подлежащих экспертизе случаев,по которым проведена экспертиза</COLUMN_TEXT>
+               <COLUMN_TEXT>Количество страховых случаев, по которым проведена экспертиза</COLUMN_TEXT>
                <COLUMN_INDEX/>
                <COLUMN_DESCRIPTION/>
                <COLUMN_INDEX>2</COLUMN_INDEX>
