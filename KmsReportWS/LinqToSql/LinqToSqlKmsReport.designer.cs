@@ -8584,35 +8584,35 @@ namespace KmsReportWS.LinqToSql
 		
 		private System.Nullable<int> _RowNum;
 		
-		private System.Nullable<int> _count_itog_state;
+		private System.Nullable<decimal> _count_itog_state;
 		
-		private System.Nullable<int> _count_itog_fact;
+		private System.Nullable<decimal> _count_itog_fact;
 		
-		private System.Nullable<int> _count_itog_vacancy;
+		private System.Nullable<decimal> _count_itog_vacancy;
 		
-		private System.Nullable<int> _count_leader_state;
+		private System.Nullable<decimal> _count_leader_state;
 		
-		private System.Nullable<int> _count_leader_fact;
+		private System.Nullable<decimal> _count_leader_fact;
 		
-		private System.Nullable<int> _count_leader_vacancy;
+		private System.Nullable<decimal> _count_leader_vacancy;
 		
-		private System.Nullable<int> _count_deputy_leader_state;
+		private System.Nullable<decimal> _count_deputy_leader_state;
 		
-		private System.Nullable<int> _count_deputy_leader_fact;
+		private System.Nullable<decimal> _count_deputy_leader_fact;
 		
-		private System.Nullable<int> _count_deputy_leader_vacancy;
+		private System.Nullable<decimal> _count_deputy_leader_vacancy;
 		
-		private System.Nullable<int> _count_expert_doctor_state;
+		private System.Nullable<decimal> _count_expert_doctor_state;
 		
-		private System.Nullable<int> _count_expert_doctor_fact;
+		private System.Nullable<decimal> _count_expert_doctor_fact;
 		
-		private System.Nullable<int> _count_expert_doctor_vacancy;
+		private System.Nullable<decimal> _count_expert_doctor_vacancy;
 		
-		private System.Nullable<int> _count_specialist_state;
+		private System.Nullable<decimal> _count_specialist_state;
 		
-		private System.Nullable<int> _count_specialist_fact;
+		private System.Nullable<decimal> _count_specialist_fact;
 		
-		private System.Nullable<int> _count_specialist_vacancy;
+		private System.Nullable<decimal> _count_specialist_vacancy;
 		
 		private System.Nullable<int> _count_grf15;
 		
@@ -8650,35 +8650,35 @@ namespace KmsReportWS.LinqToSql
     partial void OnId_Report_DataChanged();
     partial void OnRowNumChanging(System.Nullable<int> value);
     partial void OnRowNumChanged();
-    partial void Oncount_itog_stateChanging(System.Nullable<int> value);
+    partial void Oncount_itog_stateChanging(System.Nullable<decimal> value);
     partial void Oncount_itog_stateChanged();
-    partial void Oncount_itog_factChanging(System.Nullable<int> value);
+    partial void Oncount_itog_factChanging(System.Nullable<decimal> value);
     partial void Oncount_itog_factChanged();
-    partial void Oncount_itog_vacancyChanging(System.Nullable<int> value);
+    partial void Oncount_itog_vacancyChanging(System.Nullable<decimal> value);
     partial void Oncount_itog_vacancyChanged();
-    partial void Oncount_leader_stateChanging(System.Nullable<int> value);
+    partial void Oncount_leader_stateChanging(System.Nullable<decimal> value);
     partial void Oncount_leader_stateChanged();
-    partial void Oncount_leader_factChanging(System.Nullable<int> value);
+    partial void Oncount_leader_factChanging(System.Nullable<decimal> value);
     partial void Oncount_leader_factChanged();
-    partial void Oncount_leader_vacancyChanging(System.Nullable<int> value);
+    partial void Oncount_leader_vacancyChanging(System.Nullable<decimal> value);
     partial void Oncount_leader_vacancyChanged();
-    partial void Oncount_deputy_leader_stateChanging(System.Nullable<int> value);
+    partial void Oncount_deputy_leader_stateChanging(System.Nullable<decimal> value);
     partial void Oncount_deputy_leader_stateChanged();
-    partial void Oncount_deputy_leader_factChanging(System.Nullable<int> value);
+    partial void Oncount_deputy_leader_factChanging(System.Nullable<decimal> value);
     partial void Oncount_deputy_leader_factChanged();
-    partial void Oncount_deputy_leader_vacancyChanging(System.Nullable<int> value);
+    partial void Oncount_deputy_leader_vacancyChanging(System.Nullable<decimal> value);
     partial void Oncount_deputy_leader_vacancyChanged();
-    partial void Oncount_expert_doctor_stateChanging(System.Nullable<int> value);
+    partial void Oncount_expert_doctor_stateChanging(System.Nullable<decimal> value);
     partial void Oncount_expert_doctor_stateChanged();
-    partial void Oncount_expert_doctor_factChanging(System.Nullable<int> value);
+    partial void Oncount_expert_doctor_factChanging(System.Nullable<decimal> value);
     partial void Oncount_expert_doctor_factChanged();
-    partial void Oncount_expert_doctor_vacancyChanging(System.Nullable<int> value);
+    partial void Oncount_expert_doctor_vacancyChanging(System.Nullable<decimal> value);
     partial void Oncount_expert_doctor_vacancyChanged();
-    partial void Oncount_specialist_stateChanging(System.Nullable<int> value);
+    partial void Oncount_specialist_stateChanging(System.Nullable<decimal> value);
     partial void Oncount_specialist_stateChanged();
-    partial void Oncount_specialist_factChanging(System.Nullable<int> value);
+    partial void Oncount_specialist_factChanging(System.Nullable<decimal> value);
     partial void Oncount_specialist_factChanged();
-    partial void Oncount_specialist_vacancyChanging(System.Nullable<int> value);
+    partial void Oncount_specialist_vacancyChanging(System.Nullable<decimal> value);
     partial void Oncount_specialist_vacancyChanged();
     partial void Oncount_grf15Changing(System.Nullable<int> value);
     partial void Oncount_grf15Changed();
@@ -8776,8 +8776,8 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_itog_state", DbType="Int")]
-		public System.Nullable<int> count_itog_state
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_itog_state", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> count_itog_state
 		{
 			get
 			{
@@ -8796,8 +8796,8 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_itog_fact", DbType="Int")]
-		public System.Nullable<int> count_itog_fact
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_itog_fact", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> count_itog_fact
 		{
 			get
 			{
@@ -8816,8 +8816,8 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_itog_vacancy", DbType="Int")]
-		public System.Nullable<int> count_itog_vacancy
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_itog_vacancy", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> count_itog_vacancy
 		{
 			get
 			{
@@ -8836,8 +8836,8 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_leader_state", DbType="Int")]
-		public System.Nullable<int> count_leader_state
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_leader_state", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> count_leader_state
 		{
 			get
 			{
@@ -8856,8 +8856,8 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_leader_fact", DbType="Int")]
-		public System.Nullable<int> count_leader_fact
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_leader_fact", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> count_leader_fact
 		{
 			get
 			{
@@ -8876,8 +8876,8 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_leader_vacancy", DbType="Int")]
-		public System.Nullable<int> count_leader_vacancy
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_leader_vacancy", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> count_leader_vacancy
 		{
 			get
 			{
@@ -8896,8 +8896,8 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_deputy_leader_state", DbType="Int")]
-		public System.Nullable<int> count_deputy_leader_state
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_deputy_leader_state", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> count_deputy_leader_state
 		{
 			get
 			{
@@ -8916,8 +8916,8 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_deputy_leader_fact", DbType="Int")]
-		public System.Nullable<int> count_deputy_leader_fact
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_deputy_leader_fact", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> count_deputy_leader_fact
 		{
 			get
 			{
@@ -8936,8 +8936,8 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_deputy_leader_vacancy", DbType="Int")]
-		public System.Nullable<int> count_deputy_leader_vacancy
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_deputy_leader_vacancy", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> count_deputy_leader_vacancy
 		{
 			get
 			{
@@ -8956,8 +8956,8 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_expert_doctor_state", DbType="Int")]
-		public System.Nullable<int> count_expert_doctor_state
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_expert_doctor_state", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> count_expert_doctor_state
 		{
 			get
 			{
@@ -8976,8 +8976,8 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_expert_doctor_fact", DbType="Int")]
-		public System.Nullable<int> count_expert_doctor_fact
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_expert_doctor_fact", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> count_expert_doctor_fact
 		{
 			get
 			{
@@ -8996,8 +8996,8 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_expert_doctor_vacancy", DbType="Int")]
-		public System.Nullable<int> count_expert_doctor_vacancy
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_expert_doctor_vacancy", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> count_expert_doctor_vacancy
 		{
 			get
 			{
@@ -9016,8 +9016,8 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_specialist_state", DbType="Int")]
-		public System.Nullable<int> count_specialist_state
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_specialist_state", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> count_specialist_state
 		{
 			get
 			{
@@ -9036,8 +9036,8 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_specialist_fact", DbType="Int")]
-		public System.Nullable<int> count_specialist_fact
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_specialist_fact", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> count_specialist_fact
 		{
 			get
 			{
@@ -9056,8 +9056,8 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_specialist_vacancy", DbType="Int")]
-		public System.Nullable<int> count_specialist_vacancy
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_specialist_vacancy", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> count_specialist_vacancy
 		{
 			get
 			{
