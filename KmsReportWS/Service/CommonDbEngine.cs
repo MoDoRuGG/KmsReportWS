@@ -117,7 +117,8 @@ namespace KmsReportWS.Service
                             DateEditCo = r.Date_edit_co,
                             DateIsDone = r.Date_is_done,
                             DateToCo = r.Date_to_co,
-                            Status = StatusUtils.ParseStatus(r.Status)
+                            Status = StatusUtils.ParseStatus(r.Status),
+                            DataSource = DataSourseUtils.ParseDataSource(r.DataSource)
                         };
             if (!string.IsNullOrEmpty(filial))
             {
@@ -175,7 +176,7 @@ namespace KmsReportWS.Service
             var flows = from emp in db.Employee
                         join flow in db.Report_Flow on emp.Region equals flow.Id_Region
                         where flow.Id_Report_Type == reportType && flow.Yymm == yymm &&
-                              flow.Status != ReportStatus.Done.GetDescription()
+                              flow.Status != ReportStatus.Done.GetDescriptionSt()
                         select new
                         {
                             emp.Surname,
@@ -188,7 +189,7 @@ namespace KmsReportWS.Service
                         };
             if (isRefuse)
             {
-                flows = flows.Where(x => x.Status == ReportStatus.Refuse.GetDescription());
+                flows = flows.Where(x => x.Status == ReportStatus.Refuse.GetDescriptionSt());
             }
 
             if (filialCode?.Count > 0)

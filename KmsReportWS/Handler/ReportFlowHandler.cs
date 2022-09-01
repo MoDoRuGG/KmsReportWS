@@ -35,7 +35,9 @@ namespace KmsReportWS.Handler
                             DateEditCo = r.Date_edit_co,
                             DateIsDone = r.Date_is_done,
                             DateToCo = r.Date_to_co,
+                            DataSource = DataSourseUtils.ParseDataSource(r.DataSource),
                             Status = StatusUtils.ParseStatus(r.Status)
+                            
                         };
             if (!string.IsNullOrEmpty(filial))
             {
@@ -95,7 +97,7 @@ namespace KmsReportWS.Handler
 
                 if(String.IsNullOrEmpty(flow.Scan) && String.IsNullOrEmpty(flow.Scan2) && String.IsNullOrEmpty(flow.Scan3))
                 {
-                    flow.Status = ReportStatus.Saved.GetDescription();
+                    flow.Status = ReportStatus.Saved.GetDescriptionSt();
 
                 }
                 flow.Updated = DateTime.Today.Date;
@@ -153,7 +155,7 @@ namespace KmsReportWS.Handler
                     flow.Scan3 = uri;
                 }
 
-                flow.Status = ReportStatus.Scan.GetDescription();
+                flow.Status = ReportStatus.Scan.GetDescriptionSt();
                 flow.Updated = DateTime.Today.Date;
                 flow.Id_Employee_Upd = idUser;
                 db.SubmitChanges();
@@ -178,7 +180,7 @@ namespace KmsReportWS.Handler
             {
                 var flow = db.Report_Flow.Single(x => x.Id == idReport);
                 flow.Scan = uri;
-                flow.Status = ReportStatus.Scan.GetDescription();
+                flow.Status = ReportStatus.Scan.GetDescriptionSt();
                 flow.Updated = DateTime.Today.Date;
                 flow.Id_Employee_Upd = idUser;
                 db.SubmitChanges();
@@ -221,7 +223,7 @@ namespace KmsReportWS.Handler
                     }
                 }
 
-                flow.Status = ReportStatus.Scan.GetDescription();
+                flow.Status = ReportStatus.Scan.GetDescriptionSt();
                 flow.Updated = DateTime.Today.Date;
                 flow.Id_Employee_Upd = idUser;
                 db.SubmitChanges();
@@ -245,7 +247,7 @@ namespace KmsReportWS.Handler
             {
                 var db = new LinqToSqlKmsReportDataContext(ConnStr);
                 var flow = db.Report_Flow.Single(x => x.Id == idReport);
-                flow.Status = status.GetDescription();
+                flow.Status = status.GetDescriptionSt();
                 switch (status)
                 {
                     case ReportStatus.Submit:
@@ -268,6 +270,45 @@ namespace KmsReportWS.Handler
             catch (Exception e)
             {
                 Log.Error(e, $"Error changing status = {status}: idReport = {idReport}, idUser = {idUser}");
+                throw;
+            }
+        }
+
+
+        public void ChangeDataSource(int idReport, int idUser, DataSource datasource)
+        {
+            if (idReport <= 0)
+            {
+                Log.Error($"Error changing datasource: idReport = {idReport}, idUser = {idUser}");
+                throw new Exception($"IdReport must be more than 0. idReport = {idReport}");
+            }
+
+            try
+            {
+                var db = new LinqToSqlKmsReportDataContext(ConnStr);
+                var flow = db.Report_Flow.Single(x => x.Id == idReport);
+                flow.DataSource = datasource.GetDescriptionDS();
+                switch (datasource)
+                {
+                    case DataSource.New:
+                        flow.Date_to_co = DateTime.Today.Date;
+                        flow.User_to_co = idUser;
+                        break;
+                    case DataSource.Excel:
+                        flow.Date_edit_co = DateTime.Today.Date;
+                        flow.User_edit_co = idUser;
+                        break;
+                    case DataSource.Handle:
+                        flow.Date_is_done = DateTime.Today.Date;
+                        flow.User_submit = idUser;
+                        break;
+                }
+
+                db.SubmitChanges();
+            }
+            catch (Exception e)
+            {
+                Log.Error(e, $"Error changing datasourse = {datasource}: idReport = {idReport}, idUser = {idUser}");
                 throw;
             }
         }

@@ -30,8 +30,8 @@
       <Association Name="Report_Data_Report_OpedFinance" Member="Report_OpedFinances" ThisKey="Id" OtherKey="id_ReportData" Type="Report_OpedFinance" />
       <Association Name="Report_Data_Report_Iilz" Member="Report_Iilzs" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_Iilz" />
       <Association Name="Report_Data_Report_Cadre" Member="Report_Cadre" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_Cadre" />
-      <Association Name="Report_Flow_Report_Data" Member="Report_Flow" ThisKey="Id_Flow" OtherKey="Id" Type="Report_Flow" IsForeignKey="true" />
       <Association Name="Report_Type_Report_Data" Member="Report_Type" ThisKey="Id_Report" OtherKey="Id" Type="Report_Type" IsForeignKey="true" />
+      <Association Name="Report_Flow_Report_Data" Member="Report_Flow" ThisKey="Id_Flow" OtherKey="Id" Type="Report_Flow" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.Report_f262" Member="Report_f262">
@@ -105,6 +105,7 @@
       <Association Name="Region_NormativCpnpRegion" Member="NormativCpnpRegion" ThisKey="id" OtherKey="id_region" Type="NormativCpnpRegion" />
       <Association Name="Region_Report_Dynamic_Flow" Member="Report_Dynamic_Flow" ThisKey="id" OtherKey="Id_Region" Type="Report_Dynamic_Flow" />
       <Association Name="Region_OpedFinancePlan" Member="OpedFinancePlans" ThisKey="id" OtherKey="Id_Region" Type="OpedFinancePlan" />
+      <Association Name="Region_Report_Flow" Member="Report_Flow" ThisKey="id" OtherKey="Id_Region" Type="Report_Flow" />
     </Type>
   </Table>
   <Table Name="dbo.Employee" Member="Employee">
@@ -124,9 +125,9 @@
       <Association Name="Employee_Comment" Member="Comment" ThisKey="Id" OtherKey="Id_Employee" Type="Comment" />
       <Association Name="Employee_Report_Dynamic_Flow" Member="Report_Dynamic_Flow" ThisKey="Id" OtherKey="Id_Employee" Type="Report_Dynamic_Flow" />
       <Association Name="Employee_Report_Dynamic" Member="Report_Dynamic" ThisKey="Id" OtherKey="id" Type="Report_Dynamic" Cardinality="One" />
-      <Association Name="Employee_Report_Flow" Member="Report_Flow" ThisKey="Id" OtherKey="Id_Employee" Type="Report_Flow" />
       <Association Name="Employee_Scans_Base" Member="Scans_Bases" ThisKey="Id" OtherKey="Usr_added" Type="Scans_Base" />
       <Association Name="Employee_Scans_Base1" Member="Scans_Bases1" ThisKey="Id" OtherKey="Usr_update" Type="Scans_Base" />
+      <Association Name="Employee_Report_Flow" Member="Report_Flow" ThisKey="Id" OtherKey="Id_Employee" Type="Report_Flow" />
       <Association Name="Region_Employee" Member="Region1" ThisKey="Region" OtherKey="id" Type="Region" IsForeignKey="true" />
     </Type>
   </Table>
@@ -208,35 +209,6 @@
       <Column Name="FileName" Type="System.String" DbType="VarChar(350) NOT NULL" CanBeNull="false" />
       <Association Name="Report_Dynamic_Report_Dynamic_Flow" Member="Report_Dynamic_Flow" ThisKey="id" OtherKey="Id_Report_Dynamic" Type="Report_Dynamic_Flow" />
       <Association Name="Employee_Report_Dynamic" Member="Employee" ThisKey="id" OtherKey="Id" Type="Employee" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.Report_Flow" Member="Report_Flow">
-    <Type Name="Report_Flow">
-      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="Id_Region" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
-      <Column Name="Id_Employee" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="Id_Report_Type" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
-      <Column Name="Yymm" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
-      <Column Name="Created" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
-      <Column Name="Updated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="Id_Employee_Upd" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="Version" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="Scan" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
-      <Column Name="Date_to_co" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="User_to_co" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="Date_edit_co" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="User_edit_co" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="Date_is_done" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="User_submit" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="Status" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
-      <Column Name="Scan2" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
-      <Column Name="Scan3" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
-      <Association Name="Report_Flow_Report_Data" Member="Report_Data" ThisKey="Id" OtherKey="Id_Flow" Type="Report_Data" />
-      <Association Name="Report_Flow_Comment" Member="Comment" ThisKey="Id" OtherKey="Id_Flow" Type="Comment" />
-      <Association Name="Report_Flow_Scans_Base" Member="Scans_Bases" ThisKey="Id" OtherKey="Id_flow" Type="Scans_Base" />
-      <Association Name="Employee_Report_Flow" Member="Employee" ThisKey="Id_Employee" OtherKey="Id" Type="Employee" IsForeignKey="true" />
-      <Association Name="Region_Report_Flow" Member="Region" ThisKey="Id_Region" OtherKey="id" Type="Region" IsForeignKey="true" />
-      <Association Name="Report_Type_Report_Flow" Member="Report_Type" ThisKey="Id_Report_Type" OtherKey="Id" Type="Report_Type" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.Email" Member="Email">
@@ -368,7 +340,7 @@
       <Column Name="YymmEnd" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
       <Association Name="Report_Type_Responsible_Employee" Member="Responsible_Employees" ThisKey="Id" OtherKey="Id_Report" Type="Responsible_Employee" />
       <Association Name="Report_Type_Report_Data" Member="Report_Datas" ThisKey="Id" OtherKey="Id_Report" Type="Report_Data" />
-      <Association Name="Report_Type_Report_Flow" Member="Report_Flows" ThisKey="Id" OtherKey="Id_Report_Type" Type="Report_Flow" />
+      <Association Name="Report_Type_Report_Flow" Member="Report_Flow" ThisKey="Id" OtherKey="Id_Report_Type" Type="Report_Flow" />
     </Type>
   </Table>
   <Table Name="dbo.Report_Iilz" Member="Report_Iilzs">
@@ -419,6 +391,36 @@
       <Column Name="count_grf25" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="count_grf26" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="Report_Data_Report_Cadre" Member="Report_Data" ThisKey="Id_Report_Data" OtherKey="Id" Type="Report_Data" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Report_Flow" Member="Report_Flow">
+    <Type Name="Report_Flow">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id_Region" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Id_Employee" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Id_Report_Type" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Yymm" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="Created" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Updated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Id_Employee_Upd" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Version" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Scan" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Date_to_co" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="User_to_co" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Date_edit_co" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="User_edit_co" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Date_is_done" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="User_submit" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Scan2" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Scan3" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="DataSource" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Association Name="Report_Flow_Report_Data" Member="Report_Data" ThisKey="Id" OtherKey="Id_Flow" Type="Report_Data" />
+      <Association Name="Report_Flow_Comment" Member="Comment" ThisKey="Id" OtherKey="Id_Flow" Type="Comment" />
+      <Association Name="Report_Flow_Scans_Base" Member="Scans_Base" ThisKey="Id" OtherKey="Id_flow" Type="Scans_Base" />
+      <Association Name="Employee_Report_Flow" Member="Employee" ThisKey="Id_Employee" OtherKey="Id" Type="Employee" IsForeignKey="true" />
+      <Association Name="Region_Report_Flow" Member="Region" ThisKey="Id_Region" OtherKey="id" Type="Region" IsForeignKey="true" />
+      <Association Name="Report_Type_Report_Flow" Member="Report_Type" ThisKey="Id_Report_Type" OtherKey="Id" Type="Report_Type" IsForeignKey="true" />
     </Type>
   </Table>
   <Function Name="dbo.cadre_rapport" Method="cadre_rapport" IsComposable="true">

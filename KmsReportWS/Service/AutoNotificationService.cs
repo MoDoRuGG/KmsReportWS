@@ -21,9 +21,9 @@ namespace KmsReportWS.Service
             try
             {
                 string message;
-                if (flow.Status == ReportStatus.Refuse.GetDescription())
+                if (flow.Status == ReportStatus.Refuse.GetDescriptionSt())
                     message = "возвращен на доработку. ";
-                else if (flow.Status == ReportStatus.Done.GetDescription())
+                else if (flow.Status == ReportStatus.Done.GetDescriptionSt())
                     message = "утвержден. ";
                 else
                     return;

@@ -13,12 +13,12 @@ namespace KmsReportWS.Collector.BaseReport
         }
 
         public override AbstractReport CollectSummaryReport(string[] filials, string yymmStart, string yymmEnd,
-            ReportStatus status)
+            ReportStatus status, DataSource datasource)
         {
             try
             {
                 var db = new LinqToSqlKmsReportDataContext(ConnStr);
-                var flows = GetFilteredReportFlows(db, filials, yymmStart, yymmEnd, status);
+                var flows = GetFilteredReportFlows(db, filials, yymmStart, yymmEnd, status, datasource);
                 var groupTheme = from f in flows
                     group f by f.Theme
                     into fgr

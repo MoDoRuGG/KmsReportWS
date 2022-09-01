@@ -172,6 +172,7 @@
     <Compile Include="Model\ReportDynamicScanModel.cs" />
     <Compile Include="Model\ReportScanModel.cs" />
     <Compile Include="Model\Report\ReportCadre.cs" />
+    <Compile Include="Model\Report\DataSource.cs" />
     <Compile Include="Model\Report\ReportFSSMonitroing.cs" />
     <Compile Include="Model\Report\ReportInfrormationResponse.cs" />
     <Compile Include="Model\Report\ReportOped.cs" />
@@ -226,6 +227,7 @@
     <Compile Include="Service\AutoNotificationService.cs" />
     <Compile Include="Service\FilialService.cs" />
     <Compile Include="Service\ManualNotificationService.cs" />
+    <Compile Include="Support\DataSourceUtils.cs" />
     <Compile Include="Support\DataRowUtils.cs" />
     <Compile Include="Support\QueryParametrs.cs" />
     <Compile Include="Support\YymmUtils.cs" />

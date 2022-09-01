@@ -32,7 +32,7 @@ namespace KmsReportWS.Collector.ConsolidateReport
                        join cpnpFederal in db.NormativCpnpFederal on year equals cpnpFederal.year
                        where flow.Yymm == yymm
                        && flow.Id_Report_Type ==reportType
-                       //&& flow.Status != ReportStatus.Refuse.GetDescription()
+                       //&& flow.Status != ReportStatus.Refuse.GetDescriptionSt()
                        && (rData.Theme == "Таблица 2" || rData.Theme == "Таблица 1")
                        && cpnpRegion.year==year
                        group new { flow, table,r } by new { flow.Id_Region,r.name, FedValue = cpnpFederal.value, RegValue = cpnpRegion.value }

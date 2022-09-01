@@ -135,7 +135,7 @@ namespace KmsReportWS.Service
             var flowsExistingReport = from emp in db.Employee
                                       join flow in db.Report_Flow on emp.Region equals flow.Id_Region
                                       where flow.Id_Report_Type == request.ReportType && flow.Yymm == request.Yymm &&
-                                            flow.Status != ReportStatus.Done.GetDescription() && emp.IsActive
+                                            flow.Status != ReportStatus.Done.GetDescriptionSt() && emp.IsActive
                                       select new Employee
                                       {
                                           Surname = emp.Surname,
@@ -148,7 +148,7 @@ namespace KmsReportWS.Service
                                       };
             if (request.IsRefuse)
             {
-                flowsExistingReport = flowsExistingReport.Where(x => x.Status == ReportStatus.Refuse.GetDescription());
+                flowsExistingReport = flowsExistingReport.Where(x => x.Status == ReportStatus.Refuse.GetDescriptionSt());
             }
 
             if (request.Filials?.Length > 0)

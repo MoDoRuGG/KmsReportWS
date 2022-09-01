@@ -39,7 +39,7 @@ namespace KmsReportWS.Handler
                 var db = new LinqToSqlKmsReportDataContext(_connStr);
                 var report = db.Report_Flow
                     .SingleOrDefault(x => x.Id_Region == filialCode && x.Yymm == yymm && x.Version == 1 &&
-                                          x.Id_Report_Type == _reportType.GetDescription());
+                                          x.Id_Report_Type == _reportType.GetDescriptionSt());
                 return report == null ? null : MapReportFromPersist(report);
             }
             catch (Exception e)
@@ -59,7 +59,7 @@ namespace KmsReportWS.Handler
                 // method temporarily fix this bug
                 var currentReport = db.Report_Flow
                     .SingleOrDefault(x => x.Id_Region == filialCode && x.Yymm == yymm  &&
-                                          x.Id_Report_Type == _reportType.GetDescription());
+                                          x.Id_Report_Type == _reportType.GetDescriptionSt());
                 int idFlow = currentReport?.Id ?? 0;
 
                 if (idFlow == 0)
@@ -72,9 +72,57 @@ namespace KmsReportWS.Handler
                     var flow = db.Report_Flow.Single(x => x.Id == idFlow);
                     flow.Id_Employee_Upd = idUser;
                     flow.Updated = DateTime.Today;
-                    if (flow.Status != ReportStatus.Scan.GetDescription())
+                    if (flow.Status != ReportStatus.Scan.GetDescriptionSt())
                     {
-                        flow.Status = ReportStatus.Saved.GetDescription();
+                        flow.Status = ReportStatus.Saved.GetDescriptionSt();
+                    }
+                    //if (flow.DataSource == DataSource.Handle.GetDescriptionDS())
+                    //{
+                    //    flow.DataSource = DataSource.Excel.GetDescriptionDS();
+                    //}
+
+                    UpdateReport(db, report);
+                }
+
+                var outReport = db.Report_Flow
+                    .SingleOrDefault(x => x.Id_Region == filialCode && x.Yymm == yymm && x.Version == 1 &&
+                                          x.Id_Report_Type == _reportType.GetDescriptionSt());
+                return MapReportFromPersist(outReport);
+            }
+            catch (Exception e)
+            {
+                Log.Error(e,
+                    $"Error saving report with filialCode = {filialCode} and yymm = {yymm}, IdFlow = {report.IdFlow}");
+                throw;
+            }
+        }
+
+        public AbstractReport SaveReportDataSourceHandle(AbstractReport report, string yymm, int idUser, string filialCode)
+        {
+            try
+            {
+                var db = new LinqToSqlKmsReportDataContext(_connStr);
+
+                // todo client has bug with Id_flow. Client send id_flow = 0, when report is saved. this
+                // method temporarily fix this bug
+                var currentReport = db.Report_Flow
+                    .SingleOrDefault(x => x.Id_Region == filialCode && x.Yymm == yymm &&
+                                          x.Id_Report_Type == _reportType.GetDescriptionSt());
+                int idFlow = currentReport?.Id ?? 0;
+
+                if (idFlow == 0)
+                {
+                    var flow = CreateNewFlow(db, yymm, idUser, filialCode);
+                    CreateNewReport(db, flow, report);
+                }
+                else
+                {
+                    var flow = db.Report_Flow.Single(x => x.Id == idFlow);
+                    flow.Id_Employee_Upd = idUser;
+                    flow.Updated = DateTime.Today;
+                    if (flow.DataSource != DataSource.Handle.GetDescriptionDS())
+                    {
+                        flow.DataSource = DataSource.Handle.GetDescriptionDS();
                     }
 
                     UpdateReport(db, report);
@@ -82,7 +130,51 @@ namespace KmsReportWS.Handler
 
                 var outReport = db.Report_Flow
                     .SingleOrDefault(x => x.Id_Region == filialCode && x.Yymm == yymm && x.Version == 1 &&
-                                          x.Id_Report_Type == _reportType.GetDescription());
+                                          x.Id_Report_Type == _reportType.GetDescriptionSt());
+                return MapReportFromPersist(outReport);
+            }
+            catch (Exception e)
+            {
+                Log.Error(e,
+                    $"Error saving report with filialCode = {filialCode} and yymm = {yymm}, IdFlow = {report.IdFlow}");
+                throw;
+            }
+        }
+
+        public AbstractReport SaveReportDataSourceExcel(AbstractReport report, string yymm, int idUser, string filialCode)
+        {
+            try
+            {
+                var db = new LinqToSqlKmsReportDataContext(_connStr);
+
+                // todo client has bug with Id_flow. Client send id_flow = 0, when report is saved. this
+                // method temporarily fix this bug
+                var currentReport = db.Report_Flow
+                    .SingleOrDefault(x => x.Id_Region == filialCode && x.Yymm == yymm &&
+                                          x.Id_Report_Type == _reportType.GetDescriptionSt());
+                int idFlow = currentReport?.Id ?? 0;
+
+                if (idFlow == 0)
+                {
+                    var flow = CreateNewFlow(db, yymm, idUser, filialCode);
+                    CreateNewReport(db, flow, report);
+                }
+                else
+                {
+                    var flow = db.Report_Flow.Single(x => x.Id == idFlow);
+                    flow.Id_Employee_Upd = idUser;
+                    flow.Updated = DateTime.Today;
+                    if (flow.DataSource != DataSource.Excel.GetDescriptionDS())
+                    {
+                        flow.DataSource = DataSource.Excel.GetDescriptionDS();
+                    }
+
+                    UpdateReport(db, report);
+                }
+
+                var outReport = db.Report_Flow
+                    .SingleOrDefault(x => x.Id_Region == filialCode && x.Yymm == yymm && x.Version == 1 &&
+                                          x.Id_Report_Type == _reportType.GetDescriptionSt());
                 return MapReportFromPersist(outReport);
             }
             catch (Exception e)
@@ -96,6 +188,7 @@ namespace KmsReportWS.Handler
         protected void MapFromReportFlow(Report_Flow flow, AbstractReport report)
         {
             ReportStatus status = StatusUtils.ParseStatus(flow.Status);
+            DataSource datasource = DataSourseUtils.ParseDataSource(flow.DataSource);
 
             report.IdFlow = flow.Id;
             report.IdType = flow.Id_Report_Type;
@@ -115,6 +208,7 @@ namespace KmsReportWS.Handler
             report.UserSubmit = flow.User_submit ?? 0;
             report.UserToCo = flow.User_to_co ?? 0;
             report.IdEmployee = flow.Id_Employee ?? 0;
+            report.DataSource = datasource;
         }
 
         private Report_Flow CreateNewFlow(LinqToSqlKmsReportDataContext db, string yymm, int idUser, string filialCode)
@@ -124,10 +218,11 @@ namespace KmsReportWS.Handler
                 Id_Employee = idUser,
                 Id_Region = filialCode,
                 Yymm = yymm,
-                Id_Report_Type = _reportType.GetDescription(),
+                Id_Report_Type = _reportType.GetDescriptionSt(),
                 Version = 1,
                 Created = DateTime.Today,
-                Status = ReportStatus.Saved.GetDescription()
+                Status = ReportStatus.Saved.GetDescriptionSt(),
+                DataSource = DataSource.New.GetDescriptionDS()
             };
             db.Report_Flow.InsertOnSubmit(flow);
             db.SubmitChanges();

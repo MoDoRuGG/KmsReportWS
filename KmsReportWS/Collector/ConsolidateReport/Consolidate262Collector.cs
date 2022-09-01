@@ -21,7 +21,7 @@ namespace KmsReportWS.Collector.ConsolidateReport
                     join table in db.Report262_Table3 on rData.Id equals table
                         .Id_Report_Data
                     where flow.Yymm == yymm
-                          && flow.Status == ReportStatus.Done.GetDescription()
+                          && flow.Status == ReportStatus.Done.GetDescriptionSt()
                           && flow.Id_Report_Type == "f262"
                           && rData.Theme == "Таблица 3"
                     group new { flow, table } by new { flow.Id_Region }
@@ -58,7 +58,7 @@ namespace KmsReportWS.Collector.ConsolidateReport
                         .Id_Report_Data
                     where Convert.ToInt32(flow.Yymm) >= start
                           && Convert.ToInt32(flow.Yymm) <= end
-                          && flow.Status == ReportStatus.Done.GetDescription()
+                          && flow.Status == ReportStatus.Done.GetDescriptionSt()
                           && flow.Id_Report_Type == "f262"
                           && rData.Theme == "Таблица 2"
                     group new { flow, table } by new { flow.Id_Region }
@@ -91,7 +91,7 @@ namespace KmsReportWS.Collector.ConsolidateReport
                              .Id_Report_Data
                          where Convert.ToInt32(flow.Yymm) >= start
                                && Convert.ToInt32(flow.Yymm) <= end
-                               && flow.Status == ReportStatus.Done.GetDescription()
+                               && flow.Status == ReportStatus.Done.GetDescriptionSt()
                                && flow.Id_Report_Type == "f262"
                                && (rData.Theme == "Таблица 1" ||
                                    rData.Theme == "Таблица 2")

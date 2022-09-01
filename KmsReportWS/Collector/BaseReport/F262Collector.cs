@@ -13,12 +13,12 @@ namespace KmsReportWS.Collector.BaseReport
         }
 
         public override AbstractReport CollectSummaryReport(string[] filials, string yymmStart, string yymmEnd,
-            ReportStatus status)
+            ReportStatus status, DataSource datasource)
         {
             try
             {
                 var db = new LinqToSqlKmsReportDataContext(ConnStr);
-                var flows = GetFilteredReportFlows(db, filials, yymmStart, yymmEnd, status);
+                var flows = GetFilteredReportFlows(db, filials, yymmStart, yymmEnd, status, datasource);
                 var table3Data = CollectTable3Data(flows);
                 var table1Data = CollectTable1Data(flows);
                 var table2Data = CollectTable2Data(flows);

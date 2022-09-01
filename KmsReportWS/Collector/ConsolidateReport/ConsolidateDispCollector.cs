@@ -273,7 +273,7 @@ namespace KmsReportWS.Collector.ConsolidateReport
                     join reg in db.Region on flow.Id_Region equals reg.id
                     join table in db.Report_Pg on rData.Id equals table.Id_Report_Data
                     where flow.Yymm == yymm
-                          && flow.Status != ReportStatus.Refuse.GetDescription()
+                          && flow.Status != ReportStatus.Refuse.GetDescriptionSt()
                           && flow.Id_Report_Type == reportType
                           && _themes.Contains(rData.Theme)
                     group new { flow, rData, table } by new { flow.Id_Region, reg.name, rData.Theme, table.RowNum }

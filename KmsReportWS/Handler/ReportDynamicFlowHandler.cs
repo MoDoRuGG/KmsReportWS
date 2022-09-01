@@ -58,7 +58,7 @@ namespace KmsReportWS.Handler
         {
             using var db = new LinqToSqlKmsReportDataContext(ConnStr);
             var flow = db.Report_Dynamic_Flow.First(x => x.id == idFlow);
-            flow.Status = status.GetDescription();
+            flow.Status = status.GetDescriptionSt();
             db.SubmitChanges();
 
         }

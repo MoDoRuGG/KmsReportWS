@@ -30,7 +30,6 @@ namespace KmsReportWS.Handler
                 {
                     db.Report_Pg.InsertAllOnSubmit(pgDataList);
                 }
-
                 db.SubmitChanges();
             }
         }
@@ -61,12 +60,12 @@ namespace KmsReportWS.Handler
             }
         }
 
-        protected override AbstractReport MapReportFromPersist(Report_Flow rep)
+        protected override AbstractReport MapReportFromPersist(Report_Flow rep_flow)
         {
             var outReport = new ReportPg {ReportDataList = new List<ReportPgDto>()};
-            MapFromReportFlow(rep, outReport);
+            MapFromReportFlow(rep_flow, outReport);
 
-            foreach (var themeData in rep.Report_Data)
+            foreach (var themeData in rep_flow.Report_Data)
             {
                 var theme = themeData.Theme.Trim();
                 var dto = new ReportPgDto {Theme = theme, Data = new List<ReportPgDataDto>()};

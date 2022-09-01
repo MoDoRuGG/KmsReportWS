@@ -19,7 +19,7 @@ namespace KmsReportWS
     /// <summary>
     ///     Веб-сервис для предоставления и формирования отчетности филиалами ООО «Капитал МС»
     /// </summary>
-    [WebService(Namespace = "http://kms-oms.ru/")]
+    [WebService(Namespace = "http://localhost:8091/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [ToolboxItem(false)]
     // Чтобы разрешить вызывать веб-службу из скрипта с помощью ASP.NET AJAX, раскомментируйте следующую строку. 
@@ -304,11 +304,15 @@ namespace KmsReportWS
             _flowHandler.ChangeStatus(idReport, idUser, status);
 
         [WebMethod]
+        public void ChangeDataSource(int idReport, int idUser, DataSource datasource) =>
+    _flowHandler.ChangeDataSource(idReport, idUser, datasource);
+
+        [WebMethod]
         public AbstractReport CollectSummaryReport(string[] filials, string yymmStart, string yymmEnd,
-            ReportStatus status, ReportType reportType)
+            ReportStatus status, ReportType reportType, DataSource datasource)
         {
             var collector = _reportCollectorFactory.GetCollector(reportType);
-            return collector.CollectSummaryReport(filials, yymmStart, yymmEnd, status);
+            return collector.CollectSummaryReport(filials, yymmStart, yymmEnd, status, datasource);
         }
 
         [WebMethod]
@@ -324,6 +328,22 @@ namespace KmsReportWS
         {
             var handler = _reportHandlerFactory.GetHandler(reportType);
             return handler.SaveReportToDb(report, yymm, idUser, filialCode);
+        }
+
+        [WebMethod]
+        public AbstractReport SaveReportDataSourceHandle(AbstractReport report, string yymm, int idUser, string filialCode,
+        ReportType reportType)
+        {
+            var handler = _reportHandlerFactory.GetHandler(reportType);
+            return handler.SaveReportDataSourceHandle(report, yymm, idUser, filialCode);
+        }
+            
+        [WebMethod]
+        public AbstractReport SaveReportDataSourceExcel(AbstractReport report, string yymm, int idUser, string filialCode,
+        ReportType reportType)
+        {
+            var handler = _reportHandlerFactory.GetHandler(reportType);
+            return handler.SaveReportDataSourceExcel(report, yymm, idUser, filialCode);
         }
 
         [WebMethod]
