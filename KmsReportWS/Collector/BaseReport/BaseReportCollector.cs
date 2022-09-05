@@ -24,13 +24,13 @@ namespace KmsReportWS.Collector.BaseReport
     
 
         public abstract AbstractReport CollectSummaryReport(string[] filials, string yymmStart, string yymmEnd,
-            ReportStatus status);
+            ReportStatus status, DataSource datasource);
 
         protected IQueryable<Report_Data> GetFilteredReportFlows(LinqToSqlKmsReportDataContext db, string[] filials,
-            string yymmStart, string yymmEnd, ReportStatus status)
+            string yymmStart, string yymmEnd, ReportStatus status, DataSource datasource)
         {
             var reports = from r in db.Report_Flow
-                where r.Id_Report_Type == _reportType.GetDescription()
+                where r.Id_Report_Type == _reportType.GetDescriptionSt()
                       && Convert.ToInt32(r.Yymm) >= Convert.ToInt32(yymmStart)
                       && Convert.ToInt32(r.Yymm) <= Convert.ToInt32(yymmEnd)
                 select r;
@@ -43,17 +43,30 @@ namespace KmsReportWS.Collector.BaseReport
                     reports = reports.Where(x => !string.IsNullOrEmpty(x.Scan));
                     break;
                 case ReportStatus.Submit:
-                    reports = reports.Where(x => x.Status == ReportStatus.Submit.GetDescription()
-                                                 || x.Status == ReportStatus.Done.GetDescription());
+                    reports = reports.Where(x => x.Status == ReportStatus.Submit.GetDescriptionSt()
+                                                 || x.Status == ReportStatus.Done.GetDescriptionSt());
                     break;
                 case ReportStatus.Refuse:
-                    reports = reports.Where(x => x.Status == ReportStatus.Refuse.GetDescription());
+                    reports = reports.Where(x => x.Status == ReportStatus.Refuse.GetDescriptionSt());
                     break;
                 case ReportStatus.Done:
-                    reports = reports.Where(x => x.Status == ReportStatus.Done.GetDescription());
+                    reports = reports.Where(x => x.Status == ReportStatus.Done.GetDescriptionSt());
                     break;
                 default:
-                    reports = reports.Where(x => x.Status != ReportStatus.Refuse.GetDescription());
+                    reports = reports.Where(x => x.Status != ReportStatus.Refuse.GetDescriptionSt());
+                    break;
+            }
+
+            switch (datasource)
+            {
+                case DataSource.Excel:
+                    reports = reports.Where(x => x.DataSource == DataSource.Excel.GetDescriptionDS());
+                    break;
+                case DataSource.Handle:
+                    reports = reports.Where(x => x.DataSource == DataSource.Handle.GetDescriptionDS());
+                    break;
+                default:
+                    reports = reports.Where(x => x.DataSource != DataSource.New.GetDescriptionDS());
                     break;
             }
 

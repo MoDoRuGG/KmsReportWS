@@ -6,12 +6,13 @@ using KmsReportWS.Model.Report;
 
 namespace KmsReportWS.Support
 {
-    public static class StatusUtils
+    public static class DataSourseUtils
     {
-        public static ReportStatus ParseStatus(string status) =>
-            Enum.TryParse(status, out ReportStatus enumStatus) ? enumStatus : ReportStatus.Saved;
+        public static DataSource ParseDataSource(string data_source) =>
+            Enum.TryParse(data_source, out DataSource enumDataSource) ? enumDataSource : DataSource.New;
 
-        public static string GetDescriptionSt<T>(this T e) where T : IConvertible
+
+        public static string GetDescriptionDS<T>(this T e) where T : IConvertible
         {
             if (e is Enum)
             {
@@ -24,7 +25,7 @@ namespace KmsReportWS.Support
                     {
                         var member = type.GetEnumName(val);
                         if (member == null) continue;
-                        
+
                         var memInfo = type.GetMember(member);
 
                         if (memInfo[0]

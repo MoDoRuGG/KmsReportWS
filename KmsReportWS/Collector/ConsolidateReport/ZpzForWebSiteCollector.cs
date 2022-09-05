@@ -13,7 +13,7 @@ namespace KmsReportWS.Collector.ConsolidateReport
     public class ZpzForWebSiteCollector
     {
         private static readonly string[] Statuses = {
-            ReportStatus.Submit.GetDescription(), ReportStatus.Done.GetDescription()
+            ReportStatus.Submit.GetDescriptionSt(), ReportStatus.Done.GetDescriptionSt()
         };
 
         private static readonly string[] PublicInformationsRowNums = { "2.1","2.2","2.3","2.4","2.7","2.8"};

@@ -12,7 +12,7 @@ namespace KmsReportWS.Collector.ConsolidateReport
     public class Consolidate294Collector
     {
         private static readonly string[] statuses = {
-            ReportStatus.Submit.GetDescription(), ReportStatus.Done.GetDescription()
+            ReportStatus.Submit.GetDescriptionSt(), ReportStatus.Done.GetDescriptionSt()
         };
 
         public Consolidate294 Collect(string yymm)

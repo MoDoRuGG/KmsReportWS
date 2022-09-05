@@ -26,5 +26,6 @@ namespace KmsReportWS.Model.Report
         public string Scan3 { get; set; }
 
         public ReportStatus Status { get; set; }
+        public DataSource DataSource { get; set; }
     }
 }

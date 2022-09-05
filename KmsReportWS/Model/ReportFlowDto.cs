@@ -13,5 +13,6 @@ namespace KmsReportWS.Model
         public DateTime? DateEditCo { get; set; }
         public DateTime? DateIsDone { get; set; }
         public ReportStatus Status { get; set; }
+        public DataSource DataSource{ get; set; }
     }
 }

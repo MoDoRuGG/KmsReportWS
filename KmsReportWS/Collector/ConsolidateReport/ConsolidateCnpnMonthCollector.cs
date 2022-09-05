@@ -28,7 +28,7 @@ namespace KmsReportWS.Collector.ConsolidateReport
                        join r in db.Region on flow.Id_Region equals r.id
                        where flow.Yymm == yymm
                        && flow.Id_Report_Type == reportType
-                        //&& flow.Status != ReportStatus.Refuse.GetDescription()
+                        //&& flow.Status != ReportStatus.Refuse.GetDescriptionSt()
                        //&& ( rData.Theme == "Таблица 1")                   
                        group new { flow, table, r } by new { flow.Id_Region, r.name }
                        into flowGr
