@@ -19,7 +19,7 @@ namespace KmsReportWS
     /// <summary>
     ///     Веб-сервис для предоставления и формирования отчетности филиалами ООО «Капитал МС»
     /// </summary>
-    [WebService(Namespace = "http://localhost:8091/")]
+    [WebService(Namespace = "http://kms-oms.ru/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [ToolboxItem(false)]
     // Чтобы разрешить вызывать веб-службу из скрипта с помощью ASP.NET AJAX, раскомментируйте следующую строку. 
