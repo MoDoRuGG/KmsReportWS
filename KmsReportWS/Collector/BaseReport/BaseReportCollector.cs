@@ -66,7 +66,7 @@ namespace KmsReportWS.Collector.BaseReport
                     reports = reports.Where(x => x.DataSource == DataSource.Handle.GetDescriptionDS());
                     break;
                 default:
-                    reports = reports.Where(x => x.DataSource != DataSource.New.GetDescriptionDS());
+                    reports = reports.Where(x => x.DataSource == DataSource.New.GetDescriptionDS());
                     break;
             }
 
