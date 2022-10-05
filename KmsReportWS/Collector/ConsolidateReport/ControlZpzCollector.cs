@@ -111,8 +111,8 @@ namespace KmsReportWS.Collector.ConsolidateReport
                 SumPayment = pgTable10.Where(x => x.RowNum == "1").Sum(x => x.SumSmo),
                 SumNotPayment = pgTable10.Where(x => x.RowNum == "2").Sum(x => x.SumSmo),
                 SumMek = pgTable10.Where(x => x.RowNum == "3").Sum(x => x.SumSmo),
-                SumMee = pgTable10.Where(x => x.RowNum.Length == 3 && x.RowNum.StartsWith("4")).Sum(x => x.SumSmo),
-                SumEkmp = pgTable10.Where(x => x.RowNum.Length == 3 && x.RowNum.StartsWith("5")).Sum(x => x.SumSmo)
+                SumMee = pgTable10.Where(x => x.RowNum == "4").Sum(x => x.SumSmo),
+                SumEkmp = pgTable10.Where(x => x.RowNum == "5").Sum(x => x.SumSmo)
             };
         }
 
