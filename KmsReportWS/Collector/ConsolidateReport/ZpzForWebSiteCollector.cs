@@ -167,7 +167,7 @@ namespace KmsReportWS.Collector.ConsolidateReport
                     .Sum(x => x.CountOutOfSmoAnother + x.CountAmbulatoryAnother + x.CountDsAnother +
                               x.CountStacAnother)),
                 Violation = Convert.ToInt32(ekmpTable
-                    .Where(x => x.RowNum.StartsWith("6") && x.RowNum.Length <= 4)
+                    .Where(x => x.RowNum.StartsWith("6") && x.RowNum.Length <= 4 && x.RowNum.Length > 1)
                     .Sum(x => x.CountOutOfSmoAnother + x.CountAmbulatoryAnother + x.CountDsAnother + x.CountStacAnother
                               + x.CountOutOfSmo + x.CountAmbulatory + x.CountDs + x.CountStac)),
             };
