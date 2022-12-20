@@ -27,7 +27,10 @@ namespace KmsReportWS.Collector.ConsolidateReport
                             RowNum = row["row_num"].ToString(),
                             ExpertWithEducation = Convert.ToDecimal(row["ExpertWithEducation"]),
                             ExpertWithoutEducation = Convert.ToDecimal(row["ExpertWithoutEducation"]),
-                            Total = Convert.ToDecimal(row["Total"])
+                            // Тут тянутся итоги по форме ПГ, но оказывается что так теперь не надо, поэтому не ломая ничего я просто комменчу//
+                            // Total = Convert.ToDecimal(row["Total"])
+                            // Вместо этого делаю //
+                            Total = Convert.ToDecimal(row["ExpertWithEducation"]) + Convert.ToDecimal(row["ExpertWithoutEducation"]),
                         });
                     }
                 }

@@ -198,6 +198,12 @@ namespace KmsReportWS.Collector.ConsolidateReport
                         .Sum(x => x.CountSmo + x.CountSmoAnother)),
                 },
                 new ZpzStatistics {
+                    Row = "1.1",
+                    Count = Convert.ToInt32(specialistsTable
+                        .Where(x => x.RowNum.StartsWith("1.1") && x.RowNum.Length == 5)
+                        .Sum(x => x.CountSmo + x.CountSmoAnother)),
+                },
+                new ZpzStatistics {
                     Row = "3",
                     Count = Convert.ToInt32(specialistsTable.Where(x => x.RowNum.StartsWith("3"))
                         .Sum(x => x.CountSmo + x.CountSmoAnother)),

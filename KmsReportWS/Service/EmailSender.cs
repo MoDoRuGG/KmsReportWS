@@ -49,7 +49,7 @@ namespace KmsReportWS.Service
                 emailMessage.To.Add(new MailboxAddress(email));
             }
 
-            _smtpClient.Send(emailMessage);
+            //_smtpClient.Send(emailMessage);
             _smtpClient.Disconnect(true);
 
         }

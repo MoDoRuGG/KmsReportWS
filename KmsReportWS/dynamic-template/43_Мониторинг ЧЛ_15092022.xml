@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TemplateDynamicReport xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <REPORT_NAME>Мониторинг ЧЛ</REPORT_NAME>
+  <REPORT_DESCRIPTION />
+  <REPORT_DATE>2022-09-15T11:36:27</REPORT_DATE>
+  <IsUserRow>false</IsUserRow>
+  <Emails>
+    <string>managers.zpz.ekmp@kapmed.ru</string>
+  </Emails>
+  <TABLE>
+    <TemplateTableDynamic>
+      <TABLE_NAME>с 01.01.2022 по 09.09.2022 г.</TABLE_NAME>
+      <TABLE_DESCRIPTION>с 01.01.2022 по 09.09.2022 г. 
+Не забывайте о вкладке "Уточнение"!</TABLE_DESCRIPTION>
+      <ROWS />
+      <COLUMNS>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Общее количество оформленных ИЧЛ, подлежавших загрузке в ГИС ОМС за указанный период</COLUMN_TEXT>
+          <COLUMN_INDEX>1</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION>Укажите количество ИЧЛ, которые Филиал должен был выгрузить в ГИС ОМС.</COLUMN_DESCRIPTION>
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Общее количество оформленных ИЧЛ, принятых в ГИС ОМС за указанный период</COLUMN_TEXT>
+          <COLUMN_INDEX>2</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION>Укажите количество ИЧЛ, которые были приняты в ГИС ОМС.</COLUMN_DESCRIPTION>
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Общее количество ИЧЛ, до сих пор НЕ принятых в ГИС ОМС за указанный период</COLUMN_TEXT>
+          <COLUMN_INDEX>3</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION>Укажите количество НЕ принятых ИЧЛ. 
+
+Внимание! 
+
+Если с n-ой попытки (в итоге) ИЧЛ был принят, то здесь его не учитывать! Только до сих пор НЕ принятые ИЧЛ!</COLUMN_DESCRIPTION>
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Комментарий</COLUMN_TEXT>
+          <COLUMN_INDEX>4</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION>Объясните в связи с чем есть НЕ загруженные ИЧЛ.</COLUMN_DESCRIPTION>
+        </TemplateColumnDynamic>
+      </COLUMNS>
+    </TemplateTableDynamic>
+  </TABLE>
+</TemplateDynamicReport>
