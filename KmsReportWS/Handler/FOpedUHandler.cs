@@ -13,7 +13,7 @@ namespace KmsReportWS.Handler
         private static readonly Logger Log = LogManager.GetCurrentClassLogger();
         private string _themeName = "opedU";
 
-       
+
 
         public FOpedUHandler(ReportType reportType)
             : base(reportType)
@@ -21,7 +21,8 @@ namespace KmsReportWS.Handler
             if (reportType == ReportType.OpedU)
             {
                 _themeName = "opedU";
-            } else
+            }
+            else
             {
                 _themeName = "";
 
@@ -47,74 +48,35 @@ namespace KmsReportWS.Handler
 
             db.Report_OpedU.InsertAllOnSubmit(MapReportFromPersist(report, themeData.Id));
             db.SubmitChanges();
-          
+
 
         }
 
-        private Report_OpedU MapMainThemeFromPersist(int idThemeData, ReportOpedUDataDto data)
+        protected List<Report_OpedU> MapReportFromPersist(ReportOpedU rep, int idReportData)
         {
-            if (data != null)
+            var result = new List<Report_OpedU>();
+
+            foreach (var row in rep.ReportDataList)
             {
-                return new Report_OpedU
+                result.Add(new Report_OpedU
                 {
-                    RowNum = data.RowNum,
-                    App = data.App,
-                    Ks = data.Ks,
-                    Ds = data.Ds,
-                    Smp = data.Smp,
-                    Notes = data.Notes,
-                    Id_Report_Data = idThemeData
-                };
+                    Id_Report_Data = idReportData,
+                    RowNum = row.RowNum,
+                    App = row.App,
+                    Ks = row.Ks,
+                    Ds = row.Ds,
+                    Smp = row.Smp,
+                    Notes = row.Notes
+
+                });
+
             }
 
-
-            return new Report_OpedU
-            {
-                
-                App = 0,
-                Ks = 0,
-                Ds = 0,
-                Smp = 0,
-                Notes = "",
-                Id_Report_Data = idThemeData
-            };
-
+            return result;
 
         }
 
-        //protected List<Report_OpedU> MapReportFromPersist(ReportOpedUDto rep, int idReportData)
-
-        //{
-        //    var result = new List<Report_OpedU>();
-
-        //    foreach (var row in rep.ReportDataList)
-        //    {
-        //        result.Add(new Report_OpedU
-        //        {
-        //            RowNum = row.rowNum,
-        //            App = row.App,
-        //            Ks = row.Ks,
-        //            Ds = row.Ds,
-        //            Smp = row.Smp,
-        //            //AppOnco = row.AppOnco,
-        //            //KsOnco = row.KsOnco,
-        //            //DsOnco = row.DsOnco,
-        //            //SmpOnco = row.SmpOnco,
-        //            //AppLeth = row.AppLeth,
-        //            //KsLeth = row.KsLeth,
-        //            //DsLeth = row.DsLeth,
-        //            //SmpLeth = row.SmpLeth,
-        //            Notes = row.Notes
-
-        //        });
-
-        //    }
-
-        //    return result;
-
-        //}
-
-        private Report_OpedU MapReportFromPersist(ReportOpedUDataDto data, int idReportData)
+        private Report_OpedU MapReportFromPersist(ReportOpedUDto data, int idReportData)
         {
             return new Report_OpedU
             {
@@ -129,10 +91,9 @@ namespace KmsReportWS.Handler
         }
 
 
-        private ReportOpedUDataDto MapReportFromPersist(Report_OpedU data)
+        private ReportOpedUDto MapReportFromPersist(Report_OpedU data)
         {
-            return new ReportOpedUDataDto
-
+            return new ReportOpedUDto
             {
                 RowNum = data.RowNum,
                 App = data.App,
@@ -158,27 +119,19 @@ namespace KmsReportWS.Handler
 
             foreach (var row in report.ReportDataList)
             {
-                var opedU = db.Report_OpedU.SingleOrDefault(x => x.RowNum == row.RowNum && x.Id_Report_Data == idTheme);
-                if (opedU != null)
+                var oped = db.Report_OpedU.SingleOrDefault(x => x.RowNum == row.RowNum && x.Id_Report_Data == idTheme);
+                if (oped != null)
                 {
-                    opedU.App = row.App;
-                    opedU.Ks = row.Ks;
-                    opedU.Ds = row.Ds;
-                    opedU.Smp = row.Smp;
-                    //opedU.AppOnco = row.AppOnco;
-                    //opedU.KsOnco = row.KsOnco;
-                    //opedU.DsOnco = row.DsOnco;
-                    //opedU.SmpOnco = row.SmpOnco;
-                    //opedU.AppLeth = row.AppLeth;
-                    //opedU.KsLeth = row.KsLeth;
-                    //opedU.DsLeth = row.DsLeth;
-                    //opedU.SmpLeth = row.SmpLeth;
-                    opedU.Notes = row.Notes;
+                    oped.App = row.App;
+                    oped.Ks = row.Ks;
+                    oped.Ds = row.Ds;
+                    oped.Smp = row.Smp;
+                    oped.Notes = row.Notes;
                 }
                 else
                 {
-                    var opedUIns = MapReportFromPersist(row, idTheme);
-                    db.Report_OpedU.InsertOnSubmit(opedUIns);
+                    var opedIns = MapReportFromPersist(row, idTheme);
+                    db.Report_OpedU.InsertOnSubmit(opedIns);
 
                 }
             }

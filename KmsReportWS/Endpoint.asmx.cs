@@ -450,13 +450,6 @@ namespace KmsReportWS
         }
 
         [WebMethod]
-        public List<ConsolidateOpedU> CreateReportCOpedU(string yymmStart, string yymmEnd, List<string> regions)
-        {
-            var consolidate = new ConsolidateOpedUCollector();
-            return consolidate.Collect(yymmStart, yymmEnd, regions);
-        }
-
-        [WebMethod]
         public List<ConsolidateVSS> CreateReportVSS(string yymm)
         {
             var consolidate = new ConsolidateVSSReportCollector();
@@ -495,12 +488,6 @@ namespace KmsReportWS
             return consolidate.CreateReportCadreTable2(yymm);
         }
 
-        [WebMethod]
-        public List<CReportOpedU> CollectOpedUData(string yymm, string reportType)
-        {
-            var consolidate = new ConsolidateOpedUCollector();
-            return consolidate.CollectOpedUData(yymm, reportType);
-        }
 
         //перенес в ConsolidateEndpoint позже удалить
         [WebMethod]
