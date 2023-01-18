@@ -9,6 +9,8 @@ namespace KmsReportWS.Collector.BaseReport
         private readonly IReportCollector _iizlCollector = new IizlCollector();
         private readonly IReportCollector _pgCollector = new PgCollector(ReportType.Pg);
         private readonly IReportCollector _pgQCollector = new PgCollector(ReportType.PgQ);
+        private readonly IReportCollector _zpzCollector = new ZpzCollector(ReportType.Zpz);
+        private readonly IReportCollector _zpzQCollector = new ZpzCollector(ReportType.ZpzQ);
      
 
         public IReportCollector GetCollector(ReportType reportType) =>
@@ -17,6 +19,7 @@ namespace KmsReportWS.Collector.BaseReport
                 ReportType.F294 => _f294Collector,
                 ReportType.Iizl => _iizlCollector,
                 ReportType.Pg => _pgCollector,
+                ReportType.Zpz => _zpzCollector,
         
                 _ => _pgQCollector
             };

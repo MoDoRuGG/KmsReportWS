@@ -102,6 +102,7 @@
     <Compile Include="Collector\BaseReport\BaseReportCollector.cs" />
     <Compile Include="Collector\BaseReport\F262Collector.cs" />
     <Compile Include="Collector\BaseReport\F294Collector.cs" />
+    <Compile Include="Collector\BaseReport\ZpzCollector.cs" />
     <Compile Include="Collector\BaseReport\ReportCollectorFactory.cs" />
     <Compile Include="Collector\BaseReport\IizlCollector.cs" />
     <Compile Include="Collector\BaseReport\IReportCollector.cs" />
@@ -114,6 +115,7 @@
     <Compile Include="Collector\ConsolidateReport\ConsolidateDispCollector.cs" />
     <Compile Include="Collector\ConsolidateReport\ConsolidateLetalCollector.cs" />
     <Compile Include="Collector\ConsolidateReport\ConsolidateOnkoCollector.cs" />
+    <Compile Include="Collector\ConsolidateReport\ConsolidateOpedUCollector.cs" />
     <Compile Include="Collector\ConsolidateReport\ConsolidateOpedCollector.cs" />
     <Compile Include="Collector\ConsolidateReport\ConsolidateOpedFinance_1Collector.cs" />
     <Compile Include="Collector\ConsolidateReport\ConsolidateOpedFinance_2Collector.cs" />
@@ -125,6 +127,8 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Handler\BaseReportHandler.cs" />
+    <Compile Include="Handler\FOpedUHandler.cs" />
+    <Compile Include="Handler\ZpzHandler.cs" />
     <Compile Include="Handler\ReportCadreHandler.cs" />
     <Compile Include="Handler\DynamicReportCommonHandler.cs" />
     <Compile Include="Handler\DynamicReportHandler.cs" />
@@ -147,6 +151,8 @@
       <DependentUpon>LinqToSqlKmsReport.dbml</DependentUpon>
     </Compile>
     <Compile Include="Model\CheckFFOMS2022CommonData.cs" />
+    <Compile Include="Model\ConcolidateReport\ConsolidateOpedU.cs" />
+    <Compile Include="Model\ConcolidateReport\CReportOpedU.cs" />
     <Compile Include="Model\ConcolidateReport\CReportCadre.cs" />
     <Compile Include="Model\ConcolidateReport\ConsolidateCardio.cs" />
     <Compile Include="Model\ConcolidateReport\ConsolidateCpnp.cs" />
@@ -161,6 +167,8 @@
     <Compile Include="Model\ConcolidateReport\ConsolidateOpedQ.cs" />
     <Compile Include="Model\ConcolidateReport\ConsolidateProposal.cs" />
     <Compile Include="Model\ConcolidateReport\ConsolidateVSS.cs" />
+    <Compile Include="Model\ConcolidateReport\CReportZpz.cs" />
+    <Compile Include="Model\ConcolidateReport\SummaryZpz.cs" />
     <Compile Include="Model\ConcolidateReport\SummaryPg.cs" />
     <Compile Include="Model\Constructor\DynamicDataDto.cs" />
     <Compile Include="Model\Constructor\DynamicReportDictionary.cs" />
@@ -175,8 +183,10 @@
     <Compile Include="Model\Report\DataSource.cs" />
     <Compile Include="Model\Report\ReportFSSMonitroing.cs" />
     <Compile Include="Model\Report\ReportInfrormationResponse.cs" />
+    <Compile Include="Model\Report\ReportOpedU.cs" />
     <Compile Include="Model\Report\ReportOped.cs" />
     <Compile Include="Model\Report\ReportOpedFinance.cs" />
+    <Compile Include="Model\Report\ReportZpz.cs" />
     <Compile Include="Model\Report\ReportProposal.cs" />
     <Compile Include="Model\Report\ReportVaccination.cs" />
     <Compile Include="Model\Service\ClientContext.cs" />

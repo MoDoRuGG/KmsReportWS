@@ -2,6 +2,7 @@
 using System.ComponentModel;
 using System.Data;
 using System.Web.Services;
+using System.Web.Services.Description;
 using KmsReportWS.Collector.BaseReport;
 using KmsReportWS.Collector.ConsolidateReport;
 using KmsReportWS.Handler;
@@ -124,6 +125,14 @@ namespace KmsReportWS
         }
 
         [WebMethod]
+        public ReportOpedUDto[] GetYearOpedUData(string yymm, string filiall)
+        {
+            var handler = _reportHandlerFactory.GetHandler(ReportType.OpedU);
+            return handler.GetYearOpedUData(yymm, filiall);
+
+        }
+
+        [WebMethod]
         public ReportInfrormationResponseDataDto GetIRYearData(string yymm, string theme, string fillial)
         {
             var handler = _reportHandlerFactory.GetHandler(ReportType.IR);
@@ -220,6 +229,12 @@ namespace KmsReportWS
         public void WebReportOped(ReportOped report)
         {
             
+        }
+
+        [WebMethod]
+        public void WebReportOpedU(ReportOpedU report)
+        {
+
         }
 
         [WebMethod]
@@ -414,7 +429,7 @@ namespace KmsReportWS
 
 
         [WebMethod]
-        public void MethodForSendingChildModel(Report262 f262, Report294 f294, ReportIizl iizl, ReportPg pg)
+        public void MethodForSendingChildModel(Report262 f262, Report294 f294, ReportIizl iizl, ReportPg pg, ReportZpz zpz)
         {
         }
 
@@ -432,6 +447,13 @@ namespace KmsReportWS
         {
             var consolidate = new ConsolidateOpedCollector();
             return consolidate.Collect(yymmStart,yymmEnd, regions);
+        }
+
+        [WebMethod]
+        public List<ConsolidateOpedU> CreateReportCOpedU(string yymmStart, string yymmEnd, List<string> regions)
+        {
+            var consolidate = new ConsolidateOpedUCollector();
+            return consolidate.Collect(yymmStart, yymmEnd, regions);
         }
 
         [WebMethod]
@@ -473,6 +495,12 @@ namespace KmsReportWS
             return consolidate.CreateReportCadreTable2(yymm);
         }
 
+        [WebMethod]
+        public List<CReportOpedU> CollectOpedUData(string yymm, string reportType)
+        {
+            var consolidate = new ConsolidateOpedUCollector();
+            return consolidate.CollectOpedUData(yymm, reportType);
+        }
 
         //перенес в ConsolidateEndpoint позже удалить
         [WebMethod]

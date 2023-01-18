@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="kms_report" Class="LinqToSqlKmsReportDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="WebSettings" ConnectionString="Data Source=192.168.45.5;Initial Catalog=kms_report;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="kms_reportConnectionString1" Provider="System.Data.SqlClient" />
+  <Connection Mode="WebSettings" ConnectionString="Data Source=10.3.40.5;Initial Catalog=kms_report;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="kms_reportConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Responsible_Employee" Member="Responsible_Employee">
     <Type Name="Responsible_Employee">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -30,6 +30,8 @@
       <Association Name="Report_Data_Report_OpedFinance" Member="Report_OpedFinances" ThisKey="Id" OtherKey="id_ReportData" Type="Report_OpedFinance" />
       <Association Name="Report_Data_Report_Iilz" Member="Report_Iilzs" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_Iilz" />
       <Association Name="Report_Data_Report_Cadre" Member="Report_Cadre" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_Cadre" />
+      <Association Name="Report_Data_Report_OpedU" Member="Report_OpedU" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_OpedU" />
+      <Association Name="Report_Data_Report_Zpz" Member="Report_Zpz" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_Zpz" />
       <Association Name="Report_Type_Report_Data" Member="Report_Type" ThisKey="Id_Report" OtherKey="Id" Type="Report_Type" IsForeignKey="true" />
       <Association Name="Report_Flow_Report_Data" Member="Report_Flow" ThisKey="Id_Flow" OtherKey="Id" Type="Report_Flow" IsForeignKey="true" />
     </Type>
@@ -423,6 +425,53 @@
       <Association Name="Report_Type_Report_Flow" Member="Report_Type" ThisKey="Id_Report_Type" OtherKey="Id" Type="Report_Type" IsForeignKey="true" />
     </Type>
   </Table>
+  <Table Name="dbo.Report_OpedU" Member="Report_OpedU">
+    <Type Name="Report_OpedU">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="App" Type="System.Decimal" DbType="Decimal(15,3) NOT NULL" CanBeNull="false" />
+      <Column Name="Ks" Type="System.Decimal" DbType="Decimal(15,3) NOT NULL" CanBeNull="false" />
+      <Column Name="Ds" Type="System.Decimal" DbType="Decimal(15,3) NOT NULL" CanBeNull="false" />
+      <Column Name="Smp" Type="System.Decimal" DbType="Decimal(15,3) NOT NULL" CanBeNull="false" />
+      <Column Name="Notes" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="Id_Report_Data" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RowNum" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="AppOnco" Type="System.Decimal" DbType="Decimal(15,3) NOT NULL" CanBeNull="false" />
+      <Column Name="KsOnco" Type="System.Decimal" DbType="Decimal(15,3) NOT NULL" CanBeNull="false" />
+      <Column Name="DsOnco" Type="System.Decimal" DbType="Decimal(15,3) NOT NULL" CanBeNull="false" />
+      <Column Name="SmpOnco" Type="System.Decimal" DbType="Decimal(15,3) NOT NULL" CanBeNull="false" />
+      <Column Name="AppLeth" Type="System.Decimal" DbType="Decimal(15,3) NOT NULL" CanBeNull="false" />
+      <Column Name="KsLeth" Type="System.Decimal" DbType="Decimal(15,3) NOT NULL" CanBeNull="false" />
+      <Column Name="DsLeth" Type="System.Decimal" DbType="Decimal(15,3) NOT NULL" CanBeNull="false" />
+      <Column Name="SmpLeth" Type="System.Decimal" DbType="Decimal(15,3) NOT NULL" CanBeNull="false" />
+      <Association Name="Report_Data_Report_OpedU" Member="Report_Data" ThisKey="Id_Report_Data" OtherKey="Id" Type="Report_Data" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Report_Zpz" Member="Report_Zpz">
+    <Type Name="Report_Zpz">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id_Report_Data" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RowNum" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="CountSmo" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="CountSmoAnother" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="CountInsured" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="CountInsuredRepresentative" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="CountTfoms" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="CountProsecutor" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="CountOutOfSmo" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="CountAmbulatory" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="CountDs" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="CountDsVmp" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="CountStac" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="CountStacVmp" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="CountOutOfSmoAnother" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="CountAmbulatoryAnother" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="CountDsAnother" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="CountDsVmpAnother" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="CountStacAnother" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="CountStacVmpAnother" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Association Name="Report_Data_Report_Zpz" Member="Report_Data" ThisKey="Id_Report_Data" OtherKey="Id" Type="Report_Data" IsForeignKey="true" />
+    </Type>
+  </Table>
   <Function Name="dbo.cadre_rapport" Method="cadre_rapport" IsComposable="true">
     <Parameter Name="Yymm" Parameter="yymm" Type="System.String" DbType="VarChar(4)" />
     <Parameter Name="Theme" Parameter="theme" Type="System.String" DbType="VarChar(30)" />
@@ -455,6 +504,22 @@
       <Column Name="count_grf24" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="count_grf25" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="count_grf26" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.opedU_report" Method="opedU_report" IsComposable="true">
+    <Parameter Name="Yymm" Parameter="yymm" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="Theme" Parameter="theme" Type="System.String" DbType="VarChar(30)" />
+    <ElementType Name="opedU_reportResult">
+      <Column Name="id" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="RowNum" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="App" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="Ks" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="Ds" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="Smp" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="Id_Report_Data" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ident" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </ElementType>
   </Function>
 </Database>

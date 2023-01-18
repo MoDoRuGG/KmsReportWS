@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
 <KMS_REPORT>
-  <VERSION>1.1.6.64</VERSION>
+  <VERSION>1.1.7.20</VERSION>
  <FILE>
     <NAME>cardio.xlsx</NAME>
     <IS_NEED_DOWNLOAD>true</IS_NEED_DOWNLOAD>
@@ -70,6 +70,14 @@
     <NAME>pgq.xlsx</NAME>
     <IS_NEED_DOWNLOAD>true</IS_NEED_DOWNLOAD>
   </FILE>
+    <FILE>
+    <NAME>zpz.xlsx</NAME>
+    <IS_NEED_DOWNLOAD>true</IS_NEED_DOWNLOAD>
+  </FILE>
+  <FILE>
+    <NAME>zpzq.xlsx</NAME>
+    <IS_NEED_DOWNLOAD>true</IS_NEED_DOWNLOAD>
+  </FILE>
 <FILE>
     <NAME>oped.xlsx</NAME>
     <IS_NEED_DOWNLOAD>true</IS_NEED_DOWNLOAD>
@@ -96,6 +104,14 @@
   </FILE>
   <FILE>
     <NAME>TemplateTextPGQ.xml</NAME>
+    <IS_NEED_DOWNLOAD>true</IS_NEED_DOWNLOAD>
+  </FILE>
+    <FILE>
+    <NAME>TemplateTextZpz.xml</NAME>
+    <IS_NEED_DOWNLOAD>true</IS_NEED_DOWNLOAD>
+  </FILE>
+  <FILE>
+    <NAME>TemplateTextZpzQ.xml</NAME>
     <IS_NEED_DOWNLOAD>true</IS_NEED_DOWNLOAD>
   </FILE>
  <FILE>
