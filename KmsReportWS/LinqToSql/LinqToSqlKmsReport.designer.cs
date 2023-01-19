@@ -117,7 +117,7 @@ namespace KmsReportWS.LinqToSql
     #endregion
 		
 		public LinqToSqlKmsReportDataContext() : 
-				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["kms_reportConnectionString1"].ConnectionString, mappingSource)
+				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["kms_reportConnectionString2"].ConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -393,9 +393,9 @@ namespace KmsReportWS.LinqToSql
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.opedU_report", IsComposable=true)]
-		public IQueryable<opedU_reportResult> opedU_report([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Yymm", DbType="VarChar(4)")] string yymm, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Theme", DbType="VarChar(30)")] string theme)
+		public IQueryable<opedU_reportResult> opedU_report([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Yymm", DbType="VarChar(4)")] string yymm)
 		{
-			return this.CreateMethodCallQuery<opedU_reportResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), yymm, theme);
+			return this.CreateMethodCallQuery<opedU_reportResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), yymm);
 		}
 	}
 	
@@ -9531,9 +9531,7 @@ namespace KmsReportWS.LinqToSql
 		
 		private int _Id;
 		
-		private string _Name;
-
-        private decimal _App;
+		private decimal _App;
 		
 		private decimal _Ks;
 		

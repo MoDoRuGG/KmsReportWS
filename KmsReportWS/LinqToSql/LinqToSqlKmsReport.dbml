@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="kms_report" Class="LinqToSqlKmsReportDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="WebSettings" ConnectionString="Data Source=10.3.40.5;Initial Catalog=kms_report;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="kms_reportConnectionString1" Provider="System.Data.SqlClient" />
+  <Connection Mode="WebSettings" ConnectionString="Data Source=10.3.40.5;Initial Catalog=kms_report;User ID=sa;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="kms_reportConnectionString2" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Responsible_Employee" Member="Responsible_Employee">
     <Type Name="Responsible_Employee">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -508,7 +508,6 @@
   </Function>
   <Function Name="dbo.opedU_report" Method="opedU_report" IsComposable="true">
     <Parameter Name="Yymm" Parameter="yymm" Type="System.String" DbType="VarChar(4)" />
-    <Parameter Name="Theme" Parameter="theme" Type="System.String" DbType="VarChar(30)" />
     <ElementType Name="opedU_reportResult">
       <Column Name="id" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
       <Column Name="Name" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />

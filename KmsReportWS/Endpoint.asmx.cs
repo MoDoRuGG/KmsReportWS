@@ -473,6 +473,12 @@ namespace KmsReportWS
             return consolidate.Collect(yymm);
         }
 
+        [WebMethod]
+        public List<CReportOpedUnplanned> CreateReportOpedUnplanned(string yymm)
+        {
+            var consolidate = new ConsolidateOpedUnplannedCollector();
+            return consolidate.CreateReportOpedUnplanned(yymm);
+        }
 
         [WebMethod]
         public List<CReportCadreTable1> CreateReportCadreTable1(string yymm)

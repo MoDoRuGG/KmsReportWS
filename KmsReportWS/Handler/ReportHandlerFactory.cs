@@ -15,8 +15,8 @@ namespace KmsReportWS.Handler
         private readonly IReportHandler _cadreHandlerCollector = new ReportCadreHandler();
         private readonly IReportHandler _pgCollector = new PgHandler(ReportType.Pg);
         private readonly IReportHandler _pgQCollector = new PgHandler(ReportType.PgQ);
-        private readonly IReportHandler _zpzCollector = new PgHandler(ReportType.Zpz);
-        private readonly IReportHandler _zpzQCollector = new PgHandler(ReportType.ZpzQ);
+        private readonly IReportHandler _zpzCollector = new ZpzHandler(ReportType.Zpz);
+        private readonly IReportHandler _zpzQCollector = new ZpzHandler(ReportType.ZpzQ);
         private readonly IReportHandler _vacCollector = new ReportVaccinationHander(ReportType.Vac);
         private readonly IReportHandler _fssCollector = new FSSMonitoringHandler(ReportType.MFSS);
         private readonly IReportHandler _proposalCollector = new ReportProposalHandler(ReportType.Proposal);
