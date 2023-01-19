@@ -251,5 +251,27 @@ namespace KmsReportWS.Handler
 
             return result.ToArray();
         }
+
+        public ReportOpedUDto[] GetYearOpedUData(string yymm, string filial)
+        {
+            string start = yymm.Substring(0, 2) + "01";
+            var db = new LinqToSqlKmsReportDataContext(_connStr);
+            var result = db.Report_Opeds.Where(opedU =>
+            opedU.Report_Data.Report_Flow.Id_Region == filial
+            && opedU.Report_Data.Report_Flow.Id_Report_Type == "fopedU"
+           && Convert.ToInt32(opedU.Report_Data.Report_Flow.Yymm) >= Convert.ToInt32(start)
+           && Convert.ToInt32(opedU.Report_Data.Report_Flow.Yymm) <= Convert.ToInt32(yymm)).
+            GroupBy(opedU => opedU.RowNum).Select(x => new ReportOpedUDto
+            {
+                RowNum = x.Key,
+                App = x.Sum(a => a.App),
+                Ks = x.Sum(a => a.Ks),
+                Ds = x.Sum(a => a.Ds),
+                Smp = x.Sum(a => a.Smp),
+                Notes = ""
+            });
+
+            return result.ToArray();
+        }
     }
 }

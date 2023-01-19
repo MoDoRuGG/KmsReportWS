@@ -111,10 +111,15 @@ namespace KmsReportWS.Collector.ConsolidateReport
                 SumPayment = pgTable10.Where(x => x.RowNum == "1").Sum(x => x.SumSmo),
                 SumNotPayment = pgTable10.Where(x => x.RowNum == "2").Sum(x => x.SumSmo),
                 SumMek = pgTable10.Where(x => x.RowNum == "3").Sum(x => x.SumSmo),
-                SumMee = pgTable10.Where(x => x.RowNum == "4").Sum(x => x.SumSmo),
-                SumEkmp = pgTable10.Where(x => x.RowNum == "5").Sum(x => x.SumSmo)
+                SumMee = pgTable10.Where(x => x.RowNum == "4.1" || x.RowNum == "4.2" || x.RowNum == "4.3" || x.RowNum == "4.4").Sum(x => x.SumSmo),
+                SumEkmp = pgTable10.Where(x => x.RowNum == "5.1" || x.RowNum == "5.2" || x.RowNum == "5.3" || x.RowNum == "5.4" || x.RowNum == "5.5" ||
+                x.RowNum == "5.6" || x.RowNum == "5.7" || x.RowNum == "5.8").Sum(x => x.SumSmo)
+
             };
+
         }
+
+
 
         private PgExpertise MapExpertise(IEnumerable<SummaryPg> pgFilialData)
         {
@@ -153,7 +158,7 @@ namespace KmsReportWS.Collector.ConsolidateReport
                     where flow.Yymm == yymm
                           //&& flow.Status != ReportStatus.Refuse.GetDescriptionSt()
                           && flow.Id_Report_Type == reportType
-                          //&& _themes.Contains(rData.Theme)
+                    //&& _themes.Contains(rData.Theme)
                     group new { flow, rData, table } by new { flow.Id_Region, rData.Theme, table.RowNum }
                           into gr
                     select new SummaryPg
