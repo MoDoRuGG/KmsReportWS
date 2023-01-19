@@ -108,10 +108,16 @@ namespace KmsReportWS.LinqToSql
     partial void InsertReport_Flow(Report_Flow instance);
     partial void UpdateReport_Flow(Report_Flow instance);
     partial void DeleteReport_Flow(Report_Flow instance);
+    partial void InsertReport_OpedU(Report_OpedU instance);
+    partial void UpdateReport_OpedU(Report_OpedU instance);
+    partial void DeleteReport_OpedU(Report_OpedU instance);
+    partial void InsertReport_Zpz(Report_Zpz instance);
+    partial void UpdateReport_Zpz(Report_Zpz instance);
+    partial void DeleteReport_Zpz(Report_Zpz instance);
     #endregion
 		
 		public LinqToSqlKmsReportDataContext() : 
-				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["kms_reportConnectionString1"].ConnectionString, mappingSource)
+				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["kms_reportConnectionString2"].ConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -364,10 +370,32 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
+		public System.Data.Linq.Table<Report_OpedU> Report_OpedU
+		{
+			get
+			{
+				return this.GetTable<Report_OpedU>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Report_Zpz> Report_Zpz
+		{
+			get
+			{
+				return this.GetTable<Report_Zpz>();
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.cadre_rapport", IsComposable=true)]
 		public IQueryable<cadre_rapportResult> cadre_rapport([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Yymm", DbType="VarChar(4)")] string yymm, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Theme", DbType="VarChar(30)")] string theme)
 		{
 			return this.CreateMethodCallQuery<cadre_rapportResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), yymm, theme);
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.opedU_report", IsComposable=true)]
+		public IQueryable<opedU_reportResult> opedU_report([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Yymm", DbType="VarChar(4)")] string yymm)
+		{
+			return this.CreateMethodCallQuery<opedU_reportResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), yymm);
 		}
 	}
 	
@@ -629,6 +657,10 @@ namespace KmsReportWS.LinqToSql
 		
 		private EntitySet<Report_Cadre> _Report_Cadre;
 		
+		private EntitySet<Report_OpedU> _Report_OpedU;
+		
+		private EntitySet<Report_Zpz> _Report_Zpz;
+		
 		private EntityRef<Report_Type> _Report_Type;
 		
 		private EntityRef<Report_Flow> _Report_Flow;
@@ -665,6 +697,8 @@ namespace KmsReportWS.LinqToSql
 			this._Report_OpedFinances = new EntitySet<Report_OpedFinance>(new Action<Report_OpedFinance>(this.attach_Report_OpedFinances), new Action<Report_OpedFinance>(this.detach_Report_OpedFinances));
 			this._Report_Iilzs = new EntitySet<Report_Iilz>(new Action<Report_Iilz>(this.attach_Report_Iilzs), new Action<Report_Iilz>(this.detach_Report_Iilzs));
 			this._Report_Cadre = new EntitySet<Report_Cadre>(new Action<Report_Cadre>(this.attach_Report_Cadre), new Action<Report_Cadre>(this.detach_Report_Cadre));
+			this._Report_OpedU = new EntitySet<Report_OpedU>(new Action<Report_OpedU>(this.attach_Report_OpedU), new Action<Report_OpedU>(this.detach_Report_OpedU));
+			this._Report_Zpz = new EntitySet<Report_Zpz>(new Action<Report_Zpz>(this.attach_Report_Zpz), new Action<Report_Zpz>(this.detach_Report_Zpz));
 			this._Report_Type = default(EntityRef<Report_Type>);
 			this._Report_Flow = default(EntityRef<Report_Flow>);
 			OnCreated();
@@ -954,6 +988,32 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Report_Data_Report_OpedU", Storage="_Report_OpedU", ThisKey="Id", OtherKey="Id_Report_Data")]
+		public EntitySet<Report_OpedU> Report_OpedU
+		{
+			get
+			{
+				return this._Report_OpedU;
+			}
+			set
+			{
+				this._Report_OpedU.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Report_Data_Report_Zpz", Storage="_Report_Zpz", ThisKey="Id", OtherKey="Id_Report_Data")]
+		public EntitySet<Report_Zpz> Report_Zpz
+		{
+			get
+			{
+				return this._Report_Zpz;
+			}
+			set
+			{
+				this._Report_Zpz.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Report_Type_Report_Data", Storage="_Report_Type", ThisKey="Id_Report", OtherKey="Id", IsForeignKey=true)]
 		public Report_Type Report_Type
 		{
@@ -1181,6 +1241,30 @@ namespace KmsReportWS.LinqToSql
 		}
 		
 		private void detach_Report_Cadre(Report_Cadre entity)
+		{
+			this.SendPropertyChanging();
+			entity.Report_Data = null;
+		}
+		
+		private void attach_Report_OpedU(Report_OpedU entity)
+		{
+			this.SendPropertyChanging();
+			entity.Report_Data = this;
+		}
+		
+		private void detach_Report_OpedU(Report_OpedU entity)
+		{
+			this.SendPropertyChanging();
+			entity.Report_Data = null;
+		}
+		
+		private void attach_Report_Zpz(Report_Zpz entity)
+		{
+			this.SendPropertyChanging();
+			entity.Report_Data = this;
+		}
+		
+		private void detach_Report_Zpz(Report_Zpz entity)
 		{
 			this.SendPropertyChanging();
 			entity.Report_Data = null;
@@ -9235,7 +9319,7 @@ namespace KmsReportWS.LinqToSql
 					this.OnDataSourceChanging(value);
 					this.SendPropertyChanging();
 					this._DataSource = value;
-					this.SendPropertyChanged("_DataSource");
+					this.SendPropertyChanged("DataSource");
 					this.OnDataSourceChanged();
 				}
 			}
@@ -9436,6 +9520,1052 @@ namespace KmsReportWS.LinqToSql
 		{
 			this.SendPropertyChanging();
 			entity.Report_Flow = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Report_OpedU")]
+	public partial class Report_OpedU : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Id;
+		
+		private decimal _App;
+		
+		private decimal _Ks;
+		
+		private decimal _Ds;
+		
+		private decimal _Smp;
+		
+		private string _Notes;
+		
+		private int _Id_Report_Data;
+		
+		private string _RowNum;
+		
+		private decimal _AppOnco;
+		
+		private decimal _KsOnco;
+		
+		private decimal _DsOnco;
+		
+		private decimal _SmpOnco;
+		
+		private decimal _AppLeth;
+		
+		private decimal _KsLeth;
+		
+		private decimal _DsLeth;
+		
+		private decimal _SmpLeth;
+		
+		private EntityRef<Report_Data> _Report_Data;
+		
+    #region Определения метода расширяемости
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdChanging(int value);
+    partial void OnIdChanged();
+    partial void OnAppChanging(decimal value);
+    partial void OnAppChanged();
+    partial void OnKsChanging(decimal value);
+    partial void OnKsChanged();
+    partial void OnDsChanging(decimal value);
+    partial void OnDsChanged();
+    partial void OnSmpChanging(decimal value);
+    partial void OnSmpChanged();
+    partial void OnNotesChanging(string value);
+    partial void OnNotesChanged();
+    partial void OnId_Report_DataChanging(int value);
+    partial void OnId_Report_DataChanged();
+    partial void OnRowNumChanging(string value);
+    partial void OnRowNumChanged();
+    partial void OnAppOncoChanging(decimal value);
+    partial void OnAppOncoChanged();
+    partial void OnKsOncoChanging(decimal value);
+    partial void OnKsOncoChanged();
+    partial void OnDsOncoChanging(decimal value);
+    partial void OnDsOncoChanged();
+    partial void OnSmpOncoChanging(decimal value);
+    partial void OnSmpOncoChanged();
+    partial void OnAppLethChanging(decimal value);
+    partial void OnAppLethChanged();
+    partial void OnKsLethChanging(decimal value);
+    partial void OnKsLethChanged();
+    partial void OnDsLethChanging(decimal value);
+    partial void OnDsLethChanged();
+    partial void OnSmpLethChanging(decimal value);
+    partial void OnSmpLethChanged();
+    #endregion
+		
+		public Report_OpedU()
+		{
+			this._Report_Data = default(EntityRef<Report_Data>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this.OnIdChanging(value);
+					this.SendPropertyChanging();
+					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_App", DbType="Decimal(15,3) NOT NULL")]
+		public decimal App
+		{
+			get
+			{
+				return this._App;
+			}
+			set
+			{
+				if ((this._App != value))
+				{
+					this.OnAppChanging(value);
+					this.SendPropertyChanging();
+					this._App = value;
+					this.SendPropertyChanged("App");
+					this.OnAppChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ks", DbType="Decimal(15,3) NOT NULL")]
+		public decimal Ks
+		{
+			get
+			{
+				return this._Ks;
+			}
+			set
+			{
+				if ((this._Ks != value))
+				{
+					this.OnKsChanging(value);
+					this.SendPropertyChanging();
+					this._Ks = value;
+					this.SendPropertyChanged("Ks");
+					this.OnKsChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ds", DbType="Decimal(15,3) NOT NULL")]
+		public decimal Ds
+		{
+			get
+			{
+				return this._Ds;
+			}
+			set
+			{
+				if ((this._Ds != value))
+				{
+					this.OnDsChanging(value);
+					this.SendPropertyChanging();
+					this._Ds = value;
+					this.SendPropertyChanged("Ds");
+					this.OnDsChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Smp", DbType="Decimal(15,3) NOT NULL")]
+		public decimal Smp
+		{
+			get
+			{
+				return this._Smp;
+			}
+			set
+			{
+				if ((this._Smp != value))
+				{
+					this.OnSmpChanging(value);
+					this.SendPropertyChanging();
+					this._Smp = value;
+					this.SendPropertyChanged("Smp");
+					this.OnSmpChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Notes", DbType="VarChar(1000) NOT NULL", CanBeNull=false)]
+		public string Notes
+		{
+			get
+			{
+				return this._Notes;
+			}
+			set
+			{
+				if ((this._Notes != value))
+				{
+					this.OnNotesChanging(value);
+					this.SendPropertyChanging();
+					this._Notes = value;
+					this.SendPropertyChanged("Notes");
+					this.OnNotesChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_Report_Data", DbType="Int NOT NULL")]
+		public int Id_Report_Data
+		{
+			get
+			{
+				return this._Id_Report_Data;
+			}
+			set
+			{
+				if ((this._Id_Report_Data != value))
+				{
+					if (this._Report_Data.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnId_Report_DataChanging(value);
+					this.SendPropertyChanging();
+					this._Id_Report_Data = value;
+					this.SendPropertyChanged("Id_Report_Data");
+					this.OnId_Report_DataChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RowNum", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string RowNum
+		{
+			get
+			{
+				return this._RowNum;
+			}
+			set
+			{
+				if ((this._RowNum != value))
+				{
+					this.OnRowNumChanging(value);
+					this.SendPropertyChanging();
+					this._RowNum = value;
+					this.SendPropertyChanged("RowNum");
+					this.OnRowNumChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AppOnco", DbType="Decimal(15,3) NOT NULL")]
+		public decimal AppOnco
+		{
+			get
+			{
+				return this._AppOnco;
+			}
+			set
+			{
+				if ((this._AppOnco != value))
+				{
+					this.OnAppOncoChanging(value);
+					this.SendPropertyChanging();
+					this._AppOnco = value;
+					this.SendPropertyChanged("AppOnco");
+					this.OnAppOncoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KsOnco", DbType="Decimal(15,3) NOT NULL")]
+		public decimal KsOnco
+		{
+			get
+			{
+				return this._KsOnco;
+			}
+			set
+			{
+				if ((this._KsOnco != value))
+				{
+					this.OnKsOncoChanging(value);
+					this.SendPropertyChanging();
+					this._KsOnco = value;
+					this.SendPropertyChanged("KsOnco");
+					this.OnKsOncoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DsOnco", DbType="Decimal(15,3) NOT NULL")]
+		public decimal DsOnco
+		{
+			get
+			{
+				return this._DsOnco;
+			}
+			set
+			{
+				if ((this._DsOnco != value))
+				{
+					this.OnDsOncoChanging(value);
+					this.SendPropertyChanging();
+					this._DsOnco = value;
+					this.SendPropertyChanged("DsOnco");
+					this.OnDsOncoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SmpOnco", DbType="Decimal(15,3) NOT NULL")]
+		public decimal SmpOnco
+		{
+			get
+			{
+				return this._SmpOnco;
+			}
+			set
+			{
+				if ((this._SmpOnco != value))
+				{
+					this.OnSmpOncoChanging(value);
+					this.SendPropertyChanging();
+					this._SmpOnco = value;
+					this.SendPropertyChanged("SmpOnco");
+					this.OnSmpOncoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AppLeth", DbType="Decimal(15,3) NOT NULL")]
+		public decimal AppLeth
+		{
+			get
+			{
+				return this._AppLeth;
+			}
+			set
+			{
+				if ((this._AppLeth != value))
+				{
+					this.OnAppLethChanging(value);
+					this.SendPropertyChanging();
+					this._AppLeth = value;
+					this.SendPropertyChanged("AppLeth");
+					this.OnAppLethChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KsLeth", DbType="Decimal(15,3) NOT NULL")]
+		public decimal KsLeth
+		{
+			get
+			{
+				return this._KsLeth;
+			}
+			set
+			{
+				if ((this._KsLeth != value))
+				{
+					this.OnKsLethChanging(value);
+					this.SendPropertyChanging();
+					this._KsLeth = value;
+					this.SendPropertyChanged("KsLeth");
+					this.OnKsLethChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DsLeth", DbType="Decimal(15,3) NOT NULL")]
+		public decimal DsLeth
+		{
+			get
+			{
+				return this._DsLeth;
+			}
+			set
+			{
+				if ((this._DsLeth != value))
+				{
+					this.OnDsLethChanging(value);
+					this.SendPropertyChanging();
+					this._DsLeth = value;
+					this.SendPropertyChanged("DsLeth");
+					this.OnDsLethChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SmpLeth", DbType="Decimal(15,3) NOT NULL")]
+		public decimal SmpLeth
+		{
+			get
+			{
+				return this._SmpLeth;
+			}
+			set
+			{
+				if ((this._SmpLeth != value))
+				{
+					this.OnSmpLethChanging(value);
+					this.SendPropertyChanging();
+					this._SmpLeth = value;
+					this.SendPropertyChanged("SmpLeth");
+					this.OnSmpLethChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Report_Data_Report_OpedU", Storage="_Report_Data", ThisKey="Id_Report_Data", OtherKey="Id", IsForeignKey=true)]
+		public Report_Data Report_Data
+		{
+			get
+			{
+				return this._Report_Data.Entity;
+			}
+			set
+			{
+				Report_Data previousValue = this._Report_Data.Entity;
+				if (((previousValue != value) 
+							|| (this._Report_Data.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Report_Data.Entity = null;
+						previousValue.Report_OpedU.Remove(this);
+					}
+					this._Report_Data.Entity = value;
+					if ((value != null))
+					{
+						value.Report_OpedU.Add(this);
+						this._Id_Report_Data = value.Id;
+					}
+					else
+					{
+						this._Id_Report_Data = default(int);
+					}
+					this.SendPropertyChanged("Report_Data");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Report_Zpz")]
+	public partial class Report_Zpz : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Id;
+		
+		private int _Id_Report_Data;
+		
+		private string _RowNum;
+		
+		private System.Nullable<decimal> _CountSmo;
+		
+		private System.Nullable<decimal> _CountSmoAnother;
+		
+		private System.Nullable<decimal> _CountInsured;
+		
+		private System.Nullable<decimal> _CountInsuredRepresentative;
+		
+		private System.Nullable<decimal> _CountTfoms;
+		
+		private System.Nullable<decimal> _CountProsecutor;
+		
+		private System.Nullable<decimal> _CountOutOfSmo;
+		
+		private System.Nullable<decimal> _CountAmbulatory;
+		
+		private System.Nullable<decimal> _CountDs;
+		
+		private System.Nullable<decimal> _CountDsVmp;
+		
+		private System.Nullable<decimal> _CountStac;
+		
+		private System.Nullable<decimal> _CountStacVmp;
+		
+		private System.Nullable<decimal> _CountOutOfSmoAnother;
+		
+		private System.Nullable<decimal> _CountAmbulatoryAnother;
+		
+		private System.Nullable<decimal> _CountDsAnother;
+		
+		private System.Nullable<decimal> _CountDsVmpAnother;
+		
+		private System.Nullable<decimal> _CountStacAnother;
+		
+		private System.Nullable<decimal> _CountStacVmpAnother;
+		
+		private EntityRef<Report_Data> _Report_Data;
+		
+    #region Определения метода расширяемости
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdChanging(int value);
+    partial void OnIdChanged();
+    partial void OnId_Report_DataChanging(int value);
+    partial void OnId_Report_DataChanged();
+    partial void OnRowNumChanging(string value);
+    partial void OnRowNumChanged();
+    partial void OnCountSmoChanging(System.Nullable<decimal> value);
+    partial void OnCountSmoChanged();
+    partial void OnCountSmoAnotherChanging(System.Nullable<decimal> value);
+    partial void OnCountSmoAnotherChanged();
+    partial void OnCountInsuredChanging(System.Nullable<decimal> value);
+    partial void OnCountInsuredChanged();
+    partial void OnCountInsuredRepresentativeChanging(System.Nullable<decimal> value);
+    partial void OnCountInsuredRepresentativeChanged();
+    partial void OnCountTfomsChanging(System.Nullable<decimal> value);
+    partial void OnCountTfomsChanged();
+    partial void OnCountProsecutorChanging(System.Nullable<decimal> value);
+    partial void OnCountProsecutorChanged();
+    partial void OnCountOutOfSmoChanging(System.Nullable<decimal> value);
+    partial void OnCountOutOfSmoChanged();
+    partial void OnCountAmbulatoryChanging(System.Nullable<decimal> value);
+    partial void OnCountAmbulatoryChanged();
+    partial void OnCountDsChanging(System.Nullable<decimal> value);
+    partial void OnCountDsChanged();
+    partial void OnCountDsVmpChanging(System.Nullable<decimal> value);
+    partial void OnCountDsVmpChanged();
+    partial void OnCountStacChanging(System.Nullable<decimal> value);
+    partial void OnCountStacChanged();
+    partial void OnCountStacVmpChanging(System.Nullable<decimal> value);
+    partial void OnCountStacVmpChanged();
+    partial void OnCountOutOfSmoAnotherChanging(System.Nullable<decimal> value);
+    partial void OnCountOutOfSmoAnotherChanged();
+    partial void OnCountAmbulatoryAnotherChanging(System.Nullable<decimal> value);
+    partial void OnCountAmbulatoryAnotherChanged();
+    partial void OnCountDsAnotherChanging(System.Nullable<decimal> value);
+    partial void OnCountDsAnotherChanged();
+    partial void OnCountDsVmpAnotherChanging(System.Nullable<decimal> value);
+    partial void OnCountDsVmpAnotherChanged();
+    partial void OnCountStacAnotherChanging(System.Nullable<decimal> value);
+    partial void OnCountStacAnotherChanged();
+    partial void OnCountStacVmpAnotherChanging(System.Nullable<decimal> value);
+    partial void OnCountStacVmpAnotherChanged();
+    #endregion
+		
+		public Report_Zpz()
+		{
+			this._Report_Data = default(EntityRef<Report_Data>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this.OnIdChanging(value);
+					this.SendPropertyChanging();
+					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_Report_Data", DbType="Int NOT NULL")]
+		public int Id_Report_Data
+		{
+			get
+			{
+				return this._Id_Report_Data;
+			}
+			set
+			{
+				if ((this._Id_Report_Data != value))
+				{
+					if (this._Report_Data.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnId_Report_DataChanging(value);
+					this.SendPropertyChanging();
+					this._Id_Report_Data = value;
+					this.SendPropertyChanged("Id_Report_Data");
+					this.OnId_Report_DataChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RowNum", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string RowNum
+		{
+			get
+			{
+				return this._RowNum;
+			}
+			set
+			{
+				if ((this._RowNum != value))
+				{
+					this.OnRowNumChanging(value);
+					this.SendPropertyChanging();
+					this._RowNum = value;
+					this.SendPropertyChanged("RowNum");
+					this.OnRowNumChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CountSmo", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> CountSmo
+		{
+			get
+			{
+				return this._CountSmo;
+			}
+			set
+			{
+				if ((this._CountSmo != value))
+				{
+					this.OnCountSmoChanging(value);
+					this.SendPropertyChanging();
+					this._CountSmo = value;
+					this.SendPropertyChanged("CountSmo");
+					this.OnCountSmoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CountSmoAnother", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> CountSmoAnother
+		{
+			get
+			{
+				return this._CountSmoAnother;
+			}
+			set
+			{
+				if ((this._CountSmoAnother != value))
+				{
+					this.OnCountSmoAnotherChanging(value);
+					this.SendPropertyChanging();
+					this._CountSmoAnother = value;
+					this.SendPropertyChanged("CountSmoAnother");
+					this.OnCountSmoAnotherChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CountInsured", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> CountInsured
+		{
+			get
+			{
+				return this._CountInsured;
+			}
+			set
+			{
+				if ((this._CountInsured != value))
+				{
+					this.OnCountInsuredChanging(value);
+					this.SendPropertyChanging();
+					this._CountInsured = value;
+					this.SendPropertyChanged("CountInsured");
+					this.OnCountInsuredChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CountInsuredRepresentative", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> CountInsuredRepresentative
+		{
+			get
+			{
+				return this._CountInsuredRepresentative;
+			}
+			set
+			{
+				if ((this._CountInsuredRepresentative != value))
+				{
+					this.OnCountInsuredRepresentativeChanging(value);
+					this.SendPropertyChanging();
+					this._CountInsuredRepresentative = value;
+					this.SendPropertyChanged("CountInsuredRepresentative");
+					this.OnCountInsuredRepresentativeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CountTfoms", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> CountTfoms
+		{
+			get
+			{
+				return this._CountTfoms;
+			}
+			set
+			{
+				if ((this._CountTfoms != value))
+				{
+					this.OnCountTfomsChanging(value);
+					this.SendPropertyChanging();
+					this._CountTfoms = value;
+					this.SendPropertyChanged("CountTfoms");
+					this.OnCountTfomsChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CountProsecutor", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> CountProsecutor
+		{
+			get
+			{
+				return this._CountProsecutor;
+			}
+			set
+			{
+				if ((this._CountProsecutor != value))
+				{
+					this.OnCountProsecutorChanging(value);
+					this.SendPropertyChanging();
+					this._CountProsecutor = value;
+					this.SendPropertyChanged("CountProsecutor");
+					this.OnCountProsecutorChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CountOutOfSmo", DbType="Decimal(15,3)")]
+		public System.Nullable<decimal> CountOutOfSmo
+		{
+			get
+			{
+				return this._CountOutOfSmo;
+			}
+			set
+			{
+				if ((this._CountOutOfSmo != value))
+				{
+					this.OnCountOutOfSmoChanging(value);
+					this.SendPropertyChanging();
+					this._CountOutOfSmo = value;
+					this.SendPropertyChanged("CountOutOfSmo");
+					this.OnCountOutOfSmoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CountAmbulatory", DbType="Decimal(15,3)")]
+		public System.Nullable<decimal> CountAmbulatory
+		{
+			get
+			{
+				return this._CountAmbulatory;
+			}
+			set
+			{
+				if ((this._CountAmbulatory != value))
+				{
+					this.OnCountAmbulatoryChanging(value);
+					this.SendPropertyChanging();
+					this._CountAmbulatory = value;
+					this.SendPropertyChanged("CountAmbulatory");
+					this.OnCountAmbulatoryChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CountDs", DbType="Decimal(15,3)")]
+		public System.Nullable<decimal> CountDs
+		{
+			get
+			{
+				return this._CountDs;
+			}
+			set
+			{
+				if ((this._CountDs != value))
+				{
+					this.OnCountDsChanging(value);
+					this.SendPropertyChanging();
+					this._CountDs = value;
+					this.SendPropertyChanged("CountDs");
+					this.OnCountDsChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CountDsVmp", DbType="Decimal(15,3)")]
+		public System.Nullable<decimal> CountDsVmp
+		{
+			get
+			{
+				return this._CountDsVmp;
+			}
+			set
+			{
+				if ((this._CountDsVmp != value))
+				{
+					this.OnCountDsVmpChanging(value);
+					this.SendPropertyChanging();
+					this._CountDsVmp = value;
+					this.SendPropertyChanged("CountDsVmp");
+					this.OnCountDsVmpChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CountStac", DbType="Decimal(15,3)")]
+		public System.Nullable<decimal> CountStac
+		{
+			get
+			{
+				return this._CountStac;
+			}
+			set
+			{
+				if ((this._CountStac != value))
+				{
+					this.OnCountStacChanging(value);
+					this.SendPropertyChanging();
+					this._CountStac = value;
+					this.SendPropertyChanged("CountStac");
+					this.OnCountStacChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CountStacVmp", DbType="Decimal(15,3)")]
+		public System.Nullable<decimal> CountStacVmp
+		{
+			get
+			{
+				return this._CountStacVmp;
+			}
+			set
+			{
+				if ((this._CountStacVmp != value))
+				{
+					this.OnCountStacVmpChanging(value);
+					this.SendPropertyChanging();
+					this._CountStacVmp = value;
+					this.SendPropertyChanged("CountStacVmp");
+					this.OnCountStacVmpChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CountOutOfSmoAnother", DbType="Decimal(15,3)")]
+		public System.Nullable<decimal> CountOutOfSmoAnother
+		{
+			get
+			{
+				return this._CountOutOfSmoAnother;
+			}
+			set
+			{
+				if ((this._CountOutOfSmoAnother != value))
+				{
+					this.OnCountOutOfSmoAnotherChanging(value);
+					this.SendPropertyChanging();
+					this._CountOutOfSmoAnother = value;
+					this.SendPropertyChanged("CountOutOfSmoAnother");
+					this.OnCountOutOfSmoAnotherChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CountAmbulatoryAnother", DbType="Decimal(15,3)")]
+		public System.Nullable<decimal> CountAmbulatoryAnother
+		{
+			get
+			{
+				return this._CountAmbulatoryAnother;
+			}
+			set
+			{
+				if ((this._CountAmbulatoryAnother != value))
+				{
+					this.OnCountAmbulatoryAnotherChanging(value);
+					this.SendPropertyChanging();
+					this._CountAmbulatoryAnother = value;
+					this.SendPropertyChanged("CountAmbulatoryAnother");
+					this.OnCountAmbulatoryAnotherChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CountDsAnother", DbType="Decimal(15,3)")]
+		public System.Nullable<decimal> CountDsAnother
+		{
+			get
+			{
+				return this._CountDsAnother;
+			}
+			set
+			{
+				if ((this._CountDsAnother != value))
+				{
+					this.OnCountDsAnotherChanging(value);
+					this.SendPropertyChanging();
+					this._CountDsAnother = value;
+					this.SendPropertyChanged("CountDsAnother");
+					this.OnCountDsAnotherChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CountDsVmpAnother", DbType="Decimal(15,3)")]
+		public System.Nullable<decimal> CountDsVmpAnother
+		{
+			get
+			{
+				return this._CountDsVmpAnother;
+			}
+			set
+			{
+				if ((this._CountDsVmpAnother != value))
+				{
+					this.OnCountDsVmpAnotherChanging(value);
+					this.SendPropertyChanging();
+					this._CountDsVmpAnother = value;
+					this.SendPropertyChanged("CountDsVmpAnother");
+					this.OnCountDsVmpAnotherChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CountStacAnother", DbType="Decimal(15,3)")]
+		public System.Nullable<decimal> CountStacAnother
+		{
+			get
+			{
+				return this._CountStacAnother;
+			}
+			set
+			{
+				if ((this._CountStacAnother != value))
+				{
+					this.OnCountStacAnotherChanging(value);
+					this.SendPropertyChanging();
+					this._CountStacAnother = value;
+					this.SendPropertyChanged("CountStacAnother");
+					this.OnCountStacAnotherChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CountStacVmpAnother", DbType="Decimal(15,3)")]
+		public System.Nullable<decimal> CountStacVmpAnother
+		{
+			get
+			{
+				return this._CountStacVmpAnother;
+			}
+			set
+			{
+				if ((this._CountStacVmpAnother != value))
+				{
+					this.OnCountStacVmpAnotherChanging(value);
+					this.SendPropertyChanging();
+					this._CountStacVmpAnother = value;
+					this.SendPropertyChanged("CountStacVmpAnother");
+					this.OnCountStacVmpAnotherChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Report_Data_Report_Zpz", Storage="_Report_Data", ThisKey="Id_Report_Data", OtherKey="Id", IsForeignKey=true)]
+		public Report_Data Report_Data
+		{
+			get
+			{
+				return this._Report_Data.Entity;
+			}
+			set
+			{
+				Report_Data previousValue = this._Report_Data.Entity;
+				if (((previousValue != value) 
+							|| (this._Report_Data.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Report_Data.Entity = null;
+						previousValue.Report_Zpz.Remove(this);
+					}
+					this._Report_Data.Entity = value;
+					if ((value != null))
+					{
+						value.Report_Zpz.Add(this);
+						this._Id_Report_Data = value.Id;
+					}
+					else
+					{
+						this._Id_Report_Data = default(int);
+					}
+					this.SendPropertyChanged("Report_Data");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
 		}
 	}
 	
@@ -9946,6 +11076,194 @@ namespace KmsReportWS.LinqToSql
 				if ((this._count_grf26 != value))
 				{
 					this._count_grf26 = value;
+				}
+			}
+		}
+	}
+	
+	public partial class opedU_reportResult
+	{
+		
+		private string _id;
+		
+		private string _Name;
+		
+		private string _RowNum;
+		
+		private System.Nullable<decimal> _App;
+		
+		private System.Nullable<decimal> _Ks;
+		
+		private System.Nullable<decimal> _Ds;
+		
+		private System.Nullable<decimal> _Smp;
+		
+		private string _Notes;
+		
+		private System.Nullable<int> _Id_Report_Data;
+		
+		private System.Nullable<int> _ident;
+		
+		public opedU_reportResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="VarChar(10) NOT NULL", CanBeNull=false)]
+		public string id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this._id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="VarChar(150) NOT NULL", CanBeNull=false)]
+		public string Name
+		{
+			get
+			{
+				return this._Name;
+			}
+			set
+			{
+				if ((this._Name != value))
+				{
+					this._Name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RowNum", DbType="VarChar(20)")]
+		public string RowNum
+		{
+			get
+			{
+				return this._RowNum;
+			}
+			set
+			{
+				if ((this._RowNum != value))
+				{
+					this._RowNum = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_App", DbType="Decimal(15,3)")]
+		public System.Nullable<decimal> App
+		{
+			get
+			{
+				return this._App;
+			}
+			set
+			{
+				if ((this._App != value))
+				{
+					this._App = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ks", DbType="Decimal(15,3)")]
+		public System.Nullable<decimal> Ks
+		{
+			get
+			{
+				return this._Ks;
+			}
+			set
+			{
+				if ((this._Ks != value))
+				{
+					this._Ks = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ds", DbType="Decimal(15,3)")]
+		public System.Nullable<decimal> Ds
+		{
+			get
+			{
+				return this._Ds;
+			}
+			set
+			{
+				if ((this._Ds != value))
+				{
+					this._Ds = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Smp", DbType="Decimal(15,3)")]
+		public System.Nullable<decimal> Smp
+		{
+			get
+			{
+				return this._Smp;
+			}
+			set
+			{
+				if ((this._Smp != value))
+				{
+					this._Smp = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Notes", DbType="VarChar(1000)")]
+		public string Notes
+		{
+			get
+			{
+				return this._Notes;
+			}
+			set
+			{
+				if ((this._Notes != value))
+				{
+					this._Notes = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_Report_Data", DbType="Int")]
+		public System.Nullable<int> Id_Report_Data
+		{
+			get
+			{
+				return this._Id_Report_Data;
+			}
+			set
+			{
+				if ((this._Id_Report_Data != value))
+				{
+					this._Id_Report_Data = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ident", DbType="Int")]
+		public System.Nullable<int> ident
+		{
+			get
+			{
+				return this._ident;
+			}
+			set
+			{
+				if ((this._ident != value))
+				{
+					this._ident = value;
 				}
 			}
 		}
