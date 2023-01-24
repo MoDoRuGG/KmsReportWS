@@ -2,9 +2,7 @@
 using System.Linq;
 using KmsReportWS.LinqToSql;
 using KmsReportWS.Model.ConcolidateReport;
-using KmsReportWS.Model.Report;
 using KmsReportWS.Properties;
-using KmsReportWS.Support;
 
 namespace KmsReportWS.Collector.ConsolidateReport
 {
@@ -13,7 +11,7 @@ namespace KmsReportWS.Collector.ConsolidateReport
         private readonly string[] _themes = { "Таблица 5", "Таблица 6", "Таблица 8", "Таблица 10", "Таблица 11" };
 
         private readonly string[] _rowNumsExpertiseTable5 = { "4.1", "4.2", "4.3", "4.4", "4.5", "4.6" };
-        private readonly string[] _rowNumsExpertiseTable6 = { "5.1", "5.2", "5.3", "5.4", "5.5", "5.6", "5.7", "5.8" };
+        private readonly string[] _rowNumsExpertiseTable6 = { "5", };
         private readonly string[] _rowNumsExpertiseTable8 =
             {"6.1", "6.2", "6.3", "6.4", "6.5", "6.6", "6.7", "6.8", "6.9", "6.10"};
 
