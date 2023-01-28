@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="kms_report" Class="LinqToSqlKmsReportDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="WebSettings" ConnectionString="Data Source=10.3.40.5;Initial Catalog=kms_report;User ID=sa;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="kms_reportConnectionString2" Provider="System.Data.SqlClient" />
+  <Connection Mode="WebSettings" ConnectionString="Data Source=10.3.10.5;Initial Catalog=kms_report;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="kms_reportConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Responsible_Employee" Member="Responsible_Employee">
     <Type Name="Responsible_Employee">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -469,6 +469,7 @@
       <Column Name="CountDsVmpAnother" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
       <Column Name="CountStacAnother" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
       <Column Name="CountStacVmpAnother" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="CountAssignment" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
       <Association Name="Report_Data_Report_Zpz" Member="Report_Data" ThisKey="Id_Report_Data" OtherKey="Id" Type="Report_Data" IsForeignKey="true" />
     </Type>
   </Table>

@@ -1482,7 +1482,7 @@
       <ROW_TEXT>по результатам МЭЭ, всего,
         в том числе за нарушения:</ROW_TEXT>
       <ROW_NUM>4</ROW_NUM>
-      <EXCLUSION>true</EXCLUSION>
+      <EXCLUSION>false</EXCLUSION>
     </ROW>
     <ROW>
       <ROW_TEXT>  несвоевременное включение (невключение) застрахованных лиц в группу диспансерного наблюдения, всего,
@@ -1529,7 +1529,7 @@
       <ROW_TEXT>по результатам ЭКМП, всего,
         в том числе за нарушения:</ROW_TEXT>
       <ROW_NUM>5</ROW_NUM>
-      <EXCLUSION>true</EXCLUSION>
+      <EXCLUSION>false</EXCLUSION>
     </ROW>
     <ROW>
       <ROW_TEXT>  несвоевременное включение (невключение) застрахованных лиц в группу диспансерного наблюдения, всего,

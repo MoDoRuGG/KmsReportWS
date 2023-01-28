@@ -18,7 +18,7 @@ namespace KmsReportWS.Model.Report
         public string Code { get; set; }
         public decimal CountSmo { get; set; }
         public decimal CountSmoAnother { get; set; }
-
+        public decimal CountAssignment { get; set; }
         public decimal CountInsured { get; set; }
         public decimal CountInsuredRepresentative { get; set; }
         public decimal CountTfoms { get; set; }
