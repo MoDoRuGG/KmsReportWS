@@ -117,7 +117,7 @@ namespace KmsReportWS.LinqToSql
     #endregion
 		
 		public LinqToSqlKmsReportDataContext() : 
-				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["kms_reportConnectionString2"].ConnectionString, mappingSource)
+				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["kms_reportConnectionString1"].ConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -10034,6 +10034,8 @@ namespace KmsReportWS.LinqToSql
 		
 		private System.Nullable<decimal> _CountStacVmpAnother;
 		
+		private System.Nullable<decimal> _CountAssignment;
+		
 		private EntityRef<Report_Data> _Report_Data;
 		
     #region Определения метода расширяемости
@@ -10082,6 +10084,8 @@ namespace KmsReportWS.LinqToSql
     partial void OnCountStacAnotherChanged();
     partial void OnCountStacVmpAnotherChanging(System.Nullable<decimal> value);
     partial void OnCountStacVmpAnotherChanged();
+    partial void OnCountAssignmentChanging(System.Nullable<decimal> value);
+    partial void OnCountAssignmentChanged();
     #endregion
 		
 		public Report_Zpz()
@@ -10510,6 +10514,26 @@ namespace KmsReportWS.LinqToSql
 					this._CountStacVmpAnother = value;
 					this.SendPropertyChanged("CountStacVmpAnother");
 					this.OnCountStacVmpAnotherChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CountAssignment", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> CountAssignment
+		{
+			get
+			{
+				return this._CountAssignment;
+			}
+			set
+			{
+				if ((this._CountAssignment != value))
+				{
+					this.OnCountAssignmentChanging(value);
+					this.SendPropertyChanging();
+					this._CountAssignment = value;
+					this.SendPropertyChanged("CountAssignment");
+					this.OnCountAssignmentChanged();
 				}
 			}
 		}

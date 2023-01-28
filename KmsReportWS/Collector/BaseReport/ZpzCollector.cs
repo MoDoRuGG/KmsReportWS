@@ -50,6 +50,7 @@ namespace KmsReportWS.Collector.BaseReport
                 Code = fgr.Key,
                 CountSmo = fgr.Sum(x => x.CountSmo ?? 0),
                 CountSmoAnother = fgr.Sum(x => x.CountSmoAnother ?? 0),
+                CountAssignment = fgr.Sum(x => x.CountAssignment ?? 0),
                 CountInsured = fgr.Sum(x => x.CountInsured ?? 0),
                 CountInsuredRepresentative = fgr.Sum(x => x.CountInsuredRepresentative ?? 0),
                 CountTfoms = fgr.Sum(x => x.CountTfoms ?? 0),

@@ -14,25 +14,21 @@
 	<ROW_TEXT>заявлений, всего, из них:</ROW_TEXT>
 	<ROW_NUM>2</ROW_NUM>
 	<EXCLUSION>false</EXCLUSION>
-   <EXCLUSION_CELL>2</EXCLUSION_CELL>
 </ROW>
 <ROW>
 	<ROW_TEXT>о выборе (замене) СМО</ROW_TEXT>
 	<ROW_NUM>2.1</ROW_NUM>
 	<EXCLUSION>false</EXCLUSION>
-   <EXCLUSION_CELL>2</EXCLUSION_CELL>
 </ROW>
 <ROW>
 	<ROW_TEXT>о включении в единый регистр застрахованных лиц</ROW_TEXT>
 	<ROW_NUM>2.2</ROW_NUM>
 	<EXCLUSION>false</EXCLUSION>
-   <EXCLUSION_CELL>2</EXCLUSION_CELL>
 </ROW>
 <ROW>
 	<ROW_TEXT>о выдаче дубликата полиса обязательного медицинского страхования (далее - полис ОМС) или переоформлении полиса ОМС</ROW_TEXT>
 	<ROW_NUM>2.3</ROW_NUM>
 	<EXCLUSION>false</EXCLUSION>
-   <EXCLUSION_CELL>2</EXCLUSION_CELL>
 </ROW>
 <ROW>
 	<ROW_TEXT>жалоб, всего:</ROW_TEXT>
@@ -243,7 +239,6 @@
 	<ROW_TEXT>на качество проведенных экспертных мероприятий СМО</ROW_TEXT>
 	<ROW_NUM>3.1.12.1</ROW_NUM>
 	<EXCLUSION>false</EXCLUSION>
-   <EXCLUSION_CELL>2,3</EXCLUSION_CELL>
 </ROW>
 <ROW>
 	<ROW_TEXT>на порядок направления и порядок оказания медицинской помощи в рамках первичной медико-санитарной помощи в медицинских организациях, функции и полномочия учредителей в отношении которых осуществляют Правительство Российской Федерации или федеральные орган</ROW_TEXT>
@@ -459,127 +454,106 @@
 	<ROW_TEXT>Удовлетворенных в досудебном порядке</ROW_TEXT>
 	<ROW_NUM>1</ROW_NUM>
 	<EXCLUSION>false</EXCLUSION>
-   <EXCLUSION_CELL>3,4,5,6,7</EXCLUSION_CELL>
 </ROW>
 <ROW>
 	<ROW_TEXT>Досудебное урегулирование спорных случаев с материальным возмещением, всего (рублей), из них:</ROW_TEXT>
 	<ROW_NUM>2</ROW_NUM>
 	<EXCLUSION>false</EXCLUSION>
-   <EXCLUSION_CELL>3,4,5,6,7</EXCLUSION_CELL>
 </ROW>
 <ROW>
 	<ROW_TEXT>сумма возмещенная СМО (рублей)</ROW_TEXT>
 	<ROW_NUM>2.1</ROW_NUM>
 	<EXCLUSION>false</EXCLUSION>
-   <EXCLUSION_CELL>2,3,4,5,6,7</EXCLUSION_CELL>
 </ROW>
 <ROW>
 	<ROW_TEXT>сумма, возмещенная медицинской организацией (рублей)</ROW_TEXT>
 	<ROW_NUM>2.2</ROW_NUM>
 	<EXCLUSION>false</EXCLUSION>
-   <EXCLUSION_CELL>3,4,5,6,7</EXCLUSION_CELL>
 </ROW>
 <ROW>
 	<ROW_TEXT>Количество спорных случаев, рассматриваемых в судебном порядке, всего, из них:</ROW_TEXT>
 	<ROW_NUM>3</ROW_NUM>
 	<EXCLUSION>false</EXCLUSION>
-   <EXCLUSION_CELL>2</EXCLUSION_CELL>
 </ROW>
 <ROW>
 	<ROW_TEXT>дел в производстве суда на начало отчетного периода</ROW_TEXT>
 	<ROW_NUM>3.1</ROW_NUM>
 	<EXCLUSION>false</EXCLUSION>
-   <EXCLUSION_CELL>2</EXCLUSION_CELL>
 </ROW>
 <ROW>
 	<ROW_TEXT>подано исков за отчетный период</ROW_TEXT>
 	<ROW_NUM>3.2</ROW_NUM>
 	<EXCLUSION>false</EXCLUSION>
-   <EXCLUSION_CELL>2</EXCLUSION_CELL>
 </ROW>
 <ROW>
 	<ROW_TEXT>Количество рассмотренных исков, всего, из них:</ROW_TEXT>
 	<ROW_NUM>4</ROW_NUM>
 	<EXCLUSION>false</EXCLUSION>
-   <EXCLUSION_CELL>2</EXCLUSION_CELL>
 </ROW>
 <ROW>
 	<ROW_TEXT>отказано в удовлетворении исков</ROW_TEXT>
 	<ROW_NUM>4.1</ROW_NUM>
 	<EXCLUSION>false</EXCLUSION>
-   <EXCLUSION_CELL>2</EXCLUSION_CELL>
 </ROW>
 <ROW>
 	<ROW_TEXT>удовлетворено исков</ROW_TEXT>
 	<ROW_NUM>4.2</ROW_NUM>
 	<EXCLUSION>false</EXCLUSION>
-   <EXCLUSION_CELL>2</EXCLUSION_CELL>
 </ROW>
 <ROW>
 	<ROW_TEXT>прекращено дел судами</ROW_TEXT>
 	<ROW_NUM>4.3</ROW_NUM>
 	<EXCLUSION>false</EXCLUSION>
-   <EXCLUSION_CELL>2</EXCLUSION_CELL>
 </ROW>
 <ROW>
 	<ROW_TEXT>Сумма возмещения ущерба, причиненного застрахованному лицу, всего (рублей), по удовлетворенным искам к:</ROW_TEXT>
 	<ROW_NUM>5</ROW_NUM>
 	<EXCLUSION>false</EXCLUSION>
-   <EXCLUSION_CELL>2</EXCLUSION_CELL>
 </ROW>
 <ROW>
 	<ROW_TEXT>медицинской организации, всего, в том числе с:</ROW_TEXT>
 	<ROW_NUM>5.1</ROW_NUM>
 	<EXCLUSION>false</EXCLUSION>
-   <EXCLUSION_CELL>2</EXCLUSION_CELL>
 </ROW>
 <ROW>
 	<ROW_TEXT>материальным возмещением</ROW_TEXT>
 	<ROW_NUM>5.1.1</ROW_NUM>
 	<EXCLUSION>false</EXCLUSION>
-   <EXCLUSION_CELL>2</EXCLUSION_CELL>
 </ROW>
 <ROW>
 	<ROW_TEXT>возмещение морального вреда</ROW_TEXT>
 	<ROW_NUM>5.1.2</ROW_NUM>
 	<EXCLUSION>false</EXCLUSION>
-   <EXCLUSION_CELL>2</EXCLUSION_CELL>
 </ROW>
 <ROW>
 	<ROW_TEXT>СМО, всего, в том числе с:</ROW_TEXT>
 	<ROW_NUM>5.2</ROW_NUM>
 	<EXCLUSION>false</EXCLUSION>
-   <EXCLUSION_CELL>2</EXCLUSION_CELL>
 </ROW>
 <ROW>
 	<ROW_TEXT>материальным возмещением</ROW_TEXT>
 	<ROW_NUM>5.2.1</ROW_NUM>
 	<EXCLUSION>false</EXCLUSION>
-   <EXCLUSION_CELL>2</EXCLUSION_CELL>
 </ROW>
 <ROW>
 	<ROW_TEXT>возмещение морального вреда</ROW_TEXT>
 	<ROW_NUM>5.2.2</ROW_NUM>
 	<EXCLUSION>false</EXCLUSION>
-   <EXCLUSION_CELL>2</EXCLUSION_CELL>
 </ROW>
 <ROW>
 	<ROW_TEXT>ТФОМС, всего, в том числе с:</ROW_TEXT>
 	<ROW_NUM>5.3</ROW_NUM>
 	<EXCLUSION>false</EXCLUSION>
-   <EXCLUSION_CELL>2</EXCLUSION_CELL>
 </ROW>
 <ROW>
 	<ROW_TEXT>материальным возмещением</ROW_TEXT>
 	<ROW_NUM>5.3.1</ROW_NUM>
 	<EXCLUSION>false</EXCLUSION>
-   <EXCLUSION_CELL>2</EXCLUSION_CELL>
 </ROW>
 <ROW>
 	<ROW_TEXT>возмещением морального вреда</ROW_TEXT>
 	<ROW_NUM>5.3.2</ROW_NUM>
 	<EXCLUSION>false</EXCLUSION>
-   <EXCLUSION_CELL>2</EXCLUSION_CELL>
 </ROW>
    </TABLE>
    <TABLE>
@@ -790,7 +764,6 @@
 	<ROW_TEXT>качеством проведенных экспертных мероприятий СМО</ROW_TEXT>
 	<ROW_NUM>1.12.1</ROW_NUM>
 	<EXCLUSION>false</EXCLUSION>
-   <EXCLUSION_CELL>5,6,7</EXCLUSION_CELL>
 </ROW>
 <ROW>
 	<ROW_TEXT>порядком направления и порядком оказания медицинской помощи в рамках первичной медико-санитарной помощи в медицинские организации, функции и полномочия учредителей в отношении которых осуществляют Правительство Российской Федерации или федеральные органы </ROW_TEXT>
@@ -853,7 +826,7 @@
 	<EXCLUSION>false</EXCLUSION>
 </ROW>
    </TABLE>
-   <!--<TABLE>
+   <TABLE>
    <TABLE_NAME>Таблица 5</TABLE_NAME>
    <TABLE_DESCRIPTION>Результаты медико-экономического контроля</TABLE_DESCRIPTION>
    <ROWS_COUNT>8</ROWS_COUNT>
@@ -7601,7 +7574,7 @@
    <TABLE>
    <TABLE_NAME>Таблица 9</TABLE_NAME>
    <TABLE_DESCRIPTION>Кадры и их квалификационная характеристика, осуществляющих свою деятельность в сфере обязательного медицинского страхования</TABLE_DESCRIPTION>
-   <ROWS_COUNT>4</ROWS_COUNT>
+   <ROWS_COUNT>7</ROWS_COUNT>
    <ROW>
 	<ROW_TEXT>Число специалистов, участвующих в деятельности по обеспечению прав застрахованных лиц, всего, в том числе:</ROW_TEXT>
 	<ROW_NUM>1</ROW_NUM>
@@ -7767,11 +7740,11 @@
 	<ROW_NUM>5.3.1</ROW_NUM>
 	<EXCLUSION>false</EXCLUSION>
 </ROW>
-   </TABLE>-->
+   </TABLE>
    <TABLE>
    <TABLE_NAME>Таблица 10</TABLE_NAME>
    <TABLE_DESCRIPTION>Информирование и информационное сопровождение застрахованных лиц</TABLE_DESCRIPTION>
-   <ROWS_COUNT>3</ROWS_COUNT>
+   <ROWS_COUNT>7</ROWS_COUNT>
    <ROW>
 	<ROW_TEXT>Численность застрахованных лиц от 18 лет и старше, подлежащих прохождению профилактических мероприятий (профилактических медицинских осмотров, первого этапа диспансеризации, углубленной диспансеризации, диспансерного наблюдения), прикрепленных к медицинской организации, оказывающей первичную медико-санитарную помощь, и включенных в списки на информирование всего, из них подлежащих:</ROW_TEXT>
 	<ROW_NUM>1</ROW_NUM>
