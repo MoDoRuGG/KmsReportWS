@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <REPORT xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-	<REPORT_NAME>pg</REPORT_NAME>
+	<REPORT_NAME>pgq</REPORT_NAME>
 	<TABLE>
 		<TABLE_NAME>Таблица 1</TABLE_NAME>
 		<TABLE_DESCRIPTION>Обращения застрахованных лиц</TABLE_DESCRIPTION>
@@ -1260,7 +1260,7 @@
 		<ROW>
 			<ROW_TEXT>по результатам МЭЭ, всего,  в том числе за нарушения:</ROW_TEXT>
 			<ROW_NUM>4</ROW_NUM>
-			<EXCLUSION>true</EXCLUSION>
+			<EXCLUSION>false</EXCLUSION>
 		</ROW>
 		<ROW>
 			<ROW_TEXT>    несвоевременное включение (невключение) застрахованных лиц в группу диспансерного наблюдения, всего,  из них:</ROW_TEXT>
@@ -1305,7 +1305,7 @@
 		<ROW>
 			<ROW_TEXT>по результатам ЭКМП, всего,  в том числе за нарушения:</ROW_TEXT>
 			<ROW_NUM>5</ROW_NUM>
-			<EXCLUSION>true</EXCLUSION>
+			<EXCLUSION>false</EXCLUSION>
 		</ROW>
 		<ROW>
 			<ROW_TEXT>    несвоевременное включение (невключение) застрахованных лиц в группу диспансерного наблюдения, всего,  из них:</ROW_TEXT>
