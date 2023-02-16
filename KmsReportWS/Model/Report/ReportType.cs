@@ -18,6 +18,7 @@ namespace KmsReportWS.Model.Report
         [Description("fcr")] IR,
         [Description("vac")] Vac,
         [Description("mfss")] MFSS,
+        [Description("mvcr")] MVCR,
         [Description("proposal")] Proposal,
         [Description("oped_fin")] OpedFinance,
         [Description("cadre")] Cadre,

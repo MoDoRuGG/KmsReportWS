@@ -128,6 +128,7 @@
     </Compile>
     <Compile Include="Handler\BaseReportHandler.cs" />
     <Compile Include="Handler\FOpedUHandler.cs" />
+    <Compile Include="Handler\MonitoringVCRHandler.cs" />
     <Compile Include="Handler\ZpzHandler.cs" />
     <Compile Include="Handler\ReportCadreHandler.cs" />
     <Compile Include="Handler\DynamicReportCommonHandler.cs" />
@@ -175,11 +176,13 @@
     <Compile Include="Model\Constructor\ReportDynamicDto.cs" />
     <Compile Include="Model\Constructor\ReportDynamicFlowDto.cs" />
     <Compile Include="Model\Dictionary\OpedFinancePlanDictionaryItem.cs" />
+    <Compile Include="Model\MonitoringVCRPgDataDto.cs" />
     <Compile Include="Model\FSSMonitoringPgDataDto.cs" />
     <Compile Include="Model\ReportDynamicScanModel.cs" />
     <Compile Include="Model\ReportScanModel.cs" />
     <Compile Include="Model\Report\ReportCadre.cs" />
     <Compile Include="Model\Report\DataSource.cs" />
+    <Compile Include="Model\Report\ReportMonitoringVCR.cs" />
     <Compile Include="Model\Report\ReportFSSMonitroing.cs" />
     <Compile Include="Model\Report\ReportInfrormationResponse.cs" />
     <Compile Include="Model\Report\ReportOpedU.cs" />

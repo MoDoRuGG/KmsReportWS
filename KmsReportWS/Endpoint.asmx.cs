@@ -163,6 +163,14 @@ namespace KmsReportWS
         }
 
         [WebMethod]
+        public List<MonitoringVCRPgDataDto> GetMonitoringVCRPGData(string yymm, string fillial)
+        {
+            var handler = _reportHandlerFactory.GetHandler(ReportType.MVCR);
+            return (handler as MonitoringVCRHandler).GetPgData(yymm, fillial);
+
+        }
+
+        [WebMethod]
         public void SendEmail(List<string> emails,string theme,string body)
         {
             emailSender.Send(emails,theme,body);
@@ -252,6 +260,12 @@ namespace KmsReportWS
 
         [WebMethod]
         public void WebReportFSSMonitroing(ReportFSSMonitroing report)
+        {
+
+        }
+
+        [WebMethod]
+        public void WebReportMonitoringVCR(ReportMonitoringVCR report)
         {
 
         }

@@ -114,6 +114,9 @@ namespace KmsReportWS.LinqToSql
     partial void InsertReport_Zpz(Report_Zpz instance);
     partial void UpdateReport_Zpz(Report_Zpz instance);
     partial void DeleteReport_Zpz(Report_Zpz instance);
+    partial void InsertMonitoringVCR(MonitoringVCR instance);
+    partial void UpdateMonitoringVCR(MonitoringVCR instance);
+    partial void DeleteMonitoringVCR(MonitoringVCR instance);
     #endregion
 		
 		public LinqToSqlKmsReportDataContext() : 
@@ -297,8 +300,14 @@ namespace KmsReportWS.LinqToSql
 				return this.GetTable<FSSMonitroing>();
 			}
 		}
-		
-		public System.Data.Linq.Table<Scan_Dynamic> Scan_Dynamics
+
+        public System.Data.Linq.Table<MonitoringVCR> MonitoringVCRs {
+            get {
+                return this.GetTable<MonitoringVCR>();
+            }
+        }
+
+        public System.Data.Linq.Table<Scan_Dynamic> Scan_Dynamics
 		{
 			get
 			{
@@ -383,6 +392,14 @@ namespace KmsReportWS.LinqToSql
 			get
 			{
 				return this.GetTable<Report_Zpz>();
+			}
+		}
+		
+		public System.Data.Linq.Table<MonitoringVCR> MonitoringVCR
+		{
+			get
+			{
+				return this.GetTable<MonitoringVCR>();
 			}
 		}
 		
@@ -661,6 +678,8 @@ namespace KmsReportWS.LinqToSql
 		
 		private EntitySet<Report_Zpz> _Report_Zpz;
 		
+		private EntitySet<MonitoringVCR> _MonitoringVCR;
+		
 		private EntityRef<Report_Type> _Report_Type;
 		
 		private EntityRef<Report_Flow> _Report_Flow;
@@ -699,6 +718,7 @@ namespace KmsReportWS.LinqToSql
 			this._Report_Cadre = new EntitySet<Report_Cadre>(new Action<Report_Cadre>(this.attach_Report_Cadre), new Action<Report_Cadre>(this.detach_Report_Cadre));
 			this._Report_OpedU = new EntitySet<Report_OpedU>(new Action<Report_OpedU>(this.attach_Report_OpedU), new Action<Report_OpedU>(this.detach_Report_OpedU));
 			this._Report_Zpz = new EntitySet<Report_Zpz>(new Action<Report_Zpz>(this.attach_Report_Zpz), new Action<Report_Zpz>(this.detach_Report_Zpz));
+			this._MonitoringVCR = new EntitySet<MonitoringVCR>(new Action<MonitoringVCR>(this.attach_MonitoringVCR), new Action<MonitoringVCR>(this.detach_MonitoringVCR));
 			this._Report_Type = default(EntityRef<Report_Type>);
 			this._Report_Flow = default(EntityRef<Report_Flow>);
 			OnCreated();
@@ -1014,6 +1034,19 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Report_Data_MonitoringVCR", Storage="_MonitoringVCR", ThisKey="Id", OtherKey="Id_ReportData")]
+		public EntitySet<MonitoringVCR> MonitoringVCR
+		{
+			get
+			{
+				return this._MonitoringVCR;
+			}
+			set
+			{
+				this._MonitoringVCR.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Report_Type_Report_Data", Storage="_Report_Type", ThisKey="Id_Report", OtherKey="Id", IsForeignKey=true)]
 		public Report_Type Report_Type
 		{
@@ -1265,6 +1298,18 @@ namespace KmsReportWS.LinqToSql
 		}
 		
 		private void detach_Report_Zpz(Report_Zpz entity)
+		{
+			this.SendPropertyChanging();
+			entity.Report_Data = null;
+		}
+		
+		private void attach_MonitoringVCR(MonitoringVCR entity)
+		{
+			this.SendPropertyChanging();
+			entity.Report_Data = this;
+		}
+		
+		private void detach_MonitoringVCR(MonitoringVCR entity)
 		{
 			this.SendPropertyChanging();
 			entity.Report_Data = null;
@@ -10566,6 +10611,205 @@ namespace KmsReportWS.LinqToSql
 					else
 					{
 						this._Id_Report_Data = default(int);
+					}
+					this.SendPropertyChanged("Report_Data");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.MonitoringVCR")]
+	public partial class MonitoringVCR : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Id_MonitoringVCR;
+		
+		private string _RowNum;
+		
+		private System.Nullable<decimal> _ExpertWithEducation;
+		
+		private System.Nullable<decimal> _ExpertWithoutEducation;
+		
+		private int _Id_ReportData;
+		
+		private EntityRef<Report_Data> _Report_Data;
+		
+    #region Определения метода расширяемости
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnId_MonitoringVCRChanging(int value);
+    partial void OnId_MonitoringVCRChanged();
+    partial void OnRowNumChanging(string value);
+    partial void OnRowNumChanged();
+    partial void OnExpertWithEducationChanging(System.Nullable<decimal> value);
+    partial void OnExpertWithEducationChanged();
+    partial void OnExpertWithoutEducationChanging(System.Nullable<decimal> value);
+    partial void OnExpertWithoutEducationChanged();
+    partial void OnId_ReportDataChanging(int value);
+    partial void OnId_ReportDataChanged();
+    #endregion
+		
+		public MonitoringVCR()
+		{
+			this._Report_Data = default(EntityRef<Report_Data>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_MonitoringVCR", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Id_MonitoringVCR
+		{
+			get
+			{
+				return this._Id_MonitoringVCR;
+			}
+			set
+			{
+				if ((this._Id_MonitoringVCR != value))
+				{
+					this.OnId_MonitoringVCRChanging(value);
+					this.SendPropertyChanging();
+					this._Id_MonitoringVCR = value;
+					this.SendPropertyChanged("Id_MonitoringVCR");
+					this.OnId_MonitoringVCRChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RowNum", DbType="VarChar(10) NOT NULL", CanBeNull=false)]
+		public string RowNum
+		{
+			get
+			{
+				return this._RowNum;
+			}
+			set
+			{
+				if ((this._RowNum != value))
+				{
+					this.OnRowNumChanging(value);
+					this.SendPropertyChanging();
+					this._RowNum = value;
+					this.SendPropertyChanged("RowNum");
+					this.OnRowNumChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ExpertWithEducation", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> ExpertWithEducation
+		{
+			get
+			{
+				return this._ExpertWithEducation;
+			}
+			set
+			{
+				if ((this._ExpertWithEducation != value))
+				{
+					this.OnExpertWithEducationChanging(value);
+					this.SendPropertyChanging();
+					this._ExpertWithEducation = value;
+					this.SendPropertyChanged("ExpertWithEducation");
+					this.OnExpertWithEducationChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ExpertWithoutEducation", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> ExpertWithoutEducation
+		{
+			get
+			{
+				return this._ExpertWithoutEducation;
+			}
+			set
+			{
+				if ((this._ExpertWithoutEducation != value))
+				{
+					this.OnExpertWithoutEducationChanging(value);
+					this.SendPropertyChanging();
+					this._ExpertWithoutEducation = value;
+					this.SendPropertyChanged("ExpertWithoutEducation");
+					this.OnExpertWithoutEducationChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_ReportData", DbType="Int NOT NULL")]
+		public int Id_ReportData
+		{
+			get
+			{
+				return this._Id_ReportData;
+			}
+			set
+			{
+				if ((this._Id_ReportData != value))
+				{
+					if (this._Report_Data.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnId_ReportDataChanging(value);
+					this.SendPropertyChanging();
+					this._Id_ReportData = value;
+					this.SendPropertyChanged("Id_ReportData");
+					this.OnId_ReportDataChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Report_Data_MonitoringVCR", Storage="_Report_Data", ThisKey="Id_ReportData", OtherKey="Id", IsForeignKey=true)]
+		public Report_Data Report_Data
+		{
+			get
+			{
+				return this._Report_Data.Entity;
+			}
+			set
+			{
+				Report_Data previousValue = this._Report_Data.Entity;
+				if (((previousValue != value) 
+							|| (this._Report_Data.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Report_Data.Entity = null;
+						previousValue.MonitoringVCR.Remove(this);
+					}
+					this._Report_Data.Entity = value;
+					if ((value != null))
+					{
+						value.MonitoringVCR.Add(this);
+						this._Id_ReportData = value.Id;
+					}
+					else
+					{
+						this._Id_ReportData = default(int);
 					}
 					this.SendPropertyChanged("Report_Data");
 				}

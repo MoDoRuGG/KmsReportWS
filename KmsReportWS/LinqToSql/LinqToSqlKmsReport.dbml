@@ -32,6 +32,7 @@
       <Association Name="Report_Data_Report_Cadre" Member="Report_Cadre" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_Cadre" />
       <Association Name="Report_Data_Report_OpedU" Member="Report_OpedU" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_OpedU" />
       <Association Name="Report_Data_Report_Zpz" Member="Report_Zpz" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_Zpz" />
+      <Association Name="Report_Data_MonitoringVCR" Member="MonitoringVCR" ThisKey="Id" OtherKey="Id_ReportData" Type="MonitoringVCR" />
       <Association Name="Report_Type_Report_Data" Member="Report_Type" ThisKey="Id_Report" OtherKey="Id" Type="Report_Type" IsForeignKey="true" />
       <Association Name="Report_Flow_Report_Data" Member="Report_Flow" ThisKey="Id_Flow" OtherKey="Id" Type="Report_Flow" IsForeignKey="true" />
     </Type>
@@ -471,6 +472,16 @@
       <Column Name="CountStacVmpAnother" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
       <Column Name="CountAssignment" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
       <Association Name="Report_Data_Report_Zpz" Member="Report_Data" ThisKey="Id_Report_Data" OtherKey="Id" Type="Report_Data" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MonitoringVCR" Member="MonitoringVCR">
+    <Type Name="MonitoringVCR">
+      <Column Name="Id_MonitoringVCR" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RowNum" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="ExpertWithEducation" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="ExpertWithoutEducation" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="Id_ReportData" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Report_Data_MonitoringVCR" Member="Report_Data" ThisKey="Id_ReportData" OtherKey="Id" Type="Report_Data" IsForeignKey="true" />
     </Type>
   </Table>
   <Function Name="dbo.cadre_rapport" Method="cadre_rapport" IsComposable="true">

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<REPORT xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <REPORT_NAME>mvcr</REPORT_NAME>
+  <TABLE>
+    <TABLE_NAME>Мониторинг</TABLE_NAME>
+    <TABLE_DESCRIPTION>Мониторинг нарушений прав граждан</TABLE_DESCRIPTION>
+	 <ROW>
+      <ROW_TEXT>Всего экспертиз, из них:</ROW_TEXT>
+      <ROW_NUM>1</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+	<ROW>
+      <ROW_TEXT>МЭЭ</ROW_TEXT>
+      <ROW_NUM>1.1</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+	<ROW>
+      <ROW_TEXT>ЭКМП</ROW_TEXT>
+      <ROW_NUM>1.2</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+	<ROW>
+      <ROW_TEXT>Всего нарушений, из них: </ROW_TEXT>
+      <ROW_NUM>2</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+	<ROW>
+      <ROW_TEXT>нарушения доступности медицинской помощи, из них:</ROW_TEXT>
+      <ROW_NUM>2.1</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+	<ROW>
+      <ROW_TEXT>нарушения сроков ожидания медицинской помощи, установленных территориальной программой ОМС; нарушение условий оказания скорой медицинской помощи (несоблюдение времени доезда до пациента бригады скорой медицинской помощи, при летальном исходе до приезда бригады скорой медицинской помощи)</ROW_TEXT>
+      <ROW_NUM>2.1.1</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+	<ROW>
+      <ROW_TEXT>непроведение диспансерного наблюдения застрахованного лица, включенного в группу диспансерного наблюдения</ROW_TEXT>
+      <ROW_NUM>2.1.2</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+	<ROW>
+      <ROW_TEXT>непрофильная госпитализация</ROW_TEXT>
+      <ROW_NUM>2.1.3</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+	<ROW>
+      <ROW_TEXT>взимание платы с застрахованных лиц за оказанную медицинскую помощь, предусмотренную программами ОМС</ROW_TEXT>
+      <ROW_NUM>2.1.4</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+	<ROW>
+      <ROW_TEXT>Внарушение по вине медицинской организации преемственности в лечении</ROW_TEXT>
+      <ROW_NUM>2.1.5</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+	<ROW>
+      <ROW_TEXT>нарушение при оформлении информированного добровольного согласия на медицинское вмешательство</ROW_TEXT>
+      <ROW_NUM>2.1.6</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+	<ROW>
+      <ROW_TEXT>необоснованный отказ застрахованному лицу в оказании медицинской помощи</ROW_TEXT>
+      <ROW_NUM>2.1.7</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+	<ROW>
+      <ROW_TEXT>нарушение прав застрахованного лица на выбор МО, выбор врача</ROW_TEXT>
+      <ROW_NUM>2.1.8</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+	<ROW>
+      <ROW_TEXT>приобретение пациентом или его представителем в период оказания медицинской помощи по назначению врача лекарственных препаратов для медицинского применения</ROW_TEXT>
+      <ROW_NUM>2.1.9</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+    	<ROW>
+      <ROW_TEXT>прочие нарушения доступности медицинской помощи</ROW_TEXT>
+      <ROW_NUM>2.1.10</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+	
+	<ROW>
+      <ROW_TEXT>нарушения качества медицинской помощи, из них:</ROW_TEXT>
+      <ROW_NUM>2.2</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+	<ROW>
+      <ROW_TEXT>нарушения в связи с установлением неверного диагноза</ROW_TEXT>
+      <ROW_NUM>2.2.1</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+	<ROW>
+      <ROW_TEXT>необоснованное невыполнение консультаций/ консилиумов медицинских работников национальных исследовательских медицинских центров</ROW_TEXT>
+      <ROW_NUM>2.2.2</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+	<ROW>
+      <ROW_TEXT>несоблюдение клинических рекомендаций, порядков оказания медицинской помощи, стандартов медицинской помощи</ROW_TEXT>
+      <ROW_NUM>2.2.3</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+	
+	<ROW>
+      <ROW_TEXT>выполнение непоказанных с клинической точки зрения мероприятий, приведшее к ухудшению состояния здоровья</ROW_TEXT>
+      <ROW_NUM>2.2.4</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+	<ROW>
+      <ROW_TEXT>преждевременное с клинической точки зрения прекращение проведения лечебных мероприятий</ROW_TEXT>
+      <ROW_NUM>2.2.5</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+    	<ROW>
+      <ROW_TEXT>необоснованное назначение лекарственных препаратов</ROW_TEXT>
+      <ROW_NUM>2.2.6</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+    	<ROW>
+      <ROW_TEXT>нарушения при оказании  медицинской помощи, вследствии которых потребовалось повторное обоснованное обращение застрахованного лица за медицинской помощью по поводу того же заболевания</ROW_TEXT>
+      <ROW_NUM>2.2.7</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+    	<ROW>
+      <ROW_TEXT>прочие нарушения качества медицинской помощи</ROW_TEXT>
+      <ROW_NUM>2.2.8</ROW_NUM>
+      <EXCLUSION>false</EXCLUSION>
+    </ROW>
+	
+  </TABLE>
+</REPORT>

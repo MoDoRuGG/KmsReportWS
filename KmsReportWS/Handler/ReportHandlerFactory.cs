@@ -19,6 +19,7 @@ namespace KmsReportWS.Handler
         private readonly IReportHandler _zpzQCollector = new ZpzHandler(ReportType.ZpzQ);
         private readonly IReportHandler _vacCollector = new ReportVaccinationHander(ReportType.Vac);
         private readonly IReportHandler _fssCollector = new FSSMonitoringHandler(ReportType.MFSS);
+        private readonly IReportHandler _mvcrCollector = new MonitoringVCRHandler(ReportType.MVCR);
         private readonly IReportHandler _proposalCollector = new ReportProposalHandler(ReportType.Proposal);
         private readonly IReportHandler _opedFinanceCollector = new ReportOpedFinanceHandler(ReportType.OpedFinance);
 
@@ -38,6 +39,7 @@ namespace KmsReportWS.Handler
                 ReportType.OpedQ => _opedCollectorQ,
                 ReportType.Vac => _vacCollector,
                 ReportType.MFSS => _fssCollector,
+                ReportType.MVCR => _mvcrCollector,
                 ReportType.Proposal => _proposalCollector,
                 ReportType.OpedFinance => _opedFinanceCollector,
                 ReportType.Cadre => _cadreHandlerCollector,
