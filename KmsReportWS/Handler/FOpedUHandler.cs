@@ -66,7 +66,8 @@ namespace KmsReportWS.Handler
                     Ks = row.Ks,
                     Ds = row.Ds,
                     Smp = row.Smp,
-                    Notes = row.Notes
+                    Notes = row.Notes,
+                    NotesGoodReason = row.NotesGoodReason
 
                 });
 
@@ -86,7 +87,8 @@ namespace KmsReportWS.Handler
                 Ks = data.Ks,
                 Ds = data.Ds,
                 Smp = data.Smp,
-                Notes = data.Notes
+                Notes = data.Notes,
+                NotesGoodReason = data.NotesGoodReason
             };
         }
 
@@ -100,7 +102,8 @@ namespace KmsReportWS.Handler
                 Ks = data.Ks,
                 Ds = data.Ds,
                 Smp = data.Smp,
-                Notes = data.Notes
+                Notes = data.Notes,
+                NotesGoodReason = data.NotesGoodReason
             };
         }
         protected override void UpdateReport(LinqToSqlKmsReportDataContext db, AbstractReport inReport)
@@ -127,6 +130,7 @@ namespace KmsReportWS.Handler
                     oped.Ds = row.Ds;
                     oped.Smp = row.Smp;
                     oped.Notes = row.Notes;
+                    oped.NotesGoodReason = row.NotesGoodReason;
                 }
                 else
                 {

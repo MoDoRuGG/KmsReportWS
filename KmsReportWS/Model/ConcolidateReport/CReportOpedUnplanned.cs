@@ -11,6 +11,7 @@ namespace KmsReportWS.Model.ConcolidateReport
         public decimal Ds { get; set; }
         public decimal Smp { get; set; }
         public string Notes { get; set; }
+        public string NotesGoodReason { get; set; }
         //public ReportOpedUDto Data { get; set; }
     }
 

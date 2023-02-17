@@ -28,5 +28,6 @@ namespace KmsReportWS.Model.Report
         public decimal DsLeth { get; set; }
         public decimal SmpLeth { get; set; }
         public string Notes { get; set; }
+        public string NotesGoodReason { get; set; }
     }
 }
