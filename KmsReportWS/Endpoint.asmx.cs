@@ -470,6 +470,13 @@ namespace KmsReportWS
             return consolidate.Collect(yymm);
         }
 
+        [WebMethod]
+        public List<ConsolidateVCR> CreateReportVCR(string yymm)
+        {
+            var consolidate = new ConsolidateVCRReportCollector();
+            return consolidate.Collect(yymm);
+        }
+
 
         [WebMethod]
         public List<ConsolidateCpnpM> CreateReportCpnpM(string yymm)

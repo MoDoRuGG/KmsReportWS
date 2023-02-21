@@ -121,6 +121,7 @@
     <Compile Include="Collector\ConsolidateReport\ConsolidateOpedFinance_2Collector.cs" />
     <Compile Include="Collector\ConsolidateReport\ConsolidateOpedQCollector.cs" />
     <Compile Include="Collector\ConsolidateReport\ConsolidateProposalCollector.cs" />
+    <Compile Include="Collector\ConsolidateReport\ConsolidateVCRReportCollector.cs" />
     <Compile Include="Collector\ConsolidateReport\ConsolidateVSSReportCollector.cs" />
     <Compile Include="ConsolidateEndpoint.asmx.cs">
       <DependentUpon>ConsolidateEndpoint.asmx</DependentUpon>
@@ -152,6 +153,7 @@
       <DependentUpon>LinqToSqlKmsReport.dbml</DependentUpon>
     </Compile>
     <Compile Include="Model\CheckFFOMS2022CommonData.cs" />
+    <Compile Include="Model\ConcolidateReport\ConsolidateVCR.cs" />
     <Compile Include="Model\ConcolidateReport\CReportOpedUnplanned.cs" />
     <Compile Include="Model\ConcolidateReport\CReportCadre.cs" />
     <Compile Include="Model\ConcolidateReport\ConsolidateCardio.cs" />
