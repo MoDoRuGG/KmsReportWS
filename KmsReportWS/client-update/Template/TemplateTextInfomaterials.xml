@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<REPORT xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <REPORT_NAME>Infomat</REPORT_NAME>
+   <TABLE>
+      <TABLE_NAME>Таблица 1</TABLE_NAME>
+      <TABLE_DESCRIPTION>Таблица по инфоматериалам</TABLE_DESCRIPTION>
+      <ROW>
+         <ROW_TEXT>Индивидуальные страницы сайта Общества</ROW_TEXT>
+         <ROW_NUM>1</ROW_NUM>
+         <EXCLUSION>false</EXCLUSION>
+      </ROW>
+      <ROW>
+         <ROW_TEXT>Статьи на сайте Общества</ROW_TEXT>
+         <ROW_NUM>2</ROW_NUM>
+         <EXCLUSION>false</EXCLUSION>
+      </ROW>
+      <ROW>
+         <ROW_TEXT>Видеоролики</ROW_TEXT>
+         <ROW_NUM>3</ROW_NUM>
+         <EXCLUSION>false</EXCLUSION>
+      </ROW>
+      <ROW>
+         <ROW_TEXT>Графические материалы</ROW_TEXT>
+         <ROW_NUM>4</ROW_NUM>
+         <EXCLUSION>false</EXCLUSION>
+      </ROW>
+      <ROW>
+         <ROW_TEXT>Вопросы - ответы</ROW_TEXT>
+         <ROW_NUM>5</ROW_NUM>
+         <EXCLUSION>false</EXCLUSION>
+      </ROW>
+      <ROW>
+         <ROW_TEXT>Иные инфо материалы</ROW_TEXT>
+         <ROW_NUM>6</ROW_NUM>
+         <EXCLUSION>false</EXCLUSION>
+      </ROW>
+      <ROW>
+         <ROW_TEXT>Новости и иные инфоповоды</ROW_TEXT>
+         <ROW_NUM>7</ROW_NUM>
+         <EXCLUSION>false</EXCLUSION>
+      </ROW>
+      <ROW>
+         <ROW_TEXT>Сканы публикаций в СМИ</ROW_TEXT>
+         <ROW_NUM>8</ROW_NUM>
+         <EXCLUSION>false</EXCLUSION>
+      </ROW>
+      <ROW>
+         <ROW_TEXT>Публикации на иных интернет-платформах</ROW_TEXT>
+         <ROW_NUM>9</ROW_NUM>
+         <EXCLUSION>false</EXCLUSION>
+      </ROW>
+   </TABLE>
+</REPORT>

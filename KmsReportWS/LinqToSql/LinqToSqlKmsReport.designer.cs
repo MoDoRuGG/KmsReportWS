@@ -117,6 +117,9 @@ namespace KmsReportWS.LinqToSql
     partial void InsertReport_OpedU(Report_OpedU instance);
     partial void UpdateReport_OpedU(Report_OpedU instance);
     partial void DeleteReport_OpedU(Report_OpedU instance);
+    partial void InsertInfomaterials(Infomaterials instance);
+    partial void UpdateInfomaterials(Infomaterials instance);
+    partial void DeleteInfomaterials(Infomaterials instance);
     #endregion
 		
 		public LinqToSqlKmsReportDataContext() : 
@@ -403,6 +406,14 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
+		public System.Data.Linq.Table<Infomaterials> Infomaterials
+		{
+			get
+			{
+				return this.GetTable<Infomaterials>();
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.cadre_rapport", IsComposable=true)]
 		public IQueryable<cadre_rapportResult> cadre_rapport([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Yymm", DbType="VarChar(4)")] string yymm, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Theme", DbType="VarChar(30)")] string theme)
 		{
@@ -680,6 +691,8 @@ namespace KmsReportWS.LinqToSql
 		
 		private EntitySet<Report_OpedU> _Report_OpedU;
 		
+		private EntitySet<Infomaterials> _Infomaterials;
+		
 		private EntityRef<Report_Type> _Report_Type;
 		
 		private EntityRef<Report_Flow> _Report_Flow;
@@ -719,6 +732,7 @@ namespace KmsReportWS.LinqToSql
 			this._Report_Zpz = new EntitySet<Report_Zpz>(new Action<Report_Zpz>(this.attach_Report_Zpz), new Action<Report_Zpz>(this.detach_Report_Zpz));
 			this._MonitoringVCR = new EntitySet<MonitoringVCR>(new Action<MonitoringVCR>(this.attach_MonitoringVCR), new Action<MonitoringVCR>(this.detach_MonitoringVCR));
 			this._Report_OpedU = new EntitySet<Report_OpedU>(new Action<Report_OpedU>(this.attach_Report_OpedU), new Action<Report_OpedU>(this.detach_Report_OpedU));
+			this._Infomaterials = new EntitySet<Infomaterials>(new Action<Infomaterials>(this.attach_Infomaterials), new Action<Infomaterials>(this.detach_Infomaterials));
 			this._Report_Type = default(EntityRef<Report_Type>);
 			this._Report_Flow = default(EntityRef<Report_Flow>);
 			OnCreated();
@@ -1047,6 +1061,19 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Report_Data_Infomaterials", Storage="_Infomaterials", ThisKey="Id", OtherKey="Id_Report_Data")]
+		public EntitySet<Infomaterials> Infomaterials
+		{
+			get
+			{
+				return this._Infomaterials;
+			}
+			set
+			{
+				this._Infomaterials.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Report_Type_Report_Data", Storage="_Report_Type", ThisKey="Id_Report", OtherKey="Id", IsForeignKey=true)]
 		public Report_Type Report_Type
 		{
@@ -1310,6 +1337,18 @@ namespace KmsReportWS.LinqToSql
 		}
 		
 		private void detach_Report_OpedU(Report_OpedU entity)
+		{
+			this.SendPropertyChanging();
+			entity.Report_Data = null;
+		}
+		
+		private void attach_Infomaterials(Infomaterials entity)
+		{
+			this.SendPropertyChanging();
+			entity.Report_Data = this;
+		}
+		
+		private void detach_Infomaterials(Infomaterials entity)
 		{
 			this.SendPropertyChanging();
 			entity.Report_Data = null;
@@ -10829,6 +10868,205 @@ namespace KmsReportWS.LinqToSql
 					if ((value != null))
 					{
 						value.Report_OpedU.Add(this);
+						this._Id_Report_Data = value.Id;
+					}
+					else
+					{
+						this._Id_Report_Data = default(int);
+					}
+					this.SendPropertyChanged("Report_Data");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Infomaterials")]
+	public partial class Infomaterials : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Id;
+		
+		private decimal _CurrentCount;
+		
+		private decimal _YearsAmount;
+		
+		private int _Id_Report_Data;
+		
+		private string _RowNum;
+		
+		private EntityRef<Report_Data> _Report_Data;
+		
+    #region Определения метода расширяемости
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdChanging(int value);
+    partial void OnIdChanged();
+    partial void OnCurrentCountChanging(decimal value);
+    partial void OnCurrentCountChanged();
+    partial void OnYearsAmountChanging(decimal value);
+    partial void OnYearsAmountChanged();
+    partial void OnId_Report_DataChanging(int value);
+    partial void OnId_Report_DataChanged();
+    partial void OnRowNumChanging(string value);
+    partial void OnRowNumChanged();
+    #endregion
+		
+		public Infomaterials()
+		{
+			this._Report_Data = default(EntityRef<Report_Data>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this.OnIdChanging(value);
+					this.SendPropertyChanging();
+					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CurrentCount", DbType="Decimal(15,3) NOT NULL")]
+		public decimal CurrentCount
+		{
+			get
+			{
+				return this._CurrentCount;
+			}
+			set
+			{
+				if ((this._CurrentCount != value))
+				{
+					this.OnCurrentCountChanging(value);
+					this.SendPropertyChanging();
+					this._CurrentCount = value;
+					this.SendPropertyChanged("CurrentCount");
+					this.OnCurrentCountChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_YearsAmount", DbType="Decimal(15,3) NOT NULL")]
+		public decimal YearsAmount
+		{
+			get
+			{
+				return this._YearsAmount;
+			}
+			set
+			{
+				if ((this._YearsAmount != value))
+				{
+					this.OnYearsAmountChanging(value);
+					this.SendPropertyChanging();
+					this._YearsAmount = value;
+					this.SendPropertyChanged("YearsAmount");
+					this.OnYearsAmountChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_Report_Data", DbType="Int NOT NULL")]
+		public int Id_Report_Data
+		{
+			get
+			{
+				return this._Id_Report_Data;
+			}
+			set
+			{
+				if ((this._Id_Report_Data != value))
+				{
+					if (this._Report_Data.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnId_Report_DataChanging(value);
+					this.SendPropertyChanging();
+					this._Id_Report_Data = value;
+					this.SendPropertyChanged("Id_Report_Data");
+					this.OnId_Report_DataChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RowNum", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string RowNum
+		{
+			get
+			{
+				return this._RowNum;
+			}
+			set
+			{
+				if ((this._RowNum != value))
+				{
+					this.OnRowNumChanging(value);
+					this.SendPropertyChanging();
+					this._RowNum = value;
+					this.SendPropertyChanged("RowNum");
+					this.OnRowNumChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Report_Data_Infomaterials", Storage="_Report_Data", ThisKey="Id_Report_Data", OtherKey="Id", IsForeignKey=true)]
+		public Report_Data Report_Data
+		{
+			get
+			{
+				return this._Report_Data.Entity;
+			}
+			set
+			{
+				Report_Data previousValue = this._Report_Data.Entity;
+				if (((previousValue != value) 
+							|| (this._Report_Data.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Report_Data.Entity = null;
+						previousValue.Infomaterials.Remove(this);
+					}
+					this._Report_Data.Entity = value;
+					if ((value != null))
+					{
+						value.Infomaterials.Add(this);
 						this._Id_Report_Data = value.Id;
 					}
 					else
