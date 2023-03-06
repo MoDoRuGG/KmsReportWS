@@ -69,7 +69,7 @@ namespace KmsReportWS.Handler
 
             report.IdReportData = themeData.Id;
 
-            db.MonitoringVCRs.InsertAllOnSubmit(report.Data.Select(x => new LinqToSql.MonitoringVCR
+            db.MonitoringVCR.InsertAllOnSubmit(report.Data.Select(x => new LinqToSql.MonitoringVCR
             {
                 Id_ReportData = themeData.Id,
                 RowNum = x.RowNum,
@@ -87,7 +87,7 @@ namespace KmsReportWS.Handler
             var report = inReport as Model.Report.ReportMonitoringVCR ??
                      throw new Exception("Error saving new report, because getting empty report");
 
-            var reportDb = db.MonitoringVCRs.Where(x => x.Report_Data.Id_Flow == inReport.IdFlow);
+            var reportDb = db.MonitoringVCR.Where(x => x.Report_Data.Id_Flow == inReport.IdFlow);
 
             foreach (var rep in reportDb)
             {
@@ -100,7 +100,7 @@ namespace KmsReportWS.Handler
                 }
                 else
                 {
-                    db.MonitoringVCRs.InsertOnSubmit(new LinqToSql.MonitoringVCR
+                    db.MonitoringVCR.InsertOnSubmit(new LinqToSql.MonitoringVCR
                     {
                         Id_ReportData = report.IdReportData,
                         RowNum = rep.RowNum,
@@ -120,7 +120,7 @@ namespace KmsReportWS.Handler
             MapFromReportFlow(rep, outReport);
 
             var db = new LinqToSqlKmsReportDataContext(_connStr);
-            var reportRows = db.MonitoringVCRs.Where(x => x.Report_Data.Id_Flow == rep.Id);
+            var reportRows = db.MonitoringVCR.Where(x => x.Report_Data.Id_Flow == rep.Id);
 
             if(reportRows != null)
             {

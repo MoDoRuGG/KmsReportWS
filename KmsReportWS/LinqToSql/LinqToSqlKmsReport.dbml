@@ -33,7 +33,7 @@
       <Association Name="Report_Data_Report_Zpz" Member="Report_Zpz" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_Zpz" />
       <Association Name="Report_Data_MonitoringVCR" Member="MonitoringVCR" ThisKey="Id" OtherKey="Id_ReportData" Type="MonitoringVCR" />
       <Association Name="Report_Data_Report_OpedU" Member="Report_OpedU" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_OpedU" />
-      <Association Name="Report_Data_Infomaterials" Member="Infomaterials" ThisKey="Id" OtherKey="Id_Report_Data" Type="Infomaterials" />
+      <Association Name="Report_Data_Infomaterial" Member="Infomaterial" ThisKey="Id" OtherKey="Id_Report_Data" Type="Infomaterial" />
       <Association Name="Report_Type_Report_Data" Member="Report_Type" ThisKey="Id_Report" OtherKey="Id" Type="Report_Type" IsForeignKey="true" />
       <Association Name="Report_Flow_Report_Data" Member="Report_Flow" ThisKey="Id_Flow" OtherKey="Id" Type="Report_Flow" IsForeignKey="true" />
     </Type>
@@ -486,14 +486,14 @@
       <Association Name="Report_Data_Report_OpedU" Member="Report_Data" ThisKey="Id_Report_Data" OtherKey="Id" Type="Report_Data" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.Infomaterials" Member="Infomaterials">
-    <Type Name="Infomaterials">
+  <Table Name="dbo.Infomaterial" Member="Infomaterial">
+    <Type Name="Infomaterial">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="CurrentCount" Type="System.Decimal" DbType="Decimal(15,3) NOT NULL" CanBeNull="false" />
       <Column Name="YearsAmount" Type="System.Decimal" DbType="Decimal(15,3) NOT NULL" CanBeNull="false" />
       <Column Name="Id_Report_Data" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="RowNum" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
-      <Association Name="Report_Data_Infomaterials" Member="Report_Data" ThisKey="Id_Report_Data" OtherKey="Id" Type="Report_Data" IsForeignKey="true" />
+      <Association Name="Report_Data_Infomaterial" Member="Report_Data" ThisKey="Id_Report_Data" OtherKey="Id" Type="Report_Data" IsForeignKey="true" />
     </Type>
   </Table>
   <Function Name="dbo.cadre_rapport" Method="cadre_rapport" IsComposable="true">

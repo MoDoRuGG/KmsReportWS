@@ -22,6 +22,6 @@ namespace KmsReportWS.Model.Report
         [Description("proposal")] Proposal,
         [Description("oped_fin")] OpedFinance,
         [Description("cadre")] Cadre,
-
+        [Description("infomat")] Infomaterial,
     }
 }

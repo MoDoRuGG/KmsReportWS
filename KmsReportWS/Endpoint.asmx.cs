@@ -284,6 +284,12 @@ namespace KmsReportWS
         }
 
         [WebMethod]
+        public void WebReportInfomaterial(ReportInfomaterial report)
+        {
+
+        }
+
+        [WebMethod]
         public void WebReportCadre(ReportCadre report)
         {
 
