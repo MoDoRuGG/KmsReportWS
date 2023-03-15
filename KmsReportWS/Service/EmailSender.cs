@@ -12,7 +12,7 @@ namespace KmsReportWS.Service
         private const string NameSender = "KmsReport";
         private const string User = "admin.kmsreport";
         private const string Password = "jwJdWagc4BT3";
-        private const string SmtpServer = "mail.kapmed.ru";
+        private const string SmtpServer = "smtp.kapmed.ru";
         private const string Sign = "\r\nДанное письмо сформировано автоматически. Пожалуйста, не отвечайте на него.";
         private const int SmtpPort = 587;
 
@@ -49,7 +49,7 @@ namespace KmsReportWS.Service
                 emailMessage.To.Add(new MailboxAddress(email));
             }
 
-            //_smtpClient.Send(emailMessage);
+            _smtpClient.Send(emailMessage);
             _smtpClient.Disconnect(true);
 
         }
