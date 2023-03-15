@@ -54,11 +54,11 @@ namespace KmsReportWS.Service
             }
 
             var report = db.Report_Flow.Single(x => x.Id == idReport);
-
-            string text = $"Пользователь: {userName.Surname} {userName.Name} {userName.MiddleName} - оставил новый комментарий отчету: " + Environment.NewLine +
-                          comment + Environment.NewLine;
-            string yymmReport = YymmUtils.ConvertYymmToText(report.Yymm);
             string reportName = CollectReportName(report.Id_Report_Type);
+            string yymmReport = YymmUtils.ConvertYymmToText(report.Yymm);
+            string text = $"Пользователь {userName.Surname} {userName.Name} {userName.MiddleName} оставил новый комментарий отчету {reportName} за {yymmReport}" + ": " + Environment.NewLine + Environment.NewLine +
+                          '"'+ comment +'"' + Environment.NewLine;
+            
             string theme = $"{reportName} за {yymmReport} добавлен новый комментарий. ";
             string[] regions = {report.Id_Region};
             var emails = CollectFilialEmails(regions);
