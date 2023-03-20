@@ -84,7 +84,7 @@ namespace KmsReportWS.Handler
                     TotalPersRepeat = Convert.ToInt32(themeData.General_field_2 ?? 0)
                 };
 
-                var dataList = themeData.Report_Iilzs.Select(MapThemeFromPersist);
+                var dataList = themeData.Report_Iilz.Select(MapThemeFromPersist);
                 dto.Data.AddRange(dataList);
 
                 outReport.ReportDataList.Add(dto);

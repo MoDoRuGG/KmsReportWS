@@ -20,7 +20,9 @@ namespace KmsReportWS.LinqToSql
 	using System.Linq.Expressions;
 	using System.ComponentModel;
 	using System;
-    [global::System.Data.Linq.Mapping.DatabaseAttribute(Name="kms_report")]
+	
+	
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="kms_report")]
 	public partial class LinqToSqlKmsReportDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -97,9 +99,6 @@ namespace KmsReportWS.LinqToSql
     partial void InsertReport_Type(Report_Type instance);
     partial void UpdateReport_Type(Report_Type instance);
     partial void DeleteReport_Type(Report_Type instance);
-    partial void InsertReport_Iilz(Report_Iilz instance);
-    partial void UpdateReport_Iilz(Report_Iilz instance);
-    partial void DeleteReport_Iilz(Report_Iilz instance);
     partial void InsertReport_Cadre(Report_Cadre instance);
     partial void UpdateReport_Cadre(Report_Cadre instance);
     partial void DeleteReport_Cadre(Report_Cadre instance);
@@ -115,9 +114,9 @@ namespace KmsReportWS.LinqToSql
     partial void InsertReport_OpedU(Report_OpedU instance);
     partial void UpdateReport_OpedU(Report_OpedU instance);
     partial void DeleteReport_OpedU(Report_OpedU instance);
-    partial void InsertInfomaterial(Infomaterial instance);
-    partial void UpdateInfomaterial(Infomaterial instance);
-    partial void DeleteInfomaterial(Infomaterial instance);
+    partial void InsertReport_Iilz(Report_Iilz instance);
+    partial void UpdateReport_Iilz(Report_Iilz instance);
+    partial void DeleteReport_Iilz(Report_Iilz instance);
     #endregion
 		
 		public LinqToSqlKmsReportDataContext() : 
@@ -333,16 +332,8 @@ namespace KmsReportWS.LinqToSql
 				return this.GetTable<Report_OpedFinance>();
 			}
 		}
-
-        public System.Data.Linq.Table<Report_Infomaterial> Report_Infomaterials 
-        {
-            get
-            {
-                return this.GetTable<Report_Infomaterial>();
-            }
-        }
-
-        public System.Data.Linq.Table<OpedFinancePlan> OpedFinancePlans
+		
+		public System.Data.Linq.Table<OpedFinancePlan> OpedFinancePlans
 		{
 			get
 			{
@@ -355,14 +346,6 @@ namespace KmsReportWS.LinqToSql
 			get
 			{
 				return this.GetTable<Report_Type>();
-			}
-		}
-		
-		public System.Data.Linq.Table<Report_Iilz> Report_Iilzs
-		{
-			get
-			{
-				return this.GetTable<Report_Iilz>();
 			}
 		}
 		
@@ -406,11 +389,11 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
-		public System.Data.Linq.Table<Infomaterial> Infomaterial
+		public System.Data.Linq.Table<Report_Iilz> Report_Iilzs
 		{
 			get
 			{
-				return this.GetTable<Infomaterial>();
+				return this.GetTable<Report_Iilz>();
 			}
 		}
 		
@@ -680,10 +663,6 @@ namespace KmsReportWS.LinqToSql
 		private EntitySet<Report_Proposal> _Report_Proposals;
 		
 		private EntitySet<Report_OpedFinance> _Report_OpedFinances;
-
-        private EntitySet<Report_Infomaterial> _Report_Infomaterials;
-
-        private EntitySet<Report_Iilz> _Report_Iilzs;
 		
 		private EntitySet<Report_Cadre> _Report_Cadre;
 		
@@ -693,7 +672,7 @@ namespace KmsReportWS.LinqToSql
 		
 		private EntitySet<Report_OpedU> _Report_OpedU;
 		
-		private EntitySet<Infomaterial> _Infomaterial;
+		private EntitySet<Report_Iilz> _Report_Iilz;
 		
 		private EntityRef<Report_Type> _Report_Type;
 		
@@ -729,12 +708,11 @@ namespace KmsReportWS.LinqToSql
 			this._FSSMonitroings = new EntitySet<FSSMonitroing>(new Action<FSSMonitroing>(this.attach_FSSMonitroings), new Action<FSSMonitroing>(this.detach_FSSMonitroings));
 			this._Report_Proposals = new EntitySet<Report_Proposal>(new Action<Report_Proposal>(this.attach_Report_Proposals), new Action<Report_Proposal>(this.detach_Report_Proposals));
 			this._Report_OpedFinances = new EntitySet<Report_OpedFinance>(new Action<Report_OpedFinance>(this.attach_Report_OpedFinances), new Action<Report_OpedFinance>(this.detach_Report_OpedFinances));
-			this._Report_Iilzs = new EntitySet<Report_Iilz>(new Action<Report_Iilz>(this.attach_Report_Iilzs), new Action<Report_Iilz>(this.detach_Report_Iilzs));
 			this._Report_Cadre = new EntitySet<Report_Cadre>(new Action<Report_Cadre>(this.attach_Report_Cadre), new Action<Report_Cadre>(this.detach_Report_Cadre));
 			this._Report_Zpz = new EntitySet<Report_Zpz>(new Action<Report_Zpz>(this.attach_Report_Zpz), new Action<Report_Zpz>(this.detach_Report_Zpz));
 			this._MonitoringVCR = new EntitySet<MonitoringVCR>(new Action<MonitoringVCR>(this.attach_MonitoringVCR), new Action<MonitoringVCR>(this.detach_MonitoringVCR));
 			this._Report_OpedU = new EntitySet<Report_OpedU>(new Action<Report_OpedU>(this.attach_Report_OpedU), new Action<Report_OpedU>(this.detach_Report_OpedU));
-			this._Infomaterial = new EntitySet<Infomaterial>(new Action<Infomaterial>(this.attach_Infomaterial), new Action<Infomaterial>(this.detach_Infomaterial));
+			this._Report_Iilz = new EntitySet<Report_Iilz>(new Action<Report_Iilz>(this.attach_Report_Iilz), new Action<Report_Iilz>(this.detach_Report_Iilz));
 			this._Report_Type = default(EntityRef<Report_Type>);
 			this._Report_Flow = default(EntityRef<Report_Flow>);
 			OnCreated();
@@ -997,29 +975,6 @@ namespace KmsReportWS.LinqToSql
 				this._Report_OpedFinances.Assign(value);
 			}
 		}
-
-        [global::System.Data.Linq.Mapping.AssociationAttribute(Name = "Report_Data_Report_Infomaterial", Storage = "_Report_Infomaterials", ThisKey = "Id", OtherKey = "id_ReportData")]
-        public EntitySet<Report_Infomaterial> Report_Infomaterials {
-            get {
-                return this._Report_Infomaterials;
-            }
-            set {
-                this._Report_Infomaterials.Assign(value);
-            }
-        }
-
-        [global::System.Data.Linq.Mapping.AssociationAttribute(Name="Report_Data_Report_Iilz", Storage="_Report_Iilzs", ThisKey="Id", OtherKey="Id_Report_Data")]
-		public EntitySet<Report_Iilz> Report_Iilzs
-		{
-			get
-			{
-				return this._Report_Iilzs;
-			}
-			set
-			{
-				this._Report_Iilzs.Assign(value);
-			}
-		}
 		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Report_Data_Report_Cadre", Storage="_Report_Cadre", ThisKey="Id", OtherKey="Id_Report_Data")]
 		public EntitySet<Report_Cadre> Report_Cadre
@@ -1073,16 +1028,16 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Report_Data_Infomaterial", Storage="_Infomaterial", ThisKey="Id", OtherKey="Id_Report_Data")]
-		public EntitySet<Infomaterial> Infomaterial
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Report_Data_Report_Iilz", Storage="_Report_Iilz", ThisKey="Id", OtherKey="Id_Report_Data")]
+		public EntitySet<Report_Iilz> Report_Iilz
 		{
 			get
 			{
-				return this._Infomaterial;
+				return this._Report_Iilz;
 			}
 			set
 			{
-				this._Infomaterial.Assign(value);
+				this._Report_Iilz.Assign(value);
 			}
 		}
 		
@@ -1294,18 +1249,6 @@ namespace KmsReportWS.LinqToSql
 			entity.Report_Data = null;
 		}
 		
-		private void attach_Report_Iilzs(Report_Iilz entity)
-		{
-			this.SendPropertyChanging();
-			entity.Report_Data = this;
-		}
-		
-		private void detach_Report_Iilzs(Report_Iilz entity)
-		{
-			this.SendPropertyChanging();
-			entity.Report_Data = null;
-		}
-		
 		private void attach_Report_Cadre(Report_Cadre entity)
 		{
 			this.SendPropertyChanging();
@@ -1354,13 +1297,13 @@ namespace KmsReportWS.LinqToSql
 			entity.Report_Data = null;
 		}
 		
-		private void attach_Infomaterial(Infomaterial entity)
+		private void attach_Report_Iilz(Report_Iilz entity)
 		{
 			this.SendPropertyChanging();
 			entity.Report_Data = this;
 		}
 		
-		private void detach_Infomaterial(Infomaterial entity)
+		private void detach_Report_Iilz(Report_Iilz entity)
 		{
 			this.SendPropertyChanging();
 			entity.Report_Data = null;
@@ -7358,189 +7301,8 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 	}
-
-    [global::System.Data.Linq.Mapping.TableAttribute(Name = "dbo.Report_Infomaterial")]
-    public partial class Report_Infomaterial : INotifyPropertyChanging, INotifyPropertyChanged
-    {
-
-        private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-
-        private int _Id;
-
-        private string _RowNum;
-
-        private System.Nullable<decimal> _CurrentCount;
-
-        private System.Nullable<decimal> _YearsAmount;
-
-        private int _id_ReportData;
-
-        private EntityRef<Report_Data> _Report_Data;
-
-        #region Определения метода расширяемости
-        partial void OnLoaded();
-        partial void OnValidate(System.Data.Linq.ChangeAction action);
-        partial void OnCreated();
-        partial void OnIdChanging(int value);
-        partial void OnIdChanged();
-        partial void OnRowNumChanging(string value);
-        partial void OnRowNumChanged();
-        partial void OnCurrentCountChanging(System.Nullable<decimal> value);
-        partial void OnCurrentCountChanged();
-        partial void OnYearsAmountChanging(System.Nullable<decimal> value);
-        partial void OnYearsAmountChanged();
-        partial void Onid_ReportDataChanging(int value);
-        partial void Onid_ReportDataChanged();
-        #endregion
-
-        public Report_Infomaterial()
-        {
-            this._Report_Data = default(EntityRef<Report_Data>);
-            OnCreated();
-        }
-
-        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Id", AutoSync = AutoSync.OnInsert, DbType = "Int NOT NULL IDENTITY", IsPrimaryKey = true, IsDbGenerated = true)]
-        public int Id {
-            get {
-                return this._Id;
-            }
-            set {
-                if ((this._Id != value))
-                {
-                    this.OnIdChanging(value);
-                    this.SendPropertyChanging();
-                    this._Id = value;
-                    this.SendPropertyChanged("Id");
-                    this.OnIdChanged();
-                }
-            }
-        }
-
-        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_RowNum", DbType = "VarChar(15) NOT NULL", CanBeNull = false)]
-        public string RowNum {
-            get {
-                return this._RowNum;
-            }
-            set {
-                if ((this._RowNum != value))
-                {
-                    this.OnRowNumChanging(value);
-                    this.SendPropertyChanging();
-                    this._RowNum = value;
-                    this.SendPropertyChanged("RowNum");
-                    this.OnRowNumChanged();
-                }
-            }
-        }
-
-        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_CurrentCount", DbType = "Decimal(15,2)")]
-        public System.Nullable<decimal> CurrentCount {
-            get {
-                return this._CurrentCount;
-            }
-            set {
-                if ((this._CurrentCount != value))
-                {
-                    this.OnCurrentCountChanging(value);
-                    this.SendPropertyChanging();
-                    this._CurrentCount = value;
-                    this.SendPropertyChanged("CurrentCount");
-                    this.OnCurrentCountChanged();
-                }
-            }
-        }
-
-        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_YearsAmount", DbType = "Decimal(15,2)")]
-        public System.Nullable<decimal> YearsAmount {
-            get {
-                return this._YearsAmount;
-            }
-            set {
-                if ((this._YearsAmount != value))
-                {
-                    this.OnYearsAmountChanging(value);
-                    this.SendPropertyChanging();
-                    this._YearsAmount = value;
-                    this.SendPropertyChanged("YearsAmount");
-                    this.OnYearsAmountChanged();
-                }
-            }
-        }
-
-        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_id_ReportData", DbType = "Int NOT NULL")]
-        public int id_ReportData {
-            get {
-                return this._id_ReportData;
-            }
-            set {
-                if ((this._id_ReportData != value))
-                {
-                    if (this._Report_Data.HasLoadedOrAssignedValue)
-                    {
-                        throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-                    }
-                    this.Onid_ReportDataChanging(value);
-                    this.SendPropertyChanging();
-                    this._id_ReportData = value;
-                    this.SendPropertyChanged("id_ReportData");
-                    this.Onid_ReportDataChanged();
-                }
-            }
-        }
-
-        [global::System.Data.Linq.Mapping.AssociationAttribute(Name = "Report_Data_Report_Infomaterial", Storage = "_Report_Data", ThisKey = "id_ReportData", OtherKey = "Id", IsForeignKey = true)]
-        public Report_Data Report_Data {
-            get {
-                return this._Report_Data.Entity;
-            }
-            set {
-                Report_Data previousValue = this._Report_Data.Entity;
-                if (((previousValue != value)
-                            || (this._Report_Data.HasLoadedOrAssignedValue == false)))
-                {
-                    this.SendPropertyChanging();
-                    if ((previousValue != null))
-                    {
-                        this._Report_Data.Entity = null;
-                        previousValue.Report_Infomaterials.Remove(this);
-                    }
-                    this._Report_Data.Entity = value;
-                    if ((value != null))
-                    {
-                        value.Report_Infomaterials.Add(this);
-                        this._id_ReportData = value.Id;
-                    }
-                    else
-                    {
-                        this._id_ReportData = default(int);
-                    }
-                    this.SendPropertyChanged("Report_Data");
-                }
-            }
-        }
-
-        public event PropertyChangingEventHandler PropertyChanging;
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected virtual void SendPropertyChanging()
-        {
-            if ((this.PropertyChanging != null))
-            {
-                this.PropertyChanging(this, emptyChangingEventArgs);
-            }
-        }
-
-        protected virtual void SendPropertyChanged(String propertyName)
-        {
-            if ((this.PropertyChanged != null))
-            {
-                this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-
-    [global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.OpedFinancePlan")]
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.OpedFinancePlan")]
 	public partial class OpedFinancePlan : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
@@ -7954,325 +7716,6 @@ namespace KmsReportWS.LinqToSql
 		{
 			this.SendPropertyChanging();
 			entity.Report_Type = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Report_Iilz")]
-	public partial class Report_Iilz : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _Id;
-		
-		private int _Id_Report_Data;
-		
-		private string _Code;
-		
-		private System.Nullable<int> _Count_Pers_First;
-		
-		private System.Nullable<int> _Count_Pers_Repeat;
-		
-		private System.Nullable<int> _Count_Messages;
-		
-		private System.Nullable<decimal> _Total_Cost;
-		
-		private string _Accounting_Document;
-		
-		private System.Nullable<decimal> _average_cost_per_message;
-		
-		private System.Nullable<decimal> _average_cost_of_informing_1_PL;
-		
-		private EntityRef<Report_Data> _Report_Data;
-		
-    #region Определения метода расширяемости
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnIdChanging(int value);
-    partial void OnIdChanged();
-    partial void OnId_Report_DataChanging(int value);
-    partial void OnId_Report_DataChanged();
-    partial void OnCodeChanging(string value);
-    partial void OnCodeChanged();
-    partial void OnCount_Pers_FirstChanging(System.Nullable<int> value);
-    partial void OnCount_Pers_FirstChanged();
-    partial void OnCount_Pers_RepeatChanging(System.Nullable<int> value);
-    partial void OnCount_Pers_RepeatChanged();
-    partial void OnCount_MessagesChanging(System.Nullable<int> value);
-    partial void OnCount_MessagesChanged();
-    partial void OnTotal_CostChanging(System.Nullable<decimal> value);
-    partial void OnTotal_CostChanged();
-    partial void OnAccounting_DocumentChanging(string value);
-    partial void OnAccounting_DocumentChanged();
-    partial void Onaverage_cost_per_messageChanging(System.Nullable<decimal> value);
-    partial void Onaverage_cost_per_messageChanged();
-    partial void Onaverage_cost_of_informing_1_PLChanging(System.Nullable<decimal> value);
-    partial void Onaverage_cost_of_informing_1_PLChanged();
-    #endregion
-		
-		public Report_Iilz()
-		{
-			this._Report_Data = default(EntityRef<Report_Data>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int Id
-		{
-			get
-			{
-				return this._Id;
-			}
-			set
-			{
-				if ((this._Id != value))
-				{
-					this.OnIdChanging(value);
-					this.SendPropertyChanging();
-					this._Id = value;
-					this.SendPropertyChanged("Id");
-					this.OnIdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_Report_Data", DbType="Int NOT NULL")]
-		public int Id_Report_Data
-		{
-			get
-			{
-				return this._Id_Report_Data;
-			}
-			set
-			{
-				if ((this._Id_Report_Data != value))
-				{
-					if (this._Report_Data.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnId_Report_DataChanging(value);
-					this.SendPropertyChanging();
-					this._Id_Report_Data = value;
-					this.SendPropertyChanged("Id_Report_Data");
-					this.OnId_Report_DataChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Code", DbType="VarChar(50)")]
-		public string Code
-		{
-			get
-			{
-				return this._Code;
-			}
-			set
-			{
-				if ((this._Code != value))
-				{
-					this.OnCodeChanging(value);
-					this.SendPropertyChanging();
-					this._Code = value;
-					this.SendPropertyChanged("Code");
-					this.OnCodeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Count_Pers_First", DbType="Int")]
-		public System.Nullable<int> Count_Pers_First
-		{
-			get
-			{
-				return this._Count_Pers_First;
-			}
-			set
-			{
-				if ((this._Count_Pers_First != value))
-				{
-					this.OnCount_Pers_FirstChanging(value);
-					this.SendPropertyChanging();
-					this._Count_Pers_First = value;
-					this.SendPropertyChanged("Count_Pers_First");
-					this.OnCount_Pers_FirstChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Count_Pers_Repeat", DbType="Int")]
-		public System.Nullable<int> Count_Pers_Repeat
-		{
-			get
-			{
-				return this._Count_Pers_Repeat;
-			}
-			set
-			{
-				if ((this._Count_Pers_Repeat != value))
-				{
-					this.OnCount_Pers_RepeatChanging(value);
-					this.SendPropertyChanging();
-					this._Count_Pers_Repeat = value;
-					this.SendPropertyChanged("Count_Pers_Repeat");
-					this.OnCount_Pers_RepeatChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Count_Messages", DbType="Int")]
-		public System.Nullable<int> Count_Messages
-		{
-			get
-			{
-				return this._Count_Messages;
-			}
-			set
-			{
-				if ((this._Count_Messages != value))
-				{
-					this.OnCount_MessagesChanging(value);
-					this.SendPropertyChanging();
-					this._Count_Messages = value;
-					this.SendPropertyChanged("Count_Messages");
-					this.OnCount_MessagesChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Total_Cost", DbType="Decimal(15,2)")]
-		public System.Nullable<decimal> Total_Cost
-		{
-			get
-			{
-				return this._Total_Cost;
-			}
-			set
-			{
-				if ((this._Total_Cost != value))
-				{
-					this.OnTotal_CostChanging(value);
-					this.SendPropertyChanging();
-					this._Total_Cost = value;
-					this.SendPropertyChanged("Total_Cost");
-					this.OnTotal_CostChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Accounting_Document", DbType="VarChar(MAX)")]
-		public string Accounting_Document
-		{
-			get
-			{
-				return this._Accounting_Document;
-			}
-			set
-			{
-				if ((this._Accounting_Document != value))
-				{
-					this.OnAccounting_DocumentChanging(value);
-					this.SendPropertyChanging();
-					this._Accounting_Document = value;
-					this.SendPropertyChanged("Accounting_Document");
-					this.OnAccounting_DocumentChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_average_cost_per_message", DbType="Decimal(15,2)")]
-		public System.Nullable<decimal> average_cost_per_message
-		{
-			get
-			{
-				return this._average_cost_per_message;
-			}
-			set
-			{
-				if ((this._average_cost_per_message != value))
-				{
-					this.Onaverage_cost_per_messageChanging(value);
-					this.SendPropertyChanging();
-					this._average_cost_per_message = value;
-					this.SendPropertyChanged("average_cost_per_message");
-					this.Onaverage_cost_per_messageChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_average_cost_of_informing_1_PL", DbType="Decimal(15,2)")]
-		public System.Nullable<decimal> average_cost_of_informing_1_PL
-		{
-			get
-			{
-				return this._average_cost_of_informing_1_PL;
-			}
-			set
-			{
-				if ((this._average_cost_of_informing_1_PL != value))
-				{
-					this.Onaverage_cost_of_informing_1_PLChanging(value);
-					this.SendPropertyChanging();
-					this._average_cost_of_informing_1_PL = value;
-					this.SendPropertyChanged("average_cost_of_informing_1_PL");
-					this.Onaverage_cost_of_informing_1_PLChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Report_Data_Report_Iilz", Storage="_Report_Data", ThisKey="Id_Report_Data", OtherKey="Id", IsForeignKey=true)]
-		public Report_Data Report_Data
-		{
-			get
-			{
-				return this._Report_Data.Entity;
-			}
-			set
-			{
-				Report_Data previousValue = this._Report_Data.Entity;
-				if (((previousValue != value) 
-							|| (this._Report_Data.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Report_Data.Entity = null;
-						previousValue.Report_Iilzs.Remove(this);
-					}
-					this._Report_Data.Entity = value;
-					if ((value != null))
-					{
-						value.Report_Iilzs.Add(this);
-						this._Id_Report_Data = value.Id;
-					}
-					else
-					{
-						this._Id_Report_Data = default(int);
-					}
-					this.SendPropertyChanged("Report_Data");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
 		}
 	}
 	
@@ -11093,21 +10536,31 @@ namespace KmsReportWS.LinqToSql
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Infomaterial")]
-	public partial class Infomaterial : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Report_Iilz")]
+	public partial class Report_Iilz : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
 		private int _Id;
 		
-		private decimal _CurrentCount;
-		
-		private decimal _YearsAmount;
-		
 		private int _Id_Report_Data;
 		
-		private string _RowNum;
+		private string _Code;
+		
+		private System.Nullable<int> _Count_Pers_First;
+		
+		private System.Nullable<int> _Count_Pers_Repeat;
+		
+		private System.Nullable<int> _Count_Messages;
+		
+		private System.Nullable<decimal> _Total_Cost;
+		
+		private string _Accounting_Document;
+		
+		private System.Nullable<decimal> _average_cost_per_message;
+		
+		private System.Nullable<decimal> _average_cost_of_informing_1_PL;
 		
 		private EntityRef<Report_Data> _Report_Data;
 		
@@ -11117,17 +10570,27 @@ namespace KmsReportWS.LinqToSql
     partial void OnCreated();
     partial void OnIdChanging(int value);
     partial void OnIdChanged();
-    partial void OnCurrentCountChanging(decimal value);
-    partial void OnCurrentCountChanged();
-    partial void OnYearsAmountChanging(decimal value);
-    partial void OnYearsAmountChanged();
     partial void OnId_Report_DataChanging(int value);
     partial void OnId_Report_DataChanged();
-    partial void OnRowNumChanging(string value);
-    partial void OnRowNumChanged();
+    partial void OnCodeChanging(string value);
+    partial void OnCodeChanged();
+    partial void OnCount_Pers_FirstChanging(System.Nullable<int> value);
+    partial void OnCount_Pers_FirstChanged();
+    partial void OnCount_Pers_RepeatChanging(System.Nullable<int> value);
+    partial void OnCount_Pers_RepeatChanged();
+    partial void OnCount_MessagesChanging(System.Nullable<int> value);
+    partial void OnCount_MessagesChanged();
+    partial void OnTotal_CostChanging(System.Nullable<decimal> value);
+    partial void OnTotal_CostChanged();
+    partial void OnAccounting_DocumentChanging(string value);
+    partial void OnAccounting_DocumentChanged();
+    partial void Onaverage_cost_per_messageChanging(System.Nullable<decimal> value);
+    partial void Onaverage_cost_per_messageChanged();
+    partial void Onaverage_cost_of_informing_1_PLChanging(System.Nullable<decimal> value);
+    partial void Onaverage_cost_of_informing_1_PLChanged();
     #endregion
 		
-		public Infomaterial()
+		public Report_Iilz()
 		{
 			this._Report_Data = default(EntityRef<Report_Data>);
 			OnCreated();
@@ -11149,46 +10612,6 @@ namespace KmsReportWS.LinqToSql
 					this._Id = value;
 					this.SendPropertyChanged("Id");
 					this.OnIdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CurrentCount", DbType="Decimal(15,3) NOT NULL")]
-		public decimal CurrentCount
-		{
-			get
-			{
-				return this._CurrentCount;
-			}
-			set
-			{
-				if ((this._CurrentCount != value))
-				{
-					this.OnCurrentCountChanging(value);
-					this.SendPropertyChanging();
-					this._CurrentCount = value;
-					this.SendPropertyChanged("CurrentCount");
-					this.OnCurrentCountChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_YearsAmount", DbType="Decimal(15,3) NOT NULL")]
-		public decimal YearsAmount
-		{
-			get
-			{
-				return this._YearsAmount;
-			}
-			set
-			{
-				if ((this._YearsAmount != value))
-				{
-					this.OnYearsAmountChanging(value);
-					this.SendPropertyChanging();
-					this._YearsAmount = value;
-					this.SendPropertyChanged("YearsAmount");
-					this.OnYearsAmountChanged();
 				}
 			}
 		}
@@ -11217,27 +10640,167 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RowNum", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
-		public string RowNum
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Code", DbType="VarChar(50)")]
+		public string Code
 		{
 			get
 			{
-				return this._RowNum;
+				return this._Code;
 			}
 			set
 			{
-				if ((this._RowNum != value))
+				if ((this._Code != value))
 				{
-					this.OnRowNumChanging(value);
+					this.OnCodeChanging(value);
 					this.SendPropertyChanging();
-					this._RowNum = value;
-					this.SendPropertyChanged("RowNum");
-					this.OnRowNumChanged();
+					this._Code = value;
+					this.SendPropertyChanged("Code");
+					this.OnCodeChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Report_Data_Infomaterial", Storage="_Report_Data", ThisKey="Id_Report_Data", OtherKey="Id", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Count_Pers_First", DbType="Int")]
+		public System.Nullable<int> Count_Pers_First
+		{
+			get
+			{
+				return this._Count_Pers_First;
+			}
+			set
+			{
+				if ((this._Count_Pers_First != value))
+				{
+					this.OnCount_Pers_FirstChanging(value);
+					this.SendPropertyChanging();
+					this._Count_Pers_First = value;
+					this.SendPropertyChanged("Count_Pers_First");
+					this.OnCount_Pers_FirstChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Count_Pers_Repeat", DbType="Int")]
+		public System.Nullable<int> Count_Pers_Repeat
+		{
+			get
+			{
+				return this._Count_Pers_Repeat;
+			}
+			set
+			{
+				if ((this._Count_Pers_Repeat != value))
+				{
+					this.OnCount_Pers_RepeatChanging(value);
+					this.SendPropertyChanging();
+					this._Count_Pers_Repeat = value;
+					this.SendPropertyChanged("Count_Pers_Repeat");
+					this.OnCount_Pers_RepeatChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Count_Messages", DbType="Int")]
+		public System.Nullable<int> Count_Messages
+		{
+			get
+			{
+				return this._Count_Messages;
+			}
+			set
+			{
+				if ((this._Count_Messages != value))
+				{
+					this.OnCount_MessagesChanging(value);
+					this.SendPropertyChanging();
+					this._Count_Messages = value;
+					this.SendPropertyChanged("Count_Messages");
+					this.OnCount_MessagesChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Total_Cost", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> Total_Cost
+		{
+			get
+			{
+				return this._Total_Cost;
+			}
+			set
+			{
+				if ((this._Total_Cost != value))
+				{
+					this.OnTotal_CostChanging(value);
+					this.SendPropertyChanging();
+					this._Total_Cost = value;
+					this.SendPropertyChanged("Total_Cost");
+					this.OnTotal_CostChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Accounting_Document", DbType="VarChar(MAX)")]
+		public string Accounting_Document
+		{
+			get
+			{
+				return this._Accounting_Document;
+			}
+			set
+			{
+				if ((this._Accounting_Document != value))
+				{
+					this.OnAccounting_DocumentChanging(value);
+					this.SendPropertyChanging();
+					this._Accounting_Document = value;
+					this.SendPropertyChanged("Accounting_Document");
+					this.OnAccounting_DocumentChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_average_cost_per_message", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> average_cost_per_message
+		{
+			get
+			{
+				return this._average_cost_per_message;
+			}
+			set
+			{
+				if ((this._average_cost_per_message != value))
+				{
+					this.Onaverage_cost_per_messageChanging(value);
+					this.SendPropertyChanging();
+					this._average_cost_per_message = value;
+					this.SendPropertyChanged("average_cost_per_message");
+					this.Onaverage_cost_per_messageChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_average_cost_of_informing_1_PL", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> average_cost_of_informing_1_PL
+		{
+			get
+			{
+				return this._average_cost_of_informing_1_PL;
+			}
+			set
+			{
+				if ((this._average_cost_of_informing_1_PL != value))
+				{
+					this.Onaverage_cost_of_informing_1_PLChanging(value);
+					this.SendPropertyChanging();
+					this._average_cost_of_informing_1_PL = value;
+					this.SendPropertyChanged("average_cost_of_informing_1_PL");
+					this.Onaverage_cost_of_informing_1_PLChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Report_Data_Report_Iilz", Storage="_Report_Data", ThisKey="Id_Report_Data", OtherKey="Id", IsForeignKey=true)]
 		public Report_Data Report_Data
 		{
 			get
@@ -11254,12 +10817,12 @@ namespace KmsReportWS.LinqToSql
 					if ((previousValue != null))
 					{
 						this._Report_Data.Entity = null;
-						previousValue.Infomaterial.Remove(this);
+						previousValue.Report_Iilz.Remove(this);
 					}
 					this._Report_Data.Entity = value;
 					if ((value != null))
 					{
-						value.Infomaterial.Add(this);
+						value.Report_Iilz.Add(this);
 						this._Id_Report_Data = value.Id;
 					}
 					else

@@ -53,7 +53,7 @@ namespace KmsReportWS.Collector.BaseReport
         }
 
         private IQueryable<ReportIizlDataDto> CollectReportData(IQueryable<Report_Data> flows, string theme) =>
-            from f in flows.Where(x => x.Theme == theme).SelectMany(x => x.Report_Iilzs)
+            from f in flows.Where(x => x.Theme == theme).SelectMany(x => x.Report_Iilz)
             group f by f.Code
             into fgr
             select new ReportIizlDataDto {

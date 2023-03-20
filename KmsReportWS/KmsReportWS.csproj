@@ -130,7 +130,6 @@
     <Compile Include="Handler\BaseReportHandler.cs" />
     <Compile Include="Handler\FOpedUHandler.cs" />
     <Compile Include="Handler\MonitoringVCRHandler.cs" />
-    <Compile Include="Handler\ReportInfomaterialHandler.cs" />
     <Compile Include="Handler\ZpzHandler.cs" />
     <Compile Include="Handler\ReportCadreHandler.cs" />
     <Compile Include="Handler\DynamicReportCommonHandler.cs" />
