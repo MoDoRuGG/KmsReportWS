@@ -24,6 +24,7 @@
          <ROW_TEXT>новую коронавирусную инфекцию COVID-19 (U07.1, U07.2)</ROW_TEXT>
          <ROW_NUM>1.3</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>4,10</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
@@ -34,206 +35,248 @@
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>1.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>1.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
+         
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>1.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>жалобы от застрахованных лиц или их представителей, всего, в том числе:</ROW_TEXT>
          <ROW_NUM>1.8</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>онкологические заболевания</ROW_TEXT>
          <ROW_NUM>1.8.1</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>болезни системы кровообращения</ROW_TEXT>
          <ROW_NUM>1.8.2</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>новая коронавирусная инфекция COVID-19 (U07.1, U07.2)</ROW_TEXT>
          <ROW_NUM>1.8.3</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>4,8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
          <ROW_NUM>1.8.4</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>1.8.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,3,5,6,7,8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>1.8.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,3,5,6,7,8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>1.8.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>повторные обращения по поводу одного и того же заболевания, всего, в том числе:</ROW_TEXT>
          <ROW_NUM>1.9</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>болезни системы кровообращения</ROW_TEXT>
          <ROW_NUM>1.9.1</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>новая коронавирусная инфекция COVID-19 (U07.1, U07.2)</ROW_TEXT>
          <ROW_NUM>1.9.2</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
          <ROW_NUM>1.9.3</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>1.9.4</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>1.9.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>1.9.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>оказание медицинской помощи по профилю "онкология" с применением лекарственной противоопухолевой терапии, всего, в том числе:</ROW_TEXT>
          <ROW_NUM>1.10</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>1.10.1</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>1.10.2</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>застрахованных лиц, которые несвоевременно поставлены под диспансерное наблюдение, всего, в том числе:</ROW_TEXT>
          <ROW_NUM>1.11</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>онкологические заболевания</ROW_TEXT>
          <ROW_NUM>1.11.1</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>         
       </ROW>
       <ROW>
          <ROW_TEXT>болезни системы кровообращения</ROW_TEXT>
          <ROW_NUM>1.11.2</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>    
       </ROW>
       <ROW>
          <ROW_TEXT>новая коронавирусная инфекция COVID-19 (U07.1, U07.2)</ROW_TEXT>
          <ROW_NUM>1.11.3</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>    
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
          <ROW_NUM>1.11.4</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>    
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>1.11.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>    
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>1.11.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>    
       </ROW>
       <ROW>
          <ROW_TEXT>летальный исход вне медицинской организации до приезда бригады скорой медицинской помощи, всего</ROW_TEXT>
          <ROW_NUM>1.12</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>3,4,5,6,7,9,10,11,12,13</EXCLUSION_CELL>    
       </ROW>
       <ROW>
          <ROW_TEXT>первичный выход на инвалидность лиц трудоспособного возраста и детей (получение инвалидности или при переосвидетельствовании), всего, в том числе:</ROW_TEXT>
          <ROW_NUM>1.13</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,9,10,11,12,13</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>онкологические заболевания</ROW_TEXT>
          <ROW_NUM>1.13.1</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,9,10,11,12,13</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>болезни системы кровообращения</ROW_TEXT>
          <ROW_NUM>1.13.2</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,9,10,11,12,13</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
          <ROW_NUM>1.13.3</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,9,10,11,12,13</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>Количество случаев, необоснованно признанных СМО дефектными, всего, в том числе:</ROW_TEXT>
          <ROW_NUM>2</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,3,4,5,6,7,8,9,10,11,12,13</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>онкологические заболевания</ROW_TEXT>
          <ROW_NUM>2.1</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,3,4,5,6,7,8,9,10,11,12,13</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>болезни системы кровообращения</ROW_TEXT>
          <ROW_NUM>2.2</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,3,4,5,6,7,8,9,10,11,12,13</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>новая коронавирусная инфекция COVID-19 (U07.1, U07.2)</ROW_TEXT>
          <ROW_NUM>2.3</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,3,4,5,6,7,8,9,10,11,12,13</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
          <ROW_NUM>2.4</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,3,4,5,6,7,8,9,10,11,12,13</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>2.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,3,4,5,6,7,8,9,10,11,12,13</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>2.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,3,4,5,6,7,8,9,10,11,12,13</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>2.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,3,4,5,6,7,8,9,10,11,12,13</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>Количество страховых случаев с выявленными нарушениями, всего, в том числе:</ROW_TEXT>
@@ -254,6 +297,7 @@
          <ROW_TEXT>новая коронавирусная инфекция COVID-19 (U07.1, U07.2)</ROW_TEXT>
          <ROW_NUM>3.3</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>4,10</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
@@ -264,16 +308,19 @@
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>3.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,8,10,11</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>3.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,8,10,11</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>3.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>Количество выявленных нарушений, всего, в том числе:</ROW_TEXT>
@@ -294,6 +341,7 @@
          <ROW_TEXT>новая коронавирусная инфекция COVID-19 (U07.1, U07.2)</ROW_TEXT>
          <ROW_NUM>4.3</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>4,10</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
@@ -304,16 +352,19 @@
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>4.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>4.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>4.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>связанные с нарушениями сроков ожидания медицинской помощи, установленных территориальной программой ОМС, всего, в том числе:</ROW_TEXT>
@@ -329,16 +380,19 @@
          <ROW_TEXT>сроков направления к врачу-онкологу первичного онкологического кабинета (отделения)</ROW_TEXT>
          <ROW_NUM>4.8.1.1</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>сроков направления на исследование с целью гистологической верификации</ROW_TEXT>
          <ROW_NUM>4.8.1.2</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>сроков направления к врачу-онкологу в специализированную медицинскую организацию с целью диагностики</ROW_TEXT>
          <ROW_NUM>4.8.1.3</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>болезни системы кровообращения</ROW_TEXT>
@@ -349,6 +403,7 @@
          <ROW_TEXT>новая коронавирусная инфекция COVID-19 (U07.1, U07.2)</ROW_TEXT>
          <ROW_NUM>4.8.3</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>4,10</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
@@ -359,76 +414,91 @@
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>4.8.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>4.8.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>4.8.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>нарушение условий оказания скорой медицинской помощи (несоблюдение времени доезда до пациента бригады скорой медицинской помощи, при летальном исходе до приезда бригады скорой медицинской помощи), всего</ROW_TEXT>
          <ROW_NUM>4.9</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>3,4,5,6,7,9,10,11,12,13</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>повторные случаи госпитализации застрахованного лица по одному и тому же заболеванию, всего, в том числе:</ROW_TEXT>
          <ROW_NUM>4.10</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,3,4,5,8,9,10,11</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>онкологические заболевания</ROW_TEXT>
          <ROW_NUM>4.10.1</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,3,4,5,8,9,10,11</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>болезни системы кровообращения</ROW_TEXT>
          <ROW_NUM>4.10.2</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,3,4,5,8,9,10,11</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>новая коронавирусная инфекция COVID-19 (U07.1, U07.2)</ROW_TEXT>
          <ROW_NUM>4.10.3</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,3,4,5,8,9,10,11</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
          <ROW_NUM>4.10.4</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,3,4,5,8,9,10,11</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>4.10.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>необоснованное представление в реестрах счетов случаев оказания застрахованному лицу медицинской помощи, оказанной в условиях дневного стационара в период пребывания в условиях круглосуточного стационара, всего, в том числе:</ROW_TEXT>
          <ROW_NUM>4.11</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,3,4,5,8,9,10,11</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>онкологические заболевания</ROW_TEXT>
          <ROW_NUM>4.11.1</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,3,4,5,8,9,10,11</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>болезни системы кровообращения</ROW_TEXT>
          <ROW_NUM>4.11.2</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,3,4,5,8,9,10,11</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
          <ROW_NUM>4.11.3</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,3,4,5,8,9,10,11</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>4.11.4</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,3,4,5,8,9,10,11</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>взимание платы с застрахованных лиц за оказанную медицинскую помощь, всего, в том числе:</ROW_TEXT>
@@ -449,6 +519,7 @@
          <ROW_TEXT>новая коронавирусная инфекция COVID-19 (U07.1, U07.2)</ROW_TEXT>
          <ROW_NUM>4.12.3</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>4,10</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
@@ -459,16 +530,19 @@
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>4.12.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>4.12.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>4.12.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>приобретение пациентом или его представителем в период оказания медицинской помощи по назначению врача лекарственных препаратов для медицинского применения, всего, в том числе:</ROW_TEXT>
@@ -489,6 +563,7 @@
          <ROW_TEXT>новая коронавирусная инфекция COVID-19 (U07.1, U07.2)</ROW_TEXT>
          <ROW_NUM>4.13.3</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>4,10</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
@@ -499,16 +574,19 @@
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>4.13.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>4.13.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>4.13.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL>  
       </ROW>
       <ROW>
          <ROW_TEXT>отсутствие в реестре счетов сведений о страховом случае с летальным исходом, всего, в том числе:</ROW_TEXT>
@@ -529,6 +607,7 @@
          <ROW_TEXT>новая коронавирусная инфекция COVID-19 (U07.1, U07.2)</ROW_TEXT>
          <ROW_NUM>4.14.3</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>4,10</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
@@ -539,6 +618,7 @@
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>4.14.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>непредставление первичной медицинской документации, подтверждающей факт оказания застрахованному лицу медицинской помощи, всего, в том числе:</ROW_TEXT>
@@ -559,6 +639,7 @@
          <ROW_TEXT>новая коронавирусная инфекция COVID-19 (U07.1, U07.2)</ROW_TEXT>
          <ROW_NUM>4.15.3</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>4,10</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
@@ -569,16 +650,19 @@
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>4.15.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>4.15.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>4.15.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>отсутствие в документации (несоблюдение требований к оформлению) информированного добровольного согласия застрахованного лица на медицинское вмешательство или отказа застрахованного лица от медицинского вмешательства, всего, в том числе:</ROW_TEXT>
@@ -599,6 +683,7 @@
          <ROW_TEXT>новая коронавирусная инфекция COVID-19 (U07.1, U07.2)</ROW_TEXT>
          <ROW_NUM>4.16.3</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>4,10</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
@@ -609,6 +694,7 @@
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>4.16.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>наличие признаков искажения сведений, представленных в медицинской документации, всего, в том числе:</ROW_TEXT>
@@ -629,6 +715,7 @@
          <ROW_TEXT>новая коронавирусная инфекция COVID-19 (U07.1, U07.2)</ROW_TEXT>
          <ROW_NUM>4.17.3</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>4,10</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
@@ -639,16 +726,19 @@
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>4.17.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>4.17.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>4.17.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>дата оказания медицинской помощи, зарегистрированная в первичной медицинской документации и реестре счетов, не соответствует табелю учета рабочего времени врача, всего, в том числе:</ROW_TEXT>
@@ -669,6 +759,7 @@
          <ROW_TEXT>новая коронавирусная инфекция COVID-19 (U07.1, U07.2)</ROW_TEXT>
          <ROW_NUM>4.18.3</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>4,10</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
@@ -679,16 +770,19 @@
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>4.18.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>4.18.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>4.18.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>несоответствие данных медицинской документации данным реестра счетов, всего, в том числе:</ROW_TEXT>
@@ -709,6 +803,7 @@
          <ROW_TEXT>новая коронавирусная инфекция COVID-19 (U07.1, U07.2)</ROW_TEXT>
          <ROW_NUM>4.19.3</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>4,10</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
@@ -719,16 +814,19 @@
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>4.19.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>4.19.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>4.19.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>оплаченный случай оказания медицинской помощи не соответствует тарифу, установленному законодательством об ОМС, всего, в том числе:</ROW_TEXT>
@@ -749,6 +847,7 @@
          <ROW_TEXT>новая коронавирусная инфекция COVID-19 (U07.1, U07.2)</ROW_TEXT>
          <ROW_NUM>4.19.8.3</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>4,10</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
@@ -759,6 +858,7 @@
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>4.19.8.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>отсутствие в медицинской документации сведений, подтверждающих факт оказания медицинской помощи застрахованному лицу, всего, в том числе:</ROW_TEXT>
@@ -779,6 +879,7 @@
          <ROW_TEXT>новая коронавирусная инфекция COVID-19 (U07.1, U07.2)</ROW_TEXT>
          <ROW_NUM>4.19.9.3</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>4,10</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
@@ -789,16 +890,19 @@
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>4.19.9.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>4.19.9.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>4.19.9.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>некорректное (неполное) отражение в реестре счета сведений медицинской документации, всего, в том числе:</ROW_TEXT>
@@ -819,6 +923,7 @@
          <ROW_TEXT>новая коронавирусная инфекция COVID-19 (U07.1, U07.2)</ROW_TEXT>
          <ROW_NUM>4.19.10.3</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>4,10</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
@@ -829,46 +934,55 @@
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>4.19.10.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>4.19.10.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>4.19.10.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>отсутствие в карте стационарного больного протокола врачебной комиссии в случаях назначения застрахованному лицу лекарственного препарата, не входящего в перечень жизненно необходимых и важнейших лекарственных препаратов, всего, в том числе:</ROW_TEXT>
          <ROW_NUM>4.20</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,3,4,5,8,9,10,11</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>онкологические заболевания</ROW_TEXT>
          <ROW_NUM>4.20.1</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,3,4,5,8,9,10,11</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>болезни системы кровообращения</ROW_TEXT>
          <ROW_NUM>4.20.2</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,3,4,5,8,9,10,11</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>новая коронавирусная инфекция COVID-19 (U07.1, U07.2)</ROW_TEXT>
          <ROW_NUM>4.20.3</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,3,4,5,8,9,10,11</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
          <ROW_NUM>4.20.4</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,3,4,5,8,9,10,11</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>4.20.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,3,4,5,8,9,10,11</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>прочие нарушения, всего, в том числе:</ROW_TEXT>
@@ -889,6 +1003,7 @@
          <ROW_TEXT>новая коронавирусная инфекция COVID-19 (U07.1, U07.2)</ROW_TEXT>
          <ROW_NUM>4.21.3</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>4,10</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
@@ -899,16 +1014,19 @@
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>4.21.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,3,4,5,6,7,8,9,10,11,12,13</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>4.21.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,3,4,5,6,7,8,9,10,11,12,13</EXCLUSION_CELL> 
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>4.21.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL> 
       </ROW>
    </TABLE>
    <TABLE>
@@ -944,56 +1062,67 @@
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>1.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>1.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>1.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>жалобы от застрахованных лиц или их представителей, всего, в том числе:</ROW_TEXT>
          <ROW_NUM>1.8</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>онкологические заболевания</ROW_TEXT>
          <ROW_NUM>1.8.1</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>болезни системы кровообращения</ROW_TEXT>
          <ROW_NUM>1.8.2</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>новая коронавирусная инфекция COVID-19 (U07.1, U07.2)</ROW_TEXT>
          <ROW_NUM>1.8.3</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
          <ROW_NUM>1.8.4</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>1.8.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>1.8.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>1.8.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>летальный исход (исключение случаи летального исхода вне периода оказания медицинской помощи, в том числе при вызове бригады скорой медицинской помощи до ее приезда), всего, в том числе:</ROW_TEXT>
@@ -1024,16 +1153,19 @@
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>1.9.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>1.9.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>1.9.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>случаи, отобранные по результатам МЭК, с ростом нарушений в одной медицинской организации в сравнении с предыдущим проверяемым периодом более чем на 10% по каждому виду, всего, в том числе:</ROW_TEXT>
@@ -1064,16 +1196,19 @@
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>1.10.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>1.10.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>1.10.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>случаи, отобранные по результатам МЭЭ, всего, в том числе:</ROW_TEXT>
@@ -1104,56 +1239,67 @@
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>1.11.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>1.11.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>1.11.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>Количество страховых случаев, подвергшихся внеплановой тематической ЭКМП, всего, в том числе:</ROW_TEXT>
          <ROW_NUM>2</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>онкологические заболевания</ROW_TEXT>
          <ROW_NUM>2.1</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>болезни системы кровообращения</ROW_TEXT>
          <ROW_NUM>2.2</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>новая коронавирусная инфекция COVID-19 (U07.1, U07.2)</ROW_TEXT>
          <ROW_NUM>2.3</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
          <ROW_NUM>2.4</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>2.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>2.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>2.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>Количество страховых случаев, подвергшихся мультидисциплинарной ЭКМП, всего, в том числе:</ROW_TEXT>
@@ -1184,56 +1330,67 @@
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>3.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>3.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>3.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>жалобы от застрахованных лиц или их представителей, всего, в том числе:</ROW_TEXT>
          <ROW_NUM>3.8</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>онкологические заболевания</ROW_TEXT>
          <ROW_NUM>3.8.1</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>болезни системы кровообращения</ROW_TEXT>
          <ROW_NUM>3.8.2</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>новая коронавирусная инфекция COVID-19 (U07.1, U07.2)</ROW_TEXT>
          <ROW_NUM>3.8.3</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
          <ROW_NUM>3.8.4</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>3.8.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>3.8.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>3.8.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>случаи с летальным исходом, всего, в том числе:</ROW_TEXT>
@@ -1274,16 +1431,19 @@
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>3.9.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>3.9.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>3.9.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>Количество страховых случаев, подвергшихся внеплановой тематической экспертизе ЭКМП, всего, в том числе:</ROW_TEXT>
@@ -1314,56 +1474,67 @@
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>3.10.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>3.10.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>3.10.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>Количество случаев, необоснованно признанных СМО дефектными, всего, в том числе:</ROW_TEXT>
          <ROW_NUM>4</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,3,4,5,6,7,8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>онкологические заболевания</ROW_TEXT>
          <ROW_NUM>4.1</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,3,4,5,6,7,8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>болезни системы кровообращения</ROW_TEXT>
          <ROW_NUM>4.2</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,3,4,5,6,7,8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>новая коронавирусная инфекция COVID-19 (U07.1, U07.2)</ROW_TEXT>
          <ROW_NUM>4.3</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,3,4,5,6,7,8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
          <ROW_NUM>4.4</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,3,4,5,6,7,8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>4.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,3,4,5,6,7,8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>4.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,3,4,5,6,7,8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>4.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,3,4,5,6,7,8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>Количество страховых случаев с выявленными нарушениями, всего, в том числе:</ROW_TEXT>
@@ -1394,16 +1565,19 @@
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>5.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,8,10,11</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>5.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,8,10,11</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>5.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>Количество выявленных нарушений, всего, в том числе:</ROW_TEXT>
@@ -1434,16 +1608,19 @@
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>6.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>6.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>6.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>в связи с установлением неверного диагноза, всего, в том числе:</ROW_TEXT>
@@ -1624,16 +1801,19 @@
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>6.9.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>6.9.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>6.9.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>не повлиявшее на состояние здоровья застрахованного лица, всего, в том числе:</ROW_TEXT>
@@ -1664,16 +1844,19 @@
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>6.9.8.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>6.9.8.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>6.9.8.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>приведшее к ухудшению состояния здоровья, всего, в том числе:</ROW_TEXT>
@@ -1704,16 +1887,19 @@
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>6.9.9.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>6.9.9.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>6.9.9.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>приведшее к инвалидизации, всего, в том числе:</ROW_TEXT>
@@ -1744,16 +1930,19 @@
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>6.9.10.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>6.9.10.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>6.9.10.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>приведшее к летальному исходу, всего, в том числе:</ROW_TEXT>
@@ -1784,56 +1973,67 @@
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>6.9.11.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>6.9.11.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>6.9.11.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>рекомендаций медицинских работников национальных медицинских исследовательских центров по применению методов профилактики, диагностики, лечения и реабилитации, данных при проведении указанными центрами консультаций (консилиумов) с применением консультаций</ROW_TEXT>
          <ROW_NUM>6.9.12</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>онкологические заболевания</ROW_TEXT>
          <ROW_NUM>6.9.12.1</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>болезни системы кровообращения</ROW_TEXT>
          <ROW_NUM>6.9.12.2</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>новая коронавирусная инфекция COVID-19 (U07.1, U07.2)</ROW_TEXT>
          <ROW_NUM>6.9.12.3</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
          <ROW_NUM>6.9.12.4</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>6.9.12.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>6.9.12.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>6.9.12.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>по результатам проведенного диспансерного наблюдения, всего, в том числе:</ROW_TEXT>
@@ -1889,16 +2089,19 @@
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>6.10.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>6.10.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>6.10.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>в связи с преждевременным с клинической точки зрения прекращением оказания медицинской помощи при отсутствии клинического эффекта, всего, в том числе:</ROW_TEXT>
@@ -1929,16 +2132,19 @@
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>6.11.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>6.11.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>6.11.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>в связи с нарушением преемственности в оказании медицинской помощи по вине медицинской организации, всего, в том числе:</ROW_TEXT>
@@ -1969,146 +2175,175 @@
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>6.12.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>6.12.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>6.12.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>в связи с непрофильной госпитализацией, при оказании медицинской помощи, всего, в том числе:</ROW_TEXT>
          <ROW_NUM>6.13</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,3,8,9</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>онкологические заболевания</ROW_TEXT>
          <ROW_NUM>6.13.1</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,3,8,9</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>болезни системы кровообращения</ROW_TEXT>
          <ROW_NUM>6.13.2</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,3,8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>новая коронавирусная инфекция COVID-19 (U07.1, U07.2)</ROW_TEXT>
          <ROW_NUM>6.13.3</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,3,8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
          <ROW_NUM>6.13.4</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,3,8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>6.13.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>в связи с необоснованной госпитализацией, при оказании медицинской помощи, всего, в том числе:</ROW_TEXT>
          <ROW_NUM>6.14</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,3,8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>онкологические заболевания</ROW_TEXT>
          <ROW_NUM>6.14.1</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,3,8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>болезни системы кровообращения</ROW_TEXT>
          <ROW_NUM>6.14.2</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,3,8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>новая коронавирусная инфекция COVID-19 (U07.1, U07.2)</ROW_TEXT>
          <ROW_NUM>6.14.3</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,3,8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
          <ROW_NUM>6.14.4</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,3,8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>6.14.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8,9,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>в связи с необоснованным повторным посещением врача одной и той же специальности в один день при оказании медицинской помощи амбулаторно, всего, в том числе:</ROW_TEXT>
          <ROW_NUM>6.15</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>онкологические заболевания</ROW_TEXT>
          <ROW_NUM>6.15.1</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>болезни системы кровообращения</ROW_TEXT>
          <ROW_NUM>6.15.2</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>новая коронавирусная инфекция COVID-19 (U07.1, U07.2)</ROW_TEXT>
          <ROW_NUM>6.15.3</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
          <ROW_NUM>6.15.4</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>6.15.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>6.15.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>6.15.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>в связи с расхождением клинического и патологоанатомического диагнозов 2 - 3 категории, обусловленное непроведением необходимых диагностических исследований, всего, в том числе:</ROW_TEXT>
          <ROW_NUM>6.16</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,3,8,9</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>онкологические заболевания</ROW_TEXT>
          <ROW_NUM>6.16.1</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,3,8,9</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>болезни системы кровообращения</ROW_TEXT>
          <ROW_NUM>6.16.2</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,3,8,9</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>новая коронавирусная инфекция COVID-19 (U07.1, U07.2)</ROW_TEXT>
          <ROW_NUM>6.16.3</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,3,8,9</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
          <ROW_NUM>6.16.4</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,3,8,9</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>6.16.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,3,8,9</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>в связи с необоснованным назначением лекарственных препаратов, всего, в том числе:</ROW_TEXT>
@@ -2139,11 +2374,13 @@
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>6.17.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>6.17.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>в связи с необоснованным отказом застрахованным лицам в оказании медицинской помощи в соответствии с программами ОМС, всего, в том числе:</ROW_TEXT>
@@ -2174,16 +2411,19 @@
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>6.18.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>6.18.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>6.18.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>с отсутствием последующего ухудшения состояния здоровья, всего, в том числе:</ROW_TEXT>
@@ -2214,16 +2454,19 @@
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>6.18.8.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>6.18.8.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>6.18.8.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>с последующим ухудшением состояния здоровья, всего, в том числе:</ROW_TEXT>
@@ -2254,16 +2497,19 @@
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>6.18.9.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>6.18.9.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>6.18.9.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>приведший к летальному исходу, всего, в том числе:</ROW_TEXT>
@@ -2294,141 +2540,169 @@
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>6.18.10.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>6.18.10.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>6.18.10.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>в связи с непроведением диспансерного наблюдения застрахованного лица, включенного в группу диспансерного наблюдения, в соответствии с порядком и периодичностью проведения диспансерного наблюдения и перечнем включаемых в указанный порядок исследований, вс</ROW_TEXT>
          <ROW_NUM>6.19</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>онкологические заболевания</ROW_TEXT>
          <ROW_NUM>6.19.1</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>болезни системы кровообращения</ROW_TEXT>
          <ROW_NUM>6.19.2</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>новая коронавирусная инфекция COVID-19 (U07.1, U07.2)</ROW_TEXT>
          <ROW_NUM>6.19.3</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
          <ROW_NUM>6.19.4</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>с отсутствием последующего ухудшения состояния здоровья, всего, в том числе:</ROW_TEXT>
          <ROW_NUM>6.19.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>онкологические заболевания</ROW_TEXT>
          <ROW_NUM>6.19.5.1</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>болезни системы кровообращения</ROW_TEXT>
          <ROW_NUM>6.19.5.2</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>новая коронавирусная инфекция COVID-19 (U07.1, U07.2)</ROW_TEXT>
          <ROW_NUM>6.19.5.3</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
          <ROW_NUM>6.19.5.4</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>с последующим ухудшением состояния здоровья, всего, в том числе:</ROW_TEXT>
          <ROW_NUM>6.19.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>онкологические заболевания</ROW_TEXT>
          <ROW_NUM>6.19.6.1</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>болезни системы кровообращения</ROW_TEXT>
          <ROW_NUM>6.19.6.2</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>новая коронавирусная инфекция COVID-19 (U07.1, U07.2)</ROW_TEXT>
          <ROW_NUM>6.19.6.3</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
          <ROW_NUM>6.19.6.4</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>приведший к летальному исходу, всего, в том числе:</ROW_TEXT>
          <ROW_NUM>6.19.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>онкологические заболевания</ROW_TEXT>
          <ROW_NUM>6.19.7.1</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>болезни системы кровообращения</ROW_TEXT>
          <ROW_NUM>6.19.7.2</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>новая коронавирусная инфекция COVID-19 (U07.1, U07.2)</ROW_TEXT>
          <ROW_NUM>6.19.7.3</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
          <ROW_NUM>6.19.7.4</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>в связи с нарушениями при оказании медицинской помощи, вследствие которых, при отсутствии положительной динамики в состоянии здоровья, потребовалось повторное обоснованное обращение застрахованного лица за медицинской помощью по поводу того же заболевания</ROW_TEXT>
          <ROW_NUM>6.20</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,8,10,11</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>онкологические заболевания</ROW_TEXT>
          <ROW_NUM>6.20.1</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,8,10,11</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>болезни системы кровообращения</ROW_TEXT>
          <ROW_NUM>6.20.2</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,8,10,11</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>новая коронавирусная инфекция COVID-19 (U07.1, U07.2)</ROW_TEXT>
          <ROW_NUM>6.20.3</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,8,10,11</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
          <ROW_NUM>6.20.4</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,8,10,11</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>в связи с отсутствием в медицинской документации результатов обследований, осмотров, консультаций специалистов, дневниковых записей, позволяющих оценить динамику состояния здоровья застрахованного лица, всего, в том числе:</ROW_TEXT>
@@ -2459,56 +2733,67 @@
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>6.21.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>6.21.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>6.21.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>в связи с нарушением прав застрахованных лиц на выбор медицинской организации из медицинских организаций, участвующих в реализации территориальной программы ОМС, базовой программы ОМС, на выбор врача, всего, в том числе:</ROW_TEXT>
          <ROW_NUM>6.22</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>онкологические заболевания</ROW_TEXT>
          <ROW_NUM>6.22.1</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>болезни системы кровообращения</ROW_TEXT>
          <ROW_NUM>6.22.2</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>новая коронавирусная инфекция COVID-19 (U07.1, U07.2)</ROW_TEXT>
          <ROW_NUM>6.22.3</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
          <ROW_NUM>6.22.4</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>6.22.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>6.22.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>6.22.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>в связи с нарушениями из раздела 2, всего, в том числе:</ROW_TEXT>
@@ -2539,16 +2824,19 @@
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>6.23.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>6.23.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>6.23.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>связанные с нарушениями сроков ожидания медицинской помощи, установленных территориальной программой ОМС, всего, в том числе:</ROW_TEXT>
@@ -2564,6 +2852,7 @@
          <ROW_TEXT>сроков направления к врачу - онкологу первичного онкологического кабинета (отделения)</ROW_TEXT>
          <ROW_NUM>6.23.8.1.1</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>сроков проведения диагностических инструментальных и лабораторных исследований в случае подозрения на онкологические заболевания</ROW_TEXT>
@@ -2574,11 +2863,13 @@
          <ROW_TEXT>сроков направления на исследование с целью гистологической верификации</ROW_TEXT>
          <ROW_NUM>6.23.8.1.3</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>сроков направления к врачу - онкологу в специализированную медицинскую организацию с целью диагностики</ROW_TEXT>
          <ROW_NUM>6.23.8.1.4</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>болезни системы кровообращения</ROW_TEXT>
@@ -2599,16 +2890,19 @@
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>6.23.8.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>6.23.8.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>6.23.8.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>непредставление первичной медицинской документации, подтверждающей факт оказания застрахованному лицу медицинской помощи, всего, в том числе:</ROW_TEXT>
@@ -2639,16 +2933,20 @@
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>6.23.9.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
+         
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>6.23.9.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>6.23.9.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>отсутствие в документации (несоблюдение требований к оформлению) информированного добровольного согласия застрахованного лица на медицинское вмешательство или отказа застрахованного лица от медицинского вмешательства, всего, в том числе:</ROW_TEXT>
@@ -2679,6 +2977,7 @@
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>6.23.10.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>наличие признаков искажения сведений, представленных в медицинской документации, всего, в том числе:</ROW_TEXT>
@@ -2709,16 +3008,19 @@
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>6.23.11.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>6.23.11.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>6.23.11.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>несоответствие данных медицинской документации данным реестра счетов, всего, в том числе:</ROW_TEXT>
@@ -2749,16 +3051,19 @@
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>6.23.12.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>6.23.12.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>6.23.12.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>оплаченный случай оказания медицинской помощи не соответствует тарифу, установленному законодательством об ОМС, всего, в том числе:</ROW_TEXT>
@@ -2789,16 +3094,19 @@
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>6.23.12.8.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>6.23.12.8.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>6.23.12.8.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>отсутствие в медицинской документации сведений, подтверждающих факт оказания медицинской помощи застрахованному лицу, всего, в том числе:</ROW_TEXT>
@@ -2829,16 +3137,19 @@
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>6.23.12.9.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>6.23.12.9.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>6.23.12.9.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>некорректное (неполное) отражение в реестре счета сведений медицинской документации, всего, в том числе:</ROW_TEXT>
@@ -2869,16 +3180,19 @@
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>6.23.12.10.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>6.23.12.10.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>6.23.12.10.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>прочие нарушения, всего, в том числе:</ROW_TEXT>
@@ -2909,16 +3223,19 @@
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>6.24.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>6.24.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,4,5,6,7,8,10,11,12,13</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>6.24.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,8</EXCLUSION_CELL>
       </ROW>
    </TABLE>
    <TABLE>
@@ -2939,696 +3256,729 @@
          <ROW_TEXT>по результатам МЭК, всего, из них:</ROW_TEXT>
          <ROW_NUM>3</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>онкологические заболевания</ROW_TEXT>
          <ROW_NUM>3.1</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>болезни системы кровообращения</ROW_TEXT>
          <ROW_NUM>3.2</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>новая коронавирусная инфекция COVID-19 (U07.1, U07.2)</ROW_TEXT>
          <ROW_NUM>3.3</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
          <ROW_NUM>3.4</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>3.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>3.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>3.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>связанные с нарушением условий оказания медицинской помощи, в том числе сроков ожидания медицинской помощи, несвоевременное включение в группу диспансерного наблюдения лиц, всего, из них:</ROW_TEXT>
          <ROW_NUM>3.8</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>онкологические заболевания</ROW_TEXT>
          <ROW_NUM>3.8.1</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>болезни системы кровообращения</ROW_TEXT>
          <ROW_NUM>3.8.2</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>новая коронавирусная инфекция COVID-19 (U07.1, U07.2)</ROW_TEXT>
          <ROW_NUM>3.8.3</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
          <ROW_NUM>3.8.4</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>3.8.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>3.8.6</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>3.8.7</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
-         <ROW_TEXT>связанные с невключением в группу диспансерного наблюдения лиц, которым по результатам проведения профилактических мероприятий или оказания иной медицинской помощи впервые установлены диагнозы, при которых предусмотрено диспансерное наблюдение, всего, из </ROW_TEXT>
+         <ROW_TEXT>связанные с невключением в группу диспансерного наблюдения лиц, которым по результатам проведения профилактических мероприятий или оказания иной медицинской помощи впервые установлены диагнозы, при которых предусмотрено диспансерное наблюдение, всего, из</ROW_TEXT>
          <ROW_NUM>3.9</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>онкологические заболевания</ROW_TEXT>
          <ROW_NUM>3.9.1</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>болезни системы кровообращения</ROW_TEXT>
          <ROW_NUM>3.9.2</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>новая коронавирусная инфекция COVID-19 (U07.1, U07.2)</ROW_TEXT>
          <ROW_NUM>3.9.3</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
          <ROW_NUM>3.9.4</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>3.9.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>связанные с непрофильной госпитализацией, всего, из них:</ROW_TEXT>
          <ROW_NUM>3.10</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>онкологические заболевания</ROW_TEXT>
          <ROW_NUM>3.10.1</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>болезни системы кровообращения</ROW_TEXT>
          <ROW_NUM>3.10.2</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>новая коронавирусная инфекция COVID-19 (U07.1, U07.2)</ROW_TEXT>
          <ROW_NUM>3.10.3</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
          <ROW_NUM>3.10.4</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>связанные с оформлением и предъявлением на оплату счетов и реестров счетов, всего, из них:</ROW_TEXT>
          <ROW_NUM>3.11</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>онкологические заболевания</ROW_TEXT>
          <ROW_NUM>3.11.1</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>болезни системы кровообращения</ROW_TEXT>
          <ROW_NUM>3.11.2</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>новая коронавирусная инфекция COVID-19 (U07.1, U07.2)</ROW_TEXT>
          <ROW_NUM>3.11.3</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
          <ROW_NUM>3.11.4</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>3.11.5</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>3.11.6</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>3.11.7</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>связанные с введением в реестр счетов недостоверных персональных данных застрахованного лица, всего, из них:</ROW_TEXT>
          <ROW_NUM>3.12</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>онкологические заболевания</ROW_TEXT>
          <ROW_NUM>3.12.1</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>болезни системы кровообращения</ROW_TEXT>
          <ROW_NUM>3.12.2</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>новая коронавирусная инфекция COVID-19 (U07.1, U07.2)</ROW_TEXT>
          <ROW_NUM>3.12.3</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
          <ROW_NUM>3.12.4</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>3.12.5</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>3.12.6</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>3.12.7</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>связанные с включением в реестр счетов медицинской помощи, не входящей в программу ОМС, всего, из них:</ROW_TEXT>
          <ROW_NUM>3.13</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>онкологические заболевания</ROW_TEXT>
          <ROW_NUM>3.13.1</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>болезни системы кровообращения</ROW_TEXT>
          <ROW_NUM>3.13.2</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>новая коронавирусная инфекция COVID-19 (U07.1, U07.2)</ROW_TEXT>
          <ROW_NUM>3.13.3</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
          <ROW_NUM>3.13.4</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>3.13.5</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>3.13.6</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>3.13.7</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>связанные с необоснованным применением тарифа на оплату медицинской помощи, всего, из них:</ROW_TEXT>
          <ROW_NUM>3.13.8</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>онкологические заболевания</ROW_TEXT>
          <ROW_NUM>3.13.8.1</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>болезни системы кровообращения</ROW_TEXT>
          <ROW_NUM>3.13.8.2</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>новая коронавирусная инфекция COVID-19 (U07.1, U07.2)</ROW_TEXT>
          <ROW_NUM>3.13.8.3</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
          <ROW_NUM>3.13.8.4</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>3.13.8.5</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>3.13.8.6</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>3.13.8.7</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>связанные с предъявлением к оплате медицинской помощи сверх распределенного объема, всего, в том числе:</ROW_TEXT>
          <ROW_NUM>3.13.9</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>онкологические заболевания</ROW_TEXT>
          <ROW_NUM>3.13.9.1</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>болезни системы кровообращения</ROW_TEXT>
          <ROW_NUM>3.13.9.2</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>новая коронавирусная инфекция COVID-19 (U07.1, U07.2)</ROW_TEXT>
          <ROW_NUM>3.13.9.3</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
          <ROW_NUM>3.13.9.4</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>3.13.9.5</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>3.13.9.6</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>3.13.9.7</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>связанные с предъявлением к оплате медицинской помощи сверх размера финансового обеспечения распределенного объема предоставления медицинской помощи, всего, в том числе:</ROW_TEXT>
          <ROW_NUM>3.13.10</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>онкологические заболевания</ROW_TEXT>
          <ROW_NUM>3.13.10.1</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>болезни системы кровообращения</ROW_TEXT>
          <ROW_NUM>3.13.10.2</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>новая коронавирусная инфекция COVID-19 (U07.1, U07.2)</ROW_TEXT>
          <ROW_NUM>3.13.10.3</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
          <ROW_NUM>3.13.10.4</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>3.13.10.5</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>3.13.10.6</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>3.13.10.7</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>связанные с включением в реестр счетов медицинской помощи, подлежащей оплате из других источников финансирования, в том числе тяжелые несчастные случаи на производстве, всего, в том числе:</ROW_TEXT>
          <ROW_NUM>3.13.11</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>онкологические заболевания</ROW_TEXT>
          <ROW_NUM>3.13.11.1</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>болезни системы кровообращения</ROW_TEXT>
          <ROW_NUM>3.13.11.2</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>новая коронавирусная инфекция COVID-19 (U07.1, U07.2)</ROW_TEXT>
          <ROW_NUM>3.13.11.3</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
          <ROW_NUM>3.13.11.4</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>3.13.11.5</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>3.13.11.6</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>3.13.11.7</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>связанные с необоснованным применением тарифа на оплату медицинской помощи, всего, из них:</ROW_TEXT>
          <ROW_NUM>3.14</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>онкологические заболевания</ROW_TEXT>
          <ROW_NUM>3.14.1</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>болезни системы кровообращения</ROW_TEXT>
          <ROW_NUM>3.14.2</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>новая коронавирусная инфекция COVID-19 (U07.1, U07.2)</ROW_TEXT>
          <ROW_NUM>3.14.3</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
          <ROW_NUM>3.14.4</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>3.14.5</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>3.14.6</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>3.14.7</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>связанные с включением в реестр счетов случаев оказания медицинской помощи по тарифам на оплату медицинской помощи, неустановленным в соответствии с законодательством об ОМС, всего, в том числе:</ROW_TEXT>
          <ROW_NUM>3.14.8</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>онкологические заболевания</ROW_TEXT>
          <ROW_NUM>3.14.8.1</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>болезни системы кровообращения</ROW_TEXT>
          <ROW_NUM>3.14.8.2</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>новая коронавирусная инфекция COVID-19 (U07.1, U07.2)</ROW_TEXT>
          <ROW_NUM>3.14.8.3</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
          <ROW_NUM>3.14.8.4</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>3.14.8.5</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>3.14.8.6</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>3.14.8.7</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>связанные с включением в реестр счетов случаев оказания медицинской по тарифам на оплату медицинской помощи, не соответствующим установленным в соответствии с законодательством об ОМС, всего, в том числе:</ROW_TEXT>
          <ROW_NUM>3.14.9</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>онкологические заболевания</ROW_TEXT>
          <ROW_NUM>3.14.9.1</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>болезни системы кровообращения</ROW_TEXT>
          <ROW_NUM>3.14.9.2</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>новая коронавирусная инфекция COVID-19 (U07.1, U07.2)</ROW_TEXT>
          <ROW_NUM>3.14.9.3</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
          <ROW_NUM>3.14.9.4</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>3.14.9.5</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>3.14.9.6</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>3.14.9.7</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>связанные с включением в реестр счетов нелицензированных видов медицинской деятельности, всего, из них:</ROW_TEXT>
          <ROW_NUM>3.15</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>онкологические заболевания</ROW_TEXT>
          <ROW_NUM>3.15.1</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>болезни системы кровообращения</ROW_TEXT>
          <ROW_NUM>3.15.2</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>новая коронавирусная инфекция COVID-19 (U07.1, U07.2)</ROW_TEXT>
          <ROW_NUM>3.15.3</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
          <ROW_NUM>3.15.4</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>3.15.5</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>3.15.6</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>3.15.7</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>связанные с включением в реестр счетов страховых случаев, при которых медицинская помощь оказана медицинским работником, не имеющим сертификата или свидетельства об аккредитации специалиста по профилю оказания медицинской помощи, всего, из них:</ROW_TEXT>
          <ROW_NUM>3.16</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>онкологические заболевания</ROW_TEXT>
          <ROW_NUM>3.16.1</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>болезни системы кровообращения</ROW_TEXT>
          <ROW_NUM>3.16.2</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>новая коронавирусная инфекция COVID-19 (U07.1, U07.2)</ROW_TEXT>
          <ROW_NUM>3.16.3</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
          <ROW_NUM>3.16.4</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>3.16.5</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>3.16.6</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>3.16.7</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>связанные с повторным включением в реестр счетов случаев оказания медицинской помощи, всего, из них:</ROW_TEXT>
          <ROW_NUM>3.17</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>онкологические заболевания</ROW_TEXT>
          <ROW_NUM>3.17.1</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>болезни системы кровообращения</ROW_TEXT>
          <ROW_NUM>3.17.2</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>новая коронавирусная инфекция COVID-19 (U07.1, U07.2)</ROW_TEXT>
          <ROW_NUM>3.17.3</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
          <ROW_NUM>3.17.4</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>3.17.5</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>3.17.6</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>3.17.7</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>прочие нарушения, всего, из них:</ROW_TEXT>
          <ROW_NUM>3.18</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>онкологические заболевания</ROW_TEXT>
          <ROW_NUM>3.18.1</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>болезни системы кровообращения</ROW_TEXT>
          <ROW_NUM>3.18.2</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>новая коронавирусная инфекция COVID-19 (U07.1, U07.2)</ROW_TEXT>
          <ROW_NUM>3.18.3</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>хронические заболевания, функциональные расстройства, при наличии которых устанавливается диспансерное наблюдение (за исключением болезней системы кровообращения, онкологических заболеваний)</ROW_TEXT>
          <ROW_NUM>3.18.4</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансерного наблюдения</ROW_TEXT>
          <ROW_NUM>3.18.5</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение диспансеризации</ROW_TEXT>
          <ROW_NUM>3.18.6</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>проведение реабилитации</ROW_TEXT>
          <ROW_NUM>3.18.7</ROW_NUM>
-         <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION>false</EXCLUSION><EXCLUSION_CELL>2</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>по результатам МЭЭ, всего, из них:</ROW_TEXT>
@@ -5219,6 +5569,7 @@
          <ROW_TEXT>специалисты, осуществляющие МЭК, всего</ROW_TEXT>
          <ROW_NUM>1.1.1</ROW_NUM>
          <EXCLUSION>false</EXCLUSION>
+         <EXCLUSION_CELL>2,3</EXCLUSION_CELL>
       </ROW>
       <ROW>
          <ROW_TEXT>специалисты-эксперты, всего</ROW_TEXT>
