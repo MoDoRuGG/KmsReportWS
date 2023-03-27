@@ -23,5 +23,6 @@ namespace KmsReportWS.Model.Report
         [Description("oped_fin")] OpedFinance,
         [Description("cadre")] Cadre,
         [Description("infomat")] Infomaterial,
+        [Description("Zpz10")] Zpz10,
     }
 }

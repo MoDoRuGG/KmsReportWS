@@ -7767,7 +7767,7 @@
 	<ROW_NUM>5.3.1</ROW_NUM>
 	<EXCLUSION>false</EXCLUSION>
 </ROW>
-   </TABLE>-->
+   </TABLE>
    <TABLE>
    <TABLE_NAME>Таблица 10</TABLE_NAME>
    <TABLE_DESCRIPTION>Информирование и информационное сопровождение застрахованных лиц</TABLE_DESCRIPTION>
@@ -8036,5 +8036,5 @@
 	<ROW_NUM>4.8</ROW_NUM>
 	<EXCLUSION>false</EXCLUSION>
 </ROW>
-   </TABLE>
+   </TABLE>-->
 </REPORT>
