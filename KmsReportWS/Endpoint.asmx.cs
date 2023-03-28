@@ -140,6 +140,13 @@ namespace KmsReportWS
         }
 
         [WebMethod]
+        public ReportZpzDataDto GetZpz10YearData(string yymm, string theme, string fillial, string rowNum)
+        {
+            var handler = _reportHandlerFactory.GetHandler(ReportType.Zpz10);
+            return (handler as ZpzHandler).GetYearData(yymm, theme, fillial, rowNum);
+        }
+
+        [WebMethod]
         public ReportCadreDataDto GetCadreYearData(string yymm, string theme, string fillial)
         {
             var handler = _reportHandlerFactory.GetHandler(ReportType.Cadre);

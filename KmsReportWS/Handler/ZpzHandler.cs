@@ -3,13 +3,37 @@ using System.Collections.Generic;
 using System.Linq;
 using KmsReportWS.LinqToSql;
 using KmsReportWS.Model.Report;
+using KmsReportWS.Properties;
 
 namespace KmsReportWS.Handler
 {
     public class ZpzHandler : BaseReportHandler
     {
+        private readonly string _connStr = Settings.Default.ConnStr;
         public ZpzHandler(ReportType reportType) : base(reportType)
         {
+        }
+
+        public ReportZpzDataDto GetYearData(string yymm, string theme, string fillial, string rowNum)
+        {
+            var db = new LinqToSqlKmsReportDataContext(_connStr);
+
+            string start = yymm.Substring(0, 2) + "01";
+            var result = db.Report_Zpz.Where(x => x.Report_Data.Report_Flow.Id_Region == fillial
+            && x.Report_Data.Theme == theme
+            && Convert.ToInt32(x.Report_Data.Report_Flow.Yymm) >= Convert.ToInt32(start)
+            && Convert.ToInt32(x.Report_Data.Report_Flow.Yymm) <= Convert.ToInt32(yymm)
+            && x.Report_Data.Report_Flow.Id_Report_Type == "Zpz10"
+            && x.RowNum == rowNum
+            ).GroupBy(x => x.Report_Data.Theme).
+            Select(x => new ReportZpzDataDto
+            {  
+            CountSmo = (decimal)x.Sum(g => g.CountSmo)
+
+            }).FirstOrDefault();
+
+            return result;
+
         }
 
         protected override void CreateNewReport(LinqToSqlKmsReportDataContext db, Report_Flow flow,
