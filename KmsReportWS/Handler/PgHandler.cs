@@ -92,7 +92,7 @@ namespace KmsReportWS.Handler
                 CountAmbulatory = data.CountAmbulatory ?? 0,
                 CountDs = data.CountDs ?? 0,
                 CountDsVmp = data.CountDsVmp ?? 0,
-                CountStac = data.CountStac,
+                CountStac = data.CountStac ?? 0,
                 CountStacVmp = data.CountStacVmp ?? 0,
                 CountOutOfSmoAnother = data.CountOutOfSmoAnother ?? 0,
                 CountAmbulatoryAnother = data.CountAmbulatoryAnother ?? 0,

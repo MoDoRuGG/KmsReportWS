@@ -33,7 +33,7 @@ namespace KmsReportWS.Handler
                 var iizlDataList = reportForms.Data.Select(data => MapThemeToPersist(themeData.Id, data)).ToList();
                 if (iizlDataList.Any())
                 {
-                    db.Report_Iilzs.InsertAllOnSubmit(iizlDataList);
+                    db.Report_Iilz.InsertAllOnSubmit(iizlDataList);
                 }
 
                 db.SubmitChanges();
@@ -51,8 +51,8 @@ namespace KmsReportWS.Handler
                     db.Report_Data.SingleOrDefault(x => x.Id_Flow == inReport.IdFlow && x.Theme == reportForms.Theme);
                 if (theme != null)
                 {
-                    var dataReport = db.Report_Iilzs.Where(x => x.Id_Report_Data == theme.Id);
-                    db.Report_Iilzs.DeleteAllOnSubmit(dataReport);
+                    var dataReport = db.Report_Iilz.Where(x => x.Id_Report_Data == theme.Id);
+                    db.Report_Iilz.DeleteAllOnSubmit(dataReport);
                     db.SubmitChanges();
 
                     theme.General_field_1 = reportForms.TotalPersFirst;
@@ -61,7 +61,7 @@ namespace KmsReportWS.Handler
                     var dataList = reportForms.Data.Select(data => MapThemeToPersist(theme.Id, data)).ToList();
                     if (dataList.Any())
                     {
-                        db.Report_Iilzs.InsertAllOnSubmit(dataList);
+                        db.Report_Iilz.InsertAllOnSubmit(dataList);
                     }
 
                     db.SubmitChanges();

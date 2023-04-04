@@ -75,7 +75,7 @@ namespace KmsReportWS.Service
         private string CollectReportName(string reportType)
         {
             using var db = new LinqToSqlKmsReportDataContext(ConnStr);
-            return db.Report_Types.Single(x => x.Id == reportType).Name.Trim();
+            return db.Report_Type.Single(x => x.Id == reportType).Name.Trim();
         }
     }
 }

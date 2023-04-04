@@ -176,7 +176,7 @@ namespace KmsReportWS.Collector.ConsolidateReport
                         SumOutOfSmo = gr.Sum(x => x.table.CountOutOfSmo) ?? 0,
                         SumAmbulatory = gr.Sum(x => x.table.CountAmbulatory) ?? 0,
                         SumDs = gr.Sum(x => x.table.CountDs) ?? 0,
-                        SumStac = gr.Sum(x => x.table.CountStac),
+                        SumStac = gr.Sum(x => x.table.CountStac) ?? 0,
                         SumOutOfSmoAnother = gr.Sum(x => x.table.CountOutOfSmoAnother) ?? 0,
                         SumAmbulatoryAnother = gr.Sum(x => x.table.CountAmbulatoryAnother) ?? 0,
                         SumDsAnother = gr.Sum(x => x.table.CountDsAnother) ?? 0,

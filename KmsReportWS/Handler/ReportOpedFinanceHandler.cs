@@ -38,7 +38,7 @@ namespace KmsReportWS.Handler
 
             db.SubmitChanges();
 
-            db.Report_OpedFinances.InsertAllOnSubmit(MapReport(report, themeData.Id));
+            db.Report_OpedFinance.InsertAllOnSubmit(MapReport(report, themeData.Id));
             db.SubmitChanges();
         }
 
@@ -75,7 +75,7 @@ namespace KmsReportWS.Handler
                 {
                     outReport.IdReportData = themeData.Id;
                 }
-                outReport.ReportDataList.AddRange(themeData.Report_OpedFinances.Select(x => new ReportOpedFinanceData
+                outReport.ReportDataList.AddRange(themeData.Report_OpedFinance.Select(x => new ReportOpedFinanceData
                 {
                     RowNum = x.row_num,
                     ValueFact = x.value_fact,
@@ -103,7 +103,7 @@ namespace KmsReportWS.Handler
 
             foreach (var row in report.ReportDataList)
             {
-                var oped = db.Report_OpedFinances.SingleOrDefault(x => x.row_num == row.RowNum && x.id_ReportData == idTheme);
+                var oped = db.Report_OpedFinance.SingleOrDefault(x => x.row_num == row.RowNum && x.id_ReportData == idTheme);
                 if (oped != null)
                 {
                     oped.value_fact = row.ValueFact;

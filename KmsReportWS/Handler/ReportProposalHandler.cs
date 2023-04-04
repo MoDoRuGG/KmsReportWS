@@ -38,7 +38,7 @@ namespace KmsReportWS.Handler
 
             report.IdReportData = themeData.Id;
 
-            db.Report_Proposals.InsertOnSubmit(new Report_Proposal
+            db.Report_Proposal.InsertOnSubmit(new Report_Proposal
             {
                 id_ReportData = report.IdReportData,
                 Count_MoCheck = report.CountMoCheck,
@@ -61,7 +61,7 @@ namespace KmsReportWS.Handler
 
             var db = new LinqToSqlKmsReportDataContext(_connStr);
 
-            var report = db.Report_Proposals.FirstOrDefault(x => x.Report_Data.Id_Flow == rep.Id);
+            var report = db.Report_Proposal.FirstOrDefault(x => x.Report_Data.Id_Flow == rep.Id);
             if (report != null)
             {
                 outReport.IdReportData = report.id_ReportData;
@@ -80,7 +80,7 @@ namespace KmsReportWS.Handler
             var report = inReport as ReportProposal ??
                      throw new Exception("Error update report, because getting empty report");
 
-            var reportDb = db.Report_Proposals.FirstOrDefault(x => x.Report_Data.Id_Flow == report.IdFlow);
+            var reportDb = db.Report_Proposal.FirstOrDefault(x => x.Report_Data.Id_Flow == report.IdFlow);
 
             if (reportDb != null)
             {

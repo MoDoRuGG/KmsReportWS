@@ -22,7 +22,7 @@ namespace KmsReportWS.Handler
         {
             using var db = new LinqToSqlKmsReportDataContext(ConnStr);
             var flows = from r in db.Report_Flow
-                        join rt in db.Report_Types on r.Id_Report_Type equals rt.Id
+                        join rt in db.Report_Type on r.Id_Report_Type equals rt.Id
                           //join reg in db.Region on flow.Id_Region equals reg.id
                         where Convert.ToInt32(r.Yymm) >= Convert.ToInt32(yymmStart)
                               && Convert.ToInt32(r.Yymm) <= Convert.ToInt32(yymmEnd)
@@ -54,7 +54,7 @@ namespace KmsReportWS.Handler
             List<ReportScanModel> scans = new List<ReportScanModel>();
             try
             {
-                scans = db.Scans_Bases.Where(x => x.Id_flow == idReport).Select(x => new ReportScanModel
+                scans = db.Scans_Base.Where(x => x.Id_flow == idReport).Select(x => new ReportScanModel
                 {
                     IdScan = x.Id_Scan,
                     FileName = x.File_Name,

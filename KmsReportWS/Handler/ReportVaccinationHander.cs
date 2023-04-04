@@ -26,7 +26,7 @@ namespace KmsReportWS.Handler
             var db = new LinqToSqlKmsReportDataContext(_connStr);
 
             string start = yymm.Substring(0, 2) + "01";
-            var result = db.Report_Vaccinations.Where(x => x.Report_Data.Report_Flow.Id_Region == fillial         
+            var result = db.Report_Vaccination.Where(x => x.Report_Data.Report_Flow.Id_Region == fillial         
             && Convert.ToInt32(x.Report_Data.Report_Flow.Yymm) >= Convert.ToInt32(start)
             && Convert.ToInt32(x.Report_Data.Report_Flow.Yymm) <= Convert.ToInt32(yymm)
             ).GroupBy(x => x.Report_Data.Report_Flow.Id_Region).
@@ -69,7 +69,7 @@ namespace KmsReportWS.Handler
 
             report.IdReportData = themeData.Id;
 
-            db.Report_Vaccinations.InsertOnSubmit(MapReportFromData(report));
+            db.Report_Vaccination.InsertOnSubmit(MapReportFromData(report));
 
 
             db.SubmitChanges();
@@ -83,7 +83,7 @@ namespace KmsReportWS.Handler
 
             var db = new LinqToSqlKmsReportDataContext(_connStr);
 
-            var report = db.Report_Vaccinations.FirstOrDefault(x=>x.Report_Data.Id_Flow == rep.Id);
+            var report = db.Report_Vaccination.FirstOrDefault(x=>x.Report_Data.Id_Flow == rep.Id);
             outReport = MapReportDto(report);
             return outReport;
         }
@@ -92,7 +92,7 @@ namespace KmsReportWS.Handler
             var report = inReport as ReportVaccination ??
                          throw new Exception("Error update report, because getting empty report");
 
-            var reportDb = db.Report_Vaccinations.FirstOrDefault(x => x.Id == report.Id);
+            var reportDb = db.Report_Vaccination.FirstOrDefault(x => x.Id == report.Id);
 
             if (reportDb != null)
             {
@@ -109,7 +109,7 @@ namespace KmsReportWS.Handler
             }
             else
             {
-                db.Report_Vaccinations.InsertOnSubmit(MapReportFromData(report));
+                db.Report_Vaccination.InsertOnSubmit(MapReportFromData(report));
             }
 
 

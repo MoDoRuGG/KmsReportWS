@@ -234,7 +234,7 @@ namespace KmsReportWS.Handler
         {
             string start = yymm.Substring(0, 2) + "01";
             var db = new LinqToSqlKmsReportDataContext(_connStr);
-            var result = db.Report_Opeds.Where(oped =>
+            var result = db.Report_Oped.Where(oped =>
             oped.Report_Data.Report_Flow.Id_Region == filial
             && oped.Report_Data.Report_Flow.Id_Report_Type == "foped"
            && Convert.ToInt32(oped.Report_Data.Report_Flow.Yymm) >= Convert.ToInt32(start)
@@ -256,7 +256,7 @@ namespace KmsReportWS.Handler
         {
             string start = yymm.Substring(0, 2) + "01";
             var db = new LinqToSqlKmsReportDataContext(_connStr);
-            var result = db.Report_Opeds.Where(opedU =>
+            var result = db.Report_Oped.Where(opedU =>
             opedU.Report_Data.Report_Flow.Id_Region == filial
             && opedU.Report_Data.Report_Flow.Id_Report_Type == "fopedU"
            && Convert.ToInt32(opedU.Report_Data.Report_Flow.Yymm) >= Convert.ToInt32(start)

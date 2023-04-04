@@ -69,7 +69,7 @@ namespace KmsReportWS.Handler
 
             report.IdReportData = themeData.Id;
 
-            db.FSSMonitroings.InsertAllOnSubmit(report.Data.Select(x => new LinqToSql.FSSMonitroing
+            db.FSSMonitroing.InsertAllOnSubmit(report.Data.Select(x => new LinqToSql.FSSMonitroing
             {
                 Id_ReportData = themeData.Id,
                 RowNum = x.RowNum,
@@ -87,7 +87,7 @@ namespace KmsReportWS.Handler
             var report = inReport as Model.Report.ReportFSSMonitroing ??
                      throw new Exception("Error saving new report, because getting empty report");
 
-            var reportDb = db.FSSMonitroings.Where(x => x.Report_Data.Id_Flow == inReport.IdFlow);
+            var reportDb = db.FSSMonitroing.Where(x => x.Report_Data.Id_Flow == inReport.IdFlow);
 
             foreach (var rep in reportDb)
             {
@@ -100,7 +100,7 @@ namespace KmsReportWS.Handler
                 }
                 else
                 {
-                    db.FSSMonitroings.InsertOnSubmit(new LinqToSql.FSSMonitroing
+                    db.FSSMonitroing.InsertOnSubmit(new LinqToSql.FSSMonitroing
                     {
                         Id_ReportData = report.IdReportData,
                         RowNum = rep.RowNum,
@@ -120,7 +120,7 @@ namespace KmsReportWS.Handler
             MapFromReportFlow(rep, outReport);
 
             var db = new LinqToSqlKmsReportDataContext(_connStr);
-            var reportRows = db.FSSMonitroings.Where(x => x.Report_Data.Id_Flow == rep.Id);
+            var reportRows = db.FSSMonitroing.Where(x => x.Report_Data.Id_Flow == rep.Id);
 
             if(reportRows != null)
             {

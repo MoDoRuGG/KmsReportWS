@@ -49,7 +49,7 @@ namespace KmsReportWS.Handler
         public List<DynamicDataDto> GetReportRegionData(int idFlow)
         {
             var db = new LinqToSqlKmsReportDataContext(ConnStr);
-            return db.Report_Dynamic_Datas.Where(x => x.Id_Flow == idFlow)
+            return db.Report_Dynamic_Data.Where(x => x.Id_Flow == idFlow)
                 .Select(x => new DynamicDataDto
                 {
                     Position = x.Position,
@@ -156,7 +156,7 @@ namespace KmsReportWS.Handler
                 db.SubmitChanges();
             }
 
-            var reportData = db.Report_Dynamic_Datas.Where(x => x.Id_Flow == currentFlow.id);
+            var reportData = db.Report_Dynamic_Data.Where(x => x.Id_Flow == currentFlow.id);
 
             if (reportData.Count() == 0)
             {
@@ -183,7 +183,7 @@ namespace KmsReportWS.Handler
                 Value = x.Value
             }).ToList();
 
-            db.Report_Dynamic_Datas.InsertAllOnSubmit(result);
+            db.Report_Dynamic_Data.InsertAllOnSubmit(result);
             db.SubmitChanges();
 
         }
@@ -194,7 +194,7 @@ namespace KmsReportWS.Handler
 
             foreach (var dto in data)
             {
-                var reportData = db.Report_Dynamic_Datas.SingleOrDefault(x => x.Id_Flow == flow.id && x.Position == dto.Position);
+                var reportData = db.Report_Dynamic_Data.SingleOrDefault(x => x.Id_Flow == flow.id && x.Position == dto.Position);
                 if (reportData != null)
                 {
                     reportData.Value = dto.Value;
@@ -208,7 +208,7 @@ namespace KmsReportWS.Handler
                         Value = dto.Value
                     };
 
-                    db.Report_Dynamic_Datas.InsertOnSubmit(reportData);
+                    db.Report_Dynamic_Data.InsertOnSubmit(reportData);
 
                 }
 

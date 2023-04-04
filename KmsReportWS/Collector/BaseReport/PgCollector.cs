@@ -58,7 +58,7 @@ namespace KmsReportWS.Collector.BaseReport
                 CountAmbulatory = fgr.Sum(x => x.CountAmbulatory ?? 0),
                 CountDs = fgr.Sum(x => x.CountDs ?? 0),
                 CountDsVmp = fgr.Sum(x => x.CountDsVmp ?? 0),
-                CountStac = fgr.Sum(x => x.CountStac),
+                CountStac = fgr.Sum(x => x.CountStac ?? 0),
                 CountStacVmp = fgr.Sum(x => x.CountStacVmp ?? 0),
                 CountOutOfSmoAnother = fgr.Sum(x => x.CountOutOfSmoAnother ?? 0),
                 CountAmbulatoryAnother = fgr.Sum(x => x.CountAmbulatoryAnother ?? 0),

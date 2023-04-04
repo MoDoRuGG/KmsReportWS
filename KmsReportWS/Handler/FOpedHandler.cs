@@ -45,7 +45,7 @@ namespace KmsReportWS.Handler
 
             db.SubmitChanges();
 
-            db.Report_Opeds.InsertAllOnSubmit(MapReportFromPersist(report, themeData.Id));
+            db.Report_Oped.InsertAllOnSubmit(MapReportFromPersist(report, themeData.Id));
             db.SubmitChanges();
           
 
@@ -118,7 +118,7 @@ namespace KmsReportWS.Handler
 
             foreach (var row in report.ReportDataList)
             {
-                var oped = db.Report_Opeds.SingleOrDefault(x => x.RowNum == row.RowNum && x.Id_Report_Data == idTheme);
+                var oped = db.Report_Oped.SingleOrDefault(x => x.RowNum == row.RowNum && x.Id_Report_Data == idTheme);
                 if (oped != null)
                 {
                     oped.App = row.App;
@@ -130,7 +130,7 @@ namespace KmsReportWS.Handler
                 else
                 {
                     var opedIns = MapReportFromPersist(row, idTheme);
-                    db.Report_Opeds.InsertOnSubmit(opedIns);
+                    db.Report_Oped.InsertOnSubmit(opedIns);
 
                 }
             }
@@ -147,7 +147,7 @@ namespace KmsReportWS.Handler
 
             foreach (var themeData in rep.Report_Data)
             {
-                var dataList = themeData.Report_Opeds.Select(MapReportFromPersist).ToList();
+                var dataList = themeData.Report_Oped.Select(MapReportFromPersist).ToList();
                 outReport.ReportDataList.AddRange(dataList);
             }
 

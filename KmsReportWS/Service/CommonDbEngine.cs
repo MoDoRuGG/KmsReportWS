@@ -21,7 +21,7 @@ namespace KmsReportWS.Service
         }
 
         public List<KmsReportDictionary> CollectReportDisctionary() =>
-            db.Report_Types.Select(x => new KmsReportDictionary
+            db.Report_Type.Select(x => new KmsReportDictionary
             {
                 Key = x.Id,
                 Value = x.Name,

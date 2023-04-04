@@ -45,7 +45,7 @@ namespace KmsReportWS.Service
                     ForeignKey = x.Region
                 }).ToList();
 
-                var reportTypes = db.Report_Types.Select(x => new KmsReportDictionary
+                var reportTypes = db.Report_Type.Select(x => new KmsReportDictionary
                 {
                     Key = x.Id,
                     Value = x.Name,

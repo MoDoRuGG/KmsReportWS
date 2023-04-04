@@ -24,7 +24,7 @@ namespace KmsReportWS.Service
         {
             using var db = new LinqToSqlKmsReportDataContext(_connStr);
             _regions = db.Region.ToDictionary(x => x.id, xn => xn.name);
-            _reportTypes = db.Report_Types.ToDictionary(x => x.Id, xn => xn.Name);
+            _reportTypes = db.Report_Type.ToDictionary(x => x.Id, xn => xn.Name);
         }
 
         public string SendNotification(NotificationRequest request)

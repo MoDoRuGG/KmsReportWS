@@ -96,6 +96,11 @@
     <Content Include="Endpoint.asmx">
       <BrowseToURL>~/Endpoint.asmx</BrowseToURL>
     </Content>
+    <Content Include="LinqToSql\LinqToSqlKmsReport.dbml">
+      <SubType>Designer</SubType>
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>LinqToSqlKmsReport.designer.cs</LastGenOutput>
+    </Content>
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -130,6 +135,7 @@
     <Compile Include="Handler\BaseReportHandler.cs" />
     <Compile Include="Handler\FOpedUHandler.cs" />
     <Compile Include="Handler\MonitoringVCRHandler.cs" />
+    <Compile Include="Handler\ReportEffectivenessHandler.cs" />
     <Compile Include="Handler\ZpzHandler.cs" />
     <Compile Include="Handler\ReportCadreHandler.cs" />
     <Compile Include="Handler\DynamicReportCommonHandler.cs" />
@@ -149,7 +155,9 @@
     <Compile Include="Handler\ReportOpedFinanceHandler.cs" />
     <Compile Include="Handler\ReportProposalHandler.cs" />
     <Compile Include="Handler\ReportVaccinationHander.cs" />
-    <Compile Include="LinqToSql\LinqToSqlKmsReport.cs">
+    <Compile Include="LinqToSql\LinqToSqlKmsReport.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
       <DependentUpon>LinqToSqlKmsReport.dbml</DependentUpon>
     </Compile>
     <Compile Include="Model\CheckFFOMS2022CommonData.cs" />
@@ -182,6 +190,7 @@
     <Compile Include="Model\FSSMonitoringPgDataDto.cs" />
     <Compile Include="Model\ReportDynamicScanModel.cs" />
     <Compile Include="Model\ReportScanModel.cs" />
+    <Compile Include="Model\Report\ReportEffectiveness.cs" />
     <Compile Include="Model\Report\ReportCadre.cs" />
     <Compile Include="Model\Report\DataSource.cs" />
     <Compile Include="Model\Report\ReportInfomaterial.cs" />
@@ -201,11 +210,6 @@
     <Compile Include="Endpoint.asmx.cs">
       <DependentUpon>Endpoint.asmx</DependentUpon>
       <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="LinqToSql\LinqToSqlKmsReport.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>LinqToSqlKmsReport.dbml</DependentUpon>
     </Compile>
     <Compile Include="Model\Report\AbstractReport.cs" />
     <Compile Include="Model\Report\ReportStatus.cs" />
@@ -249,11 +253,6 @@
     <Compile Include="Support\StatusUtils.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="LinqToSql\LinqToSqlKmsReport.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>LinqToSqlKmsReport.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="NLog.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

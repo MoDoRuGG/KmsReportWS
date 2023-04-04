@@ -19,7 +19,7 @@ namespace KmsReportWS.Handler
             int yymmStart = Convert.ToInt32(year.Substring(2) + "01");
             int yymmEnd = Convert.ToInt32(year.Substring(2) + "12");
 
-            var plans = db.OpedFinancePlans.Where(x => Convert.ToInt32(Convert.ToInt32(x.Yymm)) >= yymmStart && Convert.ToInt32(x.Yymm) <= yymmEnd);
+            var plans = db.OpedFinancePlan.Where(x => Convert.ToInt32(Convert.ToInt32(x.Yymm)) >= yymmStart && Convert.ToInt32(x.Yymm) <= yymmEnd);
             if (plans != null)
             {
                 foreach (var plan in plans)
@@ -44,7 +44,7 @@ namespace KmsReportWS.Handler
             {
                 foreach (var plan in plans)
                 {
-                    var planInDB = db.OpedFinancePlans.FirstOrDefault(x => x.Yymm == plan.Yymm && x.Id_Region == plan.IdRegion);
+                    var planInDB = db.OpedFinancePlan.FirstOrDefault(x => x.Yymm == plan.Yymm && x.Id_Region == plan.IdRegion);
                     if (planInDB == null) // Создание новой записи
                     {
                         planInDB = new OpedFinancePlan
@@ -54,7 +54,7 @@ namespace KmsReportWS.Handler
                             Yymm = plan.Yymm
                         };
 
-                        db.OpedFinancePlans.InsertOnSubmit(planInDB);
+                        db.OpedFinancePlan.InsertOnSubmit(planInDB);
 
                     }
                     else // Редактирование

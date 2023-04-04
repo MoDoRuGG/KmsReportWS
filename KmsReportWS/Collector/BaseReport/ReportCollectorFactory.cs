@@ -20,8 +20,8 @@ namespace KmsReportWS.Collector.BaseReport
                 ReportType.Iizl => _iizlCollector,
                 ReportType.Pg => _pgCollector,
                 ReportType.Zpz => _zpzCollector,
-        
-                _ => _pgQCollector
+                ReportType.PgQ => _pgQCollector,
+                _ => _zpzQCollector
             };
     }
 }

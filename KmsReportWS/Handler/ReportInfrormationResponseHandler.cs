@@ -24,7 +24,7 @@ namespace KmsReportWS.Handler
             var db = new LinqToSqlKmsReportDataContext(_connStr);
 
             string start = yymm.Substring(0, 2) + "01";
-            var result = db.Report_InfrormationResponses.Where(x => x.Report_Data.Report_Flow.Id_Region == fillial
+            var result = db.Report_InfrormationResponse.Where(x => x.Report_Data.Report_Flow.Id_Region == fillial
             && x.Report_Data.Theme == theme
             && Convert.ToInt32(x.Report_Data.Report_Flow.Yymm) >= Convert.ToInt32(start)
             && Convert.ToInt32(x.Report_Data.Report_Flow.Yymm) <= Convert.ToInt32(yymm)
@@ -63,7 +63,7 @@ namespace KmsReportWS.Handler
                 var fIRList = MapMainThemeFromPersist(themeData.Id, reportForms.Data);
                 if (fIRList != null)
                 {
-                    db.Report_InfrormationResponses.InsertOnSubmit(fIRList);
+                    db.Report_InfrormationResponse.InsertOnSubmit(fIRList);
                 }
 
                 db.SubmitChanges();
@@ -88,7 +88,7 @@ namespace KmsReportWS.Handler
                 }
 
 
-                var row = db.Report_InfrormationResponses
+                var row = db.Report_InfrormationResponse
                        .SingleOrDefault(x => x.Id_Report_Data == idTheme);
 
                 if (report != null)
@@ -101,7 +101,7 @@ namespace KmsReportWS.Handler
                 else
                 {
                     var rep = MapMainThemeFromPersist(idTheme, reportForms.Data);
-                    db.Report_InfrormationResponses.InsertOnSubmit(rep);
+                    db.Report_InfrormationResponse.InsertOnSubmit(rep);
                 }
 
 
@@ -127,7 +127,7 @@ namespace KmsReportWS.Handler
                 };
 
 
-                var dataList = themeData.Report_InfrormationResponses.Select(MapReportDto);
+                var dataList = themeData.Report_InfrormationResponse.Select(MapReportDto);
                 dto.Data = dataList.First();
 
                 outReport.ReportDataList.Add(dto);

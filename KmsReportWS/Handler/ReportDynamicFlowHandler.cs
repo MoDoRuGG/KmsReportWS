@@ -66,7 +66,7 @@ namespace KmsReportWS.Handler
         public void SaveScan(int idFlow, string fileName)
         {
             using var db = new LinqToSqlKmsReportDataContext(ConnStr);
-            db.Scan_Dynamics.InsertOnSubmit(new Scan_Dynamic
+            db.Scan_Dynamic.InsertOnSubmit(new Scan_Dynamic
             {
                 IdFlow = idFlow,
                 FileName = fileName
@@ -78,10 +78,10 @@ namespace KmsReportWS.Handler
         public void DeleteScan(int idDynamicScan)
         {
             using var db = new LinqToSqlKmsReportDataContext(ConnStr);
-            var item = db.Scan_Dynamics.FirstOrDefault(x => x.id_DynamicScan == idDynamicScan);
+            var item = db.Scan_Dynamic.FirstOrDefault(x => x.id_DynamicScan == idDynamicScan);
             if (item != null)
             {
-                db.Scan_Dynamics.DeleteOnSubmit(item);
+                db.Scan_Dynamic.DeleteOnSubmit(item);
             }
 
             db.SubmitChanges();
@@ -91,7 +91,7 @@ namespace KmsReportWS.Handler
         {
             List<ReportDynamicScanModel> result = new List<ReportDynamicScanModel>();
             using var db = new LinqToSqlKmsReportDataContext(ConnStr);
-            var dbResult = db.Scan_Dynamics.Where(x=> x.IdFlow == idFlow);
+            var dbResult = db.Scan_Dynamic.Where(x=> x.IdFlow == idFlow);
             if(dbResult != null)
             {
                 result = dbResult.Select(x=> new ReportDynamicScanModel 

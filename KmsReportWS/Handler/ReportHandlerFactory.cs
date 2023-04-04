@@ -24,6 +24,7 @@ namespace KmsReportWS.Handler
         private readonly IReportHandler _proposalCollector = new ReportProposalHandler(ReportType.Proposal);
         private readonly IReportHandler _opedFinanceCollector = new ReportOpedFinanceHandler(ReportType.OpedFinance);
         //private readonly IReportHandler _infomaterialCollector = new ReportInfomaterialHandler(ReportType.Infomaterial);
+        private readonly IReportHandler _effectiveHandlerCollector = new ReportEffectivenessHandler(ReportType.Effective);
 
         public IReportHandler GetHandler(ReportType reportType) =>
             reportType switch {
@@ -46,6 +47,7 @@ namespace KmsReportWS.Handler
                 ReportType.Proposal => _proposalCollector,
                 ReportType.OpedFinance => _opedFinanceCollector,
                 ReportType.Cadre => _cadreHandlerCollector,
+                ReportType.Effective => _effectiveHandlerCollector,
                 //ReportType.Infomaterial => _infomaterialCollector,
 
             };
