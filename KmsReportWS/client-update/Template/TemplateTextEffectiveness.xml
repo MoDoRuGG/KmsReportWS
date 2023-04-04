@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<REPORT xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <REPORT_NAME>effectiveness</REPORT_NAME>
+   <TABLE>
+      <TABLE_NAME>Эффективность</TABLE_NAME>
+      <TABLE_DESCRIPTION>Оценка эффективности экспертной деятельности</TABLE_DESCRIPTION>
+   </TABLE>
+</REPORT>
