@@ -4,102 +4,11 @@
    <TABLE>
 		<TABLE_NAME>Таблица 5А</TABLE_NAME>
 		<TABLE_DESCRIPTION>Результаты медико-экономического контроля</TABLE_DESCRIPTION>
-		<ROWS_COUNT>8</ROWS_COUNT>
-		<ROW>
-			<ROW_TEXT>Количество предъявленных к оплате счетов за оказанную медицинскую помощь (тыс. ед.), всего,  из них:</ROW_TEXT>
-			<ROW_NUM>1</ROW_NUM>
-			<EXCLUSION>false</EXCLUSION>
-		</ROW>
-		<ROW>
-			<ROW_TEXT>    по профилю «онкология»</ROW_TEXT>
-			<ROW_NUM>1.1</ROW_NUM>
-			<EXCLUSION>false</EXCLUSION>
-		</ROW>
-		<ROW>
-			<ROW_TEXT>    при оказании медицинской помощи с проведением консультаций/консилиумов с применением телемедицинских технологий медицинскими работниками национальных исследовательских медицинских центров</ROW_TEXT>
-			<ROW_NUM>1.2</ROW_NUM>
-			<EXCLUSION>false</EXCLUSION>
-		</ROW>
-		<ROW>
-			<ROW_TEXT>Количество счетов, содержащих нарушения, всего,  в том числе:</ROW_TEXT>
-			<ROW_NUM>4</ROW_NUM>
-			<EXCLUSION>true</EXCLUSION>
-		</ROW>
-		<ROW>
-			<ROW_TEXT>    в оформлении и предъявлении на оплату счетов и реестров счетов, всего,  из них:</ROW_TEXT>
-			<ROW_NUM>4.1</ROW_NUM>
-			<EXCLUSION>false</EXCLUSION>
-		</ROW>
-		<ROW>
-			<ROW_TEXT>        по профилю «онкология»</ROW_TEXT>
-			<ROW_NUM>4.1.1</ROW_NUM>
-			<EXCLUSION>false</EXCLUSION>
-		</ROW>
-		<ROW>
-			<ROW_TEXT>    связанные с включением в реестр счетов видов медицинской помощи, не входящих в территориальную программу ОМС, всего,  из них:</ROW_TEXT>
-			<ROW_NUM>4.2</ROW_NUM>
-			<EXCLUSION>false</EXCLUSION>
-		</ROW>
-		<ROW>
-			<ROW_TEXT>        по профилю «онкология»</ROW_TEXT>
-			<ROW_NUM>4.2.1</ROW_NUM>
-			<EXCLUSION>false</EXCLUSION>
-		</ROW>
-		<ROW>
-			<ROW_TEXT>    связанные с необоснованным применением тарифа на оплату медицинской помощи, всего,  из них:</ROW_TEXT>
-			<ROW_NUM>4.3</ROW_NUM>
-			<EXCLUSION>false</EXCLUSION>
-		</ROW>
-		<ROW>
-			<ROW_TEXT>        по профилю «онкология»</ROW_TEXT>
-			<ROW_NUM>4.3.1</ROW_NUM>
-			<EXCLUSION>false</EXCLUSION>
-		</ROW>
-		<ROW>
-			<ROW_TEXT>    связанные с включением в реестр счетов нелицензированных видов медицинской деятельности, всего,  из них:</ROW_TEXT>
-			<ROW_NUM>4.4</ROW_NUM>
-			<EXCLUSION>false</EXCLUSION>
-		</ROW>
-		<ROW>
-			<ROW_TEXT>        по профилю «онкология»</ROW_TEXT>
-			<ROW_NUM>4.4.1</ROW_NUM>
-			<EXCLUSION>false</EXCLUSION>
-		</ROW>
-		<ROW>
-			<ROW_TEXT>    связанные с повторным или необоснованным включением в реестр счетов медицинской помощи, всего,  из них:</ROW_TEXT>
-			<ROW_NUM>4.5</ROW_NUM>
-			<EXCLUSION>false</EXCLUSION>
-		</ROW>
-		<ROW>
-			<ROW_TEXT>        по профилю «онкология»</ROW_TEXT>
-			<ROW_NUM>4.5.1</ROW_NUM>
-			<EXCLUSION>false</EXCLUSION>
-		</ROW>
-		<ROW>
-			<ROW_TEXT>    прочие основания, всего,  из них:</ROW_TEXT>
-			<ROW_NUM>4.6</ROW_NUM>
-			<EXCLUSION>false</EXCLUSION>
-		</ROW>
-		<ROW>
-			<ROW_TEXT>        по профилю «онкология»</ROW_TEXT>
-			<ROW_NUM>4.6.1</ROW_NUM>
-			<EXCLUSION>false</EXCLUSION>
-		</ROW>
-		<ROW>
-			<ROW_TEXT>Количество принятых к оплате счетов (тыс. ед.), всего,  из них:</ROW_TEXT>
-			<ROW_NUM>5</ROW_NUM>
-			<EXCLUSION>false</EXCLUSION>
-		</ROW>
-		<ROW>
-			<ROW_TEXT>    по профилю «онкология»</ROW_TEXT>
-			<ROW_NUM>5.1</ROW_NUM>
-			<EXCLUSION>false</EXCLUSION>
-		</ROW>
-		<ROW>
-			<ROW_TEXT>    при оказании медицинской помощи с проведением консультаций/консилиумов    медицинскими работниками национальных исследовательских медицинских центров</ROW_TEXT>
-			<ROW_NUM>5.2</ROW_NUM>
-			<EXCLUSION>false</EXCLUSION>
-		</ROW>
+		<ROWS_COUNT>9</ROWS_COUNT>
+      <ROW>
+      <ROW_TEXT>1</ROW_TEXT>
+      <ROW_NUM> </ROW_NUM>
+      </ROW>
 	</TABLE>
    <TABLE>
       <TABLE_NAME>Таблица 6</TABLE_NAME>
