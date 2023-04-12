@@ -120,9 +120,9 @@ namespace KmsReportWS.LinqToSql
     partial void InsertScans_Base(Scans_Base instance);
     partial void UpdateScans_Base(Scans_Base instance);
     partial void DeleteScans_Base(Scans_Base instance);
-    partial void InsertReport_ExpertEffectiveness(Report_ExpertEffectiveness instance);
-    partial void UpdateReport_ExpertEffectiveness(Report_ExpertEffectiveness instance);
-    partial void DeleteReport_ExpertEffectiveness(Report_ExpertEffectiveness instance);
+    partial void InsertReport_Effectiveness(Report_Effectiveness instance);
+    partial void UpdateReport_Effectiveness(Report_Effectiveness instance);
+    partial void DeleteReport_Effectiveness(Report_Effectiveness instance);
     #endregion
 		
 		public LinqToSqlKmsReportDataContext() : 
@@ -411,11 +411,11 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
-		public System.Data.Linq.Table<Report_ExpertEffectiveness> Report_ExpertEffectiveness
+		public System.Data.Linq.Table<Report_Effectiveness> Report_Effectiveness
 		{
 			get
 			{
-				return this.GetTable<Report_ExpertEffectiveness>();
+				return this.GetTable<Report_Effectiveness>();
 			}
 		}
 		
@@ -3392,7 +3392,7 @@ namespace KmsReportWS.LinqToSql
 		
 		private EntitySet<Report262_Table3> _Report262_Table3;
 		
-		private EntitySet<Report_ExpertEffectiveness> _Report_ExpertEffectiveness;
+		private EntitySet<Report_Effectiveness> _Report_Effectiveness;
 		
 		private EntityRef<Report_Flow> _Report_Flow;
 		
@@ -3434,7 +3434,7 @@ namespace KmsReportWS.LinqToSql
 			this._Report_Vaccination = new EntitySet<Report_Vaccination>(new Action<Report_Vaccination>(this.attach_Report_Vaccination), new Action<Report_Vaccination>(this.detach_Report_Vaccination));
 			this._Report_Zpz = new EntitySet<Report_Zpz>(new Action<Report_Zpz>(this.attach_Report_Zpz), new Action<Report_Zpz>(this.detach_Report_Zpz));
 			this._Report262_Table3 = new EntitySet<Report262_Table3>(new Action<Report262_Table3>(this.attach_Report262_Table3), new Action<Report262_Table3>(this.detach_Report262_Table3));
-			this._Report_ExpertEffectiveness = new EntitySet<Report_ExpertEffectiveness>(new Action<Report_ExpertEffectiveness>(this.attach_Report_ExpertEffectiveness), new Action<Report_ExpertEffectiveness>(this.detach_Report_ExpertEffectiveness));
+			this._Report_Effectiveness = new EntitySet<Report_Effectiveness>(new Action<Report_Effectiveness>(this.attach_Report_Effectiveness), new Action<Report_Effectiveness>(this.detach_Report_Effectiveness));
 			this._Report_Flow = default(EntityRef<Report_Flow>);
 			this._Report_Type = default(EntityRef<Report_Type>);
 			OnCreated();
@@ -3776,16 +3776,16 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Report_Data_Report_ExpertEffectiveness", Storage="_Report_ExpertEffectiveness", ThisKey="Id", OtherKey="Id_Report_Data")]
-		public EntitySet<Report_ExpertEffectiveness> Report_ExpertEffectiveness
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Report_Data_Report_Effectiveness", Storage="_Report_Effectiveness", ThisKey="Id", OtherKey="Id_Report_Data")]
+		public EntitySet<Report_Effectiveness> Report_Effectiveness
 		{
 			get
 			{
-				return this._Report_ExpertEffectiveness;
+				return this._Report_Effectiveness;
 			}
 			set
 			{
-				this._Report_ExpertEffectiveness.Assign(value);
+				this._Report_Effectiveness.Assign(value);
 			}
 		}
 		
@@ -4069,13 +4069,13 @@ namespace KmsReportWS.LinqToSql
 			entity.Report_Data = null;
 		}
 		
-		private void attach_Report_ExpertEffectiveness(Report_ExpertEffectiveness entity)
+		private void attach_Report_Effectiveness(Report_Effectiveness entity)
 		{
 			this.SendPropertyChanging();
 			entity.Report_Data = this;
 		}
 		
-		private void detach_Report_ExpertEffectiveness(Report_ExpertEffectiveness entity)
+		private void detach_Report_Effectiveness(Report_Effectiveness entity)
 		{
 			this.SendPropertyChanging();
 			entity.Report_Data = null;
@@ -11128,8 +11128,8 @@ namespace KmsReportWS.LinqToSql
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Report_ExpertEffectiveness")]
-	public partial class Report_ExpertEffectiveness : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Report_Effectiveness")]
+	public partial class Report_Effectiveness : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
@@ -11138,39 +11138,39 @@ namespace KmsReportWS.LinqToSql
 		
 		private int _Id_Report_Data;
 		
-		private string _RowNum;
-		
 		private string _full_name;
 		
-		private decimal _expert_busyness;
+		private System.Nullable<decimal> _expert_busyness;
 		
 		private string _expert_speciality;
 		
 		private string _expertise_type;
 		
-		private int _mee_quantity_plan;
+		private System.Nullable<decimal> _mee_quantity_plan;
 		
-		private int _mee_quantity_fact;
+		private System.Nullable<decimal> _mee_quantity_fact;
 		
-		private decimal _mee_quantity_percent;
+		private System.Nullable<decimal> _mee_quantity_percent;
 		
-		private int _mee_yeild_plan;
+		private System.Nullable<decimal> _mee_yeild_plan;
 		
-		private int _mee_yeild_fact;
+		private System.Nullable<decimal> _mee_yeild_fact;
 		
-		private decimal _mee_yeild_percent;
+		private System.Nullable<decimal> _mee_yeild_percent;
 		
-		private int _ekmp_quantity_plan;
+		private System.Nullable<decimal> _ekmp_quantity_plan;
 		
-		private int _ekmp_quantity_fact;
+		private System.Nullable<decimal> _ekmp_quantity_fact;
 		
-		private decimal _ekmp_quantity_percent;
+		private System.Nullable<decimal> _ekmp_quantity_percent;
 		
-		private int _ekmp_yeild_plan;
+		private System.Nullable<decimal> _ekmp_yeild_plan;
 		
-		private int _ekmp_yeild_fact;
+		private System.Nullable<decimal> _ekmp_yeild_fact;
 		
-		private decimal _ekmp_yeild_percent;
+		private System.Nullable<decimal> _ekmp_yeild_percent;
+		
+		private string _RowNum;
 		
 		private EntityRef<Report_Data> _Report_Data;
 		
@@ -11182,43 +11182,43 @@ namespace KmsReportWS.LinqToSql
     partial void OnIdChanged();
     partial void OnId_Report_DataChanging(int value);
     partial void OnId_Report_DataChanged();
-    partial void OnRowNumChanging(string value);
-    partial void OnRowNumChanged();
     partial void Onfull_nameChanging(string value);
     partial void Onfull_nameChanged();
-    partial void Onexpert_busynessChanging(decimal value);
+    partial void Onexpert_busynessChanging(System.Nullable<decimal> value);
     partial void Onexpert_busynessChanged();
     partial void Onexpert_specialityChanging(string value);
     partial void Onexpert_specialityChanged();
     partial void Onexpertise_typeChanging(string value);
     partial void Onexpertise_typeChanged();
-    partial void Onmee_quantity_planChanging(int value);
+    partial void Onmee_quantity_planChanging(System.Nullable<decimal> value);
     partial void Onmee_quantity_planChanged();
-    partial void Onmee_quantity_factChanging(int value);
+    partial void Onmee_quantity_factChanging(System.Nullable<decimal> value);
     partial void Onmee_quantity_factChanged();
-    partial void Onmee_quantity_percentChanging(decimal value);
+    partial void Onmee_quantity_percentChanging(System.Nullable<decimal> value);
     partial void Onmee_quantity_percentChanged();
-    partial void Onmee_yeild_planChanging(int value);
+    partial void Onmee_yeild_planChanging(System.Nullable<decimal> value);
     partial void Onmee_yeild_planChanged();
-    partial void Onmee_yeild_factChanging(int value);
+    partial void Onmee_yeild_factChanging(System.Nullable<decimal> value);
     partial void Onmee_yeild_factChanged();
-    partial void Onmee_yeild_percentChanging(decimal value);
+    partial void Onmee_yeild_percentChanging(System.Nullable<decimal> value);
     partial void Onmee_yeild_percentChanged();
-    partial void Onekmp_quantity_planChanging(int value);
+    partial void Onekmp_quantity_planChanging(System.Nullable<decimal> value);
     partial void Onekmp_quantity_planChanged();
-    partial void Onekmp_quantity_factChanging(int value);
+    partial void Onekmp_quantity_factChanging(System.Nullable<decimal> value);
     partial void Onekmp_quantity_factChanged();
-    partial void Onekmp_quantity_percentChanging(decimal value);
+    partial void Onekmp_quantity_percentChanging(System.Nullable<decimal> value);
     partial void Onekmp_quantity_percentChanged();
-    partial void Onekmp_yeild_planChanging(int value);
+    partial void Onekmp_yeild_planChanging(System.Nullable<decimal> value);
     partial void Onekmp_yeild_planChanged();
-    partial void Onekmp_yeild_factChanging(int value);
+    partial void Onekmp_yeild_factChanging(System.Nullable<decimal> value);
     partial void Onekmp_yeild_factChanged();
-    partial void Onekmp_yeild_percentChanging(decimal value);
+    partial void Onekmp_yeild_percentChanging(System.Nullable<decimal> value);
     partial void Onekmp_yeild_percentChanged();
+    partial void OnRowNumChanging(string value);
+    partial void OnRowNumChanged();
     #endregion
 		
-		public Report_ExpertEffectiveness()
+		public Report_Effectiveness()
 		{
 			this._Report_Data = default(EntityRef<Report_Data>);
 			OnCreated();
@@ -11268,6 +11268,326 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_full_name", DbType="VarChar(200)")]
+		public string full_name
+		{
+			get
+			{
+				return this._full_name;
+			}
+			set
+			{
+				if ((this._full_name != value))
+				{
+					this.Onfull_nameChanging(value);
+					this.SendPropertyChanging();
+					this._full_name = value;
+					this.SendPropertyChanged("full_name");
+					this.Onfull_nameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_expert_busyness", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> expert_busyness
+		{
+			get
+			{
+				return this._expert_busyness;
+			}
+			set
+			{
+				if ((this._expert_busyness != value))
+				{
+					this.Onexpert_busynessChanging(value);
+					this.SendPropertyChanging();
+					this._expert_busyness = value;
+					this.SendPropertyChanged("expert_busyness");
+					this.Onexpert_busynessChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_expert_speciality", DbType="VarChar(200)")]
+		public string expert_speciality
+		{
+			get
+			{
+				return this._expert_speciality;
+			}
+			set
+			{
+				if ((this._expert_speciality != value))
+				{
+					this.Onexpert_specialityChanging(value);
+					this.SendPropertyChanging();
+					this._expert_speciality = value;
+					this.SendPropertyChanged("expert_speciality");
+					this.Onexpert_specialityChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_expertise_type", DbType="VarChar(20)")]
+		public string expertise_type
+		{
+			get
+			{
+				return this._expertise_type;
+			}
+			set
+			{
+				if ((this._expertise_type != value))
+				{
+					this.Onexpertise_typeChanging(value);
+					this.SendPropertyChanging();
+					this._expertise_type = value;
+					this.SendPropertyChanged("expertise_type");
+					this.Onexpertise_typeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mee_quantity_plan", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> mee_quantity_plan
+		{
+			get
+			{
+				return this._mee_quantity_plan;
+			}
+			set
+			{
+				if ((this._mee_quantity_plan != value))
+				{
+					this.Onmee_quantity_planChanging(value);
+					this.SendPropertyChanging();
+					this._mee_quantity_plan = value;
+					this.SendPropertyChanged("mee_quantity_plan");
+					this.Onmee_quantity_planChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mee_quantity_fact", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> mee_quantity_fact
+		{
+			get
+			{
+				return this._mee_quantity_fact;
+			}
+			set
+			{
+				if ((this._mee_quantity_fact != value))
+				{
+					this.Onmee_quantity_factChanging(value);
+					this.SendPropertyChanging();
+					this._mee_quantity_fact = value;
+					this.SendPropertyChanged("mee_quantity_fact");
+					this.Onmee_quantity_factChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mee_quantity_percent", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> mee_quantity_percent
+		{
+			get
+			{
+				return this._mee_quantity_percent;
+			}
+			set
+			{
+				if ((this._mee_quantity_percent != value))
+				{
+					this.Onmee_quantity_percentChanging(value);
+					this.SendPropertyChanging();
+					this._mee_quantity_percent = value;
+					this.SendPropertyChanged("mee_quantity_percent");
+					this.Onmee_quantity_percentChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mee_yeild_plan", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> mee_yeild_plan
+		{
+			get
+			{
+				return this._mee_yeild_plan;
+			}
+			set
+			{
+				if ((this._mee_yeild_plan != value))
+				{
+					this.Onmee_yeild_planChanging(value);
+					this.SendPropertyChanging();
+					this._mee_yeild_plan = value;
+					this.SendPropertyChanged("mee_yeild_plan");
+					this.Onmee_yeild_planChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mee_yeild_fact", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> mee_yeild_fact
+		{
+			get
+			{
+				return this._mee_yeild_fact;
+			}
+			set
+			{
+				if ((this._mee_yeild_fact != value))
+				{
+					this.Onmee_yeild_factChanging(value);
+					this.SendPropertyChanging();
+					this._mee_yeild_fact = value;
+					this.SendPropertyChanged("mee_yeild_fact");
+					this.Onmee_yeild_factChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mee_yeild_percent", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> mee_yeild_percent
+		{
+			get
+			{
+				return this._mee_yeild_percent;
+			}
+			set
+			{
+				if ((this._mee_yeild_percent != value))
+				{
+					this.Onmee_yeild_percentChanging(value);
+					this.SendPropertyChanging();
+					this._mee_yeild_percent = value;
+					this.SendPropertyChanged("mee_yeild_percent");
+					this.Onmee_yeild_percentChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ekmp_quantity_plan", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> ekmp_quantity_plan
+		{
+			get
+			{
+				return this._ekmp_quantity_plan;
+			}
+			set
+			{
+				if ((this._ekmp_quantity_plan != value))
+				{
+					this.Onekmp_quantity_planChanging(value);
+					this.SendPropertyChanging();
+					this._ekmp_quantity_plan = value;
+					this.SendPropertyChanged("ekmp_quantity_plan");
+					this.Onekmp_quantity_planChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ekmp_quantity_fact", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> ekmp_quantity_fact
+		{
+			get
+			{
+				return this._ekmp_quantity_fact;
+			}
+			set
+			{
+				if ((this._ekmp_quantity_fact != value))
+				{
+					this.Onekmp_quantity_factChanging(value);
+					this.SendPropertyChanging();
+					this._ekmp_quantity_fact = value;
+					this.SendPropertyChanged("ekmp_quantity_fact");
+					this.Onekmp_quantity_factChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ekmp_quantity_percent", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> ekmp_quantity_percent
+		{
+			get
+			{
+				return this._ekmp_quantity_percent;
+			}
+			set
+			{
+				if ((this._ekmp_quantity_percent != value))
+				{
+					this.Onekmp_quantity_percentChanging(value);
+					this.SendPropertyChanging();
+					this._ekmp_quantity_percent = value;
+					this.SendPropertyChanged("ekmp_quantity_percent");
+					this.Onekmp_quantity_percentChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ekmp_yeild_plan", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> ekmp_yeild_plan
+		{
+			get
+			{
+				return this._ekmp_yeild_plan;
+			}
+			set
+			{
+				if ((this._ekmp_yeild_plan != value))
+				{
+					this.Onekmp_yeild_planChanging(value);
+					this.SendPropertyChanging();
+					this._ekmp_yeild_plan = value;
+					this.SendPropertyChanged("ekmp_yeild_plan");
+					this.Onekmp_yeild_planChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ekmp_yeild_fact", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> ekmp_yeild_fact
+		{
+			get
+			{
+				return this._ekmp_yeild_fact;
+			}
+			set
+			{
+				if ((this._ekmp_yeild_fact != value))
+				{
+					this.Onekmp_yeild_factChanging(value);
+					this.SendPropertyChanging();
+					this._ekmp_yeild_fact = value;
+					this.SendPropertyChanged("ekmp_yeild_fact");
+					this.Onekmp_yeild_factChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ekmp_yeild_percent", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> ekmp_yeild_percent
+		{
+			get
+			{
+				return this._ekmp_yeild_percent;
+			}
+			set
+			{
+				if ((this._ekmp_yeild_percent != value))
+				{
+					this.Onekmp_yeild_percentChanging(value);
+					this.SendPropertyChanging();
+					this._ekmp_yeild_percent = value;
+					this.SendPropertyChanged("ekmp_yeild_percent");
+					this.Onekmp_yeild_percentChanged();
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RowNum", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
 		public string RowNum
 		{
@@ -11288,327 +11608,7 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_full_name", DbType="VarChar(200) NOT NULL", CanBeNull=false)]
-		public string full_name
-		{
-			get
-			{
-				return this._full_name;
-			}
-			set
-			{
-				if ((this._full_name != value))
-				{
-					this.Onfull_nameChanging(value);
-					this.SendPropertyChanging();
-					this._full_name = value;
-					this.SendPropertyChanged("full_name");
-					this.Onfull_nameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_expert_busyness", DbType="Decimal(15,2) NOT NULL")]
-		public decimal expert_busyness
-		{
-			get
-			{
-				return this._expert_busyness;
-			}
-			set
-			{
-				if ((this._expert_busyness != value))
-				{
-					this.Onexpert_busynessChanging(value);
-					this.SendPropertyChanging();
-					this._expert_busyness = value;
-					this.SendPropertyChanged("expert_busyness");
-					this.Onexpert_busynessChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_expert_speciality", DbType="VarChar(200) NOT NULL", CanBeNull=false)]
-		public string expert_speciality
-		{
-			get
-			{
-				return this._expert_speciality;
-			}
-			set
-			{
-				if ((this._expert_speciality != value))
-				{
-					this.Onexpert_specialityChanging(value);
-					this.SendPropertyChanging();
-					this._expert_speciality = value;
-					this.SendPropertyChanged("expert_speciality");
-					this.Onexpert_specialityChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_expertise_type", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
-		public string expertise_type
-		{
-			get
-			{
-				return this._expertise_type;
-			}
-			set
-			{
-				if ((this._expertise_type != value))
-				{
-					this.Onexpertise_typeChanging(value);
-					this.SendPropertyChanging();
-					this._expertise_type = value;
-					this.SendPropertyChanged("expertise_type");
-					this.Onexpertise_typeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mee_quantity_plan", DbType="Int NOT NULL")]
-		public int mee_quantity_plan
-		{
-			get
-			{
-				return this._mee_quantity_plan;
-			}
-			set
-			{
-				if ((this._mee_quantity_plan != value))
-				{
-					this.Onmee_quantity_planChanging(value);
-					this.SendPropertyChanging();
-					this._mee_quantity_plan = value;
-					this.SendPropertyChanged("mee_quantity_plan");
-					this.Onmee_quantity_planChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mee_quantity_fact", DbType="Int NOT NULL")]
-		public int mee_quantity_fact
-		{
-			get
-			{
-				return this._mee_quantity_fact;
-			}
-			set
-			{
-				if ((this._mee_quantity_fact != value))
-				{
-					this.Onmee_quantity_factChanging(value);
-					this.SendPropertyChanging();
-					this._mee_quantity_fact = value;
-					this.SendPropertyChanged("mee_quantity_fact");
-					this.Onmee_quantity_factChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mee_quantity_percent", DbType="Decimal(15,2) NOT NULL")]
-		public decimal mee_quantity_percent
-		{
-			get
-			{
-				return this._mee_quantity_percent;
-			}
-			set
-			{
-				if ((this._mee_quantity_percent != value))
-				{
-					this.Onmee_quantity_percentChanging(value);
-					this.SendPropertyChanging();
-					this._mee_quantity_percent = value;
-					this.SendPropertyChanged("mee_quantity_percent");
-					this.Onmee_quantity_percentChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mee_yeild_plan", DbType="Int NOT NULL")]
-		public int mee_yeild_plan
-		{
-			get
-			{
-				return this._mee_yeild_plan;
-			}
-			set
-			{
-				if ((this._mee_yeild_plan != value))
-				{
-					this.Onmee_yeild_planChanging(value);
-					this.SendPropertyChanging();
-					this._mee_yeild_plan = value;
-					this.SendPropertyChanged("mee_yeild_plan");
-					this.Onmee_yeild_planChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mee_yeild_fact", DbType="Int NOT NULL")]
-		public int mee_yeild_fact
-		{
-			get
-			{
-				return this._mee_yeild_fact;
-			}
-			set
-			{
-				if ((this._mee_yeild_fact != value))
-				{
-					this.Onmee_yeild_factChanging(value);
-					this.SendPropertyChanging();
-					this._mee_yeild_fact = value;
-					this.SendPropertyChanged("mee_yeild_fact");
-					this.Onmee_yeild_factChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mee_yeild_percent", DbType="Decimal(15,2) NOT NULL")]
-		public decimal mee_yeild_percent
-		{
-			get
-			{
-				return this._mee_yeild_percent;
-			}
-			set
-			{
-				if ((this._mee_yeild_percent != value))
-				{
-					this.Onmee_yeild_percentChanging(value);
-					this.SendPropertyChanging();
-					this._mee_yeild_percent = value;
-					this.SendPropertyChanged("mee_yeild_percent");
-					this.Onmee_yeild_percentChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ekmp_quantity_plan", DbType="Int NOT NULL")]
-		public int ekmp_quantity_plan
-		{
-			get
-			{
-				return this._ekmp_quantity_plan;
-			}
-			set
-			{
-				if ((this._ekmp_quantity_plan != value))
-				{
-					this.Onekmp_quantity_planChanging(value);
-					this.SendPropertyChanging();
-					this._ekmp_quantity_plan = value;
-					this.SendPropertyChanged("ekmp_quantity_plan");
-					this.Onekmp_quantity_planChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ekmp_quantity_fact", DbType="Int NOT NULL")]
-		public int ekmp_quantity_fact
-		{
-			get
-			{
-				return this._ekmp_quantity_fact;
-			}
-			set
-			{
-				if ((this._ekmp_quantity_fact != value))
-				{
-					this.Onekmp_quantity_factChanging(value);
-					this.SendPropertyChanging();
-					this._ekmp_quantity_fact = value;
-					this.SendPropertyChanged("ekmp_quantity_fact");
-					this.Onekmp_quantity_factChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ekmp_quantity_percent", DbType="Decimal(15,2) NOT NULL")]
-		public decimal ekmp_quantity_percent
-		{
-			get
-			{
-				return this._ekmp_quantity_percent;
-			}
-			set
-			{
-				if ((this._ekmp_quantity_percent != value))
-				{
-					this.Onekmp_quantity_percentChanging(value);
-					this.SendPropertyChanging();
-					this._ekmp_quantity_percent = value;
-					this.SendPropertyChanged("ekmp_quantity_percent");
-					this.Onekmp_quantity_percentChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ekmp_yeild_plan", DbType="Int NOT NULL")]
-		public int ekmp_yeild_plan
-		{
-			get
-			{
-				return this._ekmp_yeild_plan;
-			}
-			set
-			{
-				if ((this._ekmp_yeild_plan != value))
-				{
-					this.Onekmp_yeild_planChanging(value);
-					this.SendPropertyChanging();
-					this._ekmp_yeild_plan = value;
-					this.SendPropertyChanged("ekmp_yeild_plan");
-					this.Onekmp_yeild_planChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ekmp_yeild_fact", DbType="Int NOT NULL")]
-		public int ekmp_yeild_fact
-		{
-			get
-			{
-				return this._ekmp_yeild_fact;
-			}
-			set
-			{
-				if ((this._ekmp_yeild_fact != value))
-				{
-					this.Onekmp_yeild_factChanging(value);
-					this.SendPropertyChanging();
-					this._ekmp_yeild_fact = value;
-					this.SendPropertyChanged("ekmp_yeild_fact");
-					this.Onekmp_yeild_factChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ekmp_yeild_percent", DbType="Decimal(15,2) NOT NULL")]
-		public decimal ekmp_yeild_percent
-		{
-			get
-			{
-				return this._ekmp_yeild_percent;
-			}
-			set
-			{
-				if ((this._ekmp_yeild_percent != value))
-				{
-					this.Onekmp_yeild_percentChanging(value);
-					this.SendPropertyChanging();
-					this._ekmp_yeild_percent = value;
-					this.SendPropertyChanged("ekmp_yeild_percent");
-					this.Onekmp_yeild_percentChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Report_Data_Report_ExpertEffectiveness", Storage="_Report_Data", ThisKey="Id_Report_Data", OtherKey="Id", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Report_Data_Report_Effectiveness", Storage="_Report_Data", ThisKey="Id_Report_Data", OtherKey="Id", IsForeignKey=true)]
 		public Report_Data Report_Data
 		{
 			get
@@ -11625,12 +11625,12 @@ namespace KmsReportWS.LinqToSql
 					if ((previousValue != null))
 					{
 						this._Report_Data.Entity = null;
-						previousValue.Report_ExpertEffectiveness.Remove(this);
+						previousValue.Report_Effectiveness.Remove(this);
 					}
 					this._Report_Data.Entity = value;
 					if ((value != null))
 					{
-						value.Report_ExpertEffectiveness.Add(this);
+						value.Report_Effectiveness.Add(this);
 						this._Id_Report_Data = value.Id;
 					}
 					else

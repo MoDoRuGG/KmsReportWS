@@ -170,7 +170,7 @@
       <Association Name="Report_Data_Report_Vaccination" Member="Report_Vaccination" ThisKey="Id" OtherKey="Id_Report_data" Type="Report_Vaccination" />
       <Association Name="Report_Data_Report_Zpz" Member="Report_Zpz" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_Zpz" />
       <Association Name="Report_Data_Report262_Table3" Member="Report262_Table3" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report262_Table3" />
-      <Association Name="Report_Data_Report_ExpertEffectiveness" Member="Report_ExpertEffectiveness" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_ExpertEffectiveness" />
+      <Association Name="Report_Data_Report_Effectiveness" Member="Report_Effectiveness" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_Effectiveness" />
       <Association Name="Report_Flow_Report_Data" Member="Report_Flow" ThisKey="Id_Flow" OtherKey="Id" Type="Report_Flow" IsForeignKey="true" />
       <Association Name="Report_Type_Report_Data" Member="Report_Type" ThisKey="Id_Report" OtherKey="Id" Type="Report_Type" IsForeignKey="true" />
     </Type>
@@ -497,28 +497,28 @@
       <Association Name="Report_Flow_Scans_Base" Member="Report_Flow" ThisKey="Id_flow" OtherKey="Id" Type="Report_Flow" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.Report_ExpertEffectiveness" Member="Report_ExpertEffectiveness">
-    <Type Name="Report_ExpertEffectiveness">
+  <Table Name="dbo.Report_Effectiveness" Member="Report_Effectiveness">
+    <Type Name="Report_Effectiveness">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="Id_Report_Data" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="full_name" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="expert_busyness" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="expert_speciality" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="expertise_type" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="mee_quantity_plan" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="mee_quantity_fact" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="mee_quantity_percent" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="mee_yeild_plan" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="mee_yeild_fact" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="mee_yeild_percent" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="ekmp_quantity_plan" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="ekmp_quantity_fact" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="ekmp_quantity_percent" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="ekmp_yeild_plan" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="ekmp_yeild_fact" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="ekmp_yeild_percent" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
       <Column Name="RowNum" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
-      <Column Name="full_name" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
-      <Column Name="expert_busyness" Type="System.Decimal" DbType="Decimal(15,2) NOT NULL" CanBeNull="false" />
-      <Column Name="expert_speciality" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
-      <Column Name="expertise_type" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
-      <Column Name="mee_quantity_plan" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="mee_quantity_fact" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="mee_quantity_percent" Type="System.Decimal" DbType="Decimal(15,2) NOT NULL" CanBeNull="false" />
-      <Column Name="mee_yeild_plan" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="mee_yeild_fact" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="mee_yeild_percent" Type="System.Decimal" DbType="Decimal(15,2) NOT NULL" CanBeNull="false" />
-      <Column Name="ekmp_quantity_plan" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="ekmp_quantity_fact" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="ekmp_quantity_percent" Type="System.Decimal" DbType="Decimal(15,2) NOT NULL" CanBeNull="false" />
-      <Column Name="ekmp_yeild_plan" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="ekmp_yeild_fact" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="ekmp_yeild_percent" Type="System.Decimal" DbType="Decimal(15,2) NOT NULL" CanBeNull="false" />
-      <Association Name="Report_Data_Report_ExpertEffectiveness" Member="Report_Data" ThisKey="Id_Report_Data" OtherKey="Id" Type="Report_Data" IsForeignKey="true" />
+      <Association Name="Report_Data_Report_Effectiveness" Member="Report_Data" ThisKey="Id_Report_Data" OtherKey="Id" Type="Report_Data" IsForeignKey="true" />
     </Type>
   </Table>
   <Function Name="dbo.cadre_rapport" Method="cadre_rapport" IsComposable="true">

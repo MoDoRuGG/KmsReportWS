@@ -4,5 +4,10 @@
    <TABLE>
       <TABLE_NAME>Эффективность</TABLE_NAME>
       <TABLE_DESCRIPTION>Оценка эффективности экспертной деятельности</TABLE_DESCRIPTION>
+      <ROWS_COUNT>9</ROWS_COUNT>
+      <ROW>
+         <ROW_TEXT>1</ROW_TEXT>
+         <ROW_NUM> </ROW_NUM>
+      </ROW>
    </TABLE>
 </REPORT>
