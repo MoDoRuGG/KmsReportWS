@@ -69,6 +69,13 @@ namespace KmsReportWS
         }
 
         [WebMethod]
+        public List<CReportZpz2023> CreateReportControlZpz2023(string yymm, bool isMonthly)
+        {
+            var consolidate = new ControlZpz2023Collector();
+            return consolidate.Collect(yymm, isMonthly);
+        }
+
+        [WebMethod]
         public Consolidate294 CreateConsolidate294(string yymm)
         {
             var consolidate = new Consolidate294Collector();
