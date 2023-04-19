@@ -112,6 +112,7 @@
     <Compile Include="Collector\BaseReport\IizlCollector.cs" />
     <Compile Include="Collector\BaseReport\IReportCollector.cs" />
     <Compile Include="Collector\BaseReport\PgCollector.cs" />
+    <Compile Include="Collector\ConsolidateReport\ConsolidateLetal2023Collector.cs" />
     <Compile Include="Collector\ConsolidateReport\ConsolidateOpedUnplannedCollector.cs" />
     <Compile Include="Collector\ConsolidateReport\ConsolidateCadreCollector.cs" />
     <Compile Include="Collector\ConsolidateReport\ConsolidateCardioCollector.cs" />

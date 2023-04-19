@@ -581,6 +581,13 @@ namespace KmsReportWS
         }
 
         [WebMethod]
+        public List<ConsolidateLetal> CreateConsolidateLetal2023(string yymm)
+        {
+            var consolidate = new ConsolidateLetal2023Collector();
+            return consolidate.Collect(yymm);
+        }
+
+        [WebMethod]
         public Report_Dynamic CreateDynamicReport(ReportDynamicDto report) =>
             _dynamicReportHandler.SaveReport(report);
 
