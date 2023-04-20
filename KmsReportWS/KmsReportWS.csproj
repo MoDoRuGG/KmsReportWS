@@ -129,6 +129,7 @@
     <Compile Include="Collector\ConsolidateReport\ConsolidateVCRReportCollector.cs" />
     <Compile Include="Collector\ConsolidateReport\ConsolidateVSSReportCollector.cs" />
     <Compile Include="Collector\ConsolidateReport\ControlZpz2023Collector.cs" />
+    <Compile Include="Collector\ConsolidateReport\ZpzForWebSite2023Collector.cs" />
     <Compile Include="ConsolidateEndpoint.asmx.cs">
       <DependentUpon>ConsolidateEndpoint.asmx</DependentUpon>
       <SubType>Component</SubType>
