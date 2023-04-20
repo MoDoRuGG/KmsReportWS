@@ -16,7 +16,6 @@ namespace KmsReportWS.Collector.ConsolidateReport
             ReportStatus.Submit.GetDescriptionSt(), ReportStatus.Done.GetDescriptionSt()
         };
 
-        private static readonly string[] PublicInformationsRowNums = { "2.1", "2.2", "2.3", "2.4", "2.7", "2.8" };
         private static readonly string ConnStr = Settings.Default.ConnStr;
 
         private readonly string _yymm;
@@ -63,7 +62,7 @@ namespace KmsReportWS.Collector.ConsolidateReport
             };
         }
 
-        private IQueryable<Report_Zpz> CollectZpz(LinqToSqlKmsReportDataContext db, string theme, string region) =>
+        private IQueryable<Report_Zpz> CollectZpzQ(LinqToSqlKmsReportDataContext db, string theme, string region) =>
             from flow in db.Report_Flow
             join data in db.Report_Data on flow.Id equals data.Id_Flow
             join f in db.Report_Zpz on data.Id equals f.Id_Report_Data
@@ -72,6 +71,28 @@ namespace KmsReportWS.Collector.ConsolidateReport
                   && flow.Id_Region == region
                   && Statuses.Contains(flow.Status)
                   && flow.Id_Report_Type == "Zpz_Q"
+            select f;
+
+        private IQueryable<Report_Zpz> CollectZpz(LinqToSqlKmsReportDataContext db, string theme, string region) =>
+            from flow in db.Report_Flow
+            join data in db.Report_Data on flow.Id equals data.Id_Flow
+            join f in db.Report_Zpz on data.Id equals f.Id_Report_Data
+            where flow.Yymm == _yymm
+                  && data.Theme == theme
+                  && flow.Id_Region == region
+                  && Statuses.Contains(flow.Status)
+                  && flow.Id_Report_Type == "Zpz"
+            select f;
+
+        private IQueryable<Report_Zpz> CollectZpz10(LinqToSqlKmsReportDataContext db, string theme, string region) =>
+            from flow in db.Report_Flow
+            join data in db.Report_Data on flow.Id equals data.Id_Flow
+            join f in db.Report_Zpz on data.Id equals f.Id_Report_Data
+            where flow.Yymm == _yymm
+                  && data.Theme == theme
+                  && flow.Id_Region == region
+                  && Statuses.Contains(flow.Status)
+                  && flow.Id_Report_Type == "Zpz10"
             select f;
 
         private async Task<List<ZpzTreatment>> CollectTreatments(LinqToSqlKmsReportDataContext db, string region)
@@ -109,9 +130,9 @@ namespace KmsReportWS.Collector.ConsolidateReport
             var table1 = CollectZpz(db, "Таблица 1", region);
 
             var complaints = new List<ZpzTreatment>();
-            for (int i = 1; i <= 12; i++)
+            for (int i = 1; i <= 11; i++)
             {
-                string rowNum = $"3.{i}";
+                string rowNum = $"3.1.{i}";
                 var data = table1.Where(x => x.RowNum == rowNum);
 
                 var complaint = new ZpzTreatment
@@ -124,12 +145,22 @@ namespace KmsReportWS.Collector.ConsolidateReport
                 complaints.Add(complaint);
             }
 
+            string rowNum_ = "3.1.16";
+            var data_ = table1.Where(x => x.RowNum == rowNum_);
+            var complaint_ = new ZpzTreatment
+            {
+                Row = rowNum_,
+                Oral = Convert.ToInt32(data_.Sum(x => x.CountSmo)),
+                Written = Convert.ToInt32(data_.Sum(x => x.CountSmoAnother))
+            };
+            complaints.Add(complaint_);
+            
             return complaints;
         }
 
         private async Task<List<ZpzStatistics>> CollectProtections(LinqToSqlKmsReportDataContext db, string region)
         {
-            var table1 = CollectZpz(db, "Таблица 2", region);
+            var table1 = CollectZpz(db, "Таблица 3", region);
             return new List<ZpzStatistics>() {
                 new ZpzStatistics {
                     Row = "1", Count = Convert.ToInt32(table1.Where(x => x.RowNum == "1").Sum(x => x.CountSmo))
@@ -145,36 +176,36 @@ namespace KmsReportWS.Collector.ConsolidateReport
 
         private async Task<List<Expertise>> CollectExpertises(LinqToSqlKmsReportDataContext db, string region)
         {
-            var meeTable = CollectZpz(db, "Таблица 6", region);
+            var meeTable = CollectZpzQ(db, "Таблица 6", region);
             var mee = new Expertise
             {
                 Row = "1",
                 Target = Convert.ToInt32(meeTable
-                    .Where(x => x.RowNum == "2")
+                    .Where(x => x.RowNum == "1")
                     .Sum(x => x.CountOutOfSmo + x.CountAmbulatory + x.CountDs + x.CountStac)),
                 Plan = Convert.ToInt32(meeTable
-                    .Where(x => x.RowNum == "2")
+                    .Where(x => x.RowNum == "1")
                     .Sum(x => x.CountOutOfSmoAnother + x.CountAmbulatoryAnother + x.CountDsAnother +
                               x.CountStacAnother)),
                 Violation = Convert.ToInt32(meeTable
-                    .Where(x => x.RowNum.StartsWith("5") && x.RowNum.Length == 3)
+                    .Where(x => x.RowNum == "3")
                     .Sum(x => x.CountOutOfSmoAnother + x.CountAmbulatoryAnother + x.CountDsAnother + x.CountStacAnother
                               + x.CountOutOfSmo + x.CountAmbulatory + x.CountDs + x.CountStac)),
             };
 
-            var ekmpTable = CollectZpz(db, "Таблица 8", region);
+            var ekmpTable = CollectZpzQ(db, "Таблица 7", region);
             var ekmp = new Expertise
             {
-                Row = "2",
+                Row = "1",
                 Target = Convert.ToInt32(ekmpTable
-                    .Where(x => x.RowNum == "2")
+                    .Where(x => x.RowNum == "1")
                     .Sum(x => x.CountOutOfSmo + x.CountAmbulatory + x.CountDs + x.CountStac)),
                 Plan = Convert.ToInt32(ekmpTable
-                    .Where(x => x.RowNum == "2")
+                    .Where(x => x.RowNum == "1")
                     .Sum(x => x.CountOutOfSmoAnother + x.CountAmbulatoryAnother + x.CountDsAnother +
                               x.CountStacAnother)),
                 Violation = Convert.ToInt32(ekmpTable
-                    .Where(x => x.RowNum.StartsWith("6") && x.RowNum.Length <= 4 && x.RowNum.Length > 1)
+                    .Where(x => x.RowNum == "5")
                     .Sum(x => x.CountOutOfSmoAnother + x.CountAmbulatoryAnother + x.CountDsAnother + x.CountStacAnother
                               + x.CountOutOfSmo + x.CountAmbulatory + x.CountDs + x.CountStac)),
             };
@@ -186,7 +217,7 @@ namespace KmsReportWS.Collector.ConsolidateReport
 
         private async Task<List<ZpzStatistics>> CollectSpecialists(LinqToSqlKmsReportDataContext db, string region)
         {
-            var specialistsTable = CollectZpz(db, "Таблица 11", region);
+            var specialistsTable = CollectZpzQ(db, "Таблица 9", region);
             return new List<ZpzStatistics>() {
                 new ZpzStatistics {
                     Row = "1",
@@ -200,24 +231,17 @@ namespace KmsReportWS.Collector.ConsolidateReport
                 },
                 new ZpzStatistics {
                     Row = "1.1.3",
-                    Count = Convert.ToInt32(specialistsTable
-                        .Where(x => x.RowNum.StartsWith("1.1.3") && x.RowNum.Length == 7)
-                        .Sum(x => x.CountSmo + x.CountSmoAnother)),
-                },
-                new ZpzStatistics {
-                    Row = "1.1",
-                    Count = Convert.ToInt32(specialistsTable
-                        .Where(x => x.RowNum.StartsWith("1.1") && x.RowNum.Length == 5)
+                    Count = Convert.ToInt32(specialistsTable.Where(x => x.RowNum == "1.1.3")
                         .Sum(x => x.CountSmo + x.CountSmoAnother)),
                 },
                 new ZpzStatistics {
                     Row = "3",
-                    Count = Convert.ToInt32(specialistsTable.Where(x => x.RowNum.StartsWith("3"))
+                    Count = Convert.ToInt32(specialistsTable.Where(x => x.RowNum == "3")
                         .Sum(x => x.CountSmo + x.CountSmoAnother)),
                 },
                 new ZpzStatistics {
                     Row = "4",
-                    Count = Convert.ToInt32(specialistsTable.Where(x => x.RowNum == "4.1" || x.RowNum == "4.2")
+                    Count = Convert.ToInt32(specialistsTable.Where(x => x.RowNum == "4")
                         .Sum(x => x.CountSmo + x.CountSmoAnother)),
                 }
             };
@@ -225,13 +249,21 @@ namespace KmsReportWS.Collector.ConsolidateReport
 
         private async Task<List<ZpzStatistics>> CollectInformations(LinqToSqlKmsReportDataContext db, string region)
         {
-            var informTable = CollectZpz(db, "Таблица 13", region);
+            var informTable = CollectZpz10(db, "Таблица 10", region);
 
             var informations = new List<ZpzStatistics>();
 
-            for (int i = 1; i <= 5; i++)
+            var inform2 = new ZpzStatistics
             {
-                string rowNum = $"1.{i}";
+                Row = "2",
+                Count = Convert.ToInt32(
+                informTable.Where(x => x.RowNum == "2").Sum(x => x.CountSmo)),
+            };
+            informations.Add(inform2);
+
+            for (int i = 1; i <= 6; i++)
+            {
+                string rowNum = $"2.{i}";
                 var inform = new ZpzStatistics
                 {
                     Row = rowNum,
@@ -240,17 +272,17 @@ namespace KmsReportWS.Collector.ConsolidateReport
                 informations.Add(inform);
             }
 
-            var inform2 = new ZpzStatistics
+            var inform4 = new ZpzStatistics
             {
-                Row = "2",
+                Row = "4",
                 Count = Convert.ToInt32(
-                    informTable.Where(x => PublicInformationsRowNums.Contains(x.RowNum)).Sum(x => x.CountSmo)),
+                informTable.Where(x => x.RowNum == "4").Sum(x => x.CountSmo)),
             };
-            informations.Add(inform2);
+            informations.Add(inform4);
 
-            for (int i = 1; i <= 4; i++)
+            for (int i = 1; i <= 8; i++)
             {
-                string rowNum = $"2.{i}";
+                string rowNum = $"4.{i}";
                 var inform = new ZpzStatistics
                 {
                     Row = rowNum,
