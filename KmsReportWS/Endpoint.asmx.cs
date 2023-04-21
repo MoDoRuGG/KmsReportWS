@@ -607,5 +607,12 @@ namespace KmsReportWS
             var consolidate = new ZpzForWebSiteCollector(yymm);
             return consolidate.Collect();
         }
+
+        [WebMethod]
+        public List<ZpzForWebSite2023> CreateZpzForWebSite2023(string yymm)
+        {
+            var consolidate = new ZpzForWebSite2023Collector(yymm);
+            return consolidate.Collect();
+        }
     }
 }
