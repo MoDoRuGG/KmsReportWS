@@ -602,7 +602,7 @@ namespace KmsReportWS
         }
 
         [WebMethod]
-        public List<ZpzForWebSite> CreateZpzForWebSite2023(string yymm)
+        public List<ZpzForWebSite2023> CreateZpzForWebSite2023(string yymm)
         {
             var consolidate = new ZpzForWebSite2023Collector(yymm);
             return consolidate.Collect();

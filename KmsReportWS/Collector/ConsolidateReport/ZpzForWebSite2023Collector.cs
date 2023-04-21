@@ -25,40 +25,40 @@ namespace KmsReportWS.Collector.ConsolidateReport
             this._yymm = yymm;
         }
 
-        public List<ZpzForWebSite> Collect()
+        public List<ZpzForWebSite2023> Collect()
         {
             using var db = new LinqToSqlKmsReportDataContext(ConnStr);
             var filials = db.Region.Where(x => x.id != "RU").Select(x => x.id);
 
-            IEnumerable<Task<ZpzForWebSite>> tasks = filials.Select(filial => CollectFilialData(db, filial));
+            IEnumerable<Task<ZpzForWebSite2023>> tasks = filials.Select(filial => CollectFilialData(db, filial));
             return tasks.Select(x => x.Result).ToList();
         }
 
-        private async Task<ZpzForWebSite> CollectFilialData(LinqToSqlKmsReportDataContext db, string filial)
+        private async Task<ZpzForWebSite2023> CollectFilialData(LinqToSqlKmsReportDataContext db, string filial)
         {
-            var treatmentTask = CollectTreatments(db, filial);
-            var complaintsTask = CollectComplaints(db, filial);
-            var protectionsTask = CollectProtections(db, filial);
-            var expertiesesTask = CollectExpertises(db, filial);
-            var specialistsTask = CollectSpecialists(db, filial);
-            var informationsTask = CollectInformations(db, filial);
+            var treatmentTask = CollectTreatments2023(db, filial);
+            var complaintsTask = CollectComplaints2023(db, filial);
+            var protectionsTask = CollectProtections2023(db, filial);
+            var expertiesesTask = CollectExpertises2023(db, filial);
+            var specialistsTask = CollectSpecialists2023(db, filial);
+            var informationsTask = CollectInformations2023(db, filial);
 
-            var treatments = await treatmentTask;
-            var complaints = await complaintsTask;
-            var protections = await protectionsTask;
-            var expertises = await expertiesesTask;
-            var specialists = await specialistsTask;
-            var informations = await informationsTask;
+            var treatments2023 = await treatmentTask;
+            var complaints2023 = await complaintsTask;
+            var protections2023 = await protectionsTask;
+            var expertises2023 = await expertiesesTask;
+            var specialists2023 = await specialistsTask;
+            var informations2023 = await informationsTask;
 
-            return new ZpzForWebSite
+            return new ZpzForWebSite2023
             {
                 Filial = filial,
-                Treatments = treatments,
-                Complaints = complaints,
-                Expertises = expertises,
-                Protections = protections,
-                Specialists = specialists,
-                Informations = informations,
+                Treatments = treatments2023,
+                Complaints = complaints2023,
+                Expertises = expertises2023,
+                Protections = protections2023,
+                Specialists = specialists2023,
+                Informations = informations2023,
             };
         }
 
@@ -95,28 +95,28 @@ namespace KmsReportWS.Collector.ConsolidateReport
                   && flow.Id_Report_Type == "Zpz10"
             select f;
 
-        private async Task<List<ZpzTreatment>> CollectTreatments(LinqToSqlKmsReportDataContext db, string region)
+        private async Task<List<ZpzTreatment2023>> CollectTreatments2023(LinqToSqlKmsReportDataContext db, string region)
         {
             var table1 = CollectZpz(db, "Таблица 1", region);
-            return new List<ZpzTreatment> {
-                new ZpzTreatment {
+            return new List<ZpzTreatment2023> {
+                new ZpzTreatment2023 {
                     Row = "2",
                     Oral = Convert.ToInt32(table1.Where(x => x.RowNum == "3").Sum(x => x.CountSmo)),
                     Written = Convert.ToInt32(table1.Where(x => x.RowNum == "3").Sum(x => x.CountSmoAnother))
                 },
-                new ZpzTreatment {
+                new ZpzTreatment2023 {
                     Row = "3",
                     Oral = Convert.ToInt32(table1
                         .Where(x => x.RowNum.StartsWith("4") && x.RowNum.Length <= 4).Sum(x => x.CountSmo)),
                     Written = Convert.ToInt32(table1
                         .Where(x => x.RowNum.StartsWith("4") && x.RowNum.Length <= 4).Sum(x => x.CountSmoAnother))
                 },
-                new ZpzTreatment {
+                new ZpzTreatment2023 {
                     Row = "4",
                     Oral = Convert.ToInt32(table1.Where(x => x.RowNum == "5").Sum(x => x.CountSmo)),
                     Written = Convert.ToInt32(table1.Where(x => x.RowNum == "5").Sum(x => x.CountSmoAnother))
                 },
-                new ZpzTreatment {
+                new ZpzTreatment2023 {
                     Row = "5",
                     Oral = Convert.ToInt32(table1.Where(x => x.RowNum == "6").Sum(x => x.CountSmo)),
                     Written = Convert.ToInt32(table1.Where(x => x.RowNum == "6").Sum(x => x.CountSmoAnother))
@@ -125,17 +125,17 @@ namespace KmsReportWS.Collector.ConsolidateReport
             };
         }
 
-        private async Task<List<ZpzTreatment>> CollectComplaints(LinqToSqlKmsReportDataContext db, string region)
+        private async Task<List<ZpzTreatment2023>> CollectComplaints2023(LinqToSqlKmsReportDataContext db, string region)
         {
             var table1 = CollectZpz(db, "Таблица 1", region);
 
-            var complaints = new List<ZpzTreatment>();
+            var complaints = new List<ZpzTreatment2023>();
             for (int i = 1; i <= 11; i++)
             {
                 string rowNum = $"3.1.{i}";
                 var data = table1.Where(x => x.RowNum == rowNum);
 
-                var complaint = new ZpzTreatment
+                var complaint = new ZpzTreatment2023
                 {
                     Row = rowNum,
                     Oral = Convert.ToInt32(data.Sum(x => x.CountSmo)),
@@ -147,7 +147,7 @@ namespace KmsReportWS.Collector.ConsolidateReport
 
             string rowNum_ = "3.1.16";
             var data_ = table1.Where(x => x.RowNum == rowNum_);
-            var complaint_ = new ZpzTreatment
+            var complaint_ = new ZpzTreatment2023
             {
                 Row = rowNum_,
                 Oral = Convert.ToInt32(data_.Sum(x => x.CountSmo)),
@@ -158,26 +158,26 @@ namespace KmsReportWS.Collector.ConsolidateReport
             return complaints;
         }
 
-        private async Task<List<ZpzStatistics>> CollectProtections(LinqToSqlKmsReportDataContext db, string region)
+        private async Task<List<ZpzStatistics2023>> CollectProtections2023(LinqToSqlKmsReportDataContext db, string region)
         {
             var table1 = CollectZpz(db, "Таблица 3", region);
-            return new List<ZpzStatistics>() {
-                new ZpzStatistics {
+            return new List<ZpzStatistics2023>() {
+                new ZpzStatistics2023 {
                     Row = "1", Count = Convert.ToInt32(table1.Where(x => x.RowNum == "1").Sum(x => x.CountSmo))
                 },
-                new ZpzStatistics {
+                new ZpzStatistics2023 {
                     Row = "1.1", Count = Convert.ToInt32(table1.Where(x => x.RowNum == "1.1").Sum(x => x.CountSmo))
                 },
-                new ZpzStatistics {
+                new ZpzStatistics2023 {
                     Row = "2", Count = Convert.ToDecimal(table1.Where(x => x.RowNum == "2").Sum(x => x.CountSmo))
                 }
             };
         }
 
-        private async Task<List<Expertise>> CollectExpertises(LinqToSqlKmsReportDataContext db, string region)
+        private async Task<List<Expertise2023>> CollectExpertises2023(LinqToSqlKmsReportDataContext db, string region)
         {
             var meeTable = CollectZpzQ(db, "Таблица 6", region);
-            var mee = new Expertise
+            var mee = new Expertise2023
             {
                 Row = "1",
                 Target = Convert.ToInt32(meeTable
@@ -194,7 +194,7 @@ namespace KmsReportWS.Collector.ConsolidateReport
             };
 
             var ekmpTable = CollectZpzQ(db, "Таблица 7", region);
-            var ekmp = new Expertise
+            var ekmp = new Expertise2023
             {
                 Row = "1",
                 Target = Convert.ToInt32(ekmpTable
@@ -210,36 +210,36 @@ namespace KmsReportWS.Collector.ConsolidateReport
                               + x.CountOutOfSmo + x.CountAmbulatory + x.CountDs + x.CountStac)),
             };
 
-            var expertises = new List<Expertise>() { mee, ekmp };
+            var expertises = new List<Expertise2023>() { mee, ekmp };
 
             return expertises;
         }
 
-        private async Task<List<ZpzStatistics>> CollectSpecialists(LinqToSqlKmsReportDataContext db, string region)
+        private async Task<List<ZpzStatistics2023>> CollectSpecialists2023(LinqToSqlKmsReportDataContext db, string region)
         {
             var specialistsTable = CollectZpzQ(db, "Таблица 9", region);
-            return new List<ZpzStatistics>() {
-                new ZpzStatistics {
+            return new List<ZpzStatistics2023>() {
+                new ZpzStatistics2023 {
                     Row = "1",
                     Count = Convert.ToInt32(specialistsTable.Where(x => x.RowNum == "1")
                         .Sum(x => x.CountSmo + x.CountSmoAnother)),
                 },
-                new ZpzStatistics {
+                new ZpzStatistics2023 {
                     Row = "1.1.2",
                     Count = Convert.ToInt32(specialistsTable.Where(x => x.RowNum == "1.1.2")
                         .Sum(x => x.CountSmo + x.CountSmoAnother)),
                 },
-                new ZpzStatistics {
+                new ZpzStatistics2023 {
                     Row = "1.1.3",
                     Count = Convert.ToInt32(specialistsTable.Where(x => x.RowNum == "1.1.3")
                         .Sum(x => x.CountSmo + x.CountSmoAnother)),
                 },
-                new ZpzStatistics {
+                new ZpzStatistics2023 {
                     Row = "3",
                     Count = Convert.ToInt32(specialistsTable.Where(x => x.RowNum == "3")
                         .Sum(x => x.CountSmo + x.CountSmoAnother)),
                 },
-                new ZpzStatistics {
+                new ZpzStatistics2023 {
                     Row = "4",
                     Count = Convert.ToInt32(specialistsTable.Where(x => x.RowNum == "4")
                         .Sum(x => x.CountSmo + x.CountSmoAnother)),
@@ -247,13 +247,13 @@ namespace KmsReportWS.Collector.ConsolidateReport
             };
         }
 
-        private async Task<List<ZpzStatistics>> CollectInformations(LinqToSqlKmsReportDataContext db, string region)
+        private async Task<List<ZpzStatistics2023>> CollectInformations2023(LinqToSqlKmsReportDataContext db, string region)
         {
             var informTable = CollectZpz10(db, "Таблица 10", region);
 
-            var informations = new List<ZpzStatistics>();
+            var informations = new List<ZpzStatistics2023>();
 
-            var inform2 = new ZpzStatistics
+            var inform2 = new ZpzStatistics2023
             {
                 Row = "2",
                 Count = Convert.ToInt32(
@@ -264,7 +264,7 @@ namespace KmsReportWS.Collector.ConsolidateReport
             for (int i = 1; i <= 6; i++)
             {
                 string rowNum = $"2.{i}";
-                var inform = new ZpzStatistics
+                var inform = new ZpzStatistics2023
                 {
                     Row = rowNum,
                     Count = Convert.ToInt32(informTable.Where(x => x.RowNum == rowNum).Sum(x => x.CountSmo)),
@@ -272,7 +272,7 @@ namespace KmsReportWS.Collector.ConsolidateReport
                 informations.Add(inform);
             }
 
-            var inform4 = new ZpzStatistics
+            var inform4 = new ZpzStatistics2023
             {
                 Row = "4",
                 Count = Convert.ToInt32(
@@ -283,7 +283,7 @@ namespace KmsReportWS.Collector.ConsolidateReport
             for (int i = 1; i <= 8; i++)
             {
                 string rowNum = $"4.{i}";
-                var inform = new ZpzStatistics
+                var inform = new ZpzStatistics2023
                 {
                     Row = rowNum,
                     Count = Convert.ToInt32(informTable.Where(x => x.RowNum == rowNum).Sum(x => x.CountSmo)),
