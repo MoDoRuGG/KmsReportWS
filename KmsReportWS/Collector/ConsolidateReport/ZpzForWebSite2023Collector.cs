@@ -88,12 +88,13 @@ namespace KmsReportWS.Collector.ConsolidateReport
             from flow in db.Report_Flow
             join data in db.Report_Data on flow.Id equals data.Id_Flow
             join f in db.Report_Zpz on data.Id equals f.Id_Report_Data
-            where flow.Yymm == _yymm
+            where Convert.ToInt32(flow.Yymm) <= Convert.ToInt32(_yymm) && Convert.ToInt32(flow.Yymm)>= Convert.ToInt32(_yymm.Substring(0,2)+"01")
                   && data.Theme == theme
                   && flow.Id_Region == region
                   && Statuses.Contains(flow.Status)
                   && flow.Id_Report_Type == "Zpz10"
             select f;
+             
 
         private async Task<List<ZpzTreatment2023>> CollectTreatments2023(LinqToSqlKmsReportDataContext db, string region)
         {
