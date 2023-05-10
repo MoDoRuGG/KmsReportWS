@@ -16,6 +16,8 @@ namespace KmsReportWS.Collector.ConsolidateReport
             ReportStatus.Submit.GetDescriptionSt(), ReportStatus.Done.GetDescriptionSt()
         };
 
+        private static readonly string[] T1Rows = { "3.1", "3.1.1", "3.1.2", "3.1.3", "3.1.4", "3.1.5", "3.1.6", "3.1.7", "3.1.8", "3.1.9", "3.1.10", "3.1.11", "3.1.16", };
+
         private static readonly string ConnStr = Settings.Default.ConnStr;
 
         private readonly string _yymm;
@@ -101,26 +103,37 @@ namespace KmsReportWS.Collector.ConsolidateReport
             var table1 = CollectZpz(db, "Таблица 1", region);
             return new List<ZpzTreatment2023> {
                 new ZpzTreatment2023 {
-                    Row = "2",
-                    Oral = Convert.ToInt32(table1.Where(x => x.RowNum == "3").Sum(x => x.CountSmo)),
-                    Written = Convert.ToInt32(table1.Where(x => x.RowNum == "3").Sum(x => x.CountSmoAnother))
+                    Row = "1",
+                    Oral = Convert.ToInt32(table1.Where(x => x.RowNum == "1").Sum(x => x.CountSmo)),
+                    Written = Convert.ToInt32(table1.Where(x => x.RowNum == "1").Sum(x => x.CountSmoAnother)),
+                    Assignment = Convert.ToInt32(table1.Where(x => x.RowNum == "1").Sum(x => x.CountAssignment)),
                 },
                 new ZpzTreatment2023 {
                     Row = "3",
-                    Oral = Convert.ToInt32(table1
-                        .Where(x => x.RowNum.StartsWith("4") && x.RowNum.Length <= 4).Sum(x => x.CountSmo)),
-                    Written = Convert.ToInt32(table1
-                        .Where(x => x.RowNum.StartsWith("4") && x.RowNum.Length <= 4).Sum(x => x.CountSmoAnother))
+                    Oral = Convert.ToInt32(table1.Where(x => x.RowNum == "3").Sum(x => x.CountSmo)),
+                    Written = Convert.ToInt32(table1.Where(x => x.RowNum == "3").Sum(x => x.CountSmoAnother)),
+                    Assignment = Convert.ToInt32(table1.Where(x => x.RowNum == "3").Sum(x => x.CountAssignment)),
                 },
                 new ZpzTreatment2023 {
                     Row = "4",
-                    Oral = Convert.ToInt32(table1.Where(x => x.RowNum == "5").Sum(x => x.CountSmo)),
-                    Written = Convert.ToInt32(table1.Where(x => x.RowNum == "5").Sum(x => x.CountSmoAnother))
+                    Oral = Convert.ToInt32(table1
+                        .Where(x => x.RowNum == "4").Sum(x => x.CountSmo)),
+                    Written = Convert.ToInt32(table1
+                        .Where(x => x.RowNum == "4").Sum(x => x.CountSmoAnother)),
+                    Assignment = Convert.ToInt32(table1
+                        .Where(x => x.RowNum == "4").Sum(x => x.CountAssignment)),
                 },
                 new ZpzTreatment2023 {
                     Row = "5",
+                    Oral = Convert.ToInt32(table1.Where(x => x.RowNum == "5").Sum(x => x.CountSmo)),
+                    Written = Convert.ToInt32(table1.Where(x => x.RowNum == "5").Sum(x => x.CountSmoAnother)),
+                    Assignment = Convert.ToInt32(table1.Where(x => x.RowNum == "5").Sum(x => x.CountAssignment)),
+                },
+                new ZpzTreatment2023 {
+                    Row = "6",
                     Oral = Convert.ToInt32(table1.Where(x => x.RowNum == "6").Sum(x => x.CountSmo)),
-                    Written = Convert.ToInt32(table1.Where(x => x.RowNum == "6").Sum(x => x.CountSmoAnother))
+                    Written = Convert.ToInt32(table1.Where(x => x.RowNum == "6").Sum(x => x.CountSmoAnother)),
+                    Assignment = Convert.ToInt32(table1.Where(x => x.RowNum == "6").Sum(x => x.CountAssignment)),
                 }
 
             };
@@ -131,30 +144,18 @@ namespace KmsReportWS.Collector.ConsolidateReport
             var table1 = CollectZpz(db, "Таблица 1", region);
 
             var complaints = new List<ZpzTreatment2023>();
-            for (int i = 1; i <= 11; i++)
+            foreach (string rown in T1Rows)
             {
-                string rowNum = $"3.1.{i}";
-                var data = table1.Where(x => x.RowNum == rowNum);
-
+                var data = table1.Where(x => x.RowNum == rown);
                 var complaint = new ZpzTreatment2023
                 {
-                    Row = rowNum,
+                    Row = rown,
                     Oral = Convert.ToInt32(data.Sum(x => x.CountSmo)),
-                    Written = Convert.ToInt32(data.Sum(x => x.CountSmoAnother))
+                    Written = Convert.ToInt32(data.Sum(x => x.CountSmoAnother)),
+                    Assignment = Convert.ToInt32(data.Sum(x => x.CountAssignment)),
                 };
-
                 complaints.Add(complaint);
             }
-
-            string rowNum_ = "3.1.16";
-            var data_ = table1.Where(x => x.RowNum == rowNum_);
-            var complaint_ = new ZpzTreatment2023
-            {
-                Row = rowNum_,
-                Oral = Convert.ToInt32(data_.Sum(x => x.CountSmo)),
-                Written = Convert.ToInt32(data_.Sum(x => x.CountSmoAnother))
-            };
-            complaints.Add(complaint_);
             
             return complaints;
         }

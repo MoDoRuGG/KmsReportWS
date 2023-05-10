@@ -18,6 +18,7 @@ namespace KmsReportWS.Model.ConcolidateReport
         public string Row { get; set; }
         public int Oral { get; set; }
         public int Written { get; set; }
+        public int Assignment { get; set; }
     }
 
     public class Expertise2023
