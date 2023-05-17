@@ -351,10 +351,10 @@ namespace KmsReportWS
 
         [WebMethod]
         public AbstractReport CollectSummaryReport(string[] filials, string yymmStart, string yymmEnd,
-            ReportStatus status, ReportType reportType, DataSource datasource)
+            ReportStatus status, ReportType reportType)
         {
             var collector = _reportCollectorFactory.GetCollector(reportType);
-            return collector.CollectSummaryReport(filials, yymmStart, yymmEnd, status, datasource);
+            return collector.CollectSummaryReport(filials, yymmStart, yymmEnd, status);
         }
 
         [WebMethod]

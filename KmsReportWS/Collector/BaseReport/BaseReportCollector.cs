@@ -24,10 +24,10 @@ namespace KmsReportWS.Collector.BaseReport
     
 
         public abstract AbstractReport CollectSummaryReport(string[] filials, string yymmStart, string yymmEnd,
-            ReportStatus status, DataSource datasource);
+            ReportStatus status);
 
         protected IQueryable<Report_Data> GetFilteredReportFlows(LinqToSqlKmsReportDataContext db, string[] filials,
-            string yymmStart, string yymmEnd, ReportStatus status, DataSource datasource)
+            string yymmStart, string yymmEnd, ReportStatus status)
         {
             var reports = from r in db.Report_Flow
                 where r.Id_Report_Type == _reportType.GetDescriptionSt()
@@ -54,19 +54,6 @@ namespace KmsReportWS.Collector.BaseReport
                     break;
                 default:
                     reports = reports.Where(x => x.Status != ReportStatus.Refuse.GetDescriptionSt());
-                    break;
-            }
-
-            switch (datasource)
-            {
-                case DataSource.Excel:
-                    reports = reports.Where(x => x.DataSource == DataSource.Excel.GetDescriptionDS());
-                    break;
-                case DataSource.Handle:
-                    reports = reports.Where(x => x.DataSource == DataSource.Handle.GetDescriptionDS());
-                    break;
-                default:
-                    reports = reports.Where(x => x.DataSource == DataSource.New.GetDescriptionDS());
                     break;
             }
 

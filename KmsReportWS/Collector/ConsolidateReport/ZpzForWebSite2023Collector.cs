@@ -198,7 +198,7 @@ namespace KmsReportWS.Collector.ConsolidateReport
             var ekmpTable = CollectZpzQ(db, "Таблица 7", region);
             var ekmp = new Expertise2023
             {
-                Row = "1",
+                Row = "2",
                 Target = Convert.ToInt32(ekmpTable
                     .Where(x => x.RowNum == "1")
                     .Sum(x => x.CountOutOfSmo + x.CountAmbulatory + x.CountDs + x.CountStac)),
