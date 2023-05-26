@@ -25,6 +25,7 @@ namespace KmsReportWS.Model.Report
         [Description("infomat")] Infomaterial,
         [Description("Zpz10")] Zpz10,
         [Description("Effective")] Effective,
+        [Description("ZpzLethal")] ZpzLethal,
 
     }
 }

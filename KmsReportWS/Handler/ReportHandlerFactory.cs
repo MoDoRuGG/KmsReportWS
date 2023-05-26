@@ -17,6 +17,7 @@ namespace KmsReportWS.Handler
         private readonly IReportHandler _pgQCollector = new PgHandler(ReportType.PgQ);
         private readonly IReportHandler _zpzCollector = new ZpzHandler(ReportType.Zpz);
         private readonly IReportHandler _zpz10Collector = new ZpzHandler(ReportType.Zpz10);
+        private readonly IReportHandler _zpzLethalCollector = new ZpzHandler(ReportType.ZpzLethal);
         private readonly IReportHandler _zpzQCollector = new ZpzHandler(ReportType.ZpzQ);
         private readonly IReportHandler _vacCollector = new ReportVaccinationHander(ReportType.Vac);
         private readonly IReportHandler _fssCollector = new FSSMonitoringHandler(ReportType.MFSS);
@@ -39,6 +40,7 @@ namespace KmsReportWS.Handler
                 ReportType.PgQ => _pgQCollector,
                 ReportType.Zpz => _zpzCollector,
                 ReportType.Zpz10 => _zpz10Collector,
+                ReportType.ZpzLethal => _zpzLethalCollector,
                 ReportType.ZpzQ => _zpzQCollector,
                 ReportType.OpedQ => _opedCollectorQ,
                 ReportType.Vac => _vacCollector,

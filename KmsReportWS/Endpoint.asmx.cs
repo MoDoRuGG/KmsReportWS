@@ -147,6 +147,13 @@ namespace KmsReportWS
         }
 
         [WebMethod]
+        public ReportZpzDataDto GetZpzLethalYearData(string yymm, string theme, string fillial, string rowNum)
+        {
+            var handler = _reportHandlerFactory.GetHandler(ReportType.ZpzLethal);
+            return (handler as ZpzHandler).GetLethalYearData(yymm, theme, fillial, rowNum);
+        }
+
+        [WebMethod]
         public ReportCadreDataDto GetCadreYearData(string yymm, string theme, string fillial)
         {
             var handler = _reportHandlerFactory.GetHandler(ReportType.Cadre);
