@@ -12,15 +12,19 @@
     public class ZpzExpertise2023
     {
         public decimal Bills { get; set; }
-        public decimal CountMee { get; set; }
-        public decimal CountMeeComplaint { get; set; }
+        public decimal CountMeeTarget { get; set; }
+        public decimal CountMeePlan { get; set; }
+        public decimal CountMeeComplaintTarget { get; set; }
+        public decimal CountMeeComplaintPlan { get; set; }
         public decimal CountMeeRepeat { get; set; }
         public decimal CountMeeOnco { get; set; }
         public decimal CountMeeDs { get; set; }
         public decimal CountMeeLeth { get; set; }
         public decimal CountMeeInjured { get; set; }
-        public decimal CountMeeDefectedCase { get; set; }
-        public decimal CountMeeDefects { get; set; }
+        public decimal CountMeeDefectedCaseTarget { get; set; }
+        public decimal CountMeeDefectedCasePlan { get; set; }
+        public decimal CountMeeDefectsTarget { get; set; }
+        public decimal CountMeeDefectsPlan { get; set; }
         public decimal CountMeeDefectsPeriod { get; set; }
         public decimal CountMeeDefectsCondition { get; set; }
         public decimal CountMeeDefectsRepeat { get; set; }
@@ -34,17 +38,22 @@
         public decimal CountMeeDefectsBadDate { get; set; }
         public decimal CountMeeDefectsBadData { get; set; }
         public decimal CountMeeDefectsOutOfProtocol { get; set; }
-        public decimal CountCaseEkmp { get; set; }
+        public decimal CountCaseEkmpTarget { get; set; }
+        public decimal CountCaseEkmpPlan { get; set; }
         public decimal CountCaseEkmpComplaint { get; set; }
         public decimal CountCaseEkmpLeth { get; set; }
         public decimal CountCaseEkmpByMek { get; set; }
         public decimal CountCaseEkmpByMee { get; set; }
         public decimal CountCaseEkmpUTheme { get; set; }
-        public decimal CountCaseEkmpMulti { get; set; }
+        public decimal CountCaseEkmpMultiTarget { get; set; }
+        public decimal CountCaseEkmpMultiPlan { get; set; }
         public decimal CountCaseEkmpMultiLeth { get; set; }
-        public decimal CountCaseEkmpMultiUtheme { get; set; }
-        public decimal CountCaseDefectedBySmo { get; set; }
-        public decimal CountEkmpDefectedCase { get; set; }
+        public decimal CountCaseEkmpMultiUthemeTarget { get; set; }
+        public decimal CountCaseEkmpMultiUthemePlan { get; set; }
+        public decimal CountCaseDefectedBySmoTarget { get; set; }
+        public decimal CountCaseDefectedBySmoPlan { get; set; }
+        public decimal CountEkmpDefectedCaseTarget { get; set; }
+        public decimal CountEkmpDefectedCasePlan { get; set; }
         public decimal CountEkmpBadDs { get; set; }
         public decimal CountEkmpBadDsNotAffected { get; set; }
         public decimal CountEkmpBadDsProlonger { get; set; }
