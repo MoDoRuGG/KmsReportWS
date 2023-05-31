@@ -12,14 +12,12 @@ namespace KmsReportWS.Collector.ConsolidateReport
 {
     public class ConsolidateLetal2023Collector
     {
-        private readonly string[] _themes =
-         { "Таблица 1Л"};
-
+        private readonly string[] _themes = { "Таблица 1Л" };
 
 
         public List<ConsolidateLetal> Collect(string yymm)
         {
-            string reportType = "Zpz_Q";
+            string reportType = "ZpzLethal";
 
             var zpzData = CollectSummaryData(yymm, reportType);
 
@@ -31,7 +29,7 @@ namespace KmsReportWS.Collector.ConsolidateReport
             {
                 var zpzFilialData = zpzData.Where(x => x.Filial == filial);
                 var data = MapLetal(zpzFilialData);
-               
+
                 var report = new ConsolidateLetal
                 {
                     Filial = filial,
@@ -45,8 +43,6 @@ namespace KmsReportWS.Collector.ConsolidateReport
             return reports;
 
         }
-
-
 
         private LetalData MapLetal(IEnumerable<SummaryZpz2023> zpzFilialData)
         {
@@ -80,7 +76,6 @@ namespace KmsReportWS.Collector.ConsolidateReport
 
             };
         }
-
 
         private List<SummaryZpz2023> CollectSummaryData(string yymm, string reportType)
         {
@@ -117,9 +112,5 @@ namespace KmsReportWS.Collector.ConsolidateReport
                         SumVmp = gr.Sum(x => x.table.CountStacVmp) ?? 0
                     }).ToList();
         }
-
     }
-
-
-
 }
