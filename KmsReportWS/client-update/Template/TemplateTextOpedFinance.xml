@@ -2,7 +2,7 @@
 <REPORT xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <REPORT_NAME>oped_fin</REPORT_NAME>
   <TABLE>
-    <TABLE_NAME>ОПЭД финасы</TABLE_NAME>
+    <TABLE_NAME>ОПЭД финансы</TABLE_NAME>
     <TABLE_DESCRIPTION>Отчет о выполнении плановых значений ОПЭД</TABLE_DESCRIPTION>
     <ROW>
       <ROW_TEXT>Результативность экспертной деятельности - объем средств, начисленных на ведение дела по результатам экспертной деятельности, в соответствии с данными бухгалтерской отчетности, всего (значение строки 1 равно значению строк 1.1+1.2+1.4), (руб.) в том числе: </ROW_TEXT>
