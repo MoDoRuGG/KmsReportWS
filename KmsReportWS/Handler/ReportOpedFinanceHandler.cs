@@ -58,7 +58,6 @@ namespace KmsReportWS.Handler
                 });
             }
 
-
             return result;
         }
 

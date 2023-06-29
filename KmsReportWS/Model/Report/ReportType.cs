@@ -21,6 +21,7 @@ namespace KmsReportWS.Model.Report
         [Description("mvcr")] MVCR,
         [Description("proposal")] Proposal,
         [Description("oped_fin")] OpedFinance,
+        [Description("oped_fin3")] OpedFinance3,
         [Description("cadre")] Cadre,
         [Description("infomat")] Infomaterial,
         [Description("Zpz10")] Zpz10,

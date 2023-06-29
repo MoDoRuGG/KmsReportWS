@@ -48,6 +48,7 @@ namespace KmsReportWS.Handler
                 ReportType.MVCR => _mvcrCollector,
                 ReportType.Proposal => _proposalCollector,
                 ReportType.OpedFinance => _opedFinanceCollector,
+                ReportType.OpedFinance3 => _opedFinanceCollector,
                 ReportType.Cadre => _cadreHandlerCollector,
                 ReportType.Effective => _effectiveHandlerCollector,
                 //ReportType.Infomaterial => _infomaterialCollector,

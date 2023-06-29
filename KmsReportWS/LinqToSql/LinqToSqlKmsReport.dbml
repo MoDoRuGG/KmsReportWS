@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="kms_report" Class="LinqToSqlKmsReportDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="WebSettings" ConnectionString="Data Source=10.3.10.5;Initial Catalog=kms_report;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="kms_reportConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Comment" Member="Comment">
     <Type Name="Comment">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -566,6 +565,85 @@
       <Column Name="Smp" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
       <Column Name="Notes" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
       <Column Name="NotesGoodReason" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.p_VCRMonitoring_SvodFilial" Method="p_VCRMonitoring_SvodFilial">
+    <Parameter Name="yymm" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="idregion" Type="System.String" DbType="VarChar(6)" />
+    <ElementType Name="p_VCRMonitoring_SvodFilialResult">
+      <Column Name="Id_Region" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="[1_ExpertWithEducation]" Member="_1_ExpertWithEducation" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="[1_ExpertWithoutEducation]" Member="_1_ExpertWithoutEducation" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="[1_total]" Member="_1_total" Type="System.Decimal" DbType="Decimal(17,2)" CanBeNull="true" />
+      <Column Name="[1.1_ExpertWithEducation]" Member="_1_1_ExpertWithEducation" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[1.1_ExpertWithoutEducation]" Member="_1_1_ExpertWithoutEducation" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[1.1_total]" Member="_1_1_total" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="[1.2_ExpertWithEducation]" Member="_1_2_ExpertWithEducation" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[1.2_ExpertWithoutEducation]" Member="_1_2_ExpertWithoutEducation" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[1.2_total]" Member="_1_2_total" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="[2_ExpertWithEducation]" Member="_2_ExpertWithEducation" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[2_ExpertWithoutEducation]" Member="_2_ExpertWithoutEducation" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[2_total]" Member="_2_total" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="[2.1_ExpertWithEducation]" Member="_2_1_ExpertWithEducation" Type="System.Decimal" DbType="Decimal(24,2)" CanBeNull="true" />
+      <Column Name="[2.1_ExpertWithoutEducation]" Member="_2_1_ExpertWithoutEducation" Type="System.Decimal" DbType="Decimal(24,2)" CanBeNull="true" />
+      <Column Name="[2.1_total]" Member="_2_1_total" Type="System.Decimal" DbType="Decimal(25,2)" CanBeNull="true" />
+      <Column Name="[2.1.1_ExpertWithEducation]" Member="_2_1_1_ExpertWithEducation" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[2.1.1_ExpertWithoutEducation]" Member="_2_1_1_ExpertWithoutEducation" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[2.1.1_total]" Member="_2_1_1_total" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="[2.1.2_ExpertWithEducation]" Member="_2_1_2_ExpertWithEducation" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[2.1.2_ExpertWithoutEducation]" Member="_2_1_2_ExpertWithoutEducation" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[2.1.2_total]" Member="_2_1_2_total" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="[2.1.3_ExpertWithEducation]" Member="_2_1_3_ExpertWithEducation" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[2.1.3_ExpertWithoutEducation]" Member="_2_1_3_ExpertWithoutEducation" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[2.1.3_total]" Member="_2_1_3_total" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="[2.1.4_ExpertWithEducation]" Member="_2_1_4_ExpertWithEducation" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[2.1.4_ExpertWithoutEducation]" Member="_2_1_4_ExpertWithoutEducation" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[2.1.4_total]" Member="_2_1_4_total" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="[2.1.5_ExpertWithEducation]" Member="_2_1_5_ExpertWithEducation" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[2.1.5_ExpertWithoutEducation]" Member="_2_1_5_ExpertWithoutEducation" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[2.1.5_total]" Member="_2_1_5_total" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="[2.1.6_ExpertWithEducation]" Member="_2_1_6_ExpertWithEducation" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[2.1.6_ExpertWithoutEducation]" Member="_2_1_6_ExpertWithoutEducation" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[2.1.6_total]" Member="_2_1_6_total" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="[2.1.7_ExpertWithEducation]" Member="_2_1_7_ExpertWithEducation" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[2.1.7_ExpertWithoutEducation]" Member="_2_1_7_ExpertWithoutEducation" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[2.1.7_total]" Member="_2_1_7_total" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="[2.1.8_ExpertWithEducation]" Member="_2_1_8_ExpertWithEducation" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[2.1.8_ExpertWithoutEducation]" Member="_2_1_8_ExpertWithoutEducation" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[2.1.8_total]" Member="_2_1_8_total" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="[2.1.9_ExpertWithEducation]" Member="_2_1_9_ExpertWithEducation" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[2.1.9_ExpertWithoutEducation]" Member="_2_1_9_ExpertWithoutEducation" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[2.1.9_total]" Member="_2_1_9_total" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="[2.1.10_ExpertWithEducation]" Member="_2_1_10_ExpertWithEducation" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[2.1.10_ExpertWithoutEducation]" Member="_2_1_10_ExpertWithoutEducation" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[2.1.10_total]" Member="_2_1_10_total" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="[2.2.1_ExpertWithEducation]" Member="_2_2_1_ExpertWithEducation" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[2.2.1_ExpertWithoutEducation]" Member="_2_2_1_ExpertWithoutEducation" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[2.2_ExpertWithEducation]" Member="_2_2_ExpertWithEducation" Type="System.Decimal" DbType="Decimal(22,2)" CanBeNull="true" />
+      <Column Name="[2.2_ExpertWithoutEducation]" Member="_2_2_ExpertWithoutEducation" Type="System.Decimal" DbType="Decimal(22,2)" CanBeNull="true" />
+      <Column Name="[2.2_total]" Member="_2_2_total" Type="System.Decimal" DbType="Decimal(23,2)" CanBeNull="true" />
+      <Column Name="[2.2.1_total]" Member="_2_2_1_total" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="[2.2.2_ExpertWithEducation]" Member="_2_2_2_ExpertWithEducation" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[2.2.2_ExpertWithoutEducation]" Member="_2_2_2_ExpertWithoutEducation" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[2.2.2_total]" Member="_2_2_2_total" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="[2.2.3_ExpertWithEducation]" Member="_2_2_3_ExpertWithEducation" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[2.2.3_ExpertWithoutEducation]" Member="_2_2_3_ExpertWithoutEducation" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[2.2.3_total]" Member="_2_2_3_total" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="[2.2.4_ExpertWithEducation]" Member="_2_2_4_ExpertWithEducation" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[2.2.4_ExpertWithoutEducation]" Member="_2_2_4_ExpertWithoutEducation" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[2.2.4_total]" Member="_2_2_4_total" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="[2.2.5_ExpertWithEducation]" Member="_2_2_5_ExpertWithEducation" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[2.2.5_ExpertWithoutEducation]" Member="_2_2_5_ExpertWithoutEducation" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[2.2.5_total]" Member="_2_2_5_total" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="[2.2.6_ExpertWithEducation]" Member="_2_2_6_ExpertWithEducation" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[2.2.6_ExpertWithoutEducation]" Member="_2_2_6_ExpertWithoutEducation" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[2.2.6_total]" Member="_2_2_6_total" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="[2.2.7_ExpertWithEducation]" Member="_2_2_7_ExpertWithEducation" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[2.2.7_ExpertWithoutEducation]" Member="_2_2_7_ExpertWithoutEducation" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[2.2.7_total]" Member="_2_2_7_total" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="[2.2.8_ExpertWithEducation]" Member="_2_2_8_ExpertWithEducation" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[2.2.8_ExpertWithoutEducation]" Member="_2_2_8_ExpertWithoutEducation" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[2.2.8_total]" Member="_2_2_8_total" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
     </ElementType>
   </Function>
 </Database>

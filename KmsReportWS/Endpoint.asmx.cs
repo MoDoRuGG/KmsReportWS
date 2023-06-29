@@ -303,6 +303,12 @@ namespace KmsReportWS
         }
 
         [WebMethod]
+        public void WebReportOpedFinance3(ReportOpedFinance report)
+        {
+
+        }
+
+        [WebMethod]
         public void WebReportInfomaterial(ReportInfomaterial report)
         {
 
