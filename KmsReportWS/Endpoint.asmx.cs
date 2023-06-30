@@ -516,7 +516,12 @@ namespace KmsReportWS
             return consolidate.ConsolidateReportCpnpM(yymm);
         }
 
-
+        [WebMethod]
+        public List<CReportVCRFilial> CreateReportVCRFilial(string yymm)
+        {
+            var consolidate = new ConsolidateVCRReportFilialCollector();
+            return consolidate.CreateReportConsolidateVCRFilial(yymm);
+        }
 
         [WebMethod]
         public List<ConsolidateCardio> CreateReportCardio(string yymm)

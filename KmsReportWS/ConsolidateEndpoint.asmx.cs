@@ -17,6 +17,13 @@ namespace KmsReportWS
     {
 
         [WebMethod]
+        public List<CReportVCRFilial> CreateReportVCRFilial(string yymm)
+        {
+            var consolidate = new ConsolidateVCRReportFilialCollector();
+            return consolidate.CreateReportConsolidateVCRFilial(yymm);
+        }
+
+        [WebMethod]
         public List<CReportCadreTable1> CreateReportCadreTable1(string yymm)
         {
             var consolidate = new ConsolidateCadreCollector();

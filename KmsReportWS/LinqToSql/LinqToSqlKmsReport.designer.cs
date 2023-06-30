@@ -425,11 +425,10 @@ namespace KmsReportWS.LinqToSql
 			return this.CreateMethodCallQuery<opedU_reportResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), yymm);
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.p_VCRMonitoring_SvodFilial")]
-		public ISingleResult<p_VCRMonitoring_SvodFilialResult> p_VCRMonitoring_SvodFilial([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(4)")] string yymm, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(6)")] string idregion)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.p_VCRMonitoring_SvodFilial", IsComposable=true)]
+		public IQueryable<p_VCRMonitoring_SvodFilialResult> p_VCRMonitoring_SvodFilial([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(4)")] string yymm)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), yymm, idregion);
-			return ((ISingleResult<p_VCRMonitoring_SvodFilialResult>)(result.ReturnValue));
+			return this.CreateMethodCallQuery<p_VCRMonitoring_SvodFilialResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), yymm);
 		}
 	}
 	
@@ -12339,17 +12338,17 @@ namespace KmsReportWS.LinqToSql
 		
 		private System.Nullable<decimal> @__1_total;
 		
-		private System.Nullable<decimal> @__1_1_ExpertWithEducation;
+		private System.Nullable<decimal> @__11_ExpertWithEducation;
 		
-		private System.Nullable<decimal> @__1_1_ExpertWithoutEducation;
+		private System.Nullable<decimal> @__11_ExpertWithoutEducation;
 		
-		private System.Nullable<decimal> @__1_1_total;
+		private System.Nullable<decimal> @__11_total;
 		
-		private System.Nullable<decimal> @__1_2_ExpertWithEducation;
+		private System.Nullable<decimal> @__12_ExpertWithEducation;
 		
-		private System.Nullable<decimal> @__1_2_ExpertWithoutEducation;
+		private System.Nullable<decimal> @__12_ExpertWithoutEducation;
 		
-		private System.Nullable<decimal> @__1_2_total;
+		private System.Nullable<decimal> @__12_total;
 		
 		private System.Nullable<decimal> @__2_ExpertWithEducation;
 		
@@ -12357,125 +12356,125 @@ namespace KmsReportWS.LinqToSql
 		
 		private System.Nullable<decimal> @__2_total;
 		
-		private System.Nullable<decimal> @__2_1_ExpertWithEducation;
+		private System.Nullable<decimal> @__21_ExpertWithEducation;
 		
-		private System.Nullable<decimal> @__2_1_ExpertWithoutEducation;
+		private System.Nullable<decimal> @__21_ExpertWithoutEducation;
 		
-		private System.Nullable<decimal> @__2_1_total;
+		private System.Nullable<decimal> @__21_total;
 		
-		private System.Nullable<decimal> @__2_1_1_ExpertWithEducation;
+		private System.Nullable<decimal> @__211_ExpertWithEducation;
 		
-		private System.Nullable<decimal> @__2_1_1_ExpertWithoutEducation;
+		private System.Nullable<decimal> @__211_ExpertWithoutEducation;
 		
-		private System.Nullable<decimal> @__2_1_1_total;
+		private System.Nullable<decimal> @__211_total;
 		
-		private System.Nullable<decimal> @__2_1_2_ExpertWithEducation;
+		private System.Nullable<decimal> @__212_ExpertWithEducation;
 		
-		private System.Nullable<decimal> @__2_1_2_ExpertWithoutEducation;
+		private System.Nullable<decimal> @__212_ExpertWithoutEducation;
 		
-		private System.Nullable<decimal> @__2_1_2_total;
+		private System.Nullable<decimal> @__212_total;
 		
-		private System.Nullable<decimal> @__2_1_3_ExpertWithEducation;
+		private System.Nullable<decimal> @__213_ExpertWithEducation;
 		
-		private System.Nullable<decimal> @__2_1_3_ExpertWithoutEducation;
+		private System.Nullable<decimal> @__213_ExpertWithoutEducation;
 		
-		private System.Nullable<decimal> @__2_1_3_total;
+		private System.Nullable<decimal> @__213_total;
 		
-		private System.Nullable<decimal> @__2_1_4_ExpertWithEducation;
+		private System.Nullable<decimal> @__214_ExpertWithEducation;
 		
-		private System.Nullable<decimal> @__2_1_4_ExpertWithoutEducation;
+		private System.Nullable<decimal> @__214_ExpertWithoutEducation;
 		
-		private System.Nullable<decimal> @__2_1_4_total;
+		private System.Nullable<decimal> @__214_total;
 		
-		private System.Nullable<decimal> @__2_1_5_ExpertWithEducation;
+		private System.Nullable<decimal> @__215_ExpertWithEducation;
 		
-		private System.Nullable<decimal> @__2_1_5_ExpertWithoutEducation;
+		private System.Nullable<decimal> @__215_ExpertWithoutEducation;
 		
-		private System.Nullable<decimal> @__2_1_5_total;
+		private System.Nullable<decimal> @__215_total;
 		
-		private System.Nullable<decimal> @__2_1_6_ExpertWithEducation;
+		private System.Nullable<decimal> @__216_ExpertWithEducation;
 		
-		private System.Nullable<decimal> @__2_1_6_ExpertWithoutEducation;
+		private System.Nullable<decimal> @__216_ExpertWithoutEducation;
 		
-		private System.Nullable<decimal> @__2_1_6_total;
+		private System.Nullable<decimal> @__216_total;
 		
-		private System.Nullable<decimal> @__2_1_7_ExpertWithEducation;
+		private System.Nullable<decimal> @__217_ExpertWithEducation;
 		
-		private System.Nullable<decimal> @__2_1_7_ExpertWithoutEducation;
+		private System.Nullable<decimal> @__217_ExpertWithoutEducation;
 		
-		private System.Nullable<decimal> @__2_1_7_total;
+		private System.Nullable<decimal> @__217_total;
 		
-		private System.Nullable<decimal> @__2_1_8_ExpertWithEducation;
+		private System.Nullable<decimal> @__218_ExpertWithEducation;
 		
-		private System.Nullable<decimal> @__2_1_8_ExpertWithoutEducation;
+		private System.Nullable<decimal> @__218_ExpertWithoutEducation;
 		
-		private System.Nullable<decimal> @__2_1_8_total;
+		private System.Nullable<decimal> @__218_total;
 		
-		private System.Nullable<decimal> @__2_1_9_ExpertWithEducation;
+		private System.Nullable<decimal> @__219_ExpertWithEducation;
 		
-		private System.Nullable<decimal> @__2_1_9_ExpertWithoutEducation;
+		private System.Nullable<decimal> @__219_ExpertWithoutEducation;
 		
-		private System.Nullable<decimal> @__2_1_9_total;
+		private System.Nullable<decimal> @__219_total;
 		
-		private System.Nullable<decimal> @__2_1_10_ExpertWithEducation;
+		private System.Nullable<decimal> @__2110_ExpertWithEducation;
 		
-		private System.Nullable<decimal> @__2_1_10_ExpertWithoutEducation;
+		private System.Nullable<decimal> @__2110_ExpertWithoutEducation;
 		
-		private System.Nullable<decimal> @__2_1_10_total;
+		private System.Nullable<decimal> @__2110_total;
 		
-		private System.Nullable<decimal> @__2_2_1_ExpertWithEducation;
+		private System.Nullable<decimal> @__221_ExpertWithEducation;
 		
-		private System.Nullable<decimal> @__2_2_1_ExpertWithoutEducation;
+		private System.Nullable<decimal> @__221_ExpertWithoutEducation;
 		
-		private System.Nullable<decimal> @__2_2_ExpertWithEducation;
+		private System.Nullable<decimal> @__22_ExpertWithEducation;
 		
-		private System.Nullable<decimal> @__2_2_ExpertWithoutEducation;
+		private System.Nullable<decimal> @__22_ExpertWithoutEducation;
 		
-		private System.Nullable<decimal> @__2_2_total;
+		private System.Nullable<decimal> @__22_total;
 		
-		private System.Nullable<decimal> @__2_2_1_total;
+		private System.Nullable<decimal> @__221_total;
 		
-		private System.Nullable<decimal> @__2_2_2_ExpertWithEducation;
+		private System.Nullable<decimal> @__222_ExpertWithEducation;
 		
-		private System.Nullable<decimal> @__2_2_2_ExpertWithoutEducation;
+		private System.Nullable<decimal> @__222_ExpertWithoutEducation;
 		
-		private System.Nullable<decimal> @__2_2_2_total;
+		private System.Nullable<decimal> @__222_total;
 		
-		private System.Nullable<decimal> @__2_2_3_ExpertWithEducation;
+		private System.Nullable<decimal> @__223_ExpertWithEducation;
 		
-		private System.Nullable<decimal> @__2_2_3_ExpertWithoutEducation;
+		private System.Nullable<decimal> @__223_ExpertWithoutEducation;
 		
-		private System.Nullable<decimal> @__2_2_3_total;
+		private System.Nullable<decimal> @__223_total;
 		
-		private System.Nullable<decimal> @__2_2_4_ExpertWithEducation;
+		private System.Nullable<decimal> @__224_ExpertWithEducation;
 		
-		private System.Nullable<decimal> @__2_2_4_ExpertWithoutEducation;
+		private System.Nullable<decimal> @__224_ExpertWithoutEducation;
 		
-		private System.Nullable<decimal> @__2_2_4_total;
+		private System.Nullable<decimal> @__224_total;
 		
-		private System.Nullable<decimal> @__2_2_5_ExpertWithEducation;
+		private System.Nullable<decimal> @__225_ExpertWithEducation;
 		
-		private System.Nullable<decimal> @__2_2_5_ExpertWithoutEducation;
+		private System.Nullable<decimal> @__225_ExpertWithoutEducation;
 		
-		private System.Nullable<decimal> @__2_2_5_total;
+		private System.Nullable<decimal> @__225_total;
 		
-		private System.Nullable<decimal> @__2_2_6_ExpertWithEducation;
+		private System.Nullable<decimal> @__226_ExpertWithEducation;
 		
-		private System.Nullable<decimal> @__2_2_6_ExpertWithoutEducation;
+		private System.Nullable<decimal> @__226_ExpertWithoutEducation;
 		
-		private System.Nullable<decimal> @__2_2_6_total;
+		private System.Nullable<decimal> @__226_total;
 		
-		private System.Nullable<decimal> @__2_2_7_ExpertWithEducation;
+		private System.Nullable<decimal> @__227_ExpertWithEducation;
 		
-		private System.Nullable<decimal> @__2_2_7_ExpertWithoutEducation;
+		private System.Nullable<decimal> @__227_ExpertWithoutEducation;
 		
-		private System.Nullable<decimal> @__2_2_7_total;
+		private System.Nullable<decimal> @__227_total;
 		
-		private System.Nullable<decimal> @__2_2_8_ExpertWithEducation;
+		private System.Nullable<decimal> @__228_ExpertWithEducation;
 		
-		private System.Nullable<decimal> @__2_2_8_ExpertWithoutEducation;
+		private System.Nullable<decimal> @__228_ExpertWithoutEducation;
 		
-		private System.Nullable<decimal> @__2_2_8_total;
+		private System.Nullable<decimal> @__228_total;
 		
 		public p_VCRMonitoring_SvodFilialResult()
 		{
@@ -12497,7 +12496,7 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[1_ExpertWithEducation]", Storage="__1_ExpertWithEducation", DbType="Decimal(16,2)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_1_ExpertWithEducation]", Storage="__1_ExpertWithEducation", DbType="Decimal(16,2)")]
 		public System.Nullable<decimal> _1_ExpertWithEducation
 		{
 			get
@@ -12513,7 +12512,7 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[1_ExpertWithoutEducation]", Storage="__1_ExpertWithoutEducation", DbType="Decimal(16,2)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_1_ExpertWithoutEducation]", Storage="__1_ExpertWithoutEducation", DbType="Decimal(16,2)")]
 		public System.Nullable<decimal> _1_ExpertWithoutEducation
 		{
 			get
@@ -12529,7 +12528,7 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[1_total]", Storage="__1_total", DbType="Decimal(17,2)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_1_total]", Storage="__1_total", DbType="Decimal(17,2)")]
 		public System.Nullable<decimal> _1_total
 		{
 			get
@@ -12545,103 +12544,103 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[1.1_ExpertWithEducation]", Storage="__1_1_ExpertWithEducation", DbType="Decimal(15,2)")]
-		public System.Nullable<decimal> _1_1_ExpertWithEducation
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_11_ExpertWithEducation]", Storage="__11_ExpertWithEducation", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _11_ExpertWithEducation
 		{
 			get
 			{
-				return this.@__1_1_ExpertWithEducation;
+				return this.@__11_ExpertWithEducation;
 			}
 			set
 			{
-				if ((this.@__1_1_ExpertWithEducation != value))
+				if ((this.@__11_ExpertWithEducation != value))
 				{
-					this.@__1_1_ExpertWithEducation = value;
+					this.@__11_ExpertWithEducation = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[1.1_ExpertWithoutEducation]", Storage="__1_1_ExpertWithoutEducation", DbType="Decimal(15,2)")]
-		public System.Nullable<decimal> _1_1_ExpertWithoutEducation
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_11_ExpertWithoutEducation]", Storage="__11_ExpertWithoutEducation", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _11_ExpertWithoutEducation
 		{
 			get
 			{
-				return this.@__1_1_ExpertWithoutEducation;
+				return this.@__11_ExpertWithoutEducation;
 			}
 			set
 			{
-				if ((this.@__1_1_ExpertWithoutEducation != value))
+				if ((this.@__11_ExpertWithoutEducation != value))
 				{
-					this.@__1_1_ExpertWithoutEducation = value;
+					this.@__11_ExpertWithoutEducation = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[1.1_total]", Storage="__1_1_total", DbType="Decimal(16,2)")]
-		public System.Nullable<decimal> _1_1_total
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_11_total]", Storage="__11_total", DbType="Decimal(16,2)")]
+		public System.Nullable<decimal> _11_total
 		{
 			get
 			{
-				return this.@__1_1_total;
+				return this.@__11_total;
 			}
 			set
 			{
-				if ((this.@__1_1_total != value))
+				if ((this.@__11_total != value))
 				{
-					this.@__1_1_total = value;
+					this.@__11_total = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[1.2_ExpertWithEducation]", Storage="__1_2_ExpertWithEducation", DbType="Decimal(15,2)")]
-		public System.Nullable<decimal> _1_2_ExpertWithEducation
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_12_ExpertWithEducation]", Storage="__12_ExpertWithEducation", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _12_ExpertWithEducation
 		{
 			get
 			{
-				return this.@__1_2_ExpertWithEducation;
+				return this.@__12_ExpertWithEducation;
 			}
 			set
 			{
-				if ((this.@__1_2_ExpertWithEducation != value))
+				if ((this.@__12_ExpertWithEducation != value))
 				{
-					this.@__1_2_ExpertWithEducation = value;
+					this.@__12_ExpertWithEducation = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[1.2_ExpertWithoutEducation]", Storage="__1_2_ExpertWithoutEducation", DbType="Decimal(15,2)")]
-		public System.Nullable<decimal> _1_2_ExpertWithoutEducation
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_12_ExpertWithoutEducation]", Storage="__12_ExpertWithoutEducation", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _12_ExpertWithoutEducation
 		{
 			get
 			{
-				return this.@__1_2_ExpertWithoutEducation;
+				return this.@__12_ExpertWithoutEducation;
 			}
 			set
 			{
-				if ((this.@__1_2_ExpertWithoutEducation != value))
+				if ((this.@__12_ExpertWithoutEducation != value))
 				{
-					this.@__1_2_ExpertWithoutEducation = value;
+					this.@__12_ExpertWithoutEducation = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[1.2_total]", Storage="__1_2_total", DbType="Decimal(16,2)")]
-		public System.Nullable<decimal> _1_2_total
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_12_total]", Storage="__12_total", DbType="Decimal(16,2)")]
+		public System.Nullable<decimal> _12_total
 		{
 			get
 			{
-				return this.@__1_2_total;
+				return this.@__12_total;
 			}
 			set
 			{
-				if ((this.@__1_2_total != value))
+				if ((this.@__12_total != value))
 				{
-					this.@__1_2_total = value;
+					this.@__12_total = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2_ExpertWithEducation]", Storage="__2_ExpertWithEducation", DbType="Decimal(15,2)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_2_ExpertWithEducation]", Storage="__2_ExpertWithEducation", DbType="Decimal(15,2)")]
 		public System.Nullable<decimal> _2_ExpertWithEducation
 		{
 			get
@@ -12657,7 +12656,7 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2_ExpertWithoutEducation]", Storage="__2_ExpertWithoutEducation", DbType="Decimal(15,2)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_2_ExpertWithoutEducation]", Storage="__2_ExpertWithoutEducation", DbType="Decimal(15,2)")]
 		public System.Nullable<decimal> _2_ExpertWithoutEducation
 		{
 			get
@@ -12673,7 +12672,7 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2_total]", Storage="__2_total", DbType="Decimal(16,2)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_2_total]", Storage="__2_total", DbType="Decimal(16,2)")]
 		public System.Nullable<decimal> _2_total
 		{
 			get
@@ -12689,962 +12688,962 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.1_ExpertWithEducation]", Storage="__2_1_ExpertWithEducation", DbType="Decimal(24,2)")]
-		public System.Nullable<decimal> _2_1_ExpertWithEducation
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_21_ExpertWithEducation]", Storage="__21_ExpertWithEducation", DbType="Decimal(24,2)")]
+		public System.Nullable<decimal> _21_ExpertWithEducation
 		{
 			get
 			{
-				return this.@__2_1_ExpertWithEducation;
+				return this.@__21_ExpertWithEducation;
 			}
 			set
 			{
-				if ((this.@__2_1_ExpertWithEducation != value))
+				if ((this.@__21_ExpertWithEducation != value))
 				{
-					this.@__2_1_ExpertWithEducation = value;
+					this.@__21_ExpertWithEducation = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.1_ExpertWithoutEducation]", Storage="__2_1_ExpertWithoutEducation", DbType="Decimal(24,2)")]
-		public System.Nullable<decimal> _2_1_ExpertWithoutEducation
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_21_ExpertWithoutEducation]", Storage="__21_ExpertWithoutEducation", DbType="Decimal(24,2)")]
+		public System.Nullable<decimal> _21_ExpertWithoutEducation
 		{
 			get
 			{
-				return this.@__2_1_ExpertWithoutEducation;
+				return this.@__21_ExpertWithoutEducation;
 			}
 			set
 			{
-				if ((this.@__2_1_ExpertWithoutEducation != value))
+				if ((this.@__21_ExpertWithoutEducation != value))
 				{
-					this.@__2_1_ExpertWithoutEducation = value;
+					this.@__21_ExpertWithoutEducation = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.1_total]", Storage="__2_1_total", DbType="Decimal(25,2)")]
-		public System.Nullable<decimal> _2_1_total
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_21_total]", Storage="__21_total", DbType="Decimal(25,2)")]
+		public System.Nullable<decimal> _21_total
 		{
 			get
 			{
-				return this.@__2_1_total;
+				return this.@__21_total;
 			}
 			set
 			{
-				if ((this.@__2_1_total != value))
+				if ((this.@__21_total != value))
 				{
-					this.@__2_1_total = value;
+					this.@__21_total = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.1.1_ExpertWithEducation]", Storage="__2_1_1_ExpertWithEducation", DbType="Decimal(15,2)")]
-		public System.Nullable<decimal> _2_1_1_ExpertWithEducation
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_211_ExpertWithEducation]", Storage="__211_ExpertWithEducation", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _211_ExpertWithEducation
 		{
 			get
 			{
-				return this.@__2_1_1_ExpertWithEducation;
+				return this.@__211_ExpertWithEducation;
 			}
 			set
 			{
-				if ((this.@__2_1_1_ExpertWithEducation != value))
+				if ((this.@__211_ExpertWithEducation != value))
 				{
-					this.@__2_1_1_ExpertWithEducation = value;
+					this.@__211_ExpertWithEducation = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.1.1_ExpertWithoutEducation]", Storage="__2_1_1_ExpertWithoutEducation", DbType="Decimal(15,2)")]
-		public System.Nullable<decimal> _2_1_1_ExpertWithoutEducation
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_211_ExpertWithoutEducation]", Storage="__211_ExpertWithoutEducation", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _211_ExpertWithoutEducation
 		{
 			get
 			{
-				return this.@__2_1_1_ExpertWithoutEducation;
+				return this.@__211_ExpertWithoutEducation;
 			}
 			set
 			{
-				if ((this.@__2_1_1_ExpertWithoutEducation != value))
+				if ((this.@__211_ExpertWithoutEducation != value))
 				{
-					this.@__2_1_1_ExpertWithoutEducation = value;
+					this.@__211_ExpertWithoutEducation = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.1.1_total]", Storage="__2_1_1_total", DbType="Decimal(16,2)")]
-		public System.Nullable<decimal> _2_1_1_total
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_211_total]", Storage="__211_total", DbType="Decimal(16,2)")]
+		public System.Nullable<decimal> _211_total
 		{
 			get
 			{
-				return this.@__2_1_1_total;
+				return this.@__211_total;
 			}
 			set
 			{
-				if ((this.@__2_1_1_total != value))
+				if ((this.@__211_total != value))
 				{
-					this.@__2_1_1_total = value;
+					this.@__211_total = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.1.2_ExpertWithEducation]", Storage="__2_1_2_ExpertWithEducation", DbType="Decimal(15,2)")]
-		public System.Nullable<decimal> _2_1_2_ExpertWithEducation
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_212_ExpertWithEducation]", Storage="__212_ExpertWithEducation", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _212_ExpertWithEducation
 		{
 			get
 			{
-				return this.@__2_1_2_ExpertWithEducation;
+				return this.@__212_ExpertWithEducation;
 			}
 			set
 			{
-				if ((this.@__2_1_2_ExpertWithEducation != value))
+				if ((this.@__212_ExpertWithEducation != value))
 				{
-					this.@__2_1_2_ExpertWithEducation = value;
+					this.@__212_ExpertWithEducation = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.1.2_ExpertWithoutEducation]", Storage="__2_1_2_ExpertWithoutEducation", DbType="Decimal(15,2)")]
-		public System.Nullable<decimal> _2_1_2_ExpertWithoutEducation
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_212_ExpertWithoutEducation]", Storage="__212_ExpertWithoutEducation", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _212_ExpertWithoutEducation
 		{
 			get
 			{
-				return this.@__2_1_2_ExpertWithoutEducation;
+				return this.@__212_ExpertWithoutEducation;
 			}
 			set
 			{
-				if ((this.@__2_1_2_ExpertWithoutEducation != value))
+				if ((this.@__212_ExpertWithoutEducation != value))
 				{
-					this.@__2_1_2_ExpertWithoutEducation = value;
+					this.@__212_ExpertWithoutEducation = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.1.2_total]", Storage="__2_1_2_total", DbType="Decimal(16,2)")]
-		public System.Nullable<decimal> _2_1_2_total
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_212_total]", Storage="__212_total", DbType="Decimal(16,2)")]
+		public System.Nullable<decimal> _212_total
 		{
 			get
 			{
-				return this.@__2_1_2_total;
+				return this.@__212_total;
 			}
 			set
 			{
-				if ((this.@__2_1_2_total != value))
+				if ((this.@__212_total != value))
 				{
-					this.@__2_1_2_total = value;
+					this.@__212_total = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.1.3_ExpertWithEducation]", Storage="__2_1_3_ExpertWithEducation", DbType="Decimal(15,2)")]
-		public System.Nullable<decimal> _2_1_3_ExpertWithEducation
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_213_ExpertWithEducation]", Storage="__213_ExpertWithEducation", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _213_ExpertWithEducation
 		{
 			get
 			{
-				return this.@__2_1_3_ExpertWithEducation;
+				return this.@__213_ExpertWithEducation;
 			}
 			set
 			{
-				if ((this.@__2_1_3_ExpertWithEducation != value))
+				if ((this.@__213_ExpertWithEducation != value))
 				{
-					this.@__2_1_3_ExpertWithEducation = value;
+					this.@__213_ExpertWithEducation = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.1.3_ExpertWithoutEducation]", Storage="__2_1_3_ExpertWithoutEducation", DbType="Decimal(15,2)")]
-		public System.Nullable<decimal> _2_1_3_ExpertWithoutEducation
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_213_ExpertWithoutEducation]", Storage="__213_ExpertWithoutEducation", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _213_ExpertWithoutEducation
 		{
 			get
 			{
-				return this.@__2_1_3_ExpertWithoutEducation;
+				return this.@__213_ExpertWithoutEducation;
 			}
 			set
 			{
-				if ((this.@__2_1_3_ExpertWithoutEducation != value))
+				if ((this.@__213_ExpertWithoutEducation != value))
 				{
-					this.@__2_1_3_ExpertWithoutEducation = value;
+					this.@__213_ExpertWithoutEducation = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.1.3_total]", Storage="__2_1_3_total", DbType="Decimal(16,2)")]
-		public System.Nullable<decimal> _2_1_3_total
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_213_total]", Storage="__213_total", DbType="Decimal(16,2)")]
+		public System.Nullable<decimal> _213_total
 		{
 			get
 			{
-				return this.@__2_1_3_total;
+				return this.@__213_total;
 			}
 			set
 			{
-				if ((this.@__2_1_3_total != value))
+				if ((this.@__213_total != value))
 				{
-					this.@__2_1_3_total = value;
+					this.@__213_total = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.1.4_ExpertWithEducation]", Storage="__2_1_4_ExpertWithEducation", DbType="Decimal(15,2)")]
-		public System.Nullable<decimal> _2_1_4_ExpertWithEducation
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_214_ExpertWithEducation]", Storage="__214_ExpertWithEducation", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _214_ExpertWithEducation
 		{
 			get
 			{
-				return this.@__2_1_4_ExpertWithEducation;
+				return this.@__214_ExpertWithEducation;
 			}
 			set
 			{
-				if ((this.@__2_1_4_ExpertWithEducation != value))
+				if ((this.@__214_ExpertWithEducation != value))
 				{
-					this.@__2_1_4_ExpertWithEducation = value;
+					this.@__214_ExpertWithEducation = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.1.4_ExpertWithoutEducation]", Storage="__2_1_4_ExpertWithoutEducation", DbType="Decimal(15,2)")]
-		public System.Nullable<decimal> _2_1_4_ExpertWithoutEducation
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_214_ExpertWithoutEducation]", Storage="__214_ExpertWithoutEducation", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _214_ExpertWithoutEducation
 		{
 			get
 			{
-				return this.@__2_1_4_ExpertWithoutEducation;
+				return this.@__214_ExpertWithoutEducation;
 			}
 			set
 			{
-				if ((this.@__2_1_4_ExpertWithoutEducation != value))
+				if ((this.@__214_ExpertWithoutEducation != value))
 				{
-					this.@__2_1_4_ExpertWithoutEducation = value;
+					this.@__214_ExpertWithoutEducation = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.1.4_total]", Storage="__2_1_4_total", DbType="Decimal(16,2)")]
-		public System.Nullable<decimal> _2_1_4_total
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_214_total]", Storage="__214_total", DbType="Decimal(16,2)")]
+		public System.Nullable<decimal> _214_total
 		{
 			get
 			{
-				return this.@__2_1_4_total;
+				return this.@__214_total;
 			}
 			set
 			{
-				if ((this.@__2_1_4_total != value))
+				if ((this.@__214_total != value))
 				{
-					this.@__2_1_4_total = value;
+					this.@__214_total = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.1.5_ExpertWithEducation]", Storage="__2_1_5_ExpertWithEducation", DbType="Decimal(15,2)")]
-		public System.Nullable<decimal> _2_1_5_ExpertWithEducation
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_215_ExpertWithEducation]", Storage="__215_ExpertWithEducation", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _215_ExpertWithEducation
 		{
 			get
 			{
-				return this.@__2_1_5_ExpertWithEducation;
+				return this.@__215_ExpertWithEducation;
 			}
 			set
 			{
-				if ((this.@__2_1_5_ExpertWithEducation != value))
+				if ((this.@__215_ExpertWithEducation != value))
 				{
-					this.@__2_1_5_ExpertWithEducation = value;
+					this.@__215_ExpertWithEducation = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.1.5_ExpertWithoutEducation]", Storage="__2_1_5_ExpertWithoutEducation", DbType="Decimal(15,2)")]
-		public System.Nullable<decimal> _2_1_5_ExpertWithoutEducation
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_215_ExpertWithoutEducation]", Storage="__215_ExpertWithoutEducation", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _215_ExpertWithoutEducation
 		{
 			get
 			{
-				return this.@__2_1_5_ExpertWithoutEducation;
+				return this.@__215_ExpertWithoutEducation;
 			}
 			set
 			{
-				if ((this.@__2_1_5_ExpertWithoutEducation != value))
+				if ((this.@__215_ExpertWithoutEducation != value))
 				{
-					this.@__2_1_5_ExpertWithoutEducation = value;
+					this.@__215_ExpertWithoutEducation = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.1.5_total]", Storage="__2_1_5_total", DbType="Decimal(16,2)")]
-		public System.Nullable<decimal> _2_1_5_total
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_215_total]", Storage="__215_total", DbType="Decimal(16,2)")]
+		public System.Nullable<decimal> _215_total
 		{
 			get
 			{
-				return this.@__2_1_5_total;
+				return this.@__215_total;
 			}
 			set
 			{
-				if ((this.@__2_1_5_total != value))
+				if ((this.@__215_total != value))
 				{
-					this.@__2_1_5_total = value;
+					this.@__215_total = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.1.6_ExpertWithEducation]", Storage="__2_1_6_ExpertWithEducation", DbType="Decimal(15,2)")]
-		public System.Nullable<decimal> _2_1_6_ExpertWithEducation
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_216_ExpertWithEducation]", Storage="__216_ExpertWithEducation", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _216_ExpertWithEducation
 		{
 			get
 			{
-				return this.@__2_1_6_ExpertWithEducation;
+				return this.@__216_ExpertWithEducation;
 			}
 			set
 			{
-				if ((this.@__2_1_6_ExpertWithEducation != value))
+				if ((this.@__216_ExpertWithEducation != value))
 				{
-					this.@__2_1_6_ExpertWithEducation = value;
+					this.@__216_ExpertWithEducation = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.1.6_ExpertWithoutEducation]", Storage="__2_1_6_ExpertWithoutEducation", DbType="Decimal(15,2)")]
-		public System.Nullable<decimal> _2_1_6_ExpertWithoutEducation
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_216_ExpertWithoutEducation]", Storage="__216_ExpertWithoutEducation", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _216_ExpertWithoutEducation
 		{
 			get
 			{
-				return this.@__2_1_6_ExpertWithoutEducation;
+				return this.@__216_ExpertWithoutEducation;
 			}
 			set
 			{
-				if ((this.@__2_1_6_ExpertWithoutEducation != value))
+				if ((this.@__216_ExpertWithoutEducation != value))
 				{
-					this.@__2_1_6_ExpertWithoutEducation = value;
+					this.@__216_ExpertWithoutEducation = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.1.6_total]", Storage="__2_1_6_total", DbType="Decimal(16,2)")]
-		public System.Nullable<decimal> _2_1_6_total
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_216_total]", Storage="__216_total", DbType="Decimal(16,2)")]
+		public System.Nullable<decimal> _216_total
 		{
 			get
 			{
-				return this.@__2_1_6_total;
+				return this.@__216_total;
 			}
 			set
 			{
-				if ((this.@__2_1_6_total != value))
+				if ((this.@__216_total != value))
 				{
-					this.@__2_1_6_total = value;
+					this.@__216_total = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.1.7_ExpertWithEducation]", Storage="__2_1_7_ExpertWithEducation", DbType="Decimal(15,2)")]
-		public System.Nullable<decimal> _2_1_7_ExpertWithEducation
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_217_ExpertWithEducation]", Storage="__217_ExpertWithEducation", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _217_ExpertWithEducation
 		{
 			get
 			{
-				return this.@__2_1_7_ExpertWithEducation;
+				return this.@__217_ExpertWithEducation;
 			}
 			set
 			{
-				if ((this.@__2_1_7_ExpertWithEducation != value))
+				if ((this.@__217_ExpertWithEducation != value))
 				{
-					this.@__2_1_7_ExpertWithEducation = value;
+					this.@__217_ExpertWithEducation = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.1.7_ExpertWithoutEducation]", Storage="__2_1_7_ExpertWithoutEducation", DbType="Decimal(15,2)")]
-		public System.Nullable<decimal> _2_1_7_ExpertWithoutEducation
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_217_ExpertWithoutEducation]", Storage="__217_ExpertWithoutEducation", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _217_ExpertWithoutEducation
 		{
 			get
 			{
-				return this.@__2_1_7_ExpertWithoutEducation;
+				return this.@__217_ExpertWithoutEducation;
 			}
 			set
 			{
-				if ((this.@__2_1_7_ExpertWithoutEducation != value))
+				if ((this.@__217_ExpertWithoutEducation != value))
 				{
-					this.@__2_1_7_ExpertWithoutEducation = value;
+					this.@__217_ExpertWithoutEducation = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.1.7_total]", Storage="__2_1_7_total", DbType="Decimal(16,2)")]
-		public System.Nullable<decimal> _2_1_7_total
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_217_total]", Storage="__217_total", DbType="Decimal(16,2)")]
+		public System.Nullable<decimal> _217_total
 		{
 			get
 			{
-				return this.@__2_1_7_total;
+				return this.@__217_total;
 			}
 			set
 			{
-				if ((this.@__2_1_7_total != value))
+				if ((this.@__217_total != value))
 				{
-					this.@__2_1_7_total = value;
+					this.@__217_total = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.1.8_ExpertWithEducation]", Storage="__2_1_8_ExpertWithEducation", DbType="Decimal(15,2)")]
-		public System.Nullable<decimal> _2_1_8_ExpertWithEducation
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_218_ExpertWithEducation]", Storage="__218_ExpertWithEducation", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _218_ExpertWithEducation
 		{
 			get
 			{
-				return this.@__2_1_8_ExpertWithEducation;
+				return this.@__218_ExpertWithEducation;
 			}
 			set
 			{
-				if ((this.@__2_1_8_ExpertWithEducation != value))
+				if ((this.@__218_ExpertWithEducation != value))
 				{
-					this.@__2_1_8_ExpertWithEducation = value;
+					this.@__218_ExpertWithEducation = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.1.8_ExpertWithoutEducation]", Storage="__2_1_8_ExpertWithoutEducation", DbType="Decimal(15,2)")]
-		public System.Nullable<decimal> _2_1_8_ExpertWithoutEducation
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_218_ExpertWithoutEducation]", Storage="__218_ExpertWithoutEducation", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _218_ExpertWithoutEducation
 		{
 			get
 			{
-				return this.@__2_1_8_ExpertWithoutEducation;
+				return this.@__218_ExpertWithoutEducation;
 			}
 			set
 			{
-				if ((this.@__2_1_8_ExpertWithoutEducation != value))
+				if ((this.@__218_ExpertWithoutEducation != value))
 				{
-					this.@__2_1_8_ExpertWithoutEducation = value;
+					this.@__218_ExpertWithoutEducation = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.1.8_total]", Storage="__2_1_8_total", DbType="Decimal(16,2)")]
-		public System.Nullable<decimal> _2_1_8_total
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_218_total]", Storage="__218_total", DbType="Decimal(16,2)")]
+		public System.Nullable<decimal> _218_total
 		{
 			get
 			{
-				return this.@__2_1_8_total;
+				return this.@__218_total;
 			}
 			set
 			{
-				if ((this.@__2_1_8_total != value))
+				if ((this.@__218_total != value))
 				{
-					this.@__2_1_8_total = value;
+					this.@__218_total = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.1.9_ExpertWithEducation]", Storage="__2_1_9_ExpertWithEducation", DbType="Decimal(15,2)")]
-		public System.Nullable<decimal> _2_1_9_ExpertWithEducation
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_219_ExpertWithEducation]", Storage="__219_ExpertWithEducation", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _219_ExpertWithEducation
 		{
 			get
 			{
-				return this.@__2_1_9_ExpertWithEducation;
+				return this.@__219_ExpertWithEducation;
 			}
 			set
 			{
-				if ((this.@__2_1_9_ExpertWithEducation != value))
+				if ((this.@__219_ExpertWithEducation != value))
 				{
-					this.@__2_1_9_ExpertWithEducation = value;
+					this.@__219_ExpertWithEducation = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.1.9_ExpertWithoutEducation]", Storage="__2_1_9_ExpertWithoutEducation", DbType="Decimal(15,2)")]
-		public System.Nullable<decimal> _2_1_9_ExpertWithoutEducation
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_219_ExpertWithoutEducation]", Storage="__219_ExpertWithoutEducation", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _219_ExpertWithoutEducation
 		{
 			get
 			{
-				return this.@__2_1_9_ExpertWithoutEducation;
+				return this.@__219_ExpertWithoutEducation;
 			}
 			set
 			{
-				if ((this.@__2_1_9_ExpertWithoutEducation != value))
+				if ((this.@__219_ExpertWithoutEducation != value))
 				{
-					this.@__2_1_9_ExpertWithoutEducation = value;
+					this.@__219_ExpertWithoutEducation = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.1.9_total]", Storage="__2_1_9_total", DbType="Decimal(16,2)")]
-		public System.Nullable<decimal> _2_1_9_total
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_219_total]", Storage="__219_total", DbType="Decimal(16,2)")]
+		public System.Nullable<decimal> _219_total
 		{
 			get
 			{
-				return this.@__2_1_9_total;
+				return this.@__219_total;
 			}
 			set
 			{
-				if ((this.@__2_1_9_total != value))
+				if ((this.@__219_total != value))
 				{
-					this.@__2_1_9_total = value;
+					this.@__219_total = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.1.10_ExpertWithEducation]", Storage="__2_1_10_ExpertWithEducation", DbType="Decimal(15,2)")]
-		public System.Nullable<decimal> _2_1_10_ExpertWithEducation
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_2110_ExpertWithEducation]", Storage="__2110_ExpertWithEducation", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _2110_ExpertWithEducation
 		{
 			get
 			{
-				return this.@__2_1_10_ExpertWithEducation;
+				return this.@__2110_ExpertWithEducation;
 			}
 			set
 			{
-				if ((this.@__2_1_10_ExpertWithEducation != value))
+				if ((this.@__2110_ExpertWithEducation != value))
 				{
-					this.@__2_1_10_ExpertWithEducation = value;
+					this.@__2110_ExpertWithEducation = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.1.10_ExpertWithoutEducation]", Storage="__2_1_10_ExpertWithoutEducation", DbType="Decimal(15,2)")]
-		public System.Nullable<decimal> _2_1_10_ExpertWithoutEducation
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_2110_ExpertWithoutEducation]", Storage="__2110_ExpertWithoutEducation", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _2110_ExpertWithoutEducation
 		{
 			get
 			{
-				return this.@__2_1_10_ExpertWithoutEducation;
+				return this.@__2110_ExpertWithoutEducation;
 			}
 			set
 			{
-				if ((this.@__2_1_10_ExpertWithoutEducation != value))
+				if ((this.@__2110_ExpertWithoutEducation != value))
 				{
-					this.@__2_1_10_ExpertWithoutEducation = value;
+					this.@__2110_ExpertWithoutEducation = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.1.10_total]", Storage="__2_1_10_total", DbType="Decimal(16,2)")]
-		public System.Nullable<decimal> _2_1_10_total
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_2110_total]", Storage="__2110_total", DbType="Decimal(16,2)")]
+		public System.Nullable<decimal> _2110_total
 		{
 			get
 			{
-				return this.@__2_1_10_total;
+				return this.@__2110_total;
 			}
 			set
 			{
-				if ((this.@__2_1_10_total != value))
+				if ((this.@__2110_total != value))
 				{
-					this.@__2_1_10_total = value;
+					this.@__2110_total = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.2.1_ExpertWithEducation]", Storage="__2_2_1_ExpertWithEducation", DbType="Decimal(15,2)")]
-		public System.Nullable<decimal> _2_2_1_ExpertWithEducation
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_221_ExpertWithEducation]", Storage="__221_ExpertWithEducation", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _221_ExpertWithEducation
 		{
 			get
 			{
-				return this.@__2_2_1_ExpertWithEducation;
+				return this.@__221_ExpertWithEducation;
 			}
 			set
 			{
-				if ((this.@__2_2_1_ExpertWithEducation != value))
+				if ((this.@__221_ExpertWithEducation != value))
 				{
-					this.@__2_2_1_ExpertWithEducation = value;
+					this.@__221_ExpertWithEducation = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.2.1_ExpertWithoutEducation]", Storage="__2_2_1_ExpertWithoutEducation", DbType="Decimal(15,2)")]
-		public System.Nullable<decimal> _2_2_1_ExpertWithoutEducation
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_221_ExpertWithoutEducation]", Storage="__221_ExpertWithoutEducation", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _221_ExpertWithoutEducation
 		{
 			get
 			{
-				return this.@__2_2_1_ExpertWithoutEducation;
+				return this.@__221_ExpertWithoutEducation;
 			}
 			set
 			{
-				if ((this.@__2_2_1_ExpertWithoutEducation != value))
+				if ((this.@__221_ExpertWithoutEducation != value))
 				{
-					this.@__2_2_1_ExpertWithoutEducation = value;
+					this.@__221_ExpertWithoutEducation = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.2_ExpertWithEducation]", Storage="__2_2_ExpertWithEducation", DbType="Decimal(22,2)")]
-		public System.Nullable<decimal> _2_2_ExpertWithEducation
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_22_ExpertWithEducation]", Storage="__22_ExpertWithEducation", DbType="Decimal(22,2)")]
+		public System.Nullable<decimal> _22_ExpertWithEducation
 		{
 			get
 			{
-				return this.@__2_2_ExpertWithEducation;
+				return this.@__22_ExpertWithEducation;
 			}
 			set
 			{
-				if ((this.@__2_2_ExpertWithEducation != value))
+				if ((this.@__22_ExpertWithEducation != value))
 				{
-					this.@__2_2_ExpertWithEducation = value;
+					this.@__22_ExpertWithEducation = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.2_ExpertWithoutEducation]", Storage="__2_2_ExpertWithoutEducation", DbType="Decimal(22,2)")]
-		public System.Nullable<decimal> _2_2_ExpertWithoutEducation
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_22_ExpertWithoutEducation]", Storage="__22_ExpertWithoutEducation", DbType="Decimal(22,2)")]
+		public System.Nullable<decimal> _22_ExpertWithoutEducation
 		{
 			get
 			{
-				return this.@__2_2_ExpertWithoutEducation;
+				return this.@__22_ExpertWithoutEducation;
 			}
 			set
 			{
-				if ((this.@__2_2_ExpertWithoutEducation != value))
+				if ((this.@__22_ExpertWithoutEducation != value))
 				{
-					this.@__2_2_ExpertWithoutEducation = value;
+					this.@__22_ExpertWithoutEducation = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.2_total]", Storage="__2_2_total", DbType="Decimal(23,2)")]
-		public System.Nullable<decimal> _2_2_total
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_22_total]", Storage="__22_total", DbType="Decimal(23,2)")]
+		public System.Nullable<decimal> _22_total
 		{
 			get
 			{
-				return this.@__2_2_total;
+				return this.@__22_total;
 			}
 			set
 			{
-				if ((this.@__2_2_total != value))
+				if ((this.@__22_total != value))
 				{
-					this.@__2_2_total = value;
+					this.@__22_total = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.2.1_total]", Storage="__2_2_1_total", DbType="Decimal(16,2)")]
-		public System.Nullable<decimal> _2_2_1_total
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_221_total]", Storage="__221_total", DbType="Decimal(16,2)")]
+		public System.Nullable<decimal> _221_total
 		{
 			get
 			{
-				return this.@__2_2_1_total;
+				return this.@__221_total;
 			}
 			set
 			{
-				if ((this.@__2_2_1_total != value))
+				if ((this.@__221_total != value))
 				{
-					this.@__2_2_1_total = value;
+					this.@__221_total = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.2.2_ExpertWithEducation]", Storage="__2_2_2_ExpertWithEducation", DbType="Decimal(15,2)")]
-		public System.Nullable<decimal> _2_2_2_ExpertWithEducation
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_222_ExpertWithEducation]", Storage="__222_ExpertWithEducation", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _222_ExpertWithEducation
 		{
 			get
 			{
-				return this.@__2_2_2_ExpertWithEducation;
+				return this.@__222_ExpertWithEducation;
 			}
 			set
 			{
-				if ((this.@__2_2_2_ExpertWithEducation != value))
+				if ((this.@__222_ExpertWithEducation != value))
 				{
-					this.@__2_2_2_ExpertWithEducation = value;
+					this.@__222_ExpertWithEducation = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.2.2_ExpertWithoutEducation]", Storage="__2_2_2_ExpertWithoutEducation", DbType="Decimal(15,2)")]
-		public System.Nullable<decimal> _2_2_2_ExpertWithoutEducation
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_222_ExpertWithoutEducation]", Storage="__222_ExpertWithoutEducation", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _222_ExpertWithoutEducation
 		{
 			get
 			{
-				return this.@__2_2_2_ExpertWithoutEducation;
+				return this.@__222_ExpertWithoutEducation;
 			}
 			set
 			{
-				if ((this.@__2_2_2_ExpertWithoutEducation != value))
+				if ((this.@__222_ExpertWithoutEducation != value))
 				{
-					this.@__2_2_2_ExpertWithoutEducation = value;
+					this.@__222_ExpertWithoutEducation = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.2.2_total]", Storage="__2_2_2_total", DbType="Decimal(16,2)")]
-		public System.Nullable<decimal> _2_2_2_total
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_222_total]", Storage="__222_total", DbType="Decimal(16,2)")]
+		public System.Nullable<decimal> _222_total
 		{
 			get
 			{
-				return this.@__2_2_2_total;
+				return this.@__222_total;
 			}
 			set
 			{
-				if ((this.@__2_2_2_total != value))
+				if ((this.@__222_total != value))
 				{
-					this.@__2_2_2_total = value;
+					this.@__222_total = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.2.3_ExpertWithEducation]", Storage="__2_2_3_ExpertWithEducation", DbType="Decimal(15,2)")]
-		public System.Nullable<decimal> _2_2_3_ExpertWithEducation
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_223_ExpertWithEducation]", Storage="__223_ExpertWithEducation", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _223_ExpertWithEducation
 		{
 			get
 			{
-				return this.@__2_2_3_ExpertWithEducation;
+				return this.@__223_ExpertWithEducation;
 			}
 			set
 			{
-				if ((this.@__2_2_3_ExpertWithEducation != value))
+				if ((this.@__223_ExpertWithEducation != value))
 				{
-					this.@__2_2_3_ExpertWithEducation = value;
+					this.@__223_ExpertWithEducation = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.2.3_ExpertWithoutEducation]", Storage="__2_2_3_ExpertWithoutEducation", DbType="Decimal(15,2)")]
-		public System.Nullable<decimal> _2_2_3_ExpertWithoutEducation
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_223_ExpertWithoutEducation]", Storage="__223_ExpertWithoutEducation", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _223_ExpertWithoutEducation
 		{
 			get
 			{
-				return this.@__2_2_3_ExpertWithoutEducation;
+				return this.@__223_ExpertWithoutEducation;
 			}
 			set
 			{
-				if ((this.@__2_2_3_ExpertWithoutEducation != value))
+				if ((this.@__223_ExpertWithoutEducation != value))
 				{
-					this.@__2_2_3_ExpertWithoutEducation = value;
+					this.@__223_ExpertWithoutEducation = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.2.3_total]", Storage="__2_2_3_total", DbType="Decimal(16,2)")]
-		public System.Nullable<decimal> _2_2_3_total
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_223_total]", Storage="__223_total", DbType="Decimal(16,2)")]
+		public System.Nullable<decimal> _223_total
 		{
 			get
 			{
-				return this.@__2_2_3_total;
+				return this.@__223_total;
 			}
 			set
 			{
-				if ((this.@__2_2_3_total != value))
+				if ((this.@__223_total != value))
 				{
-					this.@__2_2_3_total = value;
+					this.@__223_total = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.2.4_ExpertWithEducation]", Storage="__2_2_4_ExpertWithEducation", DbType="Decimal(15,2)")]
-		public System.Nullable<decimal> _2_2_4_ExpertWithEducation
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_224_ExpertWithEducation]", Storage="__224_ExpertWithEducation", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _224_ExpertWithEducation
 		{
 			get
 			{
-				return this.@__2_2_4_ExpertWithEducation;
+				return this.@__224_ExpertWithEducation;
 			}
 			set
 			{
-				if ((this.@__2_2_4_ExpertWithEducation != value))
+				if ((this.@__224_ExpertWithEducation != value))
 				{
-					this.@__2_2_4_ExpertWithEducation = value;
+					this.@__224_ExpertWithEducation = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.2.4_ExpertWithoutEducation]", Storage="__2_2_4_ExpertWithoutEducation", DbType="Decimal(15,2)")]
-		public System.Nullable<decimal> _2_2_4_ExpertWithoutEducation
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_224_ExpertWithoutEducation]", Storage="__224_ExpertWithoutEducation", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _224_ExpertWithoutEducation
 		{
 			get
 			{
-				return this.@__2_2_4_ExpertWithoutEducation;
+				return this.@__224_ExpertWithoutEducation;
 			}
 			set
 			{
-				if ((this.@__2_2_4_ExpertWithoutEducation != value))
+				if ((this.@__224_ExpertWithoutEducation != value))
 				{
-					this.@__2_2_4_ExpertWithoutEducation = value;
+					this.@__224_ExpertWithoutEducation = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.2.4_total]", Storage="__2_2_4_total", DbType="Decimal(16,2)")]
-		public System.Nullable<decimal> _2_2_4_total
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_224_total]", Storage="__224_total", DbType="Decimal(16,2)")]
+		public System.Nullable<decimal> _224_total
 		{
 			get
 			{
-				return this.@__2_2_4_total;
+				return this.@__224_total;
 			}
 			set
 			{
-				if ((this.@__2_2_4_total != value))
+				if ((this.@__224_total != value))
 				{
-					this.@__2_2_4_total = value;
+					this.@__224_total = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.2.5_ExpertWithEducation]", Storage="__2_2_5_ExpertWithEducation", DbType="Decimal(15,2)")]
-		public System.Nullable<decimal> _2_2_5_ExpertWithEducation
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_225_ExpertWithEducation]", Storage="__225_ExpertWithEducation", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _225_ExpertWithEducation
 		{
 			get
 			{
-				return this.@__2_2_5_ExpertWithEducation;
+				return this.@__225_ExpertWithEducation;
 			}
 			set
 			{
-				if ((this.@__2_2_5_ExpertWithEducation != value))
+				if ((this.@__225_ExpertWithEducation != value))
 				{
-					this.@__2_2_5_ExpertWithEducation = value;
+					this.@__225_ExpertWithEducation = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.2.5_ExpertWithoutEducation]", Storage="__2_2_5_ExpertWithoutEducation", DbType="Decimal(15,2)")]
-		public System.Nullable<decimal> _2_2_5_ExpertWithoutEducation
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_225_ExpertWithoutEducation]", Storage="__225_ExpertWithoutEducation", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _225_ExpertWithoutEducation
 		{
 			get
 			{
-				return this.@__2_2_5_ExpertWithoutEducation;
+				return this.@__225_ExpertWithoutEducation;
 			}
 			set
 			{
-				if ((this.@__2_2_5_ExpertWithoutEducation != value))
+				if ((this.@__225_ExpertWithoutEducation != value))
 				{
-					this.@__2_2_5_ExpertWithoutEducation = value;
+					this.@__225_ExpertWithoutEducation = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.2.5_total]", Storage="__2_2_5_total", DbType="Decimal(16,2)")]
-		public System.Nullable<decimal> _2_2_5_total
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_225_total]", Storage="__225_total", DbType="Decimal(16,2)")]
+		public System.Nullable<decimal> _225_total
 		{
 			get
 			{
-				return this.@__2_2_5_total;
+				return this.@__225_total;
 			}
 			set
 			{
-				if ((this.@__2_2_5_total != value))
+				if ((this.@__225_total != value))
 				{
-					this.@__2_2_5_total = value;
+					this.@__225_total = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.2.6_ExpertWithEducation]", Storage="__2_2_6_ExpertWithEducation", DbType="Decimal(15,2)")]
-		public System.Nullable<decimal> _2_2_6_ExpertWithEducation
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_226_ExpertWithEducation]", Storage="__226_ExpertWithEducation", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _226_ExpertWithEducation
 		{
 			get
 			{
-				return this.@__2_2_6_ExpertWithEducation;
+				return this.@__226_ExpertWithEducation;
 			}
 			set
 			{
-				if ((this.@__2_2_6_ExpertWithEducation != value))
+				if ((this.@__226_ExpertWithEducation != value))
 				{
-					this.@__2_2_6_ExpertWithEducation = value;
+					this.@__226_ExpertWithEducation = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.2.6_ExpertWithoutEducation]", Storage="__2_2_6_ExpertWithoutEducation", DbType="Decimal(15,2)")]
-		public System.Nullable<decimal> _2_2_6_ExpertWithoutEducation
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_226_ExpertWithoutEducation]", Storage="__226_ExpertWithoutEducation", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _226_ExpertWithoutEducation
 		{
 			get
 			{
-				return this.@__2_2_6_ExpertWithoutEducation;
+				return this.@__226_ExpertWithoutEducation;
 			}
 			set
 			{
-				if ((this.@__2_2_6_ExpertWithoutEducation != value))
+				if ((this.@__226_ExpertWithoutEducation != value))
 				{
-					this.@__2_2_6_ExpertWithoutEducation = value;
+					this.@__226_ExpertWithoutEducation = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.2.6_total]", Storage="__2_2_6_total", DbType="Decimal(16,2)")]
-		public System.Nullable<decimal> _2_2_6_total
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_226_total]", Storage="__226_total", DbType="Decimal(16,2)")]
+		public System.Nullable<decimal> _226_total
 		{
 			get
 			{
-				return this.@__2_2_6_total;
+				return this.@__226_total;
 			}
 			set
 			{
-				if ((this.@__2_2_6_total != value))
+				if ((this.@__226_total != value))
 				{
-					this.@__2_2_6_total = value;
+					this.@__226_total = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.2.7_ExpertWithEducation]", Storage="__2_2_7_ExpertWithEducation", DbType="Decimal(15,2)")]
-		public System.Nullable<decimal> _2_2_7_ExpertWithEducation
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_227_ExpertWithEducation]", Storage="__227_ExpertWithEducation", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _227_ExpertWithEducation
 		{
 			get
 			{
-				return this.@__2_2_7_ExpertWithEducation;
+				return this.@__227_ExpertWithEducation;
 			}
 			set
 			{
-				if ((this.@__2_2_7_ExpertWithEducation != value))
+				if ((this.@__227_ExpertWithEducation != value))
 				{
-					this.@__2_2_7_ExpertWithEducation = value;
+					this.@__227_ExpertWithEducation = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.2.7_ExpertWithoutEducation]", Storage="__2_2_7_ExpertWithoutEducation", DbType="Decimal(15,2)")]
-		public System.Nullable<decimal> _2_2_7_ExpertWithoutEducation
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_227_ExpertWithoutEducation]", Storage="__227_ExpertWithoutEducation", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _227_ExpertWithoutEducation
 		{
 			get
 			{
-				return this.@__2_2_7_ExpertWithoutEducation;
+				return this.@__227_ExpertWithoutEducation;
 			}
 			set
 			{
-				if ((this.@__2_2_7_ExpertWithoutEducation != value))
+				if ((this.@__227_ExpertWithoutEducation != value))
 				{
-					this.@__2_2_7_ExpertWithoutEducation = value;
+					this.@__227_ExpertWithoutEducation = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.2.7_total]", Storage="__2_2_7_total", DbType="Decimal(16,2)")]
-		public System.Nullable<decimal> _2_2_7_total
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_227_total]", Storage="__227_total", DbType="Decimal(16,2)")]
+		public System.Nullable<decimal> _227_total
 		{
 			get
 			{
-				return this.@__2_2_7_total;
+				return this.@__227_total;
 			}
 			set
 			{
-				if ((this.@__2_2_7_total != value))
+				if ((this.@__227_total != value))
 				{
-					this.@__2_2_7_total = value;
+					this.@__227_total = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.2.8_ExpertWithEducation]", Storage="__2_2_8_ExpertWithEducation", DbType="Decimal(15,2)")]
-		public System.Nullable<decimal> _2_2_8_ExpertWithEducation
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_228_ExpertWithEducation]", Storage="__228_ExpertWithEducation", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _228_ExpertWithEducation
 		{
 			get
 			{
-				return this.@__2_2_8_ExpertWithEducation;
+				return this.@__228_ExpertWithEducation;
 			}
 			set
 			{
-				if ((this.@__2_2_8_ExpertWithEducation != value))
+				if ((this.@__228_ExpertWithEducation != value))
 				{
-					this.@__2_2_8_ExpertWithEducation = value;
+					this.@__228_ExpertWithEducation = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.2.8_ExpertWithoutEducation]", Storage="__2_2_8_ExpertWithoutEducation", DbType="Decimal(15,2)")]
-		public System.Nullable<decimal> _2_2_8_ExpertWithoutEducation
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_228_ExpertWithoutEducation]", Storage="__228_ExpertWithoutEducation", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _228_ExpertWithoutEducation
 		{
 			get
 			{
-				return this.@__2_2_8_ExpertWithoutEducation;
+				return this.@__228_ExpertWithoutEducation;
 			}
 			set
 			{
-				if ((this.@__2_2_8_ExpertWithoutEducation != value))
+				if ((this.@__228_ExpertWithoutEducation != value))
 				{
-					this.@__2_2_8_ExpertWithoutEducation = value;
+					this.@__228_ExpertWithoutEducation = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[2.2.8_total]", Storage="__2_2_8_total", DbType="Decimal(16,2)")]
-		public System.Nullable<decimal> _2_2_8_total
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_228_total]", Storage="__228_total", DbType="Decimal(16,2)")]
+		public System.Nullable<decimal> _228_total
 		{
 			get
 			{
-				return this.@__2_2_8_total;
+				return this.@__228_total;
 			}
 			set
 			{
-				if ((this.@__2_2_8_total != value))
+				if ((this.@__228_total != value))
 				{
-					this.@__2_2_8_total = value;
+					this.@__228_total = value;
 				}
 			}
 		}

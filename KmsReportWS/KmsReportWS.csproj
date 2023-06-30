@@ -112,7 +112,7 @@
     <Compile Include="Collector\BaseReport\IizlCollector.cs" />
     <Compile Include="Collector\BaseReport\IReportCollector.cs" />
     <Compile Include="Collector\BaseReport\PgCollector.cs" />
-    <Compile Include="Collector\ConsolidateReport\ConsolidateVCRCollector.cs" />
+    <Compile Include="Collector\ConsolidateReport\ConsolidateVCRReportFilialCollector.cs" />
     <Compile Include="Collector\ConsolidateReport\ConsolidateLetal2023Collector.cs" />
     <Compile Include="Collector\ConsolidateReport\ConsolidateOpedFinance_3Collector.cs" />
     <Compile Include="Collector\ConsolidateReport\ConsolidateOpedUnplannedCollector.cs" />
@@ -168,7 +168,7 @@
     <Compile Include="Model\CheckFFOMS2022CommonData.cs" />
     <Compile Include="Model\ConcolidateReport\ConsolidateOpedFinance_3.cs" />
     <Compile Include="Model\ConcolidateReport\ConsolidateVCR.cs" />
-    <Compile Include="Model\ConcolidateReport\CReportVCR.cs" />
+    <Compile Include="Model\ConcolidateReport\CReportVCRFilial.cs" />
     <Compile Include="Model\ConcolidateReport\CReportOpedUnplanned.cs" />
     <Compile Include="Model\ConcolidateReport\CReportCadre.cs" />
     <Compile Include="Model\ConcolidateReport\ConsolidateCardio.cs" />
@@ -198,6 +198,7 @@
     <Compile Include="Model\FSSMonitoringPgDataDto.cs" />
     <Compile Include="Model\ReportDynamicScanModel.cs" />
     <Compile Include="Model\ReportScanModel.cs" />
+    <Compile Include="Model\Report\ReportVCRFilial.cs" />
     <Compile Include="Model\Report\ReportEffectiveness.cs" />
     <Compile Include="Model\Report\ReportCadre.cs" />
     <Compile Include="Model\Report\DataSource.cs" />
