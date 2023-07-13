@@ -24,6 +24,7 @@ namespace KmsReportWS.Handler
         private readonly IReportHandler _mvcrCollector = new MonitoringVCRHandler(ReportType.MVCR);
         private readonly IReportHandler _proposalCollector = new ReportProposalHandler(ReportType.Proposal);
         private readonly IReportHandler _opedFinanceCollector = new ReportOpedFinanceHandler(ReportType.OpedFinance);
+        private readonly IReportHandler _opedFinance3Collector = new ReportOpedFinance3Handler(ReportType.OpedFinance3);
         //private readonly IReportHandler _infomaterialCollector = new ReportInfomaterialHandler(ReportType.Infomaterial);
         private readonly IReportHandler _effectiveHandlerCollector = new ReportEffectivenessHandler(ReportType.Effective);
 
@@ -48,7 +49,7 @@ namespace KmsReportWS.Handler
                 ReportType.MVCR => _mvcrCollector,
                 ReportType.Proposal => _proposalCollector,
                 ReportType.OpedFinance => _opedFinanceCollector,
-                ReportType.OpedFinance3 => _opedFinanceCollector,
+                ReportType.OpedFinance3 => _opedFinance3Collector,
                 ReportType.Cadre => _cadreHandlerCollector,
                 ReportType.Effective => _effectiveHandlerCollector,
                 //ReportType.Infomaterial => _infomaterialCollector,

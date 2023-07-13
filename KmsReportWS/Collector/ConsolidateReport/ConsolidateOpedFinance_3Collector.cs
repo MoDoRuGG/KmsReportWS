@@ -19,7 +19,7 @@ namespace KmsReportWS.Collector.ConsolidateReport
             {
                 using (MsConnection connect = new MsConnection(Settings.Default.ConnStr))
                 {
-                    connect.NewSp("p_ConsolidateOpedFinance_3");
+                    connect.NewSp("GetOpedFin");
                     connect.AddSpParam("@year", year);
                     var dt = connect.DataTable();
 
