@@ -22,5 +22,6 @@ namespace KmsReportWS.Model.ConcolidateReport
         public decimal EkmpLetalFact { get; set; }
 
         public string Notes { get; set; }
+        public string NotesGoodReason { get; set; }
     }
 }

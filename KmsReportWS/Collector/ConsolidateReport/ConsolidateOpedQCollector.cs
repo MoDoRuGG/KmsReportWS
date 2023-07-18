@@ -36,7 +36,8 @@ namespace KmsReportWS.Collector.ConsolidateReport
                         EkmpLetalPlan = row.ToDecimal("EkmpLetalPlan"),
                         EkmpLetalFact = row.ToDecimal("EkmpLetalFact"),
 
-                        Notes = row["Notes"].ToString()
+                        Notes = row["Notes"].ToString(),
+                        NotesGoodReason = row["NotesGoodReason"].ToString()
 
                     });
                 }
