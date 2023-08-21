@@ -250,7 +250,7 @@ namespace KmsReportWS.Collector.ConsolidateReport
             return (from flow in db.Report_Flow
                     join rData in db.Report_Data on flow.Id equals rData.Id_Flow
                     join table in db.Report_Zpz on rData.Id equals table.Id_Report_Data
-                    where flow.Yymm.Contains("23")
+                    where flow.Yymm == yymm
                           //&& flow.Status != ReportStatus.Refuse.GetDescriptionSt()
                           && flow.Id_Report_Type == reportType
                     //&& _themes.Contains(rData.Theme)
