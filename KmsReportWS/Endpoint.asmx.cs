@@ -320,6 +320,12 @@ namespace KmsReportWS
 
         }
 
+        [WebMethod]
+        public void WebReportReqVCR(ReportReqVCR report)
+        {
+
+        }
+
 
         [WebMethod]
         public List<DynamicDataDto> GetReportRegionData(int idFlow) =>
@@ -566,6 +572,7 @@ namespace KmsReportWS
             var consolidate = new Consolidate262Collector();
             return consolidate.CreateReport262T2(yymmSt, yymmEnd);
         }
+
 
         [WebMethod]
         public List<CReport262Table3> CreateReport262T3(string yymm)

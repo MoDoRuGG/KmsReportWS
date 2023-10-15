@@ -141,6 +141,7 @@
     <Compile Include="Handler\BaseReportHandler.cs" />
     <Compile Include="Handler\FOpedUHandler.cs" />
     <Compile Include="Handler\MonitoringVCRHandler.cs" />
+    <Compile Include="Handler\ReportReqVCRHandler.cs" />
     <Compile Include="Handler\ReportEffectivenessHandler.cs" />
     <Compile Include="Handler\ReportOpedFinance3Handler.cs" />
     <Compile Include="Handler\ZpzHandler.cs" />
@@ -201,6 +202,7 @@
     <Compile Include="Model\FSSMonitoringPgDataDto.cs" />
     <Compile Include="Model\ReportDynamicScanModel.cs" />
     <Compile Include="Model\ReportScanModel.cs" />
+    <Compile Include="Model\Report\ReportReqVCR.cs" />
     <Compile Include="Model\Report\ReportOpedFinance3.cs" />
     <Compile Include="Model\Report\ReportVCRFilial.cs" />
     <Compile Include="Model\Report\ReportEffectiveness.cs" />

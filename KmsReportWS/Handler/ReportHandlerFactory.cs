@@ -27,7 +27,7 @@ namespace KmsReportWS.Handler
         private readonly IReportHandler _opedFinance3Collector = new ReportOpedFinance3Handler(ReportType.OpedFinance3);
         //private readonly IReportHandler _infomaterialCollector = new ReportInfomaterialHandler(ReportType.Infomaterial);
         private readonly IReportHandler _effectiveHandlerCollector = new ReportEffectivenessHandler(ReportType.Effective);
-
+        private readonly IReportHandler _reqVCRHandlerCollector = new ReportReqVCRHandler();
         public IReportHandler GetHandler(ReportType reportType) =>
             reportType switch {
                 ReportType.Oped => _opedCollector,
@@ -51,6 +51,7 @@ namespace KmsReportWS.Handler
                 ReportType.OpedFinance => _opedFinanceCollector,
                 ReportType.OpedFinance3 => _opedFinance3Collector,
                 ReportType.Cadre => _cadreHandlerCollector,
+                ReportType.ReqVCR => _reqVCRHandlerCollector,
                 ReportType.Effective => _effectiveHandlerCollector,
                 //ReportType.Infomaterial => _infomaterialCollector,
 

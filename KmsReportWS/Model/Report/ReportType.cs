@@ -27,6 +27,7 @@ namespace KmsReportWS.Model.Report
         [Description("Zpz10")] Zpz10,
         [Description("Effective")] Effective,
         [Description("ZpzLethal")] ZpzLethal,
+        [Description("ReqVCR")] ReqVCR,
 
     }
 }

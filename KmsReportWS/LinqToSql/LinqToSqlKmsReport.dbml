@@ -170,6 +170,7 @@
       <Association Name="Report_Data_Report_Zpz" Member="Report_Zpz" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_Zpz" />
       <Association Name="Report_Data_Report262_Table3" Member="Report262_Table3" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report262_Table3" />
       <Association Name="Report_Data_Report_Effectiveness" Member="Report_Effectiveness" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_Effectiveness" />
+      <Association Name="Report_Data_Report_ReqVCR" Member="Report_ReqVCR" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_ReqVCR" />
       <Association Name="Report_Type_Report_Data" Member="Report_Type" ThisKey="Id_Report" OtherKey="Id" Type="Report_Type" IsForeignKey="true" />
       <Association Name="Report_Flow_Report_Data" Member="Report_Flow" ThisKey="Id_Flow" OtherKey="Id" Type="Report_Flow" IsForeignKey="true" />
     </Type>
@@ -525,6 +526,19 @@
       <Association Name="Employee_Report_Flow" Member="Employee" ThisKey="Id_Employee" OtherKey="Id" Type="Employee" IsForeignKey="true" />
       <Association Name="Region_Report_Flow" Member="Region" ThisKey="Id_Region" OtherKey="id" Type="Region" IsForeignKey="true" />
       <Association Name="Report_Type_Report_Flow" Member="Report_Type" ThisKey="Id_Report_Type" OtherKey="Id" Type="Report_Type" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Report_ReqVCR" Member="Report_ReqVCR">
+    <Type Name="Report_ReqVCR">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id_Report_Data" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RowNum" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="y2019" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="y2020" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="y2021" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="y2022" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="y2023" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Association Name="Report_Data_Report_ReqVCR" Member="Report_Data" ThisKey="Id_Report_Data" OtherKey="Id" Type="Report_Data" IsForeignKey="true" />
     </Type>
   </Table>
   <Function Name="dbo.cadre_rapport" Method="cadre_rapport" IsComposable="true">

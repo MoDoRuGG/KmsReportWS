@@ -123,6 +123,9 @@ namespace KmsReportWS.LinqToSql
     partial void InsertReport_Flow(Report_Flow instance);
     partial void UpdateReport_Flow(Report_Flow instance);
     partial void DeleteReport_Flow(Report_Flow instance);
+    partial void InsertReport_ReqVCR(Report_ReqVCR instance);
+    partial void UpdateReport_ReqVCR(Report_ReqVCR instance);
+    partial void DeleteReport_ReqVCR(Report_ReqVCR instance);
     #endregion
 		
 		public LinqToSqlKmsReportDataContext(string connection) : 
@@ -410,6 +413,14 @@ namespace KmsReportWS.LinqToSql
 			get
 			{
 				return this.GetTable<Report_Flow>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Report_ReqVCR> Report_ReqVCR
+		{
+			get
+			{
+				return this.GetTable<Report_ReqVCR>();
 			}
 		}
 		
@@ -3394,6 +3405,8 @@ namespace KmsReportWS.LinqToSql
 		
 		private EntitySet<Report_Effectiveness> _Report_Effectiveness;
 		
+		private EntitySet<Report_ReqVCR> _Report_ReqVCR;
+		
 		private EntityRef<Report_Type> _Report_Type;
 		
 		private EntityRef<Report_Flow> _Report_Flow;
@@ -3435,6 +3448,7 @@ namespace KmsReportWS.LinqToSql
 			this._Report_Zpz = new EntitySet<Report_Zpz>(new Action<Report_Zpz>(this.attach_Report_Zpz), new Action<Report_Zpz>(this.detach_Report_Zpz));
 			this._Report262_Table3 = new EntitySet<Report262_Table3>(new Action<Report262_Table3>(this.attach_Report262_Table3), new Action<Report262_Table3>(this.detach_Report262_Table3));
 			this._Report_Effectiveness = new EntitySet<Report_Effectiveness>(new Action<Report_Effectiveness>(this.attach_Report_Effectiveness), new Action<Report_Effectiveness>(this.detach_Report_Effectiveness));
+			this._Report_ReqVCR = new EntitySet<Report_ReqVCR>(new Action<Report_ReqVCR>(this.attach_Report_ReqVCR), new Action<Report_ReqVCR>(this.detach_Report_ReqVCR));
 			this._Report_Type = default(EntityRef<Report_Type>);
 			this._Report_Flow = default(EntityRef<Report_Flow>);
 			OnCreated();
@@ -3789,6 +3803,19 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Report_Data_Report_ReqVCR", Storage="_Report_ReqVCR", ThisKey="Id", OtherKey="Id_Report_Data")]
+		public EntitySet<Report_ReqVCR> Report_ReqVCR
+		{
+			get
+			{
+				return this._Report_ReqVCR;
+			}
+			set
+			{
+				this._Report_ReqVCR.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Report_Type_Report_Data", Storage="_Report_Type", ThisKey="Id_Report", OtherKey="Id", IsForeignKey=true)]
 		public Report_Type Report_Type
 		{
@@ -4076,6 +4103,18 @@ namespace KmsReportWS.LinqToSql
 		}
 		
 		private void detach_Report_Effectiveness(Report_Effectiveness entity)
+		{
+			this.SendPropertyChanging();
+			entity.Report_Data = null;
+		}
+		
+		private void attach_Report_ReqVCR(Report_ReqVCR entity)
+		{
+			this.SendPropertyChanging();
+			entity.Report_Data = this;
+		}
+		
+		private void detach_Report_ReqVCR(Report_ReqVCR entity)
 		{
 			this.SendPropertyChanging();
 			entity.Report_Data = null;
@@ -11828,6 +11867,277 @@ namespace KmsReportWS.LinqToSql
 		{
 			this.SendPropertyChanging();
 			entity.Report_Flow = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Report_ReqVCR")]
+	public partial class Report_ReqVCR : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Id;
+		
+		private int _Id_Report_Data;
+		
+		private string _RowNum;
+		
+		private System.Nullable<decimal> _y2019;
+		
+		private System.Nullable<decimal> _y2020;
+		
+		private System.Nullable<decimal> _y2021;
+		
+		private System.Nullable<decimal> _y2022;
+		
+		private System.Nullable<decimal> _y2023;
+		
+		private EntityRef<Report_Data> _Report_Data;
+		
+    #region Определения метода расширяемости
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdChanging(int value);
+    partial void OnIdChanged();
+    partial void OnId_Report_DataChanging(int value);
+    partial void OnId_Report_DataChanged();
+    partial void OnRowNumChanging(string value);
+    partial void OnRowNumChanged();
+    partial void Ony2019Changing(System.Nullable<decimal> value);
+    partial void Ony2019Changed();
+    partial void Ony2020Changing(System.Nullable<decimal> value);
+    partial void Ony2020Changed();
+    partial void Ony2021Changing(System.Nullable<decimal> value);
+    partial void Ony2021Changed();
+    partial void Ony2022Changing(System.Nullable<decimal> value);
+    partial void Ony2022Changed();
+    partial void Ony2023Changing(System.Nullable<decimal> value);
+    partial void Ony2023Changed();
+    #endregion
+		
+		public Report_ReqVCR()
+		{
+			this._Report_Data = default(EntityRef<Report_Data>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this.OnIdChanging(value);
+					this.SendPropertyChanging();
+					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_Report_Data", DbType="Int NOT NULL")]
+		public int Id_Report_Data
+		{
+			get
+			{
+				return this._Id_Report_Data;
+			}
+			set
+			{
+				if ((this._Id_Report_Data != value))
+				{
+					if (this._Report_Data.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnId_Report_DataChanging(value);
+					this.SendPropertyChanging();
+					this._Id_Report_Data = value;
+					this.SendPropertyChanged("Id_Report_Data");
+					this.OnId_Report_DataChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RowNum", DbType="VarChar(10)")]
+		public string RowNum
+		{
+			get
+			{
+				return this._RowNum;
+			}
+			set
+			{
+				if ((this._RowNum != value))
+				{
+					this.OnRowNumChanging(value);
+					this.SendPropertyChanging();
+					this._RowNum = value;
+					this.SendPropertyChanged("RowNum");
+					this.OnRowNumChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_y2019", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> y2019
+		{
+			get
+			{
+				return this._y2019;
+			}
+			set
+			{
+				if ((this._y2019 != value))
+				{
+					this.Ony2019Changing(value);
+					this.SendPropertyChanging();
+					this._y2019 = value;
+					this.SendPropertyChanged("y2019");
+					this.Ony2019Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_y2020", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> y2020
+		{
+			get
+			{
+				return this._y2020;
+			}
+			set
+			{
+				if ((this._y2020 != value))
+				{
+					this.Ony2020Changing(value);
+					this.SendPropertyChanging();
+					this._y2020 = value;
+					this.SendPropertyChanged("y2020");
+					this.Ony2020Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_y2021", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> y2021
+		{
+			get
+			{
+				return this._y2021;
+			}
+			set
+			{
+				if ((this._y2021 != value))
+				{
+					this.Ony2021Changing(value);
+					this.SendPropertyChanging();
+					this._y2021 = value;
+					this.SendPropertyChanged("y2021");
+					this.Ony2021Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_y2022", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> y2022
+		{
+			get
+			{
+				return this._y2022;
+			}
+			set
+			{
+				if ((this._y2022 != value))
+				{
+					this.Ony2022Changing(value);
+					this.SendPropertyChanging();
+					this._y2022 = value;
+					this.SendPropertyChanged("y2022");
+					this.Ony2022Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_y2023", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> y2023
+		{
+			get
+			{
+				return this._y2023;
+			}
+			set
+			{
+				if ((this._y2023 != value))
+				{
+					this.Ony2023Changing(value);
+					this.SendPropertyChanging();
+					this._y2023 = value;
+					this.SendPropertyChanged("y2023");
+					this.Ony2023Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Report_Data_Report_ReqVCR", Storage="_Report_Data", ThisKey="Id_Report_Data", OtherKey="Id", IsForeignKey=true)]
+		public Report_Data Report_Data
+		{
+			get
+			{
+				return this._Report_Data.Entity;
+			}
+			set
+			{
+				Report_Data previousValue = this._Report_Data.Entity;
+				if (((previousValue != value) 
+							|| (this._Report_Data.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Report_Data.Entity = null;
+						previousValue.Report_ReqVCR.Remove(this);
+					}
+					this._Report_Data.Entity = value;
+					if ((value != null))
+					{
+						value.Report_ReqVCR.Add(this);
+						this._Id_Report_Data = value.Id;
+					}
+					else
+					{
+						this._Id_Report_Data = default(int);
+					}
+					this.SendPropertyChanged("Report_Data");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
 		}
 	}
 	
