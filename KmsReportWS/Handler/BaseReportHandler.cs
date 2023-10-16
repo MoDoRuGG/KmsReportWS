@@ -200,6 +200,13 @@ namespace KmsReportWS.Handler
             report.Scan = flow.Scan;
             report.Scan2 = flow.Scan2;
             report.Scan3 = flow.Scan3;
+            report.Scan4 = flow.Scan4;
+            report.Scan5 = flow.Scan5;
+            report.Scan6 = flow.Scan6;
+            report.Scan7 = flow.Scan7;
+            report.Scan8 = flow.Scan8;
+            report.Scan9 = flow.Scan9;
+            report.Scan10 = flow.Scan10;
             report.RefuseDate = flow.Date_edit_co;
             report.DateIsDone = flow.Date_is_done;
             report.DateToCo = flow.Date_to_co;

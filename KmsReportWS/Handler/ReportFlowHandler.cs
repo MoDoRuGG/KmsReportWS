@@ -95,7 +95,48 @@ namespace KmsReportWS.Handler
                     flow.Scan3 = null;
                 }
 
-                if(String.IsNullOrEmpty(flow.Scan) && String.IsNullOrEmpty(flow.Scan2) && String.IsNullOrEmpty(flow.Scan3))
+                else if (num == 4)
+                {
+                    flow.Scan4 = null;
+                }
+
+                else if (num == 5)
+                {
+                    flow.Scan5 = null;
+                }
+
+                else if (num == 6)
+                {
+                    flow.Scan6 = null;
+                }
+
+                else if (num == 7)
+                {
+                    flow.Scan7 = null;
+                }
+
+                else if (num == 8)
+                {
+                    flow.Scan8 = null;
+                }
+
+                else if (num == 9)
+                {
+                    flow.Scan9 = null;
+                }
+
+                else if (num == 10)
+                {
+                    flow.Scan10 = null;
+                }
+
+                if (String.IsNullOrEmpty(flow.Scan) && String.IsNullOrEmpty(flow.Scan2) && String.IsNullOrEmpty(flow.Scan3) && String.IsNullOrEmpty(flow.Scan4)
+                 && String.IsNullOrEmpty(flow.Scan5)
+                  && String.IsNullOrEmpty(flow.Scan6)
+                   && String.IsNullOrEmpty(flow.Scan7)
+                    && String.IsNullOrEmpty(flow.Scan8)
+                     && String.IsNullOrEmpty(flow.Scan9)
+                      && String.IsNullOrEmpty(flow.Scan10))
                 {
                     flow.Status = ReportStatus.Saved.GetDescriptionSt();
 
@@ -153,6 +194,41 @@ namespace KmsReportWS.Handler
                 if (num == 3)
                 {
                     flow.Scan3 = uri;
+                }
+
+                if (num == 4)
+                {
+                    flow.Scan4 = uri;
+                }
+
+                if (num == 5)
+                {
+                    flow.Scan5 = uri;
+                }
+
+                if (num == 6)
+                {
+                    flow.Scan6 = uri;
+                }
+
+                if (num == 7)
+                {
+                    flow.Scan7 = uri;
+                }
+
+                if (num == 8)
+                {
+                    flow.Scan8 = uri;
+                }
+
+                if (num == 9)
+                {
+                    flow.Scan9 = uri;
+                }
+
+                if (num == 10)
+                {
+                    flow.Scan10 = uri;
                 }
 
                 flow.Status = ReportStatus.Scan.GetDescriptionSt();
@@ -219,6 +295,41 @@ namespace KmsReportWS.Handler
                     case 3:
                     {
                         flow.Scan3 = uri;
+                        break;
+                    }
+                    case 4:
+                    {
+                        flow.Scan4 = uri;
+                        break;
+                    }
+                    case 5:
+                    {
+                        flow.Scan5 = uri;
+                        break;
+                    }
+                    case 6:
+                    {
+                        flow.Scan6 = uri;
+                        break;
+                    }
+                    case 7:
+                    {
+                        flow.Scan7 = uri;
+                        break;
+                    }
+                    case 8:
+                    {
+                        flow.Scan8 = uri;
+                        break;
+                    }
+                    case 9:
+                    {
+                        flow.Scan9 = uri;
+                        break;
+                    }
+                    case 10:
+                    {
+                        flow.Scan10 = uri;
                         break;
                     }
                 }
