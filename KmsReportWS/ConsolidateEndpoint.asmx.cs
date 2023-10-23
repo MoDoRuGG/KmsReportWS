@@ -90,6 +90,13 @@ namespace KmsReportWS
         }
 
         [WebMethod]
+        public List<CReportZpz2023Single> CreateReportControlZpz2023Single(string year, string filial)
+        {
+            var consolidate = new ControlZpz2023SingleCollector();
+            return consolidate.Collect(year, filial);
+        }
+
+        [WebMethod]
         public Consolidate294 CreateConsolidate294(string yymm)
         {
             var consolidate = new Consolidate294Collector();

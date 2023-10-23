@@ -8,7 +8,7 @@ using KmsReportWS.Properties;
 
 namespace KmsReportWS.Collector.ConsolidateReport
 {
-    public class ControlZpz2023FullCollector
+    public class ControlZpz2023SingleCollector
     {
         private readonly string[] _themes = { "Таблица 5А", "Таблица 6", "Таблица 7", "Таблица 8", "Таблица 9" };
 
@@ -19,25 +19,23 @@ namespace KmsReportWS.Collector.ConsolidateReport
         private readonly string[] _rowNumsExpertiseTable7 =
                 {"6.8", "6.9", "6.9.12", "6.10", "6.11", "6.12", "6.13", "6.14", "6.15", "6.16", "6.17", "6.18", "6.19", "6.20", "6.22", "6.23.8", "6.23.10"};
 
-        public List<CReportZpz2023Full> Collect(string year)
+        public List<CReportZpz2023Single> Collect(string year, string filial)
         {
             using var db = new LinqToSqlKmsReportDataContext(Settings.Default.ConnStr) { CommandTimeout = 120 };
-            var zpzData1Q = CollectSummaryData1Q(year);
-            var zpzData2Q = CollectSummaryData2Q(year);
-            var zpzData3Q = CollectSummaryData3Q(year);
-            var zpzData4Q = CollectSummaryData4Q(year);
+            var zpzData1Q = CollectSummaryData1Q(year, filial);
+            var zpzData2Q = CollectSummaryData2Q(year, filial);
+            var zpzData3Q = CollectSummaryData3Q(year, filial);
+            var zpzData4Q = CollectSummaryData4Q(year, filial);
 
-            var reports = new List<CReportZpz2023Full>();
-            
-            
+            var reports = new List<CReportZpz2023Single>();
             var filials1Q = zpzData1Q.Select(x => x.Filial).Distinct().OrderBy(x => x);
-            
-            foreach (var filial in filials1Q)
+
+            foreach (var fil in filials1Q)
             {
-                var zpzFilialData1Q = zpzData1Q.Where(x => x.Filial == filial);
-                var zpzFilialData2Q = zpzData2Q.Where(x => x.Filial == filial);
-                var zpzFilialData3Q = zpzData3Q.Where(x => x.Filial == filial);
-                var zpzFilialData4Q = zpzData4Q.Where(x => x.Filial == filial);
+                var zpzFilialData1Q = zpzData1Q.Where(x => x.Filial == fil);
+                var zpzFilialData2Q = zpzData2Q.Where(x => x.Filial == fil);
+                var zpzFilialData3Q = zpzData3Q.Where(x => x.Filial == fil);
+                var zpzFilialData4Q = zpzData4Q.Where(x => x.Filial == fil);
                 var expertise1Q = MapExpertise(zpzFilialData1Q);
                 var finance1Q = MapFinance(zpzFilialData1Q);
                 var expertise2Q = MapExpertise(zpzFilialData2Q);
@@ -46,9 +44,9 @@ namespace KmsReportWS.Collector.ConsolidateReport
                 var finance3Q = MapFinance(zpzFilialData3Q);
                 var expertise4Q = MapExpertise(zpzFilialData4Q);
                 var finance4Q = MapFinance(zpzFilialData4Q);
-                var report = new CReportZpz2023Full
+                var report = new CReportZpz2023Single
                 {
-                    Filial = filial,
+                    Filial = fil,
                     Expertise1Q = expertise1Q,
                     Finance1Q = finance1Q,
                     Expertise2Q = expertise2Q,
@@ -63,10 +61,10 @@ namespace KmsReportWS.Collector.ConsolidateReport
             return reports;
         }
 
-        private ZpzFinance2023Full MapFinance(IEnumerable<SummaryZpz2023> zpzFilialData)
+        private ZpzFinance2023Single MapFinance(IEnumerable<SummaryZpz2023> zpzFilialData)
         {
             var zpzTable8 = zpzFilialData.Where(x => x.Theme == "Таблица 8");
-            return new ZpzFinance2023Full
+            return new ZpzFinance2023Single
             {
                 SumPayment = zpzTable8.Where(x => x.RowNum == "1").Sum(x => x.SumSmo),
                 SumNotPayment = zpzTable8.Where(x => x.RowNum == "2").Sum(x => x.SumSmo),
@@ -77,12 +75,12 @@ namespace KmsReportWS.Collector.ConsolidateReport
             };
         }
 
-        private ZpzExpertise2023Full MapExpertise(IEnumerable<SummaryZpz2023> zpzFilialData)
+        private ZpzExpertise2023Single MapExpertise(IEnumerable<SummaryZpz2023> zpzFilialData)
         {
             var table5Data = zpzFilialData.Where(x => x.Theme == "Таблица 5А");
             var table6Data = zpzFilialData.Where(x => x.Theme == "Таблица 6");
             var table7Data = zpzFilialData.Where(x => x.Theme == "Таблица 7");
-            return new ZpzExpertise2023Full
+            return new ZpzExpertise2023Single
             {
                 Bills = table5Data.Sum(x => x.SumSmo),
                 CountMeeTarget = table6Data.Where(x => x.RowNum == "1").Sum(x => x.SumVidpom),
@@ -151,14 +149,14 @@ namespace KmsReportWS.Collector.ConsolidateReport
             };
         }
 
-        private List<SummaryZpz2023> CollectSummaryData1Q(string year)
+        private List<SummaryZpz2023> CollectSummaryData1Q(string year, string filial)
         {
             var period = Convert.ToString(Convert.ToInt32(year) - 2000)+"03";
             using var db = new LinqToSqlKmsReportDataContext(Settings.Default.ConnStr) { CommandTimeout = 120 };
             return (from flow in db.Report_Flow
                     join rData in db.Report_Data on flow.Id equals rData.Id_Flow
                     join table in db.Report_Zpz on rData.Id equals table.Id_Report_Data
-                    where flow.Yymm == period && 
+                    where flow.Yymm == period && flow.Id_Region == filial &&
                           flow.Id_Report_Type == "Zpz_Q"
                     group new { flow, rData, table } by new { flow.Id_Region, rData.Theme, table.RowNum }
                           into gr
@@ -183,14 +181,14 @@ namespace KmsReportWS.Collector.ConsolidateReport
                     }).ToList();
         }
 
-        private List<SummaryZpz2023> CollectSummaryData2Q(string year)
+        private List<SummaryZpz2023> CollectSummaryData2Q(string year, string filial)
         {
             var period = Convert.ToString(Convert.ToInt32(year) - 2000) + "06";
             using var db = new LinqToSqlKmsReportDataContext(Settings.Default.ConnStr) { CommandTimeout = 120 };
             return (from flow in db.Report_Flow
                     join rData in db.Report_Data on flow.Id equals rData.Id_Flow
                     join table in db.Report_Zpz on rData.Id equals table.Id_Report_Data
-                    where flow.Yymm == period &&
+                    where flow.Yymm == period && flow.Id_Region == filial &&
                           flow.Id_Report_Type == "Zpz_Q"
                     group new { flow, rData, table } by new { flow.Id_Region, rData.Theme, table.RowNum }
                           into gr
@@ -215,14 +213,14 @@ namespace KmsReportWS.Collector.ConsolidateReport
                     }).ToList();
         }
 
-        private List<SummaryZpz2023> CollectSummaryData3Q(string year)
+        private List<SummaryZpz2023> CollectSummaryData3Q(string year, string filial)
         {
             var period = Convert.ToString(Convert.ToInt32(year) - 2000) + "09";
             using var db = new LinqToSqlKmsReportDataContext(Settings.Default.ConnStr) { CommandTimeout = 120 };
             return (from flow in db.Report_Flow
                     join rData in db.Report_Data on flow.Id equals rData.Id_Flow
                     join table in db.Report_Zpz on rData.Id equals table.Id_Report_Data
-                    where flow.Yymm == period &&
+                    where flow.Yymm == period && flow.Id_Region == filial &&
                           flow.Id_Report_Type == "Zpz_Q"
                     group new { flow, rData, table } by new { flow.Id_Region, rData.Theme, table.RowNum }
                           into gr
@@ -247,14 +245,14 @@ namespace KmsReportWS.Collector.ConsolidateReport
                     }).ToList();
         }
 
-        private List<SummaryZpz2023> CollectSummaryData4Q(string year)
+        private List<SummaryZpz2023> CollectSummaryData4Q(string year, string filial)
         {
             var period = Convert.ToString(Convert.ToInt32(year) - 2000) + "12";
             using var db = new LinqToSqlKmsReportDataContext(Settings.Default.ConnStr) { CommandTimeout = 120 };
             return (from flow in db.Report_Flow
                     join rData in db.Report_Data on flow.Id equals rData.Id_Flow
                     join table in db.Report_Zpz on rData.Id equals table.Id_Report_Data
-                    where flow.Yymm == period &&
+                    where flow.Yymm == period && flow.Id_Region == filial &&
                           flow.Id_Report_Type == "Zpz_Q"
                     group new { flow, rData, table } by new { flow.Id_Region, rData.Theme, table.RowNum }
                           into gr
