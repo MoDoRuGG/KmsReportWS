@@ -64,6 +64,13 @@ namespace KmsReportWS
         }
 
         [WebMethod]
+        public List<QuantityPlanDictionaryItem> GetQuantityPlanList(string year)
+        {
+            return new QuantityPlanDictionaryHandler().GetList(year);
+
+        }
+
+        [WebMethod]
         public List<ConsolidateOpedFinance_3> ConsolidateOpedFinance3(string year)
         {
             return new ConsolidateOpedFinance_3Collector().Collect(year);
@@ -89,6 +96,13 @@ namespace KmsReportWS
         public void SaveOpedFinanceList(List<OpedFinancePlanDictionaryItem> plans)
         {
             new OpedFinancePlanDictionaryHandler().Save(plans);
+
+        }
+
+        [WebMethod]
+        public void SaveQuantityPlanList(List<QuantityPlanDictionaryItem> plans)
+        {
+            new QuantityPlanDictionaryHandler().Save(plans);
 
         }
 

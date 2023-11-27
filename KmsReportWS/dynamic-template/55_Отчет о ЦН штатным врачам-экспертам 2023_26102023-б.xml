@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-16"?>
+<TemplateDynamicReport xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <REPORT_NAME>Отчет о ЦН штатным врачам-экспертам 2023</REPORT_NAME>
+   <REPORT_DESCRIPTION>Отчет  целевых надбавках штатным врачам-экспертам, проводившим экспертизу в иных филиалах за 9 месяцев 2023</REPORT_DESCRIPTION>
+   <REPORT_DATE>2023-10-29T14:42:50</REPORT_DATE>
+   <IsUserRow>true</IsUserRow>
+   <Emails/>
+   <TABLE>
+      <TemplateTableDynamic>
+         <TABLE_NAME>1 вкладка</TABLE_NAME>
+         <TABLE_DESCRIPTION>Врачи-эксперты проводившие экспертизы в иных филиалах</TABLE_DESCRIPTION>     
+          <ROWS />|
+         <COLUMNS>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>ФИО</COLUMN_TEXT>
+               <COLUMN_INDEX>1</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Специальность</COLUMN_TEXT>
+               <COLUMN_INDEX>2</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Период (месяц)</COLUMN_TEXT>
+               <COLUMN_INDEX>3</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT></COLUMN_TEXT>
+               <COLUMN_INDEX/>
+               <COLUMN_DESCRIPTION/>
+               <COLUMN_DESCRIPTION_CHILD>
+                  <COLUMN_TEXT>Общее количество ЭКМП</COLUMN_TEXT>
+                  <COLUMN_INDEX>4</COLUMN_INDEX>
+                  <COLUMN_DESCRIPTION/>
+               </COLUMN_DESCRIPTION_CHILD>
+               <COLUMN_DESCRIPTION_CHILD>
+                  <COLUMN_TEXT></COLUMN_TEXT>
+                  <COLUMN_INDEX>5</COLUMN_INDEX>
+                  <COLUMN_DESCRIPTION/>
+               </COLUMN_DESCRIPTION_CHILD>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма удержаний и штрафов</COLUMN_TEXT>
+               <COLUMN_INDEX>6</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT></COLUMN_TEXT>
+               <COLUMN_INDEX>7</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма оплаты эксперту</COLUMN_TEXT>
+               <COLUMN_INDEX>8</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Предоставивший эксперта филиал</COLUMN_TEXT>
+               <COLUMN_INDEX>9</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Комментарии</COLUMN_TEXT>
+               <COLUMN_INDEX>10</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+         </COLUMNS>
+      </TemplateTableDynamic>
+   </TABLE>
+</TemplateDynamicReport>

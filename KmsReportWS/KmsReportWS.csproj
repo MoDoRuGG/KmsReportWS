@@ -142,6 +142,7 @@
     <Compile Include="Handler\BaseReportHandler.cs" />
     <Compile Include="Handler\FOpedUHandler.cs" />
     <Compile Include="Handler\MonitoringVCRHandler.cs" />
+    <Compile Include="Handler\QuantityPlanDictionaryHandler.cs" />
     <Compile Include="Handler\ReportReqVCRHandler.cs" />
     <Compile Include="Handler\ReportEffectivenessHandler.cs" />
     <Compile Include="Handler\ReportOpedFinance3Handler.cs" />
@@ -199,6 +200,7 @@
     <Compile Include="Model\Constructor\GetDynamicReportResponse.cs" />
     <Compile Include="Model\Constructor\ReportDynamicDto.cs" />
     <Compile Include="Model\Constructor\ReportDynamicFlowDto.cs" />
+    <Compile Include="Model\Dictionary\QuantityPlanDictionaryItem.cs" />
     <Compile Include="Model\Dictionary\OpedFinancePlanDictionaryItem.cs" />
     <Compile Include="Model\MonitoringVCRPgDataDto.cs" />
     <Compile Include="Model\FSSMonitoringPgDataDto.cs" />
@@ -273,9 +275,9 @@
     <Content Include="NLog.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="LinqToSql\LinqToSqlKmsReport.dbml.layout">
+    <Content Include="LinqToSql\LinqToSqlKmsReport.dbml.layout">
       <DependentUpon>LinqToSqlKmsReport.dbml</DependentUpon>
-    </None>
+    </Content>
     <None Include="NLog.xsd">
       <SubType>Designer</SubType>
     </None>

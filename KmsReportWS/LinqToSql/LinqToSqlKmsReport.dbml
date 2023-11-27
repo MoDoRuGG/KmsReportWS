@@ -108,6 +108,7 @@
       <Association Name="Region_OpedFinancePlan" Member="OpedFinancePlan" ThisKey="id" OtherKey="Id_Region" Type="OpedFinancePlan" />
       <Association Name="Region_Report_Dynamic_Flow" Member="Report_Dynamic_Flow" ThisKey="id" OtherKey="Id_Region" Type="Report_Dynamic_Flow" />
       <Association Name="Region_Report_Flow" Member="Report_Flow" ThisKey="id" OtherKey="Id_Region" Type="Report_Flow" />
+      <Association Name="Region_QuantityPlan" Member="QuantityPlan" ThisKey="id" OtherKey="Id_Region" Type="QuantityPlan" />
     </Type>
   </Table>
   <Table Name="dbo.Report_Cadre" Member="Report_Cadre">
@@ -539,6 +540,15 @@
       <Column Name="y2022" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
       <Column Name="y2023" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
       <Association Name="Report_Data_Report_ReqVCR" Member="Report_Data" ThisKey="Id_Report_Data" OtherKey="Id" Type="Report_Data" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.QuantityPlan" Member="QuantityPlan">
+    <Type Name="QuantityPlan">
+      <Column Name="Id_QuantityPlan" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Yymm" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="Value" Type="System.Decimal" DbType="Decimal(15,2) NOT NULL" CanBeNull="false" />
+      <Column Name="Id_Region" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Association Name="Region_QuantityPlan" Member="Region" ThisKey="Id_Region" OtherKey="id" Type="Region" IsForeignKey="true" />
     </Type>
   </Table>
   <Function Name="dbo.cadre_rapport" Method="cadre_rapport" IsComposable="true">
