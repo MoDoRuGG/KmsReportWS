@@ -172,6 +172,7 @@
       <Association Name="Report_Data_Report262_Table3" Member="Report262_Table3" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report262_Table3" />
       <Association Name="Report_Data_Report_Effectiveness" Member="Report_Effectiveness" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_Effectiveness" />
       <Association Name="Report_Data_Report_ReqVCR" Member="Report_ReqVCR" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_ReqVCR" />
+      <Association Name="Report_Data_Report_Quantity" Member="Report_Quantity" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_Quantity" />
       <Association Name="Report_Type_Report_Data" Member="Report_Type" ThisKey="Id_Report" OtherKey="Id" Type="Report_Type" IsForeignKey="true" />
       <Association Name="Report_Flow_Report_Data" Member="Report_Flow" ThisKey="Id_Flow" OtherKey="Id" Type="Report_Flow" IsForeignKey="true" />
     </Type>
@@ -549,6 +550,28 @@
       <Column Name="Value" Type="System.Decimal" DbType="Decimal(15,2) NOT NULL" CanBeNull="false" />
       <Column Name="Id_Region" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
       <Association Name="Region_QuantityPlan" Member="Region" ThisKey="Id_Region" OtherKey="id" Type="Region" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Report_Quantity" Member="Report_Quantity">
+    <Type Name="Report_Quantity">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id_Report_Data" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Col_2" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Col_3" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Col_4" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Col_5" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Col_6" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Col_7" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Col_8" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Col_9" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Col_10" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Col_11" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Col_12" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Col_13" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Col_14" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Col_15" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Col_16" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Report_Data_Report_Quantity" Member="Report_Data" ThisKey="Id_Report_Data" OtherKey="Id" Type="Report_Data" IsForeignKey="true" />
     </Type>
   </Table>
   <Function Name="dbo.cadre_rapport" Method="cadre_rapport" IsComposable="true">

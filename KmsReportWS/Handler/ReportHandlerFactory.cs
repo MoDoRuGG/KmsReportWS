@@ -23,6 +23,7 @@ namespace KmsReportWS.Handler
         private readonly IReportHandler _fssCollector = new FSSMonitoringHandler(ReportType.MFSS);
         private readonly IReportHandler _mvcrCollector = new MonitoringVCRHandler(ReportType.MVCR);
         private readonly IReportHandler _proposalCollector = new ReportProposalHandler(ReportType.Proposal);
+        private readonly IReportHandler _quantityCollector = new ReportQuantityHandler(ReportType.Quantity);
         private readonly IReportHandler _opedFinanceCollector = new ReportOpedFinanceHandler(ReportType.OpedFinance);
         private readonly IReportHandler _opedFinance3Collector = new ReportOpedFinance3Handler(ReportType.OpedFinance3);
         //private readonly IReportHandler _infomaterialCollector = new ReportInfomaterialHandler(ReportType.Infomaterial);
@@ -53,6 +54,7 @@ namespace KmsReportWS.Handler
                 ReportType.Cadre => _cadreHandlerCollector,
                 ReportType.ReqVCR => _reqVCRHandlerCollector,
                 ReportType.Effective => _effectiveHandlerCollector,
+                ReportType.Quantity => _quantityCollector,
                 //ReportType.Infomaterial => _infomaterialCollector,
 
             };

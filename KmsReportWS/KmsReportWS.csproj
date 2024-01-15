@@ -143,6 +143,7 @@
     <Compile Include="Handler\FOpedUHandler.cs" />
     <Compile Include="Handler\MonitoringVCRHandler.cs" />
     <Compile Include="Handler\QuantityPlanDictionaryHandler.cs" />
+    <Compile Include="Handler\ReportQuantityHandler.cs" />
     <Compile Include="Handler\ReportReqVCRHandler.cs" />
     <Compile Include="Handler\ReportEffectivenessHandler.cs" />
     <Compile Include="Handler\ReportOpedFinance3Handler.cs" />
@@ -219,6 +220,7 @@
     <Compile Include="Model\Report\ReportOpedU.cs" />
     <Compile Include="Model\Report\ReportOped.cs" />
     <Compile Include="Model\Report\ReportOpedFinance.cs" />
+    <Compile Include="Model\Report\ReportQuantity.cs" />
     <Compile Include="Model\Report\ReportZpz.cs" />
     <Compile Include="Model\Report\ReportProposal.cs" />
     <Compile Include="Model\Report\ReportVaccination.cs" />
@@ -275,9 +277,9 @@
     <Content Include="NLog.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="LinqToSql\LinqToSqlKmsReport.dbml.layout">
+    <None Include="LinqToSql\LinqToSqlKmsReport.dbml.layout">
       <DependentUpon>LinqToSqlKmsReport.dbml</DependentUpon>
-    </Content>
+    </None>
     <None Include="NLog.xsd">
       <SubType>Designer</SubType>
     </None>

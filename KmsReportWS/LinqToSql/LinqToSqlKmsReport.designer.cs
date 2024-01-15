@@ -129,6 +129,9 @@ namespace KmsReportWS.LinqToSql
     partial void InsertQuantityPlan(QuantityPlan instance);
     partial void UpdateQuantityPlan(QuantityPlan instance);
     partial void DeleteQuantityPlan(QuantityPlan instance);
+    partial void InsertReport_Quantity(Report_Quantity instance);
+    partial void UpdateReport_Quantity(Report_Quantity instance);
+    partial void DeleteReport_Quantity(Report_Quantity instance);
     #endregion
 		
 		public LinqToSqlKmsReportDataContext(string connection) : 
@@ -432,6 +435,14 @@ namespace KmsReportWS.LinqToSql
 			get
 			{
 				return this.GetTable<QuantityPlan>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Report_Quantity> Report_Quantity
+		{
+			get
+			{
+				return this.GetTable<Report_Quantity>();
 			}
 		}
 		
@@ -3446,6 +3457,8 @@ namespace KmsReportWS.LinqToSql
 		
 		private EntitySet<Report_ReqVCR> _Report_ReqVCR;
 		
+		private EntitySet<Report_Quantity> _Report_Quantity;
+		
 		private EntityRef<Report_Type> _Report_Type;
 		
 		private EntityRef<Report_Flow> _Report_Flow;
@@ -3488,6 +3501,7 @@ namespace KmsReportWS.LinqToSql
 			this._Report262_Table3 = new EntitySet<Report262_Table3>(new Action<Report262_Table3>(this.attach_Report262_Table3), new Action<Report262_Table3>(this.detach_Report262_Table3));
 			this._Report_Effectiveness = new EntitySet<Report_Effectiveness>(new Action<Report_Effectiveness>(this.attach_Report_Effectiveness), new Action<Report_Effectiveness>(this.detach_Report_Effectiveness));
 			this._Report_ReqVCR = new EntitySet<Report_ReqVCR>(new Action<Report_ReqVCR>(this.attach_Report_ReqVCR), new Action<Report_ReqVCR>(this.detach_Report_ReqVCR));
+			this._Report_Quantity = new EntitySet<Report_Quantity>(new Action<Report_Quantity>(this.attach_Report_Quantity), new Action<Report_Quantity>(this.detach_Report_Quantity));
 			this._Report_Type = default(EntityRef<Report_Type>);
 			this._Report_Flow = default(EntityRef<Report_Flow>);
 			OnCreated();
@@ -3855,6 +3869,19 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Report_Data_Report_Quantity", Storage="_Report_Quantity", ThisKey="Id", OtherKey="Id_Report_Data")]
+		public EntitySet<Report_Quantity> Report_Quantity
+		{
+			get
+			{
+				return this._Report_Quantity;
+			}
+			set
+			{
+				this._Report_Quantity.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Report_Type_Report_Data", Storage="_Report_Type", ThisKey="Id_Report", OtherKey="Id", IsForeignKey=true)]
 		public Report_Type Report_Type
 		{
@@ -4154,6 +4181,18 @@ namespace KmsReportWS.LinqToSql
 		}
 		
 		private void detach_Report_ReqVCR(Report_ReqVCR entity)
+		{
+			this.SendPropertyChanging();
+			entity.Report_Data = null;
+		}
+		
+		private void attach_Report_Quantity(Report_Quantity entity)
+		{
+			this.SendPropertyChanging();
+			entity.Report_Data = this;
+		}
+		
+		private void detach_Report_Quantity(Report_Quantity entity)
 		{
 			this.SendPropertyChanging();
 			entity.Report_Data = null;
@@ -12330,6 +12369,493 @@ namespace KmsReportWS.LinqToSql
 						this._Id_Region = default(string);
 					}
 					this.SendPropertyChanged("Region");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Report_Quantity")]
+	public partial class Report_Quantity : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Id;
+		
+		private int _Id_Report_Data;
+		
+		private int _Col_2;
+		
+		private int _Col_3;
+		
+		private int _Col_4;
+		
+		private int _Col_5;
+		
+		private int _Col_6;
+		
+		private int _Col_7;
+		
+		private int _Col_8;
+		
+		private int _Col_9;
+		
+		private int _Col_10;
+		
+		private int _Col_11;
+		
+		private int _Col_12;
+		
+		private int _Col_13;
+		
+		private int _Col_14;
+		
+		private int _Col_15;
+		
+		private int _Col_16;
+		
+		private EntityRef<Report_Data> _Report_Data;
+		
+    #region Определения метода расширяемости
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdChanging(int value);
+    partial void OnIdChanged();
+    partial void OnId_Report_DataChanging(int value);
+    partial void OnId_Report_DataChanged();
+    partial void OnCol_2Changing(int value);
+    partial void OnCol_2Changed();
+    partial void OnCol_3Changing(int value);
+    partial void OnCol_3Changed();
+    partial void OnCol_4Changing(int value);
+    partial void OnCol_4Changed();
+    partial void OnCol_5Changing(int value);
+    partial void OnCol_5Changed();
+    partial void OnCol_6Changing(int value);
+    partial void OnCol_6Changed();
+    partial void OnCol_7Changing(int value);
+    partial void OnCol_7Changed();
+    partial void OnCol_8Changing(int value);
+    partial void OnCol_8Changed();
+    partial void OnCol_9Changing(int value);
+    partial void OnCol_9Changed();
+    partial void OnCol_10Changing(int value);
+    partial void OnCol_10Changed();
+    partial void OnCol_11Changing(int value);
+    partial void OnCol_11Changed();
+    partial void OnCol_12Changing(int value);
+    partial void OnCol_12Changed();
+    partial void OnCol_13Changing(int value);
+    partial void OnCol_13Changed();
+    partial void OnCol_14Changing(int value);
+    partial void OnCol_14Changed();
+    partial void OnCol_15Changing(int value);
+    partial void OnCol_15Changed();
+    partial void OnCol_16Changing(int value);
+    partial void OnCol_16Changed();
+    #endregion
+		
+		public Report_Quantity()
+		{
+			this._Report_Data = default(EntityRef<Report_Data>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this.OnIdChanging(value);
+					this.SendPropertyChanging();
+					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_Report_Data", DbType="Int NOT NULL")]
+		public int Id_Report_Data
+		{
+			get
+			{
+				return this._Id_Report_Data;
+			}
+			set
+			{
+				if ((this._Id_Report_Data != value))
+				{
+					if (this._Report_Data.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnId_Report_DataChanging(value);
+					this.SendPropertyChanging();
+					this._Id_Report_Data = value;
+					this.SendPropertyChanged("Id_Report_Data");
+					this.OnId_Report_DataChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Col_2", DbType="Int NOT NULL")]
+		public int Col_2
+		{
+			get
+			{
+				return this._Col_2;
+			}
+			set
+			{
+				if ((this._Col_2 != value))
+				{
+					this.OnCol_2Changing(value);
+					this.SendPropertyChanging();
+					this._Col_2 = value;
+					this.SendPropertyChanged("Col_2");
+					this.OnCol_2Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Col_3", DbType="Int NOT NULL")]
+		public int Col_3
+		{
+			get
+			{
+				return this._Col_3;
+			}
+			set
+			{
+				if ((this._Col_3 != value))
+				{
+					this.OnCol_3Changing(value);
+					this.SendPropertyChanging();
+					this._Col_3 = value;
+					this.SendPropertyChanged("Col_3");
+					this.OnCol_3Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Col_4", DbType="Int NOT NULL")]
+		public int Col_4
+		{
+			get
+			{
+				return this._Col_4;
+			}
+			set
+			{
+				if ((this._Col_4 != value))
+				{
+					this.OnCol_4Changing(value);
+					this.SendPropertyChanging();
+					this._Col_4 = value;
+					this.SendPropertyChanged("Col_4");
+					this.OnCol_4Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Col_5", DbType="Int NOT NULL")]
+		public int Col_5
+		{
+			get
+			{
+				return this._Col_5;
+			}
+			set
+			{
+				if ((this._Col_5 != value))
+				{
+					this.OnCol_5Changing(value);
+					this.SendPropertyChanging();
+					this._Col_5 = value;
+					this.SendPropertyChanged("Col_5");
+					this.OnCol_5Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Col_6", DbType="Int NOT NULL")]
+		public int Col_6
+		{
+			get
+			{
+				return this._Col_6;
+			}
+			set
+			{
+				if ((this._Col_6 != value))
+				{
+					this.OnCol_6Changing(value);
+					this.SendPropertyChanging();
+					this._Col_6 = value;
+					this.SendPropertyChanged("Col_6");
+					this.OnCol_6Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Col_7", DbType="Int NOT NULL")]
+		public int Col_7
+		{
+			get
+			{
+				return this._Col_7;
+			}
+			set
+			{
+				if ((this._Col_7 != value))
+				{
+					this.OnCol_7Changing(value);
+					this.SendPropertyChanging();
+					this._Col_7 = value;
+					this.SendPropertyChanged("Col_7");
+					this.OnCol_7Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Col_8", DbType="Int NOT NULL")]
+		public int Col_8
+		{
+			get
+			{
+				return this._Col_8;
+			}
+			set
+			{
+				if ((this._Col_8 != value))
+				{
+					this.OnCol_8Changing(value);
+					this.SendPropertyChanging();
+					this._Col_8 = value;
+					this.SendPropertyChanged("Col_8");
+					this.OnCol_8Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Col_9", DbType="Int NOT NULL")]
+		public int Col_9
+		{
+			get
+			{
+				return this._Col_9;
+			}
+			set
+			{
+				if ((this._Col_9 != value))
+				{
+					this.OnCol_9Changing(value);
+					this.SendPropertyChanging();
+					this._Col_9 = value;
+					this.SendPropertyChanged("Col_9");
+					this.OnCol_9Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Col_10", DbType="Int NOT NULL")]
+		public int Col_10
+		{
+			get
+			{
+				return this._Col_10;
+			}
+			set
+			{
+				if ((this._Col_10 != value))
+				{
+					this.OnCol_10Changing(value);
+					this.SendPropertyChanging();
+					this._Col_10 = value;
+					this.SendPropertyChanged("Col_10");
+					this.OnCol_10Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Col_11", DbType="Int NOT NULL")]
+		public int Col_11
+		{
+			get
+			{
+				return this._Col_11;
+			}
+			set
+			{
+				if ((this._Col_11 != value))
+				{
+					this.OnCol_11Changing(value);
+					this.SendPropertyChanging();
+					this._Col_11 = value;
+					this.SendPropertyChanged("Col_11");
+					this.OnCol_11Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Col_12", DbType="Int NOT NULL")]
+		public int Col_12
+		{
+			get
+			{
+				return this._Col_12;
+			}
+			set
+			{
+				if ((this._Col_12 != value))
+				{
+					this.OnCol_12Changing(value);
+					this.SendPropertyChanging();
+					this._Col_12 = value;
+					this.SendPropertyChanged("Col_12");
+					this.OnCol_12Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Col_13", DbType="Int NOT NULL")]
+		public int Col_13
+		{
+			get
+			{
+				return this._Col_13;
+			}
+			set
+			{
+				if ((this._Col_13 != value))
+				{
+					this.OnCol_13Changing(value);
+					this.SendPropertyChanging();
+					this._Col_13 = value;
+					this.SendPropertyChanged("Col_13");
+					this.OnCol_13Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Col_14", DbType="Int NOT NULL")]
+		public int Col_14
+		{
+			get
+			{
+				return this._Col_14;
+			}
+			set
+			{
+				if ((this._Col_14 != value))
+				{
+					this.OnCol_14Changing(value);
+					this.SendPropertyChanging();
+					this._Col_14 = value;
+					this.SendPropertyChanged("Col_14");
+					this.OnCol_14Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Col_15", DbType="Int NOT NULL")]
+		public int Col_15
+		{
+			get
+			{
+				return this._Col_15;
+			}
+			set
+			{
+				if ((this._Col_15 != value))
+				{
+					this.OnCol_15Changing(value);
+					this.SendPropertyChanging();
+					this._Col_15 = value;
+					this.SendPropertyChanged("Col_15");
+					this.OnCol_15Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Col_16", DbType="Int NOT NULL")]
+		public int Col_16
+		{
+			get
+			{
+				return this._Col_16;
+			}
+			set
+			{
+				if ((this._Col_16 != value))
+				{
+					this.OnCol_16Changing(value);
+					this.SendPropertyChanging();
+					this._Col_16 = value;
+					this.SendPropertyChanged("Col_16");
+					this.OnCol_16Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Report_Data_Report_Quantity", Storage="_Report_Data", ThisKey="Id_Report_Data", OtherKey="Id", IsForeignKey=true)]
+		public Report_Data Report_Data
+		{
+			get
+			{
+				return this._Report_Data.Entity;
+			}
+			set
+			{
+				Report_Data previousValue = this._Report_Data.Entity;
+				if (((previousValue != value) 
+							|| (this._Report_Data.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Report_Data.Entity = null;
+						previousValue.Report_Quantity.Remove(this);
+					}
+					this._Report_Data.Entity = value;
+					if ((value != null))
+					{
+						value.Report_Quantity.Add(this);
+						this._Id_Report_Data = value.Id;
+					}
+					else
+					{
+						this._Id_Report_Data = default(int);
+					}
+					this.SendPropertyChanged("Report_Data");
 				}
 			}
 		}
