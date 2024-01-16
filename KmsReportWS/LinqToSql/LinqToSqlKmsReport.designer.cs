@@ -12404,6 +12404,8 @@ namespace KmsReportWS.LinqToSql
 		
 		private int _Id_Report_Data;
 		
+		private int _Col_1;
+		
 		private int _Col_2;
 		
 		private int _Col_3;
@@ -12444,6 +12446,8 @@ namespace KmsReportWS.LinqToSql
     partial void OnIdChanged();
     partial void OnId_Report_DataChanging(int value);
     partial void OnId_Report_DataChanged();
+    partial void OnCol_1Changing(int value);
+    partial void OnCol_1Changed();
     partial void OnCol_2Changing(int value);
     partial void OnCol_2Changed();
     partial void OnCol_3Changing(int value);
@@ -12522,6 +12526,26 @@ namespace KmsReportWS.LinqToSql
 					this._Id_Report_Data = value;
 					this.SendPropertyChanged("Id_Report_Data");
 					this.OnId_Report_DataChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Col_1", DbType="Int NOT NULL")]
+		public int Col_1
+		{
+			get
+			{
+				return this._Col_1;
+			}
+			set
+			{
+				if ((this._Col_1 != value))
+				{
+					this.OnCol_1Changing(value);
+					this.SendPropertyChanging();
+					this._Col_1 = value;
+					this.SendPropertyChanged("Col_1");
+					this.OnCol_1Changed();
 				}
 			}
 		}

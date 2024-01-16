@@ -556,6 +556,7 @@
     <Type Name="Report_Quantity">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="Id_Report_Data" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Col_1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="Col_2" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="Col_3" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="Col_4" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
