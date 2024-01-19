@@ -132,6 +132,9 @@ namespace KmsReportWS.LinqToSql
     partial void InsertReport_Quantity(Report_Quantity instance);
     partial void UpdateReport_Quantity(Report_Quantity instance);
     partial void DeleteReport_Quantity(Report_Quantity instance);
+    partial void InsertReport_Targeted_Allowances(Report_Targeted_Allowances instance);
+    partial void UpdateReport_Targeted_Allowances(Report_Targeted_Allowances instance);
+    partial void DeleteReport_Targeted_Allowances(Report_Targeted_Allowances instance);
     #endregion
 		
 		public LinqToSqlKmsReportDataContext(string connection) : 
@@ -443,6 +446,14 @@ namespace KmsReportWS.LinqToSql
 			get
 			{
 				return this.GetTable<Report_Quantity>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Report_Targeted_Allowances> Report_Targeted_Allowances
+		{
+			get
+			{
+				return this.GetTable<Report_Targeted_Allowances>();
 			}
 		}
 		
@@ -3459,6 +3470,8 @@ namespace KmsReportWS.LinqToSql
 		
 		private EntitySet<Report_Quantity> _Report_Quantity;
 		
+		private EntitySet<Report_Targeted_Allowances> _Report_Targeted_Allowances;
+		
 		private EntityRef<Report_Type> _Report_Type;
 		
 		private EntityRef<Report_Flow> _Report_Flow;
@@ -3502,6 +3515,7 @@ namespace KmsReportWS.LinqToSql
 			this._Report_Effectiveness = new EntitySet<Report_Effectiveness>(new Action<Report_Effectiveness>(this.attach_Report_Effectiveness), new Action<Report_Effectiveness>(this.detach_Report_Effectiveness));
 			this._Report_ReqVCR = new EntitySet<Report_ReqVCR>(new Action<Report_ReqVCR>(this.attach_Report_ReqVCR), new Action<Report_ReqVCR>(this.detach_Report_ReqVCR));
 			this._Report_Quantity = new EntitySet<Report_Quantity>(new Action<Report_Quantity>(this.attach_Report_Quantity), new Action<Report_Quantity>(this.detach_Report_Quantity));
+			this._Report_Targeted_Allowances = new EntitySet<Report_Targeted_Allowances>(new Action<Report_Targeted_Allowances>(this.attach_Report_Targeted_Allowances), new Action<Report_Targeted_Allowances>(this.detach_Report_Targeted_Allowances));
 			this._Report_Type = default(EntityRef<Report_Type>);
 			this._Report_Flow = default(EntityRef<Report_Flow>);
 			OnCreated();
@@ -3882,6 +3896,19 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Report_Data_Report_Targeted_Allowances", Storage="_Report_Targeted_Allowances", ThisKey="Id", OtherKey="Id_Report_Data")]
+		public EntitySet<Report_Targeted_Allowances> Report_Targeted_Allowances
+		{
+			get
+			{
+				return this._Report_Targeted_Allowances;
+			}
+			set
+			{
+				this._Report_Targeted_Allowances.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Report_Type_Report_Data", Storage="_Report_Type", ThisKey="Id_Report", OtherKey="Id", IsForeignKey=true)]
 		public Report_Type Report_Type
 		{
@@ -4193,6 +4220,18 @@ namespace KmsReportWS.LinqToSql
 		}
 		
 		private void detach_Report_Quantity(Report_Quantity entity)
+		{
+			this.SendPropertyChanging();
+			entity.Report_Data = null;
+		}
+		
+		private void attach_Report_Targeted_Allowances(Report_Targeted_Allowances entity)
+		{
+			this.SendPropertyChanging();
+			entity.Report_Data = this;
+		}
+		
+		private void detach_Report_Targeted_Allowances(Report_Targeted_Allowances entity)
 		{
 			this.SendPropertyChanging();
 			entity.Report_Data = null;
@@ -12873,6 +12912,349 @@ namespace KmsReportWS.LinqToSql
 					if ((value != null))
 					{
 						value.Report_Quantity.Add(this);
+						this._Id_Report_Data = value.Id;
+					}
+					else
+					{
+						this._Id_Report_Data = default(int);
+					}
+					this.SendPropertyChanged("Report_Data");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Report_Targeted_Allowances")]
+	public partial class Report_Targeted_Allowances : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Id;
+		
+		private int _Id_Report_Data;
+		
+		private string _FIO;
+		
+		private string _Speciality;
+		
+		private string _Period;
+		
+		private int _CountEKMP;
+		
+		private decimal _AmountSank;
+		
+		private decimal _AmountPayment;
+		
+		private string _ProvidedBy;
+		
+		private string _Comments;
+		
+		private int _RowNumID;
+		
+		private EntityRef<Report_Data> _Report_Data;
+		
+    #region Определения метода расширяемости
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdChanging(int value);
+    partial void OnIdChanged();
+    partial void OnId_Report_DataChanging(int value);
+    partial void OnId_Report_DataChanged();
+    partial void OnFIOChanging(string value);
+    partial void OnFIOChanged();
+    partial void OnSpecialityChanging(string value);
+    partial void OnSpecialityChanged();
+    partial void OnPeriodChanging(string value);
+    partial void OnPeriodChanged();
+    partial void OnCountEKMPChanging(int value);
+    partial void OnCountEKMPChanged();
+    partial void OnAmountSankChanging(decimal value);
+    partial void OnAmountSankChanged();
+    partial void OnAmountPaymentChanging(decimal value);
+    partial void OnAmountPaymentChanged();
+    partial void OnProvidedByChanging(string value);
+    partial void OnProvidedByChanged();
+    partial void OnCommentsChanging(string value);
+    partial void OnCommentsChanged();
+    partial void OnRowNumIDChanging(int value);
+    partial void OnRowNumIDChanged();
+    #endregion
+		
+		public Report_Targeted_Allowances()
+		{
+			this._Report_Data = default(EntityRef<Report_Data>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this.OnIdChanging(value);
+					this.SendPropertyChanging();
+					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_Report_Data", DbType="Int NOT NULL")]
+		public int Id_Report_Data
+		{
+			get
+			{
+				return this._Id_Report_Data;
+			}
+			set
+			{
+				if ((this._Id_Report_Data != value))
+				{
+					if (this._Report_Data.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnId_Report_DataChanging(value);
+					this.SendPropertyChanging();
+					this._Id_Report_Data = value;
+					this.SendPropertyChanged("Id_Report_Data");
+					this.OnId_Report_DataChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FIO", DbType="VarChar(MAX)")]
+		public string FIO
+		{
+			get
+			{
+				return this._FIO;
+			}
+			set
+			{
+				if ((this._FIO != value))
+				{
+					this.OnFIOChanging(value);
+					this.SendPropertyChanging();
+					this._FIO = value;
+					this.SendPropertyChanged("FIO");
+					this.OnFIOChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Speciality", DbType="VarChar(MAX)")]
+		public string Speciality
+		{
+			get
+			{
+				return this._Speciality;
+			}
+			set
+			{
+				if ((this._Speciality != value))
+				{
+					this.OnSpecialityChanging(value);
+					this.SendPropertyChanging();
+					this._Speciality = value;
+					this.SendPropertyChanged("Speciality");
+					this.OnSpecialityChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Period", DbType="VarChar(MAX)")]
+		public string Period
+		{
+			get
+			{
+				return this._Period;
+			}
+			set
+			{
+				if ((this._Period != value))
+				{
+					this.OnPeriodChanging(value);
+					this.SendPropertyChanging();
+					this._Period = value;
+					this.SendPropertyChanged("Period");
+					this.OnPeriodChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CountEKMP", DbType="Int NOT NULL")]
+		public int CountEKMP
+		{
+			get
+			{
+				return this._CountEKMP;
+			}
+			set
+			{
+				if ((this._CountEKMP != value))
+				{
+					this.OnCountEKMPChanging(value);
+					this.SendPropertyChanging();
+					this._CountEKMP = value;
+					this.SendPropertyChanged("CountEKMP");
+					this.OnCountEKMPChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AmountSank", DbType="Decimal(18,0) NOT NULL")]
+		public decimal AmountSank
+		{
+			get
+			{
+				return this._AmountSank;
+			}
+			set
+			{
+				if ((this._AmountSank != value))
+				{
+					this.OnAmountSankChanging(value);
+					this.SendPropertyChanging();
+					this._AmountSank = value;
+					this.SendPropertyChanged("AmountSank");
+					this.OnAmountSankChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AmountPayment", DbType="Decimal(18,0) NOT NULL")]
+		public decimal AmountPayment
+		{
+			get
+			{
+				return this._AmountPayment;
+			}
+			set
+			{
+				if ((this._AmountPayment != value))
+				{
+					this.OnAmountPaymentChanging(value);
+					this.SendPropertyChanging();
+					this._AmountPayment = value;
+					this.SendPropertyChanged("AmountPayment");
+					this.OnAmountPaymentChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProvidedBy", DbType="VarChar(MAX)")]
+		public string ProvidedBy
+		{
+			get
+			{
+				return this._ProvidedBy;
+			}
+			set
+			{
+				if ((this._ProvidedBy != value))
+				{
+					this.OnProvidedByChanging(value);
+					this.SendPropertyChanging();
+					this._ProvidedBy = value;
+					this.SendPropertyChanged("ProvidedBy");
+					this.OnProvidedByChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Comments", DbType="VarChar(MAX)")]
+		public string Comments
+		{
+			get
+			{
+				return this._Comments;
+			}
+			set
+			{
+				if ((this._Comments != value))
+				{
+					this.OnCommentsChanging(value);
+					this.SendPropertyChanging();
+					this._Comments = value;
+					this.SendPropertyChanged("Comments");
+					this.OnCommentsChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RowNumID", DbType="Int NOT NULL")]
+		public int RowNumID
+		{
+			get
+			{
+				return this._RowNumID;
+			}
+			set
+			{
+				if ((this._RowNumID != value))
+				{
+					this.OnRowNumIDChanging(value);
+					this.SendPropertyChanging();
+					this._RowNumID = value;
+					this.SendPropertyChanged("RowNumID");
+					this.OnRowNumIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Report_Data_Report_Targeted_Allowances", Storage="_Report_Data", ThisKey="Id_Report_Data", OtherKey="Id", IsForeignKey=true)]
+		public Report_Data Report_Data
+		{
+			get
+			{
+				return this._Report_Data.Entity;
+			}
+			set
+			{
+				Report_Data previousValue = this._Report_Data.Entity;
+				if (((previousValue != value) 
+							|| (this._Report_Data.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Report_Data.Entity = null;
+						previousValue.Report_Targeted_Allowances.Remove(this);
+					}
+					this._Report_Data.Entity = value;
+					if ((value != null))
+					{
+						value.Report_Targeted_Allowances.Add(this);
 						this._Id_Report_Data = value.Id;
 					}
 					else

@@ -116,7 +116,7 @@ namespace KmsReportWS.Handler
 
         protected override AbstractReport MapReportFromPersist(Report_Flow rep)
         {
-            var outReport = new Model.Report.ReportMonitoringVCR();
+            var outReport = new ReportMonitoringVCR();
             MapFromReportFlow(rep, outReport);
 
             var db = new LinqToSqlKmsReportDataContext(_connStr);

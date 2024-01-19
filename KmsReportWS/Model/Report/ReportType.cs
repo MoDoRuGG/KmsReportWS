@@ -29,6 +29,7 @@ namespace KmsReportWS.Model.Report
         [Description("ZpzLethal")] ZpzLethal,
         [Description("ReqVCR")] ReqVCR,
         [Description("Quantity")] Quantity,
+        [Description("TarAllow")] TarAllow,
 
     }
 }

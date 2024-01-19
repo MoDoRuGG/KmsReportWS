@@ -26,7 +26,7 @@ namespace KmsReportWS.Handler
         private readonly IReportHandler _quantityCollector = new ReportQuantityHandler(ReportType.Quantity);
         private readonly IReportHandler _opedFinanceCollector = new ReportOpedFinanceHandler(ReportType.OpedFinance);
         private readonly IReportHandler _opedFinance3Collector = new ReportOpedFinance3Handler(ReportType.OpedFinance3);
-        //private readonly IReportHandler _infomaterialCollector = new ReportInfomaterialHandler(ReportType.Infomaterial);
+        private readonly IReportHandler _targetedAllowancesCollector = new ReportTargetedAllowancesHandler(ReportType.TarAllow);
         private readonly IReportHandler _effectiveHandlerCollector = new ReportEffectivenessHandler(ReportType.Effective);
         private readonly IReportHandler _reqVCRHandlerCollector = new ReportReqVCRHandler();
         public IReportHandler GetHandler(ReportType reportType) =>
@@ -55,7 +55,7 @@ namespace KmsReportWS.Handler
                 ReportType.ReqVCR => _reqVCRHandlerCollector,
                 ReportType.Effective => _effectiveHandlerCollector,
                 ReportType.Quantity => _quantityCollector,
-                //ReportType.Infomaterial => _infomaterialCollector,
+                ReportType.TarAllow => _targetedAllowancesCollector,
 
             };
     }

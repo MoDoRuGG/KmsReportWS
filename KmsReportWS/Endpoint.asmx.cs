@@ -341,6 +341,12 @@ namespace KmsReportWS
         }
 
         [WebMethod]
+        public void WebReportTargetedAllowances(ReportTargetedAllowances report)
+        {
+
+        }
+
+        [WebMethod]
         public void WebReportReqVCR(ReportReqVCR report)
         {
 

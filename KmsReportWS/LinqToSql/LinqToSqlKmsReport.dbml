@@ -173,6 +173,7 @@
       <Association Name="Report_Data_Report_Effectiveness" Member="Report_Effectiveness" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_Effectiveness" />
       <Association Name="Report_Data_Report_ReqVCR" Member="Report_ReqVCR" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_ReqVCR" />
       <Association Name="Report_Data_Report_Quantity" Member="Report_Quantity" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_Quantity" />
+      <Association Name="Report_Data_Report_Targeted_Allowances" Member="Report_Targeted_Allowances" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_Targeted_Allowances" />
       <Association Name="Report_Type_Report_Data" Member="Report_Type" ThisKey="Id_Report" OtherKey="Id" Type="Report_Type" IsForeignKey="true" />
       <Association Name="Report_Flow_Report_Data" Member="Report_Flow" ThisKey="Id_Flow" OtherKey="Id" Type="Report_Flow" IsForeignKey="true" />
     </Type>
@@ -573,6 +574,22 @@
       <Column Name="Col_15" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="Col_16" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="Report_Data_Report_Quantity" Member="Report_Data" ThisKey="Id_Report_Data" OtherKey="Id" Type="Report_Data" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Report_Targeted_Allowances" Member="Report_Targeted_Allowances">
+    <Type Name="Report_Targeted_Allowances">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id_Report_Data" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FIO" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Speciality" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Period" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="CountEKMP" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AmountSank" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="AmountPayment" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ProvidedBy" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Comments" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="RowNumID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Report_Data_Report_Targeted_Allowances" Member="Report_Data" ThisKey="Id_Report_Data" OtherKey="Id" Type="Report_Data" IsForeignKey="true" />
     </Type>
   </Table>
   <Function Name="dbo.cadre_rapport" Method="cadre_rapport" IsComposable="true">
