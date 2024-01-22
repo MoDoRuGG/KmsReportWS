@@ -13,7 +13,8 @@ namespace KmsReportWS.Handler
         public ZpzHandler(ReportType reportType) : base(reportType)
         {
         }
-
+        protected override void InsertReport(LinqToSqlKmsReportDataContext db, AbstractReport inReport)
+        { }
         public ReportZpzDataDto GetYearData(string yymm, string theme, string fillial, string rowNum)
         {
             var db = new LinqToSqlKmsReportDataContext(_connStr);

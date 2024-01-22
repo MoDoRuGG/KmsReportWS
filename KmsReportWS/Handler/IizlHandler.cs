@@ -11,7 +11,8 @@ namespace KmsReportWS.Handler
         public IizlHandler(ReportType reportType) : base(reportType)
         {
         }
-
+        protected override void InsertReport(LinqToSqlKmsReportDataContext db, AbstractReport inReport)
+        { }
         protected override void CreateNewReport(LinqToSqlKmsReportDataContext db, Report_Flow flow,
             AbstractReport inReport)
         {

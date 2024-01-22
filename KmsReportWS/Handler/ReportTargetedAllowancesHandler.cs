@@ -6,6 +6,7 @@ using KmsReportWS.LinqToSql;
 using KmsReportWS.Model.Report;
 using KmsReportWS.Properties;
 using NLog;
+using Org.BouncyCastle.Ocsp;
 
 namespace KmsReportWS.Handler
 {
@@ -86,11 +87,51 @@ namespace KmsReportWS.Handler
             return outReport;
         }
 
+
+        protected override void InsertReport(LinqToSqlKmsReportDataContext db, AbstractReport inReport)
+        {
+            var report = inReport as ReportTargetedAllowances ??
+                     throw new Exception("Error update report, because getting empty report");
+            var RowCounter = report.Data.Count();
+            var reportDb = db.Report_Targeted_Allowances.Where(x => x.Report_Data.Id_Flow == report.IdFlow);
+
+            var razcount = RowCounter - reportDb.Count();
+
+            for (var i = 0; i < razcount; i++) {
+
+                var repIn = report.Data.SingleOrDefault(x => x.RowNumID == reportDb.Count()+i);
+
+                Report_Targeted_Allowances file_row = new Report_Targeted_Allowances
+                {
+                    Id_Report_Data = report.Id_Report_Data,
+                    RowNumID = repIn.RowNumID,
+                    FIO = repIn.FIO,
+                    Speciality = repIn.Speciality,
+                    Period = repIn.Period,
+                    CountEKMP = repIn.CountEKMP,
+                    AmountSank = repIn.AmountSank,
+                    AmountPayment = repIn.AmountPayment,
+                    ProvidedBy = repIn.ProvidedBy,
+                    Comments = repIn.Comments
+                };
+
+                db.GetTable<Report_Targeted_Allowances>().InsertOnSubmit(file_row);
+            };
+
+            db.SubmitChanges();
+        }
+
+
         protected override void UpdateReport(LinqToSqlKmsReportDataContext db, AbstractReport inReport)
         {
             var report = inReport as ReportTargetedAllowances ??
                      throw new Exception("Error update report, because getting empty report");
             var RowCounter = report.Data.Count();
+            var reporDb = db.Report_Targeted_Allowances.Where(x => x.Report_Data.Id_Flow == report.IdFlow);
+
+            if (RowCounter > reporDb.Count() ) {
+            InsertReport(db, inReport);
+            }
             var reportDb = db.Report_Targeted_Allowances.Where(x => x.Report_Data.Id_Flow == report.IdFlow);
 
             foreach (var rep in reportDb)
