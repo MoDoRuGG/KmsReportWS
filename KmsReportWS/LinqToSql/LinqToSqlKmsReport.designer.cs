@@ -474,6 +474,12 @@ namespace KmsReportWS.LinqToSql
 		{
 			return this.CreateMethodCallQuery<p_VCRMonitoring_SvodFilialResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), yymm);
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Cons_Quantity_Filials", IsComposable=true)]
+		public IQueryable<Cons_Quantity_FilialsResult> Cons_Quantity_Filials([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Yymm", DbType="VarChar(4)")] string yymm)
+		{
+			return this.CreateMethodCallQuery<Cons_Quantity_FilialsResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), yymm);
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Comment")]
@@ -15268,6 +15274,320 @@ namespace KmsReportWS.LinqToSql
 				if ((this.@__228_total != value))
 				{
 					this.@__228_total = value;
+				}
+			}
+		}
+	}
+	
+	public partial class Cons_Quantity_FilialsResult
+	{
+		
+		private string _Id_Region;
+		
+		private System.Nullable<int> _Col_1;
+		
+		private System.Nullable<int> _Col_2;
+		
+		private System.Nullable<int> _Col_3;
+		
+		private System.Nullable<int> _Col_4;
+		
+		private System.Nullable<int> _Col_5;
+		
+		private System.Nullable<int> _Col_6;
+		
+		private System.Nullable<int> _Col_7;
+		
+		private System.Nullable<int> _Col_8;
+		
+		private System.Nullable<int> _Col_9;
+		
+		private System.Nullable<int> _Col_10;
+		
+		private System.Nullable<int> _Col_11;
+		
+		private System.Nullable<int> _Col_12;
+		
+		private System.Nullable<int> _Col_13;
+		
+		private System.Nullable<int> _Col_14;
+		
+		private System.Nullable<int> _Col_15;
+		
+		private System.Nullable<int> _Col_16;
+		
+		public Cons_Quantity_FilialsResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_Region", DbType="VarChar(10)")]
+		public string Id_Region
+		{
+			get
+			{
+				return this._Id_Region;
+			}
+			set
+			{
+				if ((this._Id_Region != value))
+				{
+					this._Id_Region = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Col_1", DbType="Int")]
+		public System.Nullable<int> Col_1
+		{
+			get
+			{
+				return this._Col_1;
+			}
+			set
+			{
+				if ((this._Col_1 != value))
+				{
+					this._Col_1 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Col_2", DbType="Int")]
+		public System.Nullable<int> Col_2
+		{
+			get
+			{
+				return this._Col_2;
+			}
+			set
+			{
+				if ((this._Col_2 != value))
+				{
+					this._Col_2 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Col_3", DbType="Int")]
+		public System.Nullable<int> Col_3
+		{
+			get
+			{
+				return this._Col_3;
+			}
+			set
+			{
+				if ((this._Col_3 != value))
+				{
+					this._Col_3 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Col_4", DbType="Int")]
+		public System.Nullable<int> Col_4
+		{
+			get
+			{
+				return this._Col_4;
+			}
+			set
+			{
+				if ((this._Col_4 != value))
+				{
+					this._Col_4 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Col_5", DbType="Int")]
+		public System.Nullable<int> Col_5
+		{
+			get
+			{
+				return this._Col_5;
+			}
+			set
+			{
+				if ((this._Col_5 != value))
+				{
+					this._Col_5 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Col_6", DbType="Int")]
+		public System.Nullable<int> Col_6
+		{
+			get
+			{
+				return this._Col_6;
+			}
+			set
+			{
+				if ((this._Col_6 != value))
+				{
+					this._Col_6 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Col_7", DbType="Int")]
+		public System.Nullable<int> Col_7
+		{
+			get
+			{
+				return this._Col_7;
+			}
+			set
+			{
+				if ((this._Col_7 != value))
+				{
+					this._Col_7 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Col_8", DbType="Int")]
+		public System.Nullable<int> Col_8
+		{
+			get
+			{
+				return this._Col_8;
+			}
+			set
+			{
+				if ((this._Col_8 != value))
+				{
+					this._Col_8 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Col_9", DbType="Int")]
+		public System.Nullable<int> Col_9
+		{
+			get
+			{
+				return this._Col_9;
+			}
+			set
+			{
+				if ((this._Col_9 != value))
+				{
+					this._Col_9 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Col_10", DbType="Int")]
+		public System.Nullable<int> Col_10
+		{
+			get
+			{
+				return this._Col_10;
+			}
+			set
+			{
+				if ((this._Col_10 != value))
+				{
+					this._Col_10 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Col_11", DbType="Int")]
+		public System.Nullable<int> Col_11
+		{
+			get
+			{
+				return this._Col_11;
+			}
+			set
+			{
+				if ((this._Col_11 != value))
+				{
+					this._Col_11 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Col_12", DbType="Int")]
+		public System.Nullable<int> Col_12
+		{
+			get
+			{
+				return this._Col_12;
+			}
+			set
+			{
+				if ((this._Col_12 != value))
+				{
+					this._Col_12 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Col_13", DbType="Int")]
+		public System.Nullable<int> Col_13
+		{
+			get
+			{
+				return this._Col_13;
+			}
+			set
+			{
+				if ((this._Col_13 != value))
+				{
+					this._Col_13 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Col_14", DbType="Int")]
+		public System.Nullable<int> Col_14
+		{
+			get
+			{
+				return this._Col_14;
+			}
+			set
+			{
+				if ((this._Col_14 != value))
+				{
+					this._Col_14 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Col_15", DbType="Int")]
+		public System.Nullable<int> Col_15
+		{
+			get
+			{
+				return this._Col_15;
+			}
+			set
+			{
+				if ((this._Col_15 != value))
+				{
+					this._Col_15 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Col_16", DbType="Int")]
+		public System.Nullable<int> Col_16
+		{
+			get
+			{
+				return this._Col_16;
+			}
+			set
+			{
+				if ((this._Col_16 != value))
+				{
+					this._Col_16 = value;
 				}
 			}
 		}

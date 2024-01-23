@@ -717,4 +717,26 @@
       <Column Name="[_228_total]" Member="_228_total" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.Cons_Quantity_Filials" Method="Cons_Quantity_Filials" IsComposable="true">
+    <Parameter Name="Yymm" Parameter="yymm" Type="System.String" DbType="VarChar(4)" />
+    <ElementType Name="Cons_Quantity_FilialsResult">
+      <Column Name="Id_Region" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Col_1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Col_2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Col_3" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Col_4" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Col_5" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Col_6" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Col_7" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Col_8" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Col_9" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Col_10" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Col_11" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Col_12" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Col_13" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Col_14" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Col_15" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Col_16" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
 </Database>

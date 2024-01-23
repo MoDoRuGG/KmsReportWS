@@ -24,6 +24,13 @@ namespace KmsReportWS
         }
 
         [WebMethod]
+        public List<CReportQuantityFilial> CreateReportConsQuantityFilial(string yymm)
+        {
+            var consolidate = new ConsolidateQuantityFilialCollector();
+            return consolidate.CreateReportConsQuantityFilial(yymm);
+        }
+
+        [WebMethod]
         public List<CReportCadreTable1> CreateReportCadreTable1(string yymm)
         {
             var consolidate = new ConsolidateCadreCollector();
