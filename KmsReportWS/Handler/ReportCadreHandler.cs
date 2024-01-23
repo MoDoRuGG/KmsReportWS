@@ -18,7 +18,8 @@ namespace KmsReportWS.Handler
         {
         }
 
-
+        protected override void InsertReport(LinqToSqlKmsReportDataContext db, AbstractReport inReport)
+        { }
         public ReportCadreDataDto GetYearData(string yymm, string theme, string fillial)
         {
             var db = new LinqToSqlKmsReportDataContext(_connStr);

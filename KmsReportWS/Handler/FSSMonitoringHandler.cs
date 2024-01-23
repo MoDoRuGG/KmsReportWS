@@ -21,7 +21,8 @@ namespace KmsReportWS.Handler
         {
 
         }
-
+        protected override void InsertReport(LinqToSqlKmsReportDataContext db, AbstractReport inReport)
+        { }
         public List<FSSMonitoringPgDataDto> GetPgData(string yymm, string idRegion)
         {
             List<FSSMonitoringPgDataDto> result = new List<FSSMonitoringPgDataDto>();

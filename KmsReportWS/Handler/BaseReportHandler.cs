@@ -27,6 +27,7 @@ namespace KmsReportWS.Handler
 
 
         protected abstract void UpdateReport(LinqToSqlKmsReportDataContext db, AbstractReport report);
+        protected abstract void InsertReport(LinqToSqlKmsReportDataContext db, AbstractReport report);
         protected abstract AbstractReport MapReportFromPersist(Report_Flow rep);
 
         protected abstract void CreateNewReport(LinqToSqlKmsReportDataContext db, Report_Flow flow,

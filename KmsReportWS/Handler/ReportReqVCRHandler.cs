@@ -17,7 +17,8 @@ namespace KmsReportWS.Handler
         public ReportReqVCRHandler() : base(ReportType.ReqVCR)
         {
         }
-
+        protected override void InsertReport(LinqToSqlKmsReportDataContext db, AbstractReport inReport)
+        { }
         protected override void CreateNewReport(LinqToSqlKmsReportDataContext db, Report_Flow flow, AbstractReport inReport)
         {
             var report = inReport as ReportReqVCR ??

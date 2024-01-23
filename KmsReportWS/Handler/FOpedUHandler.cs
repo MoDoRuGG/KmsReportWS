@@ -13,7 +13,8 @@ namespace KmsReportWS.Handler
         private static readonly Logger Log = LogManager.GetCurrentClassLogger();
         private string _themeName = "opedU";
 
-
+        protected override void InsertReport(LinqToSqlKmsReportDataContext db, AbstractReport inReport)
+        { }
 
         public FOpedUHandler(ReportType reportType)
             : base(reportType)

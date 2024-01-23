@@ -14,7 +14,8 @@ namespace KmsReportWS.Handler
         public F294Handler() : base(ReportType.F294)
         {
         }
-
+        protected override void InsertReport(LinqToSqlKmsReportDataContext db, AbstractReport inReport)
+        { }
         protected override void CreateNewReport(LinqToSqlKmsReportDataContext db, Report_Flow flow,
             AbstractReport inReport)
         {
