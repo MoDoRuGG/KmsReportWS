@@ -96,32 +96,33 @@ namespace KmsReportWS.Handler
             var reportDb = db.Report_Targeted_Allowances.Where(x => x.Report_Data.Id_Flow == report.IdFlow);
 
             var razcount = RowCounter - reportDb.Count();
-            if (razcount > 0)
+
+            foreach (var detail in reportDb)
+            {
+                db.Report_Targeted_Allowances.DeleteOnSubmit(detail);
+            }
+            for (var i = 0; i < RowCounter; i++)
             {
 
-                for (var i = 0; i < razcount; i++)
+                var repIn = report.Data.SingleOrDefault(x => x.RowNumID == i);
+
+                Report_Targeted_Allowances file_row = new Report_Targeted_Allowances
                 {
+                    Id_Report_Data = report.Id_Report_Data,
+                    RowNumID = repIn.RowNumID,
+                    FIO = repIn.FIO,
+                    Speciality = repIn.Speciality,
+                    Period = repIn.Period,
+                    CountEKMP = repIn.CountEKMP,
+                    AmountSank = repIn.AmountSank,
+                    AmountPayment = repIn.AmountPayment,
+                    ProvidedBy = repIn.ProvidedBy,
+                    Comments = repIn.Comments
+                };
 
-                    var repIn = report.Data.SingleOrDefault(x => x.RowNumID == reportDb.Count() + i);
-
-                    Report_Targeted_Allowances file_row = new Report_Targeted_Allowances
-                    {
-                        Id_Report_Data = report.Id_Report_Data,
-                        RowNumID = repIn.RowNumID,
-                        FIO = repIn.FIO,
-                        Speciality = repIn.Speciality,
-                        Period = repIn.Period,
-                        CountEKMP = repIn.CountEKMP,
-                        AmountSank = repIn.AmountSank,
-                        AmountPayment = repIn.AmountPayment,
-                        ProvidedBy = repIn.ProvidedBy,
-                        Comments = repIn.Comments
-                    };
-
-                    db.GetTable<Report_Targeted_Allowances>().InsertOnSubmit(file_row);
-                }
+                db.GetTable<Report_Targeted_Allowances>().InsertOnSubmit(file_row);
             }
-
+        
 
             db.SubmitChanges();
         }
