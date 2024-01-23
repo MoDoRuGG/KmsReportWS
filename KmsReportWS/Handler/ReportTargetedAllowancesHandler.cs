@@ -96,27 +96,32 @@ namespace KmsReportWS.Handler
             var reportDb = db.Report_Targeted_Allowances.Where(x => x.Report_Data.Id_Flow == report.IdFlow);
 
             var razcount = RowCounter - reportDb.Count();
+            if (razcount > 0)
+            {
 
-            for (var i = 0; i < razcount; i++) {
-
-                var repIn = report.Data.SingleOrDefault(x => x.RowNumID == reportDb.Count()+i);
-
-                Report_Targeted_Allowances file_row = new Report_Targeted_Allowances
+                for (var i = 0; i < razcount; i++)
                 {
-                    Id_Report_Data = report.Id_Report_Data,
-                    RowNumID = repIn.RowNumID,
-                    FIO = repIn.FIO,
-                    Speciality = repIn.Speciality,
-                    Period = repIn.Period,
-                    CountEKMP = repIn.CountEKMP,
-                    AmountSank = repIn.AmountSank,
-                    AmountPayment = repIn.AmountPayment,
-                    ProvidedBy = repIn.ProvidedBy,
-                    Comments = repIn.Comments
-                };
 
-                db.GetTable<Report_Targeted_Allowances>().InsertOnSubmit(file_row);
-            };
+                    var repIn = report.Data.SingleOrDefault(x => x.RowNumID == reportDb.Count() + i);
+
+                    Report_Targeted_Allowances file_row = new Report_Targeted_Allowances
+                    {
+                        Id_Report_Data = report.Id_Report_Data,
+                        RowNumID = repIn.RowNumID,
+                        FIO = repIn.FIO,
+                        Speciality = repIn.Speciality,
+                        Period = repIn.Period,
+                        CountEKMP = repIn.CountEKMP,
+                        AmountSank = repIn.AmountSank,
+                        AmountPayment = repIn.AmountPayment,
+                        ProvidedBy = repIn.ProvidedBy,
+                        Comments = repIn.Comments
+                    };
+
+                    db.GetTable<Report_Targeted_Allowances>().InsertOnSubmit(file_row);
+                }
+            }
+
 
             db.SubmitChanges();
         }
@@ -126,37 +131,37 @@ namespace KmsReportWS.Handler
         {
             var report = inReport as ReportTargetedAllowances ??
                      throw new Exception("Error update report, because getting empty report");
-            var RowCounter = report.Data.Count();
+            var InRepRowCounter = report.Data.Count();
             var reporDb = db.Report_Targeted_Allowances.Where(x => x.Report_Data.Id_Flow == report.IdFlow);
 
-            if (RowCounter > reporDb.Count() ) {
-            InsertReport(db, inReport);
-            }
-            var reportDb = db.Report_Targeted_Allowances.Where(x => x.Report_Data.Id_Flow == report.IdFlow);
-
-            foreach (var rep in reportDb)
+            if (InRepRowCounter != reporDb.Count()) 
             {
-                var repIn = report.Data.SingleOrDefault(x => x.RowNumID == rep.RowNumID);
+                InsertReport(db, inReport);
+            }
+            else 
+            { 
+                var reportDb = db.Report_Targeted_Allowances.Where(x => x.Report_Data.Id_Flow == report.IdFlow);
 
-                if (repIn != null)
+                foreach (var rep in reportDb)
                 {
-                    db.Report_Targeted_Allowances.DefaultIfEmpty(new LinqToSql.Report_Targeted_Allowances
-                    {
-                        Id = rep.Id,
-                        Id_Report_Data = report.Id_Report_Data,
-                        RowNumID = rep.RowNumID,
-                        FIO = rep.FIO,
-                        Speciality = rep.Speciality,
-                        Period = rep.Period,
-                        CountEKMP = rep.CountEKMP,
-                        AmountSank = rep.AmountSank,
-                        AmountPayment = rep.AmountPayment,
-                        ProvidedBy = rep.ProvidedBy,
-                        Comments = rep.Comments
-                    });
-                }
+                    var repIn = report.Data.FirstOrDefault(x => x.RowNumID == rep.RowNumID);
 
-                db.SubmitChanges();
+                    if (repIn != null)
+                    {
+                        rep.Id_Report_Data = report.Id_Report_Data;
+                        rep.RowNumID = repIn.RowNumID;
+                        rep.FIO = repIn.FIO;
+                        rep.Speciality = repIn.Speciality;
+                        rep.Period = repIn.Period;
+                        rep.CountEKMP = repIn.CountEKMP;
+                        rep.AmountSank = repIn.AmountSank;
+                        rep.AmountPayment = repIn.AmountPayment;
+                        rep.ProvidedBy = repIn.ProvidedBy;
+                        rep.Comments = repIn.Comments;
+                    }
+
+                    db.SubmitChanges();
+                }
             }
         }
     }
