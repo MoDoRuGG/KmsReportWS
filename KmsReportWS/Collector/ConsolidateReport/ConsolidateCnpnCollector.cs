@@ -35,6 +35,7 @@ namespace KmsReportWS.Collector.ConsolidateReport
                        //&& flow.Status != ReportStatus.Refuse.GetDescriptionSt()
                        && (rData.Theme == "Таблица 2" || rData.Theme == "Таблица 1")
                        && cpnpRegion.year==year
+                       && flow.Id_Region != "RU-KHA"
                        group new { flow, table,r } by new { flow.Id_Region,r.name, FedValue = cpnpFederal.value, RegValue = cpnpRegion.value }
                        into flowGr
                        select new ConsolidateCpnp

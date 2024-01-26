@@ -164,6 +164,7 @@ namespace KmsReportWS.Collector.ConsolidateReport
                           && flow.Status != ReportStatus.Refuse.GetDescriptionSt()
                           && flow.Id_Report_Type == reportType
                           && _themes.Contains(rData.Theme)
+                          && flow.Id_Region != "RU-KHA"
                     group new { flow, rData, table } by new { flow.Id_Region, rData.Theme, table.RowNum }
                           into gr
                     select new SummaryPg

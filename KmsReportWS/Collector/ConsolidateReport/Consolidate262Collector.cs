@@ -95,6 +95,7 @@ namespace KmsReportWS.Collector.ConsolidateReport
                                && flow.Id_Report_Type == "f262"
                                && (rData.Theme == "Таблица 1" ||
                                    rData.Theme == "Таблица 2")
+                               && flow.Id_Region != "RU-KHA"
                          group new { flow, table } by new { flow.Id_Region, flow.Yymm }
                 into flowGr
                          select new

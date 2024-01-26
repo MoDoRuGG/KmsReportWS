@@ -30,7 +30,7 @@ namespace KmsReportWS.Collector.ConsolidateReport
         public List<ZpzForWebSite2023> Collect()
         {
             using var db = new LinqToSqlKmsReportDataContext(ConnStr);
-            var filials = db.Region.Where(x => x.id != "RU").Select(x => x.id);
+            var filials = db.Region.Where(x => x.id != "RU" && x.id != "RU-KHA").Select(x => x.id);
 
             IEnumerable<Task<ZpzForWebSite2023>> tasks = filials.Select(filial => CollectFilialData(db, filial));
             return tasks.Select(x => x.Result).ToList();

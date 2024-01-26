@@ -17,6 +17,7 @@ namespace KmsReportWS.Collector.ConsolidateReport
         {
             using var db = new LinqToSqlKmsReportDataContext(_connStr);
             return (from table in db.Cons_Quantity_Filials(yymm)         //  функция вывода табличного значения в SQL
+            where table.Id_Region != "RU-KHA" //&& table.Id_Region != "RU-LEN"
                     group new { table } by new { table.Id_Region }
                 into x
                     select new CReportQuantityFilial

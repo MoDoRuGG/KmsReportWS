@@ -18,6 +18,7 @@ namespace KmsReportWS.Collector.ConsolidateReport
         {
             using var db = new LinqToSqlKmsReportDataContext(_connStr);
             return (from table in db.p_VCRMonitoring_SvodFilial(yymm)         //  функция вывода табличного значения в SQL
+                    where table.Id_Region != "RU-KHA"
                     group new { table } by new { table.Id_Region }
                 into x
                     select new CReportVCRFilial

@@ -254,6 +254,7 @@ namespace KmsReportWS.Collector.ConsolidateReport
                     join table in db.Report_Zpz on rData.Id equals table.Id_Report_Data
                     where flow.Yymm == period && flow.Id_Region == filial &&
                           flow.Id_Report_Type == "Zpz_Q"
+                          && flow.Id_Region != "RU-KHA"
                     group new { flow, rData, table } by new { flow.Id_Region, rData.Theme, table.RowNum }
                           into gr
                     select new SummaryZpz2023

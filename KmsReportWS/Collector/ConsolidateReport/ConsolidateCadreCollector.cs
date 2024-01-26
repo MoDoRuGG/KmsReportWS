@@ -17,6 +17,7 @@ namespace KmsReportWS.Collector.ConsolidateReport
         {
             using var db = new LinqToSqlKmsReportDataContext(_connStr);
             return (from table in db.cadre_rapport(yymm,"Отдел ЗПЗ и ЭКМП")         //  функция вывода табличного значения в SQL
+                    where table.Id_Region != "RU-KHA" && table.Id_Region != "RU-LEN"        
                     group new { table } by new { table.Id_Region }
                 into x
                     select new CReportCadreTable1

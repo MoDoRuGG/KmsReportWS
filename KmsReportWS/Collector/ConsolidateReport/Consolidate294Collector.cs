@@ -45,6 +45,7 @@ namespace KmsReportWS.Collector.ConsolidateReport
                       && Convert.ToInt32(flow.Yymm) <= yymmEnd
                       && themeList.Contains(data.Theme)
                       && statuses.Contains(flow.Status)
+                      && flow.Id_Region != "RU-KHA"
                 group new {flow, data, f, r} by new {r.name, flow.Yymm}
                 into gr
                 select new Dispanserization {

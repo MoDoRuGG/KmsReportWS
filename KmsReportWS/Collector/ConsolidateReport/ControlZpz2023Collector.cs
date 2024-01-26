@@ -253,6 +253,7 @@ namespace KmsReportWS.Collector.ConsolidateReport
                     where flow.Yymm == yymm
                           //&& flow.Status != ReportStatus.Refuse.GetDescriptionSt()
                           && flow.Id_Report_Type == reportType
+                          && flow.Id_Region != "RU-KHA"
                     //&& _themes.Contains(rData.Theme)
                     group new { flow, rData, table } by new { flow.Id_Region, rData.Theme, table.RowNum }
                           into gr
