@@ -53,13 +53,6 @@ namespace KmsReportWS
 
 
         [WebMethod]
-        public List<ConsolidateQuantityAddRemove> ConsolidateQuantityAddRemove(string year)
-        {
-            return new ConsolidateQuantityAddRemoveCollector().Collect(year);
-
-        }
-
-        [WebMethod]
         public List<CReport262Table2> CreateReport262T2(string yymmSt, string yymmEnd)
         {
             var consolidate = new Consolidate262Collector();

@@ -480,6 +480,13 @@ namespace KmsReportWS.LinqToSql
 		{
 			return this.CreateMethodCallQuery<Cons_Quantity_FilialsResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), yymm);
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.p_ConsolidateQuantityAddRemove")]
+		public ISingleResult<p_ConsolidateQuantityAddRemoveResult> p_ConsolidateQuantityAddRemove([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(4)")] string year)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), year);
+			return ((ISingleResult<p_ConsolidateQuantityAddRemoveResult>)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Comment")]
@@ -15588,6 +15595,122 @@ namespace KmsReportWS.LinqToSql
 				if ((this._Col_16 != value))
 				{
 					this._Col_16 = value;
+				}
+			}
+		}
+	}
+	
+	public partial class p_ConsolidateQuantityAddRemoveResult
+	{
+		
+		private string _RegionName;
+		
+		private string _IdRegion;
+		
+		private string _Yymm;
+		
+		private System.Nullable<decimal> _Added;
+		
+		private System.Nullable<decimal> _Removed;
+		
+		private string _RepType;
+		
+		public p_ConsolidateQuantityAddRemoveResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RegionName", DbType="VarChar(200)")]
+		public string RegionName
+		{
+			get
+			{
+				return this._RegionName;
+			}
+			set
+			{
+				if ((this._RegionName != value))
+				{
+					this._RegionName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdRegion", DbType="VarChar(30)")]
+		public string IdRegion
+		{
+			get
+			{
+				return this._IdRegion;
+			}
+			set
+			{
+				if ((this._IdRegion != value))
+				{
+					this._IdRegion = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Yymm", DbType="VarChar(4)")]
+		public string Yymm
+		{
+			get
+			{
+				return this._Yymm;
+			}
+			set
+			{
+				if ((this._Yymm != value))
+				{
+					this._Yymm = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Added", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> Added
+		{
+			get
+			{
+				return this._Added;
+			}
+			set
+			{
+				if ((this._Added != value))
+				{
+					this._Added = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Removed", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> Removed
+		{
+			get
+			{
+				return this._Removed;
+			}
+			set
+			{
+				if ((this._Removed != value))
+				{
+					this._Removed = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RepType", DbType="VarChar(20)")]
+		public string RepType
+		{
+			get
+			{
+				return this._RepType;
+			}
+			set
+			{
+				if ((this._RepType != value))
+				{
+					this._RepType = value;
 				}
 			}
 		}

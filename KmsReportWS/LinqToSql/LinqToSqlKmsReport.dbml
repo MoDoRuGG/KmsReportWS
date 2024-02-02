@@ -739,4 +739,15 @@
       <Column Name="Col_16" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.p_ConsolidateQuantityAddRemove" Method="p_ConsolidateQuantityAddRemove">
+    <Parameter Name="year" Type="System.String" DbType="VarChar(4)" />
+    <ElementType Name="p_ConsolidateQuantityAddRemoveResult">
+      <Column Name="RegionName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="IdRegion" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Yymm" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="Added" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="Removed" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="RepType" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+    </ElementType>
+  </Function>
 </Database>

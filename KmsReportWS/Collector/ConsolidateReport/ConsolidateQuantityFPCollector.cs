@@ -9,29 +9,30 @@ using KmsReportWS.Properties;
 using KmsReportWS.Support;
 
 namespace KmsReportWS.Collector.ConsolidateReport
-{
-        public class ConsolidateQuantityAddRemoveCollector
+{ 
+        public class ConsolidateQuantityFPCollector
         {
-            public List<ConsolidateQuantityAddRemove> Collect(string year)
+            public List<ConsolidateQuantityFP> Collect(string year)
             {
-                List<ConsolidateQuantityAddRemove> result = new List<ConsolidateQuantityAddRemove>();
+                List<ConsolidateQuantityFP> result = new List<ConsolidateQuantityFP>();
                 try
                 {
                     using (MsConnection connect = new MsConnection(Settings.Default.ConnStr))
                     {
-                        connect.NewSp("p_ConsolidateQuantityAddRemove");
+                        connect.NewSp("p_ConsolidateQuantityPlanCheck");
                         connect.AddSpParam("@year", year);
                         var dt = connect.DataTable();
 
                         foreach (DataRow row in dt.Rows)
                         {
-                            result.Add(new ConsolidateQuantityAddRemove
+                            result.Add(new ConsolidateQuantityFP
                             {
                                 RegionName = row["RegionName"].ToString(),
                                 IdRegion = row["IdRegion"].ToString(),
                                 Yymm = row["Yymm"].ToString(),
                                 Added = (int)row["Added"],
-                                Removed = (int)row["Removed"],
+                                Fact = (int)row["Fact"],
+                                Plan = (int)row["Plan"],
                             });
                         }
 

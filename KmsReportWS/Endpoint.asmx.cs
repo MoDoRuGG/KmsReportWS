@@ -71,9 +71,24 @@ namespace KmsReportWS
         }
 
         [WebMethod]
-        public List<ConsolidateQuantityAddRemove> ConsolidateQuantityAddRemove(string year)
+        public List<ConsolidateQuantityAR> CreateConsolidateQuantityAddRemove(string year)
         {
-            return new ConsolidateQuantityAddRemoveCollector().Collect(year);
+            return new ConsolidateQuantityARCollector().Collect(year);
+
+        }
+
+        [WebMethod]
+        public List<ConsolidateQuantityFP> CreateConsolidateQuantityFactPlan(string year)
+        {
+            return new ConsolidateQuantityFPCollector().Collect(year);
+
+        }
+
+
+        [WebMethod]
+        public List<ConsolidateQuantityInfo> CreateConsolidateQuantityInformation(string year)
+        {
+            return new ConsolidateQuantityInfoCollector().Collect(year);
 
         }
 
