@@ -171,6 +171,9 @@
     <Compile Include="Handler\ReportOpedFinanceHandler.cs" />
     <Compile Include="Handler\ReportProposalHandler.cs" />
     <Compile Include="Handler\ReportVaccinationHander.cs" />
+    <Compile Include="LinqToSql\LinqToSqlKmsReport.cs">
+      <DependentUpon>LinqToSqlKmsReport.dbml</DependentUpon>
+    </Compile>
     <Compile Include="LinqToSql\LinqToSqlKmsReport.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

@@ -12,7 +12,7 @@ namespace KmsReportWS.Model.Dictionary
 
         public string Yymm { get; set; }
 
-        public decimal Value { get; set; }
+        public int Value { get; set; }
 
     }
 }

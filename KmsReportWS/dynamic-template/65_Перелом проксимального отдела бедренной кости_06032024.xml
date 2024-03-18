@@ -1,0 +1,1018 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TemplateDynamicReport xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <REPORT_NAME>Перелом проксимального отдела бедренной кости</REPORT_NAME>
+   <REPORT_DESCRIPTION>Ежемесячный отчет</REPORT_DESCRIPTION>
+   <REPORT_DATE>2024-03-06T13:30:00</REPORT_DATE>
+   <IsUserRow>false</IsUserRow>
+   <Emails/>
+   <TABLE>
+      <TemplateTableDynamic>
+         <TABLE_NAME>Январь</TABLE_NAME>
+         <TABLE_DESCRIPTION/>
+         <ROWS>
+            <TemplateRowDynamic>
+               <ROW_TEXT>Свыше 48 часов</ROW_TEXT>
+               <ROW_NUM>1</ROW_NUM>
+               <ROW_DESCRIPTION/>
+            </TemplateRowDynamic>
+            <TemplateRowDynamic>
+               <ROW_TEXT>Менее 48 часов</ROW_TEXT>
+               <ROW_NUM>2</ROW_NUM>
+               <ROW_DESCRIPTION/>
+            </TemplateRowDynamic>
+            <TemplateRowDynamic>
+               <ROW_TEXT>Всего</ROW_TEXT>
+               <ROW_NUM>3</ROW_NUM>
+               <ROW_DESCRIPTION/>
+            </TemplateRowDynamic>
+         </ROWS>
+         <COLUMNS>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Давность травмы</COLUMN_TEXT>
+               <COLUMN_INDEX>1</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Всего оплаченных случаев (консервативного и хирургического лечения)</COLUMN_TEXT>
+               <COLUMN_INDEX>2</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>из них, оплачено случаев хирургического лечения</COLUMN_TEXT>
+               <COLUMN_INDEX>3</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма оплаты случаев хирургического лечения</COLUMN_TEXT>
+               <COLUMN_INDEX>4</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Кол-во МО, в которых проведены ЭКМП</COLUMN_TEXT>
+               <COLUMN_INDEX>5</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Способ отбора случаев на ЭКМП:  отбор СМО - 0,     отбор ТФОМС - 1</COLUMN_TEXT>
+               <COLUMN_INDEX>6</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Всего случаев, подвергнутых ЭКМП</COLUMN_TEXT>
+               <COLUMN_INDEX>7</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма оплаты случаев, подвергнутых ЭКМП (руб.)</COLUMN_TEXT>
+               <COLUMN_INDEX>8</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Всего случаев с выявленными нарушениями</COLUMN_TEXT>
+               <COLUMN_INDEX>9</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма уменьшения оплаты (руб.)</COLUMN_TEXT>
+               <COLUMN_INDEX>10</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма штрафа      (руб.)</COLUMN_TEXT>
+               <COLUMN_INDEX>11</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Примечание</COLUMN_TEXT>
+               <COLUMN_INDEX>12</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+         </COLUMNS>
+      </TemplateTableDynamic>
+   
+      <TemplateTableDynamic>
+         <TABLE_NAME>Февраль</TABLE_NAME>
+         <TABLE_DESCRIPTION/>
+                  <ROWS>
+            <TemplateRowDynamic>
+               <ROW_TEXT>Свыше 48 часов</ROW_TEXT>
+               <ROW_NUM>1</ROW_NUM>
+               <ROW_DESCRIPTION/>
+            </TemplateRowDynamic>
+            <TemplateRowDynamic>
+               <ROW_TEXT>Менее 48 часов</ROW_TEXT>
+               <ROW_NUM>2</ROW_NUM>
+               <ROW_DESCRIPTION/>
+            </TemplateRowDynamic>
+            <TemplateRowDynamic>
+               <ROW_TEXT>Всего</ROW_TEXT>
+               <ROW_NUM>3</ROW_NUM>
+               <ROW_DESCRIPTION/>
+            </TemplateRowDynamic>
+         </ROWS>
+         <COLUMNS>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Давность травмы</COLUMN_TEXT>
+               <COLUMN_INDEX>1</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Всего оплаченных случаев (консервативного и хирургического лечения)</COLUMN_TEXT>
+               <COLUMN_INDEX>2</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>из них, оплачено случаев хирургического лечения</COLUMN_TEXT>
+               <COLUMN_INDEX>3</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма оплаты случаев хирургического лечения</COLUMN_TEXT>
+               <COLUMN_INDEX>4</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Кол-во МО, в которых проведены ЭКМП</COLUMN_TEXT>
+               <COLUMN_INDEX>5</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Способ отбора случаев на ЭКМП:  отбор СМО - 0,     отбор ТФОМС - 1</COLUMN_TEXT>
+               <COLUMN_INDEX>6</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Всего случаев, подвергнутых ЭКМП</COLUMN_TEXT>
+               <COLUMN_INDEX>7</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма оплаты случаев, подвергнутых ЭКМП (руб.)</COLUMN_TEXT>
+               <COLUMN_INDEX>8</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Всего случаев с выявленными нарушениями</COLUMN_TEXT>
+               <COLUMN_INDEX>9</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма уменьшения оплаты (руб.)</COLUMN_TEXT>
+               <COLUMN_INDEX>10</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма штрафа      (руб.)</COLUMN_TEXT>
+               <COLUMN_INDEX>11</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Примечание</COLUMN_TEXT>
+               <COLUMN_INDEX>12</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+         </COLUMNS>
+      </TemplateTableDynamic>
+   
+      <TemplateTableDynamic>
+         <TABLE_NAME>Март</TABLE_NAME>
+         <TABLE_DESCRIPTION/>
+         <COLUMNS>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Давность травмы</COLUMN_TEXT>
+               <COLUMN_INDEX>1</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Всего оплаченных случаев (консервативного и хирургического лечения)</COLUMN_TEXT>
+               <COLUMN_INDEX>2</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>из них, оплачено случаев хирургического лечения</COLUMN_TEXT>
+               <COLUMN_INDEX>3</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма оплаты случаев хирургического лечения</COLUMN_TEXT>
+               <COLUMN_INDEX>4</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Кол-во МО, в которых проведены ЭКМП</COLUMN_TEXT>
+               <COLUMN_INDEX>5</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Способ отбора случаев на ЭКМП:  отбор СМО - 0,     отбор ТФОМС - 1</COLUMN_TEXT>
+               <COLUMN_INDEX>6</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Всего случаев, подвергнутых ЭКМП</COLUMN_TEXT>
+               <COLUMN_INDEX>7</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма оплаты случаев, подвергнутых ЭКМП (руб.)</COLUMN_TEXT>
+               <COLUMN_INDEX>8</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Всего случаев с выявленными нарушениями</COLUMN_TEXT>
+               <COLUMN_INDEX>9</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма уменьшения оплаты (руб.)</COLUMN_TEXT>
+               <COLUMN_INDEX>10</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма штрафа      (руб.)</COLUMN_TEXT>
+               <COLUMN_INDEX>11</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Примечание</COLUMN_TEXT>
+               <COLUMN_INDEX>12</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+         </COLUMNS>
+         <ROWS>
+            <TemplateRowDynamic>
+               <ROW_TEXT>Свыше 48 часов</ROW_TEXT>
+               <ROW_NUM>1</ROW_NUM>
+               <ROW_DESCRIPTION/>
+            </TemplateRowDynamic>
+            <TemplateRowDynamic>
+               <ROW_TEXT>Менее 48 часов</ROW_TEXT>
+               <ROW_NUM>2</ROW_NUM>
+               <ROW_DESCRIPTION/>
+            </TemplateRowDynamic>
+            <TemplateRowDynamic>
+               <ROW_TEXT>Всего</ROW_TEXT>
+               <ROW_NUM>3</ROW_NUM>
+               <ROW_DESCRIPTION/>
+            </TemplateRowDynamic>
+         </ROWS>
+      </TemplateTableDynamic>
+   
+      <TemplateTableDynamic>
+         <TABLE_NAME>Апрель</TABLE_NAME>
+         <TABLE_DESCRIPTION/>
+         <COLUMNS>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Давность травмы</COLUMN_TEXT>
+               <COLUMN_INDEX>1</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Всего оплаченных случаев (консервативного и хирургического лечения)</COLUMN_TEXT>
+               <COLUMN_INDEX>2</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>из них, оплачено случаев хирургического лечения</COLUMN_TEXT>
+               <COLUMN_INDEX>3</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма оплаты случаев хирургического лечения</COLUMN_TEXT>
+               <COLUMN_INDEX>4</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Кол-во МО, в которых проведены ЭКМП</COLUMN_TEXT>
+               <COLUMN_INDEX>5</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Способ отбора случаев на ЭКМП:  отбор СМО - 0,     отбор ТФОМС - 1</COLUMN_TEXT>
+               <COLUMN_INDEX>6</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Всего случаев, подвергнутых ЭКМП</COLUMN_TEXT>
+               <COLUMN_INDEX>7</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма оплаты случаев, подвергнутых ЭКМП (руб.)</COLUMN_TEXT>
+               <COLUMN_INDEX>8</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Всего случаев с выявленными нарушениями</COLUMN_TEXT>
+               <COLUMN_INDEX>9</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма уменьшения оплаты (руб.)</COLUMN_TEXT>
+               <COLUMN_INDEX>10</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма штрафа      (руб.)</COLUMN_TEXT>
+               <COLUMN_INDEX>11</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Примечание</COLUMN_TEXT>
+               <COLUMN_INDEX>12</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+         </COLUMNS>
+         <ROWS>
+            <TemplateRowDynamic>
+               <ROW_TEXT>Свыше 48 часов</ROW_TEXT>
+               <ROW_NUM>1</ROW_NUM>
+               <ROW_DESCRIPTION/>
+            </TemplateRowDynamic>
+            <TemplateRowDynamic>
+               <ROW_TEXT>Менее 48 часов</ROW_TEXT>
+               <ROW_NUM>2</ROW_NUM>
+               <ROW_DESCRIPTION/>
+            </TemplateRowDynamic>
+            <TemplateRowDynamic>
+               <ROW_TEXT>Всего</ROW_TEXT>
+               <ROW_NUM>3</ROW_NUM>
+               <ROW_DESCRIPTION/>
+            </TemplateRowDynamic>
+         </ROWS>
+      </TemplateTableDynamic>
+   
+      <TemplateTableDynamic>
+         <TABLE_NAME>Май</TABLE_NAME>
+         <TABLE_DESCRIPTION/>
+         <COLUMNS>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Давность травмы</COLUMN_TEXT>
+               <COLUMN_INDEX>1</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Всего оплаченных случаев (консервативного и хирургического лечения)</COLUMN_TEXT>
+               <COLUMN_INDEX>2</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>из них, оплачено случаев хирургического лечения</COLUMN_TEXT>
+               <COLUMN_INDEX>3</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма оплаты случаев хирургического лечения</COLUMN_TEXT>
+               <COLUMN_INDEX>4</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Кол-во МО, в которых проведены ЭКМП</COLUMN_TEXT>
+               <COLUMN_INDEX>5</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Способ отбора случаев на ЭКМП:  отбор СМО - 0,     отбор ТФОМС - 1</COLUMN_TEXT>
+               <COLUMN_INDEX>6</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Всего случаев, подвергнутых ЭКМП</COLUMN_TEXT>
+               <COLUMN_INDEX>7</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма оплаты случаев, подвергнутых ЭКМП (руб.)</COLUMN_TEXT>
+               <COLUMN_INDEX>8</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Всего случаев с выявленными нарушениями</COLUMN_TEXT>
+               <COLUMN_INDEX>9</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма уменьшения оплаты (руб.)</COLUMN_TEXT>
+               <COLUMN_INDEX>10</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма штрафа      (руб.)</COLUMN_TEXT>
+               <COLUMN_INDEX>11</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Примечание</COLUMN_TEXT>
+               <COLUMN_INDEX>12</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+         </COLUMNS>
+         <ROWS>
+            <TemplateRowDynamic>
+               <ROW_TEXT>Свыше 48 часов</ROW_TEXT>
+               <ROW_NUM>1</ROW_NUM>
+               <ROW_DESCRIPTION/>
+            </TemplateRowDynamic>
+            <TemplateRowDynamic>
+               <ROW_TEXT>Менее 48 часов</ROW_TEXT>
+               <ROW_NUM>2</ROW_NUM>
+               <ROW_DESCRIPTION/>
+            </TemplateRowDynamic>
+            <TemplateRowDynamic>
+               <ROW_TEXT>Всего</ROW_TEXT>
+               <ROW_NUM>3</ROW_NUM>
+               <ROW_DESCRIPTION/>
+            </TemplateRowDynamic>
+         </ROWS>
+      </TemplateTableDynamic>
+   
+      <TemplateTableDynamic>
+         <TABLE_NAME>Июнь</TABLE_NAME>
+         <TABLE_DESCRIPTION/>
+         <COLUMNS>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Давность травмы</COLUMN_TEXT>
+               <COLUMN_INDEX>1</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Всего оплаченных случаев (консервативного и хирургического лечения)</COLUMN_TEXT>
+               <COLUMN_INDEX>2</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>из них, оплачено случаев хирургического лечения</COLUMN_TEXT>
+               <COLUMN_INDEX>3</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма оплаты случаев хирургического лечения</COLUMN_TEXT>
+               <COLUMN_INDEX>4</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Кол-во МО, в которых проведены ЭКМП</COLUMN_TEXT>
+               <COLUMN_INDEX>5</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Способ отбора случаев на ЭКМП:  отбор СМО - 0,     отбор ТФОМС - 1</COLUMN_TEXT>
+               <COLUMN_INDEX>6</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Всего случаев, подвергнутых ЭКМП</COLUMN_TEXT>
+               <COLUMN_INDEX>7</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма оплаты случаев, подвергнутых ЭКМП (руб.)</COLUMN_TEXT>
+               <COLUMN_INDEX>8</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Всего случаев с выявленными нарушениями</COLUMN_TEXT>
+               <COLUMN_INDEX>9</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма уменьшения оплаты (руб.)</COLUMN_TEXT>
+               <COLUMN_INDEX>10</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма штрафа      (руб.)</COLUMN_TEXT>
+               <COLUMN_INDEX>11</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Примечание</COLUMN_TEXT>
+               <COLUMN_INDEX>12</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+         </COLUMNS>
+         <ROWS>
+            <TemplateRowDynamic>
+               <ROW_TEXT>Свыше 48 часов</ROW_TEXT>
+               <ROW_NUM>1</ROW_NUM>
+               <ROW_DESCRIPTION/>
+            </TemplateRowDynamic>
+            <TemplateRowDynamic>
+               <ROW_TEXT>Менее 48 часов</ROW_TEXT>
+               <ROW_NUM>2</ROW_NUM>
+               <ROW_DESCRIPTION/>
+            </TemplateRowDynamic>
+            <TemplateRowDynamic>
+               <ROW_TEXT>Всего</ROW_TEXT>
+               <ROW_NUM>3</ROW_NUM>
+               <ROW_DESCRIPTION/>
+            </TemplateRowDynamic>
+         </ROWS>
+      </TemplateTableDynamic>
+   
+      <TemplateTableDynamic>
+         <TABLE_NAME>Июль</TABLE_NAME>
+         <TABLE_DESCRIPTION/>
+         <COLUMNS>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Давность травмы</COLUMN_TEXT>
+               <COLUMN_INDEX>1</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Всего оплаченных случаев (консервативного и хирургического лечения)</COLUMN_TEXT>
+               <COLUMN_INDEX>2</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>из них, оплачено случаев хирургического лечения</COLUMN_TEXT>
+               <COLUMN_INDEX>3</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма оплаты случаев хирургического лечения</COLUMN_TEXT>
+               <COLUMN_INDEX>4</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Кол-во МО, в которых проведены ЭКМП</COLUMN_TEXT>
+               <COLUMN_INDEX>5</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Способ отбора случаев на ЭКМП:  отбор СМО - 0,     отбор ТФОМС - 1</COLUMN_TEXT>
+               <COLUMN_INDEX>6</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Всего случаев, подвергнутых ЭКМП</COLUMN_TEXT>
+               <COLUMN_INDEX>7</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма оплаты случаев, подвергнутых ЭКМП (руб.)</COLUMN_TEXT>
+               <COLUMN_INDEX>8</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Всего случаев с выявленными нарушениями</COLUMN_TEXT>
+               <COLUMN_INDEX>9</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма уменьшения оплаты (руб.)</COLUMN_TEXT>
+               <COLUMN_INDEX>10</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма штрафа      (руб.)</COLUMN_TEXT>
+               <COLUMN_INDEX>11</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Примечание</COLUMN_TEXT>
+               <COLUMN_INDEX>12</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+         </COLUMNS>
+         <ROWS>
+            <TemplateRowDynamic>
+               <ROW_TEXT>Свыше 48 часов</ROW_TEXT>
+               <ROW_NUM>1</ROW_NUM>
+               <ROW_DESCRIPTION/>
+            </TemplateRowDynamic>
+            <TemplateRowDynamic>
+               <ROW_TEXT>Менее 48 часов</ROW_TEXT>
+               <ROW_NUM>2</ROW_NUM>
+               <ROW_DESCRIPTION/>
+            </TemplateRowDynamic>
+            <TemplateRowDynamic>
+               <ROW_TEXT>Всего</ROW_TEXT>
+               <ROW_NUM>3</ROW_NUM>
+               <ROW_DESCRIPTION/>
+            </TemplateRowDynamic>
+         </ROWS>
+      </TemplateTableDynamic>
+   
+      <TemplateTableDynamic>
+         <TABLE_NAME>Август</TABLE_NAME>
+         <TABLE_DESCRIPTION/>
+         <COLUMNS>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Давность травмы</COLUMN_TEXT>
+               <COLUMN_INDEX>1</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Всего оплаченных случаев (консервативного и хирургического лечения)</COLUMN_TEXT>
+               <COLUMN_INDEX>2</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>из них, оплачено случаев хирургического лечения</COLUMN_TEXT>
+               <COLUMN_INDEX>3</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма оплаты случаев хирургического лечения</COLUMN_TEXT>
+               <COLUMN_INDEX>4</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Кол-во МО, в которых проведены ЭКМП</COLUMN_TEXT>
+               <COLUMN_INDEX>5</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Способ отбора случаев на ЭКМП:  отбор СМО - 0,     отбор ТФОМС - 1</COLUMN_TEXT>
+               <COLUMN_INDEX>6</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Всего случаев, подвергнутых ЭКМП</COLUMN_TEXT>
+               <COLUMN_INDEX>7</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма оплаты случаев, подвергнутых ЭКМП (руб.)</COLUMN_TEXT>
+               <COLUMN_INDEX>8</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Всего случаев с выявленными нарушениями</COLUMN_TEXT>
+               <COLUMN_INDEX>9</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма уменьшения оплаты (руб.)</COLUMN_TEXT>
+               <COLUMN_INDEX>10</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма штрафа      (руб.)</COLUMN_TEXT>
+               <COLUMN_INDEX>11</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Примечание</COLUMN_TEXT>
+               <COLUMN_INDEX>12</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+         </COLUMNS>
+         <ROWS>
+            <TemplateRowDynamic>
+               <ROW_TEXT>Свыше 48 часов</ROW_TEXT>
+               <ROW_NUM>1</ROW_NUM>
+               <ROW_DESCRIPTION/>
+            </TemplateRowDynamic>
+            <TemplateRowDynamic>
+               <ROW_TEXT>Менее 48 часов</ROW_TEXT>
+               <ROW_NUM>2</ROW_NUM>
+               <ROW_DESCRIPTION/>
+            </TemplateRowDynamic>
+            <TemplateRowDynamic>
+               <ROW_TEXT>Всего</ROW_TEXT>
+               <ROW_NUM>3</ROW_NUM>
+               <ROW_DESCRIPTION/>
+            </TemplateRowDynamic>
+         </ROWS>
+      </TemplateTableDynamic>
+   
+      <TemplateTableDynamic>
+         <TABLE_NAME>Сентябрь</TABLE_NAME>
+         <TABLE_DESCRIPTION/>
+         <COLUMNS>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Давность травмы</COLUMN_TEXT>
+               <COLUMN_INDEX>1</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Всего оплаченных случаев (консервативного и хирургического лечения)</COLUMN_TEXT>
+               <COLUMN_INDEX>2</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>из них, оплачено случаев хирургического лечения</COLUMN_TEXT>
+               <COLUMN_INDEX>3</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма оплаты случаев хирургического лечения</COLUMN_TEXT>
+               <COLUMN_INDEX>4</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Кол-во МО, в которых проведены ЭКМП</COLUMN_TEXT>
+               <COLUMN_INDEX>5</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Способ отбора случаев на ЭКМП:  отбор СМО - 0,     отбор ТФОМС - 1</COLUMN_TEXT>
+               <COLUMN_INDEX>6</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Всего случаев, подвергнутых ЭКМП</COLUMN_TEXT>
+               <COLUMN_INDEX>7</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма оплаты случаев, подвергнутых ЭКМП (руб.)</COLUMN_TEXT>
+               <COLUMN_INDEX>8</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Всего случаев с выявленными нарушениями</COLUMN_TEXT>
+               <COLUMN_INDEX>9</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма уменьшения оплаты (руб.)</COLUMN_TEXT>
+               <COLUMN_INDEX>10</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма штрафа      (руб.)</COLUMN_TEXT>
+               <COLUMN_INDEX>11</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Примечание</COLUMN_TEXT>
+               <COLUMN_INDEX>12</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+         </COLUMNS>
+         <ROWS>
+            <TemplateRowDynamic>
+               <ROW_TEXT>Свыше 48 часов</ROW_TEXT>
+               <ROW_NUM>1</ROW_NUM>
+               <ROW_DESCRIPTION/>
+            </TemplateRowDynamic>
+            <TemplateRowDynamic>
+               <ROW_TEXT>Менее 48 часов</ROW_TEXT>
+               <ROW_NUM>2</ROW_NUM>
+               <ROW_DESCRIPTION/>
+            </TemplateRowDynamic>
+            <TemplateRowDynamic>
+               <ROW_TEXT>Всего</ROW_TEXT>
+               <ROW_NUM>3</ROW_NUM>
+               <ROW_DESCRIPTION/>
+            </TemplateRowDynamic>
+         </ROWS>
+      </TemplateTableDynamic>
+   
+      <TemplateTableDynamic>
+         <TABLE_NAME>Октябрь</TABLE_NAME>
+         <TABLE_DESCRIPTION/>
+         <COLUMNS>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Давность травмы</COLUMN_TEXT>
+               <COLUMN_INDEX>1</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Всего оплаченных случаев (консервативного и хирургического лечения)</COLUMN_TEXT>
+               <COLUMN_INDEX>2</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>из них, оплачено случаев хирургического лечения</COLUMN_TEXT>
+               <COLUMN_INDEX>3</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма оплаты случаев хирургического лечения</COLUMN_TEXT>
+               <COLUMN_INDEX>4</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Кол-во МО, в которых проведены ЭКМП</COLUMN_TEXT>
+               <COLUMN_INDEX>5</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Способ отбора случаев на ЭКМП:  отбор СМО - 0,     отбор ТФОМС - 1</COLUMN_TEXT>
+               <COLUMN_INDEX>6</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Всего случаев, подвергнутых ЭКМП</COLUMN_TEXT>
+               <COLUMN_INDEX>7</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма оплаты случаев, подвергнутых ЭКМП (руб.)</COLUMN_TEXT>
+               <COLUMN_INDEX>8</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Всего случаев с выявленными нарушениями</COLUMN_TEXT>
+               <COLUMN_INDEX>9</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма уменьшения оплаты (руб.)</COLUMN_TEXT>
+               <COLUMN_INDEX>10</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма штрафа      (руб.)</COLUMN_TEXT>
+               <COLUMN_INDEX>11</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Примечание</COLUMN_TEXT>
+               <COLUMN_INDEX>12</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+         </COLUMNS>
+         <ROWS>
+            <TemplateRowDynamic>
+               <ROW_TEXT>Свыше 48 часов</ROW_TEXT>
+               <ROW_NUM>1</ROW_NUM>
+               <ROW_DESCRIPTION/>
+            </TemplateRowDynamic>
+            <TemplateRowDynamic>
+               <ROW_TEXT>Менее 48 часов</ROW_TEXT>
+               <ROW_NUM>2</ROW_NUM>
+               <ROW_DESCRIPTION/>
+            </TemplateRowDynamic>
+            <TemplateRowDynamic>
+               <ROW_TEXT>Всего</ROW_TEXT>
+               <ROW_NUM>3</ROW_NUM>
+               <ROW_DESCRIPTION/>
+            </TemplateRowDynamic>
+         </ROWS>
+      </TemplateTableDynamic>
+   
+      <TemplateTableDynamic>
+         <TABLE_NAME>Ноябрь</TABLE_NAME>
+         <TABLE_DESCRIPTION/>
+         <COLUMNS>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Давность травмы</COLUMN_TEXT>
+               <COLUMN_INDEX>1</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Всего оплаченных случаев (консервативного и хирургического лечения)</COLUMN_TEXT>
+               <COLUMN_INDEX>2</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>из них, оплачено случаев хирургического лечения</COLUMN_TEXT>
+               <COLUMN_INDEX>3</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма оплаты случаев хирургического лечения</COLUMN_TEXT>
+               <COLUMN_INDEX>4</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Кол-во МО, в которых проведены ЭКМП</COLUMN_TEXT>
+               <COLUMN_INDEX>5</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Способ отбора случаев на ЭКМП:  отбор СМО - 0,     отбор ТФОМС - 1</COLUMN_TEXT>
+               <COLUMN_INDEX>6</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Всего случаев, подвергнутых ЭКМП</COLUMN_TEXT>
+               <COLUMN_INDEX>7</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма оплаты случаев, подвергнутых ЭКМП (руб.)</COLUMN_TEXT>
+               <COLUMN_INDEX>8</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Всего случаев с выявленными нарушениями</COLUMN_TEXT>
+               <COLUMN_INDEX>9</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма уменьшения оплаты (руб.)</COLUMN_TEXT>
+               <COLUMN_INDEX>10</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма штрафа      (руб.)</COLUMN_TEXT>
+               <COLUMN_INDEX>11</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Примечание</COLUMN_TEXT>
+               <COLUMN_INDEX>12</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+         </COLUMNS>
+         <ROWS>
+            <TemplateRowDynamic>
+               <ROW_TEXT>Свыше 48 часов</ROW_TEXT>
+               <ROW_NUM>1</ROW_NUM>
+               <ROW_DESCRIPTION/>
+            </TemplateRowDynamic>
+            <TemplateRowDynamic>
+               <ROW_TEXT>Менее 48 часов</ROW_TEXT>
+               <ROW_NUM>2</ROW_NUM>
+               <ROW_DESCRIPTION/>
+            </TemplateRowDynamic>
+            <TemplateRowDynamic>
+               <ROW_TEXT>Всего</ROW_TEXT>
+               <ROW_NUM>3</ROW_NUM>
+               <ROW_DESCRIPTION/>
+            </TemplateRowDynamic>
+         </ROWS>
+      </TemplateTableDynamic>
+   
+      
+      <TemplateTableDynamic>
+         <TABLE_NAME>Декабрь</TABLE_NAME>
+         <TABLE_DESCRIPTION/>
+         <COLUMNS>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Давность травмы</COLUMN_TEXT>
+               <COLUMN_INDEX>1</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Всего оплаченных случаев (консервативного и хирургического лечения)</COLUMN_TEXT>
+               <COLUMN_INDEX>2</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>из них, оплачено случаев хирургического лечения</COLUMN_TEXT>
+               <COLUMN_INDEX>3</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма оплаты случаев хирургического лечения</COLUMN_TEXT>
+               <COLUMN_INDEX>4</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Кол-во МО, в которых проведены ЭКМП</COLUMN_TEXT>
+               <COLUMN_INDEX>5</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Способ отбора случаев на ЭКМП:  отбор СМО - 0,     отбор ТФОМС - 1</COLUMN_TEXT>
+               <COLUMN_INDEX>6</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Всего случаев, подвергнутых ЭКМП</COLUMN_TEXT>
+               <COLUMN_INDEX>7</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма оплаты случаев, подвергнутых ЭКМП (руб.)</COLUMN_TEXT>
+               <COLUMN_INDEX>8</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Всего случаев с выявленными нарушениями</COLUMN_TEXT>
+               <COLUMN_INDEX>9</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма уменьшения оплаты (руб.)</COLUMN_TEXT>
+               <COLUMN_INDEX>10</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма штрафа      (руб.)</COLUMN_TEXT>
+               <COLUMN_INDEX>11</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Примечание</COLUMN_TEXT>
+               <COLUMN_INDEX>12</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+         </COLUMNS>
+         <ROWS>
+            <TemplateRowDynamic>
+               <ROW_TEXT>Свыше 48 часов</ROW_TEXT>
+               <ROW_NUM>1</ROW_NUM>
+               <ROW_DESCRIPTION/>
+            </TemplateRowDynamic>
+            <TemplateRowDynamic>
+               <ROW_TEXT>Менее 48 часов</ROW_TEXT>
+               <ROW_NUM>2</ROW_NUM>
+               <ROW_DESCRIPTION/>
+            </TemplateRowDynamic>
+            <TemplateRowDynamic>
+               <ROW_TEXT>Всего</ROW_TEXT>
+               <ROW_NUM>3</ROW_NUM>
+               <ROW_DESCRIPTION/>
+            </TemplateRowDynamic>
+         </ROWS>
+      </TemplateTableDynamic>
+   </TABLE>
+</TemplateDynamicReport>

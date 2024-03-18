@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TemplateDynamicReport xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <REPORT_NAME>Вирусный гепатит С по поручению ФФОМС</REPORT_NAME>
+   <REPORT_DESCRIPTION>Вирусный гепатит С</REPORT_DESCRIPTION>
+   <REPORT_DATE>2024-01-25T14:42:50</REPORT_DATE>
+   <IsUserRow>false</IsUserRow>
+   <Emails/>
+   <TABLE>
+      <TemplateTableDynamic>
+         <TABLE_NAME>Гепатит С</TABLE_NAME>
+         <TABLE_DESCRIPTION/>
+         <ROWS/>
+         <COLUMNS>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Всего оплаченных случаев с хроническим вируным гепатитом С (дневной стационар)</COLUMN_TEXT>
+               <COLUMN_INDEX>1</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма оплаты случаев с хроническим вируным гепатитом С (дневной стационар)</COLUMN_TEXT>
+               <COLUMN_INDEX>2</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Кол-во МО, в которых проведены ЭКМП</COLUMN_TEXT>
+               <COLUMN_INDEX>3</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Способ отбора случаев на ЭКМП:  отбор СМО - 0,     отбор ТФОМС - 1</COLUMN_TEXT>
+               <COLUMN_INDEX>4</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Всего случаев, подвергнутых ЭКМП:</COLUMN_TEXT>
+               <COLUMN_INDEX>5</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>в том числе с оформлением чек-листа</COLUMN_TEXT>
+               <COLUMN_INDEX>6</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Обязанность оформления чек-листов (Да - 1, Нет - 0)</COLUMN_TEXT>
+               <COLUMN_INDEX>7</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма оплаты случаев, подвергнутых ЭКМП (руб.)</COLUMN_TEXT>
+               <COLUMN_INDEX>8</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Всего случаев ЭКМП с выявленными нарушениями</COLUMN_TEXT>
+               <COLUMN_INDEX>9</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма уменьшения оплаты (руб.)</COLUMN_TEXT>
+               <COLUMN_INDEX>10</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма штрафа (руб.)</COLUMN_TEXT>
+               <COLUMN_INDEX>11</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+         </COLUMNS>
+      </TemplateTableDynamic>
+      <TemplateTableDynamic>
+         <TABLE_NAME>Сахарный диабет</TABLE_NAME>
+         <TABLE_DESCRIPTION/>
+         <ROWS>
+            <TemplateRowDynamic>
+               <ROW_TEXT>СД 1 типа у детей</ROW_TEXT>
+               <ROW_NUM>1</ROW_NUM>
+               <ROW_DESCRIPTION/>
+            </TemplateRowDynamic>
+            <TemplateRowDynamic>
+               <ROW_TEXT>СД 2 типа у детей</ROW_TEXT>
+               <ROW_NUM>2</ROW_NUM>
+               <ROW_DESCRIPTION/>
+            </TemplateRowDynamic>
+            <TemplateRowDynamic>
+               <ROW_TEXT>СД 1 типа у взрослых</ROW_TEXT>
+               <ROW_NUM>3</ROW_NUM>
+               <ROW_DESCRIPTION/>
+            </TemplateRowDynamic>
+            <TemplateRowDynamic>
+               <ROW_TEXT>СД 2 типа у взрослых</ROW_TEXT>
+               <ROW_NUM>4</ROW_NUM>
+               <ROW_DESCRIPTION/>
+            </TemplateRowDynamic>
+         </ROWS>
+         <COLUMNS>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Тип диабета и возрастная группа</COLUMN_TEXT>
+               <COLUMN_INDEX>1</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Число застрахованных лиц</COLUMN_TEXT>
+               <COLUMN_INDEX>2</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Всего оплаченных случаев</COLUMN_TEXT>
+               <COLUMN_INDEX>3</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма оплаты случаев</COLUMN_TEXT>
+               <COLUMN_INDEX>4</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Кол-во МО, в которых проведены ЭКМП</COLUMN_TEXT>
+               <COLUMN_INDEX>5</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Способ отбора случаев на ЭКМП:  отбор СМО - 0,     отбор ТФОМС - 1</COLUMN_TEXT>
+               <COLUMN_INDEX>6</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Всего случаев, подвергнутых ЭКМП</COLUMN_TEXT>
+               <COLUMN_INDEX>7</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма оплаты случаев, подвергнутых ЭКМП (руб.)</COLUMN_TEXT>
+               <COLUMN_INDEX>8</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Всего случаев с выявленными нарушениями</COLUMN_TEXT>
+               <COLUMN_INDEX>9</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма уменьшения оплаты    (руб.)</COLUMN_TEXT>
+               <COLUMN_INDEX>10</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Сумма штрафа      (руб.)</COLUMN_TEXT>
+               <COLUMN_INDEX>11</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+            <TemplateColumnDynamic>
+               <COLUMN_TEXT>Примечание</COLUMN_TEXT>
+               <COLUMN_INDEX>12</COLUMN_INDEX>
+               <COLUMN_DESCRIPTION/>
+            </TemplateColumnDynamic>
+         </COLUMNS>
+      </TemplateTableDynamic>
+   </TABLE>
+</TemplateDynamicReport>

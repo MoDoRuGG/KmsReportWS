@@ -31,14 +31,14 @@ namespace KmsReportWS.Service
 
         public void AddEmail(string email, string description)
         {
-            var Email = new Email
+            var Email1 = new Email
             {
                 Email1 = email,
                 Description = description
 
             };
 
-            db.Email.InsertOnSubmit(Email);
+            db.Email.InsertOnSubmit(Email1);
             db.SubmitChanges();
 
         }
@@ -54,8 +54,8 @@ namespace KmsReportWS.Service
 
         public void DeleteEmail(int idEmail)
         {
-            var Email = db.Email.First(x => x.id == idEmail);
-            db.Email.DeleteOnSubmit(Email);
+            var Email1 = db.Email.First(x => x.id == idEmail);
+            db.Email.DeleteOnSubmit(Email1);
             db.SubmitChanges();
 
         }

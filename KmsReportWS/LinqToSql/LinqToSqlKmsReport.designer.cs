@@ -126,15 +126,15 @@ namespace KmsReportWS.LinqToSql
     partial void InsertReport_ReqVCR(Report_ReqVCR instance);
     partial void UpdateReport_ReqVCR(Report_ReqVCR instance);
     partial void DeleteReport_ReqVCR(Report_ReqVCR instance);
-    partial void InsertQuantityPlan(QuantityPlan instance);
-    partial void UpdateQuantityPlan(QuantityPlan instance);
-    partial void DeleteQuantityPlan(QuantityPlan instance);
     partial void InsertReport_Quantity(Report_Quantity instance);
     partial void UpdateReport_Quantity(Report_Quantity instance);
     partial void DeleteReport_Quantity(Report_Quantity instance);
     partial void InsertReport_Targeted_Allowances(Report_Targeted_Allowances instance);
     partial void UpdateReport_Targeted_Allowances(Report_Targeted_Allowances instance);
     partial void DeleteReport_Targeted_Allowances(Report_Targeted_Allowances instance);
+    partial void InsertQuantityPlan(QuantityPlan instance);
+    partial void UpdateQuantityPlan(QuantityPlan instance);
+    partial void DeleteQuantityPlan(QuantityPlan instance);
     #endregion
 		
 		public LinqToSqlKmsReportDataContext(string connection) : 
@@ -433,14 +433,6 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
-		public System.Data.Linq.Table<QuantityPlan> QuantityPlan
-		{
-			get
-			{
-				return this.GetTable<QuantityPlan>();
-			}
-		}
-		
 		public System.Data.Linq.Table<Report_Quantity> Report_Quantity
 		{
 			get
@@ -454,6 +446,14 @@ namespace KmsReportWS.LinqToSql
 			get
 			{
 				return this.GetTable<Report_Targeted_Allowances>();
+			}
+		}
+		
+		public System.Data.Linq.Table<QuantityPlan> QuantityPlan
+		{
+			get
+			{
+				return this.GetTable<QuantityPlan>();
 			}
 		}
 		
@@ -12271,181 +12271,6 @@ namespace KmsReportWS.LinqToSql
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.QuantityPlan")]
-	public partial class QuantityPlan : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _Id_QuantityPlan;
-		
-		private string _Yymm;
-		
-		private decimal _Value;
-		
-		private string _Id_Region;
-		
-		private EntityRef<Region> _Region;
-		
-    #region Определения метода расширяемости
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnId_QuantityPlanChanging(int value);
-    partial void OnId_QuantityPlanChanged();
-    partial void OnYymmChanging(string value);
-    partial void OnYymmChanged();
-    partial void OnValueChanging(decimal value);
-    partial void OnValueChanged();
-    partial void OnId_RegionChanging(string value);
-    partial void OnId_RegionChanged();
-    #endregion
-		
-		public QuantityPlan()
-		{
-			this._Region = default(EntityRef<Region>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_QuantityPlan", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int Id_QuantityPlan
-		{
-			get
-			{
-				return this._Id_QuantityPlan;
-			}
-			set
-			{
-				if ((this._Id_QuantityPlan != value))
-				{
-					this.OnId_QuantityPlanChanging(value);
-					this.SendPropertyChanging();
-					this._Id_QuantityPlan = value;
-					this.SendPropertyChanged("Id_QuantityPlan");
-					this.OnId_QuantityPlanChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Yymm", DbType="VarChar(4) NOT NULL", CanBeNull=false)]
-		public string Yymm
-		{
-			get
-			{
-				return this._Yymm;
-			}
-			set
-			{
-				if ((this._Yymm != value))
-				{
-					this.OnYymmChanging(value);
-					this.SendPropertyChanging();
-					this._Yymm = value;
-					this.SendPropertyChanged("Yymm");
-					this.OnYymmChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Value", DbType="Decimal(15,2) NOT NULL")]
-		public decimal Value
-		{
-			get
-			{
-				return this._Value;
-			}
-			set
-			{
-				if ((this._Value != value))
-				{
-					this.OnValueChanging(value);
-					this.SendPropertyChanging();
-					this._Value = value;
-					this.SendPropertyChanged("Value");
-					this.OnValueChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_Region", DbType="VarChar(10) NOT NULL", CanBeNull=false)]
-		public string Id_Region
-		{
-			get
-			{
-				return this._Id_Region;
-			}
-			set
-			{
-				if ((this._Id_Region != value))
-				{
-					if (this._Region.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnId_RegionChanging(value);
-					this.SendPropertyChanging();
-					this._Id_Region = value;
-					this.SendPropertyChanged("Id_Region");
-					this.OnId_RegionChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Region_QuantityPlan", Storage="_Region", ThisKey="Id_Region", OtherKey="id", IsForeignKey=true)]
-		public Region Region
-		{
-			get
-			{
-				return this._Region.Entity;
-			}
-			set
-			{
-				Region previousValue = this._Region.Entity;
-				if (((previousValue != value) 
-							|| (this._Region.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Region.Entity = null;
-						previousValue.QuantityPlan.Remove(this);
-					}
-					this._Region.Entity = value;
-					if ((value != null))
-					{
-						value.QuantityPlan.Add(this);
-						this._Id_Region = value.id;
-					}
-					else
-					{
-						this._Id_Region = default(string);
-					}
-					this.SendPropertyChanged("Region");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Report_Quantity")]
 	public partial class Report_Quantity : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -13275,6 +13100,181 @@ namespace KmsReportWS.LinqToSql
 						this._Id_Report_Data = default(int);
 					}
 					this.SendPropertyChanged("Report_Data");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.QuantityPlan")]
+	public partial class QuantityPlan : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Id_QuantityPlan;
+		
+		private string _Yymm;
+		
+		private int _Value;
+		
+		private string _Id_Region;
+		
+		private EntityRef<Region> _Region;
+		
+    #region Определения метода расширяемости
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnId_QuantityPlanChanging(int value);
+    partial void OnId_QuantityPlanChanged();
+    partial void OnYymmChanging(string value);
+    partial void OnYymmChanged();
+    partial void OnValueChanging(int value);
+    partial void OnValueChanged();
+    partial void OnId_RegionChanging(string value);
+    partial void OnId_RegionChanged();
+    #endregion
+		
+		public QuantityPlan()
+		{
+			this._Region = default(EntityRef<Region>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_QuantityPlan", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Id_QuantityPlan
+		{
+			get
+			{
+				return this._Id_QuantityPlan;
+			}
+			set
+			{
+				if ((this._Id_QuantityPlan != value))
+				{
+					this.OnId_QuantityPlanChanging(value);
+					this.SendPropertyChanging();
+					this._Id_QuantityPlan = value;
+					this.SendPropertyChanged("Id_QuantityPlan");
+					this.OnId_QuantityPlanChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Yymm", DbType="VarChar(4) NOT NULL", CanBeNull=false)]
+		public string Yymm
+		{
+			get
+			{
+				return this._Yymm;
+			}
+			set
+			{
+				if ((this._Yymm != value))
+				{
+					this.OnYymmChanging(value);
+					this.SendPropertyChanging();
+					this._Yymm = value;
+					this.SendPropertyChanged("Yymm");
+					this.OnYymmChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Value", DbType="Int")]
+		public int Value
+		{
+			get
+			{
+				return this._Value;
+			}
+			set
+			{
+				if ((this._Value != value))
+				{
+					this.OnValueChanging(value);
+					this.SendPropertyChanging();
+					this._Value = value;
+					this.SendPropertyChanged("Value");
+					this.OnValueChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_Region", DbType="VarChar(10) NOT NULL", CanBeNull=false)]
+		public string Id_Region
+		{
+			get
+			{
+				return this._Id_Region;
+			}
+			set
+			{
+				if ((this._Id_Region != value))
+				{
+					if (this._Region.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnId_RegionChanging(value);
+					this.SendPropertyChanging();
+					this._Id_Region = value;
+					this.SendPropertyChanged("Id_Region");
+					this.OnId_RegionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Region_QuantityPlan", Storage="_Region", ThisKey="Id_Region", OtherKey="id", IsForeignKey=true)]
+		public Region Region
+		{
+			get
+			{
+				return this._Region.Entity;
+			}
+			set
+			{
+				Region previousValue = this._Region.Entity;
+				if (((previousValue != value) 
+							|| (this._Region.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Region.Entity = null;
+						previousValue.QuantityPlan.Remove(this);
+					}
+					this._Region.Entity = value;
+					if ((value != null))
+					{
+						value.QuantityPlan.Add(this);
+						this._Id_Region = value.id;
+					}
+					else
+					{
+						this._Id_Region = default(string);
+					}
+					this.SendPropertyChanged("Region");
 				}
 			}
 		}

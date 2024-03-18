@@ -220,6 +220,8 @@ namespace KmsReportWS.Collector.ConsolidateReport
                 CountCaseDefectedBySmoPlan = table7Data.Where(x => x.RowNum == "4").Sum(x => x.SumVidpomAnother),
                 CountEkmpDefectedCaseTarget = table7Data.Where(x => x.RowNum == "5").Sum(x => x.SumVidpom),
                 CountEkmpDefectedCasePlan = table7Data.Where(x => x.RowNum == "5").Sum(x => x.SumVidpomAnother),
+                CountEkmpBadTarget = table7Data.Where(x => x.RowNum == "6").Sum(x => x.SumVidpom),
+                CountEkmpBadPlan = table7Data.Where(x => x.RowNum == "6").Sum(x => x.SumVidpomAnother),
                 CountEkmpBadDs = table7Data.Where(x => x.RowNum == "6.8").Sum(x => x.SumVidpom+x.SumVidpomAnother),
                 CountEkmpBadDsNotAffected = table7Data.Where(x => x.RowNum == "6.8.5").Sum(x => x.SumVidpom+x.SumVidpomAnother),
                 CountEkmpBadDsProlonger = table7Data.Where(x => x.RowNum == "6.8.6").Sum(x => x.SumVidpom+x.SumVidpomAnother),

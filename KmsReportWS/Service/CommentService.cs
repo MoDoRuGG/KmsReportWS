@@ -110,7 +110,7 @@ namespace KmsReportWS.Service
                 };
                 db.Comment.InsertOnSubmit(com);
                 db.SubmitChanges();
-
+                 
                 _notificationService.SendNewCommentNotification(idReport, idEmp, comment);
             }
             catch (Exception ex)

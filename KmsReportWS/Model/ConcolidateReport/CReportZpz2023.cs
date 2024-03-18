@@ -54,6 +54,8 @@
         public decimal CountCaseDefectedBySmoPlan { get; set; }
         public decimal CountEkmpDefectedCaseTarget { get; set; }
         public decimal CountEkmpDefectedCasePlan { get; set; }
+        public decimal CountEkmpBadTarget { get; set; }
+        public decimal CountEkmpBadPlan { get; set; }
         public decimal CountEkmpBadDs { get; set; }
         public decimal CountEkmpBadDsNotAffected { get; set; }
         public decimal CountEkmpBadDsProlonger { get; set; }

@@ -544,15 +544,6 @@
       <Association Name="Report_Data_Report_ReqVCR" Member="Report_Data" ThisKey="Id_Report_Data" OtherKey="Id" Type="Report_Data" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.QuantityPlan" Member="QuantityPlan">
-    <Type Name="QuantityPlan">
-      <Column Name="Id_QuantityPlan" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="Yymm" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
-      <Column Name="Value" Type="System.Decimal" DbType="Decimal(15,2) NOT NULL" CanBeNull="false" />
-      <Column Name="Id_Region" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
-      <Association Name="Region_QuantityPlan" Member="Region" ThisKey="Id_Region" OtherKey="id" Type="Region" IsForeignKey="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.Report_Quantity" Member="Report_Quantity">
     <Type Name="Report_Quantity">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -590,6 +581,15 @@
       <Column Name="Comments" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
       <Column Name="RowNumID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="Report_Data_Report_Targeted_Allowances" Member="Report_Data" ThisKey="Id_Report_Data" OtherKey="Id" Type="Report_Data" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.QuantityPlan" Member="QuantityPlan">
+    <Type Name="QuantityPlan">
+      <Column Name="Id_QuantityPlan" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Yymm" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="Value" Type="System.Int32" DbType="Int" CanBeNull="false" />
+      <Column Name="Id_Region" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Association Name="Region_QuantityPlan" Member="Region" ThisKey="Id_Region" OtherKey="id" Type="Region" IsForeignKey="true" />
     </Type>
   </Table>
   <Function Name="dbo.cadre_rapport" Method="cadre_rapport" IsComposable="true">
