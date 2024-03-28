@@ -750,4 +750,16 @@
       <Column Name="RepType" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.OpedNorm" Method="OpedNorm" IsComposable="true">
+    <Parameter Name="yymm_start" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="yymm_end" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="region" Type="System.String" DbType="VarChar(7)" />
+    <ElementType Name="OpedNormResult">
+      <Column Name="RowNum" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="App" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
+      <Column Name="Ks" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
+      <Column Name="Ds" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
+      <Column Name="Smp" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
+    </ElementType>
+  </Function>
 </Database>

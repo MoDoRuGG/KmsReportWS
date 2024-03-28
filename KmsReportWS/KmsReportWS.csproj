@@ -106,6 +106,7 @@
   <ItemGroup>
     <Compile Include="Collector\BaseReport\BaseReportCollector.cs" />
     <Compile Include="Collector\BaseReport\F262Collector.cs" />
+    <Compile Include="Collector\BaseReport\OpedCollector.cs" />
     <Compile Include="Collector\BaseReport\F294Collector.cs" />
     <Compile Include="Collector\BaseReport\ZpzCollector.cs" />
     <Compile Include="Collector\BaseReport\ReportCollectorFactory.cs" />

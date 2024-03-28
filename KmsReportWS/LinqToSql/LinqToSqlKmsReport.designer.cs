@@ -487,6 +487,12 @@ namespace KmsReportWS.LinqToSql
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), year);
 			return ((ISingleResult<p_ConsolidateQuantityAddRemoveResult>)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.OpedNorm", IsComposable=true)]
+		public IQueryable<OpedNormResult> OpedNorm([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(4)")] string yymm_start, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(4)")] string yymm_end, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(7)")] string region)
+		{
+			return this.CreateMethodCallQuery<OpedNormResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), yymm_start, yymm_end, region);
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Comment")]
@@ -15711,6 +15717,104 @@ namespace KmsReportWS.LinqToSql
 				if ((this._RepType != value))
 				{
 					this._RepType = value;
+				}
+			}
+		}
+	}
+	
+	public partial class OpedNormResult
+	{
+		
+		private string _RowNum;
+		
+		private System.Nullable<decimal> _App;
+		
+		private System.Nullable<decimal> _Ks;
+		
+		private System.Nullable<decimal> _Ds;
+		
+		private System.Nullable<decimal> _Smp;
+		
+		public OpedNormResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RowNum", DbType="VarChar(20)")]
+		public string RowNum
+		{
+			get
+			{
+				return this._RowNum;
+			}
+			set
+			{
+				if ((this._RowNum != value))
+				{
+					this._RowNum = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_App", DbType="Decimal(38,3)")]
+		public System.Nullable<decimal> App
+		{
+			get
+			{
+				return this._App;
+			}
+			set
+			{
+				if ((this._App != value))
+				{
+					this._App = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ks", DbType="Decimal(38,3)")]
+		public System.Nullable<decimal> Ks
+		{
+			get
+			{
+				return this._Ks;
+			}
+			set
+			{
+				if ((this._Ks != value))
+				{
+					this._Ks = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ds", DbType="Decimal(38,3)")]
+		public System.Nullable<decimal> Ds
+		{
+			get
+			{
+				return this._Ds;
+			}
+			set
+			{
+				if ((this._Ds != value))
+				{
+					this._Ds = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Smp", DbType="Decimal(38,3)")]
+		public System.Nullable<decimal> Smp
+		{
+			get
+			{
+				return this._Smp;
+			}
+			set
+			{
+				if ((this._Smp != value))
+				{
+					this._Smp = value;
 				}
 			}
 		}
