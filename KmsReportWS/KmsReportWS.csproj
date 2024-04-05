@@ -148,6 +148,7 @@
     <Compile Include="Handler\FOpedUHandler.cs" />
     <Compile Include="Handler\MonitoringVCRHandler.cs" />
     <Compile Include="Handler\QuantityPlanDictionaryHandler.cs" />
+    <Compile Include="Handler\ReportPVPLoadHandler.cs" />
     <Compile Include="Handler\ReportTargetedAllowancesHandler.cs" />
     <Compile Include="Handler\ReportQuantityHandler.cs" />
     <Compile Include="Handler\ReportReqVCRHandler.cs" />
@@ -220,6 +221,7 @@
     <Compile Include="Model\FSSMonitoringPgDataDto.cs" />
     <Compile Include="Model\ReportDynamicScanModel.cs" />
     <Compile Include="Model\ReportScanModel.cs" />
+    <Compile Include="Model\Report\ReportPVPLoad.cs" />
     <Compile Include="Model\Report\ReportTargetedAllowances.cs" />
     <Compile Include="Model\Report\ReportReqVCR.cs" />
     <Compile Include="Model\Report\ReportOpedFinance3.cs" />
@@ -291,9 +293,6 @@
     <Content Include="NLog.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="LinqToSql\LinqToSqlKmsReport.dbml.layout">
-      <DependentUpon>LinqToSqlKmsReport.dbml</DependentUpon>
-    </None>
     <None Include="NLog.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -313,7 +312,11 @@
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="LinqToSql\LinqToSqlKmsReport.dbml.layout">
+      <DependentUpon>LinqToSqlKmsReport.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

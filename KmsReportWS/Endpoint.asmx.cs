@@ -370,6 +370,12 @@ namespace KmsReportWS
         }
 
         [WebMethod]
+        public void WebReportPVPLoad(ReportPVPLoad report)
+        {
+
+        }
+
+        [WebMethod]
         public void WebReportReqVCR(ReportReqVCR report)
         {
 

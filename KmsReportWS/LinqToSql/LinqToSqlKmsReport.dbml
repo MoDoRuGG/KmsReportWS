@@ -174,6 +174,7 @@
       <Association Name="Report_Data_Report_ReqVCR" Member="Report_ReqVCR" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_ReqVCR" />
       <Association Name="Report_Data_Report_Quantity" Member="Report_Quantity" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_Quantity" />
       <Association Name="Report_Data_Report_Targeted_Allowances" Member="Report_Targeted_Allowances" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_Targeted_Allowances" />
+      <Association Name="Report_Data_Report_PVP_Load" Member="Report_PVP_Load" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_PVP_Load" />
       <Association Name="Report_Type_Report_Data" Member="Report_Type" ThisKey="Id_Report" OtherKey="Id" Type="Report_Type" IsForeignKey="true" />
       <Association Name="Report_Flow_Report_Data" Member="Report_Flow" ThisKey="Id_Flow" OtherKey="Id" Type="Report_Flow" IsForeignKey="true" />
     </Type>
@@ -590,6 +591,29 @@
       <Column Name="Value" Type="System.Int32" DbType="Int" CanBeNull="false" />
       <Column Name="Id_Region" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
       <Association Name="Region_QuantityPlan" Member="Region" ThisKey="Id_Region" OtherKey="id" Type="Region" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Report_PVP_Load" Member="Report_PVP_Load">
+    <Type Name="Report_PVP_Load">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id_Report_Data" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RowNumID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PVP_name" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="location_of_the_office" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="number_of_insured_by_beginning_of_year" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="number_of_insured_by_reporting_date" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="population_dynamics" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="specialist" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="conditions_of_employment" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="PVP_plan" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="registered_total_citizens" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="newly_insured" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="attracted_by_agents" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="issued_by_PEO_and_extracts_from_ERZL" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="workload_per_day_for_specialist" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="appeals_through_EPGU" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="notes" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="Report_Data_Report_PVP_Load" Member="Report_Data" ThisKey="Id_Report_Data" OtherKey="Id" Type="Report_Data" IsForeignKey="true" />
     </Type>
   </Table>
   <Function Name="dbo.cadre_rapport" Method="cadre_rapport" IsComposable="true">

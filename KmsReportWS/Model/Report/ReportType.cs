@@ -30,6 +30,7 @@ namespace KmsReportWS.Model.Report
         [Description("ReqVCR")] ReqVCR,
         [Description("Quantity")] Quantity,
         [Description("TarAllow")] TarAllow,
+        [Description("pvpl")] PVPLoad,
 
     }
 }

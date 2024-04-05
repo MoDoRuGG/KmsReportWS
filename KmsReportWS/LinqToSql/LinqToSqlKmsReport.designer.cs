@@ -135,6 +135,9 @@ namespace KmsReportWS.LinqToSql
     partial void InsertQuantityPlan(QuantityPlan instance);
     partial void UpdateQuantityPlan(QuantityPlan instance);
     partial void DeleteQuantityPlan(QuantityPlan instance);
+    partial void InsertReport_PVP_Load(Report_PVP_Load instance);
+    partial void UpdateReport_PVP_Load(Report_PVP_Load instance);
+    partial void DeleteReport_PVP_Load(Report_PVP_Load instance);
     #endregion
 		
 		public LinqToSqlKmsReportDataContext(string connection) : 
@@ -454,6 +457,14 @@ namespace KmsReportWS.LinqToSql
 			get
 			{
 				return this.GetTable<QuantityPlan>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Report_PVP_Load> Report_PVP_Load
+		{
+			get
+			{
+				return this.GetTable<Report_PVP_Load>();
 			}
 		}
 		
@@ -3491,6 +3502,8 @@ namespace KmsReportWS.LinqToSql
 		
 		private EntitySet<Report_Targeted_Allowances> _Report_Targeted_Allowances;
 		
+		private EntitySet<Report_PVP_Load> _Report_PVP_Load;
+		
 		private EntityRef<Report_Type> _Report_Type;
 		
 		private EntityRef<Report_Flow> _Report_Flow;
@@ -3535,6 +3548,7 @@ namespace KmsReportWS.LinqToSql
 			this._Report_ReqVCR = new EntitySet<Report_ReqVCR>(new Action<Report_ReqVCR>(this.attach_Report_ReqVCR), new Action<Report_ReqVCR>(this.detach_Report_ReqVCR));
 			this._Report_Quantity = new EntitySet<Report_Quantity>(new Action<Report_Quantity>(this.attach_Report_Quantity), new Action<Report_Quantity>(this.detach_Report_Quantity));
 			this._Report_Targeted_Allowances = new EntitySet<Report_Targeted_Allowances>(new Action<Report_Targeted_Allowances>(this.attach_Report_Targeted_Allowances), new Action<Report_Targeted_Allowances>(this.detach_Report_Targeted_Allowances));
+			this._Report_PVP_Load = new EntitySet<Report_PVP_Load>(new Action<Report_PVP_Load>(this.attach_Report_PVP_Load), new Action<Report_PVP_Load>(this.detach_Report_PVP_Load));
 			this._Report_Type = default(EntityRef<Report_Type>);
 			this._Report_Flow = default(EntityRef<Report_Flow>);
 			OnCreated();
@@ -3928,6 +3942,19 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Report_Data_Report_PVP_Load", Storage="_Report_PVP_Load", ThisKey="Id", OtherKey="Id_Report_Data")]
+		public EntitySet<Report_PVP_Load> Report_PVP_Load
+		{
+			get
+			{
+				return this._Report_PVP_Load;
+			}
+			set
+			{
+				this._Report_PVP_Load.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Report_Type_Report_Data", Storage="_Report_Type", ThisKey="Id_Report", OtherKey="Id", IsForeignKey=true)]
 		public Report_Type Report_Type
 		{
@@ -4251,6 +4278,18 @@ namespace KmsReportWS.LinqToSql
 		}
 		
 		private void detach_Report_Targeted_Allowances(Report_Targeted_Allowances entity)
+		{
+			this.SendPropertyChanging();
+			entity.Report_Data = null;
+		}
+		
+		private void attach_Report_PVP_Load(Report_PVP_Load entity)
+		{
+			this.SendPropertyChanging();
+			entity.Report_Data = this;
+		}
+		
+		private void detach_Report_PVP_Load(Report_PVP_Load entity)
 		{
 			this.SendPropertyChanging();
 			entity.Report_Data = null;
@@ -13281,6 +13320,517 @@ namespace KmsReportWS.LinqToSql
 						this._Id_Region = default(string);
 					}
 					this.SendPropertyChanged("Region");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Report_PVP_Load")]
+	public partial class Report_PVP_Load : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Id;
+		
+		private int _Id_Report_Data;
+		
+		private int _RowNumID;
+		
+		private string _PVP_name;
+		
+		private string _location_of_the_office;
+		
+		private int _number_of_insured_by_beginning_of_year;
+		
+		private int _number_of_insured_by_reporting_date;
+		
+		private int _population_dynamics;
+		
+		private string _specialist;
+		
+		private decimal _conditions_of_employment;
+		
+		private int _PVP_plan;
+		
+		private int _registered_total_citizens;
+		
+		private int _newly_insured;
+		
+		private int _attracted_by_agents;
+		
+		private int _issued_by_PEO_and_extracts_from_ERZL;
+		
+		private decimal _workload_per_day_for_specialist;
+		
+		private int _appeals_through_EPGU;
+		
+		private string _notes;
+		
+		private EntityRef<Report_Data> _Report_Data;
+		
+    #region Определения метода расширяемости
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdChanging(int value);
+    partial void OnIdChanged();
+    partial void OnId_Report_DataChanging(int value);
+    partial void OnId_Report_DataChanged();
+    partial void OnRowNumIDChanging(int value);
+    partial void OnRowNumIDChanged();
+    partial void OnPVP_nameChanging(string value);
+    partial void OnPVP_nameChanged();
+    partial void Onlocation_of_the_officeChanging(string value);
+    partial void Onlocation_of_the_officeChanged();
+    partial void Onnumber_of_insured_by_beginning_of_yearChanging(int value);
+    partial void Onnumber_of_insured_by_beginning_of_yearChanged();
+    partial void Onnumber_of_insured_by_reporting_dateChanging(int value);
+    partial void Onnumber_of_insured_by_reporting_dateChanged();
+    partial void Onpopulation_dynamicsChanging(int value);
+    partial void Onpopulation_dynamicsChanged();
+    partial void OnspecialistChanging(string value);
+    partial void OnspecialistChanged();
+    partial void Onconditions_of_employmentChanging(decimal value);
+    partial void Onconditions_of_employmentChanged();
+    partial void OnPVP_planChanging(int value);
+    partial void OnPVP_planChanged();
+    partial void Onregistered_total_citizensChanging(int value);
+    partial void Onregistered_total_citizensChanged();
+    partial void Onnewly_insuredChanging(int value);
+    partial void Onnewly_insuredChanged();
+    partial void Onattracted_by_agentsChanging(int value);
+    partial void Onattracted_by_agentsChanged();
+    partial void Onissued_by_PEO_and_extracts_from_ERZLChanging(int value);
+    partial void Onissued_by_PEO_and_extracts_from_ERZLChanged();
+    partial void Onworkload_per_day_for_specialistChanging(decimal value);
+    partial void Onworkload_per_day_for_specialistChanged();
+    partial void Onappeals_through_EPGUChanging(int value);
+    partial void Onappeals_through_EPGUChanged();
+    partial void OnnotesChanging(string value);
+    partial void OnnotesChanged();
+    #endregion
+		
+		public Report_PVP_Load()
+		{
+			this._Report_Data = default(EntityRef<Report_Data>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this.OnIdChanging(value);
+					this.SendPropertyChanging();
+					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_Report_Data", DbType="Int NOT NULL")]
+		public int Id_Report_Data
+		{
+			get
+			{
+				return this._Id_Report_Data;
+			}
+			set
+			{
+				if ((this._Id_Report_Data != value))
+				{
+					if (this._Report_Data.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnId_Report_DataChanging(value);
+					this.SendPropertyChanging();
+					this._Id_Report_Data = value;
+					this.SendPropertyChanged("Id_Report_Data");
+					this.OnId_Report_DataChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RowNumID", DbType="Int NOT NULL")]
+		public int RowNumID
+		{
+			get
+			{
+				return this._RowNumID;
+			}
+			set
+			{
+				if ((this._RowNumID != value))
+				{
+					this.OnRowNumIDChanging(value);
+					this.SendPropertyChanging();
+					this._RowNumID = value;
+					this.SendPropertyChanged("RowNumID");
+					this.OnRowNumIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PVP_name", DbType="VarChar(MAX)")]
+		public string PVP_name
+		{
+			get
+			{
+				return this._PVP_name;
+			}
+			set
+			{
+				if ((this._PVP_name != value))
+				{
+					this.OnPVP_nameChanging(value);
+					this.SendPropertyChanging();
+					this._PVP_name = value;
+					this.SendPropertyChanged("PVP_name");
+					this.OnPVP_nameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_location_of_the_office", DbType="VarChar(MAX)")]
+		public string location_of_the_office
+		{
+			get
+			{
+				return this._location_of_the_office;
+			}
+			set
+			{
+				if ((this._location_of_the_office != value))
+				{
+					this.Onlocation_of_the_officeChanging(value);
+					this.SendPropertyChanging();
+					this._location_of_the_office = value;
+					this.SendPropertyChanged("location_of_the_office");
+					this.Onlocation_of_the_officeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_number_of_insured_by_beginning_of_year", DbType="Int NOT NULL")]
+		public int number_of_insured_by_beginning_of_year
+		{
+			get
+			{
+				return this._number_of_insured_by_beginning_of_year;
+			}
+			set
+			{
+				if ((this._number_of_insured_by_beginning_of_year != value))
+				{
+					this.Onnumber_of_insured_by_beginning_of_yearChanging(value);
+					this.SendPropertyChanging();
+					this._number_of_insured_by_beginning_of_year = value;
+					this.SendPropertyChanged("number_of_insured_by_beginning_of_year");
+					this.Onnumber_of_insured_by_beginning_of_yearChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_number_of_insured_by_reporting_date", DbType="Int NOT NULL")]
+		public int number_of_insured_by_reporting_date
+		{
+			get
+			{
+				return this._number_of_insured_by_reporting_date;
+			}
+			set
+			{
+				if ((this._number_of_insured_by_reporting_date != value))
+				{
+					this.Onnumber_of_insured_by_reporting_dateChanging(value);
+					this.SendPropertyChanging();
+					this._number_of_insured_by_reporting_date = value;
+					this.SendPropertyChanged("number_of_insured_by_reporting_date");
+					this.Onnumber_of_insured_by_reporting_dateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_population_dynamics", DbType="Int NOT NULL")]
+		public int population_dynamics
+		{
+			get
+			{
+				return this._population_dynamics;
+			}
+			set
+			{
+				if ((this._population_dynamics != value))
+				{
+					this.Onpopulation_dynamicsChanging(value);
+					this.SendPropertyChanging();
+					this._population_dynamics = value;
+					this.SendPropertyChanged("population_dynamics");
+					this.Onpopulation_dynamicsChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_specialist", DbType="VarChar(MAX)")]
+		public string specialist
+		{
+			get
+			{
+				return this._specialist;
+			}
+			set
+			{
+				if ((this._specialist != value))
+				{
+					this.OnspecialistChanging(value);
+					this.SendPropertyChanging();
+					this._specialist = value;
+					this.SendPropertyChanged("specialist");
+					this.OnspecialistChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_conditions_of_employment", DbType="Decimal(18,2) NOT NULL")]
+		public decimal conditions_of_employment
+		{
+			get
+			{
+				return this._conditions_of_employment;
+			}
+			set
+			{
+				if ((this._conditions_of_employment != value))
+				{
+					this.Onconditions_of_employmentChanging(value);
+					this.SendPropertyChanging();
+					this._conditions_of_employment = value;
+					this.SendPropertyChanged("conditions_of_employment");
+					this.Onconditions_of_employmentChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PVP_plan", DbType="Int NOT NULL")]
+		public int PVP_plan
+		{
+			get
+			{
+				return this._PVP_plan;
+			}
+			set
+			{
+				if ((this._PVP_plan != value))
+				{
+					this.OnPVP_planChanging(value);
+					this.SendPropertyChanging();
+					this._PVP_plan = value;
+					this.SendPropertyChanged("PVP_plan");
+					this.OnPVP_planChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_registered_total_citizens", DbType="Int NOT NULL")]
+		public int registered_total_citizens
+		{
+			get
+			{
+				return this._registered_total_citizens;
+			}
+			set
+			{
+				if ((this._registered_total_citizens != value))
+				{
+					this.Onregistered_total_citizensChanging(value);
+					this.SendPropertyChanging();
+					this._registered_total_citizens = value;
+					this.SendPropertyChanged("registered_total_citizens");
+					this.Onregistered_total_citizensChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_newly_insured", DbType="Int NOT NULL")]
+		public int newly_insured
+		{
+			get
+			{
+				return this._newly_insured;
+			}
+			set
+			{
+				if ((this._newly_insured != value))
+				{
+					this.Onnewly_insuredChanging(value);
+					this.SendPropertyChanging();
+					this._newly_insured = value;
+					this.SendPropertyChanged("newly_insured");
+					this.Onnewly_insuredChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_attracted_by_agents", DbType="Int NOT NULL")]
+		public int attracted_by_agents
+		{
+			get
+			{
+				return this._attracted_by_agents;
+			}
+			set
+			{
+				if ((this._attracted_by_agents != value))
+				{
+					this.Onattracted_by_agentsChanging(value);
+					this.SendPropertyChanging();
+					this._attracted_by_agents = value;
+					this.SendPropertyChanged("attracted_by_agents");
+					this.Onattracted_by_agentsChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_issued_by_PEO_and_extracts_from_ERZL", DbType="Int NOT NULL")]
+		public int issued_by_PEO_and_extracts_from_ERZL
+		{
+			get
+			{
+				return this._issued_by_PEO_and_extracts_from_ERZL;
+			}
+			set
+			{
+				if ((this._issued_by_PEO_and_extracts_from_ERZL != value))
+				{
+					this.Onissued_by_PEO_and_extracts_from_ERZLChanging(value);
+					this.SendPropertyChanging();
+					this._issued_by_PEO_and_extracts_from_ERZL = value;
+					this.SendPropertyChanged("issued_by_PEO_and_extracts_from_ERZL");
+					this.Onissued_by_PEO_and_extracts_from_ERZLChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_workload_per_day_for_specialist", DbType="Decimal(18,2) NOT NULL")]
+		public decimal workload_per_day_for_specialist
+		{
+			get
+			{
+				return this._workload_per_day_for_specialist;
+			}
+			set
+			{
+				if ((this._workload_per_day_for_specialist != value))
+				{
+					this.Onworkload_per_day_for_specialistChanging(value);
+					this.SendPropertyChanging();
+					this._workload_per_day_for_specialist = value;
+					this.SendPropertyChanged("workload_per_day_for_specialist");
+					this.Onworkload_per_day_for_specialistChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_appeals_through_EPGU", DbType="Int NOT NULL")]
+		public int appeals_through_EPGU
+		{
+			get
+			{
+				return this._appeals_through_EPGU;
+			}
+			set
+			{
+				if ((this._appeals_through_EPGU != value))
+				{
+					this.Onappeals_through_EPGUChanging(value);
+					this.SendPropertyChanging();
+					this._appeals_through_EPGU = value;
+					this.SendPropertyChanged("appeals_through_EPGU");
+					this.Onappeals_through_EPGUChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_notes", DbType="VarChar(MAX)")]
+		public string notes
+		{
+			get
+			{
+				return this._notes;
+			}
+			set
+			{
+				if ((this._notes != value))
+				{
+					this.OnnotesChanging(value);
+					this.SendPropertyChanging();
+					this._notes = value;
+					this.SendPropertyChanged("notes");
+					this.OnnotesChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Report_Data_Report_PVP_Load", Storage="_Report_Data", ThisKey="Id_Report_Data", OtherKey="Id", IsForeignKey=true)]
+		public Report_Data Report_Data
+		{
+			get
+			{
+				return this._Report_Data.Entity;
+			}
+			set
+			{
+				Report_Data previousValue = this._Report_Data.Entity;
+				if (((previousValue != value) 
+							|| (this._Report_Data.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Report_Data.Entity = null;
+						previousValue.Report_PVP_Load.Remove(this);
+					}
+					this._Report_Data.Entity = value;
+					if ((value != null))
+					{
+						value.Report_PVP_Load.Add(this);
+						this._Id_Report_Data = value.Id;
+					}
+					else
+					{
+						this._Id_Report_Data = default(int);
+					}
+					this.SendPropertyChanged("Report_Data");
 				}
 			}
 		}
