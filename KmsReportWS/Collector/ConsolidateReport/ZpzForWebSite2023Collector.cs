@@ -162,18 +162,20 @@ namespace KmsReportWS.Collector.ConsolidateReport
 
         private async Task<List<ZpzStatistics2023>> CollectProtections2023(LinqToSqlKmsReportDataContext db, string region)
         {
-            var table1 = CollectZpz(db, "Таблица 3", region);
+            var table1 = CollectZpz(db, "Таблица 1", region);
+            var table2 = CollectZpz(db, "Таблица 2", region);
             return new List<ZpzStatistics2023>() {
                 new ZpzStatistics2023 {
-                    Row = "1", Count = Convert.ToInt32(table1.Where(x => x.RowNum == "1").Sum(x => x.CountSmo))
+                    Row = "3.1", Count = Convert.ToInt32(table1.Where(x => x.RowNum == "3.1").Sum(x => x.CountSmoAnother))+Convert.ToInt32(table1.Where(x => x.RowNum == "3.1").Sum(x => x.CountSmo))
                 },
                 new ZpzStatistics2023 {
-                    Row = "1.1", Count = Convert.ToInt32(table1.Where(x => x.RowNum == "1.1").Sum(x => x.CountSmo))
+                    Row = "1", Count = Convert.ToInt32(table2.Where(x => x.RowNum == "1").Sum(x => x.CountSmo))
                 },
                 new ZpzStatistics2023 {
-                    Row = "2", Count = Convert.ToDecimal(table1.Where(x => x.RowNum == "2").Sum(x => x.CountSmo))
+                    Row = "2", Count = Convert.ToDecimal(table2.Where(x => x.RowNum == "2").Sum(x => x.CountSmo))
                 }
             };
+
         }
 
         private async Task<List<Expertise2023>> CollectExpertises2023(LinqToSqlKmsReportDataContext db, string region)
