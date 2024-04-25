@@ -78,6 +78,13 @@ namespace KmsReportWS
         }
 
         [WebMethod]
+        public List<ConsolidateQuantityQ> CreateConsolidateQuantityQ(string yymm)
+        {
+            return new ConsolidateQuantityQCollector().Collect(yymm);
+
+        }
+
+        [WebMethod]
         public List<ConsolidateQuantityFP> CreateConsolidateQuantityFactPlan(string year)
         {
             return new ConsolidateQuantityFPCollector().Collect(year);

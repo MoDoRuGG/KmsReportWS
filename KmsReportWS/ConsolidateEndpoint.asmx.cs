@@ -123,5 +123,13 @@ namespace KmsReportWS
             var consolidate = new ZpzForWebSite2023Collector(yymmStart);
             return consolidate.Collect();
         }
+
+        [WebMethod]
+        public List<ConsolidateQuantityQ> CreateConsolidateQuantityQ(string yymm)
+        {
+            return new ConsolidateQuantityQCollector().Collect(yymm);
+
+        }
+
     }
 }
