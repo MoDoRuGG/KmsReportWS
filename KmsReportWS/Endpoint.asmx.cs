@@ -341,6 +341,12 @@ namespace KmsReportWS
         }
 
         [WebMethod]
+        public void WebReportDoff(ReportDoff report)
+        {
+
+        }
+
+        [WebMethod]
         public void WebReportOpedFinance(ReportOpedFinance report)
         {
 

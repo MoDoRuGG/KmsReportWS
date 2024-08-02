@@ -149,6 +149,7 @@
     <Compile Include="Handler\FOpedUHandler.cs" />
     <Compile Include="Handler\MonitoringVCRHandler.cs" />
     <Compile Include="Handler\QuantityPlanDictionaryHandler.cs" />
+    <Compile Include="Handler\ReportDoffHandler.cs" />
     <Compile Include="Handler\ReportPVPLoadHandler.cs" />
     <Compile Include="Handler\ReportTargetedAllowancesHandler.cs" />
     <Compile Include="Handler\ReportQuantityHandler.cs" />
@@ -223,6 +224,7 @@
     <Compile Include="Model\FSSMonitoringPgDataDto.cs" />
     <Compile Include="Model\ReportDynamicScanModel.cs" />
     <Compile Include="Model\ReportScanModel.cs" />
+    <Compile Include="Model\Report\ReportDoff.cs" />
     <Compile Include="Model\Report\ReportPVPLoad.cs" />
     <Compile Include="Model\Report\ReportTargetedAllowances.cs" />
     <Compile Include="Model\Report\ReportReqVCR.cs" />

@@ -175,6 +175,7 @@
       <Association Name="Report_Data_Report_Quantity" Member="Report_Quantity" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_Quantity" />
       <Association Name="Report_Data_Report_Targeted_Allowances" Member="Report_Targeted_Allowances" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_Targeted_Allowances" />
       <Association Name="Report_Data_Report_PVP_Load" Member="Report_PVP_Load" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_PVP_Load" />
+      <Association Name="Report_Data_Report_Doff" Member="Report_Doff" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_Doff" />
       <Association Name="Report_Type_Report_Data" Member="Report_Type" ThisKey="Id_Report" OtherKey="Id" Type="Report_Type" IsForeignKey="true" />
       <Association Name="Report_Flow_Report_Data" Member="Report_Flow" ThisKey="Id_Flow" OtherKey="Id" Type="Report_Flow" IsForeignKey="true" />
     </Type>
@@ -614,6 +615,17 @@
       <Column Name="appeals_through_EPGU" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="notes" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
       <Association Name="Report_Data_Report_PVP_Load" Member="Report_Data" ThisKey="Id_Report_Data" OtherKey="Id" Type="Report_Data" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Report_Doff" Member="Report_Doff">
+    <Type Name="Report_Doff">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id_Report_Data" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RowNum" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Column1" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Column2" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Column3" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="Report_Data_Report_Doff" Member="Report_Data" ThisKey="Id_Report_Data" OtherKey="Id" Type="Report_Data" IsForeignKey="true" />
     </Type>
   </Table>
   <Function Name="dbo.cadre_rapport" Method="cadre_rapport" IsComposable="true">

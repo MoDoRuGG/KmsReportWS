@@ -31,6 +31,6 @@ namespace KmsReportWS.Model.Report
         [Description("Quantity")] Quantity,
         [Description("TarAllow")] TarAllow,
         [Description("pvpl")] PVPLoad,
-
+        [Description("doff")] Doff,
     }
 }

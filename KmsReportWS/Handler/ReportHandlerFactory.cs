@@ -30,6 +30,7 @@ namespace KmsReportWS.Handler
         private readonly IReportHandler _effectiveHandlerCollector = new ReportEffectivenessHandler(ReportType.Effective);
         private readonly IReportHandler _reqVCRHandlerCollector = new ReportReqVCRHandler();
         private readonly IReportHandler _PVPLoadCollector = new ReportPVPLoadHandler(ReportType.PVPLoad);
+        private readonly IReportHandler _doffCollector = new ReportDoffHandler(ReportType.Doff);
         public IReportHandler GetHandler(ReportType reportType) =>
             reportType switch {
                 ReportType.Oped => _opedCollector,
@@ -58,7 +59,7 @@ namespace KmsReportWS.Handler
                 ReportType.Quantity => _quantityCollector,
                 ReportType.TarAllow => _targetedAllowancesCollector,
                 ReportType.PVPLoad => _PVPLoadCollector,
-
+                ReportType.Doff => _doffCollector,
 
             };
     }
