@@ -7,7 +7,7 @@ namespace KmsReportWS.Model.Constructor
 {
     public class DynamicReportDictionary
     {
-        public int id { get; set; }
+        public long id { get; set; }
         public string Name { get; set; }
 
         public DateTime Date { get; set; }

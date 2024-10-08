@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-16"?>
+<TemplateDynamicReport xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <REPORT_NAME>Предложения филиалов по ст. ГПХ на 2025 год</REPORT_NAME>
+  <REPORT_DESCRIPTION />
+  <REPORT_DATE>2024-08-19T09:10:13.3591965+08:00</REPORT_DATE>
+  <IsUserRow>false</IsUserRow>
+  <Emails>
+    <string>direktora_oms_filialov@kapmed.ru</string>
+  </Emails>
+  <TABLE>
+    <TemplateTableDynamic>
+      <TABLE_NAME>Вкладка №1</TABLE_NAME>
+      <TABLE_DESCRIPTION>Предложения по статье ГПХ на 2025 год</TABLE_DESCRIPTION>
+      <ROWS />
+      <COLUMNS>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>План по статье ГПХ на 2024 г. (с ЕСН)	
+
+
+
+</COLUMN_TEXT>
+          <COLUMN_INDEX>1</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION />
+        </TemplateColumnDynamic>
+	<TemplateColumnDynamic>
+          <COLUMN_TEXT>План по доходам от экспертной деятельности на 2024 г.</COLUMN_TEXT>
+          <COLUMN_INDEX>1</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION />
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Факт на 31.07.2024 г. (с ЕСН)</COLUMN_TEXT>
+          <COLUMN_INDEX>3</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION />
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Предполагаемый факт на 31.12.2024 г. (с ЕСН)</COLUMN_TEXT>
+          <COLUMN_INDEX>4</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION />
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Предложения филиала на 2025 г. (с ЕСН)</COLUMN_TEXT>
+          <COLUMN_INDEX>5</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION />
+        </TemplateColumnDynamic>
+        <TemplateColumnDynamic>
+          <COLUMN_TEXT>Пояснения (в случае необходимости заполнить)</COLUMN_TEXT>
+          <COLUMN_INDEX>6</COLUMN_INDEX>
+          <COLUMN_DESCRIPTION />
+        </TemplateColumnDynamic>
+      </COLUMNS>
+    </TemplateTableDynamic>
+  </TABLE>
+</TemplateDynamicReport>

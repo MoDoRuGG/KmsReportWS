@@ -69,7 +69,7 @@ namespace KmsReportWS.Handler
         private ReportDoffDataDto MapThemeToPersist(Report_Doff data) =>
         new ReportDoffDataDto
         {
-            RowNum = data.RowNum,
+            RowNum = data.RowNum ?? "1",
             Column1 = data.Column1,
             Column2 = data.Column2,
             Column3 = data.Column3,
@@ -79,7 +79,7 @@ namespace KmsReportWS.Handler
             new Report_Doff
             {
                 Id_Report_Data = idThemeData,
-                RowNum = data.RowNum,
+                RowNum = data.RowNum ?? "1",
                 Column1 = data.Column1,
                 Column2 = data.Column2,
                 Column3 = data.Column3,
