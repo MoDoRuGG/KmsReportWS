@@ -176,6 +176,7 @@
       <Association Name="Report_Data_Report_Targeted_Allowances" Member="Report_Targeted_Allowances" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_Targeted_Allowances" />
       <Association Name="Report_Data_Report_PVP_Load" Member="Report_PVP_Load" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_PVP_Load" />
       <Association Name="Report_Data_Report_Doff" Member="Report_Doff" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_Doff" />
+      <Association Name="Report_Data_Report_Zpz2025" Member="Report_Zpz2025" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_Zpz2025" />
       <Association Name="Report_Type_Report_Data" Member="Report_Type" ThisKey="Id_Report" OtherKey="Id" Type="Report_Type" IsForeignKey="true" />
       <Association Name="Report_Flow_Report_Data" Member="Report_Flow" ThisKey="Id_Flow" OtherKey="Id" Type="Report_Flow" IsForeignKey="true" />
     </Type>
@@ -626,6 +627,33 @@
       <Column Name="Position" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
       <Column Name="Id_Flow" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="Report_Dynamic_Flow_Report_Dynamic_Data" Member="Report_Dynamic_Flow" ThisKey="Id_Flow" OtherKey="id" Type="Report_Dynamic_Flow" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Report_Zpz2025" Member="Report_Zpz2025">
+    <Type Name="Report_Zpz2025">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id_Report_Data" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RowNum" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="CountSmo" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="CountSmoAnother" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="CountInsured" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="CountInsuredRepresentative" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="CountTfoms" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="CountProsecutor" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="CountOutOfSmo" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="CountAmbulatory" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="CountDs" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="CountDsVmp" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="CountStac" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="CountStacVmp" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="CountOutOfSmoAnother" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="CountAmbulatoryAnother" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="CountDsAnother" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="CountDsVmpAnother" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="CountStacAnother" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="CountStacVmpAnother" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="CountAssignment" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Association Name="Report_Data_Report_Zpz2025" Member="Report_Data" ThisKey="Id_Report_Data" OtherKey="Id" Type="Report_Data" IsForeignKey="true" />
     </Type>
   </Table>
   <Function Name="dbo.cadre_rapport" Method="cadre_rapport" IsComposable="true">

@@ -113,6 +113,8 @@
     <Compile Include="Collector\BaseReport\IizlCollector.cs" />
     <Compile Include="Collector\BaseReport\IReportCollector.cs" />
     <Compile Include="Collector\BaseReport\PgCollector.cs" />
+    <Compile Include="Collector\BaseReport\Zpz2025Collector.cs" />
+    <Compile Include="Collector\ConsolidateReport\ConsolidateLetal2025Collector.cs" />
     <Compile Include="Collector\ConsolidateReport\ConsolidateQuantityQ.cs" />
     <Compile Include="Collector\ConsolidateReport\ConsolidateQuantityInfoCollector.cs" />
     <Compile Include="Collector\ConsolidateReport\ConsolidateQuantityFPCollector.cs" />
@@ -140,7 +142,11 @@
     <Compile Include="Collector\ConsolidateReport\ControlZpz2023SingleCollector.cs" />
     <Compile Include="Collector\ConsolidateReport\ControlZpz2023FullCollector.cs" />
     <Compile Include="Collector\ConsolidateReport\ControlZpz2023Collector.cs" />
+    <Compile Include="Collector\ConsolidateReport\ControlZpz2025Collector.cs" />
+    <Compile Include="Collector\ConsolidateReport\ControlZpz2025FullCollector.cs" />
+    <Compile Include="Collector\ConsolidateReport\ControlZpz2025SingleCollector.cs" />
     <Compile Include="Collector\ConsolidateReport\ZpzForWebSite2023Collector.cs" />
+    <Compile Include="Collector\ConsolidateReport\ZpzForWebSite2025Collector.cs" />
     <Compile Include="ConsolidateEndpoint.asmx.cs">
       <DependentUpon>ConsolidateEndpoint.asmx</DependentUpon>
       <SubType>Component</SubType>
@@ -175,6 +181,7 @@
     <Compile Include="Handler\ReportOpedFinanceHandler.cs" />
     <Compile Include="Handler\ReportProposalHandler.cs" />
     <Compile Include="Handler\ReportVaccinationHander.cs" />
+    <Compile Include="Handler\ZpzHandler2025.cs" />
     <Compile Include="LinqToSql\LinqToSqlKmsReport.cs">
       <DependentUpon>LinqToSqlKmsReport.dbml</DependentUpon>
     </Compile>
@@ -207,11 +214,16 @@
     <Compile Include="Model\ConcolidateReport\ConsolidateOpedQ.cs" />
     <Compile Include="Model\ConcolidateReport\ConsolidateProposal.cs" />
     <Compile Include="Model\ConcolidateReport\ConsolidateVSS.cs" />
+    <Compile Include="Model\ConcolidateReport\CReportZpz2025Single.cs" />
+    <Compile Include="Model\ConcolidateReport\CReportZpz2025Full.cs" />
+    <Compile Include="Model\ConcolidateReport\CReportZpz2025.cs" />
     <Compile Include="Model\ConcolidateReport\CReportZpz2023Single.cs" />
     <Compile Include="Model\ConcolidateReport\CReportZpz2023Full.cs" />
     <Compile Include="Model\ConcolidateReport\CReportZpz2023.cs" />
+    <Compile Include="Model\ConcolidateReport\SummaryZpz2025.cs" />
     <Compile Include="Model\ConcolidateReport\SummaryZpz2023.cs" />
     <Compile Include="Model\ConcolidateReport\SummaryPg.cs" />
+    <Compile Include="Model\ConcolidateReport\ZpzForWebSite2025.cs" />
     <Compile Include="Model\ConcolidateReport\ZpzForWebSite2023.cs" />
     <Compile Include="Model\Constructor\DynamicDataDto.cs" />
     <Compile Include="Model\Constructor\DynamicReportDictionary.cs" />
@@ -244,6 +256,7 @@
     <Compile Include="Model\Report\ReportZpz.cs" />
     <Compile Include="Model\Report\ReportProposal.cs" />
     <Compile Include="Model\Report\ReportVaccination.cs" />
+    <Compile Include="Model\Report\ReportZpz2025.cs" />
     <Compile Include="Model\Service\ClientContext.cs" />
     <Compile Include="Model\ConcolidateReport\Consolidate294.cs" />
     <Compile Include="Model\ConcolidateReport\CReportPg.cs" />

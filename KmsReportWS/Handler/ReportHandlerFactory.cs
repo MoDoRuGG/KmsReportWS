@@ -16,9 +16,13 @@ namespace KmsReportWS.Handler
         private readonly IReportHandler _pgCollector = new PgHandler(ReportType.Pg);
         private readonly IReportHandler _pgQCollector = new PgHandler(ReportType.PgQ);
         private readonly IReportHandler _zpzCollector = new ZpzHandler(ReportType.Zpz);
+        private readonly IReportHandler _zpz2025Collector = new Zpz2025Handler(ReportType.Zpz2025);
         private readonly IReportHandler _zpz10Collector = new ZpzHandler(ReportType.Zpz10);
+        private readonly IReportHandler _zpz10_2025Collector = new Zpz2025Handler(ReportType.Zpz10_2025);
         private readonly IReportHandler _zpzLethalCollector = new ZpzHandler(ReportType.ZpzLethal);
+        private readonly IReportHandler _zpz2025LethalCollector = new Zpz2025Handler(ReportType.ZpzLethal2025);
         private readonly IReportHandler _zpzQCollector = new ZpzHandler(ReportType.ZpzQ);
+        private readonly IReportHandler _zpzQ2025Collector = new Zpz2025Handler(ReportType.ZpzQ2025);
         private readonly IReportHandler _vacCollector = new ReportVaccinationHander(ReportType.Vac);
         private readonly IReportHandler _fssCollector = new FSSMonitoringHandler(ReportType.MFSS);
         private readonly IReportHandler _mvcrCollector = new MonitoringVCRHandler(ReportType.MVCR);
@@ -46,6 +50,10 @@ namespace KmsReportWS.Handler
                 ReportType.Zpz10 => _zpz10Collector,
                 ReportType.ZpzLethal => _zpzLethalCollector,
                 ReportType.ZpzQ => _zpzQCollector,
+                ReportType.Zpz2025 => _zpz2025Collector,
+                ReportType.Zpz10_2025 => _zpz10_2025Collector,
+                ReportType.ZpzLethal2025 => _zpz2025LethalCollector,
+                ReportType.ZpzQ2025 => _zpzQ2025Collector,
                 ReportType.OpedQ => _opedCollectorQ,
                 ReportType.Vac => _vacCollector,
                 ReportType.MFSS => _fssCollector,

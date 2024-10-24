@@ -197,6 +197,14 @@ namespace KmsReportWS
 
 
         [WebMethod]
+        public ReportZpz2025DataDto GetZpz10_2025YearData(string yymm, string theme, string fillial, string rowNum)
+        {
+            var handler = _reportHandlerFactory.GetHandler(ReportType.Zpz10_2025);
+            return (handler as Zpz2025Handler).GetYearData(yymm, theme, fillial, rowNum);
+        }
+
+
+        [WebMethod]
         public ReportDoffDataDto GetDoffYearData(string yymm, string theme, string fillial, string rowNum)
         {
             var handler = _reportHandlerFactory.GetHandler(ReportType.Doff);
@@ -217,6 +225,13 @@ namespace KmsReportWS
         {
             var handler = _reportHandlerFactory.GetHandler(ReportType.ZpzLethal);
             return (handler as ZpzHandler).GetLethalYearData(yymm, theme, fillial, rowNum);
+        }
+
+        [WebMethod]
+        public ReportZpz2025DataDto GetZpz2025LethalYearData(string yymm, string theme, string fillial, string rowNum)
+        {
+            var handler = _reportHandlerFactory.GetHandler(ReportType.ZpzLethal2025);
+            return (handler as Zpz2025Handler).GetLethalYearData(yymm, theme, fillial, rowNum);
         }
 
         [WebMethod]
@@ -565,7 +580,7 @@ namespace KmsReportWS
 
 
         [WebMethod]
-        public void MethodForSendingChildModel(Report262 f262, Report294 f294, ReportIizl iilz, ReportPg pg, ReportZpz zpz, ReportEffectiveness effective)
+        public void MethodForSendingChildModel(Report262 f262, Report294 f294, ReportIizl iilz, ReportPg pg, ReportZpz zpz, ReportZpz2025 zpz2025, ReportEffectiveness effective)
         {
         }
 
@@ -687,6 +702,15 @@ namespace KmsReportWS
             return consolidate.Collect(yymm, isMonthly);
         }
 
+
+        [WebMethod]
+        public List<CReportZpz2025> CreateReportControlZpz2025(string yymm, bool isMonthly)
+        {
+            var consolidate = new ControlZpz2025Collector();
+            return consolidate.Collect(yymm, isMonthly);
+        }
+
+
         [WebMethod]
         public List<ConsolidateOnko> CreateConsolidateOnko(string yymm, bool isMonthly)
         {
@@ -749,6 +773,29 @@ namespace KmsReportWS
         {
             var consolidate = new ControlZpz2023SingleCollector();
             return consolidate.Collect(year,filial);
+        }
+
+
+
+        [WebMethod]
+        public List<ZpzForWebSite2025> CreateZpzForWebSite2025(string yymm)
+        {
+            var consolidate = new ZpzForWebSite2025Collector(yymm);
+            return consolidate.Collect();
+        }
+
+        [WebMethod]
+        public List<CReportZpz2025Full> CreateReportControlZpz2025Full(string year)
+        {
+            var consolidate = new ControlZpz2025FullCollector();
+            return consolidate.Collect(year);
+        }
+
+        [WebMethod]
+        public List<CReportZpz2025Single> CreateReportControlZpz2025Single(string year, string filial)
+        {
+            var consolidate = new ControlZpz2025SingleCollector();
+            return consolidate.Collect(year, filial);
         }
     }
 }
