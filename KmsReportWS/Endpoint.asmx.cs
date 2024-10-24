@@ -195,6 +195,23 @@ namespace KmsReportWS
             return (handler as ZpzHandler).GetYearData(yymm, theme, fillial, rowNum);
         }
 
+
+        [WebMethod]
+        public ReportDoffDataDto GetDoffYearData(string yymm, string theme, string fillial, string rowNum)
+        {
+            var handler = _reportHandlerFactory.GetHandler(ReportType.Doff);
+            return (handler as ReportDoffHandler).GetYearData(yymm, theme, fillial, rowNum);
+        }
+
+
+        [WebMethod]
+        public ReportDoffDataDto GetDoffBeginningData(string yymm, string theme, string fillial, string rowNum)
+        {
+            var handler = _reportHandlerFactory.GetHandler(ReportType.Doff);
+            return (handler as ReportDoffHandler).GetBeginningData(yymm, theme, fillial, rowNum);
+        }
+
+
         [WebMethod]
         public ReportZpzDataDto GetZpzLethalYearData(string yymm, string theme, string fillial, string rowNum)
         {

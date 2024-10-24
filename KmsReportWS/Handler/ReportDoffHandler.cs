@@ -112,5 +112,50 @@ namespace KmsReportWS.Handler
                 }
             }
         }
+
+        public ReportDoffDataDto GetYearData(string yymm, string theme, string fillial, string rowNum)
+        {
+            var db = new LinqToSqlKmsReportDataContext(_connStr);
+
+            string start = Convert.ToInt32(yymm) < 2501 ? "2403" : yymm.Substring(0, 2) + "01";
+            var result = db.Report_Doff.Where(x => x.Report_Data.Report_Flow.Id_Region == fillial
+            && x.Report_Data.Theme == theme
+            && Convert.ToInt32(x.Report_Data.Report_Flow.Yymm) >= Convert.ToInt32(start)
+            && Convert.ToInt32(x.Report_Data.Report_Flow.Yymm) <= Convert.ToInt32(yymm)
+            && x.Report_Data.Report_Flow.Id_Report_Type == "Doff"
+            && x.RowNum == rowNum
+            ).GroupBy(x => x.Report_Data.Theme).
+            Select(x => new ReportDoffDataDto
+            {
+                RowNum = rowNum,
+                Column2 = x.Sum(g => Convert.ToInt32(g.Column1)).ToString(),
+
+            }).FirstOrDefault();
+
+            return result;
+        }
+
+
+        public ReportDoffDataDto GetBeginningData(string yymm, string theme, string fillial, string rowNum)
+        {
+            var db = new LinqToSqlKmsReportDataContext(_connStr);
+
+            string start = "2403";
+            var result = db.Report_Doff.Where(x => x.Report_Data.Report_Flow.Id_Region == fillial
+            && x.Report_Data.Theme == theme
+            && Convert.ToInt32(x.Report_Data.Report_Flow.Yymm) >= Convert.ToInt32(start)
+            && Convert.ToInt32(x.Report_Data.Report_Flow.Yymm) <= Convert.ToInt32(yymm)
+            && x.Report_Data.Report_Flow.Id_Report_Type == "Doff"
+            && x.RowNum == rowNum
+            ).GroupBy(x => x.Report_Data.Theme).
+            Select(x => new ReportDoffDataDto
+            {
+                RowNum = rowNum,
+                Column3 = x.Sum(g => Convert.ToInt32(g.Column1)).ToString(),
+
+            }).FirstOrDefault();
+
+            return result;
+        }
     }
 }
