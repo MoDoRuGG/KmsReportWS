@@ -28,7 +28,7 @@ namespace KmsReportWS.Handler
             var db = new LinqToSqlKmsReportDataContext(_connStr);
 
             // Определяем начальную дату для выборки
-            string start = yymm.Substring(0, 2) + "01";
+            string start = Convert.ToInt32(yymm) < 2501 ? "2409" : yymm.Substring(0, 2) + "01";
             var result = db.Report_Zpz2025.Where(x => x.Report_Data.Report_Flow.Id_Region == fillial
             && x.Report_Data.Theme == theme
             && Convert.ToInt32(x.Report_Data.Report_Flow.Yymm) >= Convert.ToInt32(start)

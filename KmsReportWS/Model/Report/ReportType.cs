@@ -36,6 +36,6 @@ namespace KmsReportWS.Model.Report
         [Description("Zpz2025")] Zpz2025,
         [Description("Zpz_Q2025")] ZpzQ2025,
         [Description("Zpz10_2025")] Zpz10_2025,
-        [Description("ZpzLethal2025")] ZpzLethal2025
+        [Description("ZpzL2025")] ZpzL2025
     }
 }

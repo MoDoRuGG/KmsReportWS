@@ -230,7 +230,7 @@ namespace KmsReportWS
         [WebMethod]
         public ReportZpz2025DataDto GetZpz2025LethalYearData(string yymm, string theme, string fillial, string rowNum)
         {
-            var handler = _reportHandlerFactory.GetHandler(ReportType.ZpzLethal2025);
+            var handler = _reportHandlerFactory.GetHandler(ReportType.ZpzL2025);
             return (handler as Zpz2025Handler).GetLethalYearData(yymm, theme, fillial, rowNum);
         }
 
