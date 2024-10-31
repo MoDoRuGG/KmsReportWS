@@ -33,7 +33,7 @@ namespace KmsReportWS.Collector.ConsolidateReport
             }
 
             MsConnection connection = new MsConnection(Settings.Default.ConnStr);
-            connection.NewSp("p_OpedConsolidateReport");
+            connection.NewSp("p_OpedConsolidateReportNew");
             connection.AddSpParam("@yymm_start", yymmStart);
             connection.AddSpParam("yymm_end", yymmEnd);
             connection.AddSpParam("@regions", paramTable);
@@ -48,9 +48,15 @@ namespace KmsReportWS.Collector.ConsolidateReport
             {
                 var regData = dbAnumerable.Where(x => x["region"].ToString() == reg).ToList();
                 var consolidateOped = new ConsolidateOped();
-                var ekmp = new OpedData(regData[1]);
-                var mee = new OpedData(regData[0]);
+                var countMee = new OpedData(regData[0]);
+                var countSl = new OpedData(regData[2]);
+                var countEkmp = new OpedData(regData[1]);
+                var mee = new OpedData(regData[3]);
+                var ekmp = new OpedData(regData[4]);
                 consolidateOped.Filial = reg;
+                consolidateOped.CountSl = countSl;
+                consolidateOped.CountMee = countMee;
+                consolidateOped.CountEkmp = countEkmp;
                 consolidateOped.Ekmp = ekmp;
                 consolidateOped.Mee = mee;
 

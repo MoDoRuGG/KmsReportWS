@@ -9,6 +9,9 @@ namespace KmsReportWS.Model.ConcolidateReport
     public class ConsolidateOped
     {
         public string Filial { get; set; }
+        public OpedData CountSl { get; set; }
+        public OpedData CountMee { get; set; }
+        public OpedData CountEkmp { get; set; }
         public OpedData Mee { get; set; }
         public OpedData Ekmp { get; set; }
 
