@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Remoting.Metadata.W3cXsd2001;
+using System.Security.Cryptography.X509Certificates;
 using KmsReportWS.LinqToSql;
 using KmsReportWS.Model.ConcolidateReport;
 using KmsReportWS.Properties;
@@ -28,11 +29,35 @@ namespace KmsReportWS.Collector.ConsolidateReport
             var zpzData4Q = CollectSummaryData4Q(year);
 
             var reports = new List<CReportZpz2025Full>();
-            
-            
-            var filials1Q = zpzData1Q.Select(x => x.Filial).Distinct().OrderBy(x => x);
-            
-            foreach (var filial in filials1Q)
+
+            // Инициализация filials
+            IOrderedEnumerable<string> filials = Enumerable.Empty<string>().OrderBy(x => x);
+
+            // Заполнение filials в зависимости от условий
+            if (zpzData1Q.Any())
+            {
+                filials = zpzData1Q.Select(x => x.Filial).Distinct().OrderBy(x => x);
+            }
+            else if (zpzData2Q.Any())
+            {
+                filials = zpzData2Q.Select(x => x.Filial).Distinct().OrderBy(x => x);
+            }
+            else if (zpzData3Q.Any())
+            {
+                filials = zpzData3Q.Select(x => x.Filial).Distinct().OrderBy(x => x);
+            }
+            else if (zpzData4Q.Any())
+            {
+                filials = zpzData4Q.Select(x => x.Filial).Distinct().OrderBy(x => x);
+            }
+
+            // Если все данные пусты, возвращаем пустой список
+            if (!filials.Any())
+            {
+                return reports;
+            }
+
+            foreach (var filial in filials)
             {
                 var zpzFilialData1Q = zpzData1Q.Where(x => x.Filial == filial);
                 var zpzFilialData2Q = zpzData2Q.Where(x => x.Filial == filial);
@@ -63,25 +88,25 @@ namespace KmsReportWS.Collector.ConsolidateReport
             return reports;
         }
 
-        private ZpzFinance2025Full MapFinance(IEnumerable<SummaryZpz2025> zpzFilialData)
+        private ZpzFinance2025Full MapFinance(IEnumerable<SummaryZpz2025> zpz2025FilialData)
         {
-            var zpzTable8 = zpzFilialData.Where(x => x.Theme == "Таблица 8");
+            var zpzTable8 = zpz2025FilialData.Where(x => x.Theme == "Таблица 8");
             return new ZpzFinance2025Full
             {
-                SumPayment = zpzTable8.Where(x => x.RowNum == "1").Sum(x => x.SumSmo),
-                SumNotPayment = zpzTable8.Where(x => x.RowNum == "2").Sum(x => x.SumSmo),
-                SumMek = zpzTable8.Where(x => x.RowNum == "3").Sum(x => x.SumSmo),
-                SumMee = zpzTable8.Where(x => x.RowNum == "4").Sum(x => x.SumSmo),
-                SumEkmp = zpzTable8.Where(x => x.RowNum == "5").Sum(x => x.SumSmo)
+                SumPayment = zpzTable8.Where(x => x.RowNum == "1").Sum(x => x.SumOutOfSmoAnother + x.SumAmbulatoryAnother + x.SumDsAnother + x.SumStacAnother),
+                SumNotPayment = zpzTable8.Where(x => x.RowNum == "2").Sum(x => x.SumOutOfSmoAnother + x.SumAmbulatoryAnother + x.SumDsAnother + x.SumStacAnother),
+                SumMek = zpzTable8.Where(x => x.RowNum == "3").Sum(x => x.SumOutOfSmoAnother + x.SumAmbulatoryAnother + x.SumDsAnother + x.SumStacAnother),
+                SumMee = zpzTable8.Where(x => x.RowNum == "4").Sum(x => x.SumOutOfSmoAnother + x.SumAmbulatoryAnother + x.SumDsAnother + x.SumStacAnother),
+                SumEkmp = zpzTable8.Where(x => x.RowNum == "5").Sum(x => x.SumOutOfSmoAnother + x.SumAmbulatoryAnother + x.SumDsAnother + x.SumStacAnother),
 
             };
         }
 
-        private ZpzExpertise2025Full MapExpertise(IEnumerable<SummaryZpz2025> zpzFilialData)
+        private ZpzExpertise2025Full MapExpertise(IEnumerable<SummaryZpz2025> zpz2025FilialData)
         {
-            var table5Data = zpzFilialData.Where(x => x.Theme == "Таблица 5А");
-            var table6Data = zpzFilialData.Where(x => x.Theme == "Таблица 6");
-            var table7Data = zpzFilialData.Where(x => x.Theme == "Таблица 7");
+            var table5Data = zpz2025FilialData.Where(x => x.Theme == "Таблица 5А");
+            var table6Data = zpz2025FilialData.Where(x => x.Theme == "Таблица 6");
+            var table7Data = zpz2025FilialData.Where(x => x.Theme == "Таблица 7");
             return new ZpzExpertise2025Full
             {
                 Bills = table5Data.Sum(x => x.SumSmo),
@@ -127,26 +152,26 @@ namespace KmsReportWS.Collector.ConsolidateReport
                 CountCaseDefectedBySmoPlan = table7Data.Where(x => x.RowNum == "4").Sum(x => x.SumVidpomAnother),
                 CountEkmpDefectedCaseTarget = table7Data.Where(x => x.RowNum == "5").Sum(x => x.SumVidpom),
                 CountEkmpDefectedCasePlan = table7Data.Where(x => x.RowNum == "5").Sum(x => x.SumVidpomAnother),
-                CountEkmpBadDs = table7Data.Where(x => x.RowNum == "6.8").Sum(x => x.SumVidpom+x.SumVidpomAnother),
-                CountEkmpBadDsNotAffected = table7Data.Where(x => x.RowNum == "6.8.5").Sum(x => x.SumVidpom+x.SumVidpomAnother),
-                CountEkmpBadDsProlonger = table7Data.Where(x => x.RowNum == "6.8.6").Sum(x => x.SumVidpom+x.SumVidpomAnother),
-                CountEkmpBadDsDecline = table7Data.Where(x => x.RowNum == "6.8.7").Sum(x => x.SumVidpom+x.SumVidpomAnother),
-                CountEkmpBadDsInjured = table7Data.Where(x => x.RowNum == "6.8.8").Sum(x => x.SumVidpom+x.SumVidpomAnother),
-                CountEkmpBadDsLeth= table7Data.Where(x => x.RowNum == "6.8.9").Sum(x => x.SumVidpom+x.SumVidpomAnother),
-                CountEkmpBadMed = table7Data.Where(x => x.RowNum == "6.9").Sum(x => x.SumVidpom+x.SumVidpomAnother),
-                CountEkmpUnreglamentedMed = table7Data.Where(x => x.RowNum == "6.10").Sum(x => x.SumVidpom+x.SumVidpomAnother),
-                CountEkmpStopMed = table7Data.Where(x => x.RowNum == "6.11").Sum(x => x.SumVidpom+x.SumVidpomAnother),
-                CountEkmpContinuity = table7Data.Where(x => x.RowNum == "6.12").Sum(x => x.SumVidpom+x.SumVidpomAnother),
-                CountEkmpUnprofile = table7Data.Where(x => x.RowNum == "6.13").Sum(x => x.SumVidpom+x.SumVidpomAnother),
-                CountEkmpUnfounded = table7Data.Where(x => x.RowNum == "6.14").Sum(x => x.SumVidpom+x.SumVidpomAnother),
-                CountEkmpRepeat = table7Data.Where(x => x.RowNum == "6.15").Sum(x => x.SumVidpom+x.SumVidpomAnother),
-                CountEkmpDifference = table7Data.Where(x => x.RowNum == "6.16").Sum(x => x.SumVidpom+x.SumVidpomAnother),
-                CountEkmpUnfoundedMedicaments = table7Data.Where(x => x.RowNum == "6.17").Sum(x => x.SumVidpom+x.SumVidpomAnother),
-                CountEkmpUnfoundedReject = table7Data.Where(x => x.RowNum == "6.18").Sum(x => x.SumVidpom+x.SumVidpomAnother),
-                CountEkmpDisp = table7Data.Where(x => x.RowNum == "6.19").Sum(x => x.SumVidpom+x.SumVidpomAnother),
-                CountEkmpRepeat2weeks = table7Data.Where(x => x.RowNum == "6.20").Sum(x => x.SumVidpom+x.SumVidpomAnother),
-                CountEkmpOutOfResults = table7Data.Where(x => x.RowNum == "6.21").Sum(x => x.SumVidpom+x.SumVidpomAnother),
-                CountEkmpDoubleHospital = table7Data.Where(x => x.RowNum == "6.22").Sum(x => x.SumVidpom+x.SumVidpomAnother),
+                CountEkmpBadDs = table7Data.Where(x => x.RowNum == "6.9").Sum(x => x.SumVidpom+x.SumVidpomAnother),
+                CountEkmpBadDsNotAffected = table7Data.Where(x => x.RowNum == "6.9.6").Sum(x => x.SumVidpom+x.SumVidpomAnother),
+                CountEkmpBadDsProlonger = table7Data.Where(x => x.RowNum == "6.9.7").Sum(x => x.SumVidpom+x.SumVidpomAnother),
+                CountEkmpBadDsDecline = table7Data.Where(x => x.RowNum == "6.9.8").Sum(x => x.SumVidpom+x.SumVidpomAnother),
+                CountEkmpBadDsInjured = table7Data.Where(x => x.RowNum == "6.9.9").Sum(x => x.SumVidpom+x.SumVidpomAnother),
+                CountEkmpBadDsLeth= table7Data.Where(x => x.RowNum == "6.9.10").Sum(x => x.SumVidpom+x.SumVidpomAnother),
+                CountEkmpBadMed = table7Data.Where(x => x.RowNum == "6.10").Sum(x => x.SumVidpom+x.SumVidpomAnother),
+                CountEkmpUnreglamentedMed = table7Data.Where(x => x.RowNum == "6.11").Sum(x => x.SumVidpom+x.SumVidpomAnother),
+                CountEkmpStopMed = table7Data.Where(x => x.RowNum == "6.12").Sum(x => x.SumVidpom+x.SumVidpomAnother),
+                CountEkmpContinuity = table7Data.Where(x => x.RowNum == "6.13").Sum(x => x.SumVidpom+x.SumVidpomAnother),
+                CountEkmpUnprofile = table7Data.Where(x => x.RowNum == "6.14").Sum(x => x.SumVidpom+x.SumVidpomAnother),
+                CountEkmpUnfounded = table7Data.Where(x => x.RowNum == "6.15").Sum(x => x.SumVidpom+x.SumVidpomAnother),
+                CountEkmpRepeat = table7Data.Where(x => x.RowNum == "6.16").Sum(x => x.SumVidpom+x.SumVidpomAnother),
+                CountEkmpDifference = table7Data.Where(x => x.RowNum == "6.17").Sum(x => x.SumVidpom+x.SumVidpomAnother),
+                CountEkmpUnfoundedMedicaments = table7Data.Where(x => x.RowNum == "6.18").Sum(x => x.SumVidpom+x.SumVidpomAnother),
+                CountEkmpUnfoundedReject = table7Data.Where(x => x.RowNum == "6.19").Sum(x => x.SumVidpom+x.SumVidpomAnother),
+                CountEkmpDisp = table7Data.Where(x => x.RowNum == "6.20").Sum(x => x.SumVidpom+x.SumVidpomAnother),
+                CountEkmpRepeat2weeks = table7Data.Where(x => x.RowNum == "6.21").Sum(x => x.SumVidpom+x.SumVidpomAnother),
+                CountEkmpOutOfResults = table7Data.Where(x => x.RowNum == "6.22").Sum(x => x.SumVidpom+x.SumVidpomAnother),
+                CountEkmpDoubleHospital = table7Data.Where(x => x.RowNum == "6.23").Sum(x => x.SumVidpom+x.SumVidpomAnother),
 
             };
         }

@@ -26,9 +26,18 @@ namespace KmsReportWS.Handler
         public List<MonitoringVCRPgDataDto> GetPgData(string yymm, string idRegion)
         {
             List<MonitoringVCRPgDataDto> result = new List<MonitoringVCRPgDataDto>();
+            
             using (MsConnection connect = new MsConnection(_connStr))
             {
-                connect.NewSp("p_MonitoringVCR_Common");
+                // Определяем процедуру в зависимости от значения yymm
+                if (int.TryParse(yymm, out int yymmValue) && yymmValue <= 2409)
+                {
+                    connect.NewSp("p_MonitoringVCR_Common");
+                }
+                else
+                {
+                    connect.NewSp("p_MonitoringVCR2025_Common");
+                }
                 connect.AddSpParam("@mode", 1);
                 connect.AddSpParam("@yymm", yymm);
                 connect.AddSpParam("@id_region", idRegion);

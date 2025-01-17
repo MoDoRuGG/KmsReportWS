@@ -66,11 +66,11 @@ namespace KmsReportWS.Collector.ConsolidateReport
             var zpzTable8 = zpzFilialData.Where(x => x.Theme == "Таблица 8");
             return new ZpzFinance2025Single
             {
-                SumPayment = zpzTable8.Where(x => x.RowNum == "1").Sum(x => x.SumSmo),
-                SumNotPayment = zpzTable8.Where(x => x.RowNum == "2").Sum(x => x.SumSmo),
-                SumMek = zpzTable8.Where(x => x.RowNum == "3").Sum(x => x.SumSmo),
-                SumMee = zpzTable8.Where(x => x.RowNum == "4").Sum(x => x.SumSmo),
-                SumEkmp = zpzTable8.Where(x => x.RowNum == "5").Sum(x => x.SumSmo)
+                SumPayment = zpzTable8.Where(x => x.RowNum == "1").Sum(x => x.SumOutOfSmoAnother + x.SumAmbulatoryAnother + x.SumDsAnother + x.SumStacAnother),
+                SumNotPayment = zpzTable8.Where(x => x.RowNum == "2").Sum(x => x.SumOutOfSmoAnother + x.SumAmbulatoryAnother + x.SumDsAnother + x.SumStacAnother),
+                SumMek = zpzTable8.Where(x => x.RowNum == "3").Sum(x => x.SumOutOfSmoAnother + x.SumAmbulatoryAnother + x.SumDsAnother + x.SumStacAnother),
+                SumMee = zpzTable8.Where(x => x.RowNum == "4").Sum(x => x.SumOutOfSmoAnother + x.SumAmbulatoryAnother + x.SumDsAnother + x.SumStacAnother),
+                SumEkmp = zpzTable8.Where(x => x.RowNum == "5").Sum(x => x.SumOutOfSmoAnother + x.SumAmbulatoryAnother + x.SumDsAnother + x.SumStacAnother),
 
             };
         }
