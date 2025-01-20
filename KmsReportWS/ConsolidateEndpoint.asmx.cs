@@ -146,12 +146,6 @@ namespace KmsReportWS
             return consolidate.Collect();
         }
 
-        [WebMethod]
-        public List<ZpzForWebSite2025> CreateZpzForWebSite2025(string yymmStart)
-        {
-            var consolidate = new ZpzForWebSite2025Collector(yymmStart);
-            return consolidate.Collect();
-        }
 
         [WebMethod]
         public List<ConsolidateQuantityQ> CreateConsolidateQuantityQ(string yymm)

@@ -14,6 +14,7 @@ using KmsReportWS.Model.Dictionary;
 using KmsReportWS.Model.Report;
 using KmsReportWS.Model.Service;
 using KmsReportWS.Service;
+using System.Threading.Tasks;
 
 namespace KmsReportWS
 {

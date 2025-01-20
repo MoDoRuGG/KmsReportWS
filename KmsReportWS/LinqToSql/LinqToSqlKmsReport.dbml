@@ -815,4 +815,23 @@
       <Column Name="Smp" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.ZpzWebSite2025" Method="ZpzWebSite2025" IsComposable="true">
+    <Parameter Name="Region" Parameter="region" Type="System.String" DbType="VarChar(6)" />
+    <Parameter Name="Yymm" Parameter="yymm" Type="System.String" DbType="VarChar(4)" />
+    <ElementType Name="ZpzWebSite2025Result">
+      <Column Name="Id_Region" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="col1" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
+      <Column Name="col2" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
+      <Column Name="col3" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
+      <Column Name="col4" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
+      <Column Name="col5" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
+      <Column Name="col6" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
+      <Column Name="col8" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
+      <Column Name="col9" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
+      <Column Name="col10" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
+      <Column Name="col11" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
+      <Column Name="col12" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
+      <Column Name="col13" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
+    </ElementType>
+  </Function>
 </Database>
