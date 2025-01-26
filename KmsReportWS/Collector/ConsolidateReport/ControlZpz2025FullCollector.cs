@@ -11,7 +11,7 @@ namespace KmsReportWS.Collector.ConsolidateReport
 {
     public class ControlZpz2025FullCollector
     {
-        private readonly string[] _themes = { "Таблица 5А", "Таблица 6", "Таблица 7", "Таблица 8", "Таблица 9" };
+        private readonly string[] _themes = { "Результаты МЭК", "Таблица 6", "Таблица 7", "Таблица 8", "Таблица 9" };
 
         private readonly string[] _rowNumsExpertiseTable5 = { "4.1", "4.2", "4.3", "4.4", "4.5", "4.6" };
         private readonly string[] _rowNumsExpertiseTable6 =
@@ -34,21 +34,21 @@ namespace KmsReportWS.Collector.ConsolidateReport
             IOrderedEnumerable<string> filials = Enumerable.Empty<string>().OrderBy(x => x);
 
             // Заполнение filials в зависимости от условий
-            if (zpzData1Q.Any())
+            if (zpzData4Q.Any())
             {
-                filials = zpzData1Q.Select(x => x.Filial).Distinct().OrderBy(x => x);
-            }
-            else if (zpzData2Q.Any())
-            {
-                filials = zpzData2Q.Select(x => x.Filial).Distinct().OrderBy(x => x);
+                filials = zpzData4Q.Select(x => x.Filial).Distinct().OrderBy(x => x);
             }
             else if (zpzData3Q.Any())
             {
                 filials = zpzData3Q.Select(x => x.Filial).Distinct().OrderBy(x => x);
             }
-            else if (zpzData4Q.Any())
+            else if (zpzData2Q.Any())
             {
-                filials = zpzData4Q.Select(x => x.Filial).Distinct().OrderBy(x => x);
+                filials = zpzData2Q.Select(x => x.Filial).Distinct().OrderBy(x => x);
+            }
+            else if (zpzData1Q.Any())
+            {
+                filials = zpzData1Q.Select(x => x.Filial).Distinct().OrderBy(x => x);
             }
 
             // Если все данные пусты, возвращаем пустой список
@@ -90,10 +90,12 @@ namespace KmsReportWS.Collector.ConsolidateReport
 
         private ZpzFinance2025Full MapFinance(IEnumerable<SummaryZpz2025> zpz2025FilialData)
         {
+            var zpzTable8a = zpz2025FilialData.Where(x => x.Theme == "Оплата МП");
             var zpzTable8 = zpz2025FilialData.Where(x => x.Theme == "Таблица 8");
+            
             return new ZpzFinance2025Full
             {
-                SumPayment = zpzTable8.Where(x => x.RowNum == "1").Sum(x => x.SumOutOfSmoAnother + x.SumAmbulatoryAnother + x.SumDsAnother + x.SumStacAnother),
+                SumPayment = zpzTable8a.Where(x => x.RowNum == "1").Sum(x => x.SumSmo),
                 SumNotPayment = zpzTable8.Where(x => x.RowNum == "2").Sum(x => x.SumOutOfSmoAnother + x.SumAmbulatoryAnother + x.SumDsAnother + x.SumStacAnother),
                 SumMek = zpzTable8.Where(x => x.RowNum == "3").Sum(x => x.SumOutOfSmoAnother + x.SumAmbulatoryAnother + x.SumDsAnother + x.SumStacAnother),
                 SumMee = zpzTable8.Where(x => x.RowNum == "4").Sum(x => x.SumOutOfSmoAnother + x.SumAmbulatoryAnother + x.SumDsAnother + x.SumStacAnother),
@@ -104,7 +106,7 @@ namespace KmsReportWS.Collector.ConsolidateReport
 
         private ZpzExpertise2025Full MapExpertise(IEnumerable<SummaryZpz2025> zpz2025FilialData)
         {
-            var table5Data = zpz2025FilialData.Where(x => x.Theme == "Таблица 5А");
+            var table5Data = zpz2025FilialData.Where(x => x.Theme == "Результаты МЭК");
             var table6Data = zpz2025FilialData.Where(x => x.Theme == "Таблица 6");
             var table7Data = zpz2025FilialData.Where(x => x.Theme == "Таблица 7");
             return new ZpzExpertise2025Full

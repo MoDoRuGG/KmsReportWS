@@ -8,7 +8,7 @@ namespace KmsReportWS.Collector.ConsolidateReport
 {
     public class ControlZpz2023Collector
     {
-        private readonly string[] _themes = { "Таблица 5А", "Таблица 6", "Таблица 7", "Таблица 8", "Таблица 9" };
+        private readonly string[] _themes = { "Результаты МЭК", "Таблица 6", "Таблица 7", "Таблица 8", "Таблица 9" };   
 
         private readonly string[] _rowNumsExpertiseTable5 = { "4.1", "4.2", "4.3", "4.4", "4.5", "4.6" };
         private readonly string[] _rowNumsExpertiseTable6 =

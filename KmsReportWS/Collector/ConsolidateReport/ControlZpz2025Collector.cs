@@ -8,7 +8,7 @@ namespace KmsReportWS.Collector.ConsolidateReport
 {
     public class ControlZpz2025Collector
     {
-        private readonly string[] _themes = { "Таблица 5А", "Таблица 6", "Таблица 7", "Таблица 8", "Таблица 9" };
+        private readonly string[] _themes = { "Результаты МЭК", "Таблица 6", "Таблица 7", "Таблица 8", "Таблица 9", "Оплата МП" };
 
         private readonly string[] _rowNumsExpertiseTable5 = { "4.1", "4.2", "4.3", "4.4", "4.5", "4.6" };
         private readonly string[] _rowNumsExpertiseTable6 =
@@ -52,7 +52,7 @@ namespace KmsReportWS.Collector.ConsolidateReport
 
         private ZpzNormative2025 MapNormative(IEnumerable<SummaryZpz2025> zpzFilialData)
         {
-            var table5Data = zpzFilialData.Where(x => x.Theme == "Таблица 5А");
+            var table5Data = zpzFilialData.Where(x => x.Theme == "Результаты МЭК");
             var table6Data = zpzFilialData.Where(x => x.Theme == "Таблица 6");
             var table7Data = zpzFilialData.Where(x => x.Theme == "Таблица 7");
             return new ZpzNormative2025
@@ -156,9 +156,10 @@ namespace KmsReportWS.Collector.ConsolidateReport
         private ZpzFinance2025 MapFinance(IEnumerable<SummaryZpz2025> zpzFilialData)
         {
             var zpzTable8 = zpzFilialData.Where(x => x.Theme == "Таблица 8");
+            var zpzTable8a = zpzFilialData.Where(x => x.Theme == "Оплата МП");
             return new ZpzFinance2025
             {
-                SumPayment = zpzTable8.Where(x => x.RowNum == "1").Sum(x => x.SumOutOfSmoAnother + x.SumAmbulatoryAnother + x.SumDsAnother + x.SumStacAnother),
+                SumPayment = zpzTable8a.Where(x => x.RowNum == "1").Sum(x => x.SumSmo),
                 SumNotPayment = zpzTable8.Where(x => x.RowNum == "2").Sum(x => x.SumOutOfSmoAnother + x.SumAmbulatoryAnother + x.SumDsAnother + x.SumStacAnother),
                 SumMek = zpzTable8.Where(x => x.RowNum == "3").Sum(x => x.SumOutOfSmoAnother + x.SumAmbulatoryAnother + x.SumDsAnother + x.SumStacAnother),
                 SumMee = zpzTable8.Where(x => x.RowNum == "4").Sum(x => x.SumOutOfSmoAnother + x.SumAmbulatoryAnother + x.SumDsAnother + x.SumStacAnother),
@@ -172,7 +173,7 @@ namespace KmsReportWS.Collector.ConsolidateReport
 
         private ZpzExpertise2025 MapExpertise(IEnumerable<SummaryZpz2025> zpzFilialData)
         {
-            var table5Data = zpzFilialData.Where(x => x.Theme == "Таблица 5А");
+            var table5Data = zpzFilialData.Where(x => x.Theme == "Результаты МЭК");
             var table6Data = zpzFilialData.Where(x => x.Theme == "Таблица 6");
             var table7Data = zpzFilialData.Where(x => x.Theme == "Таблица 7");
             return new ZpzExpertise2025
