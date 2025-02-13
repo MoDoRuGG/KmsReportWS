@@ -763,6 +763,13 @@ namespace KmsReportWS
         }
 
         [WebMethod]
+        public List<ViolationsOfAppeals> CreateViolationsOfAppeals(string yymm)
+        {
+            var consolidate = new ViolationsOfAppealsCollector(yymm);
+            return consolidate.Collect();
+        }
+
+        [WebMethod]
         public List<CReportZpz2023Full> CreateReportControlZpz2023Full(string year)
         {
             var consolidate = new ControlZpz2023FullCollector();

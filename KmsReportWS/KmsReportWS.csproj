@@ -224,7 +224,7 @@
     <Compile Include="Model\ConcolidateReport\SummaryZpz2025.cs" />
     <Compile Include="Model\ConcolidateReport\SummaryZpz2023.cs" />
     <Compile Include="Model\ConcolidateReport\SummaryPg.cs" />
-    <Compile Include="Model\ConcolidateReport\ViolationOfAppeals.cs" />
+    <Compile Include="Model\ConcolidateReport\ViolationsOfAppeals.cs" />
     <Compile Include="Model\ConcolidateReport\ZpzForWebSite2025.cs" />
     <Compile Include="Model\ConcolidateReport\ZpzForWebSite2023.cs" />
     <Compile Include="Model\Constructor\DynamicDataDto.cs" />
