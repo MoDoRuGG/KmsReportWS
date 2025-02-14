@@ -820,18 +820,19 @@
     <Parameter Name="Yymm" Parameter="yymm" Type="System.String" DbType="VarChar(4)" />
     <ElementType Name="ZpzWebSite2025Result">
       <Column Name="Id_Region" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
-      <Column Name="col1" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
-      <Column Name="col2" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
-      <Column Name="col3" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
-      <Column Name="col4" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
-      <Column Name="col5" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
-      <Column Name="col6" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
-      <Column Name="col8" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
-      <Column Name="col9" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
-      <Column Name="col10" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
-      <Column Name="col11" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
-      <Column Name="col12" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
-      <Column Name="col13" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
+      <Column Name="col1" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="col2" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="col3" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="col4" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="col5" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="col6" Type="System.Decimal" DbType="Decimal(16,3)" CanBeNull="true" />
+      <Column Name="col8" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="col9" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="col10" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="col11" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="col12" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="col13" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="col14" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
     </ElementType>
   </Function>
 </Database>

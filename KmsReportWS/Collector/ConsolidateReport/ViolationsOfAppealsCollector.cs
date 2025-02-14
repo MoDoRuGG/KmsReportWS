@@ -16,7 +16,7 @@ namespace KmsReportWS.Collector.ConsolidateReport
             ReportStatus.Submit.GetDescriptionSt(), ReportStatus.Done.GetDescriptionSt()
         };
 
-        private static readonly string[] T1Rows = { "3.1", "3.1.1", "3.1.2", "3.1.3", "3.1.4", "3.1.5", "3.1.6", "3.1.7", "3.1.8", "3.1.9", "3.1.10", "3.1.11", "3.1.16", };
+        private static readonly string[] T1Rows = { "3.1", "3.1.1", "3.1.2", "3.1.3", "3.1.4", "3.1.5", "3.1.5.1", "3.1.5.2", "3.1.6", "3.1.7", "3.1.8", "3.1.9", "3.1.10", "3.1.11", "3.1.16", };
 
         private static readonly string ConnStr = Settings.Default.ConnStr;
 
@@ -64,37 +64,37 @@ namespace KmsReportWS.Collector.ConsolidateReport
             };
         }
 
-        private IQueryable<Report_Zpz> CollectZpzQ(LinqToSqlKmsReportDataContext db, string theme, string region) =>
+        private IQueryable<Report_Zpz2025> CollectZpzQ(LinqToSqlKmsReportDataContext db, string theme, string region) =>
             from flow in db.Report_Flow
             join data in db.Report_Data on flow.Id equals data.Id_Flow
-            join f in db.Report_Zpz on data.Id equals f.Id_Report_Data
+            join f in db.Report_Zpz2025 on data.Id equals f.Id_Report_Data
             where flow.Yymm == _yymm
                   && data.Theme == theme
                   && flow.Id_Region == region
                   && Statuses.Contains(flow.Status)
-                  && flow.Id_Report_Type == "Zpz_Q"
+                  && flow.Id_Report_Type == "Zpz_Q2025"
             select f;
 
-        private IQueryable<Report_Zpz> CollectZpz(LinqToSqlKmsReportDataContext db, string theme, string region) =>
+        private IQueryable<Report_Zpz2025> CollectZpz(LinqToSqlKmsReportDataContext db, string theme, string region) =>
             from flow in db.Report_Flow
             join data in db.Report_Data on flow.Id equals data.Id_Flow
-            join f in db.Report_Zpz on data.Id equals f.Id_Report_Data
+            join f in db.Report_Zpz2025 on data.Id equals f.Id_Report_Data
             where flow.Yymm == _yymm
                   && data.Theme == theme
                   && flow.Id_Region == region
                   && Statuses.Contains(flow.Status)
-                  && flow.Id_Report_Type == "Zpz"
+                  && flow.Id_Report_Type == "Zpz2025"
             select f;
 
-        private IQueryable<Report_Zpz> CollectZpz10(LinqToSqlKmsReportDataContext db, string theme, string region) =>
+        private IQueryable<Report_Zpz2025> CollectZpz10(LinqToSqlKmsReportDataContext db, string theme, string region) =>
             from flow in db.Report_Flow
             join data in db.Report_Data on flow.Id equals data.Id_Flow
-            join f in db.Report_Zpz on data.Id equals f.Id_Report_Data
+            join f in db.Report_Zpz2025 on data.Id equals f.Id_Report_Data
             where Convert.ToInt32(flow.Yymm) <= Convert.ToInt32(_yymm) && Convert.ToInt32(flow.Yymm) >= Convert.ToInt32(_yymm.Substring(0, 2) + "01")
                   && data.Theme == theme
                   && flow.Id_Region == region
                   && Statuses.Contains(flow.Status)
-                  && flow.Id_Report_Type == "Zpz10"
+                  && flow.Id_Report_Type == "Zpz10_2025"
             select f;
 
 

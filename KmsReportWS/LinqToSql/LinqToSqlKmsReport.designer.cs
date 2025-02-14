@@ -17190,6 +17190,8 @@ namespace KmsReportWS.LinqToSql
 		
 		private System.Nullable<decimal> _col13;
 		
+		private System.Nullable<decimal> _col14;
+		
 		public ZpzWebSite2025Result()
 		{
 		}
@@ -17210,7 +17212,7 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_col1", DbType="Decimal(38,3)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_col1", DbType="Decimal(15,3)")]
 		public System.Nullable<decimal> col1
 		{
 			get
@@ -17226,7 +17228,7 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_col2", DbType="Decimal(38,3)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_col2", DbType="Decimal(15,3)")]
 		public System.Nullable<decimal> col2
 		{
 			get
@@ -17242,7 +17244,7 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_col3", DbType="Decimal(38,3)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_col3", DbType="Decimal(15,3)")]
 		public System.Nullable<decimal> col3
 		{
 			get
@@ -17258,7 +17260,7 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_col4", DbType="Decimal(38,3)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_col4", DbType="Decimal(15,3)")]
 		public System.Nullable<decimal> col4
 		{
 			get
@@ -17274,7 +17276,7 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_col5", DbType="Decimal(38,3)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_col5", DbType="Decimal(15,3)")]
 		public System.Nullable<decimal> col5
 		{
 			get
@@ -17290,7 +17292,7 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_col6", DbType="Decimal(38,3)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_col6", DbType="Decimal(16,3)")]
 		public System.Nullable<decimal> col6
 		{
 			get
@@ -17306,7 +17308,7 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_col8", DbType="Decimal(38,3)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_col8", DbType="Decimal(15,3)")]
 		public System.Nullable<decimal> col8
 		{
 			get
@@ -17322,7 +17324,7 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_col9", DbType="Decimal(38,3)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_col9", DbType="Decimal(15,3)")]
 		public System.Nullable<decimal> col9
 		{
 			get
@@ -17338,7 +17340,7 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_col10", DbType="Decimal(38,3)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_col10", DbType="Decimal(15,3)")]
 		public System.Nullable<decimal> col10
 		{
 			get
@@ -17354,7 +17356,7 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_col11", DbType="Decimal(38,3)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_col11", DbType="Decimal(15,3)")]
 		public System.Nullable<decimal> col11
 		{
 			get
@@ -17370,7 +17372,7 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_col12", DbType="Decimal(38,3)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_col12", DbType="Decimal(15,3)")]
 		public System.Nullable<decimal> col12
 		{
 			get
@@ -17386,7 +17388,7 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_col13", DbType="Decimal(38,3)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_col13", DbType="Decimal(15,3)")]
 		public System.Nullable<decimal> col13
 		{
 			get
@@ -17398,6 +17400,22 @@ namespace KmsReportWS.LinqToSql
 				if ((this._col13 != value))
 				{
 					this._col13 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_col14", DbType="Decimal(15,3)")]
+		public System.Nullable<decimal> col14
+		{
+			get
+			{
+				return this._col14;
+			}
+			set
+			{
+				if ((this._col14 != value))
+				{
+					this._col14 = value;
 				}
 			}
 		}

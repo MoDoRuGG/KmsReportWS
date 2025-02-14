@@ -22,5 +22,6 @@ namespace KmsReportWS.Model.ConcolidateReport
         public decimal Col11 { get; set; }
         public decimal Col12 { get; set; }
         public decimal Col13 { get; set; }
+        public decimal Col14 { get; set; }
     }
 }

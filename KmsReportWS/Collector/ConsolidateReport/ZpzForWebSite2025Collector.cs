@@ -65,6 +65,7 @@ namespace KmsReportWS.Collector.ConsolidateReport
         Col11 = table.col11 ?? 0,
         Col12 = table.col12 ?? 0,
         Col13 = table.col13 ?? 0,
+        Col14 = table.col14 ?? 0,
     };
 
         private Task<List<WSData2025>> CollectWS2025(LinqToSqlKmsReportDataContext db, string region)
@@ -86,6 +87,7 @@ namespace KmsReportWS.Collector.ConsolidateReport
                 Col11 = row.Col11,
                 Col12 = row.Col12,
                 Col13 = row.Col13,
+                Col14 = row.Col14,
             }).ToList());
         }
     }
