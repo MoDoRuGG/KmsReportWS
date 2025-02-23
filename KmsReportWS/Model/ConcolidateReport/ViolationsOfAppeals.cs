@@ -5,15 +5,12 @@ namespace KmsReportWS.Model.ConcolidateReport
     public class ViolationsOfAppeals
     {
         public string Filial { get; set; }
-        public List<TreatmentVOA> Treatments { get; set; }
-        public List<TreatmentVOA> Complaints { get; set; }
-        public List<StatisticsVOA> Protections { get; set; }
-        public List<ExpertiseVOA> Expertises { get; set; }
-        public List<StatisticsVOA> Specialists { get; set; }
-        public List<StatisticsVOA> Informations { get; set; }
+        public List<ForT1VOA> T1 { get; set; }
+        public List<ForT2VOA> T2 { get; set; }
+        public List<ForT3VOA> T3 { get; set; }
     }
 
-    public class TreatmentVOA
+    public class ForT1VOA
     {
         public string Row { get; set; }
         public int Oral { get; set; }
@@ -21,7 +18,7 @@ namespace KmsReportWS.Model.ConcolidateReport
         public int Assignment { get; set; }
     }
 
-    public class ExpertiseVOA
+    public class ForT2VOA
     {
         public string Row { get; set; }
         public int Target { get; set; }
@@ -29,9 +26,11 @@ namespace KmsReportWS.Model.ConcolidateReport
         public int Violation { get; set; }
     }
 
-    public class StatisticsVOA
+    public class ForT3VOA
     {
         public string Row { get; set; }
-        public decimal Count { get; set; }
+        public int Target { get; set; }
+        public int Plan { get; set; }
+        public int Violation { get; set; }
     }
 }

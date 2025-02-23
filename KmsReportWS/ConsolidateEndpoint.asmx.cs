@@ -146,6 +146,13 @@ namespace KmsReportWS
             return consolidate.Collect();
         }
 
+        [WebMethod]
+        public List<ViolationsOfAppeals> CreateViolationsOfAppeals(string yymm)
+        {
+            var consolidate = new ViolationsOfAppealsCollector(yymm);
+            return consolidate.Collect();
+        }
+
 
         [WebMethod]
         public List<ConsolidateQuantityQ> CreateConsolidateQuantityQ(string yymm)
