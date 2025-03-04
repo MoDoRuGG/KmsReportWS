@@ -108,6 +108,7 @@
     <Compile Include="Collector\BaseReport\F262Collector.cs" />
     <Compile Include="Collector\BaseReport\OpedCollector.cs" />
     <Compile Include="Collector\BaseReport\F294Collector.cs" />
+    <Compile Include="Collector\BaseReport\ViolationsCollector.cs" />
     <Compile Include="Collector\BaseReport\ZpzCollector.cs" />
     <Compile Include="Collector\BaseReport\ReportCollectorFactory.cs" />
     <Compile Include="Collector\BaseReport\IizlCollector.cs" />
@@ -163,6 +164,7 @@
     <Compile Include="Handler\ReportReqVCRHandler.cs" />
     <Compile Include="Handler\ReportEffectivenessHandler.cs" />
     <Compile Include="Handler\ReportOpedFinance3Handler.cs" />
+    <Compile Include="Handler\ReportViolationsHandler.cs" />
     <Compile Include="Handler\ZpzHandler.cs" />
     <Compile Include="Handler\ReportCadreHandler.cs" />
     <Compile Include="Handler\DynamicReportCommonHandler.cs" />
@@ -255,6 +257,7 @@
     <Compile Include="Model\Report\ReportOped.cs" />
     <Compile Include="Model\Report\ReportOpedFinance.cs" />
     <Compile Include="Model\Report\ReportQuantity.cs" />
+    <Compile Include="Model\Report\ReportViolations.cs" />
     <Compile Include="Model\Report\ReportZpz.cs" />
     <Compile Include="Model\Report\ReportProposal.cs" />
     <Compile Include="Model\Report\ReportVaccination.cs" />
