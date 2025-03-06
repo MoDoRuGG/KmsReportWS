@@ -106,6 +106,7 @@
   <ItemGroup>
     <Compile Include="Collector\BaseReport\BaseReportCollector.cs" />
     <Compile Include="Collector\BaseReport\F262Collector.cs" />
+    <Compile Include="Collector\BaseReport\MonthlyVolCollector.cs" />
     <Compile Include="Collector\BaseReport\OpedCollector.cs" />
     <Compile Include="Collector\BaseReport\F294Collector.cs" />
     <Compile Include="Collector\BaseReport\ViolationsCollector.cs" />
@@ -146,6 +147,7 @@
     <Compile Include="Collector\ConsolidateReport\ControlZpz2025Collector.cs" />
     <Compile Include="Collector\ConsolidateReport\ControlZpz2025FullCollector.cs" />
     <Compile Include="Collector\ConsolidateReport\ControlZpz2025SingleCollector.cs" />
+    <Compile Include="Collector\ConsolidateReport\FFOMSTargetedExpCollector.cs" />
     <Compile Include="Collector\ConsolidateReport\ViolationsOfAppealsCollector.cs" />
     <Compile Include="Collector\ConsolidateReport\ZpzForWebSite2023Collector.cs" />
     <Compile Include="Collector\ConsolidateReport\ZpzForWebSite2025Collector.cs" />
@@ -156,6 +158,7 @@
     <Compile Include="Handler\BaseReportHandler.cs" />
     <Compile Include="Handler\FOpedUHandler.cs" />
     <Compile Include="Handler\MonitoringVCRHandler.cs" />
+    <Compile Include="Handler\MonthlyVolHandler.cs" />
     <Compile Include="Handler\QuantityPlanDictionaryHandler.cs" />
     <Compile Include="Handler\ReportDoffHandler.cs" />
     <Compile Include="Handler\ReportPVPLoadHandler.cs" />
@@ -223,6 +226,7 @@
     <Compile Include="Model\ConcolidateReport\CReportZpz2023Single.cs" />
     <Compile Include="Model\ConcolidateReport\CReportZpz2023Full.cs" />
     <Compile Include="Model\ConcolidateReport\CReportZpz2023.cs" />
+    <Compile Include="Model\ConcolidateReport\FFOMSTargetedExp.cs" />
     <Compile Include="Model\ConcolidateReport\SummaryZpz2025.cs" />
     <Compile Include="Model\ConcolidateReport\SummaryZpz2023.cs" />
     <Compile Include="Model\ConcolidateReport\SummaryPg.cs" />
@@ -241,6 +245,7 @@
     <Compile Include="Model\ReportDynamicScanModel.cs" />
     <Compile Include="Model\ReportScanModel.cs" />
     <Compile Include="Model\Report\ReportDoff.cs" />
+    <Compile Include="Model\Report\ReportMonthlyVol.cs" />
     <Compile Include="Model\Report\ReportPVPLoad.cs" />
     <Compile Include="Model\Report\ReportTargetedAllowances.cs" />
     <Compile Include="Model\Report\ReportReqVCR.cs" />

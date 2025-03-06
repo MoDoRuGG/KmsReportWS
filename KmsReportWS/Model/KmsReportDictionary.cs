@@ -6,5 +6,6 @@
         public string Value { get; set; }
         public string ForeignKey { get; set; }
         public string AdditionalField { get; set; }
+        public string ShortName { get; set; }
     }
 }

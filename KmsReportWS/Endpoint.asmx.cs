@@ -335,6 +335,11 @@ namespace KmsReportWS
             
         }
 
+        public void WebReportMonthlyVol(ReportMonthlyVol report)
+        {
+
+        }
+
         [WebMethod]
         public void WebReportOpedU(ReportOpedU report)
         {
@@ -810,6 +815,14 @@ namespace KmsReportWS
         {
             var consolidate = new ControlZpz2025SingleCollector();
             return consolidate.Collect(year, filial);
+        }
+
+
+        [WebMethod]
+        public List<FFOMSTargetedExp> CreateFFOMSTargetedExp(string yymm)
+        {
+            var consolidate = new FFOMSTargetedExpCollector(yymm);
+            return consolidate.Collect();
         }
     }
 }

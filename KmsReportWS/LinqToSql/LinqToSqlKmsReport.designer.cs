@@ -51,9 +51,6 @@ namespace KmsReportWS.LinqToSql
     partial void InsertOpedFinancePlan(OpedFinancePlan instance);
     partial void UpdateOpedFinancePlan(OpedFinancePlan instance);
     partial void DeleteOpedFinancePlan(OpedFinancePlan instance);
-    partial void InsertRegion(Region instance);
-    partial void UpdateRegion(Region instance);
-    partial void DeleteRegion(Region instance);
     partial void InsertReport_Cadre(Report_Cadre instance);
     partial void UpdateReport_Cadre(Report_Cadre instance);
     partial void DeleteReport_Cadre(Report_Cadre instance);
@@ -147,6 +144,12 @@ namespace KmsReportWS.LinqToSql
     partial void InsertReport_Violations(Report_Violations instance);
     partial void UpdateReport_Violations(Report_Violations instance);
     partial void DeleteReport_Violations(Report_Violations instance);
+    partial void InsertRegion(Region instance);
+    partial void UpdateRegion(Region instance);
+    partial void DeleteRegion(Region instance);
+    partial void InsertReport_MonthlyVol(Report_MonthlyVol instance);
+    partial void UpdateReport_MonthlyVol(Report_MonthlyVol instance);
+    partial void DeleteReport_MonthlyVol(Report_MonthlyVol instance);
     #endregion
 		
 		public LinqToSqlKmsReportDataContext(string connection) : 
@@ -242,14 +245,6 @@ namespace KmsReportWS.LinqToSql
 			get
 			{
 				return this.GetTable<OpedFinancePlan>();
-			}
-		}
-		
-		public System.Data.Linq.Table<Region> Region
-		{
-			get
-			{
-				return this.GetTable<Region>();
 			}
 		}
 		
@@ -501,6 +496,22 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
+		public System.Data.Linq.Table<Region> Region
+		{
+			get
+			{
+				return this.GetTable<Region>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Report_MonthlyVol> Report_MonthlyVol
+		{
+			get
+			{
+				return this.GetTable<Report_MonthlyVol>();
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.cadre_rapport", IsComposable=true)]
 		public IQueryable<cadre_rapportResult> cadre_rapport([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Yymm", DbType="VarChar(4)")] string yymm, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Theme", DbType="VarChar(30)")] string theme)
 		{
@@ -535,6 +546,12 @@ namespace KmsReportWS.LinqToSql
 		public IQueryable<ZpzWebSite2025Result> ZpzWebSite2025([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Region", DbType="VarChar(6)")] string region, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Yymm", DbType="VarChar(4)")] string yymm)
 		{
 			return this.CreateMethodCallQuery<ZpzWebSite2025Result>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), region, yymm);
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.MonthlyVol", IsComposable=true)]
+		public IQueryable<MonthlyVolResult> MonthlyVol([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(4)")] string yymm_start, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(4)")] string yymm_end, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(7)")] string region)
+		{
+			return this.CreateMethodCallQuery<MonthlyVolResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), yymm_start, yymm_end, region);
 		}
 	}
 	
@@ -2331,352 +2348,6 @@ namespace KmsReportWS.LinqToSql
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Region")]
-	public partial class Region : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private string _id;
-		
-		private string _name;
-		
-		private string _code_division;
-		
-		private string _name_devision;
-		
-		private string _position;
-		
-		private string _name_head;
-		
-		private string _phone;
-		
-		private EntitySet<Employee> _Employee;
-		
-		private EntitySet<OpedFinancePlan> _OpedFinancePlan;
-		
-		private EntitySet<Report_Flow> _Report_Flow;
-		
-		private EntitySet<QuantityPlan> _QuantityPlan;
-		
-		private EntitySet<Report_Dynamic_Flow> _Report_Dynamic_Flow;
-		
-    #region Определения метода расширяемости
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnidChanging(string value);
-    partial void OnidChanged();
-    partial void OnnameChanging(string value);
-    partial void OnnameChanged();
-    partial void Oncode_divisionChanging(string value);
-    partial void Oncode_divisionChanged();
-    partial void Onname_devisionChanging(string value);
-    partial void Onname_devisionChanged();
-    partial void OnpositionChanging(string value);
-    partial void OnpositionChanged();
-    partial void Onname_headChanging(string value);
-    partial void Onname_headChanged();
-    partial void OnphoneChanging(string value);
-    partial void OnphoneChanged();
-    #endregion
-		
-		public Region()
-		{
-			this._Employee = new EntitySet<Employee>(new Action<Employee>(this.attach_Employee), new Action<Employee>(this.detach_Employee));
-			this._OpedFinancePlan = new EntitySet<OpedFinancePlan>(new Action<OpedFinancePlan>(this.attach_OpedFinancePlan), new Action<OpedFinancePlan>(this.detach_OpedFinancePlan));
-			this._Report_Flow = new EntitySet<Report_Flow>(new Action<Report_Flow>(this.attach_Report_Flow), new Action<Report_Flow>(this.detach_Report_Flow));
-			this._QuantityPlan = new EntitySet<QuantityPlan>(new Action<QuantityPlan>(this.attach_QuantityPlan), new Action<QuantityPlan>(this.detach_QuantityPlan));
-			this._Report_Dynamic_Flow = new EntitySet<Report_Dynamic_Flow>(new Action<Report_Dynamic_Flow>(this.attach_Report_Dynamic_Flow), new Action<Report_Dynamic_Flow>(this.detach_Report_Dynamic_Flow));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="VarChar(10) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string id
-		{
-			get
-			{
-				return this._id;
-			}
-			set
-			{
-				if ((this._id != value))
-				{
-					this.OnidChanging(value);
-					this.SendPropertyChanging();
-					this._id = value;
-					this.SendPropertyChanged("id");
-					this.OnidChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_name", DbType="VarChar(150) NOT NULL", CanBeNull=false)]
-		public string name
-		{
-			get
-			{
-				return this._name;
-			}
-			set
-			{
-				if ((this._name != value))
-				{
-					this.OnnameChanging(value);
-					this.SendPropertyChanging();
-					this._name = value;
-					this.SendPropertyChanged("name");
-					this.OnnameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_code_division", DbType="VarChar(10) NOT NULL", CanBeNull=false)]
-		public string code_division
-		{
-			get
-			{
-				return this._code_division;
-			}
-			set
-			{
-				if ((this._code_division != value))
-				{
-					this.Oncode_divisionChanging(value);
-					this.SendPropertyChanging();
-					this._code_division = value;
-					this.SendPropertyChanged("code_division");
-					this.Oncode_divisionChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_name_devision", DbType="VarChar(150) NOT NULL", CanBeNull=false)]
-		public string name_devision
-		{
-			get
-			{
-				return this._name_devision;
-			}
-			set
-			{
-				if ((this._name_devision != value))
-				{
-					this.Onname_devisionChanging(value);
-					this.SendPropertyChanging();
-					this._name_devision = value;
-					this.SendPropertyChanged("name_devision");
-					this.Onname_devisionChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_position", DbType="VarChar(100) NOT NULL", CanBeNull=false)]
-		public string position
-		{
-			get
-			{
-				return this._position;
-			}
-			set
-			{
-				if ((this._position != value))
-				{
-					this.OnpositionChanging(value);
-					this.SendPropertyChanging();
-					this._position = value;
-					this.SendPropertyChanged("position");
-					this.OnpositionChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_name_head", DbType="VarChar(150) NOT NULL", CanBeNull=false)]
-		public string name_head
-		{
-			get
-			{
-				return this._name_head;
-			}
-			set
-			{
-				if ((this._name_head != value))
-				{
-					this.Onname_headChanging(value);
-					this.SendPropertyChanging();
-					this._name_head = value;
-					this.SendPropertyChanged("name_head");
-					this.Onname_headChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_phone", DbType="VarChar(20)")]
-		public string phone
-		{
-			get
-			{
-				return this._phone;
-			}
-			set
-			{
-				if ((this._phone != value))
-				{
-					this.OnphoneChanging(value);
-					this.SendPropertyChanging();
-					this._phone = value;
-					this.SendPropertyChanged("phone");
-					this.OnphoneChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Region_Employee", Storage="_Employee", ThisKey="id", OtherKey="Region")]
-		public EntitySet<Employee> Employee
-		{
-			get
-			{
-				return this._Employee;
-			}
-			set
-			{
-				this._Employee.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Region_OpedFinancePlan", Storage="_OpedFinancePlan", ThisKey="id", OtherKey="Id_Region")]
-		public EntitySet<OpedFinancePlan> OpedFinancePlan
-		{
-			get
-			{
-				return this._OpedFinancePlan;
-			}
-			set
-			{
-				this._OpedFinancePlan.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Region_Report_Flow", Storage="_Report_Flow", ThisKey="id", OtherKey="Id_Region")]
-		public EntitySet<Report_Flow> Report_Flow
-		{
-			get
-			{
-				return this._Report_Flow;
-			}
-			set
-			{
-				this._Report_Flow.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Region_QuantityPlan", Storage="_QuantityPlan", ThisKey="id", OtherKey="Id_Region")]
-		public EntitySet<QuantityPlan> QuantityPlan
-		{
-			get
-			{
-				return this._QuantityPlan;
-			}
-			set
-			{
-				this._QuantityPlan.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Region_Report_Dynamic_Flow", Storage="_Report_Dynamic_Flow", ThisKey="id", OtherKey="Id_Region")]
-		public EntitySet<Report_Dynamic_Flow> Report_Dynamic_Flow
-		{
-			get
-			{
-				return this._Report_Dynamic_Flow;
-			}
-			set
-			{
-				this._Report_Dynamic_Flow.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_Employee(Employee entity)
-		{
-			this.SendPropertyChanging();
-			entity.Region1 = this;
-		}
-		
-		private void detach_Employee(Employee entity)
-		{
-			this.SendPropertyChanging();
-			entity.Region1 = null;
-		}
-		
-		private void attach_OpedFinancePlan(OpedFinancePlan entity)
-		{
-			this.SendPropertyChanging();
-			entity.Region = this;
-		}
-		
-		private void detach_OpedFinancePlan(OpedFinancePlan entity)
-		{
-			this.SendPropertyChanging();
-			entity.Region = null;
-		}
-		
-		private void attach_Report_Flow(Report_Flow entity)
-		{
-			this.SendPropertyChanging();
-			entity.Region = this;
-		}
-		
-		private void detach_Report_Flow(Report_Flow entity)
-		{
-			this.SendPropertyChanging();
-			entity.Region = null;
-		}
-		
-		private void attach_QuantityPlan(QuantityPlan entity)
-		{
-			this.SendPropertyChanging();
-			entity.Region = this;
-		}
-		
-		private void detach_QuantityPlan(QuantityPlan entity)
-		{
-			this.SendPropertyChanging();
-			entity.Region = null;
-		}
-		
-		private void attach_Report_Dynamic_Flow(Report_Dynamic_Flow entity)
-		{
-			this.SendPropertyChanging();
-			entity.Region = this;
-		}
-		
-		private void detach_Report_Dynamic_Flow(Report_Dynamic_Flow entity)
-		{
-			this.SendPropertyChanging();
-			entity.Region = null;
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Report_Cadre")]
 	public partial class Report_Cadre : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -3542,6 +3213,8 @@ namespace KmsReportWS.LinqToSql
 		
 		private EntitySet<Report_Violations> _Report_Violations;
 		
+		private EntitySet<Report_MonthlyVol> _Report_MonthlyVol;
+		
 		private EntityRef<Report_Type> _Report_Type;
 		
 		private EntityRef<Report_Flow> _Report_Flow;
@@ -3590,6 +3263,7 @@ namespace KmsReportWS.LinqToSql
 			this._Report_Doff = new EntitySet<Report_Doff>(new Action<Report_Doff>(this.attach_Report_Doff), new Action<Report_Doff>(this.detach_Report_Doff));
 			this._Report_Zpz2025 = new EntitySet<Report_Zpz2025>(new Action<Report_Zpz2025>(this.attach_Report_Zpz2025), new Action<Report_Zpz2025>(this.detach_Report_Zpz2025));
 			this._Report_Violations = new EntitySet<Report_Violations>(new Action<Report_Violations>(this.attach_Report_Violations), new Action<Report_Violations>(this.detach_Report_Violations));
+			this._Report_MonthlyVol = new EntitySet<Report_MonthlyVol>(new Action<Report_MonthlyVol>(this.attach_Report_MonthlyVol), new Action<Report_MonthlyVol>(this.detach_Report_MonthlyVol));
 			this._Report_Type = default(EntityRef<Report_Type>);
 			this._Report_Flow = default(EntityRef<Report_Flow>);
 			OnCreated();
@@ -4035,6 +3709,19 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Report_Data_Report_MonthlyVol", Storage="_Report_MonthlyVol", ThisKey="Id", OtherKey="Id_Report_Data")]
+		public EntitySet<Report_MonthlyVol> Report_MonthlyVol
+		{
+			get
+			{
+				return this._Report_MonthlyVol;
+			}
+			set
+			{
+				this._Report_MonthlyVol.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Report_Type_Report_Data", Storage="_Report_Type", ThisKey="Id_Report", OtherKey="Id", IsForeignKey=true)]
 		public Report_Type Report_Type
 		{
@@ -4406,6 +4093,18 @@ namespace KmsReportWS.LinqToSql
 		}
 		
 		private void detach_Report_Violations(Report_Violations entity)
+		{
+			this.SendPropertyChanging();
+			entity.Report_Data = null;
+		}
+		
+		private void attach_Report_MonthlyVol(Report_MonthlyVol entity)
+		{
+			this.SendPropertyChanging();
+			entity.Report_Data = this;
+		}
+		
+		private void detach_Report_MonthlyVol(Report_MonthlyVol entity)
 		{
 			this.SendPropertyChanging();
 			entity.Report_Data = null;
@@ -10800,9 +10499,9 @@ namespace KmsReportWS.LinqToSql
 		
 		private EntityRef<Employee> _Employee;
 		
-		private EntityRef<Region> _Region;
-		
 		private EntityRef<Report_Type> _Report_Type;
+		
+		private EntityRef<Region> _Region;
 		
     #region Определения метода расширяемости
     partial void OnLoaded();
@@ -10870,8 +10569,8 @@ namespace KmsReportWS.LinqToSql
 			this._Report_Data = new EntitySet<Report_Data>(new Action<Report_Data>(this.attach_Report_Data), new Action<Report_Data>(this.detach_Report_Data));
 			this._Scans_Base = new EntitySet<Scans_Base>(new Action<Scans_Base>(this.attach_Scans_Base), new Action<Scans_Base>(this.detach_Scans_Base));
 			this._Employee = default(EntityRef<Employee>);
-			this._Region = default(EntityRef<Region>);
 			this._Report_Type = default(EntityRef<Report_Type>);
+			this._Region = default(EntityRef<Region>);
 			OnCreated();
 		}
 		
@@ -11500,40 +11199,6 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Region_Report_Flow", Storage="_Region", ThisKey="Id_Region", OtherKey="id", IsForeignKey=true)]
-		public Region Region
-		{
-			get
-			{
-				return this._Region.Entity;
-			}
-			set
-			{
-				Region previousValue = this._Region.Entity;
-				if (((previousValue != value) 
-							|| (this._Region.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Region.Entity = null;
-						previousValue.Report_Flow.Remove(this);
-					}
-					this._Region.Entity = value;
-					if ((value != null))
-					{
-						value.Report_Flow.Add(this);
-						this._Id_Region = value.id;
-					}
-					else
-					{
-						this._Id_Region = default(string);
-					}
-					this.SendPropertyChanged("Region");
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Report_Type_Report_Flow", Storage="_Report_Type", ThisKey="Id_Report_Type", OtherKey="Id", IsForeignKey=true)]
 		public Report_Type Report_Type
 		{
@@ -11564,6 +11229,40 @@ namespace KmsReportWS.LinqToSql
 						this._Id_Report_Type = default(string);
 					}
 					this.SendPropertyChanged("Report_Type");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Region_Report_Flow", Storage="_Region", ThisKey="Id_Region", OtherKey="id", IsForeignKey=true)]
+		public Region Region
+		{
+			get
+			{
+				return this._Region.Entity;
+			}
+			set
+			{
+				Region previousValue = this._Region.Entity;
+				if (((previousValue != value) 
+							|| (this._Region.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Region.Entity = null;
+						previousValue.Report_Flow.Remove(this);
+					}
+					this._Region.Entity = value;
+					if ((value != null))
+					{
+						value.Report_Flow.Add(this);
+						this._Id_Region = value.id;
+					}
+					else
+					{
+						this._Id_Region = default(string);
+					}
+					this.SendPropertyChanged("Region");
 				}
 			}
 		}
@@ -13683,9 +13382,9 @@ namespace KmsReportWS.LinqToSql
 		
 		private EntityRef<Employee> _Employee;
 		
-		private EntityRef<Region> _Region;
-		
 		private EntityRef<Report_Dynamic> _Report_Dynamic;
+		
+		private EntityRef<Region> _Region;
 		
     #region Определения метода расширяемости
     partial void OnLoaded();
@@ -13710,8 +13409,8 @@ namespace KmsReportWS.LinqToSql
 			this._Scan_Dynamic = new EntitySet<Scan_Dynamic>(new Action<Scan_Dynamic>(this.attach_Scan_Dynamic), new Action<Scan_Dynamic>(this.detach_Scan_Dynamic));
 			this._Report_Dynamic_Data = new EntitySet<Report_Dynamic_Data>(new Action<Report_Dynamic_Data>(this.attach_Report_Dynamic_Data), new Action<Report_Dynamic_Data>(this.detach_Report_Dynamic_Data));
 			this._Employee = default(EntityRef<Employee>);
-			this._Region = default(EntityRef<Region>);
 			this._Report_Dynamic = default(EntityRef<Report_Dynamic>);
+			this._Region = default(EntityRef<Region>);
 			OnCreated();
 		}
 		
@@ -13907,40 +13606,6 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Region_Report_Dynamic_Flow", Storage="_Region", ThisKey="Id_Region", OtherKey="id", IsForeignKey=true)]
-		public Region Region
-		{
-			get
-			{
-				return this._Region.Entity;
-			}
-			set
-			{
-				Region previousValue = this._Region.Entity;
-				if (((previousValue != value) 
-							|| (this._Region.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Region.Entity = null;
-						previousValue.Report_Dynamic_Flow.Remove(this);
-					}
-					this._Region.Entity = value;
-					if ((value != null))
-					{
-						value.Report_Dynamic_Flow.Add(this);
-						this._Id_Region = value.id;
-					}
-					else
-					{
-						this._Id_Region = default(string);
-					}
-					this.SendPropertyChanged("Region");
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Report_Dynamic_Report_Dynamic_Flow", Storage="_Report_Dynamic", ThisKey="Id_Report_Dynamic", OtherKey="id", IsForeignKey=true)]
 		public Report_Dynamic Report_Dynamic
 		{
@@ -13971,6 +13636,40 @@ namespace KmsReportWS.LinqToSql
 						this._Id_Report_Dynamic = default(int);
 					}
 					this.SendPropertyChanged("Report_Dynamic");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Region_Report_Dynamic_Flow", Storage="_Region", ThisKey="Id_Region", OtherKey="id", IsForeignKey=true)]
+		public Region Region
+		{
+			get
+			{
+				return this._Region.Entity;
+			}
+			set
+			{
+				Region previousValue = this._Region.Entity;
+				if (((previousValue != value) 
+							|| (this._Region.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Region.Entity = null;
+						previousValue.Report_Dynamic_Flow.Remove(this);
+					}
+					this._Region.Entity = value;
+					if ((value != null))
+					{
+						value.Report_Dynamic_Flow.Add(this);
+						this._Id_Region = value.id;
+					}
+					else
+					{
+						this._Id_Region = default(string);
+					}
+					this.SendPropertyChanged("Region");
 				}
 			}
 		}
@@ -14945,6 +14644,623 @@ namespace KmsReportWS.LinqToSql
 					if ((value != null))
 					{
 						value.Report_Violations.Add(this);
+						this._Id_Report_Data = value.Id;
+					}
+					else
+					{
+						this._Id_Report_Data = default(int);
+					}
+					this.SendPropertyChanged("Report_Data");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Region")]
+	public partial class Region : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _id;
+		
+		private string _name;
+		
+		private string _code_division;
+		
+		private string _name_devision;
+		
+		private string _position;
+		
+		private string _name_head;
+		
+		private string _phone;
+		
+		private string _name_short;
+		
+		private EntitySet<Employee> _Employee;
+		
+		private EntitySet<OpedFinancePlan> _OpedFinancePlan;
+		
+		private EntitySet<Report_Flow> _Report_Flow;
+		
+		private EntitySet<QuantityPlan> _QuantityPlan;
+		
+		private EntitySet<Report_Dynamic_Flow> _Report_Dynamic_Flow;
+		
+    #region Определения метода расширяемости
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidChanging(string value);
+    partial void OnidChanged();
+    partial void OnnameChanging(string value);
+    partial void OnnameChanged();
+    partial void Oncode_divisionChanging(string value);
+    partial void Oncode_divisionChanged();
+    partial void Onname_devisionChanging(string value);
+    partial void Onname_devisionChanged();
+    partial void OnpositionChanging(string value);
+    partial void OnpositionChanged();
+    partial void Onname_headChanging(string value);
+    partial void Onname_headChanged();
+    partial void OnphoneChanging(string value);
+    partial void OnphoneChanged();
+    partial void Onname_shortChanging(string value);
+    partial void Onname_shortChanged();
+    #endregion
+		
+		public Region()
+		{
+			this._Employee = new EntitySet<Employee>(new Action<Employee>(this.attach_Employee), new Action<Employee>(this.detach_Employee));
+			this._OpedFinancePlan = new EntitySet<OpedFinancePlan>(new Action<OpedFinancePlan>(this.attach_OpedFinancePlan), new Action<OpedFinancePlan>(this.detach_OpedFinancePlan));
+			this._Report_Flow = new EntitySet<Report_Flow>(new Action<Report_Flow>(this.attach_Report_Flow), new Action<Report_Flow>(this.detach_Report_Flow));
+			this._QuantityPlan = new EntitySet<QuantityPlan>(new Action<QuantityPlan>(this.attach_QuantityPlan), new Action<QuantityPlan>(this.detach_QuantityPlan));
+			this._Report_Dynamic_Flow = new EntitySet<Report_Dynamic_Flow>(new Action<Report_Dynamic_Flow>(this.attach_Report_Dynamic_Flow), new Action<Report_Dynamic_Flow>(this.detach_Report_Dynamic_Flow));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="VarChar(10) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this.OnidChanging(value);
+					this.SendPropertyChanging();
+					this._id = value;
+					this.SendPropertyChanged("id");
+					this.OnidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_name", DbType="VarChar(150) NOT NULL", CanBeNull=false)]
+		public string name
+		{
+			get
+			{
+				return this._name;
+			}
+			set
+			{
+				if ((this._name != value))
+				{
+					this.OnnameChanging(value);
+					this.SendPropertyChanging();
+					this._name = value;
+					this.SendPropertyChanged("name");
+					this.OnnameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_code_division", DbType="VarChar(10) NOT NULL", CanBeNull=false)]
+		public string code_division
+		{
+			get
+			{
+				return this._code_division;
+			}
+			set
+			{
+				if ((this._code_division != value))
+				{
+					this.Oncode_divisionChanging(value);
+					this.SendPropertyChanging();
+					this._code_division = value;
+					this.SendPropertyChanged("code_division");
+					this.Oncode_divisionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_name_devision", DbType="VarChar(150) NOT NULL", CanBeNull=false)]
+		public string name_devision
+		{
+			get
+			{
+				return this._name_devision;
+			}
+			set
+			{
+				if ((this._name_devision != value))
+				{
+					this.Onname_devisionChanging(value);
+					this.SendPropertyChanging();
+					this._name_devision = value;
+					this.SendPropertyChanged("name_devision");
+					this.Onname_devisionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_position", DbType="VarChar(100) NOT NULL", CanBeNull=false)]
+		public string position
+		{
+			get
+			{
+				return this._position;
+			}
+			set
+			{
+				if ((this._position != value))
+				{
+					this.OnpositionChanging(value);
+					this.SendPropertyChanging();
+					this._position = value;
+					this.SendPropertyChanged("position");
+					this.OnpositionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_name_head", DbType="VarChar(150) NOT NULL", CanBeNull=false)]
+		public string name_head
+		{
+			get
+			{
+				return this._name_head;
+			}
+			set
+			{
+				if ((this._name_head != value))
+				{
+					this.Onname_headChanging(value);
+					this.SendPropertyChanging();
+					this._name_head = value;
+					this.SendPropertyChanged("name_head");
+					this.Onname_headChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_phone", DbType="VarChar(20)")]
+		public string phone
+		{
+			get
+			{
+				return this._phone;
+			}
+			set
+			{
+				if ((this._phone != value))
+				{
+					this.OnphoneChanging(value);
+					this.SendPropertyChanging();
+					this._phone = value;
+					this.SendPropertyChanged("phone");
+					this.OnphoneChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_name_short", DbType="VarChar(50)")]
+		public string name_short
+		{
+			get
+			{
+				return this._name_short;
+			}
+			set
+			{
+				if ((this._name_short != value))
+				{
+					this.Onname_shortChanging(value);
+					this.SendPropertyChanging();
+					this._name_short = value;
+					this.SendPropertyChanged("name_short");
+					this.Onname_shortChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Region_Employee", Storage="_Employee", ThisKey="id", OtherKey="Region")]
+		public EntitySet<Employee> Employee
+		{
+			get
+			{
+				return this._Employee;
+			}
+			set
+			{
+				this._Employee.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Region_OpedFinancePlan", Storage="_OpedFinancePlan", ThisKey="id", OtherKey="Id_Region")]
+		public EntitySet<OpedFinancePlan> OpedFinancePlan
+		{
+			get
+			{
+				return this._OpedFinancePlan;
+			}
+			set
+			{
+				this._OpedFinancePlan.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Region_Report_Flow", Storage="_Report_Flow", ThisKey="id", OtherKey="Id_Region")]
+		public EntitySet<Report_Flow> Report_Flow
+		{
+			get
+			{
+				return this._Report_Flow;
+			}
+			set
+			{
+				this._Report_Flow.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Region_QuantityPlan", Storage="_QuantityPlan", ThisKey="id", OtherKey="Id_Region")]
+		public EntitySet<QuantityPlan> QuantityPlan
+		{
+			get
+			{
+				return this._QuantityPlan;
+			}
+			set
+			{
+				this._QuantityPlan.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Region_Report_Dynamic_Flow", Storage="_Report_Dynamic_Flow", ThisKey="id", OtherKey="Id_Region")]
+		public EntitySet<Report_Dynamic_Flow> Report_Dynamic_Flow
+		{
+			get
+			{
+				return this._Report_Dynamic_Flow;
+			}
+			set
+			{
+				this._Report_Dynamic_Flow.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_Employee(Employee entity)
+		{
+			this.SendPropertyChanging();
+			entity.Region1 = this;
+		}
+		
+		private void detach_Employee(Employee entity)
+		{
+			this.SendPropertyChanging();
+			entity.Region1 = null;
+		}
+		
+		private void attach_OpedFinancePlan(OpedFinancePlan entity)
+		{
+			this.SendPropertyChanging();
+			entity.Region = this;
+		}
+		
+		private void detach_OpedFinancePlan(OpedFinancePlan entity)
+		{
+			this.SendPropertyChanging();
+			entity.Region = null;
+		}
+		
+		private void attach_Report_Flow(Report_Flow entity)
+		{
+			this.SendPropertyChanging();
+			entity.Region = this;
+		}
+		
+		private void detach_Report_Flow(Report_Flow entity)
+		{
+			this.SendPropertyChanging();
+			entity.Region = null;
+		}
+		
+		private void attach_QuantityPlan(QuantityPlan entity)
+		{
+			this.SendPropertyChanging();
+			entity.Region = this;
+		}
+		
+		private void detach_QuantityPlan(QuantityPlan entity)
+		{
+			this.SendPropertyChanging();
+			entity.Region = null;
+		}
+		
+		private void attach_Report_Dynamic_Flow(Report_Dynamic_Flow entity)
+		{
+			this.SendPropertyChanging();
+			entity.Region = this;
+		}
+		
+		private void detach_Report_Dynamic_Flow(Report_Dynamic_Flow entity)
+		{
+			this.SendPropertyChanging();
+			entity.Region = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Report_MonthlyVol")]
+	public partial class Report_MonthlyVol : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Id;
+		
+		private int _Id_Report_Data;
+		
+		private string _RowNum;
+		
+		private System.Nullable<int> _CountSluch;
+		
+		private System.Nullable<int> _CountAppliedSluch;
+		
+		private System.Nullable<int> _CountSluchMEE;
+		
+		private System.Nullable<int> _CountSluchEKMP;
+		
+		private EntityRef<Report_Data> _Report_Data;
+		
+    #region Определения метода расширяемости
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdChanging(int value);
+    partial void OnIdChanged();
+    partial void OnId_Report_DataChanging(int value);
+    partial void OnId_Report_DataChanged();
+    partial void OnRowNumChanging(string value);
+    partial void OnRowNumChanged();
+    partial void OnCountSluchChanging(System.Nullable<int> value);
+    partial void OnCountSluchChanged();
+    partial void OnCountAppliedSluchChanging(System.Nullable<int> value);
+    partial void OnCountAppliedSluchChanged();
+    partial void OnCountSluchMEEChanging(System.Nullable<int> value);
+    partial void OnCountSluchMEEChanged();
+    partial void OnCountSluchEKMPChanging(System.Nullable<int> value);
+    partial void OnCountSluchEKMPChanged();
+    #endregion
+		
+		public Report_MonthlyVol()
+		{
+			this._Report_Data = default(EntityRef<Report_Data>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this.OnIdChanging(value);
+					this.SendPropertyChanging();
+					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_Report_Data", DbType="Int NOT NULL")]
+		public int Id_Report_Data
+		{
+			get
+			{
+				return this._Id_Report_Data;
+			}
+			set
+			{
+				if ((this._Id_Report_Data != value))
+				{
+					if (this._Report_Data.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnId_Report_DataChanging(value);
+					this.SendPropertyChanging();
+					this._Id_Report_Data = value;
+					this.SendPropertyChanged("Id_Report_Data");
+					this.OnId_Report_DataChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RowNum", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string RowNum
+		{
+			get
+			{
+				return this._RowNum;
+			}
+			set
+			{
+				if ((this._RowNum != value))
+				{
+					this.OnRowNumChanging(value);
+					this.SendPropertyChanging();
+					this._RowNum = value;
+					this.SendPropertyChanged("RowNum");
+					this.OnRowNumChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CountSluch", DbType="Int")]
+		public System.Nullable<int> CountSluch
+		{
+			get
+			{
+				return this._CountSluch;
+			}
+			set
+			{
+				if ((this._CountSluch != value))
+				{
+					this.OnCountSluchChanging(value);
+					this.SendPropertyChanging();
+					this._CountSluch = value;
+					this.SendPropertyChanged("CountSluch");
+					this.OnCountSluchChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CountAppliedSluch", DbType="Int")]
+		public System.Nullable<int> CountAppliedSluch
+		{
+			get
+			{
+				return this._CountAppliedSluch;
+			}
+			set
+			{
+				if ((this._CountAppliedSluch != value))
+				{
+					this.OnCountAppliedSluchChanging(value);
+					this.SendPropertyChanging();
+					this._CountAppliedSluch = value;
+					this.SendPropertyChanged("CountAppliedSluch");
+					this.OnCountAppliedSluchChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CountSluchMEE", DbType="Int")]
+		public System.Nullable<int> CountSluchMEE
+		{
+			get
+			{
+				return this._CountSluchMEE;
+			}
+			set
+			{
+				if ((this._CountSluchMEE != value))
+				{
+					this.OnCountSluchMEEChanging(value);
+					this.SendPropertyChanging();
+					this._CountSluchMEE = value;
+					this.SendPropertyChanged("CountSluchMEE");
+					this.OnCountSluchMEEChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CountSluchEKMP", DbType="Int")]
+		public System.Nullable<int> CountSluchEKMP
+		{
+			get
+			{
+				return this._CountSluchEKMP;
+			}
+			set
+			{
+				if ((this._CountSluchEKMP != value))
+				{
+					this.OnCountSluchEKMPChanging(value);
+					this.SendPropertyChanging();
+					this._CountSluchEKMP = value;
+					this.SendPropertyChanged("CountSluchEKMP");
+					this.OnCountSluchEKMPChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Report_Data_Report_MonthlyVol", Storage="_Report_Data", ThisKey="Id_Report_Data", OtherKey="Id", IsForeignKey=true)]
+		public Report_Data Report_Data
+		{
+			get
+			{
+				return this._Report_Data.Entity;
+			}
+			set
+			{
+				Report_Data previousValue = this._Report_Data.Entity;
+				if (((previousValue != value) 
+							|| (this._Report_Data.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Report_Data.Entity = null;
+						previousValue.Report_MonthlyVol.Remove(this);
+					}
+					this._Report_Data.Entity = value;
+					if ((value != null))
+					{
+						value.Report_MonthlyVol.Add(this);
 						this._Id_Report_Data = value.Id;
 					}
 					else
@@ -17630,6 +17946,104 @@ namespace KmsReportWS.LinqToSql
 				if ((this._col14 != value))
 				{
 					this._col14 = value;
+				}
+			}
+		}
+	}
+	
+	public partial class MonthlyVolResult
+	{
+		
+		private string _RowNum;
+		
+		private System.Nullable<int> _CountSluch;
+		
+		private System.Nullable<int> _CountAppliedSluch;
+		
+		private System.Nullable<int> _CountSluchMEE;
+		
+		private System.Nullable<int> _CountSluchEKMP;
+		
+		public MonthlyVolResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RowNum", DbType="VarChar(20)")]
+		public string RowNum
+		{
+			get
+			{
+				return this._RowNum;
+			}
+			set
+			{
+				if ((this._RowNum != value))
+				{
+					this._RowNum = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CountSluch", DbType="Int")]
+		public System.Nullable<int> CountSluch
+		{
+			get
+			{
+				return this._CountSluch;
+			}
+			set
+			{
+				if ((this._CountSluch != value))
+				{
+					this._CountSluch = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CountAppliedSluch", DbType="Int")]
+		public System.Nullable<int> CountAppliedSluch
+		{
+			get
+			{
+				return this._CountAppliedSluch;
+			}
+			set
+			{
+				if ((this._CountAppliedSluch != value))
+				{
+					this._CountAppliedSluch = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CountSluchMEE", DbType="Int")]
+		public System.Nullable<int> CountSluchMEE
+		{
+			get
+			{
+				return this._CountSluchMEE;
+			}
+			set
+			{
+				if ((this._CountSluchMEE != value))
+				{
+					this._CountSluchMEE = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CountSluchEKMP", DbType="Int")]
+		public System.Nullable<int> CountSluchEKMP
+		{
+			get
+			{
+				return this._CountSluchEKMP;
+			}
+			set
+			{
+				if ((this._CountSluchEKMP != value))
+				{
+					this._CountSluchEKMP = value;
 				}
 			}
 		}
