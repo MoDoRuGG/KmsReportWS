@@ -41,8 +41,7 @@ namespace KmsReportWS.Service
             {
                 Key = x.id.Trim(),
                 Value = x.name.Trim(),
-                ForeignKey = x.name_devision.Trim(),
-                ShortName = x.name_short.Trim(),
+                ForeignKey = x.name_devision.Trim()
             }).ToList();
 
         public KmsReportDictionary CheckPassword(string filialCode, string login, string password)

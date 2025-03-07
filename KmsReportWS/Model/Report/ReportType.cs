@@ -40,6 +40,5 @@ namespace KmsReportWS.Model.Report
         [Description("ViolMEE")] ViolMEE,
         [Description("ViolEKMP")] ViolEKMP,
         [Description("VerifyPlan")] VerifyPlan,
-        [Description("MonthlyVol")] MonthlyVol,
     }
 }
