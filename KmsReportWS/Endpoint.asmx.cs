@@ -811,5 +811,27 @@ namespace KmsReportWS
             var consolidate = new ControlZpz2025SingleCollector();
             return consolidate.Collect(year, filial);
         }
+
+
+        [WebMethod]
+        public List<FFOMSTargetedExp> CreateFFOMSTargetedExp(string yymm)
+        {
+            var consolidate = new FFOMSTargetedExpCollector(yymm);
+            return consolidate.Collect();
+        }
+
+        [WebMethod]
+        public List<FFOMSOncoCT> CreateFFOMSOncoCT(string yymm)
+        {
+            var consolidate = new FFOMSOncoCTCollector(yymm);
+            return consolidate.Collect();
+        }
+
+        [WebMethod]
+        public List<FFOMSPersonnel> CreateFFOMSPersonnel(string yymm)
+        {
+            var consolidate = new FFOMSPersonnelCollector(yymm);
+            return consolidate.Collect().Result; // Синхронное ожидание
+        }
     }
 }
