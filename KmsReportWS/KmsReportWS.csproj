@@ -106,6 +106,7 @@
   <ItemGroup>
     <Compile Include="Collector\BaseReport\BaseReportCollector.cs" />
     <Compile Include="Collector\BaseReport\F262Collector.cs" />
+    <Compile Include="Collector\BaseReport\MonthlyVolCollector.cs" />
     <Compile Include="Collector\BaseReport\OpedCollector.cs" />
     <Compile Include="Collector\BaseReport\F294Collector.cs" />
     <Compile Include="Collector\BaseReport\ViolationsCollector.cs" />
@@ -161,6 +162,7 @@
     <Compile Include="Handler\MonitoringVCRHandler.cs" />
     <Compile Include="Handler\QuantityPlanDictionaryHandler.cs" />
     <Compile Include="Handler\ReportDoffHandler.cs" />
+    <Compile Include="Handler\ReportMonthlyVolHandler.cs" />
     <Compile Include="Handler\ReportPVPLoadHandler.cs" />
     <Compile Include="Handler\ReportTargetedAllowancesHandler.cs" />
     <Compile Include="Handler\ReportQuantityHandler.cs" />
@@ -247,6 +249,7 @@
     <Compile Include="Model\ReportDynamicScanModel.cs" />
     <Compile Include="Model\ReportScanModel.cs" />
     <Compile Include="Model\Report\ReportDoff.cs" />
+    <Compile Include="Model\Report\ReportMonthlyVol.cs" />
     <Compile Include="Model\Report\ReportPVPLoad.cs" />
     <Compile Include="Model\Report\ReportTargetedAllowances.cs" />
     <Compile Include="Model\Report\ReportReqVCR.cs" />

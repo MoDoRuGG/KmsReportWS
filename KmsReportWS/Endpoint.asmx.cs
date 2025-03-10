@@ -587,7 +587,7 @@ namespace KmsReportWS
 
 
         [WebMethod]
-        public void MethodForSendingChildModel(Report262 f262, Report294 f294, ReportIizl iilz, ReportPg pg, ReportZpz zpz, ReportZpz2025 zpz2025, ReportEffectiveness effective, ReportViolations violations)
+        public void MethodForSendingChildModel(Report262 f262, Report294 f294, ReportIizl iilz, ReportPg pg, ReportZpz zpz, ReportZpz2025 zpz2025, ReportEffectiveness effective, ReportViolations violations, ReportMonthlyVol monthlyVol)
         {
         }
 

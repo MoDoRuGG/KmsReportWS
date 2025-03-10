@@ -859,16 +859,4 @@
       <Column Name="col14" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.MonthlyVol" Method="MonthlyVol" IsComposable="true">
-    <Parameter Name="yymm_start" Type="System.String" DbType="VarChar(4)" />
-    <Parameter Name="yymm_end" Type="System.String" DbType="VarChar(4)" />
-    <Parameter Name="region" Type="System.String" DbType="VarChar(7)" />
-    <ElementType Name="MonthlyVolResult">
-      <Column Name="RowNum" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
-      <Column Name="CountSluch" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="CountAppliedSluch" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="CountSluchMEE" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="CountSluchEKMP" Type="System.Int32" DbType="Int" CanBeNull="true" />
-    </ElementType>
-  </Function>
 </Database>

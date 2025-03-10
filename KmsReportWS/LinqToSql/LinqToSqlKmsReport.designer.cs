@@ -547,12 +547,6 @@ namespace KmsReportWS.LinqToSql
 		{
 			return this.CreateMethodCallQuery<ZpzWebSite2025Result>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), region, yymm);
 		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.MonthlyVol", IsComposable=true)]
-		public IQueryable<MonthlyVolResult> MonthlyVol([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(4)")] string yymm_start, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(4)")] string yymm_end, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(7)")] string region)
-		{
-			return this.CreateMethodCallQuery<MonthlyVolResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), yymm_start, yymm_end, region);
-		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Comment")]
@@ -17946,104 +17940,6 @@ namespace KmsReportWS.LinqToSql
 				if ((this._col14 != value))
 				{
 					this._col14 = value;
-				}
-			}
-		}
-	}
-	
-	public partial class MonthlyVolResult
-	{
-		
-		private string _RowNum;
-		
-		private System.Nullable<int> _CountSluch;
-		
-		private System.Nullable<int> _CountAppliedSluch;
-		
-		private System.Nullable<int> _CountSluchMEE;
-		
-		private System.Nullable<int> _CountSluchEKMP;
-		
-		public MonthlyVolResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RowNum", DbType="VarChar(20)")]
-		public string RowNum
-		{
-			get
-			{
-				return this._RowNum;
-			}
-			set
-			{
-				if ((this._RowNum != value))
-				{
-					this._RowNum = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CountSluch", DbType="Int")]
-		public System.Nullable<int> CountSluch
-		{
-			get
-			{
-				return this._CountSluch;
-			}
-			set
-			{
-				if ((this._CountSluch != value))
-				{
-					this._CountSluch = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CountAppliedSluch", DbType="Int")]
-		public System.Nullable<int> CountAppliedSluch
-		{
-			get
-			{
-				return this._CountAppliedSluch;
-			}
-			set
-			{
-				if ((this._CountAppliedSluch != value))
-				{
-					this._CountAppliedSluch = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CountSluchMEE", DbType="Int")]
-		public System.Nullable<int> CountSluchMEE
-		{
-			get
-			{
-				return this._CountSluchMEE;
-			}
-			set
-			{
-				if ((this._CountSluchMEE != value))
-				{
-					this._CountSluchMEE = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CountSluchEKMP", DbType="Int")]
-		public System.Nullable<int> CountSluchEKMP
-		{
-			get
-			{
-				return this._CountSluchEKMP;
-			}
-			set
-			{
-				if ((this._CountSluchEKMP != value))
-				{
-					this._CountSluchEKMP = value;
 				}
 			}
 		}
