@@ -15,6 +15,7 @@ using KmsReportWS.Model.Report;
 using KmsReportWS.Model.Service;
 using KmsReportWS.Service;
 using System.Threading.Tasks;
+using System.Linq;
 
 namespace KmsReportWS
 {
@@ -821,17 +822,39 @@ namespace KmsReportWS
         }
 
         [WebMethod]
-        public List<FFOMSOncoCT> CreateFFOMSOncoCT(string yymm)
+        public List<FFOMSOncoCT> CreateFFOMSOncoCT(string yymm) 
         {
             var consolidate = new FFOMSOncoCTCollector(yymm);
-            return consolidate.Collect();
+            return consolidate.Collect(yymm);
         }
+
 
         [WebMethod]
         public List<FFOMSPersonnel> CreateFFOMSPersonnel(string yymm)
         {
             var consolidate = new FFOMSPersonnelCollector(yymm);
             return consolidate.Collect().Result; // Синхронное ожидание
+        }
+
+        [WebMethod]
+        public List<FFOMSViolMEE> CreateFFOMSViolMEE(string yymm)
+        {
+            var consolidate = new FFOMSViolMEECollector(yymm);
+            return consolidate.Collect();
+        }
+
+        [WebMethod]
+        public List<FFOMSViolEKMP> CreateFFOMSViolEKMP(string yymm)
+        {
+            var consolidate = new FFOMSViolEKMPCollector(yymm);
+            return consolidate.Collect();
+        }
+
+        [WebMethod]
+        public List<FFOMSVerifyPlan> CreateFFOMSVerifyPlan(string yymm)
+        {
+            var consolidate = new FFOMSVerifyPlanCollector(yymm);
+            return consolidate.Collect();
         }
     }
 }

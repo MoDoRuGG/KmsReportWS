@@ -1,4 +1,5 @@
-﻿using KmsReportWS.Model.Report;
+﻿using KmsReportWS.Collector.ConsolidateReport;
+using KmsReportWS.Model.Report;
 
 namespace KmsReportWS.Collector.BaseReport
 {

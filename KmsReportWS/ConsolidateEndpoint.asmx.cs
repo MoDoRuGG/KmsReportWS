@@ -111,6 +111,13 @@ namespace KmsReportWS
         }
 
         [WebMethod]
+        public List<FFOMSOncoCT> CreateFFOMSOncoCT(string yymm)
+        {
+            var consolidate = new FFOMSOncoCTCollector(yymm);
+            return consolidate.Collect(yymm);
+        }
+
+        [WebMethod]
         public List<CReportZpz2025Full> CreateReportControlZpz2025Full(string year)
         {
             var consolidate = new ControlZpz2025FullCollector();

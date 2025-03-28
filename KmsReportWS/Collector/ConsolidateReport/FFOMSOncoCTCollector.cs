@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Web.Services.Description;
 using KmsReportWS.LinqToSql;
 using KmsReportWS.Model.ConcolidateReport;
 using KmsReportWS.Model.Report;
@@ -13,7 +14,7 @@ namespace KmsReportWS.Collector.ConsolidateReport
     public class FFOMSOncoCTCollector
     {
         private static readonly string[] Statuses = {
-            ReportStatus.Submit.GetDescriptionSt(), ReportStatus.Done.GetDescriptionSt()
+            ReportStatus.Submit.GetDescriptionSt(), ReportStatus.Done.GetDescriptionSt(),  ReportStatus.Saved.GetDescriptionSt()
         };
 
         private static readonly string ConnStr = Settings.Default.ConnStr;
@@ -25,54 +26,72 @@ namespace KmsReportWS.Collector.ConsolidateReport
             this._yymm = yymm;
         }
 
-        public List<FFOMSOncoCT> Collect()
+        public List<FFOMSOncoCT> Collect(string yymm)
         {
-            using var db = new LinqToSqlKmsReportDataContext(ConnStr);
-            var filials = db.Region.Where(x => x.id != "RU" && x.id != "RU-KHA").Select(x => x.id);
 
-            IEnumerable<Task<FFOMSOncoCT>> tasks = filials.Select(filial => CollectFilialData(db, filial));
-            return tasks.Select(x => x.Result).ToList();
-        }
+            using var db = new LinqToSqlKmsReportDataContext(Settings.Default.ConnStr) { CommandTimeout = 120 };
+            var zpzData = CollectSummaryData(yymm);
 
-        private async Task<FFOMSOncoCT> CollectFilialData(LinqToSqlKmsReportDataContext db, string filial)
-        {
-            var MEETask = CollectMEE(db, filial);
-
-
-            var T1MEE = await MEETask;
-
-
-            return new FFOMSOncoCT
+            var reports = new List<FFOMSOncoCT>();
+            var filials = zpzData.Select(x => x.Filial).Distinct().OrderBy(x => x);
+            foreach (var filial in filials)
             {
-                Filial = filial,
-                OncoCT_MEE = T1MEE,
+                var zpzFilialData = zpzData.Where(x => x.Filial == filial);
+                var expertise = MapOncoCT(zpzFilialData);
+
+                var report = new FFOMSOncoCT
+                {
+                    Filial = filial,
+                    OncoCT_MEE = expertise,
+                };
+                reports.Add(report);
+            }
+
+            return reports;
+        }
+
+
+
+        private FFOMSOncoCT_MEE MapOncoCT(IEnumerable<SummaryZpz2025> zpzFilialData)
+        {
+            var table6Data = zpzFilialData.Where(x => x.Theme == "Таблица 6");
+            return new FFOMSOncoCT_MEE
+            {
+                Target = table6Data.Where(x => x.RowNum == "1.10").Sum(x => x.SumOutOfSmo+x.SumAmbulatory+x.SumDs+x.SumStac)
             };
         }
 
-        private IQueryable<Report_Zpz2025> CollectZpzQ(LinqToSqlKmsReportDataContext db, string theme, string region) =>
-            from flow in db.Report_Flow
-            join data in db.Report_Data on flow.Id equals data.Id_Flow
-            join f in db.Report_Zpz2025 on data.Id equals f.Id_Report_Data
-            where flow.Yymm == _yymm
-                  && data.Theme == theme
-                  && flow.Id_Region == region
-                  && Statuses.Contains(flow.Status)
-                  && flow.Id_Report_Type == "Zpz_Q2025"
-            select f;
-
-
-        private async Task<List<OncoCT_MEE>> CollectMEE(LinqToSqlKmsReportDataContext db, string region)
+        private List<SummaryZpz2025> CollectSummaryData(string yymm)
         {
-            var meeTable = CollectZpzQ(db, "Таблица 6", region);
-            return new List<OncoCT_MEE>() {
-
-                new OncoCT_MEE {
-                    Row = "1.10", Target = Convert.ToInt32(meeTable.Where(x => x.RowNum == "1.10").Sum(x => x.CountOutOfSmo)) +
-                                           Convert.ToInt32(meeTable.Where(x => x.RowNum == "1.10").Sum(x => x.CountAmbulatory)) +
-                                           Convert.ToInt32(meeTable.Where(x => x.RowNum == "1.10").Sum(x => x.CountDs)) +
-                                           Convert.ToInt32(meeTable.Where(x => x.RowNum == "1.10").Sum(x => x.CountStac))
-                },
-            };
+            using var db = new LinqToSqlKmsReportDataContext(Settings.Default.ConnStr) { CommandTimeout = 120 };
+            return (from flow in db.Report_Flow
+                    join rData in db.Report_Data on flow.Id equals rData.Id_Flow
+                    join table in db.Report_Zpz2025 on rData.Id equals table.Id_Report_Data
+                    where flow.Yymm == yymm
+                        //&& flow.Status != ReportStatus.Refuse.GetDescriptionSt()
+                          && flow.Id_Region != "RU-KHA"
+                    //&& _themes.Contains(rData.Theme)
+                    group new { flow, rData, table } by new { flow.Id_Region, rData.Theme, table.RowNum }
+                          into gr
+                    select new SummaryZpz2025
+                    {
+                        Filial = gr.Key.Id_Region,
+                        Theme = gr.Key.Theme,
+                        RowNum = gr.Key.RowNum,
+                        SumSmo = gr.Sum(x => x.table.CountSmo) ?? 0,
+                        SumSmoAnother = gr.Sum(x => x.table.CountSmoAnother) ?? 0,
+                        SumOutOfSmo = gr.Sum(x => x.table.CountOutOfSmo) ?? 0,
+                        SumAmbulatory = gr.Sum(x => x.table.CountAmbulatory) ?? 0,
+                        SumDs = gr.Sum(x => x.table.CountDs) ?? 0,
+                        SumStac = gr.Sum(x => x.table.CountStac) ?? 0,
+                        SumOutOfSmoAnother = gr.Sum(x => x.table.CountOutOfSmoAnother) ?? 0,
+                        SumAmbulatoryAnother = gr.Sum(x => x.table.CountAmbulatoryAnother) ?? 0,
+                        SumDsAnother = gr.Sum(x => x.table.CountDsAnother) ?? 0,
+                        SumStacAnother = gr.Sum(x => x.table.CountStacAnother) ?? 0,
+                        SumInsured = gr.Sum(x => x.table.CountInsured) ?? 0,
+                        SumInsuredRepresentative = gr.Sum(x => x.table.CountInsuredRepresentative) ?? 0,
+                        SumProsecutor = gr.Sum(x => x.table.CountProsecutor) ?? 0,
+                    }).ToList();
         }
     }
 }
