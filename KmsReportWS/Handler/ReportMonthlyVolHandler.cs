@@ -25,7 +25,7 @@ namespace KmsReportWS.Handler
             && Convert.ToInt32(x.Report_Data.Report_Flow.Yymm) >= Convert.ToInt32(start)
             && Convert.ToInt32(x.Report_Data.Report_Flow.Yymm) <= Convert.ToInt32(yymm)
             && x.Report_Data.Report_Flow.Id_Report_Type == "MonthlyVol"
-            && x.RowNum == rowNum
+            && x.RowNum == Convert.ToInt32(rowNum)
             ).GroupBy(x => x.Report_Data.Theme).
             Select(x => new ReportMonthlyVolDataDto
             {  
@@ -111,7 +111,7 @@ namespace KmsReportWS.Handler
         private ReportMonthlyVolDataDto MapThemeToPersist(Report_MonthlyVol data) =>
             new ReportMonthlyVolDataDto
             {
-                Code = data.RowNum,
+                Code = Convert.ToInt32(data.RowNum),
                 CountSluch = data.CountSluch ?? 0,
                 CountAppliedSluch = data.CountAppliedSluch ?? 0,
                 CountSluchMEE = data.CountSluchMEE ?? 0,

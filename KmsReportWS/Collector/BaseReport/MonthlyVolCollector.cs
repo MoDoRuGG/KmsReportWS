@@ -53,7 +53,7 @@ namespace KmsReportWS.Collector.BaseReport
             into fgr
             select new ReportMonthlyVolDataDto
             {
-                Code = fgr.Key,
+                Code = Convert.ToInt32(fgr.Key),
                 CountSluch = fgr.Sum(x => x.CountSluch ?? 0),
                 CountAppliedSluch = fgr.Sum(x => x.CountAppliedSluch ?? 0),
                 CountSluchMEE = fgr.Sum(x => x.CountSluchMEE ?? 0),

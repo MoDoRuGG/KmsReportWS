@@ -146,6 +146,13 @@ namespace KmsReportWS
         }
 
         [WebMethod]
+        public List<FFOMSLethalEKMP> CollectFFOMSLethalEKMP(string yymm)
+        {
+            return new FFOMSLethalEKMPCollector().CreateFFOMSLethalEKMP(yymm);
+
+        }
+
+        [WebMethod]
         public List<ConsolidateCPNP_Q_2> ConsolidateCPNP2QCollect(string yymm)
         {
             return new ConsolidateCPNP_Q_2_Collector().Collect(yymm);
@@ -672,6 +679,13 @@ namespace KmsReportWS
             return consolidate.CreateReportCadreTable2(yymm);
         }
 
+        [WebMethod]
+        public FFOMSVolumesByTypes CreateFFOMSVolumesByTypes(string yymm)
+        {
+            var consolidate = new FFOMSVolumesByTypesCollector(yymm);
+            return consolidate.Collect();
+        }
+
 
         //перенес в ConsolidateEndpoint позже удалить
         [WebMethod]
@@ -752,6 +766,13 @@ namespace KmsReportWS
         {
             var consolidate = new Consolidate294Collector();
             return consolidate.Collect(yymm);
+        }
+
+        [WebMethod]
+        public List<FFOMSMonthlyVol> CreateFFOMSMonthlyVol(string yymm)
+        {
+            var consolidate = new FFOMSMonthlyVolCollector(yymm);
+            return consolidate.Collect();
         }
 
 

@@ -672,7 +672,7 @@
     <Type Name="Report_MonthlyVol">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="Id_Report_Data" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="RowNum" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="RowNum" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="CountSluch" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="CountAppliedSluch" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="CountSluchMEE" Type="System.Int32" DbType="Int" CanBeNull="true" />
@@ -857,6 +857,78 @@
       <Column Name="col12" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
       <Column Name="col13" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
       <Column Name="col14" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.FFOMS_MonthlyVol" Method="FFOMS_MonthlyVol" IsComposable="true">
+    <Parameter Name="Yymm" Parameter="yymm" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="Theme" Parameter="theme" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="Id_Region" Parameter="id_Region" Type="System.String" DbType="VarChar(6)" />
+    <ElementType Name="FFOMS_MonthlyVolResult">
+      <Column Name="Id_Region" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="RowNum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CountSluch" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CountAppliedSluch" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CountSluchMEE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CountSluchEKMP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.FFOMSVolumesByTypesFull" Method="FFOMSVolumesByTypesFull" IsComposable="true">
+    <Parameter Name="Yymm" Parameter="yymm" Type="System.String" DbType="VarChar(4)" />
+    <ElementType Name="FFOMSVolumesByTypesFullResult">
+      <Column Name="mee_unpl" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
+      <Column Name="mee_pl" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
+      <Column Name="ekmp_unpl" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
+      <Column Name="ekmp_pl" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
+      <Column Name="mek_app" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="mee_app_unpl" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
+      <Column Name="mee_app_pl" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
+      <Column Name="ekmp_app_unpl" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
+      <Column Name="ekmp_app_pl" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
+      <Column Name="mek_skp" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="mee_skp_unpl" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
+      <Column Name="mee_skp_pl" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
+      <Column Name="ekmp_skp_unpl" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
+      <Column Name="ekmp_skp_pl" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
+      <Column Name="mek_smp" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="mee_smp_unpl" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
+      <Column Name="mee_smp_pl" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
+      <Column Name="ekmp_smp_unpl" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
+      <Column Name="ekmp_smp_pl" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
+      <Column Name="mek_sdp" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="mee_sdp_unpl" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
+      <Column Name="mee_sdp_pl" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
+      <Column Name="ekmp_sdp_unpl" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
+      <Column Name="ekmp_sdp_pl" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.FFOMSVolumesByTypesByFilials" Method="FFOMSVolumesByTypesByFilials" IsComposable="true">
+    <Parameter Name="Yymm" Parameter="yymm" Type="System.String" DbType="VarChar(4)" />
+    <ElementType Name="FFOMSVolumesByTypesByFilialsResult">
+      <Column Name="name" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="Id_Region" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="mek_app" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="mee_app" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
+      <Column Name="ekmp_app" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
+      <Column Name="mek_skp" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="mee_skp" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
+      <Column Name="ekmp_skp" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
+      <Column Name="mek_smp" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="mee_smp" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
+      <Column Name="ekmp_smp" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
+      <Column Name="mek_sdp" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="mee_sdp" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
+      <Column Name="ekmp_sdp" Type="System.Decimal" DbType="Decimal(38,3)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.FFOMSLethalEKMP" Method="FFOMSLethalEKMP" IsComposable="true">
+    <Parameter Name="Yymm" Parameter="yymm" Type="System.String" DbType="VarChar(4)" />
+    <ElementType Name="FFOMSLethalEKMPResult">
+      <Column Name="name" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="Id_Region" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Row1" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="Row12" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="Row121" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="Row11" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
     </ElementType>
   </Function>
 </Database>

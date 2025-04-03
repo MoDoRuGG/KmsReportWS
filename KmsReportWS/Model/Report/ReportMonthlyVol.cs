@@ -15,7 +15,7 @@ namespace KmsReportWS.Model.Report
 
     public class ReportMonthlyVolDataDto
     {
-        public string Code { get; set; }
+        public int Code { get; set; }
         public int CountSluch { get; set; }
         public int CountAppliedSluch { get; set; }
         public int CountSluchMEE { get; set; }

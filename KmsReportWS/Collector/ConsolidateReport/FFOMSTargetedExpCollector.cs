@@ -13,7 +13,7 @@ namespace KmsReportWS.Collector.ConsolidateReport
     public class FFOMSTargetedExpCollector
     {
         private static readonly string[] Statuses = {
-            ReportStatus.Submit.GetDescriptionSt(), ReportStatus.Done.GetDescriptionSt()
+            ReportStatus.Submit.GetDescriptionSt(), ReportStatus.Done.GetDescriptionSt(), ReportStatus.Saved.GetDescriptionSt()
         };
 
         private static readonly string ConnStr = Settings.Default.ConnStr;

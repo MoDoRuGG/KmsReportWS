@@ -547,6 +547,30 @@ namespace KmsReportWS.LinqToSql
 		{
 			return this.CreateMethodCallQuery<ZpzWebSite2025Result>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), region, yymm);
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.FFOMS_MonthlyVol", IsComposable=true)]
+		public IQueryable<FFOMS_MonthlyVolResult> FFOMS_MonthlyVol([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Yymm", DbType="VarChar(4)")] string yymm, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Theme", DbType="VarChar(30)")] string theme, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Id_Region", DbType="VarChar(6)")] string id_Region)
+		{
+			return this.CreateMethodCallQuery<FFOMS_MonthlyVolResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), yymm, theme, id_Region);
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.FFOMSVolumesByTypesFull", IsComposable=true)]
+		public IQueryable<FFOMSVolumesByTypesFullResult> FFOMSVolumesByTypesFull([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Yymm", DbType="VarChar(4)")] string yymm)
+		{
+			return this.CreateMethodCallQuery<FFOMSVolumesByTypesFullResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), yymm);
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.FFOMSVolumesByTypesByFilials", IsComposable=true)]
+		public IQueryable<FFOMSVolumesByTypesByFilialsResult> FFOMSVolumesByTypesByFilials([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Yymm", DbType="VarChar(4)")] string yymm)
+		{
+			return this.CreateMethodCallQuery<FFOMSVolumesByTypesByFilialsResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), yymm);
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.FFOMSLethalEKMP", IsComposable=true)]
+		public IQueryable<FFOMSLethalEKMPResult> FFOMSLethalEKMP([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Yymm", DbType="VarChar(4)")] string yymm)
+		{
+			return this.CreateMethodCallQuery<FFOMSLethalEKMPResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), yymm);
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Comment")]
@@ -15050,7 +15074,7 @@ namespace KmsReportWS.LinqToSql
 		
 		private int _Id_Report_Data;
 		
-		private string _RowNum;
+		private System.Nullable<int> _RowNum;
 		
 		private System.Nullable<int> _CountSluch;
 		
@@ -15070,7 +15094,7 @@ namespace KmsReportWS.LinqToSql
     partial void OnIdChanged();
     partial void OnId_Report_DataChanging(int value);
     partial void OnId_Report_DataChanged();
-    partial void OnRowNumChanging(string value);
+    partial void OnRowNumChanging(System.Nullable<int> value);
     partial void OnRowNumChanged();
     partial void OnCountSluchChanging(System.Nullable<int> value);
     partial void OnCountSluchChanged();
@@ -15132,8 +15156,8 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RowNum", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
-		public string RowNum
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RowNum", DbType="Int")]
+		public System.Nullable<int> RowNum
 		{
 			get
 			{
@@ -17940,6 +17964,938 @@ namespace KmsReportWS.LinqToSql
 				if ((this._col14 != value))
 				{
 					this._col14 = value;
+				}
+			}
+		}
+	}
+	
+	public partial class FFOMS_MonthlyVolResult
+	{
+		
+		private string _Id_Region;
+		
+		private System.Nullable<int> _RowNum;
+		
+		private System.Nullable<int> _CountSluch;
+		
+		private System.Nullable<int> _CountAppliedSluch;
+		
+		private System.Nullable<int> _CountSluchMEE;
+		
+		private System.Nullable<int> _CountSluchEKMP;
+		
+		public FFOMS_MonthlyVolResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_Region", DbType="VarChar(10)")]
+		public string Id_Region
+		{
+			get
+			{
+				return this._Id_Region;
+			}
+			set
+			{
+				if ((this._Id_Region != value))
+				{
+					this._Id_Region = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RowNum", DbType="Int")]
+		public System.Nullable<int> RowNum
+		{
+			get
+			{
+				return this._RowNum;
+			}
+			set
+			{
+				if ((this._RowNum != value))
+				{
+					this._RowNum = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CountSluch", DbType="Int")]
+		public System.Nullable<int> CountSluch
+		{
+			get
+			{
+				return this._CountSluch;
+			}
+			set
+			{
+				if ((this._CountSluch != value))
+				{
+					this._CountSluch = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CountAppliedSluch", DbType="Int")]
+		public System.Nullable<int> CountAppliedSluch
+		{
+			get
+			{
+				return this._CountAppliedSluch;
+			}
+			set
+			{
+				if ((this._CountAppliedSluch != value))
+				{
+					this._CountAppliedSluch = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CountSluchMEE", DbType="Int")]
+		public System.Nullable<int> CountSluchMEE
+		{
+			get
+			{
+				return this._CountSluchMEE;
+			}
+			set
+			{
+				if ((this._CountSluchMEE != value))
+				{
+					this._CountSluchMEE = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CountSluchEKMP", DbType="Int")]
+		public System.Nullable<int> CountSluchEKMP
+		{
+			get
+			{
+				return this._CountSluchEKMP;
+			}
+			set
+			{
+				if ((this._CountSluchEKMP != value))
+				{
+					this._CountSluchEKMP = value;
+				}
+			}
+		}
+	}
+	
+	public partial class FFOMSVolumesByTypesFullResult
+	{
+		
+		private System.Nullable<decimal> _mee_unpl;
+		
+		private System.Nullable<decimal> _mee_pl;
+		
+		private System.Nullable<decimal> _ekmp_unpl;
+		
+		private System.Nullable<decimal> _ekmp_pl;
+		
+		private System.Nullable<decimal> _mek_app;
+		
+		private System.Nullable<decimal> _mee_app_unpl;
+		
+		private System.Nullable<decimal> _mee_app_pl;
+		
+		private System.Nullable<decimal> _ekmp_app_unpl;
+		
+		private System.Nullable<decimal> _ekmp_app_pl;
+		
+		private System.Nullable<decimal> _mek_skp;
+		
+		private System.Nullable<decimal> _mee_skp_unpl;
+		
+		private System.Nullable<decimal> _mee_skp_pl;
+		
+		private System.Nullable<decimal> _ekmp_skp_unpl;
+		
+		private System.Nullable<decimal> _ekmp_skp_pl;
+		
+		private System.Nullable<decimal> _mek_smp;
+		
+		private System.Nullable<decimal> _mee_smp_unpl;
+		
+		private System.Nullable<decimal> _mee_smp_pl;
+		
+		private System.Nullable<decimal> _ekmp_smp_unpl;
+		
+		private System.Nullable<decimal> _ekmp_smp_pl;
+		
+		private System.Nullable<decimal> _mek_sdp;
+		
+		private System.Nullable<decimal> _mee_sdp_unpl;
+		
+		private System.Nullable<decimal> _mee_sdp_pl;
+		
+		private System.Nullable<decimal> _ekmp_sdp_unpl;
+		
+		private System.Nullable<decimal> _ekmp_sdp_pl;
+		
+		public FFOMSVolumesByTypesFullResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mee_unpl", DbType="Decimal(38,3)")]
+		public System.Nullable<decimal> mee_unpl
+		{
+			get
+			{
+				return this._mee_unpl;
+			}
+			set
+			{
+				if ((this._mee_unpl != value))
+				{
+					this._mee_unpl = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mee_pl", DbType="Decimal(38,3)")]
+		public System.Nullable<decimal> mee_pl
+		{
+			get
+			{
+				return this._mee_pl;
+			}
+			set
+			{
+				if ((this._mee_pl != value))
+				{
+					this._mee_pl = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ekmp_unpl", DbType="Decimal(38,3)")]
+		public System.Nullable<decimal> ekmp_unpl
+		{
+			get
+			{
+				return this._ekmp_unpl;
+			}
+			set
+			{
+				if ((this._ekmp_unpl != value))
+				{
+					this._ekmp_unpl = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ekmp_pl", DbType="Decimal(38,3)")]
+		public System.Nullable<decimal> ekmp_pl
+		{
+			get
+			{
+				return this._ekmp_pl;
+			}
+			set
+			{
+				if ((this._ekmp_pl != value))
+				{
+					this._ekmp_pl = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mek_app", DbType="Decimal(38,2)")]
+		public System.Nullable<decimal> mek_app
+		{
+			get
+			{
+				return this._mek_app;
+			}
+			set
+			{
+				if ((this._mek_app != value))
+				{
+					this._mek_app = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mee_app_unpl", DbType="Decimal(38,3)")]
+		public System.Nullable<decimal> mee_app_unpl
+		{
+			get
+			{
+				return this._mee_app_unpl;
+			}
+			set
+			{
+				if ((this._mee_app_unpl != value))
+				{
+					this._mee_app_unpl = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mee_app_pl", DbType="Decimal(38,3)")]
+		public System.Nullable<decimal> mee_app_pl
+		{
+			get
+			{
+				return this._mee_app_pl;
+			}
+			set
+			{
+				if ((this._mee_app_pl != value))
+				{
+					this._mee_app_pl = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ekmp_app_unpl", DbType="Decimal(38,3)")]
+		public System.Nullable<decimal> ekmp_app_unpl
+		{
+			get
+			{
+				return this._ekmp_app_unpl;
+			}
+			set
+			{
+				if ((this._ekmp_app_unpl != value))
+				{
+					this._ekmp_app_unpl = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ekmp_app_pl", DbType="Decimal(38,3)")]
+		public System.Nullable<decimal> ekmp_app_pl
+		{
+			get
+			{
+				return this._ekmp_app_pl;
+			}
+			set
+			{
+				if ((this._ekmp_app_pl != value))
+				{
+					this._ekmp_app_pl = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mek_skp", DbType="Decimal(38,2)")]
+		public System.Nullable<decimal> mek_skp
+		{
+			get
+			{
+				return this._mek_skp;
+			}
+			set
+			{
+				if ((this._mek_skp != value))
+				{
+					this._mek_skp = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mee_skp_unpl", DbType="Decimal(38,3)")]
+		public System.Nullable<decimal> mee_skp_unpl
+		{
+			get
+			{
+				return this._mee_skp_unpl;
+			}
+			set
+			{
+				if ((this._mee_skp_unpl != value))
+				{
+					this._mee_skp_unpl = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mee_skp_pl", DbType="Decimal(38,3)")]
+		public System.Nullable<decimal> mee_skp_pl
+		{
+			get
+			{
+				return this._mee_skp_pl;
+			}
+			set
+			{
+				if ((this._mee_skp_pl != value))
+				{
+					this._mee_skp_pl = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ekmp_skp_unpl", DbType="Decimal(38,3)")]
+		public System.Nullable<decimal> ekmp_skp_unpl
+		{
+			get
+			{
+				return this._ekmp_skp_unpl;
+			}
+			set
+			{
+				if ((this._ekmp_skp_unpl != value))
+				{
+					this._ekmp_skp_unpl = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ekmp_skp_pl", DbType="Decimal(38,3)")]
+		public System.Nullable<decimal> ekmp_skp_pl
+		{
+			get
+			{
+				return this._ekmp_skp_pl;
+			}
+			set
+			{
+				if ((this._ekmp_skp_pl != value))
+				{
+					this._ekmp_skp_pl = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mek_smp", DbType="Decimal(38,2)")]
+		public System.Nullable<decimal> mek_smp
+		{
+			get
+			{
+				return this._mek_smp;
+			}
+			set
+			{
+				if ((this._mek_smp != value))
+				{
+					this._mek_smp = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mee_smp_unpl", DbType="Decimal(38,3)")]
+		public System.Nullable<decimal> mee_smp_unpl
+		{
+			get
+			{
+				return this._mee_smp_unpl;
+			}
+			set
+			{
+				if ((this._mee_smp_unpl != value))
+				{
+					this._mee_smp_unpl = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mee_smp_pl", DbType="Decimal(38,3)")]
+		public System.Nullable<decimal> mee_smp_pl
+		{
+			get
+			{
+				return this._mee_smp_pl;
+			}
+			set
+			{
+				if ((this._mee_smp_pl != value))
+				{
+					this._mee_smp_pl = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ekmp_smp_unpl", DbType="Decimal(38,3)")]
+		public System.Nullable<decimal> ekmp_smp_unpl
+		{
+			get
+			{
+				return this._ekmp_smp_unpl;
+			}
+			set
+			{
+				if ((this._ekmp_smp_unpl != value))
+				{
+					this._ekmp_smp_unpl = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ekmp_smp_pl", DbType="Decimal(38,3)")]
+		public System.Nullable<decimal> ekmp_smp_pl
+		{
+			get
+			{
+				return this._ekmp_smp_pl;
+			}
+			set
+			{
+				if ((this._ekmp_smp_pl != value))
+				{
+					this._ekmp_smp_pl = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mek_sdp", DbType="Decimal(38,2)")]
+		public System.Nullable<decimal> mek_sdp
+		{
+			get
+			{
+				return this._mek_sdp;
+			}
+			set
+			{
+				if ((this._mek_sdp != value))
+				{
+					this._mek_sdp = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mee_sdp_unpl", DbType="Decimal(38,3)")]
+		public System.Nullable<decimal> mee_sdp_unpl
+		{
+			get
+			{
+				return this._mee_sdp_unpl;
+			}
+			set
+			{
+				if ((this._mee_sdp_unpl != value))
+				{
+					this._mee_sdp_unpl = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mee_sdp_pl", DbType="Decimal(38,3)")]
+		public System.Nullable<decimal> mee_sdp_pl
+		{
+			get
+			{
+				return this._mee_sdp_pl;
+			}
+			set
+			{
+				if ((this._mee_sdp_pl != value))
+				{
+					this._mee_sdp_pl = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ekmp_sdp_unpl", DbType="Decimal(38,3)")]
+		public System.Nullable<decimal> ekmp_sdp_unpl
+		{
+			get
+			{
+				return this._ekmp_sdp_unpl;
+			}
+			set
+			{
+				if ((this._ekmp_sdp_unpl != value))
+				{
+					this._ekmp_sdp_unpl = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ekmp_sdp_pl", DbType="Decimal(38,3)")]
+		public System.Nullable<decimal> ekmp_sdp_pl
+		{
+			get
+			{
+				return this._ekmp_sdp_pl;
+			}
+			set
+			{
+				if ((this._ekmp_sdp_pl != value))
+				{
+					this._ekmp_sdp_pl = value;
+				}
+			}
+		}
+	}
+	
+	public partial class FFOMSVolumesByTypesByFilialsResult
+	{
+		
+		private string _name;
+		
+		private string _Id_Region;
+		
+		private System.Nullable<decimal> _mek_app;
+		
+		private System.Nullable<decimal> _mee_app;
+		
+		private System.Nullable<decimal> _ekmp_app;
+		
+		private System.Nullable<decimal> _mek_skp;
+		
+		private System.Nullable<decimal> _mee_skp;
+		
+		private System.Nullable<decimal> _ekmp_skp;
+		
+		private System.Nullable<decimal> _mek_smp;
+		
+		private System.Nullable<decimal> _mee_smp;
+		
+		private System.Nullable<decimal> _ekmp_smp;
+		
+		private System.Nullable<decimal> _mek_sdp;
+		
+		private System.Nullable<decimal> _mee_sdp;
+		
+		private System.Nullable<decimal> _ekmp_sdp;
+		
+		public FFOMSVolumesByTypesByFilialsResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_name", DbType="VarChar(150) NOT NULL", CanBeNull=false)]
+		public string name
+		{
+			get
+			{
+				return this._name;
+			}
+			set
+			{
+				if ((this._name != value))
+				{
+					this._name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_Region", DbType="VarChar(10)")]
+		public string Id_Region
+		{
+			get
+			{
+				return this._Id_Region;
+			}
+			set
+			{
+				if ((this._Id_Region != value))
+				{
+					this._Id_Region = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mek_app", DbType="Decimal(38,2)")]
+		public System.Nullable<decimal> mek_app
+		{
+			get
+			{
+				return this._mek_app;
+			}
+			set
+			{
+				if ((this._mek_app != value))
+				{
+					this._mek_app = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mee_app", DbType="Decimal(38,3)")]
+		public System.Nullable<decimal> mee_app
+		{
+			get
+			{
+				return this._mee_app;
+			}
+			set
+			{
+				if ((this._mee_app != value))
+				{
+					this._mee_app = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ekmp_app", DbType="Decimal(38,3)")]
+		public System.Nullable<decimal> ekmp_app
+		{
+			get
+			{
+				return this._ekmp_app;
+			}
+			set
+			{
+				if ((this._ekmp_app != value))
+				{
+					this._ekmp_app = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mek_skp", DbType="Decimal(38,2)")]
+		public System.Nullable<decimal> mek_skp
+		{
+			get
+			{
+				return this._mek_skp;
+			}
+			set
+			{
+				if ((this._mek_skp != value))
+				{
+					this._mek_skp = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mee_skp", DbType="Decimal(38,3)")]
+		public System.Nullable<decimal> mee_skp
+		{
+			get
+			{
+				return this._mee_skp;
+			}
+			set
+			{
+				if ((this._mee_skp != value))
+				{
+					this._mee_skp = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ekmp_skp", DbType="Decimal(38,3)")]
+		public System.Nullable<decimal> ekmp_skp
+		{
+			get
+			{
+				return this._ekmp_skp;
+			}
+			set
+			{
+				if ((this._ekmp_skp != value))
+				{
+					this._ekmp_skp = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mek_smp", DbType="Decimal(38,2)")]
+		public System.Nullable<decimal> mek_smp
+		{
+			get
+			{
+				return this._mek_smp;
+			}
+			set
+			{
+				if ((this._mek_smp != value))
+				{
+					this._mek_smp = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mee_smp", DbType="Decimal(38,3)")]
+		public System.Nullable<decimal> mee_smp
+		{
+			get
+			{
+				return this._mee_smp;
+			}
+			set
+			{
+				if ((this._mee_smp != value))
+				{
+					this._mee_smp = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ekmp_smp", DbType="Decimal(38,3)")]
+		public System.Nullable<decimal> ekmp_smp
+		{
+			get
+			{
+				return this._ekmp_smp;
+			}
+			set
+			{
+				if ((this._ekmp_smp != value))
+				{
+					this._ekmp_smp = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mek_sdp", DbType="Decimal(38,2)")]
+		public System.Nullable<decimal> mek_sdp
+		{
+			get
+			{
+				return this._mek_sdp;
+			}
+			set
+			{
+				if ((this._mek_sdp != value))
+				{
+					this._mek_sdp = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mee_sdp", DbType="Decimal(38,3)")]
+		public System.Nullable<decimal> mee_sdp
+		{
+			get
+			{
+				return this._mee_sdp;
+			}
+			set
+			{
+				if ((this._mee_sdp != value))
+				{
+					this._mee_sdp = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ekmp_sdp", DbType="Decimal(38,3)")]
+		public System.Nullable<decimal> ekmp_sdp
+		{
+			get
+			{
+				return this._ekmp_sdp;
+			}
+			set
+			{
+				if ((this._ekmp_sdp != value))
+				{
+					this._ekmp_sdp = value;
+				}
+			}
+		}
+	}
+	
+	public partial class FFOMSLethalEKMPResult
+	{
+		
+		private string _name;
+		
+		private string _Id_Region;
+		
+		private System.Nullable<decimal> _Row1;
+		
+		private System.Nullable<decimal> _Row12;
+		
+		private System.Nullable<decimal> _Row121;
+		
+		private System.Nullable<decimal> _Row11;
+		
+		public FFOMSLethalEKMPResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_name", DbType="VarChar(150) NOT NULL", CanBeNull=false)]
+		public string name
+		{
+			get
+			{
+				return this._name;
+			}
+			set
+			{
+				if ((this._name != value))
+				{
+					this._name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_Region", DbType="VarChar(10)")]
+		public string Id_Region
+		{
+			get
+			{
+				return this._Id_Region;
+			}
+			set
+			{
+				if ((this._Id_Region != value))
+				{
+					this._Id_Region = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Row1", DbType="Decimal(38,2)")]
+		public System.Nullable<decimal> Row1
+		{
+			get
+			{
+				return this._Row1;
+			}
+			set
+			{
+				if ((this._Row1 != value))
+				{
+					this._Row1 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Row12", DbType="Decimal(38,2)")]
+		public System.Nullable<decimal> Row12
+		{
+			get
+			{
+				return this._Row12;
+			}
+			set
+			{
+				if ((this._Row12 != value))
+				{
+					this._Row12 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Row121", DbType="Decimal(38,2)")]
+		public System.Nullable<decimal> Row121
+		{
+			get
+			{
+				return this._Row121;
+			}
+			set
+			{
+				if ((this._Row121 != value))
+				{
+					this._Row121 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Row11", DbType="Decimal(38,2)")]
+		public System.Nullable<decimal> Row11
+		{
+			get
+			{
+				return this._Row11;
+			}
+			set
+			{
+				if ((this._Row11 != value))
+				{
+					this._Row11 = value;
 				}
 			}
 		}
