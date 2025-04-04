@@ -159,6 +159,7 @@
     <Compile Include="Collector\ConsolidateReport\ViolationsOfAppealsCollector.cs" />
     <Compile Include="Collector\ConsolidateReport\ZpzForWebSite2023Collector.cs" />
     <Compile Include="Collector\ConsolidateReport\ZpzForWebSite2025Collector.cs" />
+    <Compile Include="Collector\ConsolidateReport\ZpzTable5.cs" />
     <Compile Include="ConsolidateEndpoint.asmx.cs">
       <DependentUpon>ConsolidateEndpoint.asmx</DependentUpon>
       <SubType>Component</SubType>
@@ -211,6 +212,7 @@
     <Compile Include="Model\ConcolidateReport\ConsolidateQuantityAR.cs" />
     <Compile Include="Model\ConcolidateReport\ConsolidateOpedFinance_3.cs" />
     <Compile Include="Model\ConcolidateReport\ConsolidateVCR.cs" />
+    <Compile Include="Model\ConcolidateReport\ConsolidateZpzTable5.cs" />
     <Compile Include="Model\ConcolidateReport\CReportQuantityFilial.cs" />
     <Compile Include="Model\ConcolidateReport\CReportVCRFilial.cs" />
     <Compile Include="Model\ConcolidateReport\CReportOpedUnplanned.cs" />

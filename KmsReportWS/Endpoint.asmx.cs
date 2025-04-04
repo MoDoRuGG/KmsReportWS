@@ -138,6 +138,8 @@ namespace KmsReportWS
 
         }
 
+
+
         [WebMethod]
         public List<ConsolidateOpedQ> ConsolidateOpedQCollect(string yymm)
         {
@@ -626,6 +628,13 @@ namespace KmsReportWS
         public List<ConsolidateVCR> CreateReportVCR(string yymm)
         {
             var consolidate = new ConsolidateVCRReportCollector();
+            return consolidate.Collect(yymm);
+        }
+
+        [WebMethod]
+        public List<ConsolidateZpzTable5> CreateZpzTable5(string yymm)
+        {
+            var consolidate = new ConsolidateZpzTable5Collector();
             return consolidate.Collect(yymm);
         }
 
