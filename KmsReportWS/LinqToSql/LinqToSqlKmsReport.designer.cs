@@ -542,12 +542,6 @@ namespace KmsReportWS.LinqToSql
 			return this.CreateMethodCallQuery<OpedNormResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), yymm_start, yymm_end, region);
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ZpzWebSite2025", IsComposable=true)]
-		public IQueryable<ZpzWebSite2025Result> ZpzWebSite2025([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Region", DbType="VarChar(6)")] string region, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Yymm", DbType="VarChar(4)")] string yymm)
-		{
-			return this.CreateMethodCallQuery<ZpzWebSite2025Result>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), region, yymm);
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.FFOMS_MonthlyVol", IsComposable=true)]
 		public IQueryable<FFOMS_MonthlyVolResult> FFOMS_MonthlyVol([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Yymm", DbType="VarChar(4)")] string yymm, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Theme", DbType="VarChar(30)")] string theme, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Id_Region", DbType="VarChar(6)")] string id_Region)
 		{
@@ -570,6 +564,12 @@ namespace KmsReportWS.LinqToSql
 		public IQueryable<FFOMSLethalEKMPResult> FFOMSLethalEKMP([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Yymm", DbType="VarChar(4)")] string yymm)
 		{
 			return this.CreateMethodCallQuery<FFOMSLethalEKMPResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), yymm);
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ZpzWebSite2025", IsComposable=true)]
+		public IQueryable<ZpzWebSite2025Result> ZpzWebSite2025([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Region", DbType="VarChar(6)")] string region, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Yymm", DbType="VarChar(4)")] string yymm)
+		{
+			return this.CreateMethodCallQuery<ZpzWebSite2025Result>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), region, yymm);
 		}
 	}
 	
@@ -17709,266 +17709,6 @@ namespace KmsReportWS.LinqToSql
 		}
 	}
 	
-	public partial class ZpzWebSite2025Result
-	{
-		
-		private string _Id_Region;
-		
-		private System.Nullable<decimal> _col1;
-		
-		private System.Nullable<decimal> _col2;
-		
-		private System.Nullable<decimal> _col3;
-		
-		private System.Nullable<decimal> _col4;
-		
-		private System.Nullable<decimal> _col5;
-		
-		private System.Nullable<decimal> _col6;
-		
-		private System.Nullable<decimal> _col8;
-		
-		private System.Nullable<decimal> _col9;
-		
-		private System.Nullable<decimal> _col10;
-		
-		private System.Nullable<decimal> _col11;
-		
-		private System.Nullable<decimal> _col12;
-		
-		private System.Nullable<decimal> _col13;
-		
-		private System.Nullable<decimal> _col14;
-		
-		public ZpzWebSite2025Result()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_Region", DbType="VarChar(10)")]
-		public string Id_Region
-		{
-			get
-			{
-				return this._Id_Region;
-			}
-			set
-			{
-				if ((this._Id_Region != value))
-				{
-					this._Id_Region = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_col1", DbType="Decimal(15,3)")]
-		public System.Nullable<decimal> col1
-		{
-			get
-			{
-				return this._col1;
-			}
-			set
-			{
-				if ((this._col1 != value))
-				{
-					this._col1 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_col2", DbType="Decimal(15,3)")]
-		public System.Nullable<decimal> col2
-		{
-			get
-			{
-				return this._col2;
-			}
-			set
-			{
-				if ((this._col2 != value))
-				{
-					this._col2 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_col3", DbType="Decimal(15,3)")]
-		public System.Nullable<decimal> col3
-		{
-			get
-			{
-				return this._col3;
-			}
-			set
-			{
-				if ((this._col3 != value))
-				{
-					this._col3 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_col4", DbType="Decimal(15,3)")]
-		public System.Nullable<decimal> col4
-		{
-			get
-			{
-				return this._col4;
-			}
-			set
-			{
-				if ((this._col4 != value))
-				{
-					this._col4 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_col5", DbType="Decimal(15,3)")]
-		public System.Nullable<decimal> col5
-		{
-			get
-			{
-				return this._col5;
-			}
-			set
-			{
-				if ((this._col5 != value))
-				{
-					this._col5 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_col6", DbType="Decimal(16,3)")]
-		public System.Nullable<decimal> col6
-		{
-			get
-			{
-				return this._col6;
-			}
-			set
-			{
-				if ((this._col6 != value))
-				{
-					this._col6 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_col8", DbType="Decimal(15,3)")]
-		public System.Nullable<decimal> col8
-		{
-			get
-			{
-				return this._col8;
-			}
-			set
-			{
-				if ((this._col8 != value))
-				{
-					this._col8 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_col9", DbType="Decimal(15,3)")]
-		public System.Nullable<decimal> col9
-		{
-			get
-			{
-				return this._col9;
-			}
-			set
-			{
-				if ((this._col9 != value))
-				{
-					this._col9 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_col10", DbType="Decimal(15,3)")]
-		public System.Nullable<decimal> col10
-		{
-			get
-			{
-				return this._col10;
-			}
-			set
-			{
-				if ((this._col10 != value))
-				{
-					this._col10 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_col11", DbType="Decimal(15,3)")]
-		public System.Nullable<decimal> col11
-		{
-			get
-			{
-				return this._col11;
-			}
-			set
-			{
-				if ((this._col11 != value))
-				{
-					this._col11 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_col12", DbType="Decimal(15,3)")]
-		public System.Nullable<decimal> col12
-		{
-			get
-			{
-				return this._col12;
-			}
-			set
-			{
-				if ((this._col12 != value))
-				{
-					this._col12 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_col13", DbType="Decimal(15,3)")]
-		public System.Nullable<decimal> col13
-		{
-			get
-			{
-				return this._col13;
-			}
-			set
-			{
-				if ((this._col13 != value))
-				{
-					this._col13 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_col14", DbType="Decimal(15,3)")]
-		public System.Nullable<decimal> col14
-		{
-			get
-			{
-				return this._col14;
-			}
-			set
-			{
-				if ((this._col14 != value))
-				{
-					this._col14 = value;
-				}
-			}
-		}
-	}
-	
 	public partial class FFOMS_MonthlyVolResult
 	{
 		
@@ -18896,6 +18636,284 @@ namespace KmsReportWS.LinqToSql
 				if ((this._Row11 != value))
 				{
 					this._Row11 = value;
+				}
+			}
+		}
+	}
+	
+	public partial class ZpzWebSite2025Result
+	{
+		
+		private string _Yymm;
+		
+		private string _Id_Region;
+		
+		private System.Nullable<decimal> _col1;
+		
+		private System.Nullable<decimal> _col2;
+		
+		private System.Nullable<decimal> _col3;
+		
+		private System.Nullable<decimal> _col4;
+		
+		private System.Nullable<decimal> _col5;
+		
+		private System.Nullable<decimal> _col6;
+		
+		private System.Nullable<decimal> _col8;
+		
+		private System.Nullable<decimal> _col9;
+		
+		private System.Nullable<decimal> _col10;
+		
+		private System.Nullable<decimal> _col11;
+		
+		private System.Nullable<decimal> _col12;
+		
+		private System.Nullable<decimal> _col13;
+		
+		private System.Nullable<decimal> _col14;
+		
+		public ZpzWebSite2025Result()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Yymm", DbType="VarChar(4)")]
+		public string Yymm
+		{
+			get
+			{
+				return this._Yymm;
+			}
+			set
+			{
+				if ((this._Yymm != value))
+				{
+					this._Yymm = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_Region", DbType="VarChar(10)")]
+		public string Id_Region
+		{
+			get
+			{
+				return this._Id_Region;
+			}
+			set
+			{
+				if ((this._Id_Region != value))
+				{
+					this._Id_Region = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_col1", DbType="Decimal(15,3)")]
+		public System.Nullable<decimal> col1
+		{
+			get
+			{
+				return this._col1;
+			}
+			set
+			{
+				if ((this._col1 != value))
+				{
+					this._col1 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_col2", DbType="Decimal(15,3)")]
+		public System.Nullable<decimal> col2
+		{
+			get
+			{
+				return this._col2;
+			}
+			set
+			{
+				if ((this._col2 != value))
+				{
+					this._col2 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_col3", DbType="Decimal(15,3)")]
+		public System.Nullable<decimal> col3
+		{
+			get
+			{
+				return this._col3;
+			}
+			set
+			{
+				if ((this._col3 != value))
+				{
+					this._col3 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_col4", DbType="Decimal(15,3)")]
+		public System.Nullable<decimal> col4
+		{
+			get
+			{
+				return this._col4;
+			}
+			set
+			{
+				if ((this._col4 != value))
+				{
+					this._col4 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_col5", DbType="Decimal(15,3)")]
+		public System.Nullable<decimal> col5
+		{
+			get
+			{
+				return this._col5;
+			}
+			set
+			{
+				if ((this._col5 != value))
+				{
+					this._col5 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_col6", DbType="Decimal(16,3)")]
+		public System.Nullable<decimal> col6
+		{
+			get
+			{
+				return this._col6;
+			}
+			set
+			{
+				if ((this._col6 != value))
+				{
+					this._col6 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_col8", DbType="Decimal(15,3)")]
+		public System.Nullable<decimal> col8
+		{
+			get
+			{
+				return this._col8;
+			}
+			set
+			{
+				if ((this._col8 != value))
+				{
+					this._col8 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_col9", DbType="Decimal(15,3)")]
+		public System.Nullable<decimal> col9
+		{
+			get
+			{
+				return this._col9;
+			}
+			set
+			{
+				if ((this._col9 != value))
+				{
+					this._col9 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_col10", DbType="Decimal(15,3)")]
+		public System.Nullable<decimal> col10
+		{
+			get
+			{
+				return this._col10;
+			}
+			set
+			{
+				if ((this._col10 != value))
+				{
+					this._col10 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_col11", DbType="Decimal(15,3)")]
+		public System.Nullable<decimal> col11
+		{
+			get
+			{
+				return this._col11;
+			}
+			set
+			{
+				if ((this._col11 != value))
+				{
+					this._col11 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_col12", DbType="Decimal(15,3)")]
+		public System.Nullable<decimal> col12
+		{
+			get
+			{
+				return this._col12;
+			}
+			set
+			{
+				if ((this._col12 != value))
+				{
+					this._col12 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_col13", DbType="Decimal(15,3)")]
+		public System.Nullable<decimal> col13
+		{
+			get
+			{
+				return this._col13;
+			}
+			set
+			{
+				if ((this._col13 != value))
+				{
+					this._col13 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_col14", DbType="Decimal(15,3)")]
+		public System.Nullable<decimal> col14
+		{
+			get
+			{
+				return this._col14;
+			}
+			set
+			{
+				if ((this._col14 != value))
+				{
+					this._col14 = value;
 				}
 			}
 		}

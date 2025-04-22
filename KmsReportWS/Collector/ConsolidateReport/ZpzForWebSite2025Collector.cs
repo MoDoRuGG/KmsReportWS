@@ -43,6 +43,7 @@ namespace KmsReportWS.Collector.ConsolidateReport
             return new ZpzForWebSite2025
             {
                 Filial = filial,
+                Yymm = _yymm,
                 WSData = ws2025,
 
             };
