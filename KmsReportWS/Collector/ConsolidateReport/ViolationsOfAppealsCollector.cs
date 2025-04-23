@@ -13,7 +13,7 @@ namespace KmsReportWS.Collector.ConsolidateReport
     public class ViolationsOfAppealsCollector
     {
         private static readonly string[] Statuses = {
-            ReportStatus.Submit.GetDescriptionSt(), ReportStatus.Done.GetDescriptionSt()
+            ReportStatus.Submit.GetDescriptionSt(), ReportStatus.Done.GetDescriptionSt(), ReportStatus.Saved.GetDescriptionSt()
         };
 
         private static readonly string ConnStr = Settings.Default.ConnStr;
@@ -49,6 +49,7 @@ namespace KmsReportWS.Collector.ConsolidateReport
             return new ViolationsOfAppeals
             {
                 Filial = filial,
+                Yymm = _yymm,
                 T1 = T1VOA,
                 T2 = T2VOA,
                 T3 = T3VOA
