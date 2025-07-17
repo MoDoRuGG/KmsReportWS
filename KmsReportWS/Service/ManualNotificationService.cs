@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using KmsReportWebApi.Utils;
 using KmsReportWS.LinqToSql;
 using KmsReportWS.Model.Report;
 using KmsReportWS.Model.Service;

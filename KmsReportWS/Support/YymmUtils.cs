@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace KmsReportWS.Support
+namespace KmsReportWebApi.Utils
 {
     public static class YymmUtils
     {
@@ -61,7 +61,5 @@ namespace KmsReportWS.Support
 
             return year;
         }
-
-
     }
 }

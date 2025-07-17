@@ -19,6 +19,7 @@ namespace KmsReportWS.Collector.BaseReport
             {
                 // Создаем контекст базы данных
                 var db = new LinqToSqlKmsReportDataContext(ConnStr);
+                db.CommandTimeout = 1000;
 
                 // Фильтруем отчетные потоки по филиалам и дате
                 var flows = GetFilteredReportFlows(db, filials, yymmStart, yymmEnd, status);
@@ -50,7 +51,7 @@ namespace KmsReportWS.Collector.BaseReport
 
         private IQueryable<ReportZpz2025DataDto> CollectReportData(IQueryable<Report_Data> flows, string theme) =>
             from f in flows.Where(x => x.Theme == theme).SelectMany(x => x.Report_Zpz2025)
-            group f by f.RowNum into fgr
+            group f by (theme == "Результаты МЭК" ? "" : f.RowNum) into fgr
             select new ReportZpz2025DataDto
             {
                 Code = fgr.Key,
