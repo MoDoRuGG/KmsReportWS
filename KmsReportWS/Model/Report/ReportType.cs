@@ -7,7 +7,7 @@ namespace KmsReportWS.Model.Report
         [Description("f262")] F262,
         [Description("f294")] F294,
         [Description("iizl")] Iizl,
-        [Description("iizl2022")] Iizl2022,
+        [Description("iizl2022")] Iizl2022, 
         [Description("PG")] Pg,
         [Description("Zpz")] Zpz,
         [Description("PG_Q")] PgQ,
@@ -33,6 +33,10 @@ namespace KmsReportWS.Model.Report
         [Description("pvpl")] PVPLoad,
         [Description("doff")] Doff,
         [Description("Zpz2025")] Zpz2025,
+        [Description("ZpzT1")] ZpzT1,
+        [Description("ZpzT2")] ZpzT2,
+        [Description("ZpzT3")] ZpzT3,
+        [Description("ZpzT4")] ZpzT4,
         [Description("Zpz_Q2025")] ZpzQ2025,
         [Description("Zpz10_2025")] Zpz10_2025,
         [Description("ZpzL2025")] ZpzL2025,
@@ -40,5 +44,8 @@ namespace KmsReportWS.Model.Report
         [Description("ViolEKMP")] ViolEKMP,
         [Description("VerifyPlan")] VerifyPlan,
         [Description("MonthlyVol")] MonthlyVol,
+        [Description("T5Newborn")] T5Newborn,
+        [Description("T6Students")] T6Students,
+        [Description("T7OldPolis")] T7OldPolis,
     }
 }

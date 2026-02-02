@@ -48,7 +48,7 @@ namespace KmsReportWS.Service
         public KmsReportDictionary CheckPassword(string filialCode, string login, string password)
         {
             LinqToSql.Employee emp = db.Employee.SingleOrDefault(x =>
-                x.Login == login && x.Password == password && x.Region == filialCode);
+                x.Login == login && x.Password == password && x.RegionId == filialCode);
 
             if (emp == null)
             {
@@ -69,7 +69,7 @@ namespace KmsReportWS.Service
             {
                 Key = x.Login.ToString(),
                 Value = x.Surname.Trim() + " " + x.Name.Trim() + " " + x.MiddleName.Trim(),
-                ForeignKey = x.Region
+                ForeignKey = x.RegionId
             }).ToList();
 
         public KmsReportDictionary GetHead(string filialCode) =>
@@ -166,7 +166,7 @@ namespace KmsReportWS.Service
         public List<string> GetEmailsForNotification(string filialCode)
         {
             var emails = from emp in db.Employee
-                         where emp.Region == filialCode
+                         where emp.RegionId == filialCode
                          select emp.Email;
             return emails.ToList();
         }
@@ -175,7 +175,7 @@ namespace KmsReportWS.Service
             string reportType, string yymm)
         {
             var flows = from emp in db.Employee
-                        join flow in db.Report_Flow on emp.Region equals flow.Id_Region
+                        join flow in db.Report_Flow on emp.RegionId equals flow.Id_Region
                         where flow.Id_Report_Type == reportType && flow.Yymm == yymm &&
                               flow.Status != ReportStatus.Done.GetDescriptionSt()
                         select new
@@ -183,7 +183,7 @@ namespace KmsReportWS.Service
                             emp.Surname,
                             emp.Name,
                             emp.MiddleName,
-                            emp.Region,
+                            emp.RegionId,
                             emp.Email,
                             emp.Phone,
                             flow.Status
@@ -195,7 +195,7 @@ namespace KmsReportWS.Service
 
             if (filialCode?.Count > 0)
             {
-                flows = flows.Where(x => filialCode.Contains(x.Region));
+                flows = flows.Where(x => filialCode.Contains(x.RegionId));
             }
 
             return flows.Select(emp => new Employee
@@ -205,7 +205,7 @@ namespace KmsReportWS.Service
                 MiddleName = emp.MiddleName,
                 Email = emp.Email,
                 Phone = emp.Phone,
-                Region = emp.Region
+                Region = emp.RegionId
             }).Distinct().ToList();
         }
 
@@ -235,7 +235,7 @@ namespace KmsReportWS.Service
             }
 
             var empl = db.Employee.SingleOrDefault(e =>
-                e.Region == filialCode && e.Surname == surname && e.Name == name && e.MiddleName == middlename);
+                e.RegionId == filialCode && e.Surname == surname && e.Name == name && e.MiddleName == middlename);
 
             if (empl != null)
             {
@@ -259,7 +259,7 @@ namespace KmsReportWS.Service
                     Password = phone,
                     Login = login,
                     IsActive = true,
-                    Region = filialCode
+                    RegionId = filialCode
                 };
 
                 db.Employee.InsertOnSubmit(newEmpl);

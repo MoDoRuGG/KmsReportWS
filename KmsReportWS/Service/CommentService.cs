@@ -47,7 +47,7 @@ namespace KmsReportWS.Service
                 foreach (var com in comments)
                 {
                     var emp = com.Employee;
-                    if (emp.Region != filialCode)
+                    if (emp.RegionId != filialCode)
                     {
                         com.Date_read = DateTime.Today;
                     }
@@ -79,8 +79,8 @@ namespace KmsReportWS.Service
                                      where com.Date_read == null
                                      select new { com, user, flow };
                 unreadComments = filialCode == "RU"
-                    ? unreadComments.Where(r => r.user.Region != "RU")
-                    : unreadComments.Where(r => r.flow.Id_Region == filialCode && r.user.Region == "RU");
+                    ? unreadComments.Where(r => r.user.RegionId != "RU")
+                    : unreadComments.Where(r => r.flow.Id_Region == filialCode && r.user.RegionId == "RU");
 
                 return unreadComments.Select(r => new UnreadComment
                 {

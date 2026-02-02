@@ -48,7 +48,7 @@ namespace KmsReportWS.Service
         public void SendNewCommentNotification(int idReport, int idEmp, string comment)
         {
             using var db = new LinqToSqlKmsReportDataContext(ConnStr);
-            var userName = db.Employee.SingleOrDefault(x => x.Region == "RU" && x.Id == idEmp);
+            var userName = db.Employee.SingleOrDefault(x => x.RegionId == "RU" && x.Id == idEmp);
             if (userName == null)
             {
                 return;
@@ -70,7 +70,7 @@ namespace KmsReportWS.Service
         private List<string> CollectFilialEmails(string[] regions)
         {
             using var db = new LinqToSqlKmsReportDataContext(ConnStr);
-            return db.Employee.Where(x => regions.Contains(x.Region) && x.IsActive).Select(x => x.Email).ToList();
+            return db.Employee.Where(x => regions.Contains(x.RegionId) && x.IsActive).Select(x => x.Email).ToList();
         }
 
         private string CollectReportName(string reportType)

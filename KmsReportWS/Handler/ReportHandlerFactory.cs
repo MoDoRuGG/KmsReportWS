@@ -39,6 +39,8 @@ namespace KmsReportWS.Handler
         private readonly IReportHandler _ViolEKMPCollector = new ReportViolationsHandler(ReportType.ViolEKMP);
         private readonly IReportHandler _VerifyPlanCollector = new ReportViolationsHandler(ReportType.VerifyPlan);
         private readonly IReportHandler _MonthlyVolCollector = new ReportMonthlyVolHandler(ReportType.MonthlyVol);
+        private readonly IReportHandler _T5NewbornCollector = new ReportT5NewbornHandler();
+        private readonly IReportHandler _T6StudentsCollector = new ReportT6StudentsHandler();
         public IReportHandler GetHandler(ReportType reportType) =>
             reportType switch {
                 ReportType.Oped => _opedCollector,
@@ -76,6 +78,8 @@ namespace KmsReportWS.Handler
                 ReportType.ViolEKMP => _ViolEKMPCollector,
                 ReportType.VerifyPlan => _VerifyPlanCollector,
                 ReportType.MonthlyVol => _MonthlyVolCollector,
+                ReportType.T5Newborn => _T5NewbornCollector,
+                ReportType.T6Students => _T6StudentsCollector,
 
             };
     }

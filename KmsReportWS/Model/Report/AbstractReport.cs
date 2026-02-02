@@ -36,4 +36,5 @@ namespace KmsReportWS.Model.Report
         public ReportStatus Status { get; set; }
         public DataSource DataSource { get; set; }
     }
+
 }

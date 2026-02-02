@@ -38,11 +38,11 @@ namespace KmsReportWS.Service
                     ForeignKey = x.name_devision.Trim()
                 }).OrderBy(x => x.Value).ToList();
 
-                var users = db.Employee.Where(x => x.IsActive).Select(x => new KmsReportDictionary
+                var users = db.Employee.Where(x => x.IsActive).AsEnumerable().Select(x => new KmsReportDictionary
                 {
                     Key = x.Id.ToString(),
                     Value = x.Surname.Trim() + " " + x.Name.Trim() + " " + x.MiddleName.Trim(),
-                    ForeignKey = x.Region
+                    ForeignKey = x.RegionId
                 }).ToList();
 
                 var reportTypes = db.Report_Type.Select(x => new KmsReportDictionary

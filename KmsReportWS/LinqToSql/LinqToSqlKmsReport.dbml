@@ -29,7 +29,7 @@
       <Column Name="Phone" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
       <Column Name="Position" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
       <Column Name="Email" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
-      <Column Name="Region" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Region" Member="RegionId" Storage="_Region" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
       <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Association Name="Employee_Comment" Member="Comment" ThisKey="Id" OtherKey="Id_Employee" Type="Comment" />
       <Association Name="Employee_Report_Dynamic" Member="Report_Dynamic" ThisKey="Id" OtherKey="UserCreated" Type="Report_Dynamic" />
@@ -38,7 +38,6 @@
       <Association Name="Employee_Scans_Base1" Member="Scans_Base1" ThisKey="Id" OtherKey="Usr_update" Type="Scans_Base" />
       <Association Name="Employee_Report_Flow" Member="Report_Flow" ThisKey="Id" OtherKey="Id_Employee" Type="Report_Flow" />
       <Association Name="Employee_Report_Dynamic_Flow" Member="Report_Dynamic_Flow" ThisKey="Id" OtherKey="Id_Employee" Type="Report_Dynamic_Flow" />
-      <Association Name="Region_Employee" Member="Region1" ThisKey="Region" OtherKey="id" Type="Region" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.FSSMonitroing" Member="FSSMonitroing">
@@ -162,6 +161,8 @@
       <Association Name="Report_Data_Report_Zpz2025" Member="Report_Zpz2025" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_Zpz2025" />
       <Association Name="Report_Data_Report_Violations" Member="Report_Violations" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_Violations" />
       <Association Name="Report_Data_Report_MonthlyVol" Member="Report_MonthlyVol" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_MonthlyVol" />
+      <Association Name="Report_Data_Report_T5Newborn" Member="Report_T5Newborn" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_T5Newborn" />
+      <Association Name="Report_Data_Report_T6Students" Member="Report_T6Students" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_T6Students" />
       <Association Name="Report_Type_Report_Data" Member="Report_Type" ThisKey="Id_Report" OtherKey="Id" Type="Report_Type" IsForeignKey="true" />
       <Association Name="Report_Flow_Report_Data" Member="Report_Flow" ThisKey="Id_Flow" OtherKey="Id" Type="Report_Flow" IsForeignKey="true" />
     </Type>
@@ -660,7 +661,6 @@
       <Column Name="name_head" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
       <Column Name="phone" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
       <Column Name="name_short" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Association Name="Region_Employee" Member="Employee" ThisKey="id" OtherKey="Region" Type="Employee" />
       <Association Name="Region_NormativCpnpRegion" Member="NormativCpnpRegion" ThisKey="id" OtherKey="id_region" Type="NormativCpnpRegion" />
       <Association Name="Region_OpedFinancePlan" Member="OpedFinancePlan" ThisKey="id" OtherKey="Id_Region" Type="OpedFinancePlan" />
       <Association Name="Region_Report_Flow" Member="Report_Flow" ThisKey="id" OtherKey="Id_Region" Type="Report_Flow" />
@@ -678,6 +678,29 @@
       <Column Name="CountSluchMEE" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="CountSluchEKMP" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="Report_Data_Report_MonthlyVol" Member="Report_Data" ThisKey="Id_Report_Data" OtherKey="Id" Type="Report_Data" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Report_T5Newborn" Member="Report_T5Newborn">
+    <Type Name="Report_T5Newborn">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id_Report_Data" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RowNum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MarketShare" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="CountNewborn" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="CountMaterinityBills" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Association Name="Report_Data_Report_T5Newborn" Member="Report_Data" ThisKey="Id_Report_Data" OtherKey="Id" Type="Report_Data" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Report_T6Students" Member="Report_T6Students">
+    <Type Name="Report_T6Students">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id_Report_Data" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RowNum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CountUniversity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CountCollege" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CountInsured" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Comments" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="Report_Data_Report_T6Students" Member="Report_Data" ThisKey="Id_Report_Data" OtherKey="Id" Type="Report_Data" IsForeignKey="true" />
     </Type>
   </Table>
   <Function Name="dbo.cadre_rapport" Method="cadre_rapport" IsComposable="true">

@@ -414,6 +414,18 @@ namespace KmsReportWS
         }
 
         [WebMethod]
+        public void WebReportT5Newborn(ReportT5Newborn report)
+        {
+
+        }
+
+        [WebMethod]
+        public void WebReportT6Students(ReportT6Students report)
+        {
+
+        }
+
+        [WebMethod]
         public void WebReportViolations(ReportViolations report)
         {
 
@@ -886,5 +898,12 @@ namespace KmsReportWS
             var consolidate = new FFOMSVerifyPlanCollector(yymm);
             return consolidate.Collect();
         }
+
+        //[WebMethod]
+        //public List<ReportT5Newborn> CreateReportT5Newborn(string yymm)
+        //{
+        //    var consolidate = new ReportT5NewbornCollector(yymm);
+        //    return consolidate.Collect();
+        //}
     }
 }

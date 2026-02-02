@@ -122,7 +122,7 @@ namespace KmsReportWS.Service
                                     where !hasReport
                                     select filial).ToList();
 
-            var flowsNotExisting = db.Employee.Where(x => notExistsReports.Contains(x.Region) && x.IsActive)
+            var flowsNotExisting = db.Employee.Where(x => notExistsReports.Contains(x.RegionId) && x.IsActive)
                 .Select(emp => new Employee
                 {
                     Surname = emp.Surname,
@@ -130,11 +130,11 @@ namespace KmsReportWS.Service
                     MiddleName = emp.MiddleName,
                     Email = emp.Email,
                     Phone = emp.Phone,
-                    Region = emp.Region
+                    Region = emp.RegionId
                 }).ToList();
 
             var flowsExistingReport = from emp in db.Employee
-                                      join flow in db.Report_Flow on emp.Region equals flow.Id_Region
+                                      join flow in db.Report_Flow on emp.RegionId equals flow.Id_Region
                                       where flow.Id_Report_Type == request.ReportType && flow.Yymm == request.Yymm &&
                                             flow.Status != ReportStatus.Done.GetDescriptionSt() && emp.IsActive
                                       select new Employee
@@ -144,7 +144,7 @@ namespace KmsReportWS.Service
                                           MiddleName = emp.MiddleName,
                                           Email = emp.Email,
                                           Phone = emp.Phone,
-                                          Region = emp.Region,
+                                          Region = emp.RegionId,
                                           Status = flow.Status
                                       };
             if (request.IsRefuse)

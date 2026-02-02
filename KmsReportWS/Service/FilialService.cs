@@ -29,7 +29,7 @@ namespace KmsReportWS.Service
                         Phone = phone,
                         Password = phone,
                         IsActive = true,
-                        Region = filialCode
+                        RegionId = filialCode
                     };
                     Log.Debug($"Save new user = {newEmployee.Surname} {newEmployee.Name} {newEmployee.MiddleName}");
                     db.Employee.InsertOnSubmit(newEmployee);
@@ -51,7 +51,7 @@ namespace KmsReportWS.Service
                     editEmployee.Email = email;
                     editEmployee.Phone = phone;
                     editEmployee.Password = phone;
-                    editEmployee.Region = filialCode;
+                    editEmployee.RegionId = filialCode;
 
                     Log.Debug($"Edit user = {editEmployee}");
                     db.SubmitChanges();
