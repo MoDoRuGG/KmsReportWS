@@ -156,6 +156,12 @@ namespace KmsReportWS.LinqToSql
     partial void InsertReport_T6Students(Report_T6Students instance);
     partial void UpdateReport_T6Students(Report_T6Students instance);
     partial void DeleteReport_T6Students(Report_T6Students instance);
+    partial void InsertReport_T7OldPolis(Report_T7OldPolis instance);
+    partial void UpdateReport_T7OldPolis(Report_T7OldPolis instance);
+    partial void DeleteReport_T7OldPolis(Report_T7OldPolis instance);
+    partial void InsertReport_T7OldPolisYearly(Report_T7OldPolisYearly instance);
+    partial void UpdateReport_T7OldPolisYearly(Report_T7OldPolisYearly instance);
+    partial void DeleteReport_T7OldPolisYearly(Report_T7OldPolisYearly instance);
     #endregion
 		
 		public LinqToSqlKmsReportDataContext(string connection) : 
@@ -531,6 +537,30 @@ namespace KmsReportWS.LinqToSql
 			get
 			{
 				return this.GetTable<Report_T6Students>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Report_T7OldPolis> Report_T7OldPolis
+		{
+			get
+			{
+				return this.GetTable<Report_T7OldPolis>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Report_T7OldPolis_const2019> Report_T7OldPolis_const2019
+		{
+			get
+			{
+				return this.GetTable<Report_T7OldPolis_const2019>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Report_T7OldPolisYearly> Report_T7OldPolisYearly
+		{
+			get
+			{
+				return this.GetTable<Report_T7OldPolisYearly>();
 			}
 		}
 		
@@ -3218,6 +3248,8 @@ namespace KmsReportWS.LinqToSql
 		
 		private EntitySet<Report_T6Students> _Report_T6Students;
 		
+		private EntitySet<Report_T7OldPolis> _Report_T7OldPolis;
+		
 		private EntityRef<Report_Type> _Report_Type;
 		
 		private EntityRef<Report_Flow> _Report_Flow;
@@ -3269,6 +3301,7 @@ namespace KmsReportWS.LinqToSql
 			this._Report_MonthlyVol = new EntitySet<Report_MonthlyVol>(new Action<Report_MonthlyVol>(this.attach_Report_MonthlyVol), new Action<Report_MonthlyVol>(this.detach_Report_MonthlyVol));
 			this._Report_T5Newborn = new EntitySet<Report_T5Newborn>(new Action<Report_T5Newborn>(this.attach_Report_T5Newborn), new Action<Report_T5Newborn>(this.detach_Report_T5Newborn));
 			this._Report_T6Students = new EntitySet<Report_T6Students>(new Action<Report_T6Students>(this.attach_Report_T6Students), new Action<Report_T6Students>(this.detach_Report_T6Students));
+			this._Report_T7OldPolis = new EntitySet<Report_T7OldPolis>(new Action<Report_T7OldPolis>(this.attach_Report_T7OldPolis), new Action<Report_T7OldPolis>(this.detach_Report_T7OldPolis));
 			this._Report_Type = default(EntityRef<Report_Type>);
 			this._Report_Flow = default(EntityRef<Report_Flow>);
 			OnCreated();
@@ -3753,6 +3786,19 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Report_Data_Report_T7OldPolis", Storage="_Report_T7OldPolis", ThisKey="Id", OtherKey="Id_Report_Data")]
+		public EntitySet<Report_T7OldPolis> Report_T7OldPolis
+		{
+			get
+			{
+				return this._Report_T7OldPolis;
+			}
+			set
+			{
+				this._Report_T7OldPolis.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Report_Type_Report_Data", Storage="_Report_Type", ThisKey="Id_Report", OtherKey="Id", IsForeignKey=true)]
 		public Report_Type Report_Type
 		{
@@ -4160,6 +4206,18 @@ namespace KmsReportWS.LinqToSql
 		}
 		
 		private void detach_Report_T6Students(Report_T6Students entity)
+		{
+			this.SendPropertyChanging();
+			entity.Report_Data = null;
+		}
+		
+		private void attach_Report_T7OldPolis(Report_T7OldPolis entity)
+		{
+			this.SendPropertyChanging();
+			entity.Report_Data = this;
+		}
+		
+		private void detach_Report_T7OldPolis(Report_T7OldPolis entity)
 		{
 			this.SendPropertyChanging();
 			entity.Report_Data = null;
@@ -14761,6 +14819,8 @@ namespace KmsReportWS.LinqToSql
 		
 		private EntitySet<Report_Dynamic_Flow> _Report_Dynamic_Flow;
 		
+		private EntitySet<Report_T7OldPolisYearly> _Report_T7OldPolisYearly;
+		
     #region Определения метода расширяемости
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -14789,6 +14849,7 @@ namespace KmsReportWS.LinqToSql
 			this._Report_Flow = new EntitySet<Report_Flow>(new Action<Report_Flow>(this.attach_Report_Flow), new Action<Report_Flow>(this.detach_Report_Flow));
 			this._QuantityPlan = new EntitySet<QuantityPlan>(new Action<QuantityPlan>(this.attach_QuantityPlan), new Action<QuantityPlan>(this.detach_QuantityPlan));
 			this._Report_Dynamic_Flow = new EntitySet<Report_Dynamic_Flow>(new Action<Report_Dynamic_Flow>(this.attach_Report_Dynamic_Flow), new Action<Report_Dynamic_Flow>(this.detach_Report_Dynamic_Flow));
+			this._Report_T7OldPolisYearly = new EntitySet<Report_T7OldPolisYearly>(new Action<Report_T7OldPolisYearly>(this.attach_Report_T7OldPolisYearly), new Action<Report_T7OldPolisYearly>(this.detach_Report_T7OldPolisYearly));
 			OnCreated();
 		}
 		
@@ -15004,6 +15065,19 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Region_Report_T7OldPolisYearly", Storage="_Report_T7OldPolisYearly", ThisKey="id", OtherKey="Id_Region")]
+		public EntitySet<Report_T7OldPolisYearly> Report_T7OldPolisYearly
+		{
+			get
+			{
+				return this._Report_T7OldPolisYearly;
+			}
+			set
+			{
+				this._Report_T7OldPolisYearly.Assign(value);
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -15067,6 +15141,18 @@ namespace KmsReportWS.LinqToSql
 		}
 		
 		private void detach_Report_Dynamic_Flow(Report_Dynamic_Flow entity)
+		{
+			this.SendPropertyChanging();
+			entity.Region = null;
+		}
+		
+		private void attach_Report_T7OldPolisYearly(Report_T7OldPolisYearly entity)
+		{
+			this.SendPropertyChanging();
+			entity.Region = this;
+		}
+		
+		private void detach_Report_T7OldPolisYearly(Report_T7OldPolisYearly entity)
 		{
 			this.SendPropertyChanging();
 			entity.Region = null;
@@ -15765,6 +15851,425 @@ namespace KmsReportWS.LinqToSql
 						this._Id_Report_Data = default(int);
 					}
 					this.SendPropertyChanged("Report_Data");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Report_T7OldPolis")]
+	public partial class Report_T7OldPolis : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Id;
+		
+		private int _Id_Report_Data;
+		
+		private System.Nullable<int> _RowNum;
+		
+		private System.Nullable<int> _CurrentQuantity;
+		
+		private System.Nullable<int> _CountOldPolis;
+		
+		private EntityRef<Report_Data> _Report_Data;
+		
+    #region Определения метода расширяемости
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdChanging(int value);
+    partial void OnIdChanged();
+    partial void OnId_Report_DataChanging(int value);
+    partial void OnId_Report_DataChanged();
+    partial void OnRowNumChanging(System.Nullable<int> value);
+    partial void OnRowNumChanged();
+    partial void OnCurrentQuantityChanging(System.Nullable<int> value);
+    partial void OnCurrentQuantityChanged();
+    partial void OnCountOldPolisChanging(System.Nullable<int> value);
+    partial void OnCountOldPolisChanged();
+    #endregion
+		
+		public Report_T7OldPolis()
+		{
+			this._Report_Data = default(EntityRef<Report_Data>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this.OnIdChanging(value);
+					this.SendPropertyChanging();
+					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_Report_Data", DbType="Int NOT NULL")]
+		public int Id_Report_Data
+		{
+			get
+			{
+				return this._Id_Report_Data;
+			}
+			set
+			{
+				if ((this._Id_Report_Data != value))
+				{
+					if (this._Report_Data.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnId_Report_DataChanging(value);
+					this.SendPropertyChanging();
+					this._Id_Report_Data = value;
+					this.SendPropertyChanged("Id_Report_Data");
+					this.OnId_Report_DataChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RowNum", DbType="Int")]
+		public System.Nullable<int> RowNum
+		{
+			get
+			{
+				return this._RowNum;
+			}
+			set
+			{
+				if ((this._RowNum != value))
+				{
+					this.OnRowNumChanging(value);
+					this.SendPropertyChanging();
+					this._RowNum = value;
+					this.SendPropertyChanged("RowNum");
+					this.OnRowNumChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CurrentQuantity", DbType="Int")]
+		public System.Nullable<int> CurrentQuantity
+		{
+			get
+			{
+				return this._CurrentQuantity;
+			}
+			set
+			{
+				if ((this._CurrentQuantity != value))
+				{
+					this.OnCurrentQuantityChanging(value);
+					this.SendPropertyChanging();
+					this._CurrentQuantity = value;
+					this.SendPropertyChanged("CurrentQuantity");
+					this.OnCurrentQuantityChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CountOldPolis", DbType="Int")]
+		public System.Nullable<int> CountOldPolis
+		{
+			get
+			{
+				return this._CountOldPolis;
+			}
+			set
+			{
+				if ((this._CountOldPolis != value))
+				{
+					this.OnCountOldPolisChanging(value);
+					this.SendPropertyChanging();
+					this._CountOldPolis = value;
+					this.SendPropertyChanged("CountOldPolis");
+					this.OnCountOldPolisChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Report_Data_Report_T7OldPolis", Storage="_Report_Data", ThisKey="Id_Report_Data", OtherKey="Id", IsForeignKey=true)]
+		public Report_Data Report_Data
+		{
+			get
+			{
+				return this._Report_Data.Entity;
+			}
+			set
+			{
+				Report_Data previousValue = this._Report_Data.Entity;
+				if (((previousValue != value) 
+							|| (this._Report_Data.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Report_Data.Entity = null;
+						previousValue.Report_T7OldPolis.Remove(this);
+					}
+					this._Report_Data.Entity = value;
+					if ((value != null))
+					{
+						value.Report_T7OldPolis.Add(this);
+						this._Id_Report_Data = value.Id;
+					}
+					else
+					{
+						this._Id_Report_Data = default(int);
+					}
+					this.SendPropertyChanged("Report_Data");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Report_T7OldPolis_const2019")]
+	public partial class Report_T7OldPolis_const2019
+	{
+		
+		private int _Value;
+		
+		private string _Id_Region;
+		
+		public Report_T7OldPolis_const2019()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Value", DbType="Int NOT NULL")]
+		public int Value
+		{
+			get
+			{
+				return this._Value;
+			}
+			set
+			{
+				if ((this._Value != value))
+				{
+					this._Value = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_Region", DbType="VarChar(10) NOT NULL", CanBeNull=false)]
+		public string Id_Region
+		{
+			get
+			{
+				return this._Id_Region;
+			}
+			set
+			{
+				if ((this._Id_Region != value))
+				{
+					this._Id_Region = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Report_T7OldPolisYearly")]
+	public partial class Report_T7OldPolisYearly : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Id_Report_T7OldPolisYearly;
+		
+		private string _Yymm;
+		
+		private int _Value;
+		
+		private string _Id_Region;
+		
+		private EntityRef<Region> _Region;
+		
+    #region Определения метода расширяемости
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnId_Report_T7OldPolisYearlyChanging(int value);
+    partial void OnId_Report_T7OldPolisYearlyChanged();
+    partial void OnYymmChanging(string value);
+    partial void OnYymmChanged();
+    partial void OnValueChanging(int value);
+    partial void OnValueChanged();
+    partial void OnId_RegionChanging(string value);
+    partial void OnId_RegionChanged();
+    #endregion
+		
+		public Report_T7OldPolisYearly()
+		{
+			this._Region = default(EntityRef<Region>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_Report_T7OldPolisYearly", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Id_Report_T7OldPolisYearly
+		{
+			get
+			{
+				return this._Id_Report_T7OldPolisYearly;
+			}
+			set
+			{
+				if ((this._Id_Report_T7OldPolisYearly != value))
+				{
+					this.OnId_Report_T7OldPolisYearlyChanging(value);
+					this.SendPropertyChanging();
+					this._Id_Report_T7OldPolisYearly = value;
+					this.SendPropertyChanged("Id_Report_T7OldPolisYearly");
+					this.OnId_Report_T7OldPolisYearlyChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Yymm", DbType="VarChar(4) NOT NULL", CanBeNull=false)]
+		public string Yymm
+		{
+			get
+			{
+				return this._Yymm;
+			}
+			set
+			{
+				if ((this._Yymm != value))
+				{
+					this.OnYymmChanging(value);
+					this.SendPropertyChanging();
+					this._Yymm = value;
+					this.SendPropertyChanged("Yymm");
+					this.OnYymmChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Value", DbType="Int NOT NULL")]
+		public int Value
+		{
+			get
+			{
+				return this._Value;
+			}
+			set
+			{
+				if ((this._Value != value))
+				{
+					this.OnValueChanging(value);
+					this.SendPropertyChanging();
+					this._Value = value;
+					this.SendPropertyChanged("Value");
+					this.OnValueChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_Region", DbType="VarChar(10) NOT NULL", CanBeNull=false)]
+		public string Id_Region
+		{
+			get
+			{
+				return this._Id_Region;
+			}
+			set
+			{
+				if ((this._Id_Region != value))
+				{
+					if (this._Region.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnId_RegionChanging(value);
+					this.SendPropertyChanging();
+					this._Id_Region = value;
+					this.SendPropertyChanged("Id_Region");
+					this.OnId_RegionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Region_Report_T7OldPolisYearly", Storage="_Region", ThisKey="Id_Region", OtherKey="id", IsForeignKey=true)]
+		public Region Region
+		{
+			get
+			{
+				return this._Region.Entity;
+			}
+			set
+			{
+				Region previousValue = this._Region.Entity;
+				if (((previousValue != value) 
+							|| (this._Region.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Region.Entity = null;
+						previousValue.Report_T7OldPolisYearly.Remove(this);
+					}
+					this._Region.Entity = value;
+					if ((value != null))
+					{
+						value.Report_T7OldPolisYearly.Add(this);
+						this._Id_Region = value.id;
+					}
+					else
+					{
+						this._Id_Region = default(string);
+					}
+					this.SendPropertyChanged("Region");
 				}
 			}
 		}

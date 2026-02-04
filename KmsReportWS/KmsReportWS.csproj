@@ -167,6 +167,8 @@
     <Compile Include="Handler\BaseReportHandler.cs" />
     <Compile Include="Handler\FOpedUHandler.cs" />
     <Compile Include="Handler\MonitoringVCRHandler.cs" />
+    <Compile Include="Handler\ReportT7OldPolisHandler.cs" />
+    <Compile Include="Handler\T7OldPolisYearlyDictionaryHandler.cs" />
     <Compile Include="Handler\QuantityPlanDictionaryHandler.cs" />
     <Compile Include="Handler\ReportDoffHandler.cs" />
     <Compile Include="Handler\ReportMonthlyVolHandler.cs" />
@@ -259,6 +261,7 @@
     <Compile Include="Model\Constructor\ReportDynamicDto.cs" />
     <Compile Include="Model\Constructor\ReportDynamicFlowDto.cs" />
     <Compile Include="Model\Constructor\ReportDynamicResultDto.cs" />
+    <Compile Include="Model\Dictionary\T7OldPolisYearlyDictionaryItem.cs" />
     <Compile Include="Model\Dictionary\QuantityPlanDictionaryItem.cs" />
     <Compile Include="Model\Dictionary\OpedFinancePlanDictionaryItem.cs" />
     <Compile Include="Model\MonitoringVCRPgDataDto.cs" />

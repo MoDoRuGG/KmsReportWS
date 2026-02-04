@@ -17,6 +17,10 @@ namespace KmsReportWS.Handler
         private readonly IReportHandler _pgQCollector = new PgHandler(ReportType.PgQ);
         private readonly IReportHandler _zpzCollector = new ZpzHandler(ReportType.Zpz);
         private readonly IReportHandler _zpz2025Collector = new Zpz2025Handler(ReportType.Zpz2025);
+        private readonly IReportHandler _zpzT1Collector = new Zpz2025Handler(ReportType.ZpzT1);
+        private readonly IReportHandler _zpzT2Collector = new Zpz2025Handler(ReportType.ZpzT2);
+        private readonly IReportHandler _zpzT3Collector = new Zpz2025Handler(ReportType.ZpzT3);
+        private readonly IReportHandler _zpzT4Collector = new Zpz2025Handler(ReportType.ZpzT4);
         private readonly IReportHandler _zpz10Collector = new ZpzHandler(ReportType.Zpz10);
         private readonly IReportHandler _zpz10_2025Collector = new Zpz2025Handler(ReportType.Zpz10_2025);
         private readonly IReportHandler _zpzLethalCollector = new ZpzHandler(ReportType.ZpzLethal);
@@ -80,7 +84,10 @@ namespace KmsReportWS.Handler
                 ReportType.MonthlyVol => _MonthlyVolCollector,
                 ReportType.T5Newborn => _T5NewbornCollector,
                 ReportType.T6Students => _T6StudentsCollector,
-
+                ReportType.ZpzT1 => _zpzT1Collector,
+                ReportType.ZpzT2 => _zpzT2Collector,
+                ReportType.ZpzT3 => _zpzT3Collector,
+                ReportType.ZpzT4 => _zpzT4Collector,
             };
     }
 }

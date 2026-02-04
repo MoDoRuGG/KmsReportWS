@@ -73,6 +73,13 @@ namespace KmsReportWS
         }
 
         [WebMethod]
+        public List<T7OldPolisYearlyDictionaryItem> GetT7OldPolisYearlyList(string year)
+        {
+            return new T7OldPolisYearlyDictionaryHandler().GetList(year);
+
+        }
+
+        [WebMethod]
         public List<ConsolidateQuantityAR> CreateConsolidateQuantityAddRemove(string year)
         {
             return new ConsolidateQuantityARCollector().Collect(year);
@@ -138,7 +145,12 @@ namespace KmsReportWS
 
         }
 
+        [WebMethod]
+        public void SaveT7OldPolisYearlyList(List<T7OldPolisYearlyDictionaryItem> plans)
+        {
+            new T7OldPolisYearlyDictionaryHandler().Save(plans);
 
+        }
 
         [WebMethod]
         public List<ConsolidateOpedQ> ConsolidateOpedQCollect(string yymm)
