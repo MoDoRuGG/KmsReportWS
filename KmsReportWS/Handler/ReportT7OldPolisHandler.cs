@@ -31,7 +31,7 @@ namespace KmsReportWS.Handler
                 .FirstOrDefault();
 
             var annual = db.Report_T7OldPolisYearly
-                .Where(y => y.Id_Region == filialCode && y.Yymm == yymm.Substring(0, 2))
+                .Where(y => y.Id_Region == filialCode && y.Yymm.Substring(0, 2) == yymm.Substring(0, 2))
                 .Select(y => y.Value)
                 .FirstOrDefault();
 

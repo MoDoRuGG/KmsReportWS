@@ -10,6 +10,6 @@ namespace KmsReportWS.Model.Dictionary
         public int IdReportT7OldPolisYearly { get; set; }
         public string IdRegion { get; set; }
         public string Yymm { get; set; }
-        public int Value { get; set; } = 0;
+        public int Value { get; set; }
     }
 }
