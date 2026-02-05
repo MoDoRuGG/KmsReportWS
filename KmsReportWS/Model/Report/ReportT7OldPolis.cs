@@ -18,5 +18,8 @@ namespace KmsReportWS.Model.Report
         public int Id { get; set; }
         public int CurrentQuantity { get; set; }
         public int CountOldPolis { get; set; }
+
+        public int Constant2019Count { get; set; }
+        public int AnnualCount { get; set; }
     }
 }

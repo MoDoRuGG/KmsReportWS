@@ -45,6 +45,7 @@ namespace KmsReportWS.Handler
         private readonly IReportHandler _MonthlyVolCollector = new ReportMonthlyVolHandler(ReportType.MonthlyVol);
         private readonly IReportHandler _T5NewbornCollector = new ReportT5NewbornHandler();
         private readonly IReportHandler _T6StudentsCollector = new ReportT6StudentsHandler();
+        private readonly IReportHandler _T7OldPolisCollector = new ReportT7OldPolisHandler();
         public IReportHandler GetHandler(ReportType reportType) =>
             reportType switch {
                 ReportType.Oped => _opedCollector,
@@ -84,6 +85,7 @@ namespace KmsReportWS.Handler
                 ReportType.MonthlyVol => _MonthlyVolCollector,
                 ReportType.T5Newborn => _T5NewbornCollector,
                 ReportType.T6Students => _T6StudentsCollector,
+                ReportType.T7OldPolis => _T7OldPolisCollector,
                 ReportType.ZpzT1 => _zpzT1Collector,
                 ReportType.ZpzT2 => _zpzT2Collector,
                 ReportType.ZpzT3 => _zpzT3Collector,

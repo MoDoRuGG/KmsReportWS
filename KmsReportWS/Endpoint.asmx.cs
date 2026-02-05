@@ -402,6 +402,14 @@ namespace KmsReportWS
         }
 
         [WebMethod]
+        public ReportT7OldPolisDataDto GetT7OldPolisConstants(string yymm, string filialCode)
+        {
+            var handler = _reportHandlerFactory.GetHandler(ReportType.T7OldPolis) as ReportT7OldPolisHandler;
+            return handler?.GetT7OldPolisConstants(yymm, filialCode)
+                   ?? new ReportT7OldPolisDataDto(); // fallback
+        }
+
+        [WebMethod]
         public void WebReportOpedFinance(ReportOpedFinance report)
         {
 
@@ -433,6 +441,12 @@ namespace KmsReportWS
 
         [WebMethod]
         public void WebReportT6Students(ReportT6Students report)
+        {
+
+        }
+
+        [WebMethod]
+        public void WebReportT7OldPolis(ReportT7OldPolis report)
         {
 
         }

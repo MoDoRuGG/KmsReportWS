@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
 using System.Web;
 using KmsReportWS.LinqToSql;
 using KmsReportWS.Model.Report;
@@ -20,9 +21,52 @@ namespace KmsReportWS.Handler
 
         protected override void InsertReport(LinqToSqlKmsReportDataContext db, AbstractReport report) { }
 
-        public ReportT7OldPolisDataDto GetYearData(string yymm, string theme, string filial)
+        public ReportT7OldPolisDataDto GetT7OldPolisConstants(string yymm, string filialCode)
         {
-            return null;
+            using var db = new LinqToSqlKmsReportDataContext(Settings.Default.ConnStr);
+
+            var constant2019 = db.Report_T7OldPolis_const2019
+                .Where(c => c.Id_Region == filialCode)
+                .Select(c => c.Value)
+                .FirstOrDefault();
+
+            var annual = db.Report_T7OldPolisYearly
+                .Where(y => y.Id_Region == filialCode && y.Yymm == yymm.Substring(0, 2))
+                .Select(y => y.Value)
+                .FirstOrDefault();
+
+            return new ReportT7OldPolisDataDto
+            {
+                Constant2019Count = constant2019,
+                AnnualCount = annual
+                // остальные поля = 0 по умолчанию
+            };
+        }
+
+        public ReportT7OldPolisDataDto GetConstantsData(LinqToSqlKmsReportDataContext db, string yymm, string theme, string filial)
+        {
+            var flow = db.Report_Flow.Where(f => f.Yymm == yymm && f.Id_Region == filial && f.Id_Report_Type == ReportType.T7OldPolis.ToString()).OrderByDescending(f => f.Created).FirstOrDefault();
+
+            if (flow == null) return null;
+
+            var mainData = db.Report_Data.Where(d => d.Id_Flow == flow.Id && d.Theme == theme).SelectMany(d => d.Report_T7OldPolis).Select(r => new ReportT7OldPolisDataDto()
+            {
+                Id = r.Id,
+                CurrentQuantity = r.CurrentQuantity ?? 0,
+                CountOldPolis = r.CountOldPolis ?? 0
+            }).FirstOrDefault();
+
+            var result = mainData ?? new ReportT7OldPolisDataDto
+            {
+                Id = 0,
+                CurrentQuantity = 0,
+                CountOldPolis = 0
+            };
+
+            result.Constant2019Count = db.Report_T7OldPolis_const2019.Where(c => c.Id_Region == filial).Select(c => c.Value).FirstOrDefault();
+            result.AnnualCount = db.Report_T7OldPolisYearly.Where(y => y.Id_Region == filial && y.Yymm.Substring(0, 2) == yymm.Substring(0, 2)).Select(c => c.Value).FirstOrDefault();
+
+            return result;
         }
 
         protected override void CreateNewReport(LinqToSqlKmsReportDataContext db, Report_Flow flow, AbstractReport inReport)
@@ -54,6 +98,7 @@ namespace KmsReportWS.Handler
 
         protected override AbstractReport MapReportFromPersist(Report_Flow rep)
         {
+            using var dbase = new LinqToSqlKmsReportDataContext(_connStr);
             var outReport = new ReportT7OldPolis { ReportDataList = new List<ReportT7OldPolisDto>() };
             MapFromReportFlow(rep, outReport);
 
@@ -61,20 +106,14 @@ namespace KmsReportWS.Handler
             {
                 var theme = themeData.Theme.Trim();
 
-                var dto = new ReportT7OldPolisDto
+                var mainData = GetConstantsData(dbase, rep.Yymm, theme, rep.Id_Region);
+
+                outReport.ReportDataList.Add(new ReportT7OldPolisDto
                 {
                     Theme = theme,
-                    Data = new ReportT7OldPolisDataDto(),
-                };
+                    Data = mainData
+                });
 
-
-                var dataList = themeData.Report_T7OldPolis.Select(MapReportDto);
-                dto.Data = dataList.FirstOrDefault();
-
-                if (dto.Data != null)
-                {
-                    outReport.ReportDataList.Add(dto);
-                }
             }
 
             return outReport;
