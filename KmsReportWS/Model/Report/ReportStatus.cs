@@ -9,6 +9,7 @@ namespace KmsReportWS.Model.Report
         [Description("Scan")] Scan,
         [Description("Submit")] Submit,
         [Description("Refuse")] Refuse,
-        [Description("Done")] Done
+        [Description("Done")] Done,
+        [Description("PartiallyApproved")] PartiallyApproved
     }
 }

@@ -209,6 +209,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>LinqToSqlKmsReport.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Model\ApprovalInfoDto.cs" />
     <Compile Include="Model\CheckFFOMS2022CommonData.cs" />
     <Compile Include="Model\ConcolidateReport\ConsolidateQuantityQ.cs" />
     <Compile Include="Model\ConcolidateReport\ConsolidateQuantityInfo.cs" />

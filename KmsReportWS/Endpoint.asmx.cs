@@ -526,7 +526,7 @@ namespace KmsReportWS
 
         [WebMethod]
         public void ChangeDataSource(int idReport, int idUser, DataSource datasource) =>
-    _flowHandler.ChangeDataSource(idReport, idUser, datasource);
+            _flowHandler.ChangeDataSource(idReport, idUser, datasource);
 
         [WebMethod]
         public AbstractReport CollectSummaryReport(string[] filials, string yymmStart, string yymmEnd,
@@ -537,10 +537,28 @@ namespace KmsReportWS
         }
 
         [WebMethod]
+        public void ApproveReport(int idReportFlow, int idUser)
+        {
+            _flowHandler.ApproveReport(idReportFlow, idUser);
+        }
+
+        [WebMethod]
+        public void RefuseReportMultiApproval(int idReportFlow, int idUser)
+        {
+            _flowHandler.RefuseReportMultiApproval(idReportFlow, idUser);
+        }
+
+        [WebMethod]
         public AbstractReport GetReport(string filialCode, string yymm, ReportType reportType)
         {
             var handler = _reportHandlerFactory.GetHandler(reportType);
             return handler.GetReport(filialCode, yymm);
+        }
+
+        [WebMethod]
+        public List<ApprovalInfoDto> GetApprovalInfo(int idReportFlow)
+        {
+            return _flowHandler.GetApprovalInfo(idReportFlow);
         }
 
         [WebMethod]

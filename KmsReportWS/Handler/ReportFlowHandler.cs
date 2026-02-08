@@ -23,7 +23,7 @@ namespace KmsReportWS.Handler
             using var db = new LinqToSqlKmsReportDataContext(ConnStr);
             var flows = from r in db.Report_Flow
                         join rt in db.Report_Type on r.Id_Report_Type equals rt.Id
-                          //join reg in db.Region on flow.Id_Region equals reg.id
+                        //join reg in db.Region on flow.Id_Region equals reg.id
                         where Convert.ToInt32(r.Yymm) >= Convert.ToInt32(yymmStart)
                               && Convert.ToInt32(r.Yymm) <= Convert.ToInt32(yymmEnd)
                         select new ReportFlowDto
@@ -37,7 +37,7 @@ namespace KmsReportWS.Handler
                             DateToCo = r.Date_to_co,
                             DataSource = DataSourseUtils.ParseDataSource(r.DataSource),
                             Status = StatusUtils.ParseStatus(r.Status)
-                            
+
                         };
             if (!string.IsNullOrEmpty(filial))
             {
@@ -423,5 +423,165 @@ namespace KmsReportWS.Handler
                 throw;
             }
         }
+
+        private bool IsFullyApproved(LinqToSqlKmsReportDataContext db, int reportFlowId, string reportType)
+        {
+            // Получаем требуемые Direction для этого отчёта
+            var requiredDirections = db.Approval_Scheme
+                .Where(s => s.Report_Type == reportType)
+                .Select(s => s.Required_Direction)
+                .ToList();
+
+            if (!requiredDirections.Any())
+                return true; // нет схемы → старая логика
+
+            // Получаем Direction тех, кто уже утвердил
+            var approvedDirections = db.Report_Approval_Log
+                .Where(l => l.Id_Report_Flow == reportFlowId && l.Action == "Approved")
+                .Select(l => l.Approver_Direction)
+                .ToHashSet();
+
+            return requiredDirections.All(dir => approvedDirections.Contains(dir));
+        }
+
+        public void ApproveReport(int idReportFlow, int idUser)
+        {
+            using var db = new LinqToSqlKmsReportDataContext(ConnStr);
+            var flow = db.Report_Flow.Single(f => f.Id == idReportFlow);
+            var emp = db.Employee.Single(e => e.Id == idUser);
+
+            string userDirection = emp.Direction?.Trim();
+            if (string.IsNullOrEmpty(userDirection))
+                throw new InvalidOperationException("У сотрудника не указана дирекция (поле Direction).");
+
+            // Проверяем: есть ли схема согласования для этого типа отчёта?
+            bool hasScheme = db.Approval_Scheme.Any(s => s.Report_Type == flow.Id_Report_Type);
+            if (!hasScheme)
+            {
+                // Старая логика: один акцепт → Done
+                ChangeStatus(idReportFlow, idUser, ReportStatus.Done);
+                return;
+            }
+
+            // Проверяем: требуется ли именно эта дирекция?
+            bool isRequired = db.Approval_Scheme
+                .Any(s => s.Report_Type == flow.Id_Report_Type && s.Required_Direction == userDirection);
+            if (!isRequired)
+                throw new UnauthorizedAccessException($"Ваша дирекция ({userDirection}) не участвует в согласовании этого отчёта.");
+
+            // Проверяем: не утверждал ли уже?
+            if (db.Report_Approval_Log.Any(l => l.Id_Report_Flow == idReportFlow && l.Employee_Id == idUser))
+                throw new InvalidOperationException("Вы уже утверждали этот отчёт.");
+
+            // Записываем утверждение
+            db.Report_Approval_Log.InsertOnSubmit(new Report_Approval_Log
+            {
+                Id_Report_Flow = idReportFlow,
+                Approver_Direction = userDirection,
+                Employee_Id = idUser,
+                Action = "Approved",
+                Created_At = DateTime.Now
+            });
+
+            // Проверяем: все ли утвердили?
+            var required = db.Approval_Scheme
+                .Where(s => s.Report_Type == flow.Id_Report_Type)
+                .Select(s => s.Required_Direction)
+                .ToList();
+
+            var approved = db.Report_Approval_Log
+                .Where(l => l.Id_Report_Flow == idReportFlow && l.Action == "Approved")
+                .Select(l => l.Approver_Direction)
+                .ToHashSet();
+
+            if (required.All(dir => approved.Contains(dir)))
+            {
+                // Все утвердили → Done
+                flow.Status = ReportStatus.Done.GetDescriptionSt();
+                flow.Date_is_done = DateTime.Today;
+                flow.User_submit = idUser;
+            }
+            else
+            {
+                // Частично утверждён
+                flow.Status = ReportStatus.PartiallyApproved.GetDescriptionSt();
+            }
+
+            db.SubmitChanges();
+        }
+
+        public void RefuseReportMultiApproval(int idReportFlow, int idUser)
+        {
+            using var db = new LinqToSqlKmsReportDataContext(ConnStr);
+            var flow = db.Report_Flow.Single(f => f.Id == idReportFlow);
+
+            // Удаляем ВСЕ утверждения
+            var approvals = db.Report_Approval_Log.Where(l => l.Id_Report_Flow == idReportFlow);
+            db.Report_Approval_Log.DeleteAllOnSubmit(approvals);
+
+            // Ставим статус "Refuse"
+            flow.Status = ReportStatus.Refuse.GetDescriptionSt();
+            flow.Date_edit_co = DateTime.Today;
+            flow.User_edit_co = idUser;
+            flow.Updated = DateTime.Today;
+            flow.Id_Employee_Upd = idUser;
+
+            db.SubmitChanges();
+        }
+
+        public List<ApprovalInfoDto> GetApprovalInfo(int idReportFlow)
+        {
+            using var db = new LinqToSqlKmsReportDataContext(ConnStr);
+            var flow = db.Report_Flow.Single(f => f.Id == idReportFlow);
+
+            var required = db.Approval_Scheme
+                .Where(s => s.Report_Type == flow.Id_Report_Type)
+                .OrderBy(s => s.Sort_Order)
+                .Select(s => s.Required_Direction)
+                .ToList();
+
+            if (!required.Any())
+                return new List<ApprovalInfoDto>();
+
+            var approvedDict = db.Report_Approval_Log
+                .Where(l => l.Id_Report_Flow == idReportFlow && l.Action == "Approved")
+                .Join(db.Employee, l => l.Employee_Id, e => e.Id, (l, e) => new
+                {
+                    l.Approver_Direction,
+                    EmployeeName = $"{e.Surname} {e.Name}",
+                    l.Created_At
+                })
+                .ToDictionary(x => x.Approver_Direction, x => x);
+
+            return required.Select(dir => new ApprovalInfoDto
+            {
+                Direction = dir,
+                DirectionName = ExpandDirection(dir),
+                EmployeeName = approvedDict.TryGetValue(dir, out var a) ? a.EmployeeName : null,
+                ApprovedDate = approvedDict.TryGetValue(dir, out var b) ? b.Created_At : (DateTime?)null,
+            }).ToList();
+        }
+
+        private string ExpandDirection(string dir) => dir switch
+        {
+            "БУХ" => "Бухгалтерия",
+            "ВАУД" => "Внутренний аудитор",
+            "ДКР" => "Дирекция комплексного развития",
+            "ДЗПЗ" => "Дирекция по ЗПЗ и ЭКМП",
+            "ДИТ" => "Дирекция по информационным технологиям",
+            "ДИБ" => "Дирекция по обеспечению информационной безопасности",
+            "ДОМС" => "Дирекция по организации ОМС",
+            "ДПОБ" => "Дирекция по правовому обеспечению бизнеса",
+            "ДПРП" => "Дирекция по работе с персоналом",
+            "ДТОМС" => "Дирекция технологий ОМС",
+            "ДФАК" => "Дирекция финансового аудита и контроля",
+            "ПРИЕМ" => "Приемная",
+            "РУК" => "Руководство",
+            "СДО" => "Служба документационного обеспечения",
+            "СРЕГ" => "Служба по работе с регистром",
+            "СЮП" => "Служба юридической практики",
+            "ФИН" => "Финансовая дирекция",
+            _ => dir ?? "Неизвестно"
+        };
     }
 }

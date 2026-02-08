@@ -22,7 +22,7 @@ namespace KmsReportWS.LinqToSql
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="kms_report")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="kms_report_localDevelop")]
 	public partial class LinqToSqlKmsReportDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -162,6 +162,12 @@ namespace KmsReportWS.LinqToSql
     partial void InsertReport_T7OldPolisYearly(Report_T7OldPolisYearly instance);
     partial void UpdateReport_T7OldPolisYearly(Report_T7OldPolisYearly instance);
     partial void DeleteReport_T7OldPolisYearly(Report_T7OldPolisYearly instance);
+    partial void InsertReport_Approval_Log(Report_Approval_Log instance);
+    partial void UpdateReport_Approval_Log(Report_Approval_Log instance);
+    partial void DeleteReport_Approval_Log(Report_Approval_Log instance);
+    partial void InsertApproval_Scheme(Approval_Scheme instance);
+    partial void UpdateApproval_Scheme(Approval_Scheme instance);
+    partial void DeleteApproval_Scheme(Approval_Scheme instance);
     #endregion
 		
 		public LinqToSqlKmsReportDataContext(string connection) : 
@@ -561,6 +567,22 @@ namespace KmsReportWS.LinqToSql
 			get
 			{
 				return this.GetTable<Report_T7OldPolisYearly>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Report_Approval_Log> Report_Approval_Log
+		{
+			get
+			{
+				return this.GetTable<Report_Approval_Log>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Approval_Scheme> Approval_Scheme
+		{
+			get
+			{
+				return this.GetTable<Approval_Scheme>();
 			}
 		}
 		
@@ -1027,6 +1049,8 @@ namespace KmsReportWS.LinqToSql
 		
 		private bool _IsActive;
 		
+		private string _Direction;
+		
 		private EntitySet<Comment> _Comment;
 		
 		private EntitySet<Report_Dynamic> _Report_Dynamic;
@@ -1040,6 +1064,8 @@ namespace KmsReportWS.LinqToSql
 		private EntitySet<Report_Flow> _Report_Flow;
 		
 		private EntitySet<Report_Dynamic_Flow> _Report_Dynamic_Flow;
+		
+		private EntitySet<Report_Approval_Log> _Report_Approval_Log;
 		
     #region Определения метода расширяемости
     partial void OnLoaded();
@@ -1067,6 +1093,8 @@ namespace KmsReportWS.LinqToSql
     partial void OnRegionIdChanged();
     partial void OnIsActiveChanging(bool value);
     partial void OnIsActiveChanged();
+    partial void OnDirectionChanging(string value);
+    partial void OnDirectionChanged();
     #endregion
 		
 		public Employee()
@@ -1078,6 +1106,7 @@ namespace KmsReportWS.LinqToSql
 			this._Scans_Base1 = new EntitySet<Scans_Base>(new Action<Scans_Base>(this.attach_Scans_Base1), new Action<Scans_Base>(this.detach_Scans_Base1));
 			this._Report_Flow = new EntitySet<Report_Flow>(new Action<Report_Flow>(this.attach_Report_Flow), new Action<Report_Flow>(this.detach_Report_Flow));
 			this._Report_Dynamic_Flow = new EntitySet<Report_Dynamic_Flow>(new Action<Report_Dynamic_Flow>(this.attach_Report_Dynamic_Flow), new Action<Report_Dynamic_Flow>(this.detach_Report_Dynamic_Flow));
+			this._Report_Approval_Log = new EntitySet<Report_Approval_Log>(new Action<Report_Approval_Log>(this.attach_Report_Approval_Log), new Action<Report_Approval_Log>(this.detach_Report_Approval_Log));
 			OnCreated();
 		}
 		
@@ -1301,6 +1330,26 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Direction", CanBeNull=false)]
+		public string Direction
+		{
+			get
+			{
+				return this._Direction;
+			}
+			set
+			{
+				if ((this._Direction != value))
+				{
+					this.OnDirectionChanging(value);
+					this.SendPropertyChanging();
+					this._Direction = value;
+					this.SendPropertyChanged("Direction");
+					this.OnDirectionChanged();
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_Comment", Storage="_Comment", ThisKey="Id", OtherKey="Id_Employee")]
 		public EntitySet<Comment> Comment
 		{
@@ -1389,6 +1438,19 @@ namespace KmsReportWS.LinqToSql
 			set
 			{
 				this._Report_Dynamic_Flow.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_Report_Approval_Log", Storage="_Report_Approval_Log", ThisKey="Id", OtherKey="Employee_Id")]
+		public EntitySet<Report_Approval_Log> Report_Approval_Log
+		{
+			get
+			{
+				return this._Report_Approval_Log;
+			}
+			set
+			{
+				this._Report_Approval_Log.Assign(value);
 			}
 		}
 		
@@ -1491,6 +1553,18 @@ namespace KmsReportWS.LinqToSql
 		}
 		
 		private void detach_Report_Dynamic_Flow(Report_Dynamic_Flow entity)
+		{
+			this.SendPropertyChanging();
+			entity.Employee = null;
+		}
+		
+		private void attach_Report_Approval_Log(Report_Approval_Log entity)
+		{
+			this.SendPropertyChanging();
+			entity.Employee = this;
+		}
+		
+		private void detach_Report_Approval_Log(Report_Approval_Log entity)
 		{
 			this.SendPropertyChanging();
 			entity.Employee = null;
@@ -10610,6 +10684,8 @@ namespace KmsReportWS.LinqToSql
 		
 		private EntitySet<Scans_Base> _Scans_Base;
 		
+		private EntitySet<Report_Approval_Log> _Report_Approval_Log;
+		
 		private EntityRef<Employee> _Employee;
 		
 		private EntityRef<Report_Type> _Report_Type;
@@ -10681,6 +10757,7 @@ namespace KmsReportWS.LinqToSql
 			this._Comment = new EntitySet<Comment>(new Action<Comment>(this.attach_Comment), new Action<Comment>(this.detach_Comment));
 			this._Report_Data = new EntitySet<Report_Data>(new Action<Report_Data>(this.attach_Report_Data), new Action<Report_Data>(this.detach_Report_Data));
 			this._Scans_Base = new EntitySet<Scans_Base>(new Action<Scans_Base>(this.attach_Scans_Base), new Action<Scans_Base>(this.detach_Scans_Base));
+			this._Report_Approval_Log = new EntitySet<Report_Approval_Log>(new Action<Report_Approval_Log>(this.attach_Report_Approval_Log), new Action<Report_Approval_Log>(this.detach_Report_Approval_Log));
 			this._Employee = default(EntityRef<Employee>);
 			this._Report_Type = default(EntityRef<Report_Type>);
 			this._Region = default(EntityRef<Region>);
@@ -11278,6 +11355,19 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Report_Flow_Report_Approval_Log", Storage="_Report_Approval_Log", ThisKey="Id", OtherKey="Id_Report_Flow")]
+		public EntitySet<Report_Approval_Log> Report_Approval_Log
+		{
+			get
+			{
+				return this._Report_Approval_Log;
+			}
+			set
+			{
+				this._Report_Approval_Log.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_Report_Flow", Storage="_Employee", ThisKey="Id_Employee", OtherKey="Id", IsForeignKey=true)]
 		public Employee Employee
 		{
@@ -11431,6 +11521,18 @@ namespace KmsReportWS.LinqToSql
 		}
 		
 		private void detach_Scans_Base(Scans_Base entity)
+		{
+			this.SendPropertyChanging();
+			entity.Report_Flow = null;
+		}
+		
+		private void attach_Report_Approval_Log(Report_Approval_Log entity)
+		{
+			this.SendPropertyChanging();
+			entity.Report_Flow = this;
+		}
+		
+		private void detach_Report_Approval_Log(Report_Approval_Log entity)
 		{
 			this.SendPropertyChanging();
 			entity.Report_Flow = null;
@@ -16270,6 +16372,428 @@ namespace KmsReportWS.LinqToSql
 						this._Id_Region = default(string);
 					}
 					this.SendPropertyChanged("Region");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Report_Approval_Log")]
+	public partial class Report_Approval_Log : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Id;
+		
+		private int _Id_Report_Flow;
+		
+		private string _Approver_Direction;
+		
+		private int _Employee_Id;
+		
+		private string _Action;
+		
+		private string _Comment;
+		
+		private System.DateTime _Created_At;
+		
+		private EntityRef<Employee> _Employee;
+		
+		private EntityRef<Report_Flow> _Report_Flow;
+		
+    #region Определения метода расширяемости
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdChanging(int value);
+    partial void OnIdChanged();
+    partial void OnId_Report_FlowChanging(int value);
+    partial void OnId_Report_FlowChanged();
+    partial void OnApprover_DirectionChanging(string value);
+    partial void OnApprover_DirectionChanged();
+    partial void OnEmployee_IdChanging(int value);
+    partial void OnEmployee_IdChanged();
+    partial void OnActionChanging(string value);
+    partial void OnActionChanged();
+    partial void OnCommentChanging(string value);
+    partial void OnCommentChanged();
+    partial void OnCreated_AtChanging(System.DateTime value);
+    partial void OnCreated_AtChanged();
+    #endregion
+		
+		public Report_Approval_Log()
+		{
+			this._Employee = default(EntityRef<Employee>);
+			this._Report_Flow = default(EntityRef<Report_Flow>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this.OnIdChanging(value);
+					this.SendPropertyChanging();
+					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_Report_Flow", DbType="Int NOT NULL")]
+		public int Id_Report_Flow
+		{
+			get
+			{
+				return this._Id_Report_Flow;
+			}
+			set
+			{
+				if ((this._Id_Report_Flow != value))
+				{
+					if (this._Report_Flow.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnId_Report_FlowChanging(value);
+					this.SendPropertyChanging();
+					this._Id_Report_Flow = value;
+					this.SendPropertyChanged("Id_Report_Flow");
+					this.OnId_Report_FlowChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Approver_Direction", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string Approver_Direction
+		{
+			get
+			{
+				return this._Approver_Direction;
+			}
+			set
+			{
+				if ((this._Approver_Direction != value))
+				{
+					this.OnApprover_DirectionChanging(value);
+					this.SendPropertyChanging();
+					this._Approver_Direction = value;
+					this.SendPropertyChanged("Approver_Direction");
+					this.OnApprover_DirectionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Employee_Id", DbType="Int NOT NULL")]
+		public int Employee_Id
+		{
+			get
+			{
+				return this._Employee_Id;
+			}
+			set
+			{
+				if ((this._Employee_Id != value))
+				{
+					if (this._Employee.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnEmployee_IdChanging(value);
+					this.SendPropertyChanging();
+					this._Employee_Id = value;
+					this.SendPropertyChanged("Employee_Id");
+					this.OnEmployee_IdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Action", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string Action
+		{
+			get
+			{
+				return this._Action;
+			}
+			set
+			{
+				if ((this._Action != value))
+				{
+					this.OnActionChanging(value);
+					this.SendPropertyChanging();
+					this._Action = value;
+					this.SendPropertyChanged("Action");
+					this.OnActionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Comment", DbType="NVarChar(500)")]
+		public string Comment
+		{
+			get
+			{
+				return this._Comment;
+			}
+			set
+			{
+				if ((this._Comment != value))
+				{
+					this.OnCommentChanging(value);
+					this.SendPropertyChanging();
+					this._Comment = value;
+					this.SendPropertyChanged("Comment");
+					this.OnCommentChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_At", DbType="DateTime2 NOT NULL")]
+		public System.DateTime Created_At
+		{
+			get
+			{
+				return this._Created_At;
+			}
+			set
+			{
+				if ((this._Created_At != value))
+				{
+					this.OnCreated_AtChanging(value);
+					this.SendPropertyChanging();
+					this._Created_At = value;
+					this.SendPropertyChanged("Created_At");
+					this.OnCreated_AtChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_Report_Approval_Log", Storage="_Employee", ThisKey="Employee_Id", OtherKey="Id", IsForeignKey=true)]
+		public Employee Employee
+		{
+			get
+			{
+				return this._Employee.Entity;
+			}
+			set
+			{
+				Employee previousValue = this._Employee.Entity;
+				if (((previousValue != value) 
+							|| (this._Employee.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Employee.Entity = null;
+						previousValue.Report_Approval_Log.Remove(this);
+					}
+					this._Employee.Entity = value;
+					if ((value != null))
+					{
+						value.Report_Approval_Log.Add(this);
+						this._Employee_Id = value.Id;
+					}
+					else
+					{
+						this._Employee_Id = default(int);
+					}
+					this.SendPropertyChanged("Employee");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Report_Flow_Report_Approval_Log", Storage="_Report_Flow", ThisKey="Id_Report_Flow", OtherKey="Id", IsForeignKey=true, DeleteOnNull=true, DeleteRule="CASCADE")]
+		public Report_Flow Report_Flow
+		{
+			get
+			{
+				return this._Report_Flow.Entity;
+			}
+			set
+			{
+				Report_Flow previousValue = this._Report_Flow.Entity;
+				if (((previousValue != value) 
+							|| (this._Report_Flow.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Report_Flow.Entity = null;
+						previousValue.Report_Approval_Log.Remove(this);
+					}
+					this._Report_Flow.Entity = value;
+					if ((value != null))
+					{
+						value.Report_Approval_Log.Add(this);
+						this._Id_Report_Flow = value.Id;
+					}
+					else
+					{
+						this._Id_Report_Flow = default(int);
+					}
+					this.SendPropertyChanged("Report_Flow");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Approval_Scheme")]
+	public partial class Approval_Scheme : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Id;
+		
+		private string _Report_Type;
+		
+		private string _Required_Direction;
+		
+		private int _Sort_Order;
+		
+    #region Определения метода расширяемости
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdChanging(int value);
+    partial void OnIdChanged();
+    partial void OnReport_TypeChanging(string value);
+    partial void OnReport_TypeChanged();
+    partial void OnRequired_DirectionChanging(string value);
+    partial void OnRequired_DirectionChanged();
+    partial void OnSort_OrderChanging(int value);
+    partial void OnSort_OrderChanged();
+    #endregion
+		
+		public Approval_Scheme()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this.OnIdChanging(value);
+					this.SendPropertyChanging();
+					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Report_Type", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string Report_Type
+		{
+			get
+			{
+				return this._Report_Type;
+			}
+			set
+			{
+				if ((this._Report_Type != value))
+				{
+					this.OnReport_TypeChanging(value);
+					this.SendPropertyChanging();
+					this._Report_Type = value;
+					this.SendPropertyChanged("Report_Type");
+					this.OnReport_TypeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Required_Direction", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string Required_Direction
+		{
+			get
+			{
+				return this._Required_Direction;
+			}
+			set
+			{
+				if ((this._Required_Direction != value))
+				{
+					this.OnRequired_DirectionChanging(value);
+					this.SendPropertyChanging();
+					this._Required_Direction = value;
+					this.SendPropertyChanged("Required_Direction");
+					this.OnRequired_DirectionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Sort_Order", DbType="Int NOT NULL")]
+		public int Sort_Order
+		{
+			get
+			{
+				return this._Sort_Order;
+			}
+			set
+			{
+				if ((this._Sort_Order != value))
+				{
+					this.OnSort_OrderChanging(value);
+					this.SendPropertyChanging();
+					this._Sort_Order = value;
+					this.SendPropertyChanged("Sort_Order");
+					this.OnSort_OrderChanged();
 				}
 			}
 		}
