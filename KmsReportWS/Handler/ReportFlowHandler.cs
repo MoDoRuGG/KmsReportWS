@@ -548,7 +548,7 @@ namespace KmsReportWS.Handler
                 .Join(db.Employee, l => l.Employee_Id, e => e.Id, (l, e) => new
                 {
                     l.Approver_Direction,
-                    EmployeeName = $"{e.Surname} {e.Name}",
+                    EmployeeName = $"{e.Surname} {e.Name} {e.MiddleName}",
                     l.Created_At
                 })
                 .ToDictionary(x => x.Approver_Direction, x => x);
@@ -559,6 +559,7 @@ namespace KmsReportWS.Handler
                 DirectionName = ExpandDirection(dir),
                 EmployeeName = approvedDict.TryGetValue(dir, out var a) ? a.EmployeeName : null,
                 ApprovedDate = approvedDict.TryGetValue(dir, out var b) ? b.Created_At : (DateTime?)null,
+                IsApproved = approvedDict.ContainsKey(dir)
             }).ToList();
         }
 
