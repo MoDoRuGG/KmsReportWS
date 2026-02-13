@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using KmsReportWS.LinqToSql;
+using KmsReportWS.Model;
 using KmsReportWS.Model.Report;
 using KmsReportWS.Properties;
 
@@ -43,6 +44,39 @@ namespace KmsReportWS.Handler
             }).FirstOrDefault();
 
             return result;
+        }
+
+        public List<ZpzYearDataRow> GetYearDataBatch(string yymm, string theme, string fillial, string[] rowNumbers)
+        {
+            if (rowNumbers == null || rowNumbers.Length == 0)
+                return new List<ZpzYearDataRow>();
+
+            var db = new LinqToSqlKmsReportDataContext(_connStr);
+            string start = Convert.ToInt32(yymm) < 2501 ? "2409" : yymm.Substring(0, 2) + "01";
+            var rowNumbersArray = rowNumbers;
+
+            var dbResults = db.Report_Zpz2025
+               .Where(x => x.Report_Data.Report_Flow.Id_Region == fillial
+                            && x.Report_Data.Theme == theme
+                            && Convert.ToInt32(x.Report_Data.Report_Flow.Yymm) >= Convert.ToInt32(start)
+                            && Convert.ToInt32(x.Report_Data.Report_Flow.Yymm) <= Convert.ToInt32(yymm)
+                            && x.Report_Data.Report_Flow.Id_Report_Type == "Zpz10_2025"
+                            && rowNumbersArray.Contains(x.RowNum)) // ← Фильтрация по списку
+        .GroupBy(x => x.RowNum)
+        .ToDictionary(g => g.Key, g => (decimal)g.Sum(x => x.CountSmo));
+
+            var fullList = new List<ZpzYearDataRow>();
+            foreach (var rn in rowNumbers)
+            {
+                var count = dbResults.TryGetValue(rn, out var sum) ? sum : 0m;
+                fullList.Add(new ZpzYearDataRow
+                {
+                    RowNum = rn,
+                    Data = new ReportZpz2025DataDto { CountSmo = count }
+                });
+            }
+
+            return fullList;
         }
 
         // Получение данных по летальным случаям за указанный год

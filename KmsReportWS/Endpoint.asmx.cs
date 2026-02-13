@@ -226,6 +226,13 @@ namespace KmsReportWS
             return (handler as Zpz2025Handler).GetYearData(yymm, theme, fillial, rowNum);
         }
 
+        [WebMethod]
+        public List<ZpzYearDataRow> GetZpz10_2025YearDataBatch(string yymm, string theme, string fillial, string[] rowNumbers)
+        {
+            var handler = _reportHandlerFactory.GetHandler(ReportType.Zpz10_2025);
+            return (handler as Zpz2025Handler).GetYearDataBatch(yymm, theme, fillial, rowNumbers);
+        }
+
 
         [WebMethod]
         public ReportDoffDataDto GetDoffYearData(string yymm, string theme, string fillial, string rowNum)
