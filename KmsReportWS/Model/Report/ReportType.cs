@@ -14,6 +14,7 @@ namespace KmsReportWS.Model.Report
         [Description("Zpz_Q")] ZpzQ,
         [Description("foped")] Oped,
         [Description("fopedU")] OpedU,
+        [Description("OpedUnpl")] OpedUnpl,
         [Description("opedQ")] OpedQ,
         [Description("fcr")] IR,
         [Description("vac")] Vac,

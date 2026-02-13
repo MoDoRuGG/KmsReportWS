@@ -371,6 +371,12 @@ namespace KmsReportWS
         }
 
         [WebMethod]
+        public void WebReportOpedUnplanned(ReportOpedU report)
+        {
+
+        }
+
+        [WebMethod]
         public void WebReportInfrormationResponse(ReportInfrormationResponse report)
         {
 

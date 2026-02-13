@@ -165,6 +165,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Handler\BaseReportHandler.cs" />
+    <Compile Include="Handler\OpedUnplannedHandler.cs" />
     <Compile Include="Handler\FOpedUHandler.cs" />
     <Compile Include="Handler\MonitoringVCRHandler.cs" />
     <Compile Include="Handler\ReportT7OldPolisHandler.cs" />

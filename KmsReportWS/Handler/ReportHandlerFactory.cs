@@ -10,6 +10,7 @@ namespace KmsReportWS.Handler
         private readonly IReportHandler _iizlCollector2022 = new IizlHandler(ReportType.Iizl2022);
         private readonly IReportHandler _opedCollector = new FOpedHandler(ReportType.Oped);
         private readonly IReportHandler _opedUCollector = new FOpedUHandler(ReportType.OpedU);
+        private readonly IReportHandler _opedUnplannedCollector = new OpedUnplannedHandler(ReportType.OpedUnpl);
         private readonly IReportHandler _opedCollectorQ = new FOpedHandler(ReportType.OpedQ);
         private readonly IReportHandler _infrormationResponseHandlerCollector = new ReportInfrormationResponseHandler();
         private readonly IReportHandler _cadreHandlerCollector = new ReportCadreHandler();
@@ -50,6 +51,7 @@ namespace KmsReportWS.Handler
             reportType switch {
                 ReportType.Oped => _opedCollector,
                 ReportType.OpedU => _opedUCollector,
+                ReportType.OpedUnpl => _opedUnplannedCollector,
                 ReportType.IR => _infrormationResponseHandlerCollector,
                 ReportType.F262 => _f262Collector,
                 ReportType.F294 => _f294Collector,
