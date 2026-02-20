@@ -707,6 +707,26 @@ namespace KmsReportWS
             return consolidate.Collect(yymm);
         }
 
+        [WebMethod]
+        public List<ConsolidateZpzTable10> CreateConsolidateZpzTable10(string yymm)
+        {
+            var consolidate = new ConsolidateZpzTable10Collector();
+            return consolidate.Collect(yymm);
+        }
+
+        [WebMethod]
+        public List<ConsolidateZpzTable10Filial> CreateConsolidateZpzTable10Filial(string yymm)
+        {
+            var consolidate = new ConsolidateZpzTable10FilialCollector();
+            return consolidate.Collect(yymm);
+        }
+
+        [WebMethod]
+        public List<ConsolidateZpzTable10FilialGrow> CreateConsolidateZpzTable10FilialGrow(string yymm)
+        {
+            var consolidate = new ConsolidateZpzTable10FilialGrowCollector();
+            return consolidate.Collect(yymm);
+        }
 
         [WebMethod]
         public List<ConsolidateCpnpM> CreateReportCpnpM(string yymm)

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TemplateDynamicReport xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<REPORT_NAME>ЭКО 2024-2025</REPORT_NAME>
+	<REPORT_DESCRIPTION/>
+	<REPORT_DATE>2025-08-07T14:42:50</REPORT_DATE>
+	<IsUserRow>false</IsUserRow>
+	<Emails/>
+	<TABLE>
+		<TemplateTableDynamic>
+			<TABLE_NAME>1 вкладка</TABLE_NAME>
+			<TABLE_DESCRIPTION>Сведения о проведенных страховыми медицинскими организациями экспертизы качества медицинской помощи
+по случаям экстракорпорального оплодотворения в 2024 - 2025 годах (случаем ЭКО следует считать законченный случай ЭКО в зависимости от этапа, соответствующего КСГ)</TABLE_DESCRIPTION>
+			<ROWS/>
+			<COLUMNS>
+				<TemplateColumnDynamic>
+					<COLUMN_TEXT>за 2024 год</COLUMN_TEXT>
+					<COLUMN_INDEX>1</COLUMN_INDEX>
+					<COLUMN_DESCRIPTION/>
+					<COLUMN_DESCRIPTION_CHILD>
+						<COLUMN_TEXT>Общее количество проведенных случаев ЭКО, дата окончания которых соответствует 2024 году, принятых к оплате</COLUMN_TEXT>
+						<COLUMN_INDEX>2</COLUMN_INDEX>
+						<COLUMN_DESCRIPTION/>
+					</COLUMN_DESCRIPTION_CHILD>
+					<COLUMN_DESCRIPTION_CHILD>
+						<COLUMN_TEXT>из них количество случаев ЭКО, по которым проведена ЭКМП</COLUMN_TEXT>
+						<COLUMN_INDEX>3</COLUMN_INDEX>
+						<COLUMN_DESCRIPTION/>
+					</COLUMN_DESCRIPTION_CHILD>
+					<COLUMN_DESCRIPTION_CHILD>
+						<COLUMN_TEXT>"Причина выполнения объемов ЭКМП менее 95%"</COLUMN_TEXT>
+						<COLUMN_INDEX>4</COLUMN_INDEX>
+						<COLUMN_DESCRIPTION/>
+					</COLUMN_DESCRIPTION_CHILD>
+				</TemplateColumnDynamic>
+				<TemplateColumnDynamic>
+					<COLUMN_TEXT>за январь - июнь 2025 года		</COLUMN_TEXT>
+					<COLUMN_INDEX>5</COLUMN_INDEX>
+					<COLUMN_DESCRIPTION/>
+					<COLUMN_DESCRIPTION_CHILD>
+						<COLUMN_TEXT>Общее количество проведенных случаев ЭКО, дата окончания которых соответствует периоду январь - июнь 2025 года, принятых к оплате</COLUMN_TEXT>
+						<COLUMN_INDEX>6</COLUMN_INDEX>
+						<COLUMN_DESCRIPTION/>
+					</COLUMN_DESCRIPTION_CHILD>
+					<COLUMN_DESCRIPTION_CHILD>
+						<COLUMN_TEXT>из них количество случаев ЭКО, по которым проведена ЭКМП</COLUMN_TEXT>
+						<COLUMN_INDEX>7</COLUMN_INDEX>
+						<COLUMN_DESCRIPTION/>
+					</COLUMN_DESCRIPTION_CHILD>
+					<COLUMN_DESCRIPTION_CHILD>
+						<COLUMN_TEXT>"Причина выполнения объемов ЭКМП менее 95%"</COLUMN_TEXT>
+						<COLUMN_INDEX>8</COLUMN_INDEX>
+						<COLUMN_DESCRIPTION/>
+					</COLUMN_DESCRIPTION_CHILD>
+				</TemplateColumnDynamic>
+				<TemplateColumnDynamic>
+					<COLUMN_TEXT>за 2025 год</COLUMN_TEXT>
+					<COLUMN_INDEX>9</COLUMN_INDEX>
+					<COLUMN_DESCRIPTION/>
+					<COLUMN_DESCRIPTION_CHILD>
+						<COLUMN_TEXT>Общее количество проведенных случаев ЭКО, дата окончания которых соответствует 2025 году, принятых к оплате</COLUMN_TEXT>
+						<COLUMN_INDEX>10</COLUMN_INDEX>
+						<COLUMN_DESCRIPTION/>
+					</COLUMN_DESCRIPTION_CHILD>
+					<COLUMN_DESCRIPTION_CHILD>
+						<COLUMN_TEXT>из них количество случаев ЭКО, по которым проведена ЭКМП</COLUMN_TEXT>
+						<COLUMN_INDEX>11</COLUMN_INDEX>
+						<COLUMN_DESCRIPTION/>
+					</COLUMN_DESCRIPTION_CHILD>
+					<COLUMN_DESCRIPTION_CHILD>
+						<COLUMN_TEXT>"Причина выполнения объемов ЭКМП менее 95%"</COLUMN_TEXT>
+						<COLUMN_INDEX>12</COLUMN_INDEX>
+						<COLUMN_DESCRIPTION/>
+					</COLUMN_DESCRIPTION_CHILD>
+				</TemplateColumnDynamic>
+			</COLUMNS>
+		</TemplateTableDynamic>
+	</TABLE>
+</TemplateDynamicReport>

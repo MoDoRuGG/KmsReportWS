@@ -141,6 +141,9 @@
     <Compile Include="Collector\ConsolidateReport\ConsolidateProposalCollector.cs" />
     <Compile Include="Collector\ConsolidateReport\ConsolidateVCRReportCollector.cs" />
     <Compile Include="Collector\ConsolidateReport\ConsolidateVSSReportCollector.cs" />
+    <Compile Include="Collector\ConsolidateReport\ConsolidateZpzTable10FilialGrowCollector.cs" />
+    <Compile Include="Collector\ConsolidateReport\ConsolidateZpzTable10FilialCollector.cs" />
+    <Compile Include="Collector\ConsolidateReport\ConsolidateZpzTable10Collector.cs" />
     <Compile Include="Collector\ConsolidateReport\ControlZpz2023SingleCollector.cs" />
     <Compile Include="Collector\ConsolidateReport\ControlZpz2023FullCollector.cs" />
     <Compile Include="Collector\ConsolidateReport\ControlZpz2023Collector.cs" />
@@ -218,6 +221,8 @@
     <Compile Include="Model\ConcolidateReport\ConsolidateQuantityAR.cs" />
     <Compile Include="Model\ConcolidateReport\ConsolidateOpedFinance_3.cs" />
     <Compile Include="Model\ConcolidateReport\ConsolidateVCR.cs" />
+    <Compile Include="Model\ConcolidateReport\ConsolidateZpzTable10FilialGrow.cs" />
+    <Compile Include="Model\ConcolidateReport\ConsolidateZpzTable10Filial.cs" />
     <Compile Include="Model\ConcolidateReport\ConsolidateZpzTable5.cs" />
     <Compile Include="Model\ConcolidateReport\CReportQuantityFilial.cs" />
     <Compile Include="Model\ConcolidateReport\CReportVCRFilial.cs" />
@@ -236,6 +241,7 @@
     <Compile Include="Model\ConcolidateReport\ConsolidateOpedQ.cs" />
     <Compile Include="Model\ConcolidateReport\ConsolidateProposal.cs" />
     <Compile Include="Model\ConcolidateReport\ConsolidateVSS.cs" />
+    <Compile Include="Model\ConcolidateReport\ConsolidateZpzTable10.cs" />
     <Compile Include="Model\ConcolidateReport\CReportZpz2025Single.cs" />
     <Compile Include="Model\ConcolidateReport\CReportZpz2025Full.cs" />
     <Compile Include="Model\ConcolidateReport\CReportZpz2025.cs" />

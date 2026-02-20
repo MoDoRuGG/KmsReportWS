@@ -14,6 +14,7 @@ namespace KmsReportWS.Collector.BaseReport
         private readonly IReportCollector _zpzCollector = new ZpzCollector(ReportType.Zpz);
         private readonly IReportCollector _zpzQCollector = new ZpzCollector(ReportType.ZpzQ);
         private readonly IReportCollector _zpz2025Collector = new Zpz2025Collector(ReportType.Zpz2025);
+        private readonly IReportCollector _zpz10_2025Collector = new Zpz2025Collector(ReportType.Zpz10_2025);
         private readonly IReportCollector _zpzQ2025Collector = new Zpz2025Collector(ReportType.ZpzQ2025);
 
 
@@ -28,6 +29,7 @@ namespace KmsReportWS.Collector.BaseReport
                 ReportType.Zpz2025 => _zpz2025Collector,
                 ReportType.PgQ => _pgQCollector,
                 ReportType.ZpzQ => _zpzQCollector,
+                ReportType.Zpz10_2025 => _zpz10_2025Collector,
                 ReportType.ZpzQ2025 => _zpzQ2025Collector,
             };
     }

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TemplateDynamicReport xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<REPORT_NAME>Проблемные вопросы в регионах</REPORT_NAME>
+	<REPORT_DESCRIPTION/>
+	<REPORT_DATE>2026-01-29T14:42:50</REPORT_DATE>
+	<IsUserRow>true</IsUserRow>
+	<Emails/>
+	<TABLE>
+		<TemplateTableDynamic>
+			<TABLE_NAME>Вопросы</TABLE_NAME>
+			<TABLE_DESCRIPTION>Сведения по проблемным вопросам, связанным с деятельностью СМО в регионе, которые решались на уровне региона, но не были урегулированы и требуют рассмотрения с участием Федерального фонда обязательного медицинского страхования.</TABLE_DESCRIPTION>
+			<ROWS/>
+			<COLUMNS>
+				<TemplateColumnDynamic>
+					<COLUMN_TEXT>Описание проблемных вопросов, связанных с деятельностью СМО (взаимодействие с медицинскими организациями, территориальными фондами обязательного медицинского стрхования, застрахованными лицами) в регионе, которые решались на уровне региона, но не были урегулированы и требуют рассмотрения с участием Федерального фонда обязательного медицинского страхования</COLUMN_TEXT>
+					<COLUMN_INDEX>1</COLUMN_INDEX>
+					<COLUMN_DESCRIPTION/>
+				</TemplateColumnDynamic>
+				<TemplateColumnDynamic>
+					<COLUMN_TEXT>Меры, уже принятые СМО в регионе для решения проблемных вопросов, указанных в предыдущем столбце</COLUMN_TEXT>
+					<COLUMN_INDEX>2</COLUMN_INDEX>
+					<COLUMN_DESCRIPTION>Указать конкретные меры, в том числе протоколы совещаний, номера и даты писем и т.д., а также приложить их в ответном письме в адрес ВСС.</COLUMN_DESCRIPTION>
+				</TemplateColumnDynamic>
+			</COLUMNS>
+		</TemplateTableDynamic>
+	</TABLE>
+</TemplateDynamicReport>
