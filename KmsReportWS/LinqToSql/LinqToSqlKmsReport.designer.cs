@@ -22,7 +22,7 @@ namespace KmsReportWS.LinqToSql
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="kms_report_localDevelop")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="kms_report")]
 	public partial class LinqToSqlKmsReportDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -644,6 +644,12 @@ namespace KmsReportWS.LinqToSql
 		public IQueryable<ZpzWebSite2025Result> ZpzWebSite2025([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Region", DbType="VarChar(6)")] string region, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Yymm", DbType="VarChar(4)")] string yymm)
 		{
 			return this.CreateMethodCallQuery<ZpzWebSite2025Result>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), region, yymm);
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Zpz2025_Table10_SvodFilial", IsComposable=true)]
+		public IQueryable<Zpz2025_Table10_SvodFilialResult> Zpz2025_Table10_SvodFilial([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(4)")] string yymm)
+		{
+			return this.CreateMethodCallQuery<Zpz2025_Table10_SvodFilialResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), yymm);
 		}
 	}
 	
@@ -20422,6 +20428,1868 @@ namespace KmsReportWS.LinqToSql
 				if ((this._col14 != value))
 				{
 					this._col14 = value;
+				}
+			}
+		}
+	}
+	
+	public partial class Zpz2025_Table10_SvodFilialResult
+	{
+		
+		private string _Id_Region;
+		
+		private string _RegionName;
+		
+		private System.Nullable<decimal> @__1;
+		
+		private System.Nullable<decimal> @__11;
+		
+		private System.Nullable<decimal> @__12;
+		
+		private System.Nullable<decimal> @__13;
+		
+		private System.Nullable<decimal> @__14;
+		
+		private System.Nullable<decimal> @__2;
+		
+		private System.Nullable<decimal> @__21;
+		
+		private System.Nullable<decimal> @__22;
+		
+		private System.Nullable<decimal> @__23;
+		
+		private System.Nullable<decimal> @__24;
+		
+		private System.Nullable<decimal> @__3;
+		
+		private System.Nullable<decimal> @__31;
+		
+		private System.Nullable<decimal> @__32;
+		
+		private System.Nullable<decimal> @__33;
+		
+		private System.Nullable<decimal> @__34;
+		
+		private System.Nullable<decimal> @__4;
+		
+		private System.Nullable<decimal> @__41;
+		
+		private System.Nullable<decimal> @__411;
+		
+		private System.Nullable<decimal> @__412;
+		
+		private System.Nullable<decimal> @__413;
+		
+		private System.Nullable<decimal> @__414;
+		
+		private System.Nullable<decimal> @__42;
+		
+		private System.Nullable<decimal> @__421;
+		
+		private System.Nullable<decimal> @__422;
+		
+		private System.Nullable<decimal> @__423;
+		
+		private System.Nullable<decimal> @__424;
+		
+		private System.Nullable<decimal> @__43;
+		
+		private System.Nullable<decimal> @__431;
+		
+		private System.Nullable<decimal> @__432;
+		
+		private System.Nullable<decimal> @__433;
+		
+		private System.Nullable<decimal> @__434;
+		
+		private System.Nullable<decimal> @__44;
+		
+		private System.Nullable<decimal> @__441;
+		
+		private System.Nullable<decimal> @__442;
+		
+		private System.Nullable<decimal> @__443;
+		
+		private System.Nullable<decimal> @__444;
+		
+		private System.Nullable<decimal> @__45;
+		
+		private System.Nullable<decimal> @__451;
+		
+		private System.Nullable<decimal> @__452;
+		
+		private System.Nullable<decimal> @__453;
+		
+		private System.Nullable<decimal> @__454;
+		
+		private System.Nullable<decimal> @__46;
+		
+		private System.Nullable<decimal> @__461;
+		
+		private System.Nullable<decimal> @__462;
+		
+		private System.Nullable<decimal> @__463;
+		
+		private System.Nullable<decimal> @__464;
+		
+		private System.Nullable<decimal> @__5;
+		
+		private System.Nullable<decimal> @__51;
+		
+		private System.Nullable<decimal> @__511;
+		
+		private System.Nullable<decimal> @__512;
+		
+		private System.Nullable<decimal> @__513;
+		
+		private System.Nullable<decimal> @__514;
+		
+		private System.Nullable<decimal> @__52;
+		
+		private System.Nullable<decimal> @__521;
+		
+		private System.Nullable<decimal> @__522;
+		
+		private System.Nullable<decimal> @__523;
+		
+		private System.Nullable<decimal> @__524;
+		
+		private System.Nullable<decimal> @__53;
+		
+		private System.Nullable<decimal> @__531;
+		
+		private System.Nullable<decimal> @__532;
+		
+		private System.Nullable<decimal> @__533;
+		
+		private System.Nullable<decimal> @__534;
+		
+		private System.Nullable<decimal> @__54;
+		
+		private System.Nullable<decimal> @__541;
+		
+		private System.Nullable<decimal> @__542;
+		
+		private System.Nullable<decimal> @__543;
+		
+		private System.Nullable<decimal> @__544;
+		
+		private System.Nullable<decimal> @__55;
+		
+		private System.Nullable<decimal> @__551;
+		
+		private System.Nullable<decimal> @__552;
+		
+		private System.Nullable<decimal> @__553;
+		
+		private System.Nullable<decimal> @__554;
+		
+		private System.Nullable<decimal> @__56;
+		
+		private System.Nullable<decimal> @__561;
+		
+		private System.Nullable<decimal> @__562;
+		
+		private System.Nullable<decimal> @__563;
+		
+		private System.Nullable<decimal> @__564;
+		
+		private System.Nullable<decimal> @__6;
+		
+		private System.Nullable<decimal> @__61;
+		
+		private System.Nullable<decimal> @__62;
+		
+		private System.Nullable<decimal> @__63;
+		
+		private System.Nullable<decimal> @__64;
+		
+		private System.Nullable<decimal> @__65;
+		
+		private System.Nullable<decimal> @__66;
+		
+		private System.Nullable<decimal> @__67;
+		
+		private System.Nullable<decimal> @__7;
+		
+		private System.Nullable<decimal> @__71;
+		
+		private System.Nullable<decimal> @__72;
+		
+		private System.Nullable<decimal> @__73;
+		
+		private System.Nullable<decimal> @__74;
+		
+		private System.Nullable<decimal> @__75;
+		
+		private System.Nullable<decimal> @__76;
+		
+		private System.Nullable<decimal> @__77;
+		
+		private System.Nullable<decimal> @__78;
+		
+		private System.Nullable<decimal> @__8;
+		
+		private System.Nullable<decimal> @__81;
+		
+		private System.Nullable<decimal> @__82;
+		
+		private System.Nullable<decimal> @__83;
+		
+		private System.Nullable<decimal> @__84;
+		
+		private System.Nullable<decimal> @__85;
+		
+		private System.Nullable<decimal> @__86;
+		
+		public Zpz2025_Table10_SvodFilialResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_Region", DbType="VarChar(10)")]
+		public string Id_Region
+		{
+			get
+			{
+				return this._Id_Region;
+			}
+			set
+			{
+				if ((this._Id_Region != value))
+				{
+					this._Id_Region = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RegionName", DbType="VarChar(150) NOT NULL", CanBeNull=false)]
+		public string RegionName
+		{
+			get
+			{
+				return this._RegionName;
+			}
+			set
+			{
+				if ((this._RegionName != value))
+				{
+					this._RegionName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_1]", Storage="__1", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _1
+		{
+			get
+			{
+				return this.@__1;
+			}
+			set
+			{
+				if ((this.@__1 != value))
+				{
+					this.@__1 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_11]", Storage="__11", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _11
+		{
+			get
+			{
+				return this.@__11;
+			}
+			set
+			{
+				if ((this.@__11 != value))
+				{
+					this.@__11 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_12]", Storage="__12", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _12
+		{
+			get
+			{
+				return this.@__12;
+			}
+			set
+			{
+				if ((this.@__12 != value))
+				{
+					this.@__12 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_13]", Storage="__13", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _13
+		{
+			get
+			{
+				return this.@__13;
+			}
+			set
+			{
+				if ((this.@__13 != value))
+				{
+					this.@__13 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_14]", Storage="__14", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _14
+		{
+			get
+			{
+				return this.@__14;
+			}
+			set
+			{
+				if ((this.@__14 != value))
+				{
+					this.@__14 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_2]", Storage="__2", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _2
+		{
+			get
+			{
+				return this.@__2;
+			}
+			set
+			{
+				if ((this.@__2 != value))
+				{
+					this.@__2 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_21]", Storage="__21", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _21
+		{
+			get
+			{
+				return this.@__21;
+			}
+			set
+			{
+				if ((this.@__21 != value))
+				{
+					this.@__21 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_22]", Storage="__22", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _22
+		{
+			get
+			{
+				return this.@__22;
+			}
+			set
+			{
+				if ((this.@__22 != value))
+				{
+					this.@__22 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_23]", Storage="__23", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _23
+		{
+			get
+			{
+				return this.@__23;
+			}
+			set
+			{
+				if ((this.@__23 != value))
+				{
+					this.@__23 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_24]", Storage="__24", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _24
+		{
+			get
+			{
+				return this.@__24;
+			}
+			set
+			{
+				if ((this.@__24 != value))
+				{
+					this.@__24 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_3]", Storage="__3", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _3
+		{
+			get
+			{
+				return this.@__3;
+			}
+			set
+			{
+				if ((this.@__3 != value))
+				{
+					this.@__3 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_31]", Storage="__31", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _31
+		{
+			get
+			{
+				return this.@__31;
+			}
+			set
+			{
+				if ((this.@__31 != value))
+				{
+					this.@__31 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_32]", Storage="__32", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _32
+		{
+			get
+			{
+				return this.@__32;
+			}
+			set
+			{
+				if ((this.@__32 != value))
+				{
+					this.@__32 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_33]", Storage="__33", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _33
+		{
+			get
+			{
+				return this.@__33;
+			}
+			set
+			{
+				if ((this.@__33 != value))
+				{
+					this.@__33 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_34]", Storage="__34", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _34
+		{
+			get
+			{
+				return this.@__34;
+			}
+			set
+			{
+				if ((this.@__34 != value))
+				{
+					this.@__34 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_4]", Storage="__4", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _4
+		{
+			get
+			{
+				return this.@__4;
+			}
+			set
+			{
+				if ((this.@__4 != value))
+				{
+					this.@__4 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_41]", Storage="__41", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _41
+		{
+			get
+			{
+				return this.@__41;
+			}
+			set
+			{
+				if ((this.@__41 != value))
+				{
+					this.@__41 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_411]", Storage="__411", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _411
+		{
+			get
+			{
+				return this.@__411;
+			}
+			set
+			{
+				if ((this.@__411 != value))
+				{
+					this.@__411 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_412]", Storage="__412", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _412
+		{
+			get
+			{
+				return this.@__412;
+			}
+			set
+			{
+				if ((this.@__412 != value))
+				{
+					this.@__412 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_413]", Storage="__413", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _413
+		{
+			get
+			{
+				return this.@__413;
+			}
+			set
+			{
+				if ((this.@__413 != value))
+				{
+					this.@__413 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_414]", Storage="__414", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _414
+		{
+			get
+			{
+				return this.@__414;
+			}
+			set
+			{
+				if ((this.@__414 != value))
+				{
+					this.@__414 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_42]", Storage="__42", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _42
+		{
+			get
+			{
+				return this.@__42;
+			}
+			set
+			{
+				if ((this.@__42 != value))
+				{
+					this.@__42 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_421]", Storage="__421", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _421
+		{
+			get
+			{
+				return this.@__421;
+			}
+			set
+			{
+				if ((this.@__421 != value))
+				{
+					this.@__421 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_422]", Storage="__422", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _422
+		{
+			get
+			{
+				return this.@__422;
+			}
+			set
+			{
+				if ((this.@__422 != value))
+				{
+					this.@__422 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_423]", Storage="__423", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _423
+		{
+			get
+			{
+				return this.@__423;
+			}
+			set
+			{
+				if ((this.@__423 != value))
+				{
+					this.@__423 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_424]", Storage="__424", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _424
+		{
+			get
+			{
+				return this.@__424;
+			}
+			set
+			{
+				if ((this.@__424 != value))
+				{
+					this.@__424 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_43]", Storage="__43", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _43
+		{
+			get
+			{
+				return this.@__43;
+			}
+			set
+			{
+				if ((this.@__43 != value))
+				{
+					this.@__43 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_431]", Storage="__431", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _431
+		{
+			get
+			{
+				return this.@__431;
+			}
+			set
+			{
+				if ((this.@__431 != value))
+				{
+					this.@__431 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_432]", Storage="__432", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _432
+		{
+			get
+			{
+				return this.@__432;
+			}
+			set
+			{
+				if ((this.@__432 != value))
+				{
+					this.@__432 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_433]", Storage="__433", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _433
+		{
+			get
+			{
+				return this.@__433;
+			}
+			set
+			{
+				if ((this.@__433 != value))
+				{
+					this.@__433 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_434]", Storage="__434", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _434
+		{
+			get
+			{
+				return this.@__434;
+			}
+			set
+			{
+				if ((this.@__434 != value))
+				{
+					this.@__434 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_44]", Storage="__44", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _44
+		{
+			get
+			{
+				return this.@__44;
+			}
+			set
+			{
+				if ((this.@__44 != value))
+				{
+					this.@__44 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_441]", Storage="__441", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _441
+		{
+			get
+			{
+				return this.@__441;
+			}
+			set
+			{
+				if ((this.@__441 != value))
+				{
+					this.@__441 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_442]", Storage="__442", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _442
+		{
+			get
+			{
+				return this.@__442;
+			}
+			set
+			{
+				if ((this.@__442 != value))
+				{
+					this.@__442 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_443]", Storage="__443", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _443
+		{
+			get
+			{
+				return this.@__443;
+			}
+			set
+			{
+				if ((this.@__443 != value))
+				{
+					this.@__443 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_444]", Storage="__444", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _444
+		{
+			get
+			{
+				return this.@__444;
+			}
+			set
+			{
+				if ((this.@__444 != value))
+				{
+					this.@__444 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_45]", Storage="__45", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _45
+		{
+			get
+			{
+				return this.@__45;
+			}
+			set
+			{
+				if ((this.@__45 != value))
+				{
+					this.@__45 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_451]", Storage="__451", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _451
+		{
+			get
+			{
+				return this.@__451;
+			}
+			set
+			{
+				if ((this.@__451 != value))
+				{
+					this.@__451 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_452]", Storage="__452", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _452
+		{
+			get
+			{
+				return this.@__452;
+			}
+			set
+			{
+				if ((this.@__452 != value))
+				{
+					this.@__452 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_453]", Storage="__453", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _453
+		{
+			get
+			{
+				return this.@__453;
+			}
+			set
+			{
+				if ((this.@__453 != value))
+				{
+					this.@__453 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_454]", Storage="__454", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _454
+		{
+			get
+			{
+				return this.@__454;
+			}
+			set
+			{
+				if ((this.@__454 != value))
+				{
+					this.@__454 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_46]", Storage="__46", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _46
+		{
+			get
+			{
+				return this.@__46;
+			}
+			set
+			{
+				if ((this.@__46 != value))
+				{
+					this.@__46 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_461]", Storage="__461", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _461
+		{
+			get
+			{
+				return this.@__461;
+			}
+			set
+			{
+				if ((this.@__461 != value))
+				{
+					this.@__461 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_462]", Storage="__462", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _462
+		{
+			get
+			{
+				return this.@__462;
+			}
+			set
+			{
+				if ((this.@__462 != value))
+				{
+					this.@__462 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_463]", Storage="__463", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _463
+		{
+			get
+			{
+				return this.@__463;
+			}
+			set
+			{
+				if ((this.@__463 != value))
+				{
+					this.@__463 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_464]", Storage="__464", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _464
+		{
+			get
+			{
+				return this.@__464;
+			}
+			set
+			{
+				if ((this.@__464 != value))
+				{
+					this.@__464 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_5]", Storage="__5", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _5
+		{
+			get
+			{
+				return this.@__5;
+			}
+			set
+			{
+				if ((this.@__5 != value))
+				{
+					this.@__5 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_51]", Storage="__51", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _51
+		{
+			get
+			{
+				return this.@__51;
+			}
+			set
+			{
+				if ((this.@__51 != value))
+				{
+					this.@__51 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_511]", Storage="__511", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _511
+		{
+			get
+			{
+				return this.@__511;
+			}
+			set
+			{
+				if ((this.@__511 != value))
+				{
+					this.@__511 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_512]", Storage="__512", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _512
+		{
+			get
+			{
+				return this.@__512;
+			}
+			set
+			{
+				if ((this.@__512 != value))
+				{
+					this.@__512 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_513]", Storage="__513", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _513
+		{
+			get
+			{
+				return this.@__513;
+			}
+			set
+			{
+				if ((this.@__513 != value))
+				{
+					this.@__513 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_514]", Storage="__514", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _514
+		{
+			get
+			{
+				return this.@__514;
+			}
+			set
+			{
+				if ((this.@__514 != value))
+				{
+					this.@__514 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_52]", Storage="__52", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _52
+		{
+			get
+			{
+				return this.@__52;
+			}
+			set
+			{
+				if ((this.@__52 != value))
+				{
+					this.@__52 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_521]", Storage="__521", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _521
+		{
+			get
+			{
+				return this.@__521;
+			}
+			set
+			{
+				if ((this.@__521 != value))
+				{
+					this.@__521 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_522]", Storage="__522", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _522
+		{
+			get
+			{
+				return this.@__522;
+			}
+			set
+			{
+				if ((this.@__522 != value))
+				{
+					this.@__522 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_523]", Storage="__523", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _523
+		{
+			get
+			{
+				return this.@__523;
+			}
+			set
+			{
+				if ((this.@__523 != value))
+				{
+					this.@__523 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_524]", Storage="__524", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _524
+		{
+			get
+			{
+				return this.@__524;
+			}
+			set
+			{
+				if ((this.@__524 != value))
+				{
+					this.@__524 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_53]", Storage="__53", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _53
+		{
+			get
+			{
+				return this.@__53;
+			}
+			set
+			{
+				if ((this.@__53 != value))
+				{
+					this.@__53 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_531]", Storage="__531", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _531
+		{
+			get
+			{
+				return this.@__531;
+			}
+			set
+			{
+				if ((this.@__531 != value))
+				{
+					this.@__531 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_532]", Storage="__532", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _532
+		{
+			get
+			{
+				return this.@__532;
+			}
+			set
+			{
+				if ((this.@__532 != value))
+				{
+					this.@__532 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_533]", Storage="__533", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _533
+		{
+			get
+			{
+				return this.@__533;
+			}
+			set
+			{
+				if ((this.@__533 != value))
+				{
+					this.@__533 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_534]", Storage="__534", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _534
+		{
+			get
+			{
+				return this.@__534;
+			}
+			set
+			{
+				if ((this.@__534 != value))
+				{
+					this.@__534 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_54]", Storage="__54", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _54
+		{
+			get
+			{
+				return this.@__54;
+			}
+			set
+			{
+				if ((this.@__54 != value))
+				{
+					this.@__54 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_541]", Storage="__541", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _541
+		{
+			get
+			{
+				return this.@__541;
+			}
+			set
+			{
+				if ((this.@__541 != value))
+				{
+					this.@__541 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_542]", Storage="__542", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _542
+		{
+			get
+			{
+				return this.@__542;
+			}
+			set
+			{
+				if ((this.@__542 != value))
+				{
+					this.@__542 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_543]", Storage="__543", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _543
+		{
+			get
+			{
+				return this.@__543;
+			}
+			set
+			{
+				if ((this.@__543 != value))
+				{
+					this.@__543 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_544]", Storage="__544", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _544
+		{
+			get
+			{
+				return this.@__544;
+			}
+			set
+			{
+				if ((this.@__544 != value))
+				{
+					this.@__544 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_55]", Storage="__55", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _55
+		{
+			get
+			{
+				return this.@__55;
+			}
+			set
+			{
+				if ((this.@__55 != value))
+				{
+					this.@__55 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_551]", Storage="__551", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _551
+		{
+			get
+			{
+				return this.@__551;
+			}
+			set
+			{
+				if ((this.@__551 != value))
+				{
+					this.@__551 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_552]", Storage="__552", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _552
+		{
+			get
+			{
+				return this.@__552;
+			}
+			set
+			{
+				if ((this.@__552 != value))
+				{
+					this.@__552 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_553]", Storage="__553", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _553
+		{
+			get
+			{
+				return this.@__553;
+			}
+			set
+			{
+				if ((this.@__553 != value))
+				{
+					this.@__553 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_554]", Storage="__554", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _554
+		{
+			get
+			{
+				return this.@__554;
+			}
+			set
+			{
+				if ((this.@__554 != value))
+				{
+					this.@__554 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_56]", Storage="__56", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _56
+		{
+			get
+			{
+				return this.@__56;
+			}
+			set
+			{
+				if ((this.@__56 != value))
+				{
+					this.@__56 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_561]", Storage="__561", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _561
+		{
+			get
+			{
+				return this.@__561;
+			}
+			set
+			{
+				if ((this.@__561 != value))
+				{
+					this.@__561 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_562]", Storage="__562", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _562
+		{
+			get
+			{
+				return this.@__562;
+			}
+			set
+			{
+				if ((this.@__562 != value))
+				{
+					this.@__562 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_563]", Storage="__563", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _563
+		{
+			get
+			{
+				return this.@__563;
+			}
+			set
+			{
+				if ((this.@__563 != value))
+				{
+					this.@__563 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_564]", Storage="__564", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _564
+		{
+			get
+			{
+				return this.@__564;
+			}
+			set
+			{
+				if ((this.@__564 != value))
+				{
+					this.@__564 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_6]", Storage="__6", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _6
+		{
+			get
+			{
+				return this.@__6;
+			}
+			set
+			{
+				if ((this.@__6 != value))
+				{
+					this.@__6 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_61]", Storage="__61", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _61
+		{
+			get
+			{
+				return this.@__61;
+			}
+			set
+			{
+				if ((this.@__61 != value))
+				{
+					this.@__61 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_62]", Storage="__62", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _62
+		{
+			get
+			{
+				return this.@__62;
+			}
+			set
+			{
+				if ((this.@__62 != value))
+				{
+					this.@__62 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_63]", Storage="__63", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _63
+		{
+			get
+			{
+				return this.@__63;
+			}
+			set
+			{
+				if ((this.@__63 != value))
+				{
+					this.@__63 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_64]", Storage="__64", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _64
+		{
+			get
+			{
+				return this.@__64;
+			}
+			set
+			{
+				if ((this.@__64 != value))
+				{
+					this.@__64 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_65]", Storage="__65", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _65
+		{
+			get
+			{
+				return this.@__65;
+			}
+			set
+			{
+				if ((this.@__65 != value))
+				{
+					this.@__65 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_66]", Storage="__66", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _66
+		{
+			get
+			{
+				return this.@__66;
+			}
+			set
+			{
+				if ((this.@__66 != value))
+				{
+					this.@__66 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_67]", Storage="__67", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _67
+		{
+			get
+			{
+				return this.@__67;
+			}
+			set
+			{
+				if ((this.@__67 != value))
+				{
+					this.@__67 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_7]", Storage="__7", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _7
+		{
+			get
+			{
+				return this.@__7;
+			}
+			set
+			{
+				if ((this.@__7 != value))
+				{
+					this.@__7 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_71]", Storage="__71", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _71
+		{
+			get
+			{
+				return this.@__71;
+			}
+			set
+			{
+				if ((this.@__71 != value))
+				{
+					this.@__71 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_72]", Storage="__72", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _72
+		{
+			get
+			{
+				return this.@__72;
+			}
+			set
+			{
+				if ((this.@__72 != value))
+				{
+					this.@__72 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_73]", Storage="__73", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _73
+		{
+			get
+			{
+				return this.@__73;
+			}
+			set
+			{
+				if ((this.@__73 != value))
+				{
+					this.@__73 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_74]", Storage="__74", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _74
+		{
+			get
+			{
+				return this.@__74;
+			}
+			set
+			{
+				if ((this.@__74 != value))
+				{
+					this.@__74 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_75]", Storage="__75", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _75
+		{
+			get
+			{
+				return this.@__75;
+			}
+			set
+			{
+				if ((this.@__75 != value))
+				{
+					this.@__75 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_76]", Storage="__76", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _76
+		{
+			get
+			{
+				return this.@__76;
+			}
+			set
+			{
+				if ((this.@__76 != value))
+				{
+					this.@__76 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_77]", Storage="__77", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _77
+		{
+			get
+			{
+				return this.@__77;
+			}
+			set
+			{
+				if ((this.@__77 != value))
+				{
+					this.@__77 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_78]", Storage="__78", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _78
+		{
+			get
+			{
+				return this.@__78;
+			}
+			set
+			{
+				if ((this.@__78 != value))
+				{
+					this.@__78 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_8]", Storage="__8", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _8
+		{
+			get
+			{
+				return this.@__8;
+			}
+			set
+			{
+				if ((this.@__8 != value))
+				{
+					this.@__8 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_81]", Storage="__81", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _81
+		{
+			get
+			{
+				return this.@__81;
+			}
+			set
+			{
+				if ((this.@__81 != value))
+				{
+					this.@__81 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_82]", Storage="__82", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _82
+		{
+			get
+			{
+				return this.@__82;
+			}
+			set
+			{
+				if ((this.@__82 != value))
+				{
+					this.@__82 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_83]", Storage="__83", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _83
+		{
+			get
+			{
+				return this.@__83;
+			}
+			set
+			{
+				if ((this.@__83 != value))
+				{
+					this.@__83 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_84]", Storage="__84", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _84
+		{
+			get
+			{
+				return this.@__84;
+			}
+			set
+			{
+				if ((this.@__84 != value))
+				{
+					this.@__84 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_85]", Storage="__85", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _85
+		{
+			get
+			{
+				return this.@__85;
+			}
+			set
+			{
+				if ((this.@__85 != value))
+				{
+					this.@__85 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[_86]", Storage="__86", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> _86
+		{
+			get
+			{
+				return this.@__86;
+			}
+			set
+			{
+				if ((this.@__86 != value))
+				{
+					this.@__86 = value;
 				}
 			}
 		}

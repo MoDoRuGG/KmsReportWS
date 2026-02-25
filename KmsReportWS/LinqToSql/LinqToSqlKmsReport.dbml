@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="kms_report_localDevelop" Class="LinqToSqlKmsReportDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="kms_report" Class="LinqToSqlKmsReportDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Table Name="dbo.Comment" Member="Comment">
     <Type Name="Comment">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -31,7 +31,7 @@
       <Column Name="Email" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
       <Column Name="Region" Member="RegionId" Storage="_Region" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
       <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Member="Direction" Type="System.String" CanBeNull="false" />
+      <Column Name="Direction" Type="System.String" CanBeNull="false" />
       <Association Name="Employee_Comment" Member="Comment" ThisKey="Id" OtherKey="Id_Employee" Type="Comment" />
       <Association Name="Employee_Report_Dynamic" Member="Report_Dynamic" ThisKey="Id" OtherKey="UserCreated" Type="Report_Dynamic" />
       <Association Name="Employee_Responsible_Employee" Member="Responsible_Employee" ThisKey="Id" OtherKey="Id_Employee" Type="Responsible_Employee" />
@@ -1006,6 +1006,114 @@
       <Column Name="col12" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
       <Column Name="col13" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
       <Column Name="col14" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Zpz2025_Table10_SvodFilial" Method="Zpz2025_Table10_SvodFilial" IsComposable="true">
+    <Parameter Name="yymm" Type="System.String" DbType="VarChar(4)" />
+    <ElementType Name="Zpz2025_Table10_SvodFilialResult">
+      <Column Name="Id_Region" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="RegionName" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="[_1]" Member="_1" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_11]" Member="_11" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_12]" Member="_12" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_13]" Member="_13" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_14]" Member="_14" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_2]" Member="_2" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_21]" Member="_21" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_22]" Member="_22" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_23]" Member="_23" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_24]" Member="_24" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_3]" Member="_3" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_31]" Member="_31" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_32]" Member="_32" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_33]" Member="_33" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_34]" Member="_34" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_4]" Member="_4" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_41]" Member="_41" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_411]" Member="_411" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_412]" Member="_412" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_413]" Member="_413" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_414]" Member="_414" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_42]" Member="_42" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_421]" Member="_421" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_422]" Member="_422" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_423]" Member="_423" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_424]" Member="_424" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_43]" Member="_43" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_431]" Member="_431" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_432]" Member="_432" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_433]" Member="_433" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_434]" Member="_434" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_44]" Member="_44" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_441]" Member="_441" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_442]" Member="_442" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_443]" Member="_443" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_444]" Member="_444" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_45]" Member="_45" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_451]" Member="_451" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_452]" Member="_452" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_453]" Member="_453" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_454]" Member="_454" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_46]" Member="_46" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_461]" Member="_461" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_462]" Member="_462" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_463]" Member="_463" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_464]" Member="_464" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_5]" Member="_5" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_51]" Member="_51" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_511]" Member="_511" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_512]" Member="_512" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_513]" Member="_513" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_514]" Member="_514" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_52]" Member="_52" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_521]" Member="_521" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_522]" Member="_522" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_523]" Member="_523" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_524]" Member="_524" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_53]" Member="_53" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_531]" Member="_531" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_532]" Member="_532" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_533]" Member="_533" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_534]" Member="_534" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_54]" Member="_54" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_541]" Member="_541" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_542]" Member="_542" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_543]" Member="_543" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_544]" Member="_544" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_55]" Member="_55" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_551]" Member="_551" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_552]" Member="_552" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_553]" Member="_553" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_554]" Member="_554" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_56]" Member="_56" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_561]" Member="_561" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_562]" Member="_562" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_563]" Member="_563" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_564]" Member="_564" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_6]" Member="_6" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_61]" Member="_61" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_62]" Member="_62" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_63]" Member="_63" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_64]" Member="_64" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_65]" Member="_65" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_66]" Member="_66" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_67]" Member="_67" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_7]" Member="_7" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_71]" Member="_71" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_72]" Member="_72" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_73]" Member="_73" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_74]" Member="_74" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_75]" Member="_75" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_76]" Member="_76" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_77]" Member="_77" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_78]" Member="_78" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_8]" Member="_8" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_81]" Member="_81" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_82]" Member="_82" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_83]" Member="_83" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_84]" Member="_84" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_85]" Member="_85" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="[_86]" Member="_86" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
     </ElementType>
   </Function>
 </Database>
