@@ -221,7 +221,6 @@
     <Compile Include="Model\ConcolidateReport\ConsolidateQuantityAR.cs" />
     <Compile Include="Model\ConcolidateReport\ConsolidateOpedFinance_3.cs" />
     <Compile Include="Model\ConcolidateReport\ConsolidateVCR.cs" />
-    <Compile Include="Model\ConcolidateReport\ConsolidateZpzTable10FilialGrow.cs" />
     <Compile Include="Model\ConcolidateReport\ConsolidateZpzTable10Filial.cs" />
     <Compile Include="Model\ConcolidateReport\ConsolidateZpzTable5.cs" />
     <Compile Include="Model\ConcolidateReport\CReportQuantityFilial.cs" />

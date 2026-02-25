@@ -722,7 +722,7 @@ namespace KmsReportWS
         }
 
         [WebMethod]
-        public List<ConsolidateZpzTable10FilialGrow> CreateConsolidateZpzTable10FilialGrow(string yymm)
+        public List<ConsolidateZpzTable10Filial> CreateConsolidateZpzTable10FilialGrow(string yymm)
         {
             var consolidate = new ConsolidateZpzTable10FilialGrowCollector();
             return consolidate.Collect(yymm);
