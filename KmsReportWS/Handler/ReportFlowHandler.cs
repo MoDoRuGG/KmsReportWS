@@ -154,7 +154,7 @@ namespace KmsReportWS.Handler
 
         }
 
-        public void SaveScanToDb(int idReport, int idUser, string uri, int num)
+        public void SaveScanToDb(int idReport, int idUser, string url, int num)
         {
             var db = new LinqToSqlKmsReportDataContext(ConnStr);
             if (idReport <= 0)
@@ -183,52 +183,52 @@ namespace KmsReportWS.Handler
 
                 if (num == 1)
                 {
-                    flow.Scan = uri;
+                    flow.Scan = url;
                 }
 
                 if (num == 2)
                 {
-                    flow.Scan2 = uri;
+                    flow.Scan2 = url;
                 }
 
                 if (num == 3)
                 {
-                    flow.Scan3 = uri;
+                    flow.Scan3 = url;
                 }
 
                 if (num == 4)
                 {
-                    flow.Scan4 = uri;
+                    flow.Scan4 = url;
                 }
 
                 if (num == 5)
                 {
-                    flow.Scan5 = uri;
+                    flow.Scan5 = url;
                 }
 
                 if (num == 6)
                 {
-                    flow.Scan6 = uri;
+                    flow.Scan6 = url;
                 }
 
                 if (num == 7)
                 {
-                    flow.Scan7 = uri;
+                    flow.Scan7 = url;
                 }
 
                 if (num == 8)
                 {
-                    flow.Scan8 = uri;
+                    flow.Scan8 = url;
                 }
 
                 if (num == 9)
                 {
-                    flow.Scan9 = uri;
+                    flow.Scan9 = url;
                 }
 
                 if (num == 10)
                 {
-                    flow.Scan10 = uri;
+                    flow.Scan10 = url;
                 }
 
                 flow.Status = ReportStatus.Scan.GetDescriptionSt();
@@ -268,7 +268,7 @@ namespace KmsReportWS.Handler
             }
         }
 
-        public void SaveScanToDb3(int idReport, int idUser, string uri, int num)
+        public void SaveScanToDb3(int idReport, int idUser, string url, int num)
         {
             var db = new LinqToSqlKmsReportDataContext(ConnStr);
             if (idReport <= 0)
@@ -284,52 +284,52 @@ namespace KmsReportWS.Handler
                 {
                     case 1:
                     {
-                        flow.Scan = uri;
+                        flow.Scan = url;
                         break;
                     }
                     case 2:
                     {
-                        flow.Scan2 = uri;
+                        flow.Scan2 = url;
                         break;
                     }
                     case 3:
                     {
-                        flow.Scan3 = uri;
+                        flow.Scan3 = url;
                         break;
                     }
                     case 4:
                     {
-                        flow.Scan4 = uri;
+                        flow.Scan4 = url;
                         break;
                     }
                     case 5:
                     {
-                        flow.Scan5 = uri;
+                        flow.Scan5 = url;
                         break;
                     }
                     case 6:
                     {
-                        flow.Scan6 = uri;
+                        flow.Scan6 = url;
                         break;
                     }
                     case 7:
                     {
-                        flow.Scan7 = uri;
+                        flow.Scan7 = url;
                         break;
                     }
                     case 8:
                     {
-                        flow.Scan8 = uri;
+                        flow.Scan8 = url;
                         break;
                     }
                     case 9:
                     {
-                        flow.Scan9 = uri;
+                        flow.Scan9 = url;
                         break;
                     }
                     case 10:
                     {
-                        flow.Scan10 = uri;
+                        flow.Scan10 = url;
                         break;
                     }
                 }

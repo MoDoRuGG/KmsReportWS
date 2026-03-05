@@ -141,6 +141,7 @@
     <Compile Include="Collector\ConsolidateReport\ConsolidateProposalCollector.cs" />
     <Compile Include="Collector\ConsolidateReport\ConsolidateVCRReportCollector.cs" />
     <Compile Include="Collector\ConsolidateReport\ConsolidateVSSReportCollector.cs" />
+    <Compile Include="Collector\ConsolidateReport\ConsolidateTable5NewbornCollector.cs" />
     <Compile Include="Collector\ConsolidateReport\ConsolidateZpzTable10FilialGrowCollector.cs" />
     <Compile Include="Collector\ConsolidateReport\ConsolidateZpzTable10FilialCollector.cs" />
     <Compile Include="Collector\ConsolidateReport\ConsolidateZpzTable10Collector.cs" />
@@ -220,7 +221,10 @@
     <Compile Include="Model\ConcolidateReport\ConsolidateQuantityFP.cs" />
     <Compile Include="Model\ConcolidateReport\ConsolidateQuantityAR.cs" />
     <Compile Include="Model\ConcolidateReport\ConsolidateOpedFinance_3.cs" />
+    <Compile Include="Model\ConcolidateReport\ConsolidateTable7OldPolise.cs" />
+    <Compile Include="Model\ConcolidateReport\ConsolidateTable6Students.cs" />
     <Compile Include="Model\ConcolidateReport\ConsolidateVCR.cs" />
+    <Compile Include="Model\ConcolidateReport\ConsolidateTable5Newborn.cs" />
     <Compile Include="Model\ConcolidateReport\ConsolidateZpzTable10Filial.cs" />
     <Compile Include="Model\ConcolidateReport\ConsolidateZpzTable5.cs" />
     <Compile Include="Model\ConcolidateReport\CReportQuantityFilial.cs" />
