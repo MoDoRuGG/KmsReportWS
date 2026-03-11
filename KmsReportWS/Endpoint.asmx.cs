@@ -160,6 +160,27 @@ namespace KmsReportWS
         }
 
         [WebMethod]
+        public List<ConsolidateTable5Newborn> ConsolidateTable5NewbornCollect(string yymm)
+        {
+            return new ConsolidateTable5NewbornCollector().Collect(yymm);
+
+        }
+
+        [WebMethod]
+        public List<ConsolidateTable6Students> ConsolidateTable6StudentsCollect(string yymm)
+        {
+            return new ConsolidateTable6StudentsCollector().Collect(yymm);
+
+        }
+
+        [WebMethod]
+        public List<ConsolidateTable7OldPolis> ConsolidateTable7OldPolisCollect(string yymm)
+        {
+            return new ConsolidateTable7OldPolisCollector().Collect(yymm);
+
+        }
+
+        [WebMethod]
         public List<FFOMSLethalEKMP> CollectFFOMSLethalEKMP(string yymm)
         {
             return new FFOMSLethalEKMPCollector().CreateFFOMSLethalEKMP(yymm);

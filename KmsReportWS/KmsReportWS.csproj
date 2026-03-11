@@ -122,6 +122,8 @@
     <Compile Include="Collector\ConsolidateReport\ConsolidateQuantityFPCollector.cs" />
     <Compile Include="Collector\ConsolidateReport\ConsolidateQuantityARCollector.cs" />
     <Compile Include="Collector\ConsolidateReport\ConsolidateQuantityFilialCollector.cs" />
+    <Compile Include="Collector\ConsolidateReport\ConsolidateTable7OldPolisCollector.cs" />
+    <Compile Include="Collector\ConsolidateReport\ConsolidateTable6StudentsCollector.cs" />
     <Compile Include="Collector\ConsolidateReport\ConsolidateVCRReportFilialCollector.cs" />
     <Compile Include="Collector\ConsolidateReport\ConsolidateLetal2023Collector.cs" />
     <Compile Include="Collector\ConsolidateReport\ConsolidateOpedFinance_3Collector.cs" />
