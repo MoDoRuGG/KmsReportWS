@@ -157,11 +157,11 @@ namespace KmsReportWS.Handler
         public void SaveScanToDb(int idReport, int idUser, string url, int num)
         {
             var db = new LinqToSqlKmsReportDataContext(ConnStr);
-            if (idReport <= 0)
-            {
-                Log.Error($"Error saving scan: idReport = {idReport}, idUser = {idUser}");
-                throw new Exception($"IdReport must be more than 0. idReport = {idReport}");
-            }
+            //if (idReport <= 0)
+            //{
+            //    Log.Error($"Error saving scan: idReport = {idReport}, idUser = {idUser}");
+            //    throw new Exception($"IdReport must be more than 0. idReport = {idReport}");
+            //}
 
             try
             {
@@ -246,11 +246,11 @@ namespace KmsReportWS.Handler
         public void SaveScanToDb2(int idReport, int idUser, string uri)
         {
             var db = new LinqToSqlKmsReportDataContext(ConnStr);
-            if (idReport <= 0)
-            {
-                Log.Error($"Error saving scan: idReport = {idReport}, idUser = {idUser}");
-                throw new Exception($"IdReport must be more than 0. idReport = {idReport}");
-            }
+            //if (idReport <= 0)
+            //{
+            //    Log.Error($"Error saving scan: idReport = {idReport}, idUser = {idUser}");
+            //    throw new Exception($"IdReport must be more than 0. idReport = {idReport}");
+            //}
 
             try
             {
@@ -271,11 +271,11 @@ namespace KmsReportWS.Handler
         public void SaveScanToDb3(int idReport, int idUser, string url, int num)
         {
             var db = new LinqToSqlKmsReportDataContext(ConnStr);
-            if (idReport <= 0)
-            {
-                Log.Error($"Error saving scan: idReport = {idReport}, idUser = {idUser}");
-                throw new Exception($"IdReport must be more than 0. idReport = {idReport}");
-            }
+            //if (idReport <= 0)
+            //{
+            //    Log.Error($"Error saving scan: idReport = {idReport}, idUser = {idUser}");
+            //    throw new Exception($"IdReport must be more than 0. idReport = {idReport}");
+            //}
 
             try
             {
@@ -348,11 +348,11 @@ namespace KmsReportWS.Handler
 
         public void ChangeStatus(int idReport, int idUser, ReportStatus status)
         {
-            if (idReport <= 0)
-            {
-                Log.Error($"Error changing status: idReport = {idReport}, idUser = {idUser}");
-                throw new Exception($"IdReport must be more than 0. idReport = {idReport}");
-            }
+            //if (idReport <= 0)
+            //{
+            //    Log.Error($"Error changing status: idReport = {idReport}, idUser = {idUser}");
+            //    throw new Exception($"IdReport must be more than 0. idReport = {idReport}");
+            //}
 
             try
             {
@@ -388,11 +388,11 @@ namespace KmsReportWS.Handler
 
         public void ChangeDataSource(int idReport, int idUser, DataSource datasource)
         {
-            if (idReport <= 0)
-            {
-                Log.Error($"Error changing datasource: idReport = {idReport}, idUser = {idUser}");
-                throw new Exception($"IdReport must be more than 0. idReport = {idReport}");
-            }
+            //if (idReport <= 0)
+            //{
+            //    Log.Error($"Error changing datasource: idReport = {idReport}, idUser = {idUser}");
+            //    throw new Exception($"IdReport must be more than 0. idReport = {idReport}");
+            //}
 
             try
             {
