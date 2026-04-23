@@ -28,14 +28,7 @@ namespace KmsReportWS.Collector.ConsolidateReport
                         Ds = x.Sum(g => g.table.Ds ?? 0),
                         Smp = x.Sum(g => g.table.Smp ?? 0),
                         Notes = x.Key.Notes,
-                        NotesGoodReason = x.Key.NotesGoodReason,
-                        //Data = new ReportOpedUDto
-                        //{
-                        //    App = x.Sum(g => g.table.App ?? 0),
-                        //    Ks = x.Sum(g => g.table.Ks ?? 0),
-                        //    Ds = x.Sum(g => g.table.Ds ?? 0),
-                        //    Smp = x.Sum(g => g.table.Smp ?? 0),
-                        //}
+                        NotesGoodReason = x.Key.NotesGoodReason
 
                     }).ToList();
         }

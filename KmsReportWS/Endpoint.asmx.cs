@@ -160,6 +160,13 @@ namespace KmsReportWS
         }
 
         [WebMethod]
+        public List<ConsolidateOpedUnplQ> ConsolidateOpedUnplQCollect(string yymm)
+        {
+            return new ConsolidateOpedUnplQCollector().Collect(yymm);
+
+        }
+
+        [WebMethod]
         public List<ConsolidateTable5Newborn> ConsolidateTable5NewbornCollect(string yymm)
         {
             return new ConsolidateTable5NewbornCollector().Collect(yymm);
@@ -224,6 +231,7 @@ namespace KmsReportWS
             return handler.GetYearOpedUData(yymm, filiall);
 
         }
+
 
         [WebMethod]
         public ReportInfrormationResponseDataDto GetIRYearData(string yymm, string theme, string fillial)
@@ -392,7 +400,7 @@ namespace KmsReportWS
         }
 
         [WebMethod]
-        public void WebReportOpedUnplanned(ReportOpedU report)
+        public void WebReportOpedUnplanned(ReportOpedUnplanned report)
         {
 
         }
@@ -463,6 +471,12 @@ namespace KmsReportWS
 
         [WebMethod]
         public void WebReportCadre(ReportCadre report)
+        {
+
+        }
+
+        [WebMethod]
+        public void WebReport140n(Report140n report)
         {
 
         }
@@ -778,6 +792,13 @@ namespace KmsReportWS
         }
 
         [WebMethod]
+        public List<CReportOpedUnplanned2026> CreateReportOpedUnplanned2026(string yymm)
+        {
+            var consolidate = new ConsolidateOpedUnplanned2026Collector();
+            return consolidate.CreateReportOpedUnplanned2026(yymm);
+        }
+
+        [WebMethod]
         public List<CReportQuantityFilial> CreateReportConsQuantityFilial(string yymm)
         {
             var consolidate = new ConsolidateQuantityFilialCollector();
@@ -796,6 +817,20 @@ namespace KmsReportWS
         {
             var consolidate = new ConsolidateCadreCollector();
             return consolidate.CreateReportCadreTable2(yymm);
+        }
+
+        [WebMethod]
+        public List<Cons140nTable1> CreateCons140nTable1(string yymm)
+        {
+            var consolidate = new Consolidate140nCollector();
+            return consolidate.CreateCons140nTable1(yymm);
+        }
+
+        [WebMethod]
+        public List<Cons140nTable2> CreateCons140nTable2(string yymm)
+        {
+            var consolidate = new Consolidate140nCollector();
+            return consolidate.CreateCons140nTable2(yymm);
         }
 
         [WebMethod]

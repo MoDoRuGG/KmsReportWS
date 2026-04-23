@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Linq;
 using System.Linq;
 using System.Web;
 using KmsReportWS.LinqToSql;
 using KmsReportWS.Model.Report;
+using KmsReportWS.Properties;
 using NLog;
 
 namespace KmsReportWS.Handler
@@ -31,7 +33,7 @@ namespace KmsReportWS.Handler
         }
         protected override void CreateNewReport(LinqToSqlKmsReportDataContext db, Report_Flow flow, AbstractReport inReport)
         {
-            var report = inReport as ReportOpedU ??
+            var report = inReport as ReportOpedUnplanned ??
                            throw new Exception("Error saving new report, because getting empty report");
 
             var themeData = new Report_Data
@@ -47,19 +49,19 @@ namespace KmsReportWS.Handler
 
             db.SubmitChanges();
 
-            db.Report_OpedU.InsertAllOnSubmit(MapReportFromPersist(report, themeData.Id));
+            db.Report_OpedUnplanned.InsertAllOnSubmit(MapReportFromPersist(report, themeData.Id));
             db.SubmitChanges();
 
 
         }
 
-        protected List<Report_OpedU> MapReportFromPersist(ReportOpedU rep, int idReportData)
+        protected List<Report_OpedUnplanned> MapReportFromPersist(ReportOpedUnplanned rep, int idReportData)
         {
-            var result = new List<Report_OpedU>();
+            var result = new List<Report_OpedUnplanned>();
 
             foreach (var row in rep.ReportDataList)
             {
-                result.Add(new Report_OpedU
+                result.Add(new Report_OpedUnplanned
                 {
                     Id_Report_Data = idReportData,
                     RowNum = row.RowNum,
@@ -67,9 +69,7 @@ namespace KmsReportWS.Handler
                     Ks = row.Ks,
                     Ds = row.Ds,
                     Smp = row.Smp,
-                    Notes = row.Notes,
-                    NotesGoodReason = row.NotesGoodReason
-
+                    Notes = row.Notes
                 });
 
             }
@@ -78,9 +78,9 @@ namespace KmsReportWS.Handler
 
         }
 
-        private Report_OpedU MapReportFromPersist(ReportOpedUDto data, int idReportData)
+        private Report_OpedUnplanned MapReportFromPersist(ReportOpedUnplannedDto data, int idReportData)
         {
-            return new Report_OpedU
+            return new Report_OpedUnplanned
             {
                 Id_Report_Data = idReportData,
                 RowNum = data.RowNum,
@@ -88,28 +88,26 @@ namespace KmsReportWS.Handler
                 Ks = data.Ks,
                 Ds = data.Ds,
                 Smp = data.Smp,
-                Notes = data.Notes,
-                NotesGoodReason = data.NotesGoodReason
+                Notes = data.Notes
             };
         }
 
 
-        private ReportOpedUDto MapReportFromPersist(Report_OpedU data)
+        private ReportOpedUnplannedDto MapReportFromPersist(Report_OpedUnplanned data)
         {
-            return new ReportOpedUDto
+            return new ReportOpedUnplannedDto
             {
                 RowNum = data.RowNum,
                 App = data.App,
                 Ks = data.Ks,
                 Ds = data.Ds,
                 Smp = data.Smp,
-                Notes = data.Notes,
-                NotesGoodReason = data.NotesGoodReason
+                Notes = data.Notes
             };
         }
         protected override void UpdateReport(LinqToSqlKmsReportDataContext db, AbstractReport inReport)
         {
-            var report = inReport as ReportOpedU ??
+            var report = inReport as ReportOpedUnplanned ??
                              throw new Exception("Error update report, because getting empty report");
 
             var idTheme = db.Report_Data
@@ -121,39 +119,63 @@ namespace KmsReportWS.Handler
                 return;
             }
 
-            foreach (var row in report.ReportDataList)
+            // Создаём НОВЫЙ контекст специально для обновления, чтобы избежать конфликтов отслеживания
+            using (var updateDb = new LinqToSqlKmsReportDataContext(Settings.Default.ConnStr))
             {
-                var oped = db.Report_OpedU.SingleOrDefault(x => x.RowNum == row.RowNum && x.Id_Report_Data == idTheme);
-                if (oped != null)
-                {
-                    oped.App = row.App;
-                    oped.Ks = row.Ks;
-                    oped.Ds = row.Ds;
-                    oped.Smp = row.Smp;
-                    oped.Notes = row.Notes;
-                    oped.NotesGoodReason = row.NotesGoodReason;
-                }
-                else
-                {
-                    var opedIns = MapReportFromPersist(row, idTheme);
-                    db.Report_OpedU.InsertOnSubmit(opedIns);
+                updateDb.DeferredLoadingEnabled = false;
 
+                var existingData = updateDb.Report_OpedUnplanned
+                    .Where(x => x.Id_Report_Data == idTheme)
+                    .ToList();
+
+                var clientRowNums = report.ReportDataList.Select(x => x.RowNum).ToHashSet();
+
+                foreach (var row in report.ReportDataList)
+                {
+                    var existing = existingData.FirstOrDefault(x => x.RowNum == row.RowNum);
+                    if (existing != null)
+                    {
+                        existing.App = row.App;
+                        existing.Ks = row.Ks;
+                        existing.Ds = row.Ds;
+                        existing.Smp = row.Smp;
+                        existing.Notes = row.Notes;
+                    }
+                    else
+                    {
+                        var newRow = new Report_OpedUnplanned
+                        {
+                            Id_Report_Data = idTheme,
+                            RowNum = row.RowNum,
+                            App = row.App,
+                            Ks = row.Ks,
+                            Ds = row.Ds,
+                            Smp = row.Smp,
+                            Notes = row.Notes,
+
+                        };
+                        updateDb.Report_OpedUnplanned.InsertOnSubmit(newRow);
+                    }
                 }
+
+                var toDelete = existingData.Where(x => !clientRowNums.Contains(x.RowNum)).ToList();
+                updateDb.Report_OpedUnplanned.DeleteAllOnSubmit(toDelete);
+
+                    updateDb.SubmitChanges();
+             
             }
-
-            db.SubmitChanges();
         }
 
 
         protected override AbstractReport MapReportFromPersist(Report_Flow rep)
         {
-            var outReport = new ReportOpedU { ReportDataList = new List<ReportOpedUDto>() };
+            var outReport = new ReportOpedUnplanned { ReportDataList = new List<ReportOpedUnplannedDto>() };
             MapFromReportFlow(rep, outReport);
 
 
             foreach (var themeData in rep.Report_Data)
             {
-                var dataList = themeData.Report_OpedU.Select(MapReportFromPersist).ToList();
+                var dataList = themeData.Report_OpedUnplanned.Select(MapReportFromPersist).ToList();
                 outReport.ReportDataList.AddRange(dataList);
             }
 

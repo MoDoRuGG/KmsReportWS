@@ -48,5 +48,6 @@ namespace KmsReportWS.Model.Report
         [Description("T5Newborn")] T5Newborn,
         [Description("T6Students")] T6Students,
         [Description("T7OldPolis")] T7OldPolis,
+        [Description("R140n")] R140n,
     }
 }

@@ -168,6 +168,12 @@ namespace KmsReportWS.LinqToSql
     partial void InsertApproval_Scheme(Approval_Scheme instance);
     partial void UpdateApproval_Scheme(Approval_Scheme instance);
     partial void DeleteApproval_Scheme(Approval_Scheme instance);
+    partial void InsertReport_OpedUnplanned(Report_OpedUnplanned instance);
+    partial void UpdateReport_OpedUnplanned(Report_OpedUnplanned instance);
+    partial void DeleteReport_OpedUnplanned(Report_OpedUnplanned instance);
+    partial void InsertReport_140n(Report_140n instance);
+    partial void UpdateReport_140n(Report_140n instance);
+    partial void DeleteReport_140n(Report_140n instance);
     #endregion
 		
 		public LinqToSqlKmsReportDataContext(string connection) : 
@@ -586,6 +592,22 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
+		public System.Data.Linq.Table<Report_OpedUnplanned> Report_OpedUnplanned
+		{
+			get
+			{
+				return this.GetTable<Report_OpedUnplanned>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Report_140n> Report_140n
+		{
+			get
+			{
+				return this.GetTable<Report_140n>();
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.cadre_rapport", IsComposable=true)]
 		public IQueryable<cadre_rapportResult> cadre_rapport([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Yymm", DbType="VarChar(4)")] string yymm, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Theme", DbType="VarChar(30)")] string theme)
 		{
@@ -650,6 +672,18 @@ namespace KmsReportWS.LinqToSql
 		public IQueryable<Zpz2025_Table10_SvodFilialResult> Zpz2025_Table10_SvodFilial([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(4)")] string yymm)
 		{
 			return this.CreateMethodCallQuery<Zpz2025_Table10_SvodFilialResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), yymm);
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.opedUnplanned_report", IsComposable=true)]
+		public IQueryable<opedUnplanned_reportResult> opedUnplanned_report([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Yymm", DbType="VarChar(4)")] string yymm)
+		{
+			return this.CreateMethodCallQuery<opedUnplanned_reportResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), yymm);
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.cons140n_filials", IsComposable=true)]
+		public IQueryable<cons140n_filialsResult> cons140n_filials([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Yymm", DbType="VarChar(4)")] string yymm, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Theme", DbType="VarChar(30)")] string theme)
+		{
+			return this.CreateMethodCallQuery<cons140n_filialsResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), yymm, theme);
 		}
 	}
 	
@@ -3330,6 +3364,10 @@ namespace KmsReportWS.LinqToSql
 		
 		private EntitySet<Report_T7OldPolis> _Report_T7OldPolis;
 		
+		private EntitySet<Report_OpedUnplanned> _Report_OpedUnplanned;
+		
+		private EntitySet<Report_140n> _Report_140n;
+		
 		private EntityRef<Report_Type> _Report_Type;
 		
 		private EntityRef<Report_Flow> _Report_Flow;
@@ -3382,6 +3420,8 @@ namespace KmsReportWS.LinqToSql
 			this._Report_T5Newborn = new EntitySet<Report_T5Newborn>(new Action<Report_T5Newborn>(this.attach_Report_T5Newborn), new Action<Report_T5Newborn>(this.detach_Report_T5Newborn));
 			this._Report_T6Students = new EntitySet<Report_T6Students>(new Action<Report_T6Students>(this.attach_Report_T6Students), new Action<Report_T6Students>(this.detach_Report_T6Students));
 			this._Report_T7OldPolis = new EntitySet<Report_T7OldPolis>(new Action<Report_T7OldPolis>(this.attach_Report_T7OldPolis), new Action<Report_T7OldPolis>(this.detach_Report_T7OldPolis));
+			this._Report_OpedUnplanned = new EntitySet<Report_OpedUnplanned>(new Action<Report_OpedUnplanned>(this.attach_Report_OpedUnplanned), new Action<Report_OpedUnplanned>(this.detach_Report_OpedUnplanned));
+			this._Report_140n = new EntitySet<Report_140n>(new Action<Report_140n>(this.attach_Report_140n), new Action<Report_140n>(this.detach_Report_140n));
 			this._Report_Type = default(EntityRef<Report_Type>);
 			this._Report_Flow = default(EntityRef<Report_Flow>);
 			OnCreated();
@@ -3879,6 +3919,32 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Report_Data_Report_OpedUnplanned", Storage="_Report_OpedUnplanned", ThisKey="Id", OtherKey="Id_Report_Data")]
+		public EntitySet<Report_OpedUnplanned> Report_OpedUnplanned
+		{
+			get
+			{
+				return this._Report_OpedUnplanned;
+			}
+			set
+			{
+				this._Report_OpedUnplanned.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Report_Data_Report_140n", Storage="_Report_140n", ThisKey="Id", OtherKey="Id_Report_Data")]
+		public EntitySet<Report_140n> Report_140n
+		{
+			get
+			{
+				return this._Report_140n;
+			}
+			set
+			{
+				this._Report_140n.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Report_Type_Report_Data", Storage="_Report_Type", ThisKey="Id_Report", OtherKey="Id", IsForeignKey=true)]
 		public Report_Type Report_Type
 		{
@@ -4298,6 +4364,30 @@ namespace KmsReportWS.LinqToSql
 		}
 		
 		private void detach_Report_T7OldPolis(Report_T7OldPolis entity)
+		{
+			this.SendPropertyChanging();
+			entity.Report_Data = null;
+		}
+		
+		private void attach_Report_OpedUnplanned(Report_OpedUnplanned entity)
+		{
+			this.SendPropertyChanging();
+			entity.Report_Data = this;
+		}
+		
+		private void detach_Report_OpedUnplanned(Report_OpedUnplanned entity)
+		{
+			this.SendPropertyChanging();
+			entity.Report_Data = null;
+		}
+		
+		private void attach_Report_140n(Report_140n entity)
+		{
+			this.SendPropertyChanging();
+			entity.Report_Data = this;
+		}
+		
+		private void detach_Report_140n(Report_140n entity)
 		{
 			this.SendPropertyChanging();
 			entity.Report_Data = null;
@@ -16825,6 +16915,908 @@ namespace KmsReportWS.LinqToSql
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Report_OpedUnplanned")]
+	public partial class Report_OpedUnplanned : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Id;
+		
+		private int _Id_Report_Data;
+		
+		private string _RowNum;
+		
+		private decimal _App;
+		
+		private decimal _Ks;
+		
+		private decimal _Ds;
+		
+		private decimal _Smp;
+		
+		private string _Notes;
+		
+		private EntityRef<Report_Data> _Report_Data;
+		
+    #region Определения метода расширяемости
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdChanging(int value);
+    partial void OnIdChanged();
+    partial void OnId_Report_DataChanging(int value);
+    partial void OnId_Report_DataChanged();
+    partial void OnRowNumChanging(string value);
+    partial void OnRowNumChanged();
+    partial void OnAppChanging(decimal value);
+    partial void OnAppChanged();
+    partial void OnKsChanging(decimal value);
+    partial void OnKsChanged();
+    partial void OnDsChanging(decimal value);
+    partial void OnDsChanged();
+    partial void OnSmpChanging(decimal value);
+    partial void OnSmpChanged();
+    partial void OnNotesChanging(string value);
+    partial void OnNotesChanged();
+    #endregion
+		
+		public Report_OpedUnplanned()
+		{
+			this._Report_Data = default(EntityRef<Report_Data>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this.OnIdChanging(value);
+					this.SendPropertyChanging();
+					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_Report_Data", DbType="Int NOT NULL")]
+		public int Id_Report_Data
+		{
+			get
+			{
+				return this._Id_Report_Data;
+			}
+			set
+			{
+				if ((this._Id_Report_Data != value))
+				{
+					if (this._Report_Data.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnId_Report_DataChanging(value);
+					this.SendPropertyChanging();
+					this._Id_Report_Data = value;
+					this.SendPropertyChanged("Id_Report_Data");
+					this.OnId_Report_DataChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RowNum", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string RowNum
+		{
+			get
+			{
+				return this._RowNum;
+			}
+			set
+			{
+				if ((this._RowNum != value))
+				{
+					this.OnRowNumChanging(value);
+					this.SendPropertyChanging();
+					this._RowNum = value;
+					this.SendPropertyChanged("RowNum");
+					this.OnRowNumChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_App", DbType="Decimal(15,3) NOT NULL")]
+		public decimal App
+		{
+			get
+			{
+				return this._App;
+			}
+			set
+			{
+				if ((this._App != value))
+				{
+					this.OnAppChanging(value);
+					this.SendPropertyChanging();
+					this._App = value;
+					this.SendPropertyChanged("App");
+					this.OnAppChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ks", DbType="Decimal(15,3) NOT NULL")]
+		public decimal Ks
+		{
+			get
+			{
+				return this._Ks;
+			}
+			set
+			{
+				if ((this._Ks != value))
+				{
+					this.OnKsChanging(value);
+					this.SendPropertyChanging();
+					this._Ks = value;
+					this.SendPropertyChanged("Ks");
+					this.OnKsChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ds", DbType="Decimal(15,3) NOT NULL")]
+		public decimal Ds
+		{
+			get
+			{
+				return this._Ds;
+			}
+			set
+			{
+				if ((this._Ds != value))
+				{
+					this.OnDsChanging(value);
+					this.SendPropertyChanging();
+					this._Ds = value;
+					this.SendPropertyChanged("Ds");
+					this.OnDsChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Smp", DbType="Decimal(15,3) NOT NULL")]
+		public decimal Smp
+		{
+			get
+			{
+				return this._Smp;
+			}
+			set
+			{
+				if ((this._Smp != value))
+				{
+					this.OnSmpChanging(value);
+					this.SendPropertyChanging();
+					this._Smp = value;
+					this.SendPropertyChanged("Smp");
+					this.OnSmpChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Notes", DbType="VarChar(1000) NOT NULL", CanBeNull=false)]
+		public string Notes
+		{
+			get
+			{
+				return this._Notes;
+			}
+			set
+			{
+				if ((this._Notes != value))
+				{
+					this.OnNotesChanging(value);
+					this.SendPropertyChanging();
+					this._Notes = value;
+					this.SendPropertyChanged("Notes");
+					this.OnNotesChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Report_Data_Report_OpedUnplanned", Storage="_Report_Data", ThisKey="Id_Report_Data", OtherKey="Id", IsForeignKey=true)]
+		public Report_Data Report_Data
+		{
+			get
+			{
+				return this._Report_Data.Entity;
+			}
+			set
+			{
+				Report_Data previousValue = this._Report_Data.Entity;
+				if (((previousValue != value) 
+							|| (this._Report_Data.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Report_Data.Entity = null;
+						previousValue.Report_OpedUnplanned.Remove(this);
+					}
+					this._Report_Data.Entity = value;
+					if ((value != null))
+					{
+						value.Report_OpedUnplanned.Add(this);
+						this._Id_Report_Data = value.Id;
+					}
+					else
+					{
+						this._Id_Report_Data = default(int);
+					}
+					this.SendPropertyChanged("Report_Data");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Report_140n")]
+	public partial class Report_140n : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Id;
+		
+		private int _Id_Report_Data;
+		
+		private System.Nullable<int> _RowNum;
+		
+		private System.Nullable<decimal> _CZLdost;
+		
+		private System.Nullable<decimal> _CZLsmo;
+		
+		private System.Nullable<decimal> _KSErez;
+		
+		private System.Nullable<decimal> _KSE;
+		
+		private System.Nullable<decimal> _PPMinadvn;
+		
+		private System.Nullable<decimal> _Iidvn;
+		
+		private System.Nullable<decimal> _PPMinfdn;
+		
+		private System.Nullable<decimal> _Iidn;
+		
+		private System.Nullable<decimal> _KOJdosud;
+		
+		private System.Nullable<decimal> _KOJsud;
+		
+		private System.Nullable<decimal> _KOJzl;
+		
+		private System.Nullable<decimal> _KOJzlsmo;
+		
+		private System.Nullable<decimal> _KZAsobl;
+		
+		private System.Nullable<decimal> _KZAvsego;
+		
+		private System.Nullable<decimal> _DT;
+		
+		private System.Nullable<decimal> _Scpo;
+		
+		private System.Nullable<decimal> _KEKMPpodtv;
+		
+		private System.Nullable<decimal> _KEKMPtfoms;
+		
+		private System.Nullable<decimal> _KZSMOpodtv;
+		
+		private System.Nullable<decimal> _KPMOtfoms;
+		
+		private EntityRef<Report_Data> _Report_Data;
+		
+    #region Определения метода расширяемости
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdChanging(int value);
+    partial void OnIdChanged();
+    partial void OnId_Report_DataChanging(int value);
+    partial void OnId_Report_DataChanged();
+    partial void OnRowNumChanging(System.Nullable<int> value);
+    partial void OnRowNumChanged();
+    partial void OnCZLdostChanging(System.Nullable<decimal> value);
+    partial void OnCZLdostChanged();
+    partial void OnCZLsmoChanging(System.Nullable<decimal> value);
+    partial void OnCZLsmoChanged();
+    partial void OnKSErezChanging(System.Nullable<decimal> value);
+    partial void OnKSErezChanged();
+    partial void OnKSEChanging(System.Nullable<decimal> value);
+    partial void OnKSEChanged();
+    partial void OnPPMinadvnChanging(System.Nullable<decimal> value);
+    partial void OnPPMinadvnChanged();
+    partial void OnIidvnChanging(System.Nullable<decimal> value);
+    partial void OnIidvnChanged();
+    partial void OnPPMinfdnChanging(System.Nullable<decimal> value);
+    partial void OnPPMinfdnChanged();
+    partial void OnIidnChanging(System.Nullable<decimal> value);
+    partial void OnIidnChanged();
+    partial void OnKOJdosudChanging(System.Nullable<decimal> value);
+    partial void OnKOJdosudChanged();
+    partial void OnKOJsudChanging(System.Nullable<decimal> value);
+    partial void OnKOJsudChanged();
+    partial void OnKOJzlChanging(System.Nullable<decimal> value);
+    partial void OnKOJzlChanged();
+    partial void OnKOJzlsmoChanging(System.Nullable<decimal> value);
+    partial void OnKOJzlsmoChanged();
+    partial void OnKZAsoblChanging(System.Nullable<decimal> value);
+    partial void OnKZAsoblChanged();
+    partial void OnKZAvsegoChanging(System.Nullable<decimal> value);
+    partial void OnKZAvsegoChanged();
+    partial void OnDTChanging(System.Nullable<decimal> value);
+    partial void OnDTChanged();
+    partial void OnScpoChanging(System.Nullable<decimal> value);
+    partial void OnScpoChanged();
+    partial void OnKEKMPpodtvChanging(System.Nullable<decimal> value);
+    partial void OnKEKMPpodtvChanged();
+    partial void OnKEKMPtfomsChanging(System.Nullable<decimal> value);
+    partial void OnKEKMPtfomsChanged();
+    partial void OnKZSMOpodtvChanging(System.Nullable<decimal> value);
+    partial void OnKZSMOpodtvChanged();
+    partial void OnKPMOtfomsChanging(System.Nullable<decimal> value);
+    partial void OnKPMOtfomsChanged();
+    #endregion
+		
+		public Report_140n()
+		{
+			this._Report_Data = default(EntityRef<Report_Data>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this.OnIdChanging(value);
+					this.SendPropertyChanging();
+					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_Report_Data", DbType="Int NOT NULL")]
+		public int Id_Report_Data
+		{
+			get
+			{
+				return this._Id_Report_Data;
+			}
+			set
+			{
+				if ((this._Id_Report_Data != value))
+				{
+					if (this._Report_Data.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnId_Report_DataChanging(value);
+					this.SendPropertyChanging();
+					this._Id_Report_Data = value;
+					this.SendPropertyChanged("Id_Report_Data");
+					this.OnId_Report_DataChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RowNum", DbType="Int")]
+		public System.Nullable<int> RowNum
+		{
+			get
+			{
+				return this._RowNum;
+			}
+			set
+			{
+				if ((this._RowNum != value))
+				{
+					this.OnRowNumChanging(value);
+					this.SendPropertyChanging();
+					this._RowNum = value;
+					this.SendPropertyChanged("RowNum");
+					this.OnRowNumChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CZLdost", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> CZLdost
+		{
+			get
+			{
+				return this._CZLdost;
+			}
+			set
+			{
+				if ((this._CZLdost != value))
+				{
+					this.OnCZLdostChanging(value);
+					this.SendPropertyChanging();
+					this._CZLdost = value;
+					this.SendPropertyChanged("CZLdost");
+					this.OnCZLdostChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CZLsmo", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> CZLsmo
+		{
+			get
+			{
+				return this._CZLsmo;
+			}
+			set
+			{
+				if ((this._CZLsmo != value))
+				{
+					this.OnCZLsmoChanging(value);
+					this.SendPropertyChanging();
+					this._CZLsmo = value;
+					this.SendPropertyChanged("CZLsmo");
+					this.OnCZLsmoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KSErez", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> KSErez
+		{
+			get
+			{
+				return this._KSErez;
+			}
+			set
+			{
+				if ((this._KSErez != value))
+				{
+					this.OnKSErezChanging(value);
+					this.SendPropertyChanging();
+					this._KSErez = value;
+					this.SendPropertyChanged("KSErez");
+					this.OnKSErezChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KSE", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> KSE
+		{
+			get
+			{
+				return this._KSE;
+			}
+			set
+			{
+				if ((this._KSE != value))
+				{
+					this.OnKSEChanging(value);
+					this.SendPropertyChanging();
+					this._KSE = value;
+					this.SendPropertyChanged("KSE");
+					this.OnKSEChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PPMinadvn", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> PPMinadvn
+		{
+			get
+			{
+				return this._PPMinadvn;
+			}
+			set
+			{
+				if ((this._PPMinadvn != value))
+				{
+					this.OnPPMinadvnChanging(value);
+					this.SendPropertyChanging();
+					this._PPMinadvn = value;
+					this.SendPropertyChanged("PPMinadvn");
+					this.OnPPMinadvnChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Iidvn", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> Iidvn
+		{
+			get
+			{
+				return this._Iidvn;
+			}
+			set
+			{
+				if ((this._Iidvn != value))
+				{
+					this.OnIidvnChanging(value);
+					this.SendPropertyChanging();
+					this._Iidvn = value;
+					this.SendPropertyChanged("Iidvn");
+					this.OnIidvnChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PPMinfdn", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> PPMinfdn
+		{
+			get
+			{
+				return this._PPMinfdn;
+			}
+			set
+			{
+				if ((this._PPMinfdn != value))
+				{
+					this.OnPPMinfdnChanging(value);
+					this.SendPropertyChanging();
+					this._PPMinfdn = value;
+					this.SendPropertyChanged("PPMinfdn");
+					this.OnPPMinfdnChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Iidn", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> Iidn
+		{
+			get
+			{
+				return this._Iidn;
+			}
+			set
+			{
+				if ((this._Iidn != value))
+				{
+					this.OnIidnChanging(value);
+					this.SendPropertyChanging();
+					this._Iidn = value;
+					this.SendPropertyChanged("Iidn");
+					this.OnIidnChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KOJdosud", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> KOJdosud
+		{
+			get
+			{
+				return this._KOJdosud;
+			}
+			set
+			{
+				if ((this._KOJdosud != value))
+				{
+					this.OnKOJdosudChanging(value);
+					this.SendPropertyChanging();
+					this._KOJdosud = value;
+					this.SendPropertyChanged("KOJdosud");
+					this.OnKOJdosudChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KOJsud", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> KOJsud
+		{
+			get
+			{
+				return this._KOJsud;
+			}
+			set
+			{
+				if ((this._KOJsud != value))
+				{
+					this.OnKOJsudChanging(value);
+					this.SendPropertyChanging();
+					this._KOJsud = value;
+					this.SendPropertyChanged("KOJsud");
+					this.OnKOJsudChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KOJzl", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> KOJzl
+		{
+			get
+			{
+				return this._KOJzl;
+			}
+			set
+			{
+				if ((this._KOJzl != value))
+				{
+					this.OnKOJzlChanging(value);
+					this.SendPropertyChanging();
+					this._KOJzl = value;
+					this.SendPropertyChanged("KOJzl");
+					this.OnKOJzlChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KOJzlsmo", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> KOJzlsmo
+		{
+			get
+			{
+				return this._KOJzlsmo;
+			}
+			set
+			{
+				if ((this._KOJzlsmo != value))
+				{
+					this.OnKOJzlsmoChanging(value);
+					this.SendPropertyChanging();
+					this._KOJzlsmo = value;
+					this.SendPropertyChanged("KOJzlsmo");
+					this.OnKOJzlsmoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KZAsobl", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> KZAsobl
+		{
+			get
+			{
+				return this._KZAsobl;
+			}
+			set
+			{
+				if ((this._KZAsobl != value))
+				{
+					this.OnKZAsoblChanging(value);
+					this.SendPropertyChanging();
+					this._KZAsobl = value;
+					this.SendPropertyChanged("KZAsobl");
+					this.OnKZAsoblChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KZAvsego", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> KZAvsego
+		{
+			get
+			{
+				return this._KZAvsego;
+			}
+			set
+			{
+				if ((this._KZAvsego != value))
+				{
+					this.OnKZAvsegoChanging(value);
+					this.SendPropertyChanging();
+					this._KZAvsego = value;
+					this.SendPropertyChanged("KZAvsego");
+					this.OnKZAvsegoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DT", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> DT
+		{
+			get
+			{
+				return this._DT;
+			}
+			set
+			{
+				if ((this._DT != value))
+				{
+					this.OnDTChanging(value);
+					this.SendPropertyChanging();
+					this._DT = value;
+					this.SendPropertyChanged("DT");
+					this.OnDTChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Scpo", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> Scpo
+		{
+			get
+			{
+				return this._Scpo;
+			}
+			set
+			{
+				if ((this._Scpo != value))
+				{
+					this.OnScpoChanging(value);
+					this.SendPropertyChanging();
+					this._Scpo = value;
+					this.SendPropertyChanged("Scpo");
+					this.OnScpoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KEKMPpodtv", DbType="Decimal(15,1)")]
+		public System.Nullable<decimal> KEKMPpodtv
+		{
+			get
+			{
+				return this._KEKMPpodtv;
+			}
+			set
+			{
+				if ((this._KEKMPpodtv != value))
+				{
+					this.OnKEKMPpodtvChanging(value);
+					this.SendPropertyChanging();
+					this._KEKMPpodtv = value;
+					this.SendPropertyChanged("KEKMPpodtv");
+					this.OnKEKMPpodtvChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KEKMPtfoms", DbType="Decimal(15,1)")]
+		public System.Nullable<decimal> KEKMPtfoms
+		{
+			get
+			{
+				return this._KEKMPtfoms;
+			}
+			set
+			{
+				if ((this._KEKMPtfoms != value))
+				{
+					this.OnKEKMPtfomsChanging(value);
+					this.SendPropertyChanging();
+					this._KEKMPtfoms = value;
+					this.SendPropertyChanged("KEKMPtfoms");
+					this.OnKEKMPtfomsChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KZSMOpodtv", DbType="Decimal(15,1)")]
+		public System.Nullable<decimal> KZSMOpodtv
+		{
+			get
+			{
+				return this._KZSMOpodtv;
+			}
+			set
+			{
+				if ((this._KZSMOpodtv != value))
+				{
+					this.OnKZSMOpodtvChanging(value);
+					this.SendPropertyChanging();
+					this._KZSMOpodtv = value;
+					this.SendPropertyChanged("KZSMOpodtv");
+					this.OnKZSMOpodtvChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KPMOtfoms", DbType="Decimal(15,1)")]
+		public System.Nullable<decimal> KPMOtfoms
+		{
+			get
+			{
+				return this._KPMOtfoms;
+			}
+			set
+			{
+				if ((this._KPMOtfoms != value))
+				{
+					this.OnKPMOtfomsChanging(value);
+					this.SendPropertyChanging();
+					this._KPMOtfoms = value;
+					this.SendPropertyChanged("KPMOtfoms");
+					this.OnKPMOtfomsChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Report_Data_Report_140n", Storage="_Report_Data", ThisKey="Id_Report_Data", OtherKey="Id", IsForeignKey=true)]
+		public Report_Data Report_Data
+		{
+			get
+			{
+				return this._Report_Data.Entity;
+			}
+			set
+			{
+				Report_Data previousValue = this._Report_Data.Entity;
+				if (((previousValue != value) 
+							|| (this._Report_Data.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Report_Data.Entity = null;
+						previousValue.Report_140n.Remove(this);
+					}
+					this._Report_Data.Entity = value;
+					if ((value != null))
+					{
+						value.Report_140n.Add(this);
+						this._Id_Report_Data = value.Id;
+					}
+					else
+					{
+						this._Id_Report_Data = default(int);
+					}
+					this.SendPropertyChanged("Report_Data");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
 	public partial class cadre_rapportResult
 	{
 		
@@ -22290,6 +23282,562 @@ namespace KmsReportWS.LinqToSql
 				if ((this.@__86 != value))
 				{
 					this.@__86 = value;
+				}
+			}
+		}
+	}
+	
+	public partial class opedUnplanned_reportResult
+	{
+		
+		private string _id;
+		
+		private string _RowNum;
+		
+		private string _Yymm;
+		
+		private decimal _App;
+		
+		private decimal _Ks;
+		
+		private decimal _Ds;
+		
+		private decimal _Smp;
+		
+		private string _Notes;
+		
+		public opedUnplanned_reportResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="VarChar(10)")]
+		public string id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this._id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RowNum", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string RowNum
+		{
+			get
+			{
+				return this._RowNum;
+			}
+			set
+			{
+				if ((this._RowNum != value))
+				{
+					this._RowNum = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Yymm", DbType="VarChar(4) NOT NULL", CanBeNull=false)]
+		public string Yymm
+		{
+			get
+			{
+				return this._Yymm;
+			}
+			set
+			{
+				if ((this._Yymm != value))
+				{
+					this._Yymm = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_App", DbType="Decimal(15,3) NOT NULL")]
+		public decimal App
+		{
+			get
+			{
+				return this._App;
+			}
+			set
+			{
+				if ((this._App != value))
+				{
+					this._App = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ks", DbType="Decimal(15,3) NOT NULL")]
+		public decimal Ks
+		{
+			get
+			{
+				return this._Ks;
+			}
+			set
+			{
+				if ((this._Ks != value))
+				{
+					this._Ks = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ds", DbType="Decimal(15,3) NOT NULL")]
+		public decimal Ds
+		{
+			get
+			{
+				return this._Ds;
+			}
+			set
+			{
+				if ((this._Ds != value))
+				{
+					this._Ds = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Smp", DbType="Decimal(15,3) NOT NULL")]
+		public decimal Smp
+		{
+			get
+			{
+				return this._Smp;
+			}
+			set
+			{
+				if ((this._Smp != value))
+				{
+					this._Smp = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Notes", DbType="VarChar(1000) NOT NULL", CanBeNull=false)]
+		public string Notes
+		{
+			get
+			{
+				return this._Notes;
+			}
+			set
+			{
+				if ((this._Notes != value))
+				{
+					this._Notes = value;
+				}
+			}
+		}
+	}
+	
+	public partial class cons140n_filialsResult
+	{
+		
+		private string _Id_Region;
+		
+		private string _Filial;
+		
+		private System.Nullable<decimal> _CZLdost;
+		
+		private System.Nullable<decimal> _CZLsmo;
+		
+		private System.Nullable<decimal> _KSErez;
+		
+		private System.Nullable<decimal> _KSE;
+		
+		private System.Nullable<decimal> _PPMinadvn;
+		
+		private System.Nullable<decimal> _Iidvn;
+		
+		private System.Nullable<decimal> _PPMinfdn;
+		
+		private System.Nullable<decimal> _Iidn;
+		
+		private System.Nullable<decimal> _KOJdosud;
+		
+		private System.Nullable<decimal> _KOJsud;
+		
+		private System.Nullable<decimal> _KOJzl;
+		
+		private System.Nullable<decimal> _KOJzlsmo;
+		
+		private System.Nullable<decimal> _KZAsobl;
+		
+		private System.Nullable<decimal> _KZAvsego;
+		
+		private System.Nullable<decimal> _DT;
+		
+		private System.Nullable<decimal> _Scpo;
+		
+		private System.Nullable<decimal> _KEKMPpodtv;
+		
+		private System.Nullable<decimal> _KEKMPtfoms;
+		
+		private System.Nullable<decimal> _KZSMOpodtv;
+		
+		private System.Nullable<decimal> _KPMOtfoms;
+		
+		public cons140n_filialsResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_Region", DbType="VarChar(10)")]
+		public string Id_Region
+		{
+			get
+			{
+				return this._Id_Region;
+			}
+			set
+			{
+				if ((this._Id_Region != value))
+				{
+					this._Id_Region = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Filial", DbType="VarChar(150)")]
+		public string Filial
+		{
+			get
+			{
+				return this._Filial;
+			}
+			set
+			{
+				if ((this._Filial != value))
+				{
+					this._Filial = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CZLdost", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> CZLdost
+		{
+			get
+			{
+				return this._CZLdost;
+			}
+			set
+			{
+				if ((this._CZLdost != value))
+				{
+					this._CZLdost = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CZLsmo", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> CZLsmo
+		{
+			get
+			{
+				return this._CZLsmo;
+			}
+			set
+			{
+				if ((this._CZLsmo != value))
+				{
+					this._CZLsmo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KSErez", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> KSErez
+		{
+			get
+			{
+				return this._KSErez;
+			}
+			set
+			{
+				if ((this._KSErez != value))
+				{
+					this._KSErez = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KSE", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> KSE
+		{
+			get
+			{
+				return this._KSE;
+			}
+			set
+			{
+				if ((this._KSE != value))
+				{
+					this._KSE = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PPMinadvn", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> PPMinadvn
+		{
+			get
+			{
+				return this._PPMinadvn;
+			}
+			set
+			{
+				if ((this._PPMinadvn != value))
+				{
+					this._PPMinadvn = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Iidvn", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> Iidvn
+		{
+			get
+			{
+				return this._Iidvn;
+			}
+			set
+			{
+				if ((this._Iidvn != value))
+				{
+					this._Iidvn = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PPMinfdn", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> PPMinfdn
+		{
+			get
+			{
+				return this._PPMinfdn;
+			}
+			set
+			{
+				if ((this._PPMinfdn != value))
+				{
+					this._PPMinfdn = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Iidn", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> Iidn
+		{
+			get
+			{
+				return this._Iidn;
+			}
+			set
+			{
+				if ((this._Iidn != value))
+				{
+					this._Iidn = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KOJdosud", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> KOJdosud
+		{
+			get
+			{
+				return this._KOJdosud;
+			}
+			set
+			{
+				if ((this._KOJdosud != value))
+				{
+					this._KOJdosud = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KOJsud", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> KOJsud
+		{
+			get
+			{
+				return this._KOJsud;
+			}
+			set
+			{
+				if ((this._KOJsud != value))
+				{
+					this._KOJsud = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KOJzl", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> KOJzl
+		{
+			get
+			{
+				return this._KOJzl;
+			}
+			set
+			{
+				if ((this._KOJzl != value))
+				{
+					this._KOJzl = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KOJzlsmo", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> KOJzlsmo
+		{
+			get
+			{
+				return this._KOJzlsmo;
+			}
+			set
+			{
+				if ((this._KOJzlsmo != value))
+				{
+					this._KOJzlsmo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KZAsobl", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> KZAsobl
+		{
+			get
+			{
+				return this._KZAsobl;
+			}
+			set
+			{
+				if ((this._KZAsobl != value))
+				{
+					this._KZAsobl = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KZAvsego", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> KZAvsego
+		{
+			get
+			{
+				return this._KZAvsego;
+			}
+			set
+			{
+				if ((this._KZAvsego != value))
+				{
+					this._KZAvsego = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DT", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> DT
+		{
+			get
+			{
+				return this._DT;
+			}
+			set
+			{
+				if ((this._DT != value))
+				{
+					this._DT = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Scpo", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> Scpo
+		{
+			get
+			{
+				return this._Scpo;
+			}
+			set
+			{
+				if ((this._Scpo != value))
+				{
+					this._Scpo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KEKMPpodtv", DbType="Decimal(15,1)")]
+		public System.Nullable<decimal> KEKMPpodtv
+		{
+			get
+			{
+				return this._KEKMPpodtv;
+			}
+			set
+			{
+				if ((this._KEKMPpodtv != value))
+				{
+					this._KEKMPpodtv = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KEKMPtfoms", DbType="Decimal(15,1)")]
+		public System.Nullable<decimal> KEKMPtfoms
+		{
+			get
+			{
+				return this._KEKMPtfoms;
+			}
+			set
+			{
+				if ((this._KEKMPtfoms != value))
+				{
+					this._KEKMPtfoms = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KZSMOpodtv", DbType="Decimal(15,1)")]
+		public System.Nullable<decimal> KZSMOpodtv
+		{
+			get
+			{
+				return this._KZSMOpodtv;
+			}
+			set
+			{
+				if ((this._KZSMOpodtv != value))
+				{
+					this._KZSMOpodtv = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KPMOtfoms", DbType="Decimal(15,1)")]
+		public System.Nullable<decimal> KPMOtfoms
+		{
+			get
+			{
+				return this._KPMOtfoms;
+			}
+			set
+			{
+				if ((this._KPMOtfoms != value))
+				{
+					this._KPMOtfoms = value;
 				}
 			}
 		}

@@ -166,6 +166,8 @@
       <Association Name="Report_Data_Report_T5Newborn" Member="Report_T5Newborn" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_T5Newborn" />
       <Association Name="Report_Data_Report_T6Students" Member="Report_T6Students" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_T6Students" />
       <Association Name="Report_Data_Report_T7OldPolis" Member="Report_T7OldPolis" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_T7OldPolis" />
+      <Association Name="Report_Data_Report_OpedUnplanned" Member="Report_OpedUnplanned" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_OpedUnplanned" />
+      <Association Name="Report_Data_Report_140n" Member="Report_140n" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_140n" />
       <Association Name="Report_Type_Report_Data" Member="Report_Type" ThisKey="Id_Report" OtherKey="Id" Type="Report_Type" IsForeignKey="true" />
       <Association Name="Report_Flow_Report_Data" Member="Report_Flow" ThisKey="Id_Flow" OtherKey="Id" Type="Report_Flow" IsForeignKey="true" />
     </Type>
@@ -756,6 +758,47 @@
       <Column Name="Sort_Order" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
+  <Table Name="dbo.Report_OpedUnplanned" Member="Report_OpedUnplanned">
+    <Type Name="Report_OpedUnplanned">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id_Report_Data" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RowNum" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="App" Type="System.Decimal" DbType="Decimal(15,3) NOT NULL" CanBeNull="false" />
+      <Column Name="Ks" Type="System.Decimal" DbType="Decimal(15,3) NOT NULL" CanBeNull="false" />
+      <Column Name="Ds" Type="System.Decimal" DbType="Decimal(15,3) NOT NULL" CanBeNull="false" />
+      <Column Name="Smp" Type="System.Decimal" DbType="Decimal(15,3) NOT NULL" CanBeNull="false" />
+      <Column Name="Notes" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+      <Association Name="Report_Data_Report_OpedUnplanned" Member="Report_Data" ThisKey="Id_Report_Data" OtherKey="Id" Type="Report_Data" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Report_140n" Member="Report_140n">
+    <Type Name="Report_140n">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id_Report_Data" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RowNum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CZLdost" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="CZLsmo" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="KSErez" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="KSE" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="PPMinadvn" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="Iidvn" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="PPMinfdn" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="Iidn" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="KOJdosud" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="KOJsud" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="KOJzl" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="KOJzlsmo" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="KZAsobl" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="KZAvsego" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="DT" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="Scpo" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="KEKMPpodtv" Type="System.Decimal" DbType="Decimal(15,1)" CanBeNull="true" />
+      <Column Name="KEKMPtfoms" Type="System.Decimal" DbType="Decimal(15,1)" CanBeNull="true" />
+      <Column Name="KZSMOpodtv" Type="System.Decimal" DbType="Decimal(15,1)" CanBeNull="true" />
+      <Column Name="KPMOtfoms" Type="System.Decimal" DbType="Decimal(15,1)" CanBeNull="true" />
+      <Association Name="Report_Data_Report_140n" Member="Report_Data" ThisKey="Id_Report_Data" OtherKey="Id" Type="Report_Data" IsForeignKey="true" />
+    </Type>
+  </Table>
   <Function Name="dbo.cadre_rapport" Method="cadre_rapport" IsComposable="true">
     <Parameter Name="Yymm" Parameter="yymm" Type="System.String" DbType="VarChar(4)" />
     <Parameter Name="Theme" Parameter="theme" Type="System.String" DbType="VarChar(30)" />
@@ -1114,6 +1157,47 @@
       <Column Name="[_84]" Member="_84" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
       <Column Name="[_85]" Member="_85" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
       <Column Name="[_86]" Member="_86" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.opedUnplanned_report" Method="opedUnplanned_report" IsComposable="true">
+    <Parameter Name="Yymm" Parameter="yymm" Type="System.String" DbType="VarChar(4)" />
+    <ElementType Name="opedUnplanned_reportResult">
+      <Column Name="id" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="RowNum" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Yymm" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="App" Type="System.Decimal" DbType="Decimal(15,3) NOT NULL" CanBeNull="false" />
+      <Column Name="Ks" Type="System.Decimal" DbType="Decimal(15,3) NOT NULL" CanBeNull="false" />
+      <Column Name="Ds" Type="System.Decimal" DbType="Decimal(15,3) NOT NULL" CanBeNull="false" />
+      <Column Name="Smp" Type="System.Decimal" DbType="Decimal(15,3) NOT NULL" CanBeNull="false" />
+      <Column Name="Notes" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.cons140n_filials" Method="cons140n_filials" IsComposable="true">
+    <Parameter Name="Yymm" Parameter="yymm" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="Theme" Parameter="theme" Type="System.String" DbType="VarChar(30)" />
+    <ElementType Name="cons140n_filialsResult">
+      <Column Name="Id_Region" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Filial" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="CZLdost" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="CZLsmo" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="KSErez" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="KSE" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="PPMinadvn" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="Iidvn" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="PPMinfdn" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="Iidn" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="KOJdosud" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="KOJsud" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="KOJzl" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="KOJzlsmo" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="KZAsobl" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="KZAvsego" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="DT" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="Scpo" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="KEKMPpodtv" Type="System.Decimal" DbType="Decimal(15,1)" CanBeNull="true" />
+      <Column Name="KEKMPtfoms" Type="System.Decimal" DbType="Decimal(15,1)" CanBeNull="true" />
+      <Column Name="KZSMOpodtv" Type="System.Decimal" DbType="Decimal(15,1)" CanBeNull="true" />
+      <Column Name="KPMOtfoms" Type="System.Decimal" DbType="Decimal(15,1)" CanBeNull="true" />
     </ElementType>
   </Function>
 </Database>

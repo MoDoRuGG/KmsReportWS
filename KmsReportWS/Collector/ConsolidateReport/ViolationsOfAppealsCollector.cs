@@ -75,7 +75,7 @@ namespace KmsReportWS.Collector.ConsolidateReport
                   && data.Theme == theme
                   && flow.Id_Region == region
                   && Statuses.Contains(flow.Status)
-                  && flow.Id_Report_Type == "Zpz2025"
+                  && flow.Id_Report_Type == "ZpzT1"
             select f;
 
 

@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(msbuild *)",
+      "Bash(findstr *)"
+    ]
+  },
+  "$version": 3
+}

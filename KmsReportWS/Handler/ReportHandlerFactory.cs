@@ -47,6 +47,7 @@ namespace KmsReportWS.Handler
         private readonly IReportHandler _T5NewbornCollector = new ReportT5NewbornHandler();
         private readonly IReportHandler _T6StudentsCollector = new ReportT6StudentsHandler();
         private readonly IReportHandler _T7OldPolisCollector = new ReportT7OldPolisHandler();
+        private readonly IReportHandler _140nCollector = new Report140nHandler();
         public IReportHandler GetHandler(ReportType reportType) =>
             reportType switch {
                 ReportType.Oped => _opedCollector,
@@ -92,6 +93,7 @@ namespace KmsReportWS.Handler
                 ReportType.ZpzT2 => _zpzT2Collector,
                 ReportType.ZpzT3 => _zpzT3Collector,
                 ReportType.ZpzT4 => _zpzT4Collector,
+                ReportType.R140n => _140nCollector,
             };
     }
 }
