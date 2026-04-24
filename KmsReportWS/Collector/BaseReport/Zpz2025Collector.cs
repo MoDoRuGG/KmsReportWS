@@ -8,9 +8,7 @@ namespace KmsReportWS.Collector.BaseReport
 {
     public class Zpz2025Collector : BaseReportCollector
     {
-        public Zpz2025Collector(ReportType reportType) : base(reportType)
-        {
-        }
+        public Zpz2025Collector(ReportType reportType) : base (reportType) { }
 
         public override AbstractReport CollectSummaryReport(string[] filials, string yymmStart, string yymmEnd,
             ReportStatus status)
