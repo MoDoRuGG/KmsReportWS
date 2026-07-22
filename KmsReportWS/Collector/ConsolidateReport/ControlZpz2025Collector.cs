@@ -221,6 +221,7 @@ namespace KmsReportWS.Collector.ConsolidateReport
                 CountCaseDefectedBySmoPlan = table7Data.Where(x => x.RowNum == "4").Sum(x => x.SumVidpomAnother),
                 CountEkmpDefectedCaseTarget = table7Data.Where(x => x.RowNum == "5").Sum(x => x.SumVidpom),
                 CountEkmpDefectedCasePlan = table7Data.Where(x => x.RowNum == "5").Sum(x => x.SumVidpomAnother),
+                CountDefects = table7Data.Where(x => x.RowNum == "6").Sum(x => x.SumVidpom + x.SumVidpomAnother),
                 CountEkmpBadDs = table7Data.Where(x => x.RowNum == "6.9").Sum(x => x.SumVidpom+x.SumVidpomAnother),
                 CountEkmpBadDsNotAffected = table7Data.Where(x => x.RowNum == "6.9.6").Sum(x => x.SumVidpom+x.SumVidpomAnother),
                 CountEkmpBadDsProlonger = table7Data.Where(x => x.RowNum == "6.9.7").Sum(x => x.SumVidpom+x.SumVidpomAnother),
@@ -228,6 +229,11 @@ namespace KmsReportWS.Collector.ConsolidateReport
                 CountEkmpBadDsInjured = table7Data.Where(x => x.RowNum == "6.9.9").Sum(x => x.SumVidpom+x.SumVidpomAnother),
                 CountEkmpBadDsLeth= table7Data.Where(x => x.RowNum == "6.9.10").Sum(x => x.SumVidpom+x.SumVidpomAnother),
                 CountEkmpBadMed = table7Data.Where(x => x.RowNum == "6.10").Sum(x => x.SumVidpom+x.SumVidpomAnother),
+                D_3_2_1 = table7Data.Where(x => x.RowNum == "6.10.9").Sum(x => x.SumVidpom+x.SumVidpomAnother),
+                D_3_2_2 = table7Data.Where(x => x.RowNum == "6.10.10").Sum(x => x.SumVidpom+x.SumVidpomAnother),
+                D_3_2_3 = table7Data.Where(x => x.RowNum == "6.10.11").Sum(x => x.SumVidpom+x.SumVidpomAnother),
+                D_3_2_4 = table7Data.Where(x => x.RowNum == "6.10.12").Sum(x => x.SumVidpom+x.SumVidpomAnother),
+                D_3_2_5 = table7Data.Where(x => x.RowNum == "6.10.13").Sum(x => x.SumVidpom+x.SumVidpomAnother),
                 CountEkmpUnreglamentedMed = table7Data.Where(x => x.RowNum == "6.11").Sum(x => x.SumVidpom+x.SumVidpomAnother),
                 CountEkmpStopMed = table7Data.Where(x => x.RowNum == "6.12").Sum(x => x.SumVidpom+x.SumVidpomAnother),
                 CountEkmpContinuity = table7Data.Where(x => x.RowNum == "6.13").Sum(x => x.SumVidpom+x.SumVidpomAnother),
@@ -240,8 +246,13 @@ namespace KmsReportWS.Collector.ConsolidateReport
                 CountEkmpDisp = table7Data.Where(x => x.RowNum == "6.20").Sum(x => x.SumVidpom+x.SumVidpomAnother),
                 CountEkmpRepeat2weeks = table7Data.Where(x => x.RowNum == "6.21").Sum(x => x.SumVidpom+x.SumVidpomAnother),
                 CountEkmpOutOfResults = table7Data.Where(x => x.RowNum == "6.22").Sum(x => x.SumVidpom+x.SumVidpomAnother),
-
-
+                D_2_12 = table7Data.Where(x => x.RowNum == "6.24.10").Sum(x => x.SumVidpom+x.SumVidpomAnother),
+                D_2_13 = table7Data.Where(x => x.RowNum == "6.24.11").Sum(x => x.SumVidpom+x.SumVidpomAnother),
+                D_2_14 = table7Data.Where(x => x.RowNum == "6.24.12").Sum(x => x.SumVidpom+x.SumVidpomAnother),
+                D_1_4_4 = table7Data.Where(x => x.RowNum == "6.24.13").Sum(x => x.SumVidpom+x.SumVidpomAnother),
+                D_2_16_1 = table7Data.Where(x => x.RowNum == "6.24.13.9").Sum(x => x.SumVidpom+x.SumVidpomAnother),
+                D_2_16 = table7Data.Where(x => x.RowNum == "6.24.13.10").Sum(x => x.SumVidpom+x.SumVidpomAnother),
+                D_1_4_4_Another = table7Data.Where(x => x.RowNum == "6.24.13.11").Sum(x => x.SumVidpom+x.SumVidpomAnother),
             };
         }
 

@@ -110,6 +110,7 @@
     <Compile Include="Collector\BaseReport\OpedCollector.cs" />
     <Compile Include="Collector\BaseReport\F294Collector.cs" />
     <Compile Include="Collector\BaseReport\ViolationsCollector.cs" />
+    <Compile Include="Collector\BaseReport\DispReprodHealthCollector.cs" />
     <Compile Include="Collector\BaseReport\ZpzCollector.cs" />
     <Compile Include="Collector\BaseReport\ReportCollectorFactory.cs" />
     <Compile Include="Collector\BaseReport\IizlCollector.cs" />
@@ -211,6 +212,7 @@
     <Compile Include="Handler\ReportOpedFinanceHandler.cs" />
     <Compile Include="Handler\ReportProposalHandler.cs" />
     <Compile Include="Handler\ReportVaccinationHander.cs" />
+    <Compile Include="Handler\DispReprodHealthHandler.cs" />
     <Compile Include="Handler\ZpzHandler2025.cs" />
     <Compile Include="LinqToSql\LinqToSqlKmsReport.cs">
       <DependentUpon>LinqToSqlKmsReport.dbml</DependentUpon>
@@ -314,6 +316,7 @@
     <Compile Include="Model\Report\ReportZpz.cs" />
     <Compile Include="Model\Report\ReportProposal.cs" />
     <Compile Include="Model\Report\ReportVaccination.cs" />
+    <Compile Include="Model\Report\ReportDispReprodHealth.cs" />
     <Compile Include="Model\Report\ReportZpz2025.cs" />
     <Compile Include="Model\Report\ReportT5Newborn.cs" />
     <Compile Include="Model\Service\ClientContext.cs" />
@@ -337,6 +340,7 @@
     <Compile Include="Model\Service\NotificationRequest.cs" />
     <Compile Include="Model\Service\ReportComment.cs" />
     <Compile Include="Model\Service\UnreadComment.cs" />
+    <Compile Include="Model\DispRepHealthYearDataRow.cs" />
     <Compile Include="Model\ZpzYearDataRow.cs" />
     <Compile Include="MsConnection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

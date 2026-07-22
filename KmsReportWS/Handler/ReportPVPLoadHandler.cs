@@ -106,21 +106,23 @@ namespace KmsReportWS.Handler
         protected override void InsertReport(LinqToSqlKmsReportDataContext db, AbstractReport inReport)
         {
             var report = inReport as ReportPVPLoad ??
-                     throw new Exception("Error update report, because getting empty report");
-            var RowCounter = report.Data.Count();
+                         throw new Exception("Error update report, because getting empty report");
+
+            // Получаем правильный Id_Report_Data из Report_Data
+            var reportData = db.Report_Data.FirstOrDefault(x => x.Id_Flow == report.IdFlow);
+            if (reportData == null)
+            {
+                throw new Exception($"Report_Data not found for IdFlow: {report.IdFlow}");
+            }
+
             var reportDb = db.Report_PVP_Load.Where(x => x.Report_Data.Id_Flow == report.IdFlow);
-
-            var razcount = RowCounter - reportDb.Count();
-
             foreach (var detail in reportDb)
             {
                 db.Report_PVP_Load.DeleteOnSubmit(detail);
             }
-            for (var i = 0; i < RowCounter; i++)
+
+            foreach (var repIn in report.Data)
             {
-
-                var repIn = report.Data.SingleOrDefault(x => x.RowNumID == i);
-
                 Report_PVP_Load file_row = new Report_PVP_Load
                 {
                     Id_Report_Data = report.Id_Report_Data,
@@ -141,10 +143,8 @@ namespace KmsReportWS.Handler
                     appeals_through_EPGU = repIn.appeals_through_EPGU,
                     notes = repIn.notes
                 };
-
-                db.GetTable<Report_PVP_Load>().InsertOnSubmit(file_row);
+                db.Report_PVP_Load.InsertOnSubmit(file_row);
             }
-
 
             db.SubmitChanges();
         }
@@ -189,9 +189,9 @@ namespace KmsReportWS.Handler
                         rep.appeals_through_EPGU = repIn.appeals_through_EPGU;
                         rep.notes = repIn.notes;
                     }
-
-                    db.SubmitChanges();
                 }
+
+                db.SubmitChanges();
             }
         }
     }

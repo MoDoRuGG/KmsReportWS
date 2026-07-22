@@ -25,39 +25,38 @@ namespace KmsReportWS.Handler
         {
             var db = new LinqToSqlKmsReportDataContext(_connStr);
 
-            string start = yymm.Substring(0, 2) + "01";
-            var result = db.Report_140n
-                .Where(x => x.Report_Data.Report_Flow.Id_Region == fillial
-                            && x.Report_Data.Theme == theme
-                            && Convert.ToInt32(x.Report_Data.Report_Flow.Yymm) >= Convert.ToInt32(start)
-                            && Convert.ToInt32(x.Report_Data.Report_Flow.Yymm) <= Convert.ToInt32(yymm))
-                .GroupBy(x => x.Report_Data.Theme)
-                .Select(g => new Report140nDataDto
-                {
-                    CZLdost = g.Sum(x => x.CZLdost ?? 0),
-                    CZLsmo = g.Sum(x => x.CZLsmo ?? 0),
-                    KSErez = g.Sum(x => x.KSErez ?? 0),
-                    KSE = g.Sum(x => x.KSE ?? 0),
-                    PPMinadvn = g.Sum(x => x.PPMinadvn ?? 0),
-                    Iidvn = g.Sum(x => x.Iidvn ?? 0),
-                    PPMinfdn = g.Sum(x => x.PPMinfdn ?? 0),
-                    Iidn = g.Sum(x => x.Iidn ?? 0),
-                    KOJdosud = g.Sum(x => x.KOJdosud ?? 0),
-                    KOJsud = g.Sum(x => x.KOJsud ?? 0),
-                    KOJzl = g.Sum(x => x.KOJzl ?? 0),
-                    KOJzlsmo = g.Sum(x => x.KOJzlsmo ?? 0),
-                    KZAsobl = g.Sum(x => x.KZAsobl ?? 0),
-                    KZAvsego = g.Sum(x => x.KZAvsego ?? 0),
-                    DT = g.Sum(x => x.DT ?? 0),
-                    Scpo = g.Sum(x => x.Scpo ?? 0),
-                    KEKMPpodtv = g.Sum(x => x.KEKMPpodtv ?? 0),
-                    KEKMPtfoms = g.Sum(x => x.KEKMPtfoms ?? 0),
-                    KZSMOpodtv = g.Sum(x => x.KZSMOpodtv ?? 0),
-                    KPMOtfoms = g.Sum(x => x.KPMOtfoms ?? 0)
-                })
-                .FirstOrDefault();
+            // 1. Получаем Id_Report_Data для "Таблица 10"
+            var reportDataIds = (from rd in db.Report_Data
+                                 join rf in db.Report_Flow on rd.Id_Flow equals rf.Id
+                                 where rf.Id_Region == fillial
+                                    && rd.Theme == "Таблица 10"
+                                    && rf.Yymm == yymm
+                                 select rd.Id).ToList();
 
-            return result;
+            // 2. Если данных нет, возвращаем DTO с нулями
+            if (!reportDataIds.Any())
+            {
+                return new Report140nDataDto { Iidvn = 0, Iidn = 0 };
+            }
+
+            // 3. Считаем суммы из Report_Zpz2025 по найденным ID
+            var zpz10result = db.Report_Zpz2025
+                .Where(x => reportDataIds.Contains(x.Id_Report_Data))
+                .GroupBy(x => 1)
+                .Select(g => new
+                {
+                    p3 = g.Sum(x => (x.RowNum == "2.1" || x.RowNum == "2.2" || x.RowNum == "2.3")
+                                    ? (x.CountSmoAnother ?? 0m) : 0m),
+                    p4 = g.Sum(x => x.RowNum == "1.4"
+                                    ? (x.CountSmoAnother ?? 0m) : 0m)
+                })
+                .FirstOrDefault() ?? new { p3 = 0m, p4 = 0m };
+
+            return new Report140nDataDto
+            {
+                Iidvn = zpz10result.p3,
+                Iidn = zpz10result.p4
+            };
         }
 
         protected override void CreateNewReport(LinqToSqlKmsReportDataContext db, Report_Flow flow, AbstractReport inReport)
@@ -147,20 +146,27 @@ namespace KmsReportWS.Handler
             var outReport = new Report140n { ReportDataList = new List<Report140nDto>() };
             MapFromReportFlow(rep, outReport);
 
+            // !!! ГЛАВНОЕ ИСПРАВЛЕНИЕ: Получаем данные из ЗПЗ один раз для всего отчёта
+            var zpzData = GetYearData(rep.Yymm, "Таблица 10", rep.Id_Region);
+
             foreach (var themeData in rep.Report_Data)
             {
                 var theme = themeData.Theme.Trim();
-
                 var dto = new Report140nDto
                 {
                     Theme = theme,
                     Data = new Report140nDataDto(),
-
                 };
 
+                var dataList = themeData.Report_140n.Select(MapReportDto).ToList();
+                if (dataList.Any())
+                {
+                    dto.Data = dataList.First();
 
-                var dataList = themeData.Report_140n.Select(MapReportDto);
-                dto.Data = dataList.First();
+                    // !!! Перезаписываем значения из ЗПЗ
+                    dto.Data.Iidvn = zpzData.Iidvn;
+                    dto.Data.Iidn = zpzData.Iidn;
+                }
 
                 outReport.ReportDataList.Add(dto);
             }

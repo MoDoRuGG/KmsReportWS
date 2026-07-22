@@ -54,6 +54,7 @@
         public decimal CountCaseDefectedBySmoPlan { get; set; }
         public decimal CountEkmpDefectedCaseTarget { get; set; }
         public decimal CountEkmpDefectedCasePlan { get; set; }
+        public decimal CountDefects { get; set; }
         public decimal CountEkmpBadTarget { get; set; }
         public decimal CountEkmpBadPlan { get; set; }
         public decimal CountEkmpBadDs { get; set; }
@@ -63,6 +64,11 @@
         public decimal CountEkmpBadDsInjured { get; set; }
         public decimal CountEkmpBadDsLeth { get; set; }
         public decimal CountEkmpBadMed { get; set; }
+        public decimal D_3_2_1 {  get; set; }
+        public decimal D_3_2_2 { get; set; }
+        public decimal D_3_2_3 { get; set; }
+        public decimal D_3_2_4 { get; set; }
+        public decimal D_3_2_5 { get; set; }
         public decimal CountEkmpUnreglamentedMed { get; set; }
         public decimal CountEkmpStopMed { get; set; }
         public decimal CountEkmpContinuity { get; set; }
@@ -75,7 +81,13 @@
         public decimal CountEkmpDisp { get; set; }
         public decimal CountEkmpRepeat2weeks { get; set; }
         public decimal CountEkmpOutOfResults { get; set; }
-        public decimal CountEkmpDoubleHospital { get; set; }
+        public decimal D_2_12 { get; set; }
+        public decimal D_2_13 { get; set; }
+        public decimal D_2_14 { get; set; }
+        public decimal D_1_4_4 { get; set; }
+        public decimal D_2_16_1 { get; set; }
+        public decimal D_2_16 { get; set; }
+        public decimal D_1_4_4_Another { get; set; }
 
     }
 

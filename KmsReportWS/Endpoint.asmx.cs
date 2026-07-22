@@ -262,6 +262,20 @@ namespace KmsReportWS
             return (handler as Zpz2025Handler).GetYearDataBatch(yymm, theme, fillial, rowNumbers);
         }
 
+        [WebMethod]
+        public ReportDispReprodHealthDataDto GetDispReprodHealthYearData(string yymm, string theme, string fillial, string rowNum)
+        {
+            var handler = _reportHandlerFactory.GetHandler(ReportType.DispRepHeal);
+            return (handler as DispReprodHealthHandler).GetYearData(yymm, theme, fillial, rowNum);
+        }
+
+        [WebMethod]
+        public List<DispRepHealthYearDataRow> GetDispReprodHealthYearDataBatch(string yymm, string theme, string fillial, string[] rowNumbers)
+        {
+            var handler = _reportHandlerFactory.GetHandler(ReportType.DispRepHeal);
+            return (handler as DispReprodHealthHandler).GetYearDataBatch(yymm, theme, fillial, rowNumbers);
+        }
+
 
         [WebMethod]
         public ReportDoffDataDto GetDoffYearData(string yymm, string theme, string fillial, string rowNum)
@@ -701,7 +715,7 @@ namespace KmsReportWS
 
 
         [WebMethod]
-        public void MethodForSendingChildModel(Report262 f262, Report294 f294, ReportIizl iilz, ReportPg pg, ReportZpz zpz, ReportZpz2025 zpz2025, ReportEffectiveness effective, ReportViolations violations, ReportMonthlyVol monthlyVol)
+        public void MethodForSendingChildModel(Report262 f262, Report294 f294, ReportIizl iilz, ReportPg pg, ReportZpz zpz, ReportZpz2025 zpz2025, ReportEffectiveness effective, ReportViolations violations, ReportMonthlyVol monthlyVol, ReportDispReprodHealth dispReprodHealth)
         {
         }
 

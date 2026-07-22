@@ -168,6 +168,7 @@
       <Association Name="Report_Data_Report_T7OldPolis" Member="Report_T7OldPolis" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_T7OldPolis" />
       <Association Name="Report_Data_Report_OpedUnplanned" Member="Report_OpedUnplanned" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_OpedUnplanned" />
       <Association Name="Report_Data_Report_140n" Member="Report_140n" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_140n" />
+      <Association Name="Report_Data_Report_DispReprodHealth" Member="Report_DispReprodHealth" ThisKey="Id" OtherKey="Id_Report_Data" Type="Report_DispReprodHealth" />
       <Association Name="Report_Type_Report_Data" Member="Report_Type" ThisKey="Id_Report" OtherKey="Id" Type="Report_Type" IsForeignKey="true" />
       <Association Name="Report_Flow_Report_Data" Member="Report_Flow" ThisKey="Id_Flow" OtherKey="Id" Type="Report_Flow" IsForeignKey="true" />
     </Type>
@@ -797,6 +798,16 @@
       <Column Name="KZSMOpodtv" Type="System.Decimal" DbType="Decimal(15,1)" CanBeNull="true" />
       <Column Name="KPMOtfoms" Type="System.Decimal" DbType="Decimal(15,1)" CanBeNull="true" />
       <Association Name="Report_Data_Report_140n" Member="Report_Data" ThisKey="Id_Report_Data" OtherKey="Id" Type="Report_Data" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Report_DispReprodHealth" Member="Report_DispReprodHealth">
+    <Type Name="Report_DispReprodHealth">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id_Report_Data" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RowNum" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="YearlySum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ForPeriod" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Report_Data_Report_DispReprodHealth" Member="Report_Data" ThisKey="Id_Report_Data" OtherKey="Id" Type="Report_Data" IsForeignKey="true" />
     </Type>
   </Table>
   <Function Name="dbo.cadre_rapport" Method="cadre_rapport" IsComposable="true">

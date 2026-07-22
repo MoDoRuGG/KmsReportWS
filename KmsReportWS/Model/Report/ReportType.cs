@@ -40,6 +40,7 @@ namespace KmsReportWS.Model.Report
         [Description("ZpzT4")] ZpzT4,
         [Description("Zpz_Q2025")] ZpzQ2025,
         [Description("Zpz10_2025")] Zpz10_2025,
+        [Description("dRepHeal")] DispRepHeal,
         [Description("ZpzL2025")] ZpzL2025,
         [Description("ViolMEE")] ViolMEE,
         [Description("ViolEKMP")] ViolEKMP,

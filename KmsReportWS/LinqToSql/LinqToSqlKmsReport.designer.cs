@@ -174,6 +174,9 @@ namespace KmsReportWS.LinqToSql
     partial void InsertReport_140n(Report_140n instance);
     partial void UpdateReport_140n(Report_140n instance);
     partial void DeleteReport_140n(Report_140n instance);
+    partial void InsertReport_DispReprodHealth(Report_DispReprodHealth instance);
+    partial void UpdateReport_DispReprodHealth(Report_DispReprodHealth instance);
+    partial void DeleteReport_DispReprodHealth(Report_DispReprodHealth instance);
     #endregion
 		
 		public LinqToSqlKmsReportDataContext(string connection) : 
@@ -605,6 +608,14 @@ namespace KmsReportWS.LinqToSql
 			get
 			{
 				return this.GetTable<Report_140n>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Report_DispReprodHealth> Report_DispReprodHealth
+		{
+			get
+			{
+				return this.GetTable<Report_DispReprodHealth>();
 			}
 		}
 		
@@ -3368,6 +3379,8 @@ namespace KmsReportWS.LinqToSql
 		
 		private EntitySet<Report_140n> _Report_140n;
 		
+		private EntitySet<Report_DispReprodHealth> _Report_DispReprodHealth;
+		
 		private EntityRef<Report_Type> _Report_Type;
 		
 		private EntityRef<Report_Flow> _Report_Flow;
@@ -3422,6 +3435,7 @@ namespace KmsReportWS.LinqToSql
 			this._Report_T7OldPolis = new EntitySet<Report_T7OldPolis>(new Action<Report_T7OldPolis>(this.attach_Report_T7OldPolis), new Action<Report_T7OldPolis>(this.detach_Report_T7OldPolis));
 			this._Report_OpedUnplanned = new EntitySet<Report_OpedUnplanned>(new Action<Report_OpedUnplanned>(this.attach_Report_OpedUnplanned), new Action<Report_OpedUnplanned>(this.detach_Report_OpedUnplanned));
 			this._Report_140n = new EntitySet<Report_140n>(new Action<Report_140n>(this.attach_Report_140n), new Action<Report_140n>(this.detach_Report_140n));
+			this._Report_DispReprodHealth = new EntitySet<Report_DispReprodHealth>(new Action<Report_DispReprodHealth>(this.attach_Report_DispReprodHealth), new Action<Report_DispReprodHealth>(this.detach_Report_DispReprodHealth));
 			this._Report_Type = default(EntityRef<Report_Type>);
 			this._Report_Flow = default(EntityRef<Report_Flow>);
 			OnCreated();
@@ -3945,6 +3959,19 @@ namespace KmsReportWS.LinqToSql
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Report_Data_Report_DispReprodHealth", Storage="_Report_DispReprodHealth", ThisKey="Id", OtherKey="Id_Report_Data")]
+		public EntitySet<Report_DispReprodHealth> Report_DispReprodHealth
+		{
+			get
+			{
+				return this._Report_DispReprodHealth;
+			}
+			set
+			{
+				this._Report_DispReprodHealth.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Report_Type_Report_Data", Storage="_Report_Type", ThisKey="Id_Report", OtherKey="Id", IsForeignKey=true)]
 		public Report_Type Report_Type
 		{
@@ -4388,6 +4415,18 @@ namespace KmsReportWS.LinqToSql
 		}
 		
 		private void detach_Report_140n(Report_140n entity)
+		{
+			this.SendPropertyChanging();
+			entity.Report_Data = null;
+		}
+		
+		private void attach_Report_DispReprodHealth(Report_DispReprodHealth entity)
+		{
+			this.SendPropertyChanging();
+			entity.Report_Data = this;
+		}
+		
+		private void detach_Report_DispReprodHealth(Report_DispReprodHealth entity)
 		{
 			this.SendPropertyChanging();
 			entity.Report_Data = null;
@@ -17785,6 +17824,205 @@ namespace KmsReportWS.LinqToSql
 					if ((value != null))
 					{
 						value.Report_140n.Add(this);
+						this._Id_Report_Data = value.Id;
+					}
+					else
+					{
+						this._Id_Report_Data = default(int);
+					}
+					this.SendPropertyChanged("Report_Data");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Report_DispReprodHealth")]
+	public partial class Report_DispReprodHealth : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Id;
+		
+		private int _Id_Report_Data;
+		
+		private string _RowNum;
+		
+		private System.Nullable<int> _YearlySum;
+		
+		private System.Nullable<int> _ForPeriod;
+		
+		private EntityRef<Report_Data> _Report_Data;
+		
+    #region Определения метода расширяемости
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdChanging(int value);
+    partial void OnIdChanged();
+    partial void OnId_Report_DataChanging(int value);
+    partial void OnId_Report_DataChanged();
+    partial void OnRowNumChanging(string value);
+    partial void OnRowNumChanged();
+    partial void OnYearlySumChanging(System.Nullable<int> value);
+    partial void OnYearlySumChanged();
+    partial void OnForPeriodChanging(System.Nullable<int> value);
+    partial void OnForPeriodChanged();
+    #endregion
+		
+		public Report_DispReprodHealth()
+		{
+			this._Report_Data = default(EntityRef<Report_Data>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this.OnIdChanging(value);
+					this.SendPropertyChanging();
+					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_Report_Data", DbType="Int NOT NULL")]
+		public int Id_Report_Data
+		{
+			get
+			{
+				return this._Id_Report_Data;
+			}
+			set
+			{
+				if ((this._Id_Report_Data != value))
+				{
+					if (this._Report_Data.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnId_Report_DataChanging(value);
+					this.SendPropertyChanging();
+					this._Id_Report_Data = value;
+					this.SendPropertyChanged("Id_Report_Data");
+					this.OnId_Report_DataChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RowNum", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string RowNum
+		{
+			get
+			{
+				return this._RowNum;
+			}
+			set
+			{
+				if ((this._RowNum != value))
+				{
+					this.OnRowNumChanging(value);
+					this.SendPropertyChanging();
+					this._RowNum = value;
+					this.SendPropertyChanged("RowNum");
+					this.OnRowNumChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_YearlySum", DbType="Int")]
+		public System.Nullable<int> YearlySum
+		{
+			get
+			{
+				return this._YearlySum;
+			}
+			set
+			{
+				if ((this._YearlySum != value))
+				{
+					this.OnYearlySumChanging(value);
+					this.SendPropertyChanging();
+					this._YearlySum = value;
+					this.SendPropertyChanged("YearlySum");
+					this.OnYearlySumChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ForPeriod", DbType="Int")]
+		public System.Nullable<int> ForPeriod
+		{
+			get
+			{
+				return this._ForPeriod;
+			}
+			set
+			{
+				if ((this._ForPeriod != value))
+				{
+					this.OnForPeriodChanging(value);
+					this.SendPropertyChanging();
+					this._ForPeriod = value;
+					this.SendPropertyChanged("ForPeriod");
+					this.OnForPeriodChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Report_Data_Report_DispReprodHealth", Storage="_Report_Data", ThisKey="Id_Report_Data", OtherKey="Id", IsForeignKey=true)]
+		public Report_Data Report_Data
+		{
+			get
+			{
+				return this._Report_Data.Entity;
+			}
+			set
+			{
+				Report_Data previousValue = this._Report_Data.Entity;
+				if (((previousValue != value) 
+							|| (this._Report_Data.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Report_Data.Entity = null;
+						previousValue.Report_DispReprodHealth.Remove(this);
+					}
+					this._Report_Data.Entity = value;
+					if ((value != null))
+					{
+						value.Report_DispReprodHealth.Add(this);
 						this._Id_Report_Data = value.Id;
 					}
 					else
