@@ -70,35 +70,43 @@ namespace KmsReportWS.Handler
             var outReport = new ReportPVPLoad();
             MapFromReportFlow(rep, outReport);
 
-            var db = new LinqToSqlKmsReportDataContext(_connStr);
-            var reportRows = db.Report_PVP_Load.Where(x => x.Report_Data.Id_Flow == rep.Id);
-            if (reportRows != null)
+            // using для корректного закрытия соединения
+            using (var db = new LinqToSqlKmsReportDataContext(_connStr))
             {
-                outReport.Id_Report_Data = reportRows.ToList().ElementAt(0).Id_Report_Data;
-                foreach (var row in reportRows)
-                {
-                    outReport.Data.Add(new PVPload
-                    {
-                        RowNumID = row.RowNumID,
-                        PVP_name = row.PVP_name,
-                        location_of_the_office = row.location_of_the_office,
-                        number_of_insured_by_beginning_of_year = row.number_of_insured_by_beginning_of_year,
-                        number_of_insured_by_reporting_date = row.number_of_insured_by_reporting_date,
-                        population_dynamics = row.population_dynamics,
-                        specialist = row.specialist,
-                        conditions_of_employment = row.conditions_of_employment,
-                        PVP_plan = row.PVP_plan,
-                        registered_total_citizens = row.registered_total_citizens,
-                        newly_insured = row.newly_insured,
-                        attracted_by_agents = row.attracted_by_agents,
-                        issued_by_PEO_and_extracts_from_ERZL = row.issued_by_PEO_and_extracts_from_ERZL,
-                        workload_per_day_for_specialist = row.workload_per_day_for_specialist,
-                        appeals_through_EPGU = row.appeals_through_EPGU,
-                        notes = row.notes
-                    });
-                }
+                var reportRows = db.Report_PVP_Load
+                                   .Where(x => x.Report_Data.Id_Flow == rep.Id)
+                                   .ToList();
 
+                // Проверка что в списке есть хотя бы один элемент
+                if (reportRows.Any())
+                {
+                    outReport.Id_Report_Data = reportRows[0].Id_Report_Data;
+
+                    foreach (var row in reportRows)
+                    {
+                        outReport.Data.Add(new PVPload
+                        {
+                            RowNumID = row.RowNumID,
+                            PVP_name = row.PVP_name,
+                            location_of_the_office = row.location_of_the_office,
+                            number_of_insured_by_beginning_of_year = row.number_of_insured_by_beginning_of_year,
+                            number_of_insured_by_reporting_date = row.number_of_insured_by_reporting_date,
+                            population_dynamics = row.population_dynamics,
+                            specialist = row.specialist,
+                            conditions_of_employment = row.conditions_of_employment,
+                            PVP_plan = row.PVP_plan,
+                            registered_total_citizens = row.registered_total_citizens,
+                            newly_insured = row.newly_insured,
+                            attracted_by_agents = row.attracted_by_agents,
+                            issued_by_PEO_and_extracts_from_ERZL = row.issued_by_PEO_and_extracts_from_ERZL,
+                            workload_per_day_for_specialist = row.workload_per_day_for_specialist,
+                            appeals_through_EPGU = row.appeals_through_EPGU,
+                            notes = row.notes
+                        });
+                    }
+                }
             }
+
             return outReport;
         }
 
@@ -115,6 +123,9 @@ namespace KmsReportWS.Handler
                 throw new Exception($"Report_Data not found for IdFlow: {report.IdFlow}");
             }
 
+            // ИСПРАВЛЕНИЕ: Берем реальный Id из базы, а не то, что прислал клиент
+            int actualReportDataId = reportData.Id;
+
             var reportDb = db.Report_PVP_Load.Where(x => x.Report_Data.Id_Flow == report.IdFlow);
             foreach (var detail in reportDb)
             {
@@ -125,7 +136,7 @@ namespace KmsReportWS.Handler
             {
                 Report_PVP_Load file_row = new Report_PVP_Load
                 {
-                    Id_Report_Data = report.Id_Report_Data,
+                    Id_Report_Data = actualReportDataId,
                     RowNumID = repIn.RowNumID,
                     PVP_name = repIn.PVP_name,
                     location_of_the_office = repIn.location_of_the_office,
@@ -154,6 +165,11 @@ namespace KmsReportWS.Handler
         {
             var report = inReport as ReportPVPLoad ??
                      throw new Exception("Error update report, because getting empty report");
+
+            // ИСПРАВЛЕНИЕ: Сразу находим актуальный Id
+            var reportData = db.Report_Data.FirstOrDefault(x => x.Id_Flow == report.IdFlow);
+            int actualReportDataId = reportData?.Id ?? report.Id_Report_Data;
+
             var InRepRowCounter = report.Data.Count();
             var reporDb = db.Report_PVP_Load.Where(x => x.Report_Data.Id_Flow == report.IdFlow);
 
@@ -163,15 +179,14 @@ namespace KmsReportWS.Handler
             }
             else
             {
-                var reportDb = db.Report_PVP_Load.Where(x => x.Report_Data.Id_Flow == report.IdFlow);
-
-                foreach (var rep in reportDb)
+                // ИСПРАВЛЕНИЕ: Убрано дублирование var reportDb, используем reporDb
+                foreach (var rep in reporDb)
                 {
                     var repIn = report.Data.FirstOrDefault(x => x.RowNumID == rep.RowNumID);
 
                     if (repIn != null)
                     {
-                        rep.Id_Report_Data = report.Id_Report_Data;
+                        rep.Id_Report_Data = actualReportDataId;
                         rep.RowNumID = repIn.RowNumID;
                         rep.PVP_name = repIn.PVP_name;
                         rep.location_of_the_office = repIn.location_of_the_office;
